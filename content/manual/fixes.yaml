@@ -1,0 +1,53 @@
+# Ручные правки к собранным данным. Применяются после источников, перед записью JSON.
+# Каждая правка — это то, чего в источниках нет или что в них противоречиво.
+# Источник расхождений — замеры сессии данных (приватный research в owlproj).
+
+# 1. Пары управления, которых нет ни в английском, ни в русском Викисловаре
+government:
+  sprechen:     ["mit D", "über A"]
+  entschuldigen: ["für A", "bei D"]
+  gehören:      ["zu D"]
+  treffen:      ["mit D"]
+  halten:       ["von D"]
+  informieren:  ["über A"]
+
+# 2. Род у омонимов: в источниках оба варианта, выбор зависит от значения.
+#    Берём то значение, которое нужно на A1–B1.
+gender:
+  Teil:    {g: n, note: "das Teil — деталь; der Teil — часть целого, реже на A1–B1"}
+  Band:    {g: n, note: "das Band — лента; die Band — музыкальная группа"}
+  Schild:  {g: n, note: "das Schild — табличка, вывеска"}
+  Gehalt:  {g: n, note: "das Gehalt — зарплата"}
+  Leiter:  {g: f, note: "die Leiter — стремянка; der Leiter — руководитель"}
+  Steuer:  {g: f, note: "die Steuer — налог; das Steuer — руль"}
+  Stock:   {g: m, note: "der Stock — этаж и палка"}
+
+# 3. Только множественное число: рода нет, задания на артикль единственного невозможны
+plural_only:
+  - Eltern
+  - Leute
+  - Ferien
+  - Kosten
+  - Möbel
+  - Lebensmittel
+  - Geschwister
+  - Nebenkosten
+  - Betriebskosten
+
+# 4. Субстантивированные прилагательные: склоняются как прилагательные,
+#    отдельная грамматическая тема (ein Bekannter / der Bekannte)
+adj_declined:
+  - Erwachsene
+  - Bekannte
+  - Beamte
+  - Jugendliche
+  - Verwandte
+  - Angehörige
+  - Studierende
+
+# 5. Глаголы, у которых вспомогательный зависит от значения.
+#    Пока помечены и исключены из заданий на выбор haben/sein.
+aux_ambiguous:
+  fahren:   {intrans: s, trans: h}
+  fliegen:  {intrans: s, trans: h}
+  ziehen:   {intrans: s, trans: h}

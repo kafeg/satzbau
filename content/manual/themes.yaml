@@ -1,0 +1,223 @@
+# Лексические темы — ручной отбор лемм.
+# Это ЕДИНСТВЕННЫЙ источник лексикона: что не перечислено здесь, в сборку не попадёт.
+# Частотность здесь не участвует, она только подсказывает порядок внутри темы.
+#
+# Поля слова:
+#   w    лемма как в словаре, существительные с большой буквы, без артикля
+#   pos  n существительное | v глагол | a прилагательное
+#   lv   A1 | A2 | B1
+#   tags для условий `need` в шаблонах; словарь тегов закрытый, см. README.md
+#
+# Порядок внутри темы = порядок показа новых слов.
+
+transport:
+  title: Транспорт
+  words:
+    # A1 — то, без чего нельзя доехать
+    - {w: Zug,           pos: n, lv: A1, tags: [vehicle, rail]}
+    - {w: Bus,           pos: n, lv: A1, tags: [vehicle]}
+    - {w: Bahn,          pos: n, lv: A1, tags: [vehicle, rail]}
+    - {w: U-Bahn,        pos: n, lv: A1, tags: [vehicle, rail]}
+    - {w: S-Bahn,        pos: n, lv: A1, tags: [vehicle, rail]}
+    - {w: Straßenbahn,   pos: n, lv: A1, tags: [vehicle, rail]}
+    - {w: Auto,          pos: n, lv: A1, tags: [vehicle]}
+    - {w: Fahrrad,       pos: n, lv: A1, tags: [vehicle]}
+    - {w: Taxi,          pos: n, lv: A1, tags: [vehicle]}
+    - {w: Flugzeug,      pos: n, lv: A1, tags: [vehicle]}
+    - {w: Bahnhof,       pos: n, lv: A1, tags: [place]}
+    - {w: Flughafen,     pos: n, lv: A1, tags: [place]}
+    - {w: Haltestelle,   pos: n, lv: A1, tags: [place]}
+    - {w: Bahnsteig,     pos: n, lv: A1, tags: [place]}
+    - {w: Gleis,         pos: n, lv: A1, tags: [place]}
+    - {w: Fahrkarte,     pos: n, lv: A1, tags: [document]}
+    - {w: Fahrplan,      pos: n, lv: A1, tags: [document]}
+    - {w: Abfahrt,       pos: n, lv: A1, tags: [time]}
+    - {w: Ankunft,       pos: n, lv: A1, tags: [time]}
+    - {w: Fahrt,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Reise,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Weg,           pos: n, lv: A1, tags: [place]}
+    - {w: Straße,        pos: n, lv: A1, tags: [place]}
+    - {w: Platz,         pos: n, lv: A1, tags: [place]}
+    - {w: Ampel,         pos: n, lv: A1, tags: [thing]}
+    - {w: Koffer,        pos: n, lv: A1, tags: [thing]}
+    - {w: Führerschein,  pos: n, lv: A1, tags: [document]}
+    - {w: Fahrer,        pos: n, lv: A1, tags: [person]}
+    - {w: Linie,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Richtung,      pos: n, lv: A1, tags: [abstract]}
+    - {w: fahren,        pos: v, lv: A1, tags: [motion]}
+    - {w: gehen,         pos: v, lv: A1, tags: [motion]}
+    - {w: kommen,        pos: v, lv: A1, tags: [motion]}
+    - {w: fliegen,       pos: v, lv: A1, tags: [motion]}
+    - {w: laufen,        pos: v, lv: A1, tags: [motion]}
+    - {w: einsteigen,    pos: v, lv: A1, tags: [motion]}
+    - {w: aussteigen,    pos: v, lv: A1, tags: [motion]}
+    - {w: umsteigen,     pos: v, lv: A1, tags: [motion]}
+    - {w: abfahren,      pos: v, lv: A1, tags: [motion]}
+    - {w: ankommen,      pos: v, lv: A1, tags: [motion]}
+    - {w: warten,        pos: v, lv: A1, tags: [state]}
+    - {w: halten,        pos: v, lv: A1, tags: [state]}
+    - {w: parken,        pos: v, lv: A1, tags: [state]}
+    - {w: dauern,        pos: v, lv: A1, tags: [state]}
+    - {w: kosten,        pos: v, lv: A1, tags: [state]}
+    - {w: schnell,       pos: a, lv: A1, tags: [quality]}
+    - {w: langsam,       pos: a, lv: A1, tags: [quality]}
+    - {w: weit,          pos: a, lv: A1, tags: [quality]}
+    - {w: früh,          pos: a, lv: A1, tags: [quality]}
+    - {w: spät,          pos: a, lv: A1, tags: [quality]}
+    - {w: voll,          pos: a, lv: A1, tags: [quality]}
+    - {w: leer,          pos: a, lv: A1, tags: [quality]}
+    - {w: billig,        pos: a, lv: A1, tags: [quality]}
+    - {w: teuer,         pos: a, lv: A1, tags: [quality]}
+    # A2 — то, что ломается и чем это починить
+    - {w: Verspätung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Verbindung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Anschluss,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Automat,       pos: n, lv: A2, tags: [thing]}
+    - {w: Schalter,      pos: n, lv: A2, tags: [place]}
+    - {w: Auskunft,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Ausgang,       pos: n, lv: A2, tags: [place]}
+    - {w: Eingang,       pos: n, lv: A2, tags: [place]}
+    - {w: Stau,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Unfall,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Autobahn,      pos: n, lv: A2, tags: [place]}
+    - {w: Kreuzung,      pos: n, lv: A2, tags: [place]}
+    - {w: Brücke,        pos: n, lv: A2, tags: [place]}
+    - {w: Parkplatz,     pos: n, lv: A2, tags: [place]}
+    - {w: Tankstelle,    pos: n, lv: A2, tags: [place]}
+    - {w: Benzin,        pos: n, lv: A2, tags: [thing]}
+    - {w: Strecke,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Rückfahrt,     pos: n, lv: A2, tags: [abstract]}
+    - {w: erreichen,     pos: v, lv: A2, tags: [motion]}
+    - {w: verpassen,     pos: v, lv: A2, tags: [state]}
+    - {w: buchen,        pos: v, lv: A2, tags: [state]}
+    - {w: reservieren,   pos: v, lv: A2, tags: [state]}
+    - {w: entwerten,     pos: v, lv: A2, tags: [state]}
+    - {w: tanken,        pos: v, lv: A2, tags: [state]}
+    - {w: abbiegen,      pos: v, lv: A2, tags: [motion]}
+    - {w: mieten,        pos: v, lv: A2, tags: [state]}
+    - {w: pünktlich,     pos: a, lv: A2, tags: [quality]}
+    - {w: direkt,        pos: a, lv: A2, tags: [quality]}
+    - {w: günstig,       pos: a, lv: A2, tags: [quality]}
+    - {w: gültig,        pos: a, lv: A2, tags: [quality]}
+    - {w: besetzt,       pos: a, lv: A2, tags: [quality]}
+    # B1 — объявления на перроне
+    - {w: Durchsage,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Schaffner,     pos: n, lv: B1, tags: [person]}
+    - {w: Fahrgast,      pos: n, lv: B1, tags: [person]}
+    - {w: Ermäßigung,    pos: n, lv: B1, tags: [money]}
+    - {w: Erstattung,    pos: n, lv: B1, tags: [money]}
+    - {w: Monatskarte,   pos: n, lv: B1, tags: [document]}
+    - {w: Umleitung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Baustelle,     pos: n, lv: B1, tags: [place]}
+    - {w: Streik,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Abteil,        pos: n, lv: B1, tags: [place]}
+    - {w: entfallen,     pos: v, lv: B1, tags: [state]}
+    - {w: erstatten,     pos: v, lv: B1, tags: [state]}
+    - {w: kontrollieren, pos: v, lv: B1, tags: [state]}
+    - {w: barrierefrei,  pos: a, lv: B1, tags: [quality]}
+
+home:
+  title: Квартира
+  words:
+    # A1 — комнаты и то, что в них стоит
+    - {w: Wohnung,       pos: n, lv: A1, tags: [place]}
+    - {w: Haus,          pos: n, lv: A1, tags: [place]}
+    - {w: Zimmer,        pos: n, lv: A1, tags: [room]}
+    - {w: Küche,         pos: n, lv: A1, tags: [room]}
+    - {w: Bad,           pos: n, lv: A1, tags: [room]}
+    - {w: Schlafzimmer,  pos: n, lv: A1, tags: [room]}
+    - {w: Wohnzimmer,    pos: n, lv: A1, tags: [room]}
+    - {w: Balkon,        pos: n, lv: A1, tags: [room]}
+    - {w: Flur,          pos: n, lv: A1, tags: [room]}
+    - {w: Keller,        pos: n, lv: A1, tags: [room]}
+    - {w: Garten,        pos: n, lv: A1, tags: [place]}
+    - {w: Tür,           pos: n, lv: A1, tags: [thing]}
+    - {w: Fenster,       pos: n, lv: A1, tags: [thing]}
+    - {w: Wand,          pos: n, lv: A1, tags: [thing]}
+    - {w: Boden,         pos: n, lv: A1, tags: [thing]}
+    - {w: Treppe,        pos: n, lv: A1, tags: [thing]}
+    - {w: Tisch,         pos: n, lv: A1, tags: [furniture]}
+    - {w: Stuhl,         pos: n, lv: A1, tags: [furniture]}
+    - {w: Bett,          pos: n, lv: A1, tags: [furniture]}
+    - {w: Schrank,       pos: n, lv: A1, tags: [furniture]}
+    - {w: Sofa,          pos: n, lv: A1, tags: [furniture]}
+    - {w: Regal,         pos: n, lv: A1, tags: [furniture]}
+    - {w: Lampe,         pos: n, lv: A1, tags: [thing]}
+    - {w: Teppich,       pos: n, lv: A1, tags: [thing]}
+    - {w: Spiegel,       pos: n, lv: A1, tags: [thing]}
+    - {w: Kühlschrank,   pos: n, lv: A1, tags: [appliance]}
+    - {w: Herd,          pos: n, lv: A1, tags: [appliance]}
+    - {w: Waschmaschine, pos: n, lv: A1, tags: [appliance]}
+    - {w: Fernseher,     pos: n, lv: A1, tags: [appliance]}
+    - {w: Heizung,       pos: n, lv: A1, tags: [appliance]}
+    - {w: Dusche,        pos: n, lv: A1, tags: [thing]}
+    - {w: Toilette,      pos: n, lv: A1, tags: [thing]}
+    - {w: Miete,         pos: n, lv: A1, tags: [money]}
+    - {w: Schlüssel,     pos: n, lv: A1, tags: [thing]}
+    - {w: Nachbar,       pos: n, lv: A1, tags: [person]}
+    - {w: wohnen,        pos: v, lv: A1, tags: [state]}
+    - {w: stehen,        pos: v, lv: A1, tags: [position]}
+    - {w: liegen,        pos: v, lv: A1, tags: [position]}
+    - {w: sitzen,        pos: v, lv: A1, tags: [position]}
+    - {w: hängen,        pos: v, lv: A1, tags: [position]}
+    - {w: stellen,       pos: v, lv: A1, tags: [placement]}
+    - {w: legen,         pos: v, lv: A1, tags: [placement]}
+    - {w: setzen,        pos: v, lv: A1, tags: [placement]}
+    - {w: kochen,        pos: v, lv: A1, tags: [state]}
+    - {w: schlafen,      pos: v, lv: A1, tags: [state]}
+    - {w: duschen,       pos: v, lv: A1, tags: [state]}
+    - {w: aufräumen,     pos: v, lv: A1, tags: [state]}
+    - {w: putzen,        pos: v, lv: A1, tags: [state]}
+    - {w: umziehen,      pos: v, lv: A1, tags: [motion]}
+    - {w: groß,          pos: a, lv: A1, tags: [quality]}
+    - {w: klein,         pos: a, lv: A1, tags: [quality]}
+    - {w: hell,          pos: a, lv: A1, tags: [quality]}
+    - {w: dunkel,        pos: a, lv: A1, tags: [quality]}
+    - {w: neu,           pos: a, lv: A1, tags: [quality]}
+    - {w: alt,           pos: a, lv: A1, tags: [quality]}
+    - {w: schön,         pos: a, lv: A1, tags: [quality]}
+    - {w: ruhig,         pos: a, lv: A1, tags: [quality]}
+    - {w: laut,          pos: a, lv: A1, tags: [quality]}
+    - {w: warm,          pos: a, lv: A1, tags: [quality]}
+    - {w: kalt,          pos: a, lv: A1, tags: [quality]}
+    - {w: sauber,        pos: a, lv: A1, tags: [quality]}
+    # A2 — бумаги и счёты
+    - {w: Nebenkosten,   pos: n, lv: A2, tags: [money]}
+    - {w: Mietvertrag,   pos: n, lv: A2, tags: [document]}
+    - {w: Kaution,       pos: n, lv: A2, tags: [money]}
+    - {w: Vermieter,     pos: n, lv: A2, tags: [person]}
+    - {w: Hausmeister,   pos: n, lv: A2, tags: [person]}
+    - {w: Erdgeschoss,   pos: n, lv: A2, tags: [place]}
+    - {w: Stock,         pos: n, lv: A2, tags: [place]}
+    - {w: Aufzug,        pos: n, lv: A2, tags: [thing]}
+    - {w: Garage,        pos: n, lv: A2, tags: [place]}
+    - {w: Mülltonne,     pos: n, lv: A2, tags: [thing]}
+    - {w: Strom,         pos: n, lv: A2, tags: [thing]}
+    - {w: Anmeldung,     pos: n, lv: A2, tags: [document]}
+    - {w: Umzug,         pos: n, lv: A2, tags: [abstract]}
+    - {w: anmelden,      pos: v, lv: A2, tags: [state]}
+    - {w: kündigen,      pos: v, lv: A2, tags: [state]}
+    - {w: renovieren,    pos: v, lv: A2, tags: [state]}
+    - {w: streichen,     pos: v, lv: A2, tags: [state]}
+    - {w: reparieren,    pos: v, lv: A2, tags: [state]}
+    - {w: heizen,        pos: v, lv: A2, tags: [state]}
+    - {w: lüften,        pos: v, lv: A2, tags: [state]}
+    - {w: möbliert,      pos: a, lv: A2, tags: [quality]}
+    - {w: zentral,       pos: a, lv: A2, tags: [quality]}
+    - {w: gemütlich,     pos: a, lv: A2, tags: [quality]}
+    - {w: renoviert,     pos: a, lv: A2, tags: [quality]}
+    # B1 — то, из-за чего пишут письма
+    - {w: Wohnfläche,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Quadratmeter,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Hausordnung,   pos: n, lv: B1, tags: [document]}
+    - {w: Betriebskosten,pos: n, lv: B1, tags: [money]}
+    - {w: Nachzahlung,   pos: n, lv: B1, tags: [money]}
+    - {w: Kündigungsfrist, pos: n, lv: B1, tags: [abstract]}
+    - {w: Besichtigung,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Makler,        pos: n, lv: B1, tags: [person]}
+    - {w: Schimmel,      pos: n, lv: B1, tags: [thing]}
+    - {w: besichtigen,   pos: v, lv: B1, tags: [state]}
+    - {w: überweisen,    pos: v, lv: B1, tags: [state]}
+    - {w: sanieren,      pos: v, lv: B1, tags: [state]}
+    - {w: geräumig,      pos: a, lv: B1, tags: [quality]}
+    - {w: hellhörig,     pos: a, lv: B1, tags: [quality]}
