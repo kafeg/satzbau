@@ -1,52 +1,55 @@
 # Ручные правки к собранным данным. Применяются после источников, перед записью JSON.
-# Каждая правка — это то, чего в источниках нет или что в них противоречиво.
-# Источник расхождений — замеры сессии данных (приватный research в owlproj).
+#
+# Здесь ТОЛЬКО то, что нельзя вывести из данных. Многое, что казалось ручным,
+# распознаётся само (`tools/check_lexicon.py` показывает, что именно):
+#   pl_only           — в nouns.csv нет ни одной формы единственного числа
+#   adj_decl          — есть колонки «<падеж> singular stark»
+#   n-Deklination     — аккузатив единственного не равен лемме
+#   род спорный       — род встретился разный в разных строках леммы (омонимы)
+#   вариативное мн.ч. — заполнено несколько нумерованных колонок
+# Распознать можно факт, но не решение. Решения — ниже.
 
 # 1. Пары управления, которых нет ни в английском, ни в русском Викисловаре
 government:
-  sprechen:     ["mit D", "über A"]
+  sprechen:      ["mit D", "über A"]
   entschuldigen: ["für A", "bei D"]
-  gehören:      ["zu D"]
-  treffen:      ["mit D"]
-  halten:       ["von D"]
-  informieren:  ["über A"]
+  gehören:       ["zu D"]
+  treffen:       ["mit D"]
+  halten:        ["von D"]
+  informieren:   ["über A"]
 
-# 2. Род у омонимов: в источниках оба варианта, выбор зависит от значения.
-#    Берём то значение, которое нужно на A1–B1.
+# 2. Омонимы: род у них разный по значению, и данные показывают оба.
+#    Выбираем значение, нужное на A1–B1. Проверено по nouns.csv: спор виден у всех,
+#    кроме Stock — у него род один, запись оставлена ради пояснения.
 gender:
-  Teil:    {g: n, note: "das Teil — деталь; der Teil — часть целого, реже на A1–B1"}
-  Band:    {g: n, note: "das Band — лента; die Band — музыкальная группа"}
-  Schild:  {g: n, note: "das Schild — табличка, вывеска"}
-  Gehalt:  {g: n, note: "das Gehalt — зарплата"}
+  Schild:  {g: n, note: "das Schild — табличка, вывеска; der Schild — щит"}
+  Gehalt:  {g: n, note: "das Gehalt — зарплата; der Gehalt — содержание чего-либо"}
   Leiter:  {g: f, note: "die Leiter — стремянка; der Leiter — руководитель"}
   Steuer:  {g: f, note: "die Steuer — налог; das Steuer — руль"}
+  Teil:    {g: n, note: "das Teil — деталь; der Teil — часть целого"}
+  Band:    {g: n, note: "das Band — лента; die Band — группа; der Band — том книги"}
   Stock:   {g: m, note: "der Stock — этаж и палка"}
+  Bus:     {g: m, note: "der Bus. В nouns.csv есть строка с genus 1=f — это мусор"}
+  Flur:    {g: m, note: "der Flur — коридор в квартире; die Flur — поле, угодья"}
+  Taxi:    {g: n, note: "das Taxi. der Taxi встречается регионально"}
+  Quadratmeter: {g: m, note: "der Quadratmeter"}
 
-# 3. Только множественное число: рода нет, задания на артикль единственного невозможны
-plural_only:
-  - Eltern
-  - Leute
-  - Ferien
-  - Kosten
+# 3. Слова, у которых единственное число формально есть, но в речи они живут
+#    во множественном. Данные их не отличают: у Möbel, Lebensmittel, Geschwister
+#    в nouns.csv стоит род n. Решение педагогическое: не даём в задания на
+#    артикль единственного числа.
+plural_in_use:
   - Möbel
   - Lebensmittel
   - Geschwister
-  - Nebenkosten
-  - Betriebskosten
 
-# 4. Субстантивированные прилагательные: склоняются как прилагательные,
-#    отдельная грамматическая тема (ein Bekannter / der Bekannte)
-adj_declined:
-  - Erwachsene
-  - Bekannte
-  - Beamte
-  - Jugendliche
-  - Verwandte
-  - Angehörige
-  - Studierende
+# 4. Субстантивированные прилагательные, которых нет в nouns.csv под этой леммой
+#    (остальные распознаются по колонкам «stark»)
+adj_declined_extra:
+  - Beamter   # в данных лемма Beamter, не Beamte
 
 # 5. Глаголы, у которых вспомогательный зависит от значения.
-#    Пока помечены и исключены из заданий на выбор haben/sein.
+#    Помечены и исключены из заданий на выбор haben/sein.
 aux_ambiguous:
   fahren:   {intrans: s, trans: h}
   fliegen:  {intrans: s, trans: h}

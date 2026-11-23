@@ -38,7 +38,10 @@
 
 | что | как |
 |---|---|
-| установка | `?` — `package.json` ещё нет |
+| питон для инструментов | `python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt` |
+| скачать источники | `python3 -I tools/fetch_sources.py` — лёгкие, ~210 МБ; `--all` вместе с kaikki, +2 ГБ |
+| проверить лексикон | `.venv/bin/python -I tools/check_lexicon.py` — чего не хватает словам из `themes.yaml` |
+| установка фронта | `?` — `package.json` ещё нет |
 | дев-сервер | `?` |
 | сборка данных | `?` — `tools/build_data.py` ещё нет |
 | проверка | `?` |
