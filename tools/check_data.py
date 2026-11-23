@@ -201,6 +201,11 @@ def main():
     for name, n in counts.items():
         if meta['counts'].get(name) != n:
             errors.append(f'meta.json: {name} обещает {meta["counts"].get(name)}, в файле {n}')
+    # Собрать с --no-sents поверх полной сборки — и meta не знает про лежащий рядом файл,
+    # а версия данных посчитана без него. Service worker отдаст старое.
+    on_disk = {f for f in os.listdir(BUILD) if f.endswith('.json') and f != 'meta.json'}
+    for name in sorted(on_disk - set(meta['counts'])):
+        errors.append(f'meta.json: про {name} не знает, а файл лежит — пересобрать целиком')
     if set(themes) != set(src_themes):
         errors.append('themes.json и themes.yaml разошлись по набору тем')
 
