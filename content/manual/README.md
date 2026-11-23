@@ -26,6 +26,10 @@
 | `furniture` | мебель: Tisch, Bett, Schrank |
 | `appliance` | техника: Kühlschrank, Waschmaschine, Heizung |
 | `thing` | предмет, который можно взять или на который можно показать |
+| `food` | еда: Brot, Apfel, Suppe, Lebensmittel |
+| `drink` | питьё: Wasser, Kaffee, Bier |
+| `body` | часть тела: Kopf, Hand, Zahn |
+| `illness` | то, что болит и как это называется: Fieber, Husten, Grippe |
 | `document` | бумага и билеты: Fahrkarte, Mietvertrag, Anmeldung |
 | `person` | человек: Fahrer, Nachbar, Makler |
 | `money` | деньги и платежи: Miete, Kaution, Ermäßigung |
@@ -47,6 +51,6 @@
 - **условия `need` — закрытый список**: `pos`, `theme`, `tags`, `g`, `lv_max`, `has`, `not`.
   `tags` — **любой из** перечисленных, а не все: слово помечено `document` или `thing`, но не обоими,
   и шаблону нужно «что-нибудь из этих». Условия «все сразу» в формате нет, пока не понадобится;
-  `not` принимает и тег, и признак записи: `pl_only`, `plu`, `nd`, `adjdecl`, `aux_hs`;
+  `not` принимает и тег, и признак записи: `pl_only`, `plu`, `npl`, `nd`, `adjdecl`, `aux_hs`;
 - **прилагательное в шаблоне фиксировано**, меняется существительное: иначе фразы теряют смысл
   (`eine kleine Anmeldung`).

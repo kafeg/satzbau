@@ -78,7 +78,7 @@ def main():
             errors.append(f'существительное {n["w"]}: род и pl_only одновременно')
         if n.get('g') not in (None, 'm', 'f', 'n'):
             errors.append(f'существительное {n["w"]}: род {n["g"]!r}')
-        if not n.get('pl') and not n.get('pl_only'):
+        if not n.get('pl') and not n.get('pl_only') and not n.get('npl'):
             warns.append(f'существительное {n["w"]}: нет множественного — часть шаблонов его не возьмёт')
     for v in verbs:
         for k in ('p3', 'pt', 'pp', 'aux'):
@@ -147,6 +147,16 @@ def main():
                          f'задание быстро повторится')
         else:
             notes.append(f'шаблон {t["id"]}: наполнение {len(fill)} слов')
+    # Слово, которое не берёт ни один шаблон, человек увидит только на карточке:
+    # спросить его нечем. Это главный показатель того, чего не хватает — шаблонов.
+    for th in src_themes:
+        ws = [w for w in words if w['theme'] == th and w['w'] in rec]
+        used = {w['w'] for w in ws for t in templates if fits(t['need'], w, rec[w['w']])}
+        share = 100 * len(used) // max(len(ws), 1)
+        line = f'тема {th}: в заданиях {len(used)} слов из {len(ws)} ({share}%)'
+        (warns if share < 25 else notes).append(
+            line + (' — шаблонов на эту тему почти нет' if share < 25 else ''))
+
     for r in rules:
         for k in ('title', 'short', 'ru_contrast', 'steps'):
             if k not in (explain.get(r) or {}):

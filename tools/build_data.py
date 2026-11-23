@@ -67,10 +67,10 @@ def pick_entry(entries):
 # ---------------------------------------------------------------- русский перевод
 
 RU_SKIP = ('рег.', 'устар.', 'прост.')
-RU_LABEL = re.compile(r'^(?:[а-я]+\.(?:-[а-я]+\.)?\s+)+')   # «юр.», «ж.-д.» в начале толкования
+RU_LABEL = re.compile(r'^(?:[а-я]+\.(?:-[а-я]+\.)?,?\s+)+')  # «юр.», «ж.-д.», «мед., фарм.»
 RU_REFL = re.compile(r'^sich\s*~?\s*')
 RU_PAREN = re.compile(r'\s*\([^)]*\)')        # пометы и управление: (auf A), (в разн. знач.), (кого-л.)
-RU_TAIL = re.compile(r'\s*(во всех значениях|в знач\..*)$')
+RU_TAIL = re.compile(r'\s*(во всех значениях|в разн\. знач\.)|\s*в знач\..*$')
 
 
 def ru_clean(gloss):
@@ -144,6 +144,8 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     pl = (e or {}).get('pl') or (ke and kform(ke, 'plural'))
     if pl:
         n['pl'] = pl
+    elif lemma in fixes['no_plural']:
+        n['npl'] = 1                      # множественного нет и не должно быть: Hunger, Obst
     elif not pl_only:
         rep.append((lemma, 'нет множественного'))
     gen = (e or {}).get('gen') or (ke and kform(ke, 'genitive'))
@@ -248,20 +250,24 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep):
 
 
 def build_adj(w, lemma, K, ru, fixes, rep):
+    """Прилагательному kaikki не обязателен: окончания — закрытая парадигма в коде,
+    а `cmp`/`sup`/`st` хранятся только при отклонении от правила. У причастий в роли
+    прилагательного (`befristet`, `qualifiziert`) отклонений не бывает — для них
+    отсутствие статьи ничего не отнимает."""
+    a = {'w': lemma, 'lv': w['lv']}
     ke = pick_entry(K.get((lemma, 'adj')) or [])
     if not ke:
-        rep.append((lemma, 'нет в kaikki — формы брать негде'))
-        return None
-    a = {'w': lemma, 'lv': w['lv']}
-    st = kform(ke, 'masculine', 'nominative', 'singular', 'strong')
-    if st and st.endswith('er') and st[:-2] != lemma:
-        a['st'] = st[:-2]
-    cmp_, sup = kform(ke, 'comparative'), kform(ke, 'superlative')
-    stem = a.get('st', lemma)
-    if cmp_ and cmp_ != stem + 'er':
-        a['cmp'] = cmp_
-    if sup and sup not in (f'am {lemma}sten', f'am {lemma}esten', f'am {stem}sten'):
-        a['sup'] = sup
+        rep.append((lemma, 'нет в kaikki — степени сравнения выводятся правилом'))
+    else:
+        st = kform(ke, 'masculine', 'nominative', 'singular', 'strong')
+        if st and st.endswith('er') and st[:-2] != lemma:
+            a['st'] = st[:-2]
+        cmp_, sup = kform(ke, 'comparative'), kform(ke, 'superlative')
+        stem = a.get('st', lemma)
+        if cmp_ and cmp_ != stem + 'er':
+            a['cmp'] = cmp_
+        if sup and sup not in (f'am {lemma}sten', f'am {lemma}esten', f'am {stem}sten'):
+            a['sup'] = sup
     if ru:
         a['ru'] = ru
     else:
@@ -389,11 +395,28 @@ def build_sentences(vocab, verbs, rep):
     # («Steigen Sie aus?» — это aussteigen, не einsteigen, хотя форма «steigen» общая).
     plain_verbs = {v['w'] for v in verbs if ' ' not in v['p3']}
     sep_particle = {v['w']: v['p3'].split()[-1] for v in verbs if ' ' in v['p3']}
+    def lemmas_of(i, t):
+        """Леммы, к которым может вести словоформа на позиции i.
+
+        Орфография немецкого даёт здесь строгое правило, и без него привязка врёт
+        систематически: слово с большой буквы в середине фразы — существительное,
+        а не глагол (`Wein` не ведёт к weinen, `Buch` не ведёт к buchen, `Park`
+        не ведёт к parken — это были 67 ошибок на срезе). Слово с маленькой буквы,
+        наоборот, существительным быть не может. В начале фразы неоднозначно:
+        `Putze deine Zähne` — это глагол, и там правило не применяем.
+        Существительные лексикона пишутся с большой буквы, глаголы и прилагательные
+        с маленькой, так что проверять часть речи отдельно не нужно.
+        """
+        cands = (f2l.get(t, set()) | f2l.get(t.lower(), set()) | {t, t.lower()}) & vocab
+        if i == 0:
+            return cands
+        up = t[:1].isupper()
+        return {c for c in cands if c[:1].isupper() == up}
+
     per, capped = collections.Counter(), []
     for s in sorted(kept, key=lambda s: len(s['de'])):
         toks = TOK.findall(s['de'])
-        lems = {l for x in toks
-                for l in (f2l.get(x, set()) | f2l.get(x.lower(), set()) | {x, x.lower()}) & vocab}
+        lems = {l for i, x in enumerate(toks) for l in lemmas_of(i, x)}
         low = {x.lower() for x in toks}
         if PARTICLES & low:
             lems -= plain_verbs
@@ -430,6 +453,7 @@ def main():
     fixes = dict(government=fx.get('government') or {}, gender=fx.get('gender') or {},
                  plural_in_use=set(fx.get('plural_in_use') or []),
                  pl_only_extra=set(fx.get('pl_only_extra') or []),
+                 no_plural=set(fx.get('no_plural') or []),
                  adj_decl_extra=set(fx.get('adj_declined_extra') or []),
                  translations=fx.get('translations') or {},
                  aux_ambiguous=fx.get('aux_ambiguous') or {})

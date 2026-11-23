@@ -1,27 +1,36 @@
-сборка 2026-11-23, версия данных f65019212089
+сборка 2026-11-23, версия данных 90f30f5a6a38
 
-слов в themes.yaml: 198; собрано: 198; потеряно: 0
+слов в themes.yaml: 573; собрано: 573; потеряно: 0
 
-управление, предложено источниками (3) — проверить и внести
+замечания (2):
+  altersgerecht          нет в kaikki — степени сравнения выводятся правилом
+  qualifiziert           нет в kaikki — степени сравнения выводятся правилом
+
+управление, предложено источниками (7) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
+  anfangen               von D
   ankommen               auf A
+  bewerben               für A
   schlafen               über A
   setzen                 auf A
+  streiten               über A
+  verdienen              für A
 
 размеры:
-  adjs.json         n=33          2.3 КиБ   gzip     0.8 КиБ
+  adjs.json         n=82          5.6 КиБ   gzip     1.7 КиБ
   explain.json      n=7           6.8 КиБ   gzip     2.3 КиБ
-  nouns.json        n=115         9.5 КиБ   gzip     2.6 КиБ
-  sentences.json    n=570        56.3 КиБ   gzip    14.7 КиБ
+  nouns.json        n=360        28.9 КиБ   gzip     7.2 КиБ
+  sentences.json    n=1680      168.5 КиБ   gzip    46.1 КиБ
   templates.json    n=8           2.5 КиБ   gzip     0.6 КиБ
-  themes.json       n=2          10.7 КиБ   gzip     1.6 КиБ
-  verbs.json        n=50          7.3 КиБ   gzip     2.0 КиБ
-  ИТОГО                        95.4 КиБ   gzip    24.6 КиБ
+  themes.json       n=6          30.8 КиБ   gzip     4.1 КиБ
+  verbs.json        n=131        17.6 КиБ   gzip     4.3 КиБ
+  ИТОГО                       260.7 КиБ   gzip    66.3 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      146970
+  незнакомая словоформа      137319
   длина не 3–8               30998
   нет точки в конце          822
-  примеров на имя: Tom 805, Maria 117, Deutschland 30, Montag 29, Oktober 26
-  слов без примеров: 56 из 198
-    Abfahrt, Abteil, Anmeldung, Anschluss, Auskunft, Autobahn, Automat, Bahnsteig, Baustelle, Besichtigung, Betriebskosten, Durchsage, Ermäßigung, Erstattung, Fahrgast, Flur, Hausmeister, Hausordnung, Heizung, Herd, Kaution, Kreuzung, Kündigungsfrist, Mietvertrag, Monatskarte, Mülltonne, Nachzahlung, Nebenkosten, Quadratmeter, Rückfahrt, S-Bahn, Schaffner, Schimmel, Stau, Straßenbahn, Strecke, Streik, Treppe, U-Bahn, Umleitung …
+  имя исчерпало квоту        79
+  примеров на имя: Tom 2000, Maria 314, Deutschland 42, Montag 33, Oktober 32
+  слов без примеров: 163 из 573
+    Abfahrt, Abmahnung, Abteil, Abteilung, Anmeldung, Anschluss, Arbeitgeber, Arbeitnehmer, Attest, Ausbildung, Ausflug, Auskunft, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Behandlung, Beilage, Beschwerde, Besichtigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Café, Dosierung, Drucker, Durchsage, Eingewöhnung, Einschulung, Elternabend, Elterngeld, Elternzeit, Entwicklung, Ermäßigung, Erstattung …

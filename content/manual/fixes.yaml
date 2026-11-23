@@ -25,6 +25,24 @@ government:
   anmelden:      ["bei D", "für A"]
   hängen:        ["an D"]
   kündigen:      ["D"]
+  anfangen:      ["mit D"]
+  aufhören:      ["mit D"]
+  antworten:     ["auf A"]
+  arbeiten:      ["an D"]
+  aufpassen:     ["auf A"]
+  bewerben:      ["bei D", "um A"]
+  bezahlen:      ["für A"]
+  einreichen:    ["bei D"]
+  helfen:        ["bei D", "D"]
+  impfen:        ["gegen A"]
+  leiden:        ["an D"]
+  spielen:       ["mit D"]
+  streiten:      ["mit D", "um A"]
+  telefonieren:  ["mit D"]
+  verzichten:    ["auf A"]
+  verschieben:   ["auf A"]
+  verdienen:     ["an D"]
+  basteln:       ["an D"]
   # из эталонного списка B1: слов ещё нет в темах, записи ждут своей темы
   sprechen:      ["mit D", "über A"]
   entschuldigen: ["für A", "bei D"]
@@ -33,21 +51,53 @@ government:
   halten:        ["von D"]
   informieren:   ["über A"]
 
-# 2. Омонимы: род у них разный по значению, и данные показывают оба.
-#    Выбираем значение, нужное на A1–B1. Проверено по nouns.csv: спор виден у всех,
-#    кроме Stock — у него род один, запись оставлена ради пояснения.
+# 2. Род: решения, которых нет в данных. Два случая.
+#
+#    а) омонимы: род разный по значению, и данные показывают оба. Выбираем значение,
+#       нужное на A1–B1 (`das Schild` — табличка, а не щит);
+#    б) составные существительные, которых в nouns.csv нет вовсе: без рода слово
+#       в сборку не попадает, и это видно в report.txt как «нет рода».
 gender:
+  # а) омонимы
   Schild:  {g: n, note: "das Schild — табличка, вывеска; der Schild — щит"}
   Gehalt:  {g: n, note: "das Gehalt — зарплата; der Gehalt — содержание чего-либо"}
   Leiter:  {g: f, note: "die Leiter — стремянка; der Leiter — руководитель"}
   Steuer:  {g: f, note: "die Steuer — налог; das Steuer — руль"}
   Teil:    {g: n, note: "das Teil — деталь; der Teil — часть целого"}
   Band:    {g: n, note: "das Band — лента; die Band — группа; der Band — том книги"}
+  Kunde:   {g: m, note: "der Kunde — клиент; die Kunde — весть"}
+  Messer:  {g: n, note: "das Messer — нож; der Messer — тот, кто измеряет"}
+  Reis:    {g: m, note: "der Reis — рис; das Reis — побег, ветка"}
+  Pfand:   {g: n, note: "das Pfand — залог за тару"}
   Stock:   {g: m, note: "der Stock — этаж и палка"}
   Bus:     {g: m, note: "der Bus. В nouns.csv есть строка с genus 1=f — это мусор"}
   Flur:    {g: m, note: "der Flur — коридор в квартире; die Flur — поле, угодья"}
   Taxi:    {g: n, note: "das Taxi. der Taxi встречается регионально"}
   Quadratmeter: {g: m, note: "der Quadratmeter"}
+  Butter:  {g: f, note: "die Butter. Регионально встречается der и das"}
+  Kaffee:  {g: m, note: "der Kaffee"}
+  Tee:     {g: m, note: "der Tee"}
+  Teller:  {g: m, note: "der Teller"}
+  Zwiebel: {g: f, note: "die Zwiebel"}
+  Husten:  {g: m, note: "der Husten"}
+  Mund:    {g: m, note: "der Mund"}
+  # б) составных слов нет в nouns.csv — без этого в сборку не попадут
+  Fortbildung: {g: f}
+  Trotzphase:  {g: f}
+
+# 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
+#     Иначе сборка каждый раз сообщает «нет множественного» про Hunger и Obst.
+no_plural:
+  - Hunger
+  - Durst
+  - Obst
+  - Fleisch
+  - Vollzeit
+  - Teilzeit
+  - Elterngeld
+  - Kindergeld
+  - Mittagsschlaf
+  - Sorgerecht
 
 # 3. Слова, у которых единственное число формально есть, но в речи они живут
 #    во множественном. Данные их не отличают: у Möbel, Lebensmittel, Geschwister
@@ -126,6 +176,155 @@ translations:
   barrierefrei:   без ступеней, доступный
   hellhörig:      с тонкими стенами, слышно соседей
 
+  # Еда
+  Essen:          еда
+  Butter:         сливочное масло
+  Gemüse:         овощи
+  Eis:            мороженое
+  Glas:           стакан
+  Wasser:         вода
+  Rechnung:       счёт
+  Hunger:         голод
+  Durst:          жажда
+  Brötchen:       булочка
+  Salz:           соль
+  Suppe:          суп
+  Flasche:        бутылка
+  Tüte:           пакет
+  Metzgerei:      мясная лавка
+  Scheibe:        ломтик
+  Topf:           кастрюля
+  Angebot:        акция, выгодное предложение
+  Pfand:          залог за тару
+  Lebensmittel:   продукты
+  Beilage:        гарнир
+  Bedienung:      официант, обслуживание
+  Spezialität:    фирменное блюдо
+  Haltbarkeit:    срок годности
+  Reservierung:   бронь
+  bestellen:      заказывать
+  schmecken:      быть вкусным, нравиться на вкус
+  einkaufen:      делать покупки
+  verzichten:     отказываться
+  frisch:         свежий
+  hausgemacht:    домашний, своего приготовления
+  regional:       местный, из этого региона
+  laktosefrei:    без лактозы
+  # Работа
+  Stelle:         рабочее место, вакансия
+  Büro:           офис
+  Kollege:        коллега
+  Besprechung:    совещание
+  Termin:         запись, назначенная встреча
+  Drucker:        принтер
+  Tastatur:       клавиатура
+  Bewerbung:      заявка на работу
+  Lebenslauf:     резюме
+  Zeugnis:        справка с оценками, свидетельство
+  Kündigung:      расторжение договора, увольнение
+  Gehalt:         зарплата
+  Versicherung:   страховка
+  Praktikum:      стажировка
+  Ausbildung:     профобучение
+  Abmahnung:      письменное предупреждение
+  Betriebsrat:    совет трудового коллектива
+  Arbeitnehmer:   наёмный работник
+  Elternzeit:     родительский отпуск
+  Krankmeldung:   больничный лист
+  verdienen:      зарабатывать
+  telefonieren:   звонить по телефону
+  drucken:        печатать
+  fragen:         спрашивать
+  lernen:         учиться
+  bewerben:       подавать заявку на работу
+  einstellen:     принимать на работу
+  vereinbaren:    договариваться, назначать
+  verschieben:    переносить на другое время
+  erledigen:      сделать, разобраться
+  besprechen:     обсуждать
+  entlassen:      увольнять
+  beantragen:     подавать заявление
+  einreichen:     подавать документы
+  vertreten:      замещать, представлять
+  nett:           милый, приятный
+  schwer:         тяжёлый, трудный
+  leicht:         лёгкий, нетрудный
+  zuständig:      ответственный за это
+  befristet:      на ограниченный срок
+  # Врач
+  Praxis:         врачебный кабинет
+  Wartezimmer:    зал ожидания у врача
+  Zahnarzt:       стоматолог
+  Arm:            рука
+  Hals:           шея, горло
+  Rücken:         спина
+  Bauch:          живот
+  Fuß:            ступня, нога
+  Ohr:            ухо
+  Finger:         палец
+  Fieber:         температура, жар
+  Überweisung:    направление к специалисту
+  Pflaster:       пластырь
+  Untersuchung:   осмотр, обследование
+  Behandlung:     лечение
+  Krankenwagen:   скорая помощь
+  Hausarzt:       семейный врач
+  Befund:         заключение обследования
+  Attest:         справка от врача
+  Dosierung:      дозировка
+  Vorsorge:       профилактический осмотр
+  Krankschreibung: больничный
+  Beschwerde:     жалоба, симптом
+  untersuchen:    осматривать
+  behandeln:      лечить
+  verschreiben:   выписывать лекарство
+  einnehmen:      принимать лекарство
+  impfen:         делать прививку
+  verletzen:      травмировать, ранить
+  einweisen:      направлять в больницу
+  vertragen:      переносить без вреда
+  leiden:         страдать
+  verletzt:       травмированный
+  rezeptfrei:     без рецепта
+  nüchtern:       натощак
+  schwindelig:    кружится голова
+  # Дети и Kita
+  Spielplatz:     детская площадка
+  Kita:           детский сад
+  Schule:         школа
+  Bild:           картинка, рисунок
+  Ball:           мяч
+  Brotdose:       коробочка для еды в садик
+  Betreuung:      присмотр за ребёнком
+  Kitaplatz:      место в детском саду
+  Eingewöhnung:   привыкание к садику
+  Elternabend:    родительское собрание
+  Impfpass:       прививочный сертификат
+  Ausflug:        вылазка, экскурсия
+  Geschenk:       подарок
+  Streit:         ссора
+  Förderung:      поддержка, развивающие занятия
+  Elterngeld:     пособие по уходу за ребёнком
+  Kindergeld:     детское пособие
+  Einschulung:    поступление в первый класс
+  Trotzphase:     кризис трёх лет
+  Vorschule:      подготовительная группа
+  Grenze:         граница, рамки
+  malen:          рисовать
+  basteln:        делать поделки
+  füttern:        кормить
+  wickeln:        менять подгузник
+  wachsen:        расти
+  betreuen:       присматривать за ребёнком
+  aufpassen:      присматривать, следить
+  teilen:         делиться, делить
+  fördern:        поддерживать, развивать
+  durchsetzen:    добиваться своего
+  brav:           послушный
+  schüchtern:     стеснительный
+  zweisprachig:   двуязычный
+  altersgerecht:  по возрасту
+
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);
 #    без `use` глагол остаётся спорным и в задания на выбор haben/sein не попадает.
@@ -141,3 +340,4 @@ aux_ambiguous:
   sitzen:   {use: h, note: "hat gesessen. ist gesessen — юг Германии и Австрия"}
   hängen:   {use: h, note: "hat gehangen — висело; hat gehängt — повесил, это слабый глагол"}
   setzen:   {use: h, note: "hat sich gesetzt — сел; сидел — это sitzen, hat gesessen"}
+  heilen:   {use: h, note: "hat geheilt — вылечил; ist geheilt — зажило само"}
