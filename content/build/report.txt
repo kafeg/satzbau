@@ -1,4 +1,4 @@
-сборка 2026-11-23, версия данных 90f30f5a6a38
+сборка 2026-11-23, версия данных 7e709e614c75
 
 слов в themes.yaml: 573; собрано: 573; потеряно: 0
 
@@ -20,17 +20,7 @@
   adjs.json         n=82          5.6 КиБ   gzip     1.7 КиБ
   explain.json      n=7           6.8 КиБ   gzip     2.3 КиБ
   nouns.json        n=360        28.9 КиБ   gzip     7.2 КиБ
-  sentences.json    n=1680      168.5 КиБ   gzip    46.1 КиБ
   templates.json    n=8           2.5 КиБ   gzip     0.6 КиБ
   themes.json       n=6          30.8 КиБ   gzip     4.1 КиБ
   verbs.json        n=131        17.6 КиБ   gzip     4.3 КиБ
-  ИТОГО                       260.7 КиБ   gzip    66.3 КиБ
-
-предложения Tatoeba, отбраковка:
-  незнакомая словоформа      137319
-  длина не 3–8               30998
-  нет точки в конце          822
-  имя исчерпало квоту        79
-  примеров на имя: Tom 2000, Maria 314, Deutschland 42, Montag 33, Oktober 32
-  слов без примеров: 163 из 573
-    Abfahrt, Abmahnung, Abteil, Abteilung, Anmeldung, Anschluss, Arbeitgeber, Arbeitnehmer, Attest, Ausbildung, Ausflug, Auskunft, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Behandlung, Beilage, Beschwerde, Besichtigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Café, Dosierung, Drucker, Durchsage, Eingewöhnung, Einschulung, Elternabend, Elterngeld, Elternzeit, Entwicklung, Ermäßigung, Erstattung …
+  ИТОГО                        92.2 КиБ   gzip    20.2 КиБ

@@ -16,6 +16,13 @@
 #
 # Варианты ответа берутся из ИНВЕНТАРЯ ФОРМ парадигмы, а не «то же слово в других падежах»:
 # иначе для женского рода набор вырождается (Nom die, Akk die, Dat der, Gen der — два дубля).
+#
+# ⚠ count не может быть больше инвентаря. У aux_present в первом лице это ровно две формы,
+# habe и bin: просить четыре — значит добить набор формами других лиц (hat, ist), а это
+# проверка лица, а не выбора вспомогательного. Поэтому у двух шаблонов Perfekt count: 2.
+# У merge-wo-in оставлено 4, но это ТРЕБОВАНИЕ К ЯДРУ: склеенных форм с предлогом in
+# всего две (im, ins), и чтобы вариантов было четыре, инвентарь парадигмы должен включать
+# несклеенные in dem / in das. Это и есть полезный дистрактор: «надо было склеить».
 
 - id: prep-dat-mit
   rule: prep-dativ
@@ -89,7 +96,7 @@
   frame: "Ich {slot} nach Berlin {pp}."
   need: {pos: v, tags: [motion], not: [aux_hs]}
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
-  options: {paradigm: aux_present, count: 4}
+  options: {paradigm: aux_present, count: 2}
   why: perfekt-aux
 
 - id: perfekt-aux-action
@@ -99,5 +106,5 @@
   frame: "Ich {slot} die Wohnung {pp}."
   need: {pos: v, theme: home, tags: [state], not: [aux_hs]}
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
-  options: {paradigm: aux_present, count: 4}
+  options: {paradigm: aux_present, count: 2}
   why: perfekt-aux
