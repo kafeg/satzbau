@@ -117,21 +117,28 @@ def read_freedict_tei(path):
     return out
 
 
+WORD_KEY = re.compile(r'"word":\s*"([^"\\]+)"')
+
+
 def scan_jsonl(path, lemmas, poses=None):
-    """Один проход по большому jsonl: только нужные леммы. (word, pos) -> [записи]"""
+    """Один проход по большому jsonl: только нужные леммы. (word, pos) -> [записи]
+
+    ⚠ Нельзя брать ПЕРВОЕ вхождение "word" в строке. kaikki вкладывает те же ключи
+    в этимологию и потомков: у строки про Zug первое "word" — это чешское «cuk»
+    из раздела заимствований, а своё слово записи лежит дальше. Поэтому префильтр
+    собирает ВСЕ вхождения и только отбрасывает строку целиком, а истинное значение
+    берётся из разобранного json.
+    """
     import json
     want = set(lemmas)
     out = collections.defaultdict(list)
     with open(path, encoding='utf-8') as f:
         for line in f:
-            i = line.find('"word":')
-            if i < 0:
-                continue
-            j = line.find('"', i + 7)
-            k = line.find('"', j + 1)
-            if line[j + 1:k] not in want:
+            if not (want & set(WORD_KEY.findall(line))):
                 continue
             d = json.loads(line)
+            if d.get('word') not in want:
+                continue
             if poses and d.get('pos') not in poses:
                 continue
             out[(d['word'], d.get('pos'))].append(d)

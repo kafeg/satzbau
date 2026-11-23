@@ -73,7 +73,10 @@ def main():
         if K is not None:
             ke = K.get((lemma, KPOS[pos])) or K.get((lemma, None))
             if not ke:
-                r['miss'].append('нет в kaikki')
+                # Существительному kaikki нужен не критично: род, падежи и множественное
+                # даёт nouns.csv, а перевод — русский Викисловарь и FreeDict.
+                # Глаголу и прилагательному без kaikki нечем взять формы.
+                (r['note'] if pos == 'n' else r['miss']).append('нет в kaikki')
             elif pos == 'v':
                 e = ke[0]
                 forms = e.get('forms') or []

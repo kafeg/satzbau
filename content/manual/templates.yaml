@@ -76,12 +76,26 @@
   slot: {paradigm: adj_ending, decl: mixed, case: dat, num: sg, gender: from_word}
   why: adj-dat-en
 
+# Два шаблона на одно правило, и это не дубль: на глаголах движения ответ почти
+# всегда `bin`, на остальных — `habe`. С одним шаблоном ответ угадывается по рамке,
+# и правило не тренируется. Проверено на данных: среди глаголов с тегом motion
+# и однозначным aux семь требуют sein и только один haben.
 - id: perfekt-aux-motion
   rule: perfekt-aux
   level: A1
   kind: choice
   frame: "Ich {slot} nach Berlin {pp}."
   need: {pos: v, tags: [motion], not: [aux_hs]}
+  slot: {paradigm: aux_present, person: 1sg, from_word: aux}
+  options: {paradigm: aux_present, count: 4}
+  why: perfekt-aux
+
+- id: perfekt-aux-action
+  rule: perfekt-aux
+  level: A1
+  kind: choice
+  frame: "Ich {slot} die Wohnung {pp}."
+  need: {pos: v, theme: home, tags: [state], not: [aux_hs]}
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
   options: {paradigm: aux_present, count: 4}
   why: perfekt-aux

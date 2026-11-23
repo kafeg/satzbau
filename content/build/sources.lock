@@ -17,6 +17,24 @@
   "sha256": "d9e50546fd7e8b6fe6542a2b33c51d1331092b2a3916ec09f80d97856068705b",
   "fetched": "2026-11-23"
  },
+ "kaikki_de": {
+  "url": "https://kaikki.org/dictionary/German/kaikki.org-dictionary-German.jsonl",
+  "file": "kaikki-de.jsonl",
+  "license": "CC BY-SA",
+  "gives": "род, падежи, спряжение, aux, Partizip II, управление в raw_glosses",
+  "size": 1095258648,
+  "sha256": "4fb15662a125085e1eb6b533a210b45edcdffa7b8e72e07634f46e1485e4e715",
+  "fetched": "2026-11-23"
+ },
+ "kaikki_ru_de": {
+  "url": "https://kaikki.org/ruwiktionary/%D0%9D%D0%B5%D0%BC%D0%B5%D1%86%D0%BA%D0%B8%D0%B9/kaikki.org-dictionary-%D0%9D%D0%B5%D0%BC%D0%B5%D1%86%D0%BA%D0%B8%D0%B9.jsonl",
+  "file": "kaikki-ru-de.jsonl",
+  "license": "CC BY-SA",
+  "gives": "русские толкования, часто с управлением",
+  "size": 115130101,
+  "sha256": "41f81bdff21ec660a031b7e00795e58cc4d0acd27d2e41224c73e4661e93c5e5",
+  "fetched": "2026-11-23"
+ },
  "nouns_csv": {
   "url": "https://raw.githubusercontent.com/gambolputty/german-nouns/main/german_nouns/nouns.csv",
   "file": "nouns.csv",
@@ -33,6 +51,15 @@
   "gives": "немецкие предложения",
   "size": 12154139,
   "sha256": "e16c57e695bfeccccb455c305d262c5cbe2aa74a5c1e1edb725d53cf907309ac",
+  "fetched": "2026-11-23"
+ },
+ "tatoeba_links": {
+  "url": "https://downloads.tatoeba.org/exports/links.tar.bz2",
+  "file": "links.tar.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "связки переводов между предложениями",
+  "size": 150798085,
+  "sha256": "7a6e0438fe8f1b083ffadf45150ff7ed22404a86ab70b72d7d67eba8873fb427",
   "fetched": "2026-11-23"
  },
  "tatoeba_rus": {
