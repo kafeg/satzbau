@@ -1,0 +1,27 @@
+сборка 2026-11-23, версия данных f65019212089
+
+слов в themes.yaml: 198; собрано: 198; потеряно: 0
+
+управление, предложено источниками (3) — проверить и внести
+в fixes.yaml:government, иначе в бандл не попадёт:
+  ankommen               auf A
+  schlafen               über A
+  setzen                 auf A
+
+размеры:
+  adjs.json         n=33          2.3 КиБ   gzip     0.8 КиБ
+  explain.json      n=7           6.8 КиБ   gzip     2.3 КиБ
+  nouns.json        n=115         9.5 КиБ   gzip     2.6 КиБ
+  sentences.json    n=570        56.3 КиБ   gzip    14.7 КиБ
+  templates.json    n=8           2.5 КиБ   gzip     0.6 КиБ
+  themes.json       n=2          10.7 КиБ   gzip     1.6 КиБ
+  verbs.json        n=50          7.3 КиБ   gzip     2.0 КиБ
+  ИТОГО                        95.4 КиБ   gzip    24.6 КиБ
+
+предложения Tatoeba, отбраковка:
+  незнакомая словоформа      146970
+  длина не 3–8               30998
+  нет точки в конце          822
+  примеров на имя: Tom 805, Maria 117, Deutschland 30, Montag 29, Oktober 26
+  слов без примеров: 56 из 198
+    Abfahrt, Abteil, Anmeldung, Anschluss, Auskunft, Autobahn, Automat, Bahnsteig, Baustelle, Besichtigung, Betriebskosten, Durchsage, Ermäßigung, Erstattung, Fahrgast, Flur, Hausmeister, Hausordnung, Heizung, Herd, Kaution, Kreuzung, Kündigungsfrist, Mietvertrag, Monatskarte, Mülltonne, Nachzahlung, Nebenkosten, Quadratmeter, Rückfahrt, S-Bahn, Schaffner, Schimmel, Stau, Straßenbahn, Strecke, Streik, Treppe, U-Bahn, Umleitung …
