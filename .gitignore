@@ -4,6 +4,6 @@ node_modules/
 dist/
 __pycache__/
 .venv/
-# сырые дампы источников и собранные данные: скачиваются и собираются локально
-data/raw/
-data/build/
+# сырые дампы источников (1,4 ГБ): качает tools/build_data.py, в репозиторий не идут
+/data/
+# собранные content/build/*.json НЕ игнорируются: они коммитятся, см. docs/architecture.md
