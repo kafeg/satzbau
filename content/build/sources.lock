@@ -1,0 +1,56 @@
+{
+ "freedict_deu_rus": {
+  "url": "https://download.freedict.org/dictionaries/deu-rus/2025.11.23/freedict-deu-rus-2025.11.23.src.tar.xz",
+  "file": "freedict-deu-rus.src.tar.xz",
+  "license": "CC BY-SA 3.0",
+  "gives": "короткие русские переводы, подстраховка к Викисловарю",
+  "size": 1456744,
+  "sha256": "8bd193eeb058e65d9085beb7e90ef48e8ea7de16afaae4af637821c40de9ed4c",
+  "fetched": "2026-11-23"
+ },
+ "freq_de50k": {
+  "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/de/de_50k.txt",
+  "file": "de_50k.txt",
+  "license": "CC BY-SA 4.0",
+  "gives": "частотность по субтитрам; задаёт порядок внутри темы",
+  "size": 662497,
+  "sha256": "d9e50546fd7e8b6fe6542a2b33c51d1331092b2a3916ec09f80d97856068705b",
+  "fetched": "2026-11-23"
+ },
+ "nouns_csv": {
+  "url": "https://raw.githubusercontent.com/gambolputty/german-nouns/main/german_nouns/nouns.csv",
+  "file": "nouns.csv",
+  "license": "CC BY-SA 4.0",
+  "gives": "род и 4 падежа в двух числах, 102 тыс. существительных",
+  "size": 20194356,
+  "sha256": "7b34ca76bb753fa5d3d2b683ecc987824ae874b375ac999a797074fafba2768e",
+  "fetched": "2026-11-23"
+ },
+ "tatoeba_deu": {
+  "url": "https://downloads.tatoeba.org/exports/per_language/deu/deu_sentences.tsv.bz2",
+  "file": "deu_sentences.tsv.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "немецкие предложения",
+  "size": 12154139,
+  "sha256": "e16c57e695bfeccccb455c305d262c5cbe2aa74a5c1e1edb725d53cf907309ac",
+  "fetched": "2026-11-23"
+ },
+ "tatoeba_rus": {
+  "url": "https://downloads.tatoeba.org/exports/per_language/rus/rus_sentences.tsv.bz2",
+  "file": "rus_sentences.tsv.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "русские предложения",
+  "size": 15665808,
+  "sha256": "5dc86aaa70b4a8aa18eff17690394f7bddb5f2437cd22878d5f694fbaf1dab55",
+  "fetched": "2026-11-23"
+ },
+ "unimorph_deu": {
+  "url": "https://raw.githubusercontent.com/unimorph/deu/master/deu",
+  "file": "unimorph-deu.tsv",
+  "license": "CC BY-SA 3.0",
+  "gives": "словоформы; нужен для фильтра предложений",
+  "size": 18932560,
+  "sha256": "8bc98487e3caf86188e2c072ebf2dc734f2ca35afef016bb399eb5a43e69d7c0",
+  "fetched": "2026-11-23"
+ }
+}

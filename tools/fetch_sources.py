@@ -66,24 +66,40 @@ def human(n):
 
 
 def fetch(name, src, force=False):
+    """Качает, если нужно, и возвращает запись для лока. Докачивает с обрыва."""
     dest = os.path.join(RAW, src['file'])
+    tmp = dest + '.part'
     if os.path.exists(dest) and not force:
         print(f'{name}: уже на месте ({human(os.path.getsize(dest))}), считаю хэш')
     else:
-        req = urllib.request.Request(src['url'], headers={'User-Agent': UA})
+        # Докачка: у источников размером в гигабайт обрыв неизбежен, а скорость
+        # бывает 200 КБ/с. Если сервер не умеет Range — качаем заново.
+        have = os.path.getsize(tmp) if os.path.exists(tmp) and not force else 0
+        headers = {'User-Agent': UA}
+        if have:
+            headers['Range'] = f'bytes={have}-'
+        req = urllib.request.Request(src['url'], headers=headers)
         t0 = time.time()
         with urllib.request.urlopen(req, timeout=120) as r:
-            total = int(r.headers.get('content-length') or 0)
-            tmp = dest + '.part'
-            got = 0
-            with open(tmp, 'wb') as f:
+            resumed = r.status == 206
+            if have and not resumed:
+                print(f'  {name}: сервер не умеет докачку, качаю заново')
+                have = 0
+            total = int(r.headers.get('content-length') or 0) + have
+            got = have
+            if have:
+                print(f'  {name}: докачиваю с {human(have)}', flush=True)
+            with open(tmp, 'ab' if have else 'wb') as f:
+                mark = got
                 while chunk := r.read(1 << 20):
                     f.write(chunk)
                     got += len(chunk)
-                    if total and got % (50 << 20) < (1 << 20):
-                        print(f'  {name}: {human(got)} / {human(total)}', flush=True)
+                    if got - mark >= (50 << 20):
+                        mark = got
+                        print(f'  {name}: {human(got)}'
+                              + (f' / {human(total)}' if total else ''), flush=True)
             os.replace(tmp, dest)
-        print(f'{name}: {human(got)} за {time.time()-t0:.0f} c')
+        print(f'{name}: {human(got)} за {time.time()-t0:.0f} c', flush=True)
     h = hashlib.sha256()
     with open(dest, 'rb') as f:
         while chunk := f.read(1 << 22):
@@ -93,26 +109,47 @@ def fetch(name, src, force=False):
                 sha256=h.hexdigest(), fetched=time.strftime('%Y-%m-%d'))
 
 
+def write_lock(entry_name, entry):
+    """Пишет лок сразу после каждого источника, перечитав его перед записью.
+
+    Два правила, оба выучены на ошибках: писать по одному — потому что прогон
+    могут прервать (у меня его убил SIGPIPE от `| head`), и тогда записи о скачанном
+    не остаётся вовсе; перечитывать перед записью — потому что два прогона рядом
+    (лёгкий набор и kaikki) иначе затирают записи друг друга.
+    """
+    os.makedirs(os.path.dirname(LOCK), exist_ok=True)
+    lock = {}
+    if os.path.exists(LOCK):
+        try:
+            lock = json.load(open(LOCK, encoding='utf-8'))
+        except ValueError:
+            pass
+    lock[entry_name] = entry
+    tmp = LOCK + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
+        json.dump(dict(sorted(lock.items())), f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    os.replace(tmp, LOCK)
+    return lock
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     flags = {a for a in sys.argv[1:] if a.startswith('--')}
     os.makedirs(RAW, exist_ok=True)
-    os.makedirs(os.path.dirname(LOCK), exist_ok=True)
-    lock = json.load(open(LOCK, encoding='utf-8')) if os.path.exists(LOCK) else {}
     want = args or [k for k, v in SOURCES.items() if '--all' in flags or not v.get('big')]
     bad = [w for w in want if w not in SOURCES]
     if bad:
         sys.exit(f'нет такого источника: {bad}; есть: {list(SOURCES)}')
+    lock = {}
     for name in want:
         try:
-            lock[name] = fetch(name, SOURCES[name], '--force' in flags)
+            lock = write_lock(name, fetch(name, SOURCES[name], '--force' in flags))
         except Exception as e:
-            print(f'{name}: ОШИБКА {e.__class__.__name__}: {e}', file=sys.stderr)
-    json.dump(dict(sorted(lock.items())), open(LOCK, 'w', encoding='utf-8'),
-              ensure_ascii=False, indent=1)
-    open(LOCK, 'a', encoding='utf-8').write('\n')
+            print(f'{name}: ОШИБКА {e.__class__.__name__}: {e}', file=sys.stderr, flush=True)
     print(f'\nлок: {LOCK}')
-    print(f'всего на диске: {human(sum(v["size"] for v in lock.values()))} в {RAW}')
+    if lock:
+        print(f'всего на диске: {human(sum(v["size"] for v in lock.values()))} в {RAW}')
 
 
 if __name__ == '__main__':
