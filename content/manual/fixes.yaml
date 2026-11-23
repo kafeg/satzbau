@@ -99,6 +99,29 @@ no_plural:
   - Mittagsschlaf
   - Sorgerecht
 
+# 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
+#      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
+#      Напитки сюда НЕ входят: «ein Kaffee, bitte» — нормальная фраза.
+mass:
+  - Benzin
+  - Strom
+  - Schimmel
+  - Blut
+  - Geld
+  - Fleisch
+  - Obst
+  - Gemüse
+  - Reis
+  - Salz
+  - Zucker
+  - Butter
+  - Schokolade
+  - Hunger
+  - Durst
+  - Fieber
+  - Husten
+  - Schnupfen
+
 # 3. Слова, у которых единственное число формально есть, но в речи они живут
 #    во множественном. Данные их не отличают: у Möbel, Lebensmittel, Geschwister
 #    в nouns.csv стоит род n. Решение педагогическое: не даём в задания на

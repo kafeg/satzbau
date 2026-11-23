@@ -19,9 +19,9 @@ MANUAL = os.path.join(ROOT, 'content', 'manual')
 LEVELS = {'A1': 1, 'A2': 2, 'B1': 3}
 NEED_KEYS = {'pos', 'theme', 'tags', 'g', 'lv_max', 'has', 'not'}
 # Флаги для `not`: имя в шаблоне → когда оно поднято у записи лексикона
-FLAGS = {'pl_only': lambda r: r.get('pl_only'), 'plu': lambda r: r.get('plu'),
-         'nd': lambda r: r.get('nd'), 'adjdecl': lambda r: r.get('adjdecl'),
-         'aux_hs': lambda r: r.get('aux') == 'hs'}
+FLAGS = {name: (lambda n: lambda r: bool(r.get(n)))(name)
+         for name in ('pl_only', 'plu', 'npl', 'mass', 'nd', 'adjdecl')}
+FLAGS['aux_hs'] = lambda r: r.get('aux') == 'hs'
 errors, warns, notes = [], [], []
 
 

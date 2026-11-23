@@ -39,6 +39,9 @@
 | `position` | глагол места: stehen, liegen, sitzen, hängen |
 | `placement` | глагол перемещения: stellen, legen, setzen |
 | `state` | остальные глаголы: wohnen, kosten, reparieren |
+| `obj` | глагол с прямым объектом (переходный): putzen, kaufen, лечить. Без него шаблон с объектом даёт «Ich habe die Wohnung geschlafen» |
+| `surface` | на что можно поставить или положить: Tisch, Boden, Treppe, Balkon |
+| `housework` | что делают с жильём: putzen, renovieren, lüften. Нужен там, где объект фразы задан («Ich habe die Wohnung …»): переходности мало, нужен подходящий объект |
 | `quality` | прилагательное |
 
 ## Правила, которые держат формат простым

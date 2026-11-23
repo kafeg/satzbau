@@ -153,10 +153,11 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     nd = bool(akk and akk != lemma)
     if nd:
         n['nd'] = 1
-    regular_gen = {lemma + 's', lemma + 'es', lemma}
-    if nd:
-        regular_gen |= {lemma + 'n', lemma + 'en'}
-    if gen and gen not in regular_gen:
+    # У n-Deklination родительный пишем всегда: вывести его правилом нельзя.
+    # Nachbar даёт Nachbarn, а не Nachbaren, и «der Nachbaren» выглядело в заданиях.
+    if nd and gen:
+        n['gen'] = gen
+    elif gen and gen not in {lemma + 's', lemma + 'es', lemma}:
         n['gen'] = gen
     dpl = (e or {}).get('dpl')
     if dpl and pl and dpl not in (pl, pl + 'n'):
@@ -165,6 +166,8 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         n['adjdecl'] = 1
     if lemma in fixes['plural_in_use']:
         n['plu'] = 1
+    if lemma in fixes['mass']:
+        n['mass'] = 1
     if ru:
         n['ru'] = ru
     else:
@@ -454,6 +457,7 @@ def main():
                  plural_in_use=set(fx.get('plural_in_use') or []),
                  pl_only_extra=set(fx.get('pl_only_extra') or []),
                  no_plural=set(fx.get('no_plural') or []),
+                 mass=set(fx.get('mass') or []),
                  adj_decl_extra=set(fx.get('adj_declined_extra') or []),
                  translations=fx.get('translations') or {},
                  aux_ambiguous=fx.get('aux_ambiguous') or {})

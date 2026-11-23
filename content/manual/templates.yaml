@@ -30,37 +30,52 @@
   kind: choice
   frame: "Ich fahre mit {slot} {w}."
   need: {pos: n, theme: transport, tags: [vehicle], not: [pl_only]}
-  slot: {paradigm: def_article, case: dat, num: sg}
+  slot: {paradigm: def_article, case: dat, num: sg, prep: mit}
   options: {paradigm: def_article, count: 4}
   why: prep-dativ
+
+# Было записано как prep-akkusativ, но предлога во фразе нет: падеж здесь требует
+# глагол, а не предлог. Это отдельное правило, и объяснение у него своё.
+- id: akk-objekt-brauchen
+  rule: akkusativ-objekt
+  level: A1
+  kind: choice
+  frame: "Ich brauche {slot} {w}."
+  need: {pos: n, tags: [document, thing], not: [pl_only, plu, mass]}
+  slot: {paradigm: indef_article, case: akk, num: sg}
+  options: {paradigm: indef_article, count: 4}
+  why: akkusativ-objekt
 
 - id: prep-akk-fuer
   rule: prep-akkusativ
   level: A1
   kind: choice
-  frame: "Ich brauche {slot} {w}."
-  need: {pos: n, tags: [document, thing], not: [pl_only]}
-  slot: {paradigm: indef_article, case: akk, num: sg}
-  options: {paradigm: indef_article, count: 4}
+  frame: "Das Geschenk ist für {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: akk, num: sg, prep: für}
+  options: {paradigm: def_article, count: 4}
   why: prep-akkusativ
 
-- id: wechsel-wo-in
+# Предлог здесь auf, а не in, и это не вкус: «in dem Zimmer» грамматически верно,
+# но по-немецки так не говорят — обязательно «im». Нельзя тренировать падеж на форме,
+# которую носитель не употребляет. auf с артиклем не сливается, и обе фразы живые.
+- id: wechsel-wo-auf
   rule: wechsel-wo
   level: A2
   kind: choice
-  frame: "Die Lampe steht in {slot} {w}."
-  need: {pos: n, theme: home, tags: [room], not: [pl_only]}
-  slot: {paradigm: def_article, case: dat, num: sg}
+  frame: "Die Lampe steht auf {slot} {w}."
+  need: {pos: n, tags: [surface], not: [pl_only]}
+  slot: {paradigm: def_article, case: dat, num: sg, prep: auf}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wo
 
-- id: wechsel-wohin-in
+- id: wechsel-wohin-auf
   rule: wechsel-wohin
   level: A2
   kind: choice
-  frame: "Ich stelle die Lampe in {slot} {w}."
-  need: {pos: n, theme: home, tags: [room], not: [pl_only]}
-  slot: {paradigm: def_article, case: akk, num: sg}
+  frame: "Ich stelle die Lampe auf {slot} {w}."
+  need: {pos: n, tags: [surface], not: [pl_only]}
+  slot: {paradigm: def_article, case: akk, num: sg, prep: auf}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wohin
 
@@ -69,8 +84,21 @@
   level: A2
   kind: choice
   frame: "Wir sind {slot} {w}."
-  need: {pos: n, theme: home, tags: [room], g: [m, n], not: [pl_only]}
+  need: {pos: n, tags: [room], g: [m, n], not: [pl_only]}
   slot: {paradigm: merged_prep_article, prep: in, case: dat, num: sg}
+  options: {paradigm: merged_prep_article, prep: in, count: 4}
+  why: merge-prep-article
+
+# Второй шаблон на то же правило, и снова не для красоты: с одним шаблоном ответ
+# «im» верен на всём наполнении, и человек отвечает не глядя. Пара wo/wohin даёт
+# im против ins — то есть собственно Wechselpräposition.
+- id: merge-wohin-in
+  rule: merge-prep-article
+  level: A2
+  kind: choice
+  frame: "Wir gehen {slot} {w}."
+  need: {pos: n, tags: [room], g: [n], not: [pl_only]}
+  slot: {paradigm: merged_prep_article, prep: in, case: akk, num: sg}
   options: {paradigm: merged_prep_article, prep: in, count: 4}
   why: merge-prep-article
 
@@ -93,8 +121,8 @@
   rule: perfekt-aux
   level: A1
   kind: choice
-  frame: "Ich {slot} nach Berlin {pp}."
-  need: {pos: v, tags: [motion], not: [aux_hs]}
+  frame: "Ich {slot} gestern {pp}."
+  need: {pos: v, tags: [motion], not: [aux_hs, obj]}
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
   options: {paradigm: aux_present, count: 2}
   why: perfekt-aux
@@ -104,7 +132,7 @@
   level: A1
   kind: choice
   frame: "Ich {slot} die Wohnung {pp}."
-  need: {pos: v, theme: home, tags: [state], not: [aux_hs]}
+  need: {pos: v, tags: [housework], not: [aux_hs]}
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
   options: {paradigm: aux_present, count: 2}
   why: perfekt-aux
