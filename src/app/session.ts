@@ -2,7 +2,7 @@
 // На Э5 сюда придут повторы по FSRS, и смешанная очередь станет «повторением ошибок».
 
 import { getBundle, getWords } from '../core/bundle.ts'
-import { due, ruleKey, wordKey, type Cards } from './srs.ts'
+import { due, dueAt, ruleKey, wordKey, type Cards } from './srs.ts'
 import { fillingFor, itemsFor } from '../core/generate.ts'
 import type { Item, Level } from '../core/types.ts'
 
@@ -145,8 +145,16 @@ export function newSession(p: Pick = {}): Item[] {
 
   // Порядок внутри стопки: сперва то, чему пора повторяться, потом новое, потом
   // выученное. Правило важнее слова — расписание строится по нему (docs/architecture.md).
-  const rank = (i: Item) =>
-    (p.cards ? (due(p.cards, ruleKey(i.rule)) ? 0 : 2) + (due(p.cards, wordKey(i.word)) ? 0 : 1) : 0)
+  // ⚠ «Карточки нет» и «пора повторить» — РАЗНЫЕ состояния. Пока due() считал «пора»
+  // и то, и другое, новое правило и подошедшее по расписанию в очереди не различались,
+  // и «Повторить ошибки» повторяла не то, что ждёт повтора.
+  const state = (key: string) => {
+    if (!p.cards) return 0
+    const at = dueAt(p.cards, key)
+    if (at === null) return 1
+    return at <= Date.now() ? 0 : 2
+  }
+  const rank = (i: Item) => state(ruleKey(i.rule)) * 3 + state(wordKey(i.word))
   for (const b of buckets) {
     // сортируем по убыванию: берём с хвоста
     b.mine.sort((x, y) => rank(y) - rank(x))

@@ -172,7 +172,9 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     # «des Eis» вместо «des Eises». Там правило надёжнее источника
     elif gen and gen != gen_default(lemma, g) and not (g != 'f' and gen == lemma):
         n['gen'] = gen
-    dpl = (e or {}).get('dpl')
+    # ⚠ Ручное множественное главнее: у Bank источник даёт Bänke от скамьи, и дательное
+    # Bänken оставалось от неё же, хотя слово у нас — банк
+    dpl = None if lemma in fixes['plural'] else (e or {}).get('dpl')
     if dpl and pl and dpl not in (pl, pl + 'n'):
         n['dpl'] = dpl
     if (e or {}).get('adj_decl') or lemma in fixes['adj_decl_extra']:
