@@ -45,6 +45,7 @@
 | `meal` | приём пищи, а не еда штуками: Frühstück, Mittagessen, Nachtisch. Нужен, чтобы «Ich esse ein Frühstück» не собралось |
 | `solo` | глагол, который сам составляет фразу с подлежащим-человеком: «Er kocht», «Er arbeitet». Без него любая рамка без объекта даёт «Er erreicht oft» |
 | `quality` | прилагательное |
+| `absolute` | прилагательное без степеней сравнения: vegetarisch, unbefristet, schwanger. Без него собирается «am vegetarischesten» |
 | `generic` | прилагательное, которое подходит почти к любому предмету: groß, klein, neu, alt, teuer. Нужен там, где существительное приходит вторым словом: без него собирается «die pünktliche Ampel» |
 
 ## Правила, которые держат формат простым

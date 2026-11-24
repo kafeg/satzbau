@@ -87,6 +87,13 @@ describe('трудные слова', () => {
     expect(comparative(adj('klein'))).toBe('kleiner')
     expect(superlative(adj('klein'))).toBe('am kleinsten')
     expect(superlative(adj('laut'))).toBe('am lautesten')
+    // сравнительная выбрасывает -e-, превосходная нет
+    expect(comparative(adj('teuer'))).toBe('teurer')
+    expect(superlative(adj('teuer'))).toBe('am teuersten')
+    expect(comparative(adj('dunkel'))).toBe('dunkler')
+    expect(superlative(adj('dunkel'))).toBe('am dunkelsten')
+    expect(superlative(adj('früh'))).toBe('am frühesten')
+    expect(superlative(adj('pünktlich'))).toBe('am pünktlichsten')
   })
 
   it('Perfekt берёт вспомогательный из записи', () => {

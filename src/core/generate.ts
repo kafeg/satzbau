@@ -9,7 +9,7 @@ import {
   merged,
   possessive,
 } from './paradigms.ts'
-import { adjStem, nounForm, particle, present } from './morph.ts'
+import { adjStem, comparative, nounForm, particle, present, superlative } from './morph.ts'
 import type { Word } from './bundle.ts'
 import type { Adj, Case, Gender, Item, Need, Noun, Num, Slot, Template, Verb } from './types.ts'
 
@@ -88,6 +88,10 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return nounForm(w.entry as Noun, c, 'pl')
     case 'participle':
       return (w.entry as Verb).pp
+    case 'adj_comparative':
+      return comparative(w.entry as Adj)
+    case 'adj_superlative':
+      return superlative(w.entry as Adj)
     case 'verb_present':
       return present(w.entry as Verb, slot.person ?? '3sg')
     // спрягаемая часть отделяемого глагола: приставка уезжает в конец фразы

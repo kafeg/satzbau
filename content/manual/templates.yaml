@@ -404,3 +404,55 @@
   slot: {paradigm: possessive, case: akk, num: sg}
   options: {paradigm: possessive, count: 4}
   why: possessiv-akkusativ
+
+# Степени сравнения: морфология для них была написана и проверена ещё на Э3,
+# но ни один шаблон её не просил — как раньше со спряжением.
+- id: komparativ-als
+  rule: komparativ
+  level: A2
+  kind: input
+  frame: "Heute ist es {slot} als gestern."
+  need: {pos: a, not: [person, absolute]}
+  slot: {paradigm: adj_comparative}
+  why: komparativ
+
+- id: superlativ-von-allen
+  rule: komparativ
+  level: A2
+  kind: input
+  frame: "Das ist {slot} von allen."
+  need: {pos: a, not: [person, absolute]}
+  slot: {paradigm: adj_superlative}
+  why: komparativ
+
+# Управление глагола живёт в рамке, а не в данных: подтверждённого управления у нас
+# на 29 глаголов, и с Dativ из них два. Поэтому глагол фиксирован, а меняется лицо.
+- id: dativ-objekt-helfen
+  rule: dativ-objekt
+  level: A2
+  kind: choice
+  frame: "Ich helfe {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: dat, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: dativ-objekt
+
+- id: dativ-objekt-antworten
+  rule: dativ-objekt
+  level: A2
+  kind: choice
+  frame: "Ich antworte {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: dat, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: dativ-objekt
+
+- id: genitiv-besitz
+  rule: genitiv-besitz
+  level: B1
+  kind: choice
+  frame: "Das ist das Auto {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: gen, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: genitiv-besitz

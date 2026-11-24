@@ -120,8 +120,15 @@ export function comparative(a: Adj): string {
   return a.cmp ?? `${adjStem(a)}er`
 }
 
+/**
+ * ⚠ Превосходная берёт ПОЛНОЕ слово, а не основу: сравнительная у teuer и dunkel
+ * выбрасывает -e- (teurer, dunkler), а превосходная нет — am teuersten, am dunkelsten.
+ */
 export function superlative(a: Adj): string {
   if (a.sup) return a.sup
-  const stem = adjStem(a)
-  return endsAny(stem, ['t', 'd', 's', 'ß', 'z', 'sch']) ? `am ${stem}esten` : `am ${stem}sten`
+  const w = a.w
+  // -e- вставляется после t, d, шипящих и после гласной с -h: am frühesten.
+  // ⚠ Именно ГЛАСНАЯ с h: pünktlich тоже кончается на h, но даёт am pünktlichsten.
+  const esten = endsAny(w, ['t', 'd', 's', 'ß', 'z', 'sch']) || /[aeiouäöü]h$/.test(w)
+  return esten ? `am ${w}esten` : `am ${w}sten`
 }

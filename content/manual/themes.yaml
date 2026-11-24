@@ -98,8 +98,8 @@ transport:
     - {w: pünktlich,     pos: a, lv: A2, tags: [quality]}
     - {w: direkt,        pos: a, lv: A2, tags: [quality]}
     - {w: günstig,       pos: a, lv: A2, tags: [quality]}
-    - {w: gültig,        pos: a, lv: A2, tags: [quality]}
-    - {w: besetzt,       pos: a, lv: A2, tags: [quality]}
+    - {w: gültig,        pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: besetzt,       pos: a, lv: A2, tags: [quality, absolute]}
     # B1 — объявления на перроне
     - {w: Durchsage,     pos: n, lv: B1, tags: [abstract]}
     - {w: Schaffner,     pos: n, lv: B1, tags: [person]}
@@ -114,7 +114,7 @@ transport:
     - {w: entfallen,     pos: v, lv: B1, tags: [state]}
     - {w: erstatten,     pos: v, lv: B1, tags: [state, obj]}
     - {w: kontrollieren, pos: v, lv: B1, tags: [state, obj, solo]}
-    - {w: barrierefrei,  pos: a, lv: B1, tags: [quality]}
+    - {w: barrierefrei,  pos: a, lv: B1, tags: [quality, absolute]}
 
 home:
   title: Квартира
@@ -203,10 +203,10 @@ home:
     - {w: reparieren,    pos: v, lv: A2, tags: [state, obj, housework, solo]}
     - {w: heizen,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
     - {w: lüften,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
-    - {w: möbliert,      pos: a, lv: A2, tags: [quality]}
+    - {w: möbliert,      pos: a, lv: A2, tags: [quality, absolute]}
     - {w: zentral,       pos: a, lv: A2, tags: [quality]}
     - {w: gemütlich,     pos: a, lv: A2, tags: [quality]}
-    - {w: renoviert,     pos: a, lv: A2, tags: [quality]}
+    - {w: renoviert,     pos: a, lv: A2, tags: [quality, absolute]}
     # B1 — то, из-за чего пишут письма
     - {w: Wohnfläche,    pos: n, lv: B1, tags: [abstract]}
     - {w: Quadratmeter,  pos: n, lv: B1, tags: [abstract]}
@@ -319,7 +319,7 @@ food:
     - {w: sauer,         pos: a, lv: A2, tags: [quality]}
     - {w: bitter,        pos: a, lv: A2, tags: [quality]}
     - {w: salzig,        pos: a, lv: A2, tags: [quality]}
-    - {w: vegetarisch,   pos: a, lv: A2, tags: [quality]}
+    - {w: vegetarisch,   pos: a, lv: A2, tags: [quality, absolute]}
     # B1 — что написано на упаковке и в меню
     - {w: Bedienung,     pos: n, lv: B1, tags: [person]}
     - {w: Reservierung,  pos: n, lv: B1, tags: [abstract]}
@@ -330,9 +330,9 @@ food:
     - {w: aufwärmen,     pos: v, lv: B1, tags: [state, obj]}
     - {w: würzen,        pos: v, lv: B1, tags: [state, obj]}
     - {w: verzichten,    pos: v, lv: B1, tags: [state]}
-    - {w: hausgemacht,   pos: a, lv: B1, tags: [quality]}
-    - {w: regional,      pos: a, lv: B1, tags: [quality]}
-    - {w: laktosefrei,   pos: a, lv: B1, tags: [quality]}
+    - {w: hausgemacht,   pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: regional,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: laktosefrei,   pos: a, lv: B1, tags: [quality, absolute]}
 
 work:
   title: Работа
@@ -408,7 +408,7 @@ work:
     - {w: erledigen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: besprechen,    pos: v, lv: A2, tags: [state, obj]}
     - {w: unterschreiben, pos: v, lv: A2, tags: [state, obj, solo]}
-    - {w: beruflich,     pos: a, lv: A2, tags: [quality]}
+    - {w: beruflich,     pos: a, lv: A2, tags: [quality, absolute]}
     - {w: selbstständig, pos: a, lv: A2, tags: [quality, person]}
     - {w: zuverlässig,   pos: a, lv: A2, tags: [quality, person]}
     # B1 — то, что говорят в отделе кадров
@@ -427,9 +427,9 @@ work:
     - {w: beantragen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: einreichen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: vertreten,     pos: v, lv: B1, tags: [state, obj]}
-    - {w: befristet,     pos: a, lv: B1, tags: [quality]}
-    - {w: unbefristet,   pos: a, lv: B1, tags: [quality]}
-    - {w: zuständig,     pos: a, lv: B1, tags: [quality, person]}
+    - {w: befristet,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: unbefristet,   pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: zuständig,     pos: a, lv: B1, tags: [quality, person, absolute]}
     - {w: qualifiziert,  pos: a, lv: B1, tags: [quality, person]}
 
 health:
@@ -505,10 +505,10 @@ health:
     - {w: impfen,        pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: verletzen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: bluten,        pos: v, lv: A2, tags: [state, solo]}
-    - {w: schwanger,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: schwanger,     pos: a, lv: A2, tags: [quality, person, absolute]}
     - {w: verletzt,      pos: a, lv: A2, tags: [quality, person]}
     - {w: ansteckend,    pos: a, lv: A2, tags: [quality]}
-    - {w: rezeptfrei,    pos: a, lv: A2, tags: [quality]}
+    - {w: rezeptfrei,    pos: a, lv: A2, tags: [quality, absolute]}
     # B1 — что написано в заключении
     - {w: Befund,        pos: n, lv: B1, tags: [document]}
     - {w: Diagnose,      pos: n, lv: B1, tags: [abstract]}
@@ -524,9 +524,9 @@ health:
     - {w: heilen,        pos: v, lv: B1, tags: [state, obj]}
     - {w: vertragen,     pos: v, lv: B1, tags: [state, obj]}
     - {w: leiden,        pos: v, lv: B1, tags: [state]}
-    - {w: chronisch,     pos: a, lv: B1, tags: [quality]}
-    - {w: akut,          pos: a, lv: B1, tags: [quality]}
-    - {w: nüchtern,      pos: a, lv: B1, tags: [quality, person]}
+    - {w: chronisch,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: akut,          pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: nüchtern,      pos: a, lv: B1, tags: [quality, person, absolute]}
     - {w: schwindelig,   pos: a, lv: B1, tags: [quality, person]}
 
 kids:
@@ -620,7 +620,7 @@ kids:
     - {w: fördern,       pos: v, lv: B1, tags: [state, obj]}
     - {w: entwickeln,    pos: v, lv: B1, tags: [state, obj]}
     - {w: durchsetzen,   pos: v, lv: B1, tags: [state, obj]}
-    - {w: zweisprachig,  pos: a, lv: B1, tags: [quality]}
+    - {w: zweisprachig,  pos: a, lv: B1, tags: [quality, absolute]}
     - {w: neugierig,     pos: a, lv: B1, tags: [quality, person]}
     - {w: schüchtern,    pos: a, lv: B1, tags: [quality, person]}
-    - {w: altersgerecht, pos: a, lv: B1, tags: [quality]}
+    - {w: altersgerecht, pos: a, lv: B1, tags: [quality, absolute]}

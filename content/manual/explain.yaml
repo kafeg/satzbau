@@ -353,3 +353,57 @@ possessiv-akkusativ:
     Это общее правило всей группы ein-слов: ein → einen, kein → keinen, mein → meinen,
     и только в мужском роде. Выучив его один раз, вы закрыли и артикль, и отрицание,
     и все притяжательные.
+
+komparativ:
+  name: Степени сравнения
+  group: прилагательное
+  title: Сравнительная на -er, превосходная на -sten
+  short: "{w} → {answer}"
+  ru_contrast: >-
+    По-русски сравнительная бывает и словом, и оборотом: «теплее» или «более тёплый».
+    В немецком оборота нет совсем: только -er, даже у длинных слов —
+    interessanter, а не «mehr interessant». Это одна из частых ошибок именно у русских.
+  steps:
+    - "{w} — сравнительная степень"
+    - "короткие слова с a, o, u часто получают умлаут: alt → älter"
+    - "{answer}"
+  more: >-
+    Превосходная: am …-sten, после t, d, s, ß, z и sch вставляется -e-: am ältesten.
+    ⚠ Ловушка: сравнительная выбрасывает -e- в основе (teuer → teurer, dunkel → dunkler),
+    а превосходная нет — am teuersten, am dunkelsten. Неправильные три:
+    gut → besser → am besten, viel → mehr → am meisten, gern → lieber → am liebsten.
+
+dativ-objekt:
+  name: Глаголы с Dativ
+  group: падеж
+  title: Эти глаголы требуют Dativ без всякого предлога
+  short: helfen, antworten + Dativ
+  ru_contrast: >-
+    Тут русский помогает: «помогать кому» — дательный, и в немецком тоже Dativ.
+    Ловушка в другом: по-русски «я спрашиваю его» — винительный, а немецкое antworten
+    требует дательного. Падеж задаёт сам глагол, и список приходится знать.
+  steps:
+    - "глагол требует Dativ сам, предлога нет"
+    - "{w} — {gender_ru} род"
+    - "{nom_article} → {answer}"
+  more: >-
+    Частые глаголы с Dativ: helfen, antworten, danken, gehören, gefallen, passen,
+    schmecken, folgen. Их немного, и они стоят того, чтобы выучить списком —
+    иначе каждый раз придётся гадать.
+
+genitiv-besitz:
+  name: Genitiv принадлежности
+  group: падеж
+  title: Чей — это Genitiv, и он стоит после
+  short: "чей? → {answer} {w}"
+  ru_contrast: >-
+    По-русски «машина отца» — родительный, и порядок тот же: сначала машина, потом отец.
+    В немецком так же, но добавляется окончание у самого слова: des Vaters, не «des Vater».
+    У мужского и среднего это -s или -es, у женского ничего.
+  steps:
+    - "вопрос «чей» → Genitiv"
+    - "{w} — {gender_ru} род"
+    - "{nom_article} → {answer}, и у слова появляется окончание"
+  more: >-
+    В разговоре Genitiv часто заменяют на von + Dativ: das Auto von meinem Vater.
+    В письменном языке так лучше не делать, но услышите вы именно это.
