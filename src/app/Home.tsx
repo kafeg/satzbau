@@ -5,7 +5,8 @@ import { useState } from 'react'
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { countFor, GROUPS, rules, SIZE, tasks } from './session.ts'
+import { dueCount, type Cards } from './srs.ts'
+import { countFor, GROUPS, plural, rules, SIZE, tasks } from './session.ts'
 
 const LEVELS: { key: Level | undefined; label: string }[] = [
   { key: 'A1', label: 'A1' },
@@ -13,7 +14,16 @@ const LEVELS: { key: Level | undefined; label: string }[] = [
   { key: undefined, label: 'всё' },
 ]
 
-export function Home({ level, onLevel }: { level?: Level; onLevel: (l?: Level) => void }) {
+export function Home({
+  level,
+  cards,
+  onLevel,
+}: {
+  level?: Level
+  cards: Cards
+  onLevel: (l?: Level) => void
+}) {
+  const repeat = dueCount(cards, 'r:')
   const [open, setOpen] = useState<string | null>(null)
   const bundle = getBundle()
   const all = rules({ level })
@@ -60,10 +70,15 @@ export function Home({ level, onLevel }: { level?: Level; onLevel: (l?: Level) =
         <span>Или просто</span>
       </h2>
       <button className="mix" onClick={() => go({ screen: 'drill' })}>
-        <span className="mix-title">Всё вперемешку</span>
+        <span className="mix-title">{repeat ? 'Повторить ошибки' : 'Всё вперемешку'}</span>
         <span className="mix-sub">
-          {tasks(SIZE)} из {countFor({ level })}
+          {repeat
+            ? `${plural(repeat, ['правило ждёт', 'правила ждут', 'правил ждут'])} повтора`
+            : `${tasks(SIZE)} из ${countFor({ level })}`}
         </span>
+      </button>
+      <button className="ghost" onClick={() => go({ screen: 'mistakes' })}>
+        мои ошибки и прогресс
       </button>
 
       <h2 className="section">

@@ -2,22 +2,27 @@
 // На Э5 сюда придут повторы по FSRS, и смешанная очередь станет «повторением ошибок».
 
 import { getBundle, getWords } from '../core/bundle.ts'
+import { due, ruleKey, wordKey, type Cards } from './srs.ts'
 import { fillingFor, itemsFor } from '../core/generate.ts'
 import type { Item, Level } from '../core/types.ts'
 
 export const SIZE = 12
 
-/** «1 задание, 2 задания, 5 заданий» — иначе цифры в списке читаются как опечатка. */
-export function tasks(n: number): string {
+/** «1 задание, 2 задания, 5 заданий» — иначе цифры в интерфейсе читаются как опечатка. */
+export function plural(n: number, forms: [string, string, string]): string {
   const ten = n % 100
-  if (ten > 10 && ten < 20) return `${n} заданий`
+  if (ten > 10 && ten < 20) return `${n} ${forms[2]}`
   const one = n % 10
-  if (one === 1) return `${n} задание`
-  if (one >= 2 && one <= 4) return `${n} задания`
-  return `${n} заданий`
+  if (one === 1) return `${n} ${forms[0]}`
+  if (one >= 2 && one <= 4) return `${n} ${forms[1]}`
+  return `${n} ${forms[2]}`
 }
 
+export const tasks = (n: number) => plural(n, ['задание', 'задания', 'заданий'])
+
 export interface Pick {
+  /** состояние повторов: с ним очередь ставит вперёд то, чему пора */
+  cards?: Cards
   /** id правила; без него — все правила вперемешку */
   rule?: string
   /** лексическая тема: она даёт слова, а не задания */
@@ -117,6 +122,16 @@ export function newSession(p: Pick = {}): Item[] {
       rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
     }
   })
+
+  // Порядок внутри стопки: сперва то, чему пора повторяться, потом новое, потом
+  // выученное. Правило важнее слова — расписание строится по нему (docs/architecture.md).
+  const rank = (i: Item) =>
+    (p.cards ? (due(p.cards, ruleKey(i.rule)) ? 0 : 2) + (due(p.cards, wordKey(i.word)) ? 0 : 1) : 0)
+  for (const b of buckets) {
+    // сортируем по убыванию: берём с хвоста
+    b.mine.sort((x, y) => rank(y) - rank(x))
+    b.rest.sort((x, y) => rank(y) - rank(x))
+  }
 
   const out: Item[] = []
   const seen = new Set<string>()

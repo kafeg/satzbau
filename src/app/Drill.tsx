@@ -25,7 +25,7 @@ export function Drill({
   rule?: string
   /** куда ведёт стрелка назад: на тему, если пришли оттуда */
   back: Route
-  onNext: (correct: boolean, given: string) => void
+  onNext: (correct: boolean, given: string, hinted: boolean) => void
 }) {
   const [given, setGiven] = useState<string | null>(null)
   const [typed, setTyped] = useState('')
@@ -151,7 +151,7 @@ export function Drill({
 
       {answered && (
         <footer>
-          <button className="primary wide" onClick={() => onNext(correct, given)}>
+          <button className="primary wide" onClick={() => onNext(correct, given, hint)}>
             Дальше
           </button>
         </footer>

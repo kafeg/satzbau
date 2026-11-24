@@ -1,5 +1,6 @@
 // Маршрут в хэше: Pages не умеет отдавать index.html на произвольный путь.
 //   #/                      главная
+//   #/mistakes              мои ошибки
 //   #/t/<тема>              экран темы
 //   #/drill                 всё вперемешку
 //   #/drill/<правило>       одно правило
@@ -9,7 +10,7 @@
 import { useEffect, useState } from 'react'
 
 export interface Route {
-  screen: 'home' | 'theme' | 'drill'
+  screen: 'home' | 'theme' | 'drill' | 'mistakes'
   rule?: string
   theme?: string
 }
@@ -20,11 +21,13 @@ export function parse(hash: string): Route {
   const [head, a, b] = hash.replace(/^#\/?/, '').split('/').filter(Boolean)
   if (head === 'drill') return { screen: 'drill', rule: part(a), theme: part(b) }
   if (head === 't' && a) return { screen: 'theme', theme: decodeURIComponent(a) }
+  if (head === 'mistakes') return { screen: 'mistakes' }
   return { screen: 'home' }
 }
 
 export function href(route: Route): string {
   if (route.screen === 'home') return '#/'
+  if (route.screen === 'mistakes') return '#/mistakes'
   if (route.screen === 'theme') return `#/t/${encodeURIComponent(route.theme as string)}`
   const rule = route.rule ? encodeURIComponent(route.rule) : '-'
   return route.theme
