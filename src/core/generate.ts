@@ -3,6 +3,8 @@
 import {
   adjEnding,
   defArticle,
+  modal,
+  type Modal,
   indefArticle,
   inventory,
   keinArticle,
@@ -88,6 +90,8 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return nounForm(w.entry as Noun, c, 'pl')
     case 'participle':
       return (w.entry as Verb).pp
+    case 'modal_present':
+      return modal(slot.modal as Modal, slot.person ?? '3sg')
     case 'verb_past':
       return (w.entry as Verb).pt
     case 'adj_comparative':
@@ -140,6 +144,7 @@ function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): s
   const all = inventory(t.options?.paradigm ?? t.slot.paradigm, {
     prep: t.options?.prep ?? t.slot.prep,
     person: t.slot.person,
+    modal: t.slot.modal as Modal | undefined,
   })
   const rest = all.filter((f) => f !== answer && !near.includes(f))
   const picked = [answer, ...new Set([...near, ...rest])].slice(0, count)

@@ -41,6 +41,29 @@ const MERGES: Record<string, Partial<Record<Case, Partial<Record<Gender, string>
   bei: { dat: { m: 'beim', n: 'beim' } },
 }
 
+/**
+ * Модальные глаголы. Их нет в лексиконе и быть не может: они не принадлежат ни одной
+ * теме, это грамматика. Таблица закрытая, как артикли.
+ *
+ * ⚠ Главное в ней — то, чего НЕТ: в единственном числе у модальных нет -t в третьем
+ * лице (er kann, не «er kannt») и гласная там другая, чем в инфинитиве.
+ */
+export const MODALS = {
+  können: ['kann', 'kannst', 'kann', 'können', 'könnt', 'können'],
+  müssen: ['muss', 'musst', 'muss', 'müssen', 'müsst', 'müssen'],
+  wollen: ['will', 'willst', 'will', 'wollen', 'wollt', 'wollen'],
+  dürfen: ['darf', 'darfst', 'darf', 'dürfen', 'dürft', 'dürfen'],
+  sollen: ['soll', 'sollst', 'soll', 'sollen', 'sollt', 'sollen'],
+  mögen: ['mag', 'magst', 'mag', 'mögen', 'mögt', 'mögen'],
+} as const satisfies Record<string, readonly string[]>
+
+export type Modal = keyof typeof MODALS
+const PERSONS: Person[] = ['1sg', '2sg', '3sg', '1pl', '2pl', '3pl']
+
+export function modal(m: Modal, person: Person): string {
+  return MODALS[m][PERSONS.indexOf(person)] as string
+}
+
 export const AUX_PRESENT: Record<Person, { haben: string; sein: string }> = {
   '1sg': { haben: 'habe', sein: 'bin' },
   '2sg': { haben: 'hast', sein: 'bist' },
@@ -119,7 +142,10 @@ export function auxPresent(person: Person, aux: 'h' | 's'): string {
  * Для слияний инвентарь включает и НЕСКЛЕЕННЫЕ формы (`in dem`, `in das`): это самый
  * полезный дистрактор, потому что ошибка «не склеил» и есть то, что тренируется.
  */
-export function inventory(paradigm: string, p: { prep?: string; person?: Person } = {}): string[] {
+export function inventory(
+  paradigm: string,
+  p: { prep?: string; person?: Person; modal?: Modal } = {},
+): string[] {
   switch (paradigm) {
     case 'def_article':
       return uniq(Object.values(DEF_ARTICLE).flatMap((row) => Object.values(row)))
@@ -132,6 +158,12 @@ export function inventory(paradigm: string, p: { prep?: string; person?: Person 
     case 'aux_present': {
       const row = AUX_PRESENT[p.person ?? '3sg']
       return [row.haben, row.sein]
+    }
+    // варианты — формы ТОГО ЖЕ модального в других лицах: ошибка в лице, а не в выборе
+    // глагола. Какой модальный нужен по смыслу, задание не спрашивает.
+    case 'modal_present': {
+      if (!p.modal) throw new Error('modal_present: нужен modal')
+      return uniq([...MODALS[p.modal]])
     }
     case 'merged_prep_article': {
       const prep = p.prep

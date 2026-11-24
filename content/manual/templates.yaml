@@ -485,3 +485,38 @@
   need: {pos: n, tags: [food, drink], has: [mass], not: [pl_only, abstract]}
   slot: {paradigm: adj_ending, decl: strong, case: akk, num: sg, gender: from_word}
   why: adj-ohne-artikel
+
+# Модальные глаголы. Их нет и не будет в лексиконе: они не принадлежат теме, это
+# грамматика, поэтому таблица лежит в ядре рядом с артиклями. Варианты ответа —
+# формы ТОГО ЖЕ модального в других лицах: спрашивается форма, а не выбор глагола.
+# Инфинитив в конце берётся из лексикона, и отделяемые здесь наконец годятся:
+# «Er kann heute aufräumen» — приставка остаётся при инфинитиве.
+- id: modal-koennen-er
+  rule: modalverben
+  level: A1
+  kind: choice
+  frame: "Er {slot} heute {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: modal_present, modal: können, person: 3sg}
+  options: {paradigm: modal_present, count: 4}
+  why: modalverben
+
+- id: modal-muessen-du
+  rule: modalverben
+  level: A1
+  kind: choice
+  frame: "Du {slot} heute {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: modal_present, modal: müssen, person: 2sg}
+  options: {paradigm: modal_present, count: 4}
+  why: modalverben
+
+# Множественное: после артикля окончание всегда -en, род больше не важен.
+- id: adj-plural-die
+  rule: adj-plural
+  level: A2
+  kind: input
+  frame: "Ich sehe die gut{slot} {w}."
+  need: {pos: n, tags: [thing, food, vehicle, furniture], has: [pl], not: [npl, mass, abstract]}
+  slot: {paradigm: adj_ending, decl: weak, case: akk, num: pl, gender: from_word}
+  why: adj-plural

@@ -80,6 +80,8 @@ export interface Slot {
   gender?: Gender | 'from_word' | 'from_fill2'
   decl?: Decl
   person?: Person
+  /** модальный глагол: его формы и есть парадигма пропуска */
+  modal?: string
   prep?: string
   from_word?: 'aux'
 }
