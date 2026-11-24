@@ -256,6 +256,9 @@ export function inventory(
       return einInventory('kein', true)
     case 'reflexive_pronoun':
       return uniq(Object.values(REFLEXIVE))
+    // три кнопки der/die/das: задание про РОД, а не про падеж
+    case 'genus':
+      return ['der', 'die', 'das']
     // варианты — формы того же werden в других лицах: ошибка в лице, а не в выборе глагола
     case 'werden_present':
       return uniq(Object.values(WERDEN))

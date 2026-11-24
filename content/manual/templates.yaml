@@ -920,3 +920,15 @@
   fill2: {need: {pos: a, tags: [generic]}}
   slot: {paradigm: adj_ending, decl: mixed, case: akk, num: sg, gender: from_word}
   why: adj-gemischt
+
+# ── Род: три кнопки. Единственное задание, где оценивается СЛОВО, а не правило на нём.
+# ⚠ Бейдж рода у слова в дрилле здесь прячется: иначе ответ написан на экране.
+- id: genus-das-ist
+  rule: genus
+  level: A1
+  kind: choice
+  frame: "Das ist {slot} {w}."
+  need: {pos: n, not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: nom, num: sg, gender: from_word}
+  options: {paradigm: genus, count: 3}
+  why: genus

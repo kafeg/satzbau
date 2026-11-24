@@ -277,20 +277,28 @@ function buildOptions(t: Template, w: Word, answer: string, slot: Fixed, w2?: Wo
           ),
         ].filter((f): f is string => !!f && f !== answer)
       : []
-  const near = [
-    ...nearNeg,
-    ...nearPrep,
-    ...CASES.filter((c) => c !== slot.case)
-      .map((c) => slotForm(slot, w, c, w2))
-      .filter((f): f is string => !!f && f !== answer),
-  ]
+  // ⚠ У задания про РОД близкая форма — другой род, а не другой падеж: иначе
+  // вариантами шли den/dem/des, и выбор рода подменялся выбором падежа
+  const near =
+    t.options?.paradigm === 'genus'
+      ? []
+      : [
+          ...nearNeg,
+          ...nearPrep,
+          ...CASES.filter((c) => c !== slot.case)
+            .map((c) => slotForm(slot, w, c, w2))
+            .filter((f): f is string => !!f && f !== answer),
+        ]
   // ⚠ Дистрактор, с которым фраза тоже верна, — это второй правильный ответ.
   // У n-склонения и во множественном формы слова совпадают: «Ich helfe dem Kollegen»
   // и «den Kollegen» оба немецкие, а число рамка не задаёт. Падеж задаёт глагол,
   // поэтому опасно только другое ЧИСЛО при том же падеже.
   const kase = slot.case ?? 'nom'
   const other: Num = slot.num === 'pl' ? 'sg' : 'pl'
-  const written = w.pos === 'n' ? nounForm(w.entry as Noun, kase, slot.num ?? 'sg') : null
+  // ⚠ В именительном число задаёт глагол рамки: «Die Koffer ist neu» не фраза, поэтому
+  // там второго верного ответа не бывает. В остальных падежах рамка число не задаёт
+  const written =
+    w.pos === 'n' && kase !== 'nom' ? nounForm(w.entry as Noun, kase, slot.num ?? 'sg') : null
   const alsoRight =
     written && nounForm(w.entry as Noun, kase, other) === written
       ? slotForm({ ...slot, num: other }, w, kase, w2)
@@ -460,6 +468,9 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       question: slot.case === 'akk' ? 'wohin?' : 'wo?',
       gender_ru: g ? GENDER_RU[g] : '',
       nom_article: g ? defArticle('nom', g, slot.num ?? 'sg') : '',
+      // ⚠ Бейдж рода у слова в дрилле — подсказка, и в задании ПРО РОД он называет ответ.
+      // Разбору тот же артикль нужен (он подсвечивает колонку таблицы), поэтому поля разные
+      badge: t.options?.paradigm === 'genus' ? '' : g ? defArticle('nom', g, slot.num ?? 'sg') : '',
       plain_article: plain,
       ein,
       aux_why: vb ? auxWhy(vb) : '',

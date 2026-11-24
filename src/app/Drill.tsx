@@ -39,7 +39,8 @@ export function Drill({
   // в начале фразы человек пишет с заглавной, а у императива форм бывает две.
   const accepted = [item.answer, ...(item.answers ?? [])].map((a) => a.toLowerCase())
   const correct = given !== null && accepted.includes(given.toLowerCase())
-  const article = item.ctx.nom_article
+  // бейдж рода, а не nom_article: в задании про род он называл бы ответ
+  const article = item.ctx.badge
   // в шапке короткое имя правила (поле name), а в сессии вперемешку — тема и уровень:
   // длинный title — это заголовок разбора, во фразу-чип он не помещается
   const theme = getBundle().themes[item.theme]?.title ?? item.theme
