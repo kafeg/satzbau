@@ -2,7 +2,7 @@
 
 import { adjEnding, defArticle, indefArticle, inventory, merged } from './paradigms.ts'
 import { adjStem, nounForm } from './morph.ts'
-import type { Word } from './data.ts'
+import type { Word } from './bundle.ts'
 import type { Adj, Case, Gender, Item, Need, Noun, Num, Slot, Template, Verb } from './types.ts'
 
 const LEVELS = { A1: 1, A2: 2, B1: 3 } as const

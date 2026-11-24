@@ -138,3 +138,46 @@ export function adjEndingMatches(ending: string): { decl: Decl; case: Case; gend
   }
   return out
 }
+
+export interface FormMatch {
+  case: Case
+  gender: Gender | 'pl'
+  decl?: Decl
+}
+
+/**
+ * Обратный разбор любой формы: где она возможна. Это строка «чем был твой вариант»
+ * в разборе ошибки — `der` сам по себе не ошибка, он просто другой падеж и род.
+ */
+export function formMatches(
+  paradigm: string,
+  form: string,
+  o: { decl?: Decl; prep?: string } = {},
+): FormMatch[] {
+  const out: FormMatch[] = []
+  const cases: Case[] = ['nom', 'akk', 'dat', 'gen']
+  const genders: (Gender | 'pl')[] = ['m', 'f', 'n', 'pl']
+  switch (paradigm) {
+    case 'def_article':
+      for (const c of cases)
+        for (const g of genders) if (DEF_ARTICLE[c][g] === form) out.push({ case: c, gender: g })
+      return out
+    case 'indef_article':
+      for (const c of cases)
+        for (const g of ['m', 'f', 'n'] as Gender[])
+          if (INDEF_ARTICLE[c][g] === form) out.push({ case: c, gender: g })
+      return out
+    case 'merged_prep_article': {
+      const prep = o.prep ?? ''
+      for (const c of cases)
+        for (const g of ['m', 'f', 'n'] as Gender[])
+          if (merged(prep, c, g) === form || `${prep} ${DEF_ARTICLE[c][g]}` === form)
+            out.push({ case: c, gender: g })
+      return out
+    }
+    case 'adj_ending':
+      return adjEndingMatches(form).filter((m) => !o.decl || m.decl === o.decl)
+    default:
+      return out
+  }
+}

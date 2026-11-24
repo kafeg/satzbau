@@ -1,7 +1,7 @@
 // Разбор ошибки: один текст на правило, подстановки из задания.
 // Текст живёт в content/manual/explain.yaml, здесь только сборка.
 
-import { bundle } from './data.ts'
+import { getBundle } from './bundle.ts'
 import type { Item } from './types.ts'
 
 export interface Explained {
@@ -24,7 +24,7 @@ export function fill(text: string, ctx: Record<string, string>): string {
 }
 
 export function explainItem(item: Item): Explained {
-  const e = bundle.explain[item.why]
+  const e = getBundle().explain[item.why]
   if (!e) throw new Error(`${item.templateId}: нет объяснения ${item.why}`)
   return {
     title: fill(e.title, item.ctx),

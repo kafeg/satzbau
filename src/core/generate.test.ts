@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { bundle, words } from './data.ts'
 import { explainItem } from './explain.ts'
 import { fillingFor, generate, itemsFor } from './generate.ts'
-import { adjEndingMatches, inventory } from './paradigms.ts'
+import { adjEndingMatches, formMatches, inventory } from './paradigms.ts'
 
 // Главный тест этапа: прогнать ВСЕ шаблоны на ВСЕХ подходящих словах. Проверять
 // задания в рантайме у человека поздно — ошибка должна падать здесь.
@@ -98,6 +98,17 @@ describe('парадигмы', () => {
 
   it('вспомогательных в первом лице ровно два', () => {
     expect(inventory('aux_present', { person: '1sg' })).toEqual(['habe', 'bin'])
+  })
+
+  it('обратный разбор артикля: den — Akkusativ мужского или Dativ множественного', () => {
+    expect(formMatches('def_article', 'den')).toEqual([
+      { case: 'akk', gender: 'm' },
+      { case: 'dat', gender: 'pl' },
+    ])
+    expect(formMatches('merged_prep_article', 'im', { prep: 'in' })).toEqual([
+      { case: 'dat', gender: 'm' },
+      { case: 'dat', gender: 'n' },
+    ])
   })
 
   it('обратный разбор: kleine — это Nom/Akk женского в слабом склонении', () => {
