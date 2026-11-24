@@ -64,6 +64,16 @@ export function modal(m: Modal, person: Person): string {
   return MODALS[m][PERSONS.indexOf(person)] as string
 }
 
+/** Личные местоимения третьего лица. Род берётся у предмета, а не у человека. */
+const PRONOUN: Record<'akk' | 'dat', ByGender> = {
+  akk: { m: 'ihn', f: 'sie', n: 'es', pl: 'sie' },
+  dat: { m: 'ihm', f: 'ihr', n: 'ihm', pl: 'ihnen' },
+}
+
+export function pronoun(c: 'akk' | 'dat', g: Gender, num: Num = 'sg'): string {
+  return PRONOUN[c][num === 'pl' ? 'pl' : g]
+}
+
 export const AUX_PRESENT: Record<Person, { haben: string; sein: string }> = {
   '1sg': { haben: 'habe', sein: 'bin' },
   '2sg': { haben: 'hast', sein: 'bist' },
@@ -144,13 +154,25 @@ export function auxPresent(person: Person, aux: 'h' | 's'): string {
  */
 export function inventory(
   paradigm: string,
-  p: { prep?: string; person?: Person; modal?: Modal } = {},
+  p: { prep?: string; person?: Person; modal?: Modal; word?: string } = {},
 ): string[] {
   switch (paradigm) {
     case 'def_article':
       return uniq(Object.values(DEF_ARTICLE).flatMap((row) => Object.values(row)))
+    // ⚠ Единственная парадигма, зависящая от слова: в предикативе верное — само
+    // прилагательное, а ошибки — это окончания, которые рука дописывает по привычке.
+    case 'adj_predicative': {
+      const w = p.word
+      if (!w) throw new Error('adj_predicative: нужно слово')
+      // ⚠ У прилагательных на -e окончание приходит вместо неё: müde → müden,
+      // а не «müdeen». Иначе дистракторы не похожи на настоящую ошибку.
+      const base = w.endsWith('e') ? w.slice(0, -1) : w
+      return uniq([w, `${base}e`, `${base}en`, `${base}es`, `${base}er`])
+    }
     case 'indef_article':
       return einInventory('ein', false)
+    case 'pronoun':
+      return uniq([...Object.values(PRONOUN.akk), ...Object.values(PRONOUN.dat)])
     case 'possessive':
       return einInventory('mein', true)
     case 'kein_article':

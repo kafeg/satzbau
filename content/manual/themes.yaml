@@ -527,7 +527,7 @@ health:
     - {w: chronisch,     pos: a, lv: B1, tags: [quality, absolute]}
     - {w: akut,          pos: a, lv: B1, tags: [quality, absolute]}
     - {w: nüchtern,      pos: a, lv: B1, tags: [quality, person, absolute]}
-    - {w: schwindelig,   pos: a, lv: B1, tags: [quality, person]}
+    - {w: schwindelig,   pos: a, lv: B1, tags: [quality]}
 
 kids:
   title: Дети и Kita

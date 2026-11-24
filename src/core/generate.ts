@@ -5,6 +5,7 @@ import {
   defArticle,
   modal,
   type Modal,
+  pronoun,
   indefArticle,
   inventory,
   keinArticle,
@@ -94,6 +95,11 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return modal(slot.modal as Modal, slot.person ?? '3sg')
     case 'verb_past':
       return (w.entry as Verb).pt
+    // в предикативе прилагательное стоит в словарной форме, без всякого окончания
+    case 'pronoun':
+      return pronoun(c === 'dat' ? 'dat' : 'akk', genderOf(slot, w, w2), num)
+    case 'adj_predicative':
+      return (w.entry as Adj).w
     case 'adj_comparative':
       return comparative(w.entry as Adj)
     case 'adj_superlative':
@@ -145,6 +151,7 @@ function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): s
     prep: t.options?.prep ?? t.slot.prep,
     person: t.slot.person,
     modal: t.slot.modal as Modal | undefined,
+    word: w.w,
   })
   const rest = all.filter((f) => f !== answer && !near.includes(f))
   const picked = [answer, ...new Set([...near, ...rest])].slice(0, count)
@@ -195,6 +202,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   const art2 = g2 ? defArticle(case2, g2, num2) : ''
   const ein2 = g2 && num2 !== 'pl' ? indefArticle(case2, g2) : ''
   const plain = g ? defArticle(t.slot.case ?? 'nom', g, t.slot.num ?? 'sg') : ''
+  const nom = g ? defArticle('nom', g, t.slot.num ?? 'sg') : ''
   const ein = g && t.slot.num !== 'pl' ? indefArticle(t.slot.case ?? 'nom', g) : ''
   const article =
     g && t.slot.decl
@@ -212,6 +220,9 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       .replace('{Slot}', cap(slotText))
       .replace('{art}', plain)
       .replace('{Art}', cap(plain))
+      // {nom} — артикль в именительном: подлежащему он нужен независимо от падежа слота
+      .replace('{nom}', nom)
+      .replace('{Nom}', cap(nom))
       .replace('{ein}', ein)
       .replace('{Ein}', cap(ein))
       .replace('{w2}', word2)

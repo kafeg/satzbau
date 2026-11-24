@@ -520,3 +520,43 @@
   need: {pos: n, tags: [thing, food, vehicle, furniture], has: [pl], not: [npl, mass, abstract]}
   slot: {paradigm: adj_ending, decl: weak, case: akk, num: pl, gender: from_word}
   why: adj-plural
+
+# Предикатив: прилагательное после ist не склоняется вообще. Это единственное место,
+# где варианты ответа зависят от слова — верное это само прилагательное, а ошибки
+# те окончания, которые рука дописывает по привычке.
+# Сюда же наконец попадают прилагательные про человека: их не берёт ни одна рамка
+# с предметом, а здесь они на своём месте.
+- id: adj-praedikativ-person
+  rule: adj-praedikativ
+  level: A1
+  kind: choice
+  frame: "{Art2} {w2} ist {slot}."
+  need: {pos: a, tags: [person]}
+  fill2: {need: {pos: n, tags: [person], not: [pl_only, plu]}, case: nom}
+  slot: {paradigm: adj_predicative}
+  options: {paradigm: adj_predicative, count: 4}
+  why: adj-praedikativ
+
+# Слова времени не брала ни одна рамка: в «Hier ist …» и «… ist ein Problem»
+# тега time нет, а своего вопроса у них не было.
+- id: nom-subjekt-wann
+  rule: nominativ-subjekt
+  level: A1
+  kind: choice
+  frame: "Wann ist {slot} {w}?"
+  need: {pos: n, tags: [time], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: nom, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: nominativ-subjekt
+
+# Личные местоимения: род берёт предмет, а не человек. Русскому кажется, что вещь — «оно»,
+# и он говорит es про стол и про дверь. Варианты — все формы третьего лица.
+- id: pronomen-akk-suchen
+  rule: pronomen-akkusativ
+  level: A1
+  kind: choice
+  frame: "{Nom} {w} ist weg — ich suche {slot}."
+  need: {pos: n, tags: [thing, document, vehicle, furniture], not: [pl_only, plu, mass]}
+  slot: {paradigm: pronoun, case: akk, num: sg}
+  options: {paradigm: pronoun, count: 4}
+  why: pronomen-akkusativ
