@@ -37,3 +37,17 @@ json.dump({k: sorted(imp[k]) for k in sorted(imp)}, open(path, 'w', encoding='ut
           ensure_ascii=False, indent=0, sort_keys=True)
 open(path, 'a').write('\n')
 print(f'императив: {len(imp)} глаголов из {len(verbs)} → {os.path.relpath(path, ROOT)}')
+
+# Родительный единственного: у многих слов приняты обе формы (Arztes и Arzts),
+# поэтому эталон — список, а тест требует попадания в него.
+nouns = {n['w'] for n in json.load(open(f'{ROOT}/content/build/nouns.json', encoding='utf-8'))}
+gen = collections.defaultdict(set)
+for line in open(f'{ROOT}/data/raw/unimorph-deu.tsv', encoding='utf-8'):
+    p = line.rstrip('\n').split('\t')
+    if len(p) == 3 and p[0] in nouns and p[2].startswith('N;GEN;') and p[2].endswith(';SG'):
+        gen[p[0]].add(p[1].strip())
+path = f'{ROOT}/src/core/__fixtures__/genitive.json'
+json.dump({k: sorted(gen[k]) for k in sorted(gen)}, open(path, 'w', encoding='utf-8'),
+          ensure_ascii=False, indent=0, sort_keys=True)
+open(path, 'a').write('\n')
+print(f'родительный: {len(gen)} слов из {len(nouns)} → {os.path.relpath(path, ROOT)}')

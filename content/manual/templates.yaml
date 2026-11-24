@@ -882,3 +882,48 @@
   slot: {paradigm: werden_present, person: 1sg}
   options: {paradigm: werden_present, count: 4}
   why: passiv
+
+# ── man: безличное подлежащее, которого в русском нет. Пропуск — форма глагола,
+# а не само man: четыре местоимения в этой рамке все были бы верны.
+- id: man-3sg
+  rule: man-subjekt
+  level: A2
+  kind: input
+  frame: "Man {slot} hier oft."
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
+  slot: {paradigm: verb_present, person: 3sg}
+  why: man-subjekt
+
+# ── es gibt + Akkusativ. Рамка нужна именно из-за падежа: по смыслу тут «есть»,
+# и рука ставит именительный.
+- id: es-gibt-akk
+  rule: es-gibt
+  level: A1
+  kind: choice
+  frame: "Hier gibt es {slot} {w}."
+  need: {pos: n, tags: [place, thing, document, food, drink, furniture, appliance], not: [pl_only, plu, mass]}
+  slot: {paradigm: indef_article, case: akk, gender: from_word}
+  options: {paradigm: indef_article, count: 4}
+  why: es-gibt
+
+# ── Предлоги с Genitiv: wegen и während. Четвёртый падеж, который до сих пор
+# встречался только в «чей».
+- id: prep-gen-wegen
+  rule: prep-genitiv
+  level: B1
+  kind: choice
+  frame: "Wegen {slot} {w} bleibe ich zu Hause."
+  need: {pos: n, tags: [illness, abstract], not: [pl_only, plu, mass]}
+  slot: {paradigm: def_article, case: gen, gender: from_word}
+  options: {paradigm: def_article, count: 4}
+  why: prep-genitiv
+
+- id: prep-gen-waehrend
+  rule: prep-genitiv
+  level: B1
+  kind: choice
+  frame: "Während {slot} {w} lese ich."
+  need: {pos: n, tags: [time, meal], not: [pl_only, plu, mass]}
+  slot: {paradigm: def_article, case: gen, gender: from_word}
+  options: {paradigm: def_article, count: 4}
+  why: prep-genitiv

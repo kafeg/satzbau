@@ -119,6 +119,14 @@
 "3pl": "füllen aus",
 "3sg": "füllt aus"
 },
+"ausruhen": {
+"1pl": "ruhen aus",
+"1sg": "ruhe aus",
+"2pl": "ruht aus",
+"2sg": "ruhst aus",
+"3pl": "ruhen aus",
+"3sg": "ruht aus"
+},
 "aussteigen": {
 "1pl": "steigen aus",
 "1sg": "steige aus",
@@ -150,6 +158,14 @@
 "2sg": "beantragst",
 "3pl": "beantragen",
 "3sg": "beantragt"
+},
+"beeilen": {
+"1pl": "beeilen",
+"1sg": "beeile",
+"2pl": "beeilt",
+"2sg": "beeilst",
+"3pl": "beeilen",
+"3sg": "beeilt"
 },
 "beglaubigen": {
 "1pl": "beglaubigen",
@@ -382,6 +398,14 @@
 "2sg": "entlässt",
 "3pl": "entlassen",
 "3sg": "entlässt"
+},
+"entschuldigen": {
+"1pl": "entschuldigen",
+"1sg": "entschuldige",
+"2pl": "entschuldigt",
+"2sg": "entschuldigst",
+"3pl": "entschuldigen",
+"3sg": "entschuldigt"
 },
 "entwickeln": {
 "1pl": "entwickeln",

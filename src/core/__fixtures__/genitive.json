@@ -1,0 +1,1214 @@
+{
+"Abendessen": [
+"Abendessens"
+],
+"Abfahrt": [
+"Abfahrt"
+],
+"Abteil": [
+"Abteiles",
+"Abteils"
+],
+"Abteilung": [
+"Abteilung"
+],
+"Adresse": [
+"Adresse"
+],
+"Allergie": [
+"Allergie"
+],
+"Ampel": [
+"Ampel"
+],
+"Amt": [
+"Amtes",
+"Amts"
+],
+"Angebot": [
+"Angebotes",
+"Angebots"
+],
+"Anmeldung": [
+"Anmeldung"
+],
+"Anschluss": [
+"Anschlusses"
+],
+"Antrag": [
+"Antrages",
+"Antrags"
+],
+"Apfel": [
+"Apfels"
+],
+"Apotheke": [
+"Apotheke"
+],
+"Arbeit": [
+"Arbeit"
+],
+"Arbeitgeber": [
+"Arbeitgebers"
+],
+"Arbeitnehmer": [
+"Arbeitnehmers"
+],
+"Arbeitsamt": [
+"Arbeitsamtes",
+"Arbeitsamts"
+],
+"Arm": [
+"Armes",
+"Arms"
+],
+"Arzt": [
+"Arztes",
+"Arzts"
+],
+"Aufenthalt": [
+"Aufenthalts"
+],
+"Aufgabe": [
+"Aufgabe"
+],
+"Aufzug": [
+"Aufzuges",
+"Aufzugs"
+],
+"Auge": [
+"Auges"
+],
+"Ausbildung": [
+"Ausbildung"
+],
+"Ausflug": [
+"Ausfluges",
+"Ausflugs"
+],
+"Ausgang": [
+"Ausganges",
+"Ausgangs"
+],
+"Auskunft": [
+"Auskunft"
+],
+"Ausländer": [
+"Ausländers"
+],
+"Ausweis": [
+"Ausweises"
+],
+"Auto": [
+"Autos"
+],
+"Autobahn": [
+"Autobahn"
+],
+"Automat": [
+"Automaten"
+],
+"Baby": [
+"Babys"
+],
+"Backofen": [
+"Backofens"
+],
+"Bad": [
+"Bades",
+"Bads"
+],
+"Bahn": [
+"Bahn"
+],
+"Bahnhof": [
+"Bahnhofes",
+"Bahnhofs"
+],
+"Bahnsteig": [
+"Bahnsteiges",
+"Bahnsteigs"
+],
+"Balkon": [
+"Balkons"
+],
+"Ball": [
+"Balles",
+"Balls"
+],
+"Banane": [
+"Banane"
+],
+"Bank": [
+"Bank"
+],
+"Bargeld": [
+"Bargeldes",
+"Bargelds"
+],
+"Bauch": [
+"Bauches",
+"Bauchs"
+],
+"Baustelle": [
+"Baustelle"
+],
+"Bedienung": [
+"Bedienung"
+],
+"Befund": [
+"Befundes",
+"Befunds"
+],
+"Beglaubigung": [
+"Beglaubigung"
+],
+"Beilage": [
+"Beilage"
+],
+"Bein": [
+"Beines",
+"Beins"
+],
+"Benzin": [
+"Benzins"
+],
+"Beruf": [
+"Berufes",
+"Berufs"
+],
+"Bescheid": [
+"Bescheides"
+],
+"Besprechung": [
+"Besprechung"
+],
+"Bestätigung": [
+"Bestätigung"
+],
+"Betriebsrat": [
+"Betriebsrates",
+"Betriebsrats"
+],
+"Bett": [
+"Bettes",
+"Betts"
+],
+"Bewerbung": [
+"Bewerbung"
+],
+"Bibliothek": [
+"Bibliothek"
+],
+"Bier": [
+"Bieres",
+"Biers"
+],
+"Bild": [
+"Bildes",
+"Bilds"
+],
+"Bildschirm": [
+"Bildschirmes",
+"Bildschirms"
+],
+"Blut": [
+"Blutes",
+"Bluts"
+],
+"Boden": [
+"Bodens"
+],
+"Brief": [
+"Briefes",
+"Briefs"
+],
+"Briefmarke": [
+"Briefmarke"
+],
+"Brot": [
+"Brotes",
+"Brots"
+],
+"Bruder": [
+"Bruders"
+],
+"Brötchen": [
+"Brötchens"
+],
+"Brücke": [
+"Brücke"
+],
+"Buch": [
+"Buches",
+"Buchs"
+],
+"Bus": [
+"Busses"
+],
+"Butter": [
+"Butter",
+"Butters"
+],
+"Bäckerei": [
+"Bäckerei"
+],
+"Bürger": [
+"Bürgers"
+],
+"Büro": [
+"Büros"
+],
+"Café": [
+"Cafés"
+],
+"Computer": [
+"Computers"
+],
+"Dienstreise": [
+"Dienstreise"
+],
+"Dosierung": [
+"Dosierung"
+],
+"Drucker": [
+"Druckers"
+],
+"Durchsage": [
+"Durchsage"
+],
+"Durst": [
+"Durstes",
+"Dursts"
+],
+"Dusche": [
+"Dusche"
+],
+"Ecke": [
+"Ecke"
+],
+"Ei": [
+"Eies",
+"Eis"
+],
+"Eingang": [
+"Einganges",
+"Eingangs"
+],
+"Eintritt": [
+"Eintrittes",
+"Eintritts"
+],
+"Eis": [
+"Eises"
+],
+"Elternabend": [
+"Elternabends"
+],
+"Elternzeit": [
+"Elternzeit"
+],
+"Entwicklung": [
+"Entwicklung"
+],
+"Erdgeschoss": [
+"Erdgeschosses"
+],
+"Ermäßigung": [
+"Ermäßigung"
+],
+"Erstattung": [
+"Erstattung"
+],
+"Erzieher": [
+"Erziehers"
+],
+"Erziehung": [
+"Erziehung"
+],
+"Essen": [
+"Essens"
+],
+"Facharzt": [
+"Facharztes"
+],
+"Fahrer": [
+"Fahrers"
+],
+"Fahrgast": [
+"Fahrgastes",
+"Fahrgasts"
+],
+"Fahrkarte": [
+"Fahrkarte"
+],
+"Fahrplan": [
+"Fahrplanes",
+"Fahrplans"
+],
+"Fahrrad": [
+"Fahrrades",
+"Fahrrads"
+],
+"Fahrt": [
+"Fahrt"
+],
+"Familie": [
+"Familie"
+],
+"Feierabend": [
+"Feierabends"
+],
+"Fenster": [
+"Fensters"
+],
+"Fernseher": [
+"Fernsehers"
+],
+"Fieber": [
+"Fiebers"
+],
+"Finanzamt": [
+"Finanzamtes",
+"Finanzamts"
+],
+"Finger": [
+"Fingers"
+],
+"Fisch": [
+"Fisches",
+"Fischs"
+],
+"Flasche": [
+"Flasche"
+],
+"Fleisch": [
+"Fleisches",
+"Fleischs"
+],
+"Flughafen": [
+"Flughafens"
+],
+"Flugzeug": [
+"Flugzeuges",
+"Flugzeugs"
+],
+"Flur": [
+"Flur",
+"Flures",
+"Flurs"
+],
+"Formular": [
+"Formulars"
+],
+"Fortbildung": [
+"Fortbildung"
+],
+"Freund": [
+"Freundes",
+"Freunds"
+],
+"Frühstück": [
+"Frühstückes",
+"Frühstücks"
+],
+"Fuß": [
+"Fußes"
+],
+"Förderung": [
+"Förderung"
+],
+"Führerschein": [
+"Führerscheines",
+"Führerscheins"
+],
+"Gabel": [
+"Gabel"
+],
+"Garage": [
+"Garage"
+],
+"Garten": [
+"Gartens"
+],
+"Geburtstag": [
+"Geburtstages",
+"Geburtstags"
+],
+"Gebühr": [
+"Gebühr"
+],
+"Gehalt": [
+"Gehaltes",
+"Gehalts"
+],
+"Geld": [
+"Geldes",
+"Gelds"
+],
+"Geldautomat": [
+"Geldautomaten"
+],
+"Gemüse": [
+"Gemüses"
+],
+"Geschenk": [
+"Geschenkes",
+"Geschenks"
+],
+"Geschwister": [
+"Geschwisters"
+],
+"Geschäft": [
+"Geschäftes",
+"Geschäfts"
+],
+"Gewerkschaft": [
+"Gewerkschaft"
+],
+"Glas": [
+"Glases"
+],
+"Gleis": [
+"Gleises"
+],
+"Grenze": [
+"Grenze"
+],
+"Gruppe": [
+"Gruppe"
+],
+"Hals": [
+"Halses"
+],
+"Haltbarkeit": [
+"Haltbarkeit"
+],
+"Haltestelle": [
+"Haltestelle"
+],
+"Hand": [
+"Hand"
+],
+"Haus": [
+"Hauses"
+],
+"Hausarzt": [
+"Hausarztes",
+"Hausarzts"
+],
+"Hausaufgabe": [
+"Hausaufgabe"
+],
+"Hausmeister": [
+"Hausmeisters"
+],
+"Hausnummer": [
+"Hausnummer"
+],
+"Heizung": [
+"Heizung"
+],
+"Herd": [
+"Herdes",
+"Herds"
+],
+"Herkunft": [
+"Herkunft"
+],
+"Herz": [
+"Herzens",
+"Herzes"
+],
+"Hotel": [
+"Hotels"
+],
+"Hunger": [
+"Hungers"
+],
+"Husten": [
+"Hustens"
+],
+"Impfung": [
+"Impfung"
+],
+"Jugendamt": [
+"Jugendamtes",
+"Jugendamts"
+],
+"Junge": [
+"Jungen"
+],
+"Kaffee": [
+"Kaffees"
+],
+"Kartoffel": [
+"Kartoffel"
+],
+"Kasse": [
+"Kasse"
+],
+"Kaution": [
+"Kaution"
+],
+"Keller": [
+"Kellers"
+],
+"Kellner": [
+"Kellners"
+],
+"Kind": [
+"Kindes",
+"Kinds"
+],
+"Kindergarten": [
+"Kindergartens"
+],
+"Kindergeld": [
+"Kindergeldes",
+"Kindergelds"
+],
+"Kinderwagen": [
+"Kinderwagens"
+],
+"Kino": [
+"Kinos"
+],
+"Kirche": [
+"Kirche"
+],
+"Kita": [
+"Kita"
+],
+"Knie": [
+"Knies"
+],
+"Koffer": [
+"Koffers"
+],
+"Kollege": [
+"Kollegen"
+],
+"Konferenz": [
+"Konferenz"
+],
+"Kopf": [
+"Kopfes",
+"Kopfs"
+],
+"Kopie": [
+"Kopie"
+],
+"Krankenhaus": [
+"Krankenhauses"
+],
+"Krankenwagen": [
+"Krankenwagens"
+],
+"Kreuzung": [
+"Kreuzung"
+],
+"Krippe": [
+"Krippe"
+],
+"Kuchen": [
+"Kuchens"
+],
+"Kunde": [
+"Kunden"
+],
+"Käse": [
+"Käses"
+],
+"Küche": [
+"Küche"
+],
+"Kühlschrank": [
+"Kühlschrankes",
+"Kühlschranks"
+],
+"Kündigung": [
+"Kündigung"
+],
+"Laden": [
+"Ladens"
+],
+"Lampe": [
+"Lampe"
+],
+"Lebenslauf": [
+"Lebenslaufes",
+"Lebenslaufs"
+],
+"Lebensmittel": [
+"Lebensmittels"
+],
+"Lehrer": [
+"Lehrers"
+],
+"Lied": [
+"Liedes",
+"Lieds"
+],
+"Linie": [
+"Linie"
+],
+"Löffel": [
+"Löffels"
+],
+"Makler": [
+"Maklers"
+],
+"Markt": [
+"Marktes",
+"Markts"
+],
+"Medikament": [
+"Medikamentes",
+"Medikaments"
+],
+"Messer": [
+"Messers"
+],
+"Metzgerei": [
+"Metzgerei"
+],
+"Miete": [
+"Miete"
+],
+"Mietvertrag": [
+"Mietvertrages",
+"Mietvertrags"
+],
+"Milch": [
+"Milch"
+],
+"Mitarbeiter": [
+"Mitarbeiters"
+],
+"Mittagessen": [
+"Mittagessens"
+],
+"Mittagsschlaf": [
+"Mittagsschlafes",
+"Mittagsschlafs"
+],
+"Mund": [
+"Mundes",
+"Munds"
+],
+"Museum": [
+"Museums"
+],
+"Mutter": [
+"Mutter"
+],
+"Mädchen": [
+"Mädchens"
+],
+"Märchen": [
+"Märchens"
+],
+"Möbel": [
+"Möbels"
+],
+"Mülltonne": [
+"Mülltonne"
+],
+"Nachbar": [
+"Nachbarn",
+"Nachbars"
+],
+"Nachbarschaft": [
+"Nachbarschaft"
+],
+"Nachtisch": [
+"Nachtisches",
+"Nachtischs"
+],
+"Nachweis": [
+"Nachweises"
+],
+"Narkose": [
+"Narkose"
+],
+"Nase": [
+"Nase"
+],
+"Notaufnahme": [
+"Notaufnahme"
+],
+"Obst": [
+"Obstes",
+"Obsts"
+],
+"Ohr": [
+"Ohres",
+"Ohrs"
+],
+"Oma": [
+"Oma"
+],
+"Opa": [
+"Opas"
+],
+"Operation": [
+"Operation"
+],
+"Original": [
+"Originals"
+],
+"Paket": [
+"Paketes",
+"Pakets"
+],
+"Papier": [
+"Papieres",
+"Papiers"
+],
+"Park": [
+"Parkes",
+"Parks"
+],
+"Parkplatz": [
+"Parkplatzes"
+],
+"Pass": [
+"Passes"
+],
+"Patient": [
+"Patienten"
+],
+"Pause": [
+"Pause"
+],
+"Pfand": [
+"Pfandes",
+"Pfands"
+],
+"Pfanne": [
+"Pfanne"
+],
+"Pflaster": [
+"Pflasters"
+],
+"Platz": [
+"Platzes"
+],
+"Polizei": [
+"Polizei"
+],
+"Post": [
+"Postes",
+"Posts"
+],
+"Postleitzahl": [
+"Postleitzahl"
+],
+"Praktikum": [
+"Praktikums"
+],
+"Preis": [
+"Preises"
+],
+"Projekt": [
+"Projektes",
+"Projekts"
+],
+"Puppe": [
+"Puppe"
+],
+"Quadratmeter": [
+"Quadratmeters"
+],
+"Rathaus": [
+"Rathauses"
+],
+"Rechnung": [
+"Rechnung"
+],
+"Regal": [
+"Regales",
+"Regals"
+],
+"Reis": [
+"Reises"
+],
+"Reise": [
+"Reise"
+],
+"Restaurant": [
+"Restaurants"
+],
+"Rezept": [
+"Rezeptes",
+"Rezepts"
+],
+"Richtung": [
+"Richtung"
+],
+"Rücken": [
+"Rückens"
+],
+"Saft": [
+"Saftes",
+"Safts"
+],
+"Salat": [
+"Salates",
+"Salats"
+],
+"Salbe": [
+"Salbe"
+],
+"Salz": [
+"Salzes"
+],
+"Schaffner": [
+"Schaffners"
+],
+"Schalter": [
+"Schalters"
+],
+"Scheibe": [
+"Scheibe"
+],
+"Schimmel": [
+"Schimmels"
+],
+"Schlafzimmer": [
+"Schlafzimmers"
+],
+"Schlange": [
+"Schlange"
+],
+"Schlüssel": [
+"Schlüssels"
+],
+"Schmerz": [
+"Schmerzes"
+],
+"Schnuller": [
+"Schnullers"
+],
+"Schnupfen": [
+"Schnupfens"
+],
+"Schokolade": [
+"Schokolade"
+],
+"Schrank": [
+"Schrankes",
+"Schranks"
+],
+"Schreibtisch": [
+"Schreibtisches",
+"Schreibtischs"
+],
+"Schule": [
+"Schule"
+],
+"Schulter": [
+"Schulter"
+],
+"Schwester": [
+"Schwester"
+],
+"Schwimmbad": [
+"Schwimmbades",
+"Schwimmbads"
+],
+"Sofa": [
+"Sofas"
+],
+"Sorgerecht": [
+"Sorgerechtes",
+"Sorgerechts"
+],
+"Speisekarte": [
+"Speisekarte"
+],
+"Spezialität": [
+"Spezialität"
+],
+"Spiegel": [
+"Spiegels"
+],
+"Spielplatz": [
+"Spielplatzes"
+],
+"Spielzeug": [
+"Spielzeuges",
+"Spielzeugs"
+],
+"Sprechstunde": [
+"Sprechstunde"
+],
+"Spritze": [
+"Spritze"
+],
+"Stadt": [
+"Stadt"
+],
+"Stadtplan": [
+"Stadtplanes",
+"Stadtplans"
+],
+"Stadtteil": [
+"Stadtteiles",
+"Stadtteils"
+],
+"Standesamt": [
+"Standesamtes",
+"Standesamts"
+],
+"Stau": [
+"Staus"
+],
+"Stelle": [
+"Stelle"
+],
+"Stempel": [
+"Stempels"
+],
+"Steuer": [
+"Steuer",
+"Steuers"
+],
+"Stock": [
+"Stockes",
+"Stocks"
+],
+"Straße": [
+"Straße"
+],
+"Straßenbahn": [
+"Straßenbahn"
+],
+"Strecke": [
+"Strecke"
+],
+"Streik": [
+"Streikes",
+"Streiks"
+],
+"Streit": [
+"Streites",
+"Streits"
+],
+"Strom": [
+"Stromes",
+"Stroms"
+],
+"Stuhl": [
+"Stuhles",
+"Stuhls"
+],
+"Stück": [
+"Stückes",
+"Stücks"
+],
+"Supermarkt": [
+"Supermarktes",
+"Supermarkts"
+],
+"Suppe": [
+"Suppe"
+],
+"Tablette": [
+"Tablette"
+],
+"Tagesmutter": [
+"Tagesmutter"
+],
+"Tankstelle": [
+"Tankstelle"
+],
+"Tasse": [
+"Tasse"
+],
+"Tastatur": [
+"Tastatur"
+],
+"Taxi": [
+"Taxis"
+],
+"Team": [
+"Teams"
+],
+"Tee": [
+"Tees"
+],
+"Teilzeit": [
+"Teilzeit"
+],
+"Telefon": [
+"Telefons"
+],
+"Teller": [
+"Tellers"
+],
+"Teppich": [
+"Teppiches",
+"Teppichs"
+],
+"Termin": [
+"Termines",
+"Termins"
+],
+"Theater": [
+"Theaters"
+],
+"Tisch": [
+"Tisches",
+"Tischs"
+],
+"Toilette": [
+"Toilette"
+],
+"Tomate": [
+"Tomate"
+],
+"Topf": [
+"Topfes",
+"Topfs"
+],
+"Treppe": [
+"Treppe"
+],
+"Trinkgeld": [
+"Trinkgeldes",
+"Trinkgelds"
+],
+"Tür": [
+"Tür"
+],
+"Tüte": [
+"Tüte"
+],
+"U-Bahn": [
+"U-Bahn"
+],
+"Umleitung": [
+"Umleitung"
+],
+"Umzug": [
+"Umzuges",
+"Umzugs"
+],
+"Unfall": [
+"Unfalles",
+"Unfalls"
+],
+"Unterschrift": [
+"Unterschrift"
+],
+"Untersuchung": [
+"Untersuchung"
+],
+"Urlaub": [
+"Urlaubes",
+"Urlaubs"
+],
+"Vater": [
+"Vaters"
+],
+"Verband": [
+"Verbandes",
+"Verbands"
+],
+"Verbindung": [
+"Verbindung"
+],
+"Vermieter": [
+"Vermieters"
+],
+"Versicherung": [
+"Versicherung"
+],
+"Verspätung": [
+"Verspätung"
+],
+"Vertrag": [
+"Vertrages",
+"Vertrags"
+],
+"Viertel": [
+"Viertels"
+],
+"Vollzeit": [
+"Vollzeit"
+],
+"Vorspeise": [
+"Vorspeise"
+],
+"Vorstellungsgespräch": [
+"Vorstellungsgespräches",
+"Vorstellungsgesprächs"
+],
+"Wand": [
+"Wand"
+],
+"Waschmaschine": [
+"Waschmaschine"
+],
+"Wasser": [
+"Wassers"
+],
+"Weg": [
+"Weges",
+"Wegs"
+],
+"Wein": [
+"Weines",
+"Weins"
+],
+"Windel": [
+"Windel"
+],
+"Wohnfläche": [
+"Wohnfläche"
+],
+"Wohnung": [
+"Wohnung"
+],
+"Wohnzimmer": [
+"Wohnzimmers"
+],
+"Wurst": [
+"Wurst"
+],
+"Zahn": [
+"Zahnes",
+"Zahns"
+],
+"Zahnarzt": [
+"Zahnarztes",
+"Zahnarzts"
+],
+"Zentrum": [
+"Zentrums"
+],
+"Zeugnis": [
+"Zeugnisses"
+],
+"Zimmer": [
+"Zimmers"
+],
+"Zucker": [
+"Zuckers"
+],
+"Zug": [
+"Zuges",
+"Zugs"
+],
+"Zutat": [
+"Zutat"
+],
+"Zwiebel": [
+"Zwiebel"
+],
+"Überweisung": [
+"Überweisung"
+]
+}

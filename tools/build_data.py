@@ -23,6 +23,15 @@ BAD_TAGS = {'obsolete', 'archaic', 'alternative', 'regional', 'Austria', 'Switze
 T0 = time.time()
 
 
+# Что даст правило в ядре (`genitiveSg` в morph.ts). Дубль намеренный: сюда кладём
+# только то, что правилом НЕ выводится, иначе каждое слово тащило бы лишнее поле.
+# Раньше условие выбрасывало и формы на -es, и ядро выдавало «des Bescheids».
+def gen_default(lemma, g):
+    if g == 'f':
+        return lemma
+    return lemma + ('es' if lemma.endswith(('s', 'ß', 'x', 'z', 'sch')) else 's')
+
+
 def log(*a):
     print(f'[{time.time() - T0:5.1f}s]', *a, flush=True)
 
@@ -159,7 +168,9 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     # Nachbar даёт Nachbarn, а не Nachbaren, и «der Nachbaren» выглядело в заданиях.
     if nd and gen:
         n['gen'] = gen
-    elif gen and gen not in {lemma + 's', lemma + 'es', lemma}:
+    # ⚠ Источник иногда даёт родительный, равный лемме, у мужского и среднего:
+    # «des Eis» вместо «des Eises». Там правило надёжнее источника
+    elif gen and gen != gen_default(lemma, g) and not (g != 'f' and gen == lemma):
         n['gen'] = gen
     dpl = (e or {}).get('dpl')
     if dpl and pl and dpl not in (pl, pl + 'n'):

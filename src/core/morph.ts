@@ -15,7 +15,10 @@ function oblique(n: Noun): string {
 function genitiveSg(n: Noun): string {
   if (n.gen) return n.gen
   if (n.nd) return oblique(n)
-  // -es у односложных и у основ на s/ß/x/z, иначе -s
+  // ⚠ Женский род в родительном НЕ меняется: der Reise, не «der Reises».
+  // Окончание получают только мужской и средний. Это давало «das Auto der Bedienungs».
+  if (n.g === 'f') return n.w
+  // -es у основ на s/ß/x/z/sch, иначе -s. Где источник даёт другое, оно лежит в gen
   return endsAny(n.w, ['s', 'ß', 'x', 'z', 'sch']) ? `${n.w}es` : `${n.w}s`
 }
 

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import genitive_fixture from './__fixtures__/genitive.json' with { type: 'json' }
 import imperative_fixture from './__fixtures__/imperative.json' with { type: 'json' }
 import present_fixture from './__fixtures__/present.json' with { type: 'json' }
 import { bundle } from './data.ts'
@@ -97,6 +98,45 @@ describe('императив против UniMorph', () => {
     expect(imperativeOf('lesen')).toBe('lies')
     expect(imperativeOf('halten')).toBe('halte')
     expect(imperativeOf('öffnen')).toBe('öffne')
+  })
+})
+
+describe('родительный против UniMorph', () => {
+  // Правило короткое, но ошибается тихо: «das Auto der Bedienungs» доехало до живого
+  // сайта. Поэтому сверяемся по всем словам лексикона, какие есть в источнике.
+  const gen = genitive_fixture as Record<string, string[]>
+  const KNOWN_GEN: Record<string, string> = {
+    Post: 'в UniMorph мужской омоним der Post «пост, должность», у нас die Post «почта»',
+  }
+  const bad: string[] = []
+  const diverged = new Set<string>()
+  let checked = 0
+  for (const n of bundle.nouns) {
+    const want = gen[n.w]
+    if (!want || n.pl_only) continue
+    const got = nounForm(n, 'gen')
+    if (!got) continue
+    checked++
+    if (want.includes(got)) continue
+    diverged.add(n.w)
+    if (!(n.w in KNOWN_GEN)) bad.push(`${n.w}: ${got} ∉ ${want.join(' / ')}`)
+  }
+  it('все формы входят в число принятых', () => {
+    expect(bad).toEqual([])
+    expect(checked).toBeGreaterThan(300)
+  })
+
+  it('в списке исключений нет устаревших записей', () => {
+    expect(Object.keys(KNOWN_GEN).filter((w) => !diverged.has(w))).toEqual([])
+  })
+
+  // ⚠ Женский род в родительном не меняется — это и давало «der Bedienungs»
+  it('женский род окончания не получает', () => {
+    const noun = (w: string) => bundle.nouns.find((n) => n.w === w)!
+    expect(nounForm(noun('Bedienung'), 'gen')).toBe('Bedienung')
+    expect(nounForm(noun('Reise'), 'gen')).toBe('Reise')
+    expect(nounForm(noun('Kind'), 'gen')).toBe('Kindes')
+    expect(nounForm(noun('Fahrer'), 'gen')).toBe('Fahrers')
   })
 })
 

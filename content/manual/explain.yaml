@@ -748,3 +748,64 @@ passiv:
     действующего, его добавляют с von: «Das wird vom Hausmeister gemacht».
     Часто встречается в объявлениях и правилах, где исполнитель не важен:
     «Die Wohnung wird renoviert», «Hier wird nicht geraucht».
+
+man-subjekt:
+  name: Безличное man
+  group: глагол
+  title: man — «люди вообще», и глагол при нём как при er
+  short: "man {answer}"
+  ru_contrast: >-
+    По-русски безличность делается множественным числом без подлежащего: «здесь
+    хорошо готовят», «тут не курят». В немецком подлежащее обязательно, и его место
+    занимает man. Ошибка почти у всех: man выглядит как «люди», и рука ставит
+    множественное — «man arbeiten». А man это единственное число, и глагол при нём
+    ровно такой же, как при er.
+  steps:
+    - "man — единственное число, не множественное"
+    - "{w} при нём стоит как при er"
+    - "получается {answer}"
+  more: >-
+    man употребляют там, где по-русски сказали бы «обычно так делают»: Hier spricht
+    man Deutsch. У него нет множественного числа и нет формы для «кем»: вместо
+    «von man» говорят иначе. В Akkusativ и Dativ он превращается в einen и einem —
+    это единственные его падежные формы.
+
+es-gibt:
+  name: es gibt
+  group: падеж
+  title: После es gibt всегда Akkusativ
+  short: "es gibt {answer} {w}"
+  ru_contrast: >-
+    По-русски «здесь есть парк» — подлежащее, именительный падеж. В немецком то же
+    самое говорят оборотом es gibt, и после него стоит ПРЯМОЙ ОБЪЕКТ, то есть
+    Akkusativ: es gibt einen Park, а не «ein Park». Смысл спорит с падежом, и рука
+    ставит именительный почти всегда.
+  steps:
+    - "es gibt требует Akkusativ, хотя по смыслу тут «есть»"
+    - "{w} — {gender_ru} род"
+    - "{gender_ru} род в Akkusativ даёт {answer}"
+  more: >-
+    Оборот неизменяемый: всегда es gibt, независимо от числа. «Hier gibt es einen
+    Park» и «Hier gibt es zwei Parks» — gibt в обоих. Изменить можно только время:
+    es gab (было), es wird … geben (будет). Разница с ist в том, что es gibt говорит
+    о наличии вообще, а ist — о месте: «Der Park ist dort».
+
+prep-genitiv:
+  name: Предлоги + Genitiv
+  group: падеж
+  title: wegen и während требуют Genitiv
+  short: "wegen {answer} {w}"
+  ru_contrast: >-
+    По-русски «из-за забастовки» — родительный падеж, и это совпадает: немецкие wegen,
+    während и trotz тоже берут Genitiv. Совпадение редкое и приятное, но есть ловушка:
+    в разговоре немцы сплошь и рядом говорят «wegen dem Streik» с Dativ, и это
+    считается просторечием. В письме и на экзамене нужен Genitiv.
+  steps:
+    - "{w} — {gender_ru} род"
+    - "wegen и während требуют Genitiv"
+    - "{gender_ru} род в Genitiv даёт {answer}"
+  more: >-
+    Genitiv у артикля простой: des для мужского и среднего, der для женского и
+    множественного. Существительное мужского и среднего рода при этом получает
+    -s или -es: des Streiks, des Kindes. Женский и множественное не меняются.
+    Таких предлогов немного: wegen, während, trotz, statt, außerhalb.
