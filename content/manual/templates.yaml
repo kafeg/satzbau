@@ -633,3 +633,31 @@
   slot: {paradigm: adj_predicative}
   options: {paradigm: adj_predicative, count: 4}
   why: adj-praedikativ
+
+# ─── Управление глаголов. Данные про него лежали в бандле с самого Э3 и не читались
+# ни одним шаблоном: `gov` подтверждён руками у 29 глаголов, а правила не было.
+# Пропуск — САМ ПРЕДЛОГ, и это главная боль русского: «ждать автобус» без предлога,
+# а по-немецки warten AUF den Zug. Дополнение не подбирается из лексикона (так выходило
+# «Er würzt das Salz»), а написано руками по глаголу — fixes.yaml:government_example.
+# Падеж в дополнении уже стоит правильный: его задаёт то же управление.
+- id: verb-prep-ich
+  rule: verb-praeposition
+  level: A2
+  kind: choice
+  frame: "Ich {v1} {slot} {obj}."
+  need: {pos: v, has: [govex], not: [sep, reflexive]}
+  slot: {paradigm: verb_prep}
+  options: {paradigm: verb_prep, count: 4}
+  why: verb-praeposition
+
+# Тот же предлог, но у отделяемого глагола: приставка уезжает за дополнение.
+# «Ich steige in den Zug ein» — предлог в середине, приставка последней.
+- id: verb-prep-trennbar
+  rule: verb-praeposition
+  level: A2
+  kind: choice
+  frame: "Ich {v1} {slot} {obj} {particle}."
+  need: {pos: v, has: [govex, sep], not: [reflexive]}
+  slot: {paradigm: verb_prep}
+  options: {paradigm: verb_prep, count: 4}
+  why: verb-praeposition

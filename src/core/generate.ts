@@ -3,6 +3,7 @@
 import {
   adjEnding,
   defArticle,
+  govOf,
   modal,
   type Modal,
   pronoun,
@@ -100,6 +101,12 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return pronoun(c === 'dat' ? 'dat' : 'akk', genderOf(slot, w, w2), num)
     case 'adj_predicative':
       return (w.entry as Adj).w
+    // пропуск — сам предлог, который требует глагол. Берётся из gov, а не из шаблона:
+    // это свойство слова, и в данных оно подтверждено руками (fixes.yaml)
+    case 'verb_prep': {
+      const g = (w.entry as Verb).gov?.[0]
+      return g ? (govOf(g)?.prep ?? null) : null
+    }
     case 'adj_comparative':
       return comparative(w.entry as Adj)
     case 'adj_superlative':
@@ -153,7 +160,13 @@ function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): s
     modal: t.slot.modal as Modal | undefined,
     word: w.w,
   })
-  const rest = all.filter((f) => f !== answer && !near.includes(f))
+  // ⚠ Остаток инвентаря перемешивается, а не берётся по порядку: у парадигм с большим
+  // инвентарём (тринадцать предлогов управления) первые три формы иначе становятся
+  // дистракторами ВСЕГДА, и задание угадывается, не читая фразу. Порядок детерминирован.
+  const rest = shuffle(
+    all.filter((f) => f !== answer && !near.includes(f)),
+    `${t.id}${w.w}rest`,
+  )
   const picked = [answer, ...new Set([...near, ...rest])].slice(0, count)
   return shuffle(picked, t.id + w.w)
 }
@@ -194,6 +207,12 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   const g = w.pos === 'n' || t.slot.gender === 'from_fill2' ? genderOf(t.slot, w, w2) : null
   const word = wordIn(w, t.slot)
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
+  // {v1} — спрягаемая часть в первом лице, {obj} — дополнение без предлога:
+  // предлог стоит в пропуске, поэтому из govex его надо снять
+  const v1 = w.pos === 'v' ? (present(w.entry as Verb, '1sg').split(' ')[0] ?? '') : ''
+  const obj = (w.pos === 'v' ? (w.entry as Verb).govex : '')?.split(' ').slice(1).join(' ') ?? ''
+  const govCase =
+    t.slot.paradigm === 'verb_prep' ? (govOf((w.entry as Verb).gov?.[0] ?? '')?.case ?? null) : null
   const part = w.pos === 'v' ? (particle(w.entry as Verb) ?? '') : ''
   const g2 = w2?.pos === 'n' ? (w2.entry as Noun).g : undefined
   const case2 = t.fill2?.case ?? 'akk'
@@ -234,6 +253,8 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
       .replace('{pp}', pp)
       .replace('{particle}', part)
+      .replace('{v1}', v1)
+      .replace('{obj}', obj)
   return {
     templateId: t.id,
     rule: t.rule,
@@ -256,7 +277,9 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       answer,
       pp,
       prep: t.slot.prep ?? t.options?.prep ?? '',
-      case_ru: CASE_RU[t.slot.case ?? 'nom'],
+      obj,
+      // у управления падеж задаёт не шаблон, а сама связка: «warten auf» это всегда Akkusativ
+      case_ru: CASE_RU[govCase ?? t.slot.case ?? 'nom'],
       question: t.slot.case === 'akk' ? 'wohin?' : 'wo?',
       gender_ru: g ? GENDER_RU[g] : '',
       nom_article: g ? defArticle('nom', g, t.slot.num ?? 'sg') : '',

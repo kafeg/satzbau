@@ -2,7 +2,14 @@ import { describe, expect, it } from 'vitest'
 import { bundle, words } from './data.ts'
 import { explainItem } from './explain.ts'
 import { fillingFor, generate, itemsFor, second } from './generate.ts'
-import { adjEndingMatches, formMatches, inventory, possessive } from './paradigms.ts'
+import {
+  adjEndingMatches,
+  formMatches,
+  GOV_PREPS,
+  govOf,
+  inventory,
+  possessive,
+} from './paradigms.ts'
 
 // Главный тест этапа: прогнать ВСЕ шаблоны на ВСЕХ подходящих словах. Проверять
 // задания в рантайме у человека поздно — ошибка должна падать здесь.
@@ -187,5 +194,32 @@ describe('конкретные задания', () => {
     const e = explainItem(item('prep-dat-mit', 'Bahn'))
     expect(e.steps.join(' ')).toContain('женский')
     expect(e.steps.join(' ')).toContain('die')
+  })
+
+  it('управление: в пропуске предлог, дополнение приходит из записи', () => {
+    const i = item('verb-prep-ich', 'warten')
+    expect(i.full).toBe('Ich warte auf den Zug.')
+    expect(i.answer).toBe('auf')
+    expect(i.options).toHaveLength(4)
+    // дистракторы — предлоги из закрытого списка управления, а не падежи
+    for (const o of i.options!) expect(GOV_PREPS as readonly string[]).toContain(o)
+  })
+
+  it('у отделяемого приставка уезжает за дополнение', () => {
+    expect(item('verb-prep-trennbar', 'einsteigen').full).toBe('Ich steige in den Zug ein.')
+  })
+
+  // падеж в связке задаёт управление, а не шаблон: у слота verb_prep падежа нет вовсе,
+  // и без этого разбор говорил бы «именительный» на «warten auf + Akkusativ»
+  it('падеж в разборе берётся из управления, а не из шаблона', () => {
+    expect(explainItem(item('verb-prep-ich', 'warten')).steps.join(' ')).toContain('винительный')
+    expect(explainItem(item('verb-prep-ich', 'arbeiten')).steps.join(' ')).toContain('дательный')
+  })
+
+  it('запись управления разбирается в предлог и падеж', () => {
+    expect(govOf('auf A')).toEqual({ prep: 'auf', case: 'akk' })
+    expect(govOf('bei D')).toEqual({ prep: 'bei', case: 'dat' })
+    // «D» без предлога — это Dativ-объект, а не предложное управление
+    expect(govOf('D')).toBeNull()
   })
 })

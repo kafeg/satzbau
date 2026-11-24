@@ -70,6 +70,21 @@ const PRONOUN: Record<'akk' | 'dat', ByGender> = {
   dat: { m: 'ihm', f: 'ihr', n: 'ihm', pl: 'ihnen' },
 }
 
+/**
+ * Предлоги, которые встречаются в управлении глаголов на A1–B1. Закрытый список:
+ * из него берутся дистракторы, и «не тот предлог» — это и есть тренируемая ошибка.
+ */
+export const GOV_PREPS = [
+  'an', 'auf', 'aus', 'bei', 'für', 'gegen', 'in', 'mit', 'nach', 'über', 'um', 'von', 'zu',
+] as const
+
+/** Запись управления в предлог и падеж: «auf A» → auf + винительный. */
+export function govOf(gov: string): { prep: string; case: Case } | null {
+  const [prep, c] = gov.split(' ')
+  if (!prep || !c || !GOV_PREPS.includes(prep as (typeof GOV_PREPS)[number])) return null
+  return { prep, case: c === 'A' ? 'akk' : c === 'D' ? 'dat' : 'gen' }
+}
+
 export function pronoun(c: 'akk' | 'dat', g: Gender, num: Num = 'sg'): string {
   return PRONOUN[c][num === 'pl' ? 'pl' : g]
 }
@@ -173,6 +188,8 @@ export function inventory(
       return einInventory('ein', false)
     case 'pronoun':
       return uniq([...Object.values(PRONOUN.akk), ...Object.values(PRONOUN.dat)])
+    case 'verb_prep':
+      return [...GOV_PREPS]
     case 'possessive':
       return einInventory('mein', true)
     case 'kein_article':

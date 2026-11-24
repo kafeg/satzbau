@@ -48,8 +48,36 @@ government:
   entschuldigen: ["für A", "bei D"]
   gehören:       ["zu D"]
   treffen:       ["mit D"]
-  halten:        ["von D"]
   informieren:   ["über A"]
+
+# 1a. Пример дополнения к управлению. Нужен там, где пропуск — сам предлог: фраза
+#     «Ich warte … den Zug» без дополнения не собирается, а подбирать дополнение
+#     автоматом уже пробовали — выходило «Er würzt das Salz» (отвергнуто,
+#     docs/architecture.md). Здесь оно написано руками, с артиклем в том падеже,
+#     который требует управление: двадцать две строки, и каждую видно глазами.
+#     Проверяется валидатором: предлог один — пример обязателен, и он начинается
+#     с этого предлога. Глаголов, которым нужно ещё и прямое дополнение, здесь нет:
+#     «Ich überweise auf das Konto» не фраза, непонятно что переводят. И нет тех,
+#     у кого подлежащим не может быть человек: «Ich hänge an der Wand» про себя.
+government_example:
+  anfangen:     "mit der Arbeit"
+  ankommen:     "in Berlin"
+  antworten:    "auf die E-Mail"
+  arbeiten:     "an einem Projekt"
+  aufhören:     "mit der Arbeit"
+  aufpassen:    "auf das Kind"
+  aussteigen:   "aus dem Bus"
+  basteln:      "an einem Bild"
+  bezahlen:     "für die Rechnung"
+  einsteigen:   "in den Zug"
+  impfen:       "gegen die Grippe"
+  leiden:       "an einer Allergie"
+  spielen:      "mit dem Ball"
+  telefonieren: "mit dem Chef"
+  umsteigen:    "in die S-Bahn"
+  verdienen:    "an einem Auftrag"
+  verzichten:   "auf den Nachtisch"
+  warten:       "auf den Zug"
 
 # 2. Род: решения, которых нет в данных. Два случая.
 #

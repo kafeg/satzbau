@@ -33,6 +33,8 @@ export interface Verb {
   aux: 'h' | 's' | 'hs'
   k2?: string
   gov?: string[]
+  /** пример дополнения с предлогом: «auf den Zug». Руками, см. fixes.yaml */
+  govex?: string
   auxn?: string
   refl?: 1
   ru?: string

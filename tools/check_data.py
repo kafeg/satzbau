@@ -194,9 +194,33 @@ def main():
     if unused:
         notes.append(f'объяснения без шаблона: {", ".join(sorted(unused))}')
 
+    # --- пример дополнения к управлению: он попадает в задание как есть, проверять
+    # его может только человек, а вот согласованность с gov проверяется здесь.
+    gov_ex = fixes.get('government_example') or {}
+    gov_all = fixes.get('government') or {}
+    for v, ex in sorted(gov_ex.items()):
+        gov = gov_all.get(v)
+        if not gov:
+            errors.append(f'fixes.yaml:government_example — у {v} нет управления в government')
+            continue
+        preps = [g for g in gov if ' ' in g]
+        if len(gov) != 1 or not preps:
+            errors.append(f'fixes.yaml:government_example — у {v} управление {gov}: '
+                          f'пример годится только там, где предлог один, иначе верных ответов два')
+        elif not ex.startswith(preps[0].split()[0] + ' '):
+            errors.append(f'fixes.yaml:government_example — {v}: {ex!r} не начинается '
+                          f'с предлога {preps[0].split()[0]!r} из управления')
+    # обратная сторона: глагол с одним предлогом и без примера в правило не попадёт
+    one_prep = sorted(v for v, g in gov_all.items()
+                      if len(g) == 1 and ' ' in g[0] and v not in gov_ex
+                      and v in {w['w'] for w in words})
+    if one_prep:
+        notes.append(f'управление с одним предлогом, но без примера ({len(one_prep)}) — '
+                     f'в правило о предлоге не попадут: {", ".join(one_prep)}')
+
     # --- правки, которые ни на что не ложатся
     lemmas = {w['w'] for w in words}
-    for block in ('government', 'gender', 'translations', 'aux_ambiguous'):
+    for block in ('government', 'government_example', 'gender', 'translations', 'aux_ambiguous'):
         idle = sorted(set(fixes.get(block) or {}) - lemmas)
         if idle:
             notes.append(f'fixes.yaml:{block} — записи для слов вне тем ({len(idle)}): '

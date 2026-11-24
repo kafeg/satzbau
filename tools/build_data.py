@@ -244,6 +244,10 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep):
     gov = fixes['government'].get(base)
     if gov:
         v['gov'] = gov
+        # пример дополнения нужен только там, где предлог один: иначе верных ответов два
+        ex = fixes['government_example'].get(base)
+        if ex and len(gov) == 1 and ' ' in gov[0]:
+            v['govex'] = ex
     auto = [g for g in verb_gov(ke) if g not in (gov or [])]
     if auto:
         gov_rep.append((lemma, auto))
@@ -456,6 +460,7 @@ def main():
     themes, templates, explain = yload('themes.yaml'), yload('templates.yaml'), yload('explain.yaml')
     fx = yload('fixes.yaml')
     fixes = dict(government=fx.get('government') or {}, gender=fx.get('gender') or {},
+                 government_example=fx.get('government_example') or {},
                  plural_in_use=set(fx.get('plural_in_use') or []),
                  pl_only_extra=set(fx.get('pl_only_extra') or []),
                  no_plural=set(fx.get('no_plural') or []),
