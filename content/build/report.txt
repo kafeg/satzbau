@@ -1,6 +1,6 @@
-сборка 2026-11-24, версия данных 3a69d3984633
+сборка 2026-11-24, версия данных f397413f5db6
 
-слов в themes.yaml: 676; собрано: 676; потеряно: 0
+слов в themes.yaml: 688; собрано: 688; потеряно: 0
 
 замечания (4):
   Laden                  род спорный m/n — решение в fixes.yaml:gender
@@ -26,19 +26,19 @@
 
 размеры:
   adjs.json         n=97          6.5 КиБ   gzip     1.9 КиБ
-  explain.json      n=42         49.8 КиБ   gzip    13.1 КиБ
-  nouns.json        n=418        35.1 КиБ   gzip     8.7 КиБ
-  sentences.json    n=1987      200.1 КиБ   gzip    55.4 КиБ
-  templates.json    n=78         22.8 КиБ   gzip     3.0 КиБ
-  themes.json       n=7          38.8 КиБ   gzip     5.1 КиБ
+  explain.json      n=43         51.6 КиБ   gzip    13.5 КиБ
+  nouns.json        n=430        36.3 КиБ   gzip     8.9 КиБ
+  sentences.json    n=2012      202.5 КиБ   gzip    56.0 КиБ
+  templates.json    n=77         22.8 КиБ   gzip     3.0 КиБ
+  themes.json       n=7          39.4 КиБ   gzip     5.2 КиБ
   verbs.json        n=161        26.0 КиБ   gzip     6.4 КиБ
-  ИТОГО                       379.0 КиБ   gzip    93.6 КиБ
+  ИТОГО                       385.2 КиБ   gzip    94.9 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      133674
+  незнакомая словоформа      133577
   длина не 3–8               30998
   нет точки в конце          822
-  имя исчерпало квоту        537
-  примеров на имя: Tom 2000, Maria 351, Deutschland 55, Sonntag 42, Oktober 34
-  слов без примеров: 180 из 676
+  имя исчерпало квоту        538
+  примеров на имя: Tom 2000, Maria 356, Deutschland 55, Sonntag 42, Oktober 34
+  слов без примеров: 186 из 688
     Abfahrt, Abmahnung, Abteil, Abteilung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Bürger, Bürgeramt, Café, Dosierung, Durchsage, Eingewöhnung, Einschulung …

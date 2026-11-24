@@ -496,9 +496,10 @@
   rule: modalverben
   level: A1
   kind: choice
-  frame: "Er {slot} heute {w}."
+  frame: "{Subj} {slot} heute {w}."
   need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: modal_present, modal: können, person: 3sg}
+  # лицо выводится из слова: с «Er» ответ был бы «kann» на всех 74 заданиях
+  slot: {paradigm: modal_present, modal: können, person: from_word}
   options: {paradigm: modal_present, count: 4}
   why: modalverben
 
@@ -506,9 +507,9 @@
   rule: modalverben
   level: A1
   kind: choice
-  frame: "Du {slot} heute {w}."
+  frame: "{Subj} {slot} heute {w}."
   need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: modal_present, modal: müssen, person: 2sg}
+  slot: {paradigm: modal_present, modal: müssen, person: from_word}
   options: {paradigm: modal_present, count: 4}
   why: modalverben
 
@@ -796,68 +797,37 @@
   slot: {paradigm: noun_case, case: dat, gender: from_word}
   why: n-deklination
 
-# ── Возвратные глаголы. Два лица, а не одно: с одним лицом ответ всегда «mich»,
-# и задание угадывается со второго раза.
-- id: reflexiv-ich
+# ── Возвратные глаголы.
+# {vp} — глагол в том же лице, что и подлежащее: лицо выводится из слова
+- id: reflexiv-subj
   rule: reflexiv
   level: A2
   kind: choice
-  frame: "Ich {v1} {slot} oft {particle}."
+  frame: "{Subj} {vp} {slot} oft {particle}."
   need: {pos: v, has: [reflexive]}
-  slot: {paradigm: reflexive_pronoun, person: 1sg}
-  options: {paradigm: reflexive_pronoun, count: 4}
-  why: reflexiv
-
-- id: reflexiv-er
-  rule: reflexiv
-  level: A2
-  kind: choice
-  frame: "Er {v3} {slot} oft {particle}."
-  need: {pos: v, has: [reflexive]}
-  slot: {paradigm: reflexive_pronoun, person: 3sg}
+  slot: {paradigm: reflexive_pronoun, person: from_word}
   options: {paradigm: reflexive_pronoun, count: 4}
   why: reflexiv
 
 # ── Futur I: werden + инфинитив, и инфинитив уезжает в конец.
-- id: futur-ich
+- id: futur-subj
   rule: futur
   level: A2
   kind: choice
-  frame: "Ich {slot} morgen {w}."
+  frame: "{Subj} {slot} morgen {w}."
   need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: werden_present, person: 1sg}
+  slot: {paradigm: werden_present, person: from_word}
   options: {paradigm: werden_present, count: 4}
   why: futur
 
-- id: futur-er
-  rule: futur
-  level: A2
-  kind: choice
-  frame: "Er {slot} morgen {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: werden_present, person: 3sg}
-  options: {paradigm: werden_present, count: 4}
-  why: futur
-
-# ── Konjunktiv II: würde + инфинитив. Два лица, иначе ответ всегда würde:
-# в первом и третьем лице форма одна и та же, и выбирать было бы нечего.
-- id: konjunktiv-ich
+# ── Konjunktiv II: würde + инфинитив.
+- id: konjunktiv-subj
   rule: konjunktiv2
   level: B1
   kind: choice
-  frame: "Ich {slot} gern {w}."
+  frame: "{Subj} {slot} gern {w}."
   need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: wuerde, person: 1sg}
-  options: {paradigm: wuerde, count: 4}
-  why: konjunktiv2
-
-- id: konjunktiv-du
-  rule: konjunktiv2
-  level: B1
-  kind: choice
-  frame: "Du {slot} gern {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: wuerde, person: 2sg}
+  slot: {paradigm: wuerde, person: from_word}
   options: {paradigm: wuerde, count: 4}
   why: konjunktiv2
 
@@ -873,13 +843,13 @@
   options: {paradigm: werden_present, count: 4}
   why: passiv
 
-- id: passiv-ich
+- id: passiv-person
   rule: passiv
   level: B1
   kind: choice
-  frame: "Ich {slot} heute {pp}."
+  frame: "{Subj} {slot} heute {pp}."
   need: {pos: v, tags: [obj_person], not: [reflexive]}
-  slot: {paradigm: werden_present, person: 1sg}
+  slot: {paradigm: werden_present, person: from_word}
   options: {paradigm: werden_present, count: 4}
   why: passiv
 
@@ -927,3 +897,25 @@
   slot: {paradigm: def_article, case: gen, gender: from_word}
   options: {paradigm: def_article, count: 4}
   why: prep-genitiv
+
+# ── Смешанное склонение: после ein окончание зависит от рода, в отличие от слабого,
+# где после der оно -e во всех трёх. Здесь род наконец виден в ответе.
+- id: adj-ein-nom
+  rule: adj-gemischt
+  level: A2
+  kind: input
+  frame: "Das ist {ein} {w2}{slot} {w}."
+  need: {pos: n, tags: [thing, food, vehicle, room, furniture, place], not: [pl_only, plu, abstract, mass]}
+  fill2: {need: {pos: a, tags: [generic]}}
+  slot: {paradigm: adj_ending, decl: mixed, case: nom, num: sg, gender: from_word}
+  why: adj-gemischt
+
+- id: adj-ein-akk
+  rule: adj-gemischt
+  level: A2
+  kind: input
+  frame: "Ich brauche {ein} {w2}{slot} {w}."
+  need: {pos: n, tags: [thing, food, vehicle, room, furniture, place], not: [pl_only, plu, abstract, mass]}
+  fill2: {need: {pos: a, tags: [generic]}}
+  slot: {paradigm: adj_ending, decl: mixed, case: akk, num: sg, gender: from_word}
+  why: adj-gemischt

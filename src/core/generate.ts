@@ -28,7 +28,19 @@ import {
   superlative,
 } from './morph.ts'
 import type { Word } from './bundle.ts'
-import type { Adj, Case, Gender, Item, Need, Noun, Num, Slot, Template, Verb } from './types.ts'
+import type {
+  Adj,
+  Case,
+  Gender,
+  Item,
+  Need,
+  Noun,
+  Num,
+  Person,
+  Slot,
+  Template,
+  Verb,
+} from './types.ts'
 
 const LEVELS = { A1: 1, A2: 2, B1: 3 } as const
 const CASES: Case[] = ['nom', 'akk', 'dat', 'gen']
@@ -78,6 +90,36 @@ export function fits(need: Need, w: Word): boolean {
   return true
 }
 
+/** Подлежащее-местоимение для выбранного лица: рамка его не фиксирует. */
+const SUBJECT: Record<Person, string> = {
+  '1sg': 'ich',
+  '2sg': 'du',
+  '3sg': 'er',
+  '1pl': 'wir',
+  '2pl': 'ihr',
+  '3pl': 'sie',
+}
+const PERSONS = Object.keys(SUBJECT) as Person[]
+
+/**
+ * ⚠ Лицо ВЫВОДИТСЯ из пары «шаблон + слово», а не стоит в рамке. Иначе ответ один
+ * на весь шаблон: «Ich ___ morgen arbeiten» всегда werde, и со второго задания
+ * его дают не думая. Журнал по-прежнему хранит пару, и задание из неё восстановимо.
+ */
+function personOf(slot: Slot, w: Word, tid: string): Person {
+  if (slot.person !== 'from_word') return slot.person ?? '3sg'
+  let h = 2166136261
+  for (const ch of `${tid}:${w.w}`) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0
+  return PERSONS[h % PERSONS.length] as Person
+}
+
+/** Слот с подставленным лицом: дальше по коду лицо уже конкретное. */
+type Fixed = Omit<Slot, 'person'> & { person?: Person }
+const fixSlot = (t: Template, w: Word): Fixed => {
+  const { person, ...rest } = t.slot
+  return person ? { ...rest, person: personOf(t.slot, w, t.id) } : rest
+}
+
 function genderOf(slot: Slot, w: Word, w2?: Word | null): Gender {
   if (slot.gender && slot.gender !== 'from_word' && slot.gender !== 'from_fill2') {
     return slot.gender
@@ -90,7 +132,7 @@ function genderOf(slot: Slot, w: Word, w2?: Word | null): Gender {
 }
 
 /** Форма в пропуске для заданного падежа. null — такого сочетания в парадигме нет. */
-function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null {
+function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | null {
   const num: Num = slot.num ?? 'sg'
   if (slot.gender === 'from_fill2' && !w2) return null
   switch (slot.paradigm) {
@@ -180,12 +222,12 @@ function shuffle<T>(xs: T[], seed: string): T[] {
  * которые были бы верны для этого же слова в других падежах, идут первыми: именно они
  * и есть настоящая ошибка, а не случайная буква.
  */
-function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): string[] {
+function buildOptions(t: Template, w: Word, answer: string, slot: Fixed, w2?: Word | null): string[] {
   const count = t.options?.count ?? 4
   // у управления «близкая» форма — другой предлог ТОГО ЖЕ глагола: это ровно та ошибка,
   // которую надо поймать, поэтому он всегда среди вариантов
   const nearPrep =
-    t.slot.paradigm === 'verb_prep'
+    slot.paradigm === 'verb_prep'
       ? ((w.entry as Verb).gov ?? [])
           .map((g) => govOf(g)?.prep)
           .filter((p): p is string => !!p && p !== answer)
@@ -196,9 +238,9 @@ function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): s
     t.options?.paradigm === 'negation'
       ? [
           slotForm(
-            { ...t.slot, paradigm: t.slot.paradigm === 'nicht' ? 'kein_article' : 'nicht' },
+            { ...slot, paradigm: slot.paradigm === 'nicht' ? 'kein_article' : 'nicht' },
             w,
-            t.slot.case ?? 'nom',
+            slot.case ?? 'nom',
             w2,
           ),
         ].filter((f): f is string => !!f && f !== answer)
@@ -206,14 +248,14 @@ function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): s
   const near = [
     ...nearNeg,
     ...nearPrep,
-    ...CASES.filter((c) => c !== t.slot.case)
-      .map((c) => slotForm(t.slot, w, c, w2))
+    ...CASES.filter((c) => c !== slot.case)
+      .map((c) => slotForm(slot, w, c, w2))
       .filter((f): f is string => !!f && f !== answer),
   ]
-  const all = inventory(t.options?.paradigm ?? t.slot.paradigm, {
-    prep: t.options?.prep ?? t.slot.prep,
-    person: t.slot.person,
-    modal: t.slot.modal as Modal | undefined,
+  const all = inventory(t.options?.paradigm ?? slot.paradigm, {
+    prep: t.options?.prep ?? slot.prep,
+    person: slot.person,
+    modal: slot.modal as Modal | undefined,
     word: w.w,
   })
   // ⚠ Остаток инвентаря перемешивается, а не берётся по порядку: у парадигм с большим
@@ -258,19 +300,23 @@ export function second(t: Template, w: Word, all: Word[]): Word | null {
 
 export function generate(t: Template, w: Word, all: Word[] = []): Item {
   const w2 = second(t, w, all)
-  const answer = slotForm(t.slot, w, t.slot.case ?? 'nom', w2)
+  const slot = fixSlot(t, w)
+  const person = slot.person ?? '3sg'
+  const answer = slotForm(slot, w, slot.case ?? 'nom', w2)
   if (answer === null) throw new Error(`${t.id} × ${w.w}: форма в пропуске не существует`)
-  const g = w.pos === 'n' || t.slot.gender === 'from_fill2' ? genderOf(t.slot, w, w2) : null
-  const word = wordIn(w, t.slot)
+  const g = w.pos === 'n' || slot.gender === 'from_fill2' ? genderOf(slot, w, w2) : null
+  const word = wordIn(w, slot)
   // подлежащему нужен именительный, даже когда пропуск в другом падеже:
   // «Der Automaten ist weg» вылезало на n-склонении, где винительный другой
-  const wordNom = wordIn(w, { ...t.slot, case: 'nom' })
+  const wordNom = wordIn(w, { ...slot, case: 'nom' })
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
   // {v1} и {v3} — спрягаемая часть без приставки, {pre} и {obj} — то, что в примере
   // управления стоит до предлога и после: предлог стоит в пропуске
   const vb = w.pos === 'v' ? (w.entry as Verb) : null
-  const gx = vb?.govex?.[(t.slot.nth ?? 1) - 1]
+  const gx = vb?.govex?.[(slot.nth ?? 1) - 1]
   const parts = vb && gx ? govexParts(vb.gov ?? [], gx) : null
+  const subj = SUBJECT[person] as string
+  const vp = vb ? (present(vb, person).split(' ')[0] ?? '') : ''
   const v1 = vb ? (present(vb, '1sg').split(' ')[0] ?? '') : ''
   const v3 = vb ? (present(vb, '3sg').split(' ')[0] ?? '') : ''
   const pre = parts?.pre ?? ''
@@ -280,7 +326,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
     .map((g) => govOf(g)?.prep)
     .filter(Boolean)
     .join(' и ')
-  const govCase = t.slot.paradigm === 'verb_prep' ? (parts?.case ?? null) : null
+  const govCase = slot.paradigm === 'verb_prep' ? (parts?.case ?? null) : null
   const part = w.pos === 'v' ? (particle(w.entry as Verb) ?? '') : ''
   const g2 = w2?.pos === 'n' ? (w2.entry as Noun).g : undefined
   const case2 = t.fill2?.case ?? 'akk'
@@ -288,14 +334,14 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   const word2 = w2 ? wordIn(w2, { paradigm: '', case: case2, num: num2 }) : ''
   const art2 = g2 ? defArticle(case2, g2, num2) : ''
   const ein2 = g2 && num2 !== 'pl' ? indefArticle(case2, g2) : ''
-  const plain = g ? defArticle(t.slot.case ?? 'nom', g, t.slot.num ?? 'sg') : ''
-  const nom = g ? defArticle('nom', g, t.slot.num ?? 'sg') : ''
-  const ein = g && t.slot.num !== 'pl' ? indefArticle(t.slot.case ?? 'nom', g) : ''
+  const plain = g ? defArticle(slot.case ?? 'nom', g, slot.num ?? 'sg') : ''
+  const nom = g ? defArticle('nom', g, slot.num ?? 'sg') : ''
+  const ein = g && slot.num !== 'pl' ? indefArticle(slot.case ?? 'nom', g) : ''
   const article =
-    g && t.slot.decl
-      ? t.slot.decl === 'mixed'
+    g && slot.decl
+      ? slot.decl === 'mixed'
         ? ein
-        : t.slot.decl === 'weak'
+        : slot.decl === 'weak'
           ? plain
           : ''
       : plain
@@ -323,6 +369,9 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
       .replace('{pp}', pp)
       .replace('{particle}', part)
+      .replace('{subj}', subj)
+      .replace('{Subj}', cap(subj))
+      .replace('{vp}', vp)
       .replace('{v1}', v1)
       .replace('{v3}', v3)
       .replace('{mich}', mich)
@@ -340,10 +389,10 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
     text: fill(t.frame, t.kind === 'input' ? '___' : '___'),
     full: fill(t.frame, answer),
     answer,
-    options: t.kind === 'choice' ? buildOptions(t, w, answer, w2) : undefined,
+    options: t.kind === 'choice' ? buildOptions(t, w, answer, slot, w2) : undefined,
     // ⚠ Принятых форм бывает несколько: «Hol das!» и «Hole das!» верны обе,
     // и засчитывать одну значило бы считать ошибкой правильный ответ
-    ...(t.slot.paradigm === 'imperative' && t.kind === 'input'
+    ...(slot.paradigm === 'imperative' && t.kind === 'input'
       ? { answers: imperativeForms(w.entry as Verb) }
       : {}),
     word: w.w,
@@ -358,15 +407,16 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       particle: part,
       answer,
       pp,
-      prep: t.slot.prep ?? t.options?.prep ?? '',
+      prep: slot.prep ?? t.options?.prep ?? '',
       obj,
       preps,
       // у управления падеж задаёт не шаблон, а сама связка: «warten auf» это всегда Akkusativ
-      case_ru: CASE_RU[govCase ?? t.slot.case ?? 'nom'],
-      question: t.slot.case === 'akk' ? 'wohin?' : 'wo?',
+      case_ru: CASE_RU[govCase ?? slot.case ?? 'nom'],
+      question: slot.case === 'akk' ? 'wohin?' : 'wo?',
       gender_ru: g ? GENDER_RU[g] : '',
-      nom_article: g ? defArticle('nom', g, t.slot.num ?? 'sg') : '',
+      nom_article: g ? defArticle('nom', g, slot.num ?? 'sg') : '',
       plain_article: plain,
+      ein,
       article,
       ru: (w.entry as Noun).ru ?? '',
     },
@@ -378,7 +428,7 @@ export function fillingFor(t: Template, all: Word[]): Word[] {
   return all.filter(
     (w) =>
       fits(t.need, w) &&
-      slotForm(t.slot, w, t.slot.case ?? 'nom', second(t, w, all)) !== null &&
+      slotForm(fixSlot(t, w), w, t.slot.case ?? 'nom', second(t, w, all)) !== null &&
       (!t.fill2 || second(t, w, all) !== null),
   )
 }

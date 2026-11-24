@@ -42,6 +42,7 @@ transport:
     - {w: Koffer,        pos: n, lv: A1, tags: [thing]}
     - {w: Führerschein,  pos: n, lv: A1, tags: [document]}
     - {w: Fahrer,        pos: n, lv: A1, tags: [person]}
+    - {w: Fahrerin,      pos: n, lv: A1, tags: [person]}
     - {w: Linie,         pos: n, lv: A1, tags: [abstract]}
     - {w: Richtung,      pos: n, lv: A1, tags: [abstract]}
     - {w: fahren,        pos: v, lv: A1, tags: [motion, solo]}
@@ -157,6 +158,7 @@ home:
     - {w: Miete,         pos: n, lv: A1, tags: [money]}
     - {w: Schlüssel,     pos: n, lv: A1, tags: [thing]}
     - {w: Nachbar,       pos: n, lv: A1, tags: [person]}
+    - {w: Nachbarin,     pos: n, lv: A1, tags: [person]}
     - {w: wohnen,        pos: v, lv: A1, tags: [state]}
     - {w: stehen,        pos: v, lv: A1, tags: [position, solo]}
     - {w: liegen,        pos: v, lv: A1, tags: [position, solo]}
@@ -188,6 +190,7 @@ home:
     - {w: Mietvertrag,   pos: n, lv: A2, tags: [document]}
     - {w: Kaution,       pos: n, lv: A2, tags: [money]}
     - {w: Vermieter,     pos: n, lv: A2, tags: [person]}
+    - {w: Vermieterin,   pos: n, lv: A2, tags: [person]}
     - {w: Hausmeister,   pos: n, lv: A2, tags: [person]}
     - {w: Erdgeschoss,   pos: n, lv: A2, tags: [place]}
     - {w: Stock,         pos: n, lv: A2, tags: [place]}
@@ -345,8 +348,11 @@ work:
     - {w: Büro,          pos: n, lv: A1, tags: [room]}
     - {w: Firma,         pos: n, lv: A1, tags: [place]}
     - {w: Chef,          pos: n, lv: A1, tags: [person]}
+    - {w: Chefin,        pos: n, lv: A1, tags: [person]}
     - {w: Kollege,       pos: n, lv: A1, tags: [person]}
+    - {w: Kollegin,      pos: n, lv: A1, tags: [person]}
     - {w: Kunde,         pos: n, lv: A1, tags: [person]}
+    - {w: Kundin,        pos: n, lv: A1, tags: [person]}
     - {w: Team,          pos: n, lv: A1, tags: [person]}
     - {w: Termin,        pos: n, lv: A1, tags: [time]}
     - {w: Pause,         pos: n, lv: A1, tags: [time]}
@@ -402,6 +408,7 @@ work:
     - {w: Praktikum,     pos: n, lv: A2, tags: [abstract]}
     - {w: Ausbildung,    pos: n, lv: A2, tags: [abstract]}
     - {w: Mitarbeiter,   pos: n, lv: A2, tags: [person]}
+    - {w: Mitarbeiterin, pos: n, lv: A2, tags: [person]}
     - {w: bewerben,      pos: v, lv: A2, tags: [state]}
     - {w: einstellen,    pos: v, lv: A2, tags: [state, obj]}
     - {w: vereinbaren,   pos: v, lv: A2, tags: [state, obj]}
@@ -439,8 +446,10 @@ health:
   words:
     # A1 — что болит и куда идти
     - {w: Arzt,          pos: n, lv: A1, tags: [person]}
+    - {w: Ärztin,        pos: n, lv: A1, tags: [person]}
     - {w: Zahnarzt,      pos: n, lv: A1, tags: [person]}
     - {w: Patient,       pos: n, lv: A1, tags: [person]}
+    - {w: Patientin,     pos: n, lv: A1, tags: [person]}
     - {w: Praxis,        pos: n, lv: A1, tags: [place]}
     - {w: Krankenhaus,   pos: n, lv: A1, tags: [place]}
     - {w: Apotheke,      pos: n, lv: A1, tags: [place]}
@@ -551,7 +560,9 @@ kids:
     - {w: Geschwister,   pos: n, lv: A1, tags: [person]}
     - {w: Freund,        pos: n, lv: A1, tags: [person]}
     - {w: Erzieher,      pos: n, lv: A1, tags: [person]}
+    - {w: Erzieherin,    pos: n, lv: A1, tags: [person]}
     - {w: Lehrer,        pos: n, lv: A1, tags: [person]}
+    - {w: Lehrerin,      pos: n, lv: A1, tags: [person]}
     - {w: Gruppe,        pos: n, lv: A1, tags: [person]}
     - {w: Kita,          pos: n, lv: A1, tags: [place]}
     - {w: Kindergarten,  pos: n, lv: A1, tags: [place]}
@@ -729,6 +740,7 @@ city:
     - {w: Beglaubigung,  pos: n, lv: B1, tags: [document]}
     - {w: Vollmacht,     pos: n, lv: B1, tags: [document]}
     - {w: Sachbearbeiter, pos: n, lv: B1, tags: [person]}
+    - {w: Sachbearbeiterin, pos: n, lv: B1, tags: [person]}
     - {w: Aufenthalt,    pos: n, lv: B1, tags: [abstract]}
     - {w: Staatsangehörigkeit, pos: n, lv: B1, tags: [abstract]}
     - {w: beglaubigen,   pos: v, lv: B1, tags: [state, obj]}

@@ -83,7 +83,8 @@ export interface Slot {
   /** `from_word` — род первого слова, `from_fill2` — второго (так работают прилагательные) */
   gender?: Gender | 'from_word' | 'from_fill2'
   decl?: Decl
-  person?: Person
+  /** `from_word` — лицо выводится из пары «шаблон + слово», чтобы ответ не был одним на всё */
+  person?: Person | 'from_word'
   /** модальный глагол: его формы и есть парадигма пропуска */
   modal?: string
   prep?: string
