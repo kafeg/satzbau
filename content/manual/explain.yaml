@@ -281,3 +281,38 @@ praesens-2sg:
     Два подвоха. После s, ß, z, x остаётся только -t: du isst, du heißt. После t или d
     появляется -e-: du arbeitest, du wartest, — но лишь там, где гласная в основе
     не менялась: du hältst, а не «du hältest».
+
+adj-nom-e:
+  name: Прилагательное в Nominativ
+  group: прилагательное
+  title: После определённого артикля в Nominativ всегда -e
+  short: "Nominativ после der → -e"
+  ru_contrast: >-
+    По-русски окончание прилагательного зависит от рода: «новый дом, новая квартира,
+    новое окно». В немецком после определённого артикля в Nominativ род уже назван
+    артиклем — и окончание у всех трёх одно: -e. Повторять род дважды язык не стал.
+  steps:
+    - "{w} — {gender_ru} род, {nom_article}"
+    - "артикль уже показал род, значит склонение слабое"
+    - "в Nominativ при нём окончание -e: {article} {w2}{answer} {w}"
+  more: >-
+    Во множественном числе -en: die neuen Wohnungen. И только в Nominativ с Akkusativ
+    бывает -e; в Dativ и Genitiv всегда -en, там тоже думать не о чем.
+
+adj-akk-en:
+  name: Прилагательное в Akkusativ
+  group: прилагательное
+  title: В Akkusativ меняется только мужской род
+  short: "Akkusativ: мужской -en, остальные -e"
+  ru_contrast: >-
+    Та же ловушка, что и с артиклем: по-русски винительный меняет и женский род
+    («новую квартиру»), а в немецком в Akkusativ меняется только мужской.
+    Женский и средний выглядят ровно как в Nominativ.
+  steps:
+    - "{w} — {gender_ru} род, {nom_article}"
+    - "Akkusativ: у мужского артикль den и окончание -en, у остальных всё как было"
+    - "{article} {w2}{answer} {w}"
+  more: >-
+    Проверка на одном слове: der gute Wein → ich nehme den guten Wein, но
+    die gute Suppe → ich nehme die gute Suppe. Если окончание изменилось,
+    значит слово мужского рода.

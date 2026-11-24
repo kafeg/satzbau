@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { bundle, words } from './data.ts'
 import { explainItem } from './explain.ts'
-import { fillingFor, generate, itemsFor } from './generate.ts'
+import { fillingFor, generate, itemsFor, second } from './generate.ts'
 import { adjEndingMatches, formMatches, inventory, possessive } from './paradigms.ts'
 
 // Главный тест этапа: прогнать ВСЕ шаблоны на ВСЕХ подходящих словах. Проверять
@@ -140,11 +140,33 @@ describe('парадигмы', () => {
   })
 })
 
+describe('второе слово', () => {
+  const adj = bundle.templates.find((t) => t.id === 'adj-nom-ding')!
+
+  it('выводится из пары, а не выбирается случайно', () => {
+    const w = fillingFor(adj, words)[0]!
+    expect(second(adj, w, words)?.w).toBe(second(adj, w, words)?.w)
+    expect(generate(adj, w, words).word2).toBeTruthy()
+  })
+
+  it('окончание согласуется с первым словом, а второе даёт лексику', () => {
+    const w = words.find((x) => x.w === 'Straße')!
+    const i = generate(adj, w, words)
+    expect(i.answer).toBe('e')
+    expect(i.full).toMatch(/^Wo ist die \w+e Straße\?$/)
+  })
+
+  it('без списка слов задание с fill2 не собирается молча', () => {
+    const w = fillingFor(adj, words)[0]!
+    expect(generate(adj, w, []).full).not.toContain('{w2}')
+  })
+})
+
 describe('конкретные задания', () => {
   const item = (tid: string, lemma: string) => {
     const t = bundle.templates.find((x) => x.id === tid)!
     const w = words.find((x) => x.w === lemma)!
-    return generate(t, w)
+    return generate(t, w, words)
   }
 
   it('mit + Dativ у мужского рода', () => {

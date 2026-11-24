@@ -78,8 +78,8 @@ describe('задание восстанавливается из пары шаб
     const bad: string[] = []
     for (const t of bundle.templates) {
       for (const w of fillingFor(t, words)) {
-        const a = generate(t, w)
-        const b = generate(t, w)
+        const a = generate(t, w, words)
+        const b = generate(t, w, words)
         if (JSON.stringify(a) !== JSON.stringify(b)) bad.push(`${t.id} × ${w.w}`)
       }
     }

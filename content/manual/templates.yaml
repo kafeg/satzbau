@@ -297,3 +297,41 @@
   need: {pos: n, tags: [vehicle], not: [pl_only]}
   slot: {paradigm: adj_ending, decl: weak, case: dat, num: sg, gender: from_word}
   why: adj-dat-en
+
+# --- Второе слово в рамке -----------------------------------------------------
+# Второе слово (fill2) выводится из пары «шаблон + слово», а не выбирается случайно,
+# поэтому задание по-прежнему восстанавливается из журнала.
+#
+# ⚠ Проверено и отвергнуто: глагольные рамки с объектом. «Er kocht {w2}» грамматически
+# верно и бессмысленно — собиралось «Er kocht das Wohnzimmer», «Er würzt das Salz»,
+# «Gestern habe ich die Tür geschlafen». Тег obj говорит «переходный», а не «берёт
+# ИМЕННО такой объект», и никакой набор тегов этого не скажет: немецкий глагол выбирает
+# объект по смыслу. Нужны списки объектов на каждый глагол, а это другая работа.
+#
+# С прилагательным иначе: оно согласуется с существительным грамматически, а не по смыслу.
+# Но и тут пришлось сузить: «die pünktliche Ampel» и «das schnelle Benzin» тоже собирались.
+# Отсюда тег generic — прилагательные, которые подходят к любому предмету.
+#
+# Первым словом стоит СУЩЕСТВИТЕЛЬНОЕ, прилагательное приходит вторым: заданий тогда
+# столько, сколько существительных (59, а не 10), окончание согласуется с первым словом,
+# и повторами отслеживается род существительного — то, что и надо выучить.
+
+- id: adj-nom-ding
+  rule: adj-nom-e
+  level: A2
+  kind: input
+  frame: "Wo ist {art} {w2}{slot} {w}?"
+  need: {pos: n, tags: [thing, food, vehicle, room, furniture, place], not: [pl_only, plu, abstract, mass]}
+  fill2: {need: {pos: a, tags: [generic]}}
+  slot: {paradigm: adj_ending, decl: weak, case: nom, num: sg, gender: from_word}
+  why: adj-nom-e
+
+- id: adj-akk-ding
+  rule: adj-akk-en
+  level: A2
+  kind: input
+  frame: "Ich sehe {art} {w2}{slot} {w}."
+  need: {pos: n, tags: [thing, food, vehicle, room, furniture, place], not: [pl_only, plu, abstract, mass]}
+  fill2: {need: {pos: a, tags: [generic]}}
+  slot: {paradigm: adj_ending, decl: weak, case: akk, num: sg, gender: from_word}
+  why: adj-akk-en

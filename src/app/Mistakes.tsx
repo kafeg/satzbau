@@ -29,7 +29,7 @@ function reason(a: Answer): string {
   const w = getWords().find((x) => x.w === a.word)
   if (!t || !w) return ''
   try {
-    return explainItem(generate(t, w)).short
+    return explainItem(generate(t, w, getWords())).short
   } catch {
     return ''
   }

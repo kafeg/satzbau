@@ -137,6 +137,19 @@ def main():
         bad = set(t['need']) - NEED_KEYS
         if bad:
             errors.append(f'шаблон {t["id"]}: условия вне закрытого списка: {", ".join(sorted(bad))}')
+        # второе слово: та же проверка условий плюс «есть ли вообще из чего выбирать»
+        f2 = (t.get('fill2') or {}).get('need')
+        if f2 is not None:
+            bad2 = set(f2) - NEED_KEYS
+            if bad2:
+                errors.append(f'шаблон {t["id"]}: fill2, условия вне списка: {", ".join(sorted(bad2))}')
+            for tag in (f2.get('tags') or []) + [x for x in (f2.get('not') or []) if x not in FLAGS]:
+                if tag not in vocab:
+                    errors.append(f'шаблон {t["id"]}: fill2, тег {tag!r} вне словаря README.md')
+            if not [w for w in words if w['w'] in rec and fits(f2, w, rec[w['w']])]:
+                errors.append(f'шаблон {t["id"]}: fill2 не находит ни одного слова')
+        if '{w2}' in t['frame'] and not t.get('fill2'):
+            errors.append(f'шаблон {t["id"]}: в рамке {{w2}}, а fill2 не задан')
         for tag in (t['need'].get('tags') or []) + (
                 [x for x in (t['need'].get('not') or []) if x not in FLAGS]):
             if tag not in vocab:

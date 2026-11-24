@@ -58,25 +58,30 @@ export function fits(need: Need, w: Word): boolean {
   return true
 }
 
-function genderOf(slot: Slot, w: Word): Gender {
-  if (slot.gender && slot.gender !== 'from_word') return slot.gender
-  const g = (w.entry as Noun).g
+function genderOf(slot: Slot, w: Word, w2?: Word | null): Gender {
+  if (slot.gender && slot.gender !== 'from_word' && slot.gender !== 'from_fill2') {
+    return slot.gender
+  }
+  // прилагательное согласуется с существительным, а оно во втором слоте
+  const from = slot.gender === 'from_fill2' ? w2 : w
+  const g = from ? (from.entry as Noun).g : undefined
   if (!g) throw new Error(`${w.w}: у слова нет рода, шаблон его требовать не должен`)
   return g
 }
 
 /** Форма в пропуске для заданного падежа. null — такого сочетания в парадигме нет. */
-function slotForm(slot: Slot, w: Word, c: Case): string | null {
+function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null {
   const num: Num = slot.num ?? 'sg'
+  if (slot.gender === 'from_fill2' && !w2) return null
   switch (slot.paradigm) {
     case 'def_article':
-      return defArticle(c, genderOf(slot, w), num)
+      return defArticle(c, genderOf(slot, w, w2), num)
     case 'indef_article':
-      return num === 'pl' ? null : indefArticle(c, genderOf(slot, w))
+      return num === 'pl' ? null : indefArticle(c, genderOf(slot, w, w2))
     case 'possessive':
-      return possessive(c, genderOf(slot, w), num)
+      return possessive(c, genderOf(slot, w, w2), num)
     case 'kein_article':
-      return keinArticle(c, genderOf(slot, w), num)
+      return keinArticle(c, genderOf(slot, w, w2), num)
     // формы самого слова: вариантов у них нет, это всегда ввод
     case 'noun_plural':
       return nounForm(w.entry as Noun, c, 'pl')
@@ -87,7 +92,7 @@ function slotForm(slot: Slot, w: Word, c: Case): string | null {
     case 'merged_prep_article':
       return merged(slot.prep as string, c, genderOf(slot, w))
     case 'adj_ending':
-      return adjEnding(slot.decl ?? 'weak', c, genderOf(slot, w), num)
+      return adjEnding(slot.decl ?? 'weak', c, genderOf(slot, w, w2), num)
     case 'aux_present': {
       const v = w.entry as Verb
       if (v.aux === 'hs') return null
@@ -117,10 +122,10 @@ function shuffle<T>(xs: T[], seed: string): T[] {
  * которые были бы верны для этого же слова в других падежах, идут первыми: именно они
  * и есть настоящая ошибка, а не случайная буква.
  */
-function buildOptions(t: Template, w: Word, answer: string): string[] {
+function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): string[] {
   const count = t.options?.count ?? 4
   const near = CASES.filter((c) => c !== t.slot.case)
-    .map((c) => slotForm(t.slot, w, c))
+    .map((c) => slotForm(t.slot, w, c, w2))
     .filter((f): f is string => !!f && f !== answer)
   const all = inventory(t.options?.paradigm ?? t.slot.paradigm, {
     prep: t.options?.prep ?? t.slot.prep,
@@ -144,12 +149,35 @@ function wordIn(w: Word, slot: Slot): string {
   return (w.entry as Verb).w
 }
 
-export function generate(t: Template, w: Word): Item {
-  const answer = slotForm(t.slot, w, t.slot.case ?? 'nom')
+/**
+ * Второе слово ВЫВОДИТСЯ из пары «шаблон + слово», а не выбирается случайно: иначе
+ * задание перестало бы восстанавливаться из журнала, где хранится именно пара.
+ * Слово той же темы в приоритете — тогда фраза остаётся про то, что человек выбрал.
+ */
+export function second(t: Template, w: Word, all: Word[]): Word | null {
+  if (!t.fill2) return null
+  const fits2 = all.filter((x) => x.w !== w.w && fits(t.fill2!.need, x))
+  if (!fits2.length) return null
+  const mine = fits2.filter((x) => x.theme === w.theme)
+  const pool = mine.length ? mine : fits2
+  let h = 2166136261
+  for (const ch of t.id + w.w) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0
+  return pool[h % pool.length] as Word
+}
+
+export function generate(t: Template, w: Word, all: Word[] = []): Item {
+  const w2 = second(t, w, all)
+  const answer = slotForm(t.slot, w, t.slot.case ?? 'nom', w2)
   if (answer === null) throw new Error(`${t.id} × ${w.w}: форма в пропуске не существует`)
-  const g = w.pos === 'n' ? genderOf(t.slot, w) : null
+  const g = w.pos === 'n' || t.slot.gender === 'from_fill2' ? genderOf(t.slot, w, w2) : null
   const word = wordIn(w, t.slot)
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
+  const g2 = w2?.pos === 'n' ? (w2.entry as Noun).g : undefined
+  const case2 = t.fill2?.case ?? 'akk'
+  const num2 = t.fill2?.num ?? 'sg'
+  const word2 = w2 ? wordIn(w2, { paradigm: '', case: case2, num: num2 }) : ''
+  const art2 = g2 ? defArticle(case2, g2, num2) : ''
+  const ein2 = g2 && num2 !== 'pl' ? indefArticle(case2, g2) : ''
   const plain = g ? defArticle(t.slot.case ?? 'nom', g, t.slot.num ?? 'sg') : ''
   const ein = g && t.slot.num !== 'pl' ? indefArticle(t.slot.case ?? 'nom', g) : ''
   const article =
@@ -170,6 +198,11 @@ export function generate(t: Template, w: Word): Item {
       .replace('{Art}', cap(plain))
       .replace('{ein}', ein)
       .replace('{Ein}', cap(ein))
+      .replace('{w2}', word2)
+      .replace('{art2}', art2)
+      .replace('{Art2}', cap(art2))
+      .replace('{ein2}', ein2)
+      .replace('{Ein2}', cap(ein2))
       .replace('{w}', word)
       .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
       .replace('{pp}', pp)
@@ -181,14 +214,16 @@ export function generate(t: Template, w: Word): Item {
     text: fill(t.frame, t.kind === 'input' ? '___' : '___'),
     full: fill(t.frame, answer),
     answer,
-    options: t.kind === 'choice' ? buildOptions(t, w, answer) : undefined,
+    options: t.kind === 'choice' ? buildOptions(t, w, answer, w2) : undefined,
     word: w.w,
+    ...(w2 ? { word2: w2.w } : {}),
     pos: w.pos,
     theme: w.theme,
     ru: (w.entry as Noun).ru,
     why: t.why,
     ctx: {
       w: w.w,
+      w2: w2?.w ?? '',
       answer,
       pp,
       prep: t.slot.prep ?? t.options?.prep ?? '',
@@ -205,10 +240,15 @@ export function generate(t: Template, w: Word): Item {
 
 /** Все слова, которые шаблон может взять. */
 export function fillingFor(t: Template, all: Word[]): Word[] {
-  return all.filter((w) => fits(t.need, w) && slotForm(t.slot, w, t.slot.case ?? 'nom') !== null)
+  return all.filter(
+    (w) =>
+      fits(t.need, w) &&
+      slotForm(t.slot, w, t.slot.case ?? 'nom', second(t, w, all)) !== null &&
+      (!t.fill2 || second(t, w, all) !== null),
+  )
 }
 
 /** Все задания шаблона. Их столько, сколько подходящих слов. */
 export function itemsFor(t: Template, all: Word[]): Item[] {
-  return fillingFor(t, all).map((w) => generate(t, w))
+  return fillingFor(t, all).map((w) => generate(t, w, all))
 }

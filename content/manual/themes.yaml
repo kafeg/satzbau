@@ -64,10 +64,10 @@ transport:
     - {w: weit,          pos: a, lv: A1, tags: [quality]}
     - {w: früh,          pos: a, lv: A1, tags: [quality]}
     - {w: spät,          pos: a, lv: A1, tags: [quality]}
-    - {w: voll,          pos: a, lv: A1, tags: [quality]}
-    - {w: leer,          pos: a, lv: A1, tags: [quality]}
-    - {w: billig,        pos: a, lv: A1, tags: [quality]}
-    - {w: teuer,         pos: a, lv: A1, tags: [quality]}
+    - {w: voll,          pos: a, lv: A1, tags: [quality, generic]}
+    - {w: leer,          pos: a, lv: A1, tags: [quality, generic]}
+    - {w: billig,        pos: a, lv: A1, tags: [quality, generic]}
+    - {w: teuer,         pos: a, lv: A1, tags: [quality, generic]}
     # A2 — то, что ломается и чем это починить
     - {w: Verspätung,    pos: n, lv: A2, tags: [abstract]}
     - {w: Verbindung,    pos: n, lv: A2, tags: [abstract]}
@@ -170,18 +170,18 @@ home:
     - {w: aufräumen,     pos: v, lv: A1, tags: [state, obj, housework, solo]}
     - {w: putzen,        pos: v, lv: A1, tags: [state, obj, housework, solo]}
     - {w: umziehen,      pos: v, lv: A1, tags: [motion, solo]}
-    - {w: groß,          pos: a, lv: A1, tags: [quality]}
-    - {w: klein,         pos: a, lv: A1, tags: [quality]}
+    - {w: groß,          pos: a, lv: A1, tags: [quality, generic]}
+    - {w: klein,         pos: a, lv: A1, tags: [quality, generic]}
     - {w: hell,          pos: a, lv: A1, tags: [quality]}
     - {w: dunkel,        pos: a, lv: A1, tags: [quality]}
-    - {w: neu,           pos: a, lv: A1, tags: [quality]}
-    - {w: alt,           pos: a, lv: A1, tags: [quality]}
-    - {w: schön,         pos: a, lv: A1, tags: [quality]}
+    - {w: neu,           pos: a, lv: A1, tags: [quality, generic]}
+    - {w: alt,           pos: a, lv: A1, tags: [quality, generic]}
+    - {w: schön,         pos: a, lv: A1, tags: [quality, generic]}
     - {w: ruhig,         pos: a, lv: A1, tags: [quality]}
     - {w: laut,          pos: a, lv: A1, tags: [quality]}
     - {w: warm,          pos: a, lv: A1, tags: [quality]}
     - {w: kalt,          pos: a, lv: A1, tags: [quality]}
-    - {w: sauber,        pos: a, lv: A1, tags: [quality]}
+    - {w: sauber,        pos: a, lv: A1, tags: [quality, generic]}
     # A2 — бумаги и счёты
     - {w: Nebenkosten,   pos: n, lv: A2, tags: [money]}
     - {w: Mietvertrag,   pos: n, lv: A2, tags: [document]}
@@ -288,7 +288,7 @@ food:
     - {w: lecker,        pos: a, lv: A1, tags: [quality]}
     - {w: frisch,        pos: a, lv: A1, tags: [quality]}
     - {w: süß,           pos: a, lv: A1, tags: [quality]}
-    - {w: satt,          pos: a, lv: A1, tags: [quality]}
+    - {w: satt,          pos: a, lv: A1, tags: [quality, person]}
     # A2 — касса, упаковка, порция
     - {w: Metzgerei,     pos: n, lv: A2, tags: [place]}
     - {w: Kasse,         pos: n, lv: A2, tags: [place]}
@@ -377,10 +377,10 @@ work:
     - {w: wichtig,       pos: a, lv: A1, tags: [quality]}
     - {w: schwer,        pos: a, lv: A1, tags: [quality]}
     - {w: leicht,        pos: a, lv: A1, tags: [quality]}
-    - {w: nett,          pos: a, lv: A1, tags: [quality]}
-    - {w: freundlich,    pos: a, lv: A1, tags: [quality]}
-    - {w: müde,          pos: a, lv: A1, tags: [quality]}
-    - {w: fleißig,       pos: a, lv: A1, tags: [quality]}
+    - {w: nett,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: freundlich,    pos: a, lv: A1, tags: [quality, person]}
+    - {w: müde,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: fleißig,       pos: a, lv: A1, tags: [quality, person]}
     # A2 — бумаги, которые подписывают
     - {w: Bewerbung,     pos: n, lv: A2, tags: [document]}
     - {w: Lebenslauf,    pos: n, lv: A2, tags: [document]}
@@ -409,8 +409,8 @@ work:
     - {w: besprechen,    pos: v, lv: A2, tags: [state, obj]}
     - {w: unterschreiben, pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: beruflich,     pos: a, lv: A2, tags: [quality]}
-    - {w: selbstständig, pos: a, lv: A2, tags: [quality]}
-    - {w: zuverlässig,   pos: a, lv: A2, tags: [quality]}
+    - {w: selbstständig, pos: a, lv: A2, tags: [quality, person]}
+    - {w: zuverlässig,   pos: a, lv: A2, tags: [quality, person]}
     # B1 — то, что говорят в отделе кадров
     - {w: Arbeitgeber,   pos: n, lv: B1, tags: [person]}
     - {w: Arbeitnehmer,  pos: n, lv: B1, tags: [person]}
@@ -429,8 +429,8 @@ work:
     - {w: vertreten,     pos: v, lv: B1, tags: [state, obj]}
     - {w: befristet,     pos: a, lv: B1, tags: [quality]}
     - {w: unbefristet,   pos: a, lv: B1, tags: [quality]}
-    - {w: zuständig,     pos: a, lv: B1, tags: [quality]}
-    - {w: qualifiziert,  pos: a, lv: B1, tags: [quality]}
+    - {w: zuständig,     pos: a, lv: B1, tags: [quality, person]}
+    - {w: qualifiziert,  pos: a, lv: B1, tags: [quality, person]}
 
 health:
   title: Врач
@@ -476,10 +476,10 @@ health:
     - {w: atmen,         pos: v, lv: A1, tags: [state, solo]}
     - {w: fühlen,        pos: v, lv: A1, tags: [state, obj]}
     - {w: schlucken,     pos: v, lv: A1, tags: [state, obj, solo]}
-    - {w: krank,         pos: a, lv: A1, tags: [quality]}
-    - {w: gesund,        pos: a, lv: A1, tags: [quality]}
+    - {w: krank,         pos: a, lv: A1, tags: [quality, person]}
+    - {w: gesund,        pos: a, lv: A1, tags: [quality, person]}
     - {w: stark,         pos: a, lv: A1, tags: [quality]}
-    - {w: schwach,       pos: a, lv: A1, tags: [quality]}
+    - {w: schwach,       pos: a, lv: A1, tags: [quality, person]}
     # A2 — страховка, укол, больничный
     - {w: Krankenkasse,  pos: n, lv: A2, tags: [abstract]}
     - {w: Überweisung,   pos: n, lv: A2, tags: [document]}
@@ -505,8 +505,8 @@ health:
     - {w: impfen,        pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: verletzen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: bluten,        pos: v, lv: A2, tags: [state, solo]}
-    - {w: schwanger,     pos: a, lv: A2, tags: [quality]}
-    - {w: verletzt,      pos: a, lv: A2, tags: [quality]}
+    - {w: schwanger,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: verletzt,      pos: a, lv: A2, tags: [quality, person]}
     - {w: ansteckend,    pos: a, lv: A2, tags: [quality]}
     - {w: rezeptfrei,    pos: a, lv: A2, tags: [quality]}
     # B1 — что написано в заключении
@@ -526,8 +526,8 @@ health:
     - {w: leiden,        pos: v, lv: B1, tags: [state]}
     - {w: chronisch,     pos: a, lv: B1, tags: [quality]}
     - {w: akut,          pos: a, lv: B1, tags: [quality]}
-    - {w: nüchtern,      pos: a, lv: B1, tags: [quality]}
-    - {w: schwindelig,   pos: a, lv: B1, tags: [quality]}
+    - {w: nüchtern,      pos: a, lv: B1, tags: [quality, person]}
+    - {w: schwindelig,   pos: a, lv: B1, tags: [quality, person]}
 
 kids:
   title: Дети и Kita
@@ -575,10 +575,10 @@ kids:
     - {w: füttern,       pos: v, lv: A1, tags: [state, obj]}
     - {w: wickeln,       pos: v, lv: A1, tags: [state, obj]}
     - {w: wachsen,       pos: v, lv: A1, tags: [state]}
-    - {w: lieb,          pos: a, lv: A1, tags: [quality]}
-    - {w: fröhlich,      pos: a, lv: A1, tags: [quality]}
-    - {w: traurig,       pos: a, lv: A1, tags: [quality]}
-    - {w: brav,          pos: a, lv: A1, tags: [quality]}
+    - {w: lieb,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: fröhlich,      pos: a, lv: A1, tags: [quality, person]}
+    - {w: traurig,       pos: a, lv: A1, tags: [quality, person]}
+    - {w: brav,          pos: a, lv: A1, tags: [quality, person]}
     # A2 — место в садике и родительское собрание
     - {w: Krippe,        pos: n, lv: A2, tags: [place]}
     - {w: Kitaplatz,     pos: n, lv: A2, tags: [abstract]}
@@ -604,7 +604,7 @@ kids:
     - {w: teilen,        pos: v, lv: A2, tags: [state, obj]}
     - {w: aufpassen,     pos: v, lv: A2, tags: [state, solo]}
     - {w: anstrengend,   pos: a, lv: A2, tags: [quality]}
-    - {w: geduldig,      pos: a, lv: A2, tags: [quality]}
+    - {w: geduldig,      pos: a, lv: A2, tags: [quality, person]}
     - {w: trocken,       pos: a, lv: A2, tags: [quality]}
     # B1 — ведомство, деньги и бумаги на ребёнка
     - {w: Entwicklung,   pos: n, lv: B1, tags: [abstract]}
@@ -621,6 +621,6 @@ kids:
     - {w: entwickeln,    pos: v, lv: B1, tags: [state, obj]}
     - {w: durchsetzen,   pos: v, lv: B1, tags: [state, obj]}
     - {w: zweisprachig,  pos: a, lv: B1, tags: [quality]}
-    - {w: neugierig,     pos: a, lv: B1, tags: [quality]}
-    - {w: schüchtern,    pos: a, lv: B1, tags: [quality]}
+    - {w: neugierig,     pos: a, lv: B1, tags: [quality, person]}
+    - {w: schüchtern,    pos: a, lv: B1, tags: [quality, person]}
     - {w: altersgerecht, pos: a, lv: B1, tags: [quality]}

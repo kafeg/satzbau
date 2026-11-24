@@ -76,7 +76,8 @@ export interface Slot {
   paradigm: string
   case?: Case
   num?: Num
-  gender?: Gender | 'from_word'
+  /** `from_word` — род первого слова, `from_fill2` — второго (так работают прилагательные) */
+  gender?: Gender | 'from_word' | 'from_fill2'
   decl?: Decl
   person?: Person
   prep?: string
@@ -89,6 +90,16 @@ export interface SlotOptions {
   prep?: string
 }
 
+/**
+ * Второе слово фразы: лексика, а не грамматика. Нужно там, где одного слова не хватает
+ * на осмысленную фразу: «Er kocht …» без объекта — обрубок.
+ */
+export interface Fill2 {
+  need: Need
+  case?: Case
+  num?: Num
+}
+
 export interface Template {
   id: string
   rule: string
@@ -96,6 +107,7 @@ export interface Template {
   kind: 'choice' | 'input'
   frame: string
   need: Need
+  fill2?: Fill2
   slot: Slot
   options?: SlotOptions
   why: string
@@ -126,6 +138,8 @@ export interface Item {
   answer: string
   options?: string[]
   word: string
+  /** второе слово, если шаблон его просит */
+  word2?: string
   pos: Pos
   theme: string
   ru?: string
