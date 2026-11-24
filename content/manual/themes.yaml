@@ -58,7 +58,7 @@ transport:
     - {w: halten,        pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: parken,        pos: v, lv: A1, tags: [state, solo]}
     - {w: dauern,        pos: v, lv: A1, tags: [state]}
-    - {w: kosten,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: kosten,        pos: v, lv: A1, tags: [state]}
     - {w: schnell,       pos: a, lv: A1, tags: [quality]}
     - {w: langsam,       pos: a, lv: A1, tags: [quality]}
     - {w: weit,          pos: a, lv: A1, tags: [quality]}
@@ -160,7 +160,7 @@ home:
     - {w: stehen,        pos: v, lv: A1, tags: [position, solo]}
     - {w: liegen,        pos: v, lv: A1, tags: [position, solo]}
     - {w: sitzen,        pos: v, lv: A1, tags: [position, solo]}
-    - {w: hängen,        pos: v, lv: A1, tags: [position]}
+    - {w: hängen,        pos: v, lv: A1, tags: [position, placement]}
     - {w: stellen,       pos: v, lv: A1, tags: [placement, obj]}
     - {w: legen,         pos: v, lv: A1, tags: [placement, obj]}
     - {w: setzen,        pos: v, lv: A1, tags: [placement, obj]}
@@ -370,7 +370,7 @@ work:
     - {w: lesen,         pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: telefonieren,  pos: v, lv: A1, tags: [state, solo]}
     - {w: drucken,       pos: v, lv: A1, tags: [state, obj, solo]}
-    - {w: fragen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: fragen,        pos: v, lv: A1, tags: [state, obj, solo, obj_person]}
     - {w: antworten,     pos: v, lv: A1, tags: [state, solo]}
     - {w: helfen,        pos: v, lv: A1, tags: [state, solo]}
     - {w: lernen,        pos: v, lv: A1, tags: [state, obj, solo]}
@@ -422,7 +422,7 @@ work:
     - {w: Gehaltserhöhung, pos: n, lv: B1, tags: [money]}
     - {w: Abmahnung,     pos: n, lv: B1, tags: [document]}
     - {w: Krankmeldung,  pos: n, lv: B1, tags: [document]}
-    - {w: entlassen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: entlassen,     pos: v, lv: B1, tags: [state, obj, obj_person]}
     - {w: verhandeln,    pos: v, lv: B1, tags: [state, solo]}
     - {w: beantragen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: einreichen,    pos: v, lv: B1, tags: [state, obj]}
@@ -500,10 +500,10 @@ health:
     - {w: Allergie,      pos: n, lv: A2, tags: [illness]}
     - {w: behandeln,     pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: verschreiben,  pos: v, lv: A2, tags: [state, obj]}
-    - {w: operieren,     pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: operieren,     pos: v, lv: A2, tags: [state, obj, solo, obj_person]}
     - {w: einnehmen,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: impfen,        pos: v, lv: A2, tags: [state, obj, solo]}
-    - {w: verletzen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: impfen,        pos: v, lv: A2, tags: [state, obj, solo, obj_person]}
+    - {w: verletzen,     pos: v, lv: A2, tags: [state, obj, obj_person]}
     - {w: bluten,        pos: v, lv: A2, tags: [state, solo]}
     - {w: schwanger,     pos: a, lv: A2, tags: [quality, person, absolute]}
     - {w: verletzt,      pos: a, lv: A2, tags: [quality, person]}
@@ -520,7 +520,7 @@ health:
     - {w: Krankschreibung, pos: n, lv: B1, tags: [document]}
     - {w: Beschwerde,    pos: n, lv: B1, tags: [illness]}
     - {w: Physiotherapie, pos: n, lv: B1, tags: [abstract]}
-    - {w: einweisen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: einweisen,     pos: v, lv: B1, tags: [state, obj, obj_person]}
     - {w: heilen,        pos: v, lv: B1, tags: [state, obj]}
     - {w: vertragen,     pos: v, lv: B1, tags: [state, obj]}
     - {w: leiden,        pos: v, lv: B1, tags: [state]}
@@ -570,10 +570,10 @@ kids:
     - {w: basteln,       pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: weinen,        pos: v, lv: A1, tags: [state, solo]}
     - {w: lachen,        pos: v, lv: A1, tags: [state, solo]}
-    - {w: abholen,       pos: v, lv: A1, tags: [motion, obj]}
+    - {w: abholen,       pos: v, lv: A1, tags: [motion, obj, obj_person]}
     - {w: bringen,       pos: v, lv: A1, tags: [state, obj]}
-    - {w: füttern,       pos: v, lv: A1, tags: [state, obj]}
-    - {w: wickeln,       pos: v, lv: A1, tags: [state, obj]}
+    - {w: füttern,       pos: v, lv: A1, tags: [state, obj, obj_person]}
+    - {w: wickeln,       pos: v, lv: A1, tags: [state, obj, obj_person]}
     - {w: wachsen,       pos: v, lv: A1, tags: [state]}
     - {w: lieb,          pos: a, lv: A1, tags: [quality, person]}
     - {w: fröhlich,      pos: a, lv: A1, tags: [quality, person]}
@@ -595,11 +595,11 @@ kids:
     - {w: Märchen,       pos: n, lv: A2, tags: [thing]}
     - {w: Lied,          pos: n, lv: A2, tags: [thing]}
     - {w: Streit,        pos: n, lv: A2, tags: [abstract]}
-    - {w: betreuen,      pos: v, lv: A2, tags: [state, obj]}
-    - {w: erziehen,      pos: v, lv: A2, tags: [state, obj]}
-    - {w: beruhigen,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: trösten,       pos: v, lv: A2, tags: [state, obj]}
-    - {w: loben,         pos: v, lv: A2, tags: [state, obj]}
+    - {w: betreuen,      pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: erziehen,      pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: beruhigen,     pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: trösten,       pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: loben,         pos: v, lv: A2, tags: [state, obj, obj_person]}
     - {w: streiten,      pos: v, lv: A2, tags: [state, solo]}
     - {w: teilen,        pos: v, lv: A2, tags: [state, obj]}
     - {w: aufpassen,     pos: v, lv: A2, tags: [state, solo]}

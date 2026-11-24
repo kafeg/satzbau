@@ -40,6 +40,7 @@
 | `placement` | глагол перемещения: stellen, legen, setzen |
 | `state` | остальные глаголы: wohnen, kosten, reparieren |
 | `obj` | глагол с прямым объектом (переходный): putzen, kaufen, лечить. Без него шаблон с объектом даёт «Ich habe die Wohnung geschlafen» |
+| `obj_person` | переходный глагол, у которого объект — человек: füttern, trösten, entlassen. Нужен, чтобы «Er füttert das» не собралось: такие глаголы берут местоимение-человека |
 | `surface` | на что можно поставить или положить: Tisch, Boden, Treppe, Balkon |
 | `housework` | что делают с жильём: putzen, renovieren, lüften. Нужен там, где объект фразы задан («Ich habe die Wohnung …»): переходности мало, нужен подходящий объект |
 | `meal` | приём пищи, а не еда штуками: Frühstück, Mittagessen, Nachtisch. Нужен, чтобы «Ich esse ein Frühstück» не собралось |

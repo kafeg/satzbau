@@ -481,8 +481,8 @@
   # Прилагательное зафиксировано в рамке, а не берётся из лексикона: пары вида
   # «salzigen Zucker» и «scharfes Salz» собирались сами собой, а «gut» подходит всему.
   frame: "Ich kaufe gut{slot} {w}."
-  # еда и питьё: «guten Husten» и «guten Schimmel» тоже неисчисляемые, но их не покупают
-  need: {pos: n, tags: [food, drink], has: [mass], not: [pl_only, abstract]}
+  # еда, питьё и Benzin: «guten Husten» и «guten Schimmel» тоже неисчисляемые, но их не покупают
+  need: {pos: n, tags: [food, drink, thing], has: [mass], not: [pl_only, abstract]}
   slot: {paradigm: adj_ending, decl: strong, case: akk, num: sg, gender: from_word}
   why: adj-ohne-artikel
 
@@ -560,3 +560,76 @@
   slot: {paradigm: pronoun, case: akk, num: sg}
   options: {paradigm: pronoun, count: 4}
   why: pronomen-akkusativ
+
+# ─── Переходные глаголы. До сих пор их не брала ни одна рамка: все глагольные
+# шаблоны требуют тег solo, потому что «Er erreicht oft» не фраза. Сорок три глагола
+# лежали мёртвым грузом — больше, чем любая другая дыра в данных.
+# Объект здесь не берётся из лексикона: именно так получались «Er würzt das Salz»
+# и «Er kocht das Wohnzimmer» (отвергнутое решение, docs/architecture.md). Объект —
+# местоимение «das», оно подходит любому глаголу с объектом-предметом. А глаголы,
+# у которых объект человек, отделены тегом obj_person и получают «ihn».
+- id: praesens-er-obj
+  rule: praesens-3sg
+  level: A2
+  kind: input
+  frame: "Er {slot} das heute."
+  # placement исключены: «Er stellt das heute» без «куда» не фраза
+  need: {pos: v, tags: [obj], not: [sep, reflexive, obj_person, placement]}
+  slot: {paradigm: verb_present, person: 3sg}
+  why: praesens-3sg
+
+- id: praesens-du-person
+  rule: praesens-2sg
+  level: A2
+  kind: input
+  frame: "Du {slot} ihn heute."
+  need: {pos: v, tags: [obj_person], not: [sep, reflexive]}
+  slot: {paradigm: verb_present, person: 2sg}
+  why: praesens-2sg
+
+- id: partizip-das
+  rule: perfekt-partizip
+  level: A2
+  kind: input
+  frame: "Ich habe das schon {slot}."
+  need: {pos: v, tags: [obj], not: [aux_hs, obj_person, placement]}
+  slot: {paradigm: participle}
+  why: perfekt-partizip
+
+# Отделяемый глагол с объектом: приставка уходит за объект, а не сразу за глагол.
+# «Ich melde das an», не «Ich melde an das» — порядок слов и есть урок рамки.
+- id: trennbar-obj
+  rule: praesens-trennbar
+  level: A2
+  kind: input
+  frame: "Ich {slot} das heute {particle}."
+  need: {pos: v, tags: [obj], has: [sep], not: [obj_person, reflexive]}
+  slot: {paradigm: verb_stem, person: 1sg}
+  why: praesens-trennbar
+
+# Глаголы перемещения: в рамках Wechselpräposition они стоят в рамке как слово
+# («Ich stelle die Lampe auf …»), а спросить их было нечем. Вопрос «куда» их и ждёт.
+- id: praesens-du-wohin
+  rule: praesens-2sg
+  level: A1
+  kind: input
+  frame: "Wohin {slot} du das?"
+  need: {pos: v, tags: [placement]}
+  slot: {paradigm: verb_present, person: 2sg}
+  why: praesens-2sg
+
+# Прилагательные без степеней сравнения (тег absolute) не брала ни одна рамка:
+# из сравнения они исключены, а в рамках с существительным нужен тег generic —
+# «die vegetarische Ampel» собиралось бы само. Предикатив их и ждёт, и подлежащее
+# здесь «das»: пары прилагательное × существительное тут нет вообще.
+# Так эти слова и употребляют в жизни — спрашивают у стойки.
+- id: adj-praedikativ-ding
+  rule: adj-praedikativ
+  level: A1
+  kind: choice
+  frame: "Ist das {slot}?"
+  # «Ist das schwanger?» — поэтому про человека отсюда вон: они в рамке с лицом
+  need: {pos: a, tags: [absolute], not: [person]}
+  slot: {paradigm: adj_predicative}
+  options: {paradigm: adj_predicative, count: 4}
+  why: adj-praedikativ

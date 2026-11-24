@@ -335,6 +335,8 @@ praesens-trennbar:
     Отделяемые: ab-, an-, auf-, aus-, ein-, mit-, vor-, zu-, um-, zurück- — на них падает
     ударение. Неотделяемые безударны: be-, ver-, er-, ent-, ge-, emp-. Сравните:
     ich melde an, но ich bestelle. В Perfekt у отделяемых ge- встаёт внутрь: aufgeräumt.
+    Дополнение встаёт между глаголом и приставкой, а не после неё: Ich melde das an,
+    не «Ich melde an das». Приставка всегда последняя.
 
 possessiv-akkusativ:
   name: "mein в Akkusativ"
