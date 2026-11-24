@@ -9,7 +9,7 @@ import {
   merged,
   possessive,
 } from './paradigms.ts'
-import { adjStem, nounForm, present } from './morph.ts'
+import { adjStem, nounForm, particle, present } from './morph.ts'
 import type { Word } from './bundle.ts'
 import type { Adj, Case, Gender, Item, Need, Noun, Num, Slot, Template, Verb } from './types.ts'
 
@@ -50,7 +50,8 @@ export function fits(need: Need, w: Word): boolean {
   if (need.tags && !need.tags.some((t) => w.tags?.includes(t))) return false
   if (need.g && !(e.g && need.g.includes(e.g))) return false
   if (need.lv_max && LEVELS[w.lv] > LEVELS[need.lv_max]) return false
-  if (need.has?.some((k) => !(k in e))) return false
+  // has — и поле записи, и признак: `has: [sep]` это «отделяемый», а не «есть поле sep»
+  if (need.has?.some((k) => (FLAGS[k] ? !FLAGS[k](e) : !(k in e)))) return false
   for (const f of need.not ?? []) {
     const flag = FLAGS[f]
     if (flag ? flag(e) : w.tags?.includes(f)) return false
@@ -89,6 +90,9 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return (w.entry as Verb).pp
     case 'verb_present':
       return present(w.entry as Verb, slot.person ?? '3sg')
+    // спрягаемая часть отделяемого глагола: приставка уезжает в конец фразы
+    case 'verb_stem':
+      return present(w.entry as Verb, slot.person ?? '3sg').split(' ')[0] ?? null
     case 'merged_prep_article':
       return merged(slot.prep as string, c, genderOf(slot, w))
     case 'adj_ending':
@@ -172,6 +176,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   const g = w.pos === 'n' || t.slot.gender === 'from_fill2' ? genderOf(t.slot, w, w2) : null
   const word = wordIn(w, t.slot)
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
+  const part = w.pos === 'v' ? (particle(w.entry as Verb) ?? '') : ''
   const g2 = w2?.pos === 'n' ? (w2.entry as Noun).g : undefined
   const case2 = t.fill2?.case ?? 'akk'
   const num2 = t.fill2?.num ?? 'sg'
@@ -206,6 +211,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       .replace('{w}', word)
       .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
       .replace('{pp}', pp)
+      .replace('{particle}', part)
   return {
     templateId: t.id,
     rule: t.rule,
@@ -224,6 +230,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
     ctx: {
       w: w.w,
       w2: w2?.w ?? '',
+      particle: part,
       answer,
       pp,
       prep: t.slot.prep ?? t.options?.prep ?? '',

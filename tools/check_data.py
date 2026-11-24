@@ -53,8 +53,10 @@ def fits(need, w, rec):
         return False
     if 'lv_max' in need and LEVELS[w['lv']] > LEVELS[need['lv_max']]:
         return False
-    if any(k not in rec for k in need.get('has') or []):
-        return False
+    # has принимает и поле записи, и признак: has: [sep] — «отделяемый»
+    for k in need.get('has') or []:
+        if (not FLAGS[k](rec)) if k in FLAGS else (k not in rec):
+            return False
     for f in need.get('not') or []:
         if f in FLAGS:
             if FLAGS[f](rec):

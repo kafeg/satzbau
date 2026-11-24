@@ -335,3 +335,72 @@
   fill2: {need: {pos: a, tags: [generic]}}
   slot: {paradigm: adj_ending, decl: weak, case: akk, num: sg, gender: from_word}
   why: adj-akk-en
+
+# --- Э7, продолжение ----------------------------------------------------------
+# Предлоги на то же правило: у wo?/wohin? было по одному предлогу и 11 заданий.
+# neben и unter с артиклем не сливаются, поэтому на них тренируется чистый падеж.
+
+- id: wechsel-wo-neben
+  rule: wechsel-wo
+  level: A2
+  kind: choice
+  frame: "Die Lampe steht neben {slot} {w}."
+  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only]}
+  slot: {paradigm: def_article, case: dat, num: sg, prep: neben}
+  options: {paradigm: def_article, count: 4}
+  why: wechsel-wo
+
+- id: wechsel-wohin-neben
+  rule: wechsel-wohin
+  level: A2
+  kind: choice
+  frame: "Ich stelle die Lampe neben {slot} {w}."
+  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only]}
+  slot: {paradigm: def_article, case: akk, num: sg, prep: neben}
+  options: {paradigm: def_article, count: 4}
+  why: wechsel-wohin
+
+- id: wechsel-wo-unter
+  rule: wechsel-wo
+  level: A2
+  kind: choice
+  frame: "Der Schlüssel liegt unter {slot} {w}."
+  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only]}
+  slot: {paradigm: def_article, case: dat, num: sg, prep: unter}
+  options: {paradigm: def_article, count: 4}
+  why: wechsel-wo
+
+- id: wechsel-wohin-unter
+  rule: wechsel-wohin
+  level: A2
+  kind: choice
+  frame: "Ich lege den Schlüssel unter {slot} {w}."
+  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only]}
+  slot: {paradigm: def_article, case: akk, num: sg, prep: unter}
+  options: {paradigm: def_article, count: 4}
+  why: wechsel-wohin
+
+# Отделяемые глаголы: до сих пор они были исключены из всех глагольных рамок,
+# потому что приставка уезжает в конец и ломает фразу. Здесь она уезжает нарочно:
+# пропуск — спрягаемая часть, приставка стоит в конце как {particle}.
+# Условие «solo И отделяемый» выражено через has: [sep] — tags это «любой из».
+- id: trennbar-heute
+  rule: praesens-trennbar
+  level: A1
+  kind: input
+  frame: "Ich {slot} heute {particle}."
+  need: {pos: v, tags: [solo], has: [sep], not: [reflexive]}
+  slot: {paradigm: verb_stem, person: 1sg}
+  why: praesens-trennbar
+
+- id: possessiv-akk-suchen
+  rule: possessiv-akkusativ
+  level: A1
+  kind: choice
+  # только документы: тег thing включает и Ampel с Boden, а «Ich suche meine Ampel»
+  # никто не скажет. Своего слова для «предмет, который бывает личным» у нас нет.
+  frame: "Ich suche {slot} {w}."
+  need: {pos: n, tags: [document], not: [pl_only, plu, mass]}
+  slot: {paradigm: possessive, case: akk, num: sg}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-akkusativ
