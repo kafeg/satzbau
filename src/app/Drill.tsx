@@ -2,6 +2,7 @@
 // варианты или ввод, после ответа — разбор.
 
 import { useEffect, useState } from 'react'
+import { getBundle } from '../core/bundle.ts'
 import type { Item } from '../core/types.ts'
 import { Explain } from './Explain.tsx'
 import { germanVoice, onVoices, speak } from './speech.ts'
@@ -29,6 +30,8 @@ export function Drill({
   const answered = given !== null
   const correct = given === item.answer
   const article = item.ctx.nom_article
+  // в шапке тема и уровень, а НЕ правило: «prep-dativ» называет падеж до ответа
+  const theme = getBundle().themes[item.theme]?.title ?? item.theme
   // пропуск после окончания слова не отрывается от него: «klein___», а не «klein ___»
   const [before = '', after = ''] = item.text.split('___')
   const tight = /\S$/.test(before)
@@ -45,7 +48,9 @@ export function Drill({
           <div className="fill" style={{ width: `${(n / total) * 100}%` }} />
         </div>
         <div className="row">
-          <span className="chip">{item.rule}</span>
+          <span className="chip">
+            {theme} · {item.level}
+          </span>
           <span className="count mono">
             {n} / {total}
           </span>
