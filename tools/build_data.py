@@ -141,11 +141,13 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         n['g'] = g
     else:
         n['pl_only'] = 1
-    pl = (e or {}).get('pl') or (ke and kform(ke, 'plural'))
-    if pl:
-        n['pl'] = pl
-    elif lemma in fixes['no_plural']:
+    # no_plural главнее источника: у Polizei и Post форма в словаре есть, но это
+    # либо другое слово (Posten), либо форма, которой в речи не бывает
+    pl = fixes['plural'].get(lemma) or (e or {}).get('pl') or (ke and kform(ke, 'plural'))
+    if lemma in fixes['no_plural']:
         n['npl'] = 1                      # множественного нет и не должно быть: Hunger, Obst
+    elif pl:
+        n['pl'] = pl
     elif not pl_only:
         rep.append((lemma, 'нет множественного'))
     gen = (e or {}).get('gen') or (ke and kform(ke, 'genitive'))
@@ -462,6 +464,7 @@ def main():
     fixes = dict(government=fx.get('government') or {}, gender=fx.get('gender') or {},
                  government_example=fx.get('government_example') or {},
                  plural_in_use=set(fx.get('plural_in_use') or []),
+                 plural=fx.get('plural') or {},
                  pl_only_extra=set(fx.get('pl_only_extra') or []),
                  no_plural=set(fx.get('no_plural') or []),
                  mass=set(fx.get('mass') or []),

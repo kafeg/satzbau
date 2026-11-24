@@ -1,36 +1,43 @@
-сборка 2026-11-24, версия данных cfec12a28acf
+сборка 2026-11-24, версия данных 916965ae07d2
 
-слов в themes.yaml: 573; собрано: 573; потеряно: 0
+слов в themes.yaml: 672; собрано: 672; потеряно: 0
 
-замечания (2):
+замечания (4):
+  Laden                  род спорный m/n — решение в fixes.yaml:gender
+  Post                   род спорный f/m — решение в fixes.yaml:gender
   altersgerecht          нет в kaikki — степени сравнения выводятся правилом
   qualifiziert           нет в kaikki — степени сравнения выводятся правилом
 
-управление, предложено источниками (7) — проверить и внести
+управление, предложено источниками (12) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
+  abgeben                bei D
   anfangen               von D
   ankommen               auf A
   bewerben               für A
+  leben                  von D
   schlafen               über A
   setzen                 auf A
   streiten               über A
+  suchen                 nach D
   verdienen              für A
+  zahlen                 an A
+  zeigen                 auf A
 
 размеры:
-  adjs.json         n=82          5.6 КиБ   gzip     1.7 КиБ
+  adjs.json         n=97          6.5 КиБ   gzip     1.9 КиБ
   explain.json      n=30         34.0 КиБ   gzip     9.2 КиБ
-  nouns.json        n=360        29.2 КиБ   gzip     7.2 КиБ
-  sentences.json    n=1680      168.5 КиБ   gzip    46.1 КиБ
-  templates.json    n=56         16.6 КиБ   gzip     2.3 КиБ
-  themes.json       n=6          32.8 КиБ   gzip     4.4 КиБ
-  verbs.json        n=131        18.4 КиБ   gzip     4.6 КиБ
-  ИТОГО                       305.0 КиБ   gzip    75.6 КиБ
+  nouns.json        n=418        34.1 КиБ   gzip     8.4 КиБ
+  sentences.json    n=1973      198.6 КиБ   gzip    55.0 КиБ
+  templates.json    n=57         16.9 КиБ   gzip     2.4 КиБ
+  themes.json       n=7          38.6 КиБ   gzip     5.1 КиБ
+  verbs.json        n=157        21.8 КиБ   gzip     5.3 КиБ
+  ИТОГО                       350.4 КиБ   gzip    87.3 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      137319
+  незнакомая словоформа      133804
   длина не 3–8               30998
   нет точки в конце          822
-  имя исчерпало квоту        79
-  примеров на имя: Tom 2000, Maria 314, Deutschland 42, Montag 33, Oktober 32
-  слов без примеров: 163 из 573
-    Abfahrt, Abmahnung, Abteil, Abteilung, Anmeldung, Anschluss, Arbeitgeber, Arbeitnehmer, Attest, Ausbildung, Ausflug, Auskunft, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Behandlung, Beilage, Beschwerde, Besichtigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Café, Dosierung, Drucker, Durchsage, Eingewöhnung, Einschulung, Elternabend, Elterngeld, Elternzeit, Entwicklung, Ermäßigung, Erstattung …
+  имя исчерпало квоту        510
+  примеров на имя: Tom 2000, Maria 352, Deutschland 55, Sonntag 42, Oktober 34
+  слов без примеров: 180 из 672
+    Abfahrt, Abmahnung, Abteil, Abteilung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Bürger, Bürgeramt, Café, Dosierung, Durchsage, Eingewöhnung, Einschulung …

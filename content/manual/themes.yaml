@@ -204,7 +204,7 @@ home:
     - {w: heizen,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
     - {w: lüften,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
     - {w: möbliert,      pos: a, lv: A2, tags: [quality, absolute]}
-    - {w: zentral,       pos: a, lv: A2, tags: [quality]}
+    - {w: zentral,       pos: a, lv: A2, tags: [quality, thing_only]}
     - {w: gemütlich,     pos: a, lv: A2, tags: [quality]}
     - {w: renoviert,     pos: a, lv: A2, tags: [quality, absolute]}
     # B1 — то, из-за чего пишут письма
@@ -220,8 +220,8 @@ home:
     - {w: besichtigen,   pos: v, lv: B1, tags: [state, obj, housework]}
     - {w: überweisen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: sanieren,      pos: v, lv: B1, tags: [state, obj, housework]}
-    - {w: geräumig,      pos: a, lv: B1, tags: [quality]}
-    - {w: hellhörig,     pos: a, lv: B1, tags: [quality]}
+    - {w: geräumig,      pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: hellhörig,     pos: a, lv: B1, tags: [quality, thing_only]}
 
 food:
   title: Еда
@@ -624,3 +624,110 @@ kids:
     - {w: neugierig,     pos: a, lv: B1, tags: [quality, person]}
     - {w: schüchtern,    pos: a, lv: B1, tags: [quality, person]}
     - {w: altersgerecht, pos: a, lv: B1, tags: [quality, absolute]}
+
+city:
+  title: Город и ведомства
+  words:
+    # A1 — куда идти и что принести с собой
+    - {w: Stadt,         pos: n, lv: A1, tags: [place]}
+    - {w: Zentrum,       pos: n, lv: A1, tags: [place]}
+    - {w: Rathaus,       pos: n, lv: A1, tags: [place]}
+    - {w: Amt,           pos: n, lv: A1, tags: [place]}
+    - {w: Bank,          pos: n, lv: A1, tags: [place]}
+    - {w: Post,          pos: n, lv: A1, tags: [place]}
+    - {w: Polizei,       pos: n, lv: A1, tags: [place]}
+    - {w: Park,          pos: n, lv: A1, tags: [place]}
+    - {w: Kirche,        pos: n, lv: A1, tags: [place]}
+    - {w: Museum,        pos: n, lv: A1, tags: [place]}
+    - {w: Kino,          pos: n, lv: A1, tags: [place]}
+    - {w: Theater,       pos: n, lv: A1, tags: [place]}
+    - {w: Bibliothek,    pos: n, lv: A1, tags: [place]}
+    - {w: Schwimmbad,    pos: n, lv: A1, tags: [place]}
+    - {w: Hotel,         pos: n, lv: A1, tags: [place]}
+    - {w: Geschäft,      pos: n, lv: A1, tags: [place]}
+    - {w: Laden,         pos: n, lv: A1, tags: [place]}
+    - {w: Ecke,          pos: n, lv: A1, tags: [place]}
+    - {w: Adresse,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Hausnummer,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Postleitzahl,  pos: n, lv: A1, tags: [abstract]}
+    - {w: Öffnungszeit,  pos: n, lv: A1, tags: [time]}
+    - {w: Formular,      pos: n, lv: A1, tags: [document]}
+    - {w: Antrag,        pos: n, lv: A1, tags: [document]}
+    - {w: Ausweis,       pos: n, lv: A1, tags: [document]}
+    - {w: Pass,          pos: n, lv: A1, tags: [document]}
+    - {w: Stadtplan,     pos: n, lv: A1, tags: [document]}
+    - {w: Unterschrift,  pos: n, lv: A1, tags: [abstract]}
+    - {w: Gebühr,        pos: n, lv: A1, tags: [money]}
+    - {w: Eintritt,      pos: n, lv: A1, tags: [money]}
+    - {w: besuchen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: finden,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: suchen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: zeigen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: öffnen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: schließen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: ausfüllen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: abgeben,       pos: v, lv: A1, tags: [state, obj]}
+    - {w: mitbringen,    pos: v, lv: A1, tags: [state, obj]}
+    - {w: anrufen,       pos: v, lv: A1, tags: [state, obj_person]}
+    - {w: holen,         pos: v, lv: A1, tags: [state, obj]}
+    - {w: schicken,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: brauchen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: zahlen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    # solo нет: «Er lebt oft» и «Ich habe gestern gelebt» — не фразы
+    - {w: leben,         pos: v, lv: A1, tags: [state]}
+    - {w: offen,         pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: geschlossen,   pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: nah,           pos: a, lv: A1, tags: [quality]}
+    - {w: modern,        pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: bequem,        pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: fremd,         pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: sicher,        pos: a, lv: A1, tags: [quality]}
+    - {w: breit,         pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: eng,           pos: a, lv: A1, tags: [quality, thing_only]}
+    # A2 — очередь, окошко, бумажка со штампом
+    - {w: Bürgeramt,     pos: n, lv: A2, tags: [place]}
+    - {w: Finanzamt,     pos: n, lv: A2, tags: [place]}
+    - {w: Arbeitsamt,    pos: n, lv: A2, tags: [place]}
+    - {w: Stadtteil,     pos: n, lv: A2, tags: [place]}
+    - {w: Viertel,       pos: n, lv: A2, tags: [place]}
+    - {w: Nachbarschaft, pos: n, lv: A2, tags: [abstract]}
+    - {w: Bürger,        pos: n, lv: A2, tags: [person]}
+    - {w: Ausländer,     pos: n, lv: A2, tags: [person]}
+    - {w: Schlange,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Stempel,       pos: n, lv: A2, tags: [thing]}
+    - {w: Kopie,         pos: n, lv: A2, tags: [document]}
+    - {w: Original,      pos: n, lv: A2, tags: [document]}
+    - {w: Bestätigung,   pos: n, lv: A2, tags: [document]}
+    - {w: Konto,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Bargeld,       pos: n, lv: A2, tags: [money]}
+    - {w: Geldautomat,   pos: n, lv: A2, tags: [thing]}
+    - {w: Briefmarke,    pos: n, lv: A2, tags: [thing]}
+    - {w: Paket,         pos: n, lv: A2, tags: [thing]}
+    - {w: besorgen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: ausdrucken,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: kopieren,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: verlängern,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: abheben,       pos: v, lv: A2, tags: [state, obj]}
+    - {w: eröffnen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: sparen,        pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: ummelden,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: öffentlich,    pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: privat,        pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: kostenlos,     pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: bekannt,       pos: a, lv: A2, tags: [quality, thing_only]}
+    - {w: gefährlich,    pos: a, lv: A2, tags: [quality]}
+    # B1 — то, ради чего берут день отпуска
+    - {w: Ausländerbehörde, pos: n, lv: B1, tags: [place]}
+    - {w: Standesamt,    pos: n, lv: B1, tags: [place]}
+    - {w: Jugendamt,     pos: n, lv: B1, tags: [place]}
+    - {w: Bescheid,      pos: n, lv: B1, tags: [document]}
+    - {w: Nachweis,      pos: n, lv: B1, tags: [document]}
+    - {w: Beglaubigung,  pos: n, lv: B1, tags: [document]}
+    - {w: Vollmacht,     pos: n, lv: B1, tags: [document]}
+    - {w: Sachbearbeiter, pos: n, lv: B1, tags: [person]}
+    - {w: Aufenthalt,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Staatsangehörigkeit, pos: n, lv: B1, tags: [abstract]}
+    - {w: beglaubigen,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: vorlegen,      pos: v, lv: B1, tags: [state, obj]}
+    - {w: nachweisen,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: vollständig,   pos: a, lv: B1, tags: [quality, absolute]}

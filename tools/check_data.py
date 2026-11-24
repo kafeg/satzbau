@@ -246,9 +246,15 @@ def main():
         notes.append(f'управление с предлогом, но без примера ({len(no_ex)}) — '
                      f'в правило о предлоге не попадут: {", ".join(no_ex)}')
 
+    # --- ручное множественное не должно спорить с «множественного нет»
+    both = sorted(set(fixes.get('plural') or {}) & set(fixes.get('no_plural') or ()))
+    if both:
+        errors.append(f'fixes.yaml — {", ".join(both)}: и в plural, и в no_plural')
+
     # --- правки, которые ни на что не ложатся
     lemmas = {w['w'] for w in words}
-    for block in ('government', 'government_example', 'gender', 'translations', 'aux_ambiguous'):
+    for block in ('government', 'government_example', 'gender', 'plural', 'translations',
+                  'aux_ambiguous'):
         idle = sorted(set(fixes.get(block) or {}) - lemmas)
         if idle:
             notes.append(f'fixes.yaml:{block} — записи для слов вне тем ({len(idle)}): '

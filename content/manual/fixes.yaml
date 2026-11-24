@@ -118,6 +118,8 @@ gender:
   Flur:    {g: m, note: "der Flur — коридор в квартире; die Flur — поле, угодья"}
   Taxi:    {g: n, note: "das Taxi. der Taxi встречается регионально"}
   Quadratmeter: {g: m, note: "der Quadratmeter"}
+  Bürgeramt: {g: n, note: "das Bürgeramt — составное с Amt, в nouns.csv его нет"}
+  Viertel: {g: n, note: "das Viertel — квартал и четверть; источник даёт f"}
   Butter:  {g: f, note: "die Butter. Регионально встречается der и das"}
   Kaffee:  {g: m, note: "der Kaffee"}
   Tee:     {g: m, note: "der Tee"}
@@ -132,6 +134,9 @@ gender:
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
 #     Иначе сборка каждый раз сообщает «нет множественного» про Hunger и Obst.
 no_plural:
+  - Bargeld
+  - Polizei
+  - Post
   - Hunger
   - Durst
   - Obst
@@ -147,6 +152,7 @@ no_plural:
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
 #      Напитки сюда НЕ входят: «ein Kaffee, bitte» — нормальная фраза.
 mass:
+  - Bargeld
   - Benzin
   - Strom
   - Schimmel
@@ -177,6 +183,12 @@ mass:
 # Без пометки рамка без sich даёт неграмматичное «Er bewirbt oft».
 reflexive:
   - bewerben
+
+# 2b. Множественное руками. Нужно там, где источник даёт форму ДРУГОГО значения
+#     омонима: die Bank — банк даёт Banken, а скамья Bänke, и в заданиях появлялись
+#     скамейки. Главнее источника; спорить с no_plural нельзя, это ловит валидатор.
+plural:
+  Bank: Banken
 
 plural_in_use:
   - Möbel
@@ -253,6 +265,58 @@ translations:
   billig:         дешёвый, недорогой
   barrierefrei:   без ступеней, доступный
   hellhörig:      с тонкими стенами, слышно соседей
+  # седьмая тема: то, что ru.wiktionary даёт не тем значением или слишком длинно
+  geschlossen:    закрытый
+  offen:          открытый
+  eng:            узкий, тесный
+  breit:          широкий
+  bequem:         удобный
+  fremd:          чужой, незнакомый
+  bekannt:        известный, знакомый
+  öffentlich:     общественный, государственный
+  sicher:         безопасный; уверенный
+  vollständig:    полный, заполненный целиком
+  Bürgeramt:      городской отдел для жителей
+  Amt:            ведомство, учреждение
+  Bank:           банк
+  Post:           почта
+  Geschäft:       магазин; дело, сделка
+  Kirche:         церковь
+  Zentrum:        центр
+  Viertel:        квартал, район; четверть
+  Stadtteil:      район города
+  Schwimmbad:     бассейн
+  Bürger:         горожанин, житель
+  Schlange:       очередь; змея
+  Eintritt:       вход; плата за вход
+  Gebühr:         пошлина, сбор
+  Formular:       бланк, анкета
+  Antrag:         заявление, ходатайство
+  Bescheid:       официальное решение, уведомление
+  Nachweis:       справка, подтверждение
+  Beglaubigung:   заверение документа
+  Vollmacht:      доверенность
+  Stempel:        печать, штамп
+  Paket:          посылка
+  Postleitzahl:   почтовый индекс
+  Finanzamt:      налоговая
+  Arbeitsamt:     служба занятости
+  Standesamt:     загс
+  Jugendamt:      ведомство по делам детей и молодёжи
+  Sachbearbeiter: сотрудник, который ведёт дело
+  Staatsangehörigkeit: гражданство
+  anrufen:        звонить по телефону
+  brauchen:       нуждаться, быть нужным
+  besorgen:       доставать, покупать
+  holen:          приносить, забирать
+  kopieren:       копировать
+  verlängern:     продлевать
+  vorlegen:       предъявлять, подавать
+  ausdrucken:     распечатывать
+  ausfüllen:      заполнять бланк
+  ummelden:       перерегистрировать по новому адресу
+  abheben:        снимать деньги
+  eröffnen:       открывать счёт, открывать заведение
 
   # Еда
   Essen:          еда

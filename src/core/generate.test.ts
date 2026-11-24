@@ -217,6 +217,13 @@ describe('конкретные задания', () => {
     expect(item('verb-prep-zwei-a', 'bewerben').full).toBe('Ich bewerbe mich bei der Firma.')
   })
 
+  // у n-склонения винительный отличается, и подлежащее съезжало в него вслед за слотом
+  it('подлежащее стоит в именительном, даже когда пропуск в винительном', () => {
+    expect(item('pronomen-akk-suchen', 'Automat').full).toBe(
+      'Der Automat ist weg — ich suche ihn.',
+    )
+  })
+
   it('подлежащее-не-человек получает свою рамку', () => {
     expect(item('verb-prep-ding', 'hängen').full).toBe('Das hängt an der Wand.')
   })

@@ -412,7 +412,8 @@
   level: A2
   kind: input
   frame: "Heute ist es {slot} als gestern."
-  need: {pos: a, not: [person, absolute]}
+  # безличное «es» — это про обстановку: «Heute ist es breiter» не фраза
+  need: {pos: a, not: [person, absolute, thing_only]}
   slot: {paradigm: adj_comparative}
   why: komparativ
 
@@ -555,7 +556,7 @@
   rule: pronomen-akkusativ
   level: A1
   kind: choice
-  frame: "{Nom} {w} ist weg — ich suche {slot}."
+  frame: "{Nom} {wnom} ist weg — ich suche {slot}."
   need: {pos: n, tags: [thing, document, vehicle, furniture], not: [pl_only, plu, mass]}
   slot: {paradigm: pronoun, case: akk, num: sg}
   options: {paradigm: pronoun, count: 4}
@@ -604,6 +605,16 @@
   kind: input
   frame: "Ich {slot} das heute {particle}."
   need: {pos: v, tags: [obj], has: [sep], not: [obj_person, reflexive]}
+  slot: {paradigm: verb_stem, person: 1sg}
+  why: praesens-trennbar
+
+# То же, но объект — человек: «Ich rufe das an» не фраза, нужно местоимение-лицо
+- id: trennbar-person
+  rule: praesens-trennbar
+  level: A2
+  kind: input
+  frame: "Ich {slot} ihn heute {particle}."
+  need: {pos: v, tags: [obj_person], has: [sep], not: [reflexive]}
   slot: {paradigm: verb_stem, person: 1sg}
   why: praesens-trennbar
 

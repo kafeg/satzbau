@@ -222,6 +222,9 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   if (answer === null) throw new Error(`${t.id} × ${w.w}: форма в пропуске не существует`)
   const g = w.pos === 'n' || t.slot.gender === 'from_fill2' ? genderOf(t.slot, w, w2) : null
   const word = wordIn(w, t.slot)
+  // подлежащему нужен именительный, даже когда пропуск в другом падеже:
+  // «Der Automaten ist weg» вылезало на n-склонении, где винительный другой
+  const wordNom = wordIn(w, { ...t.slot, case: 'nom' })
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
   // {v1} и {v3} — спрягаемая часть без приставки, {pre} и {obj} — то, что в примере
   // управления стоит до предлога и после: предлог стоит в пропуске
@@ -274,6 +277,8 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       .replace('{Art2}', cap(art2))
       .replace('{ein2}', ein2)
       .replace('{Ein2}', cap(ein2))
+      .replace('{wnom}', wordNom)
+      .replace('{Wnom}', cap(wordNom))
       .replace('{w}', word)
       .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
       .replace('{pp}', pp)
