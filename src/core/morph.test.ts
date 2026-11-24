@@ -64,6 +64,18 @@ describe('спряжение против UniMorph', () => {
   })
 })
 
+describe('разбор ошибки совпадает с заданием', () => {
+  // ⚠ Текст объяснения один на правило, а правило охватывает разные ветки:
+  // «глагол движения» стояло в шагах жёстко и врало на 73 заданиях из 85.
+  it('превосходная степень причастий идёт без -e-', () => {
+    const adj = (w: string) => bundle.adjs.find((a) => a.w === w)!
+    expect(superlative(adj('ansteckend'))).toBe('am ansteckendsten')
+    expect(superlative(adj('anstrengend'))).toBe('am anstrengendsten')
+    expect(superlative(adj('alt'))).toBe('am ältesten')
+    expect(superlative(adj('früh'))).toBe('am frühesten')
+  })
+})
+
 describe('императив против UniMorph', () => {
   // Тот же приём, что и со спряжением: вывод проверяется источником, а не на глаз.
   // У одного глагола бывает несколько принятых форм, поэтому эталон — список.

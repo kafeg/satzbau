@@ -178,6 +178,9 @@ export function superlative(a: Adj): string {
   const w = a.w
   // -e- вставляется после t, d, шипящих и после гласной с -h: am frühesten.
   // ⚠ Именно ГЛАСНАЯ с h: pünktlich тоже кончается на h, но даёт am pünktlichsten.
-  const esten = endsAny(w, ['t', 'd', 's', 'ß', 'z', 'sch']) || /[aeiouäöü]h$/.test(w)
+  // ⚠ Причастия на -end -e- НЕ получают: am anstrengendsten, не «anstrengendesten».
+  // Правило «после t и d» слишком широкое, и это давало «am ansteckendesten»
+  const esten =
+    !w.endsWith('end') && (endsAny(w, ['t', 'd', 's', 'ß', 'z', 'sch']) || /[aeiouäöü]h$/.test(w))
   return esten ? `am ${w}esten` : `am ${w}sten`
 }

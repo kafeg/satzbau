@@ -90,6 +90,30 @@ export function fits(need: Need, w: Word): boolean {
   return true
 }
 
+/**
+ * ⚠ Разбор пишется ОДИН на правило, а правило охватывает разные ветки: у perfekt-aux
+ * это haben и sein, у Partizip II — четыре способа. Текст «глагол движения» стоял
+ * в шагах жёстко и врал на 73 заданиях из 85. Ветку считаем по самому заданию.
+ */
+function auxWhy(v: Verb): string {
+  return v.aux === 's'
+    ? 'глагол движения или смены состояния'
+    : 'обычный глагол: ни движения, ни смены состояния'
+}
+
+function partizipWhy(v: Verb): string {
+  const pp = v.pp
+  if (pp.endsWith('iert')) return 'глагол на -ieren: ge- не ставится'
+  // ⚠ Отделяемый проверяется ПЕРВЫМ: «ausgefüllt» не начинается с ge-, и проверка
+  // на неотделяемую приставку объявляла его неотделяемым
+  if (!pp.startsWith('ge') && pp.includes('ge')) {
+    return 'отделяемый: ge- встаёт между приставкой и основой'
+  }
+  if (!pp.startsWith('ge')) return 'неотделяемая приставка: ge- не ставится'
+  if (pp.endsWith('en')) return 'сильный глагол: окончание -en, а не -t'
+  return 'обычный глагол: ge- + основа + -t'
+}
+
 /** Подлежащее-местоимение для выбранного лица: рамка его не фиксирует. */
 const SUBJECT: Record<Person, string> = {
   '1sg': 'ich',
@@ -100,6 +124,14 @@ const SUBJECT: Record<Person, string> = {
   '3pl': 'sie',
 }
 const PERSONS = Object.keys(SUBJECT) as Person[]
+const PERSON_RU: Record<Person, string> = {
+  '1sg': 'первое лицо единственного',
+  '2sg': 'второе лицо единственного',
+  '3sg': 'третье лицо единственного',
+  '1pl': 'первое лицо множественного',
+  '2pl': 'второе лицо множественного',
+  '3pl': 'третье лицо множественного',
+}
 
 /**
  * ⚠ Лицо ВЫВОДИТСЯ из пары «шаблон + слово», а не стоит в рамке. Иначе ответ один
@@ -417,6 +449,10 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       nom_article: g ? defArticle('nom', g, slot.num ?? 'sg') : '',
       plain_article: plain,
       ein,
+      aux_why: vb ? auxWhy(vb) : '',
+      pp_why: vb ? partizipWhy(vb) : '',
+      person_ru: PERSON_RU[person],
+      degree_ru: slot.paradigm === 'adj_superlative' ? 'превосходная' : 'сравнительная',
       article,
       ru: (w.entry as Noun).ru ?? '',
     },
