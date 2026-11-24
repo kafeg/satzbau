@@ -120,23 +120,28 @@ export function rules(p: Pick = {}): RuleInfo[] {
 export function newSession(p: Pick = {}): Item[] {
   const next = rng(p.seed ?? Date.now())
   const words = wordsOf({ level: p.level, only: p.only })
-  const shuffle = (b: Item[]) => {
+  const shuffle = <T,>(b: T[]) => {
     for (let i = b.length - 1; i > 0; i--) {
       const j = Math.floor(next() * (i + 1))
-      ;[b[i], b[j]] = [b[j] as Item, b[i] as Item]
+      ;[b[i], b[j]] = [b[j] as T, b[i] as T]
     }
     return b
   }
   // ⚠ Тема — мягкий приоритет, а не фильтр. Жёсткий фильтр гасит правила, у которых слов
   // этой темы нет вовсе: «wo?» живёт только на комнатах, «mein» — только на частях тела.
   // Поэтому у каждого шаблона две стопки: слова темы и все остальные.
-  const buckets = templatesOf(p).map((t) => {
-    const all = itemsFor(t, words)
-    return {
-      mine: shuffle(p.theme ? all.filter((i) => i.theme === p.theme) : all),
-      rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
-    }
-  })
+  // ⚠ Порядок стопок перемешивается, а не берётся из файла. Обход идёт по кругу и
+  // забирает по одному заданию, поэтому сессия из двенадцати заданий состояла из ПЕРВЫХ
+  // двенадцати шаблонов всегда: восемь правил из сорока двух, остальное недостижимо.
+  const buckets = shuffle(
+    templatesOf(p).map((t) => {
+      const all = itemsFor(t, words)
+      return {
+        mine: shuffle(p.theme ? all.filter((i) => i.theme === p.theme) : all),
+        rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
+      }
+    }),
+  )
 
   // Порядок внутри стопки: сперва то, чему пора повторяться, потом новое, потом
   // выученное. Правило важнее слова — расписание строится по нему (docs/architecture.md).

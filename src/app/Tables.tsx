@@ -1,5 +1,7 @@
 // Таблицы: то же, что подсвечивается в разборе, но целиком и в одном месте.
 // Данных тут нет — всё считается по парадигмам из ядра.
+// Каждая таблица — отдельный блок на своей поверхности: заголовок, пояснение, сетка.
+// Цветом помечен только падеж (первая колонка), иначе страница заливается тремя пятнами.
 
 import { useState } from 'react'
 import {
@@ -32,6 +34,37 @@ const PERSON_NAME: Record<Person, string> = {
   '3pl': 'sie, Sie',
 }
 
+function CaseTable({ cell }: { cell: (c: Case, g: Gender | 'pl') => string }) {
+  return (
+    <div className="panel">
+      <table className="forms">
+        <thead>
+          <tr>
+            <th />
+            {COLS.map((g) => (
+              <th key={g} className="mono">
+                {COL_NAME[g]}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {CASES.map((c) => (
+            <tr key={c} className={CASE_CLASS[c]}>
+              <th>{CASE_NAME[c]}</th>
+              {COLS.map((g) => (
+                <td key={g} className="mono">
+                  {cell(c, g)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 function Grid({
   title,
   note,
@@ -47,30 +80,7 @@ function Grid({
         <span>{title}</span>
       </h2>
       {note && <p className="note small">{note}</p>}
-      <table className="forms">
-        <thead>
-          <tr>
-            <th />
-            {COLS.map((g) => (
-              <th key={g} className="mono">
-                {COL_NAME[g]}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {CASES.map((c) => (
-            <tr key={c} className={CASE_CLASS[c] ? `active ${CASE_CLASS[c]}` : 'active'}>
-              <th>{CASE_NAME[c]}</th>
-              {COLS.map((g) => (
-                <td key={g} className="mono">
-                  {cell(c, g)}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <CaseTable cell={cell} />
     </section>
   )
 }
@@ -86,6 +96,7 @@ export function Tables() {
         ← главная
       </button>
       <h1>Таблицы</h1>
+      <p className="lead">Всё считается по парадигмам: эти же таблицы подсвечиваются в разборе.</p>
 
       <Grid title="Определённый артикль" cell={(c, g) => defArticle(c, gg(g), num(g))} />
       <Grid
@@ -107,59 +118,45 @@ export function Tables() {
       <section className="tblock">
         <h2 className="section">
           <span>Окончания прилагательного</span>
-          <span className="chips">
-            {(['weak', 'mixed', 'strong'] as Decl[]).map((d) => (
-              <button
-                key={d}
-                className={`chip${decl === d ? ' on' : ''}`}
-                onClick={() => setDecl(d)}
-              >
-                {d === 'weak' ? 'der' : d === 'mixed' ? 'ein' : 'без артикля'}
-              </button>
-            ))}
-          </span>
         </h2>
-        <table className="forms">
-          <thead>
-            <tr>
-              <th />
-              {COLS.map((g) => (
-                <th key={g} className="mono">
-                  {COL_NAME[g]}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {CASES.map((c) => (
-              <tr key={c} className="active">
-                <th>{CASE_NAME[c]}</th>
-                {COLS.map((g) => (
-                  <td key={g} className="mono">
-                    -{adjEnding(decl, c, gg(g), num(g))}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="tswitch">
+          {(['weak', 'mixed', 'strong'] as Decl[]).map((d) => (
+            <button
+              key={d}
+              className={`chip${decl === d ? ' on' : ''}`}
+              onClick={() => setDecl(d)}
+            >
+              {d === 'weak' ? 'der' : d === 'mixed' ? 'ein' : 'без артикля'}
+            </button>
+          ))}
+        </div>
+        <CaseTable cell={(c, g) => `-${adjEnding(decl, c, gg(g), num(g))}`} />
       </section>
 
       <section className="tblock">
         <h2 className="section">
           <span>haben и sein</span>
         </h2>
-        <table className="forms">
-          <tbody>
-            {PERSONS.map((p) => (
-              <tr key={p} className="active">
-                <th>{PERSON_NAME[p]}</th>
-                <td className="mono">{auxPresent(p, 'h')}</td>
-                <td className="mono">{auxPresent(p, 's')}</td>
+        <div className="panel">
+          <table className="forms">
+            <thead>
+              <tr>
+                <th />
+                <th className="mono">haben</th>
+                <th className="mono">sein</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {PERSONS.map((p) => (
+                <tr key={p}>
+                  <th>{PERSON_NAME[p]}</th>
+                  <td className="mono">{auxPresent(p, 'h')}</td>
+                  <td className="mono">{auxPresent(p, 's')}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   )
