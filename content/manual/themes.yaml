@@ -89,6 +89,7 @@ transport:
     - {w: Rückfahrt,     pos: n, lv: A2, tags: [abstract]}
     - {w: erreichen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: verpassen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: beeilen,       pos: v, lv: A2, tags: [state]}
     - {w: buchen,        pos: v, lv: A2, tags: [state, obj]}
     - {w: reservieren,   pos: v, lv: A2, tags: [state, obj]}
     - {w: entwerten,     pos: v, lv: A2, tags: [state, obj]}
@@ -404,6 +405,7 @@ work:
     - {w: bewerben,      pos: v, lv: A2, tags: [state]}
     - {w: einstellen,    pos: v, lv: A2, tags: [state, obj]}
     - {w: vereinbaren,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: entschuldigen, pos: v, lv: A2, tags: [state]}
     - {w: verschieben,   pos: v, lv: A2, tags: [state, obj]}
     - {w: erledigen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: besprechen,    pos: v, lv: A2, tags: [state, obj]}
@@ -474,6 +476,7 @@ health:
     - {w: messen,        pos: v, lv: A1, tags: [state, obj]}
     - {w: husten,        pos: v, lv: A1, tags: [state, solo]}
     - {w: atmen,         pos: v, lv: A1, tags: [state, solo]}
+    - {w: ausruhen,      pos: v, lv: A2, tags: [state]}
     - {w: fühlen,        pos: v, lv: A1, tags: [state, obj]}
     - {w: schlucken,     pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: krank,         pos: a, lv: A1, tags: [quality, person]}
@@ -570,6 +573,7 @@ kids:
     - {w: basteln,       pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: weinen,        pos: v, lv: A1, tags: [state, solo]}
     - {w: lachen,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: freuen,        pos: v, lv: A1, tags: [state]}
     - {w: abholen,       pos: v, lv: A1, tags: [motion, obj, obj_person]}
     - {w: bringen,       pos: v, lv: A1, tags: [state, obj]}
     - {w: füttern,       pos: v, lv: A1, tags: [state, obj, obj_person]}

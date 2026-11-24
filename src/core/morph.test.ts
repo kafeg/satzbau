@@ -1,7 +1,17 @@
 import { describe, expect, it } from 'vitest'
+import imperative_fixture from './__fixtures__/imperative.json' with { type: 'json' }
 import present_fixture from './__fixtures__/present.json' with { type: 'json' }
 import { bundle } from './data.ts'
-import { adjForm, comparative, nounForm, perfekt, present, superlative } from './morph.ts'
+import {
+  adjForm,
+  comparative,
+  imperative,
+  nounForm,
+  particle,
+  perfekt,
+  present,
+  superlative,
+} from './morph.ts'
 import type { Person } from './types.ts'
 
 const PERSONS: Person[] = ['1sg', '2sg', '3sg', '1pl', '2pl', '3pl']
@@ -23,6 +33,7 @@ const KNOWN: Record<string, string> = {
   basteln: 'то же',
   füttern: 'то же: fütter против füttere',
   fördern: 'то же',
+  verlängern: 'то же: verlänger против verlängere',
 }
 
 describe('спряжение против UniMorph', () => {
@@ -48,6 +59,44 @@ describe('спряжение против UniMorph', () => {
 
   it('в списке исключений нет устаревших записей', () => {
     expect(Object.keys(KNOWN).filter((w) => !diverged.has(w))).toEqual([])
+  })
+})
+
+describe('императив против UniMorph', () => {
+  // Тот же приём, что и со спряжением: вывод проверяется источником, а не на глаз.
+  // У одного глагола бывает несколько принятых форм, поэтому эталон — список.
+  const imp = imperative_fixture as Record<string, string[]>
+  const bad: string[] = []
+  let checked = 0
+  for (const v of bundle.verbs) {
+    const want = imp[v.w]
+    if (!want) continue
+    const base = imperative(v)
+    // null — глаголы на -eln/-ern: у них три равноправные формы, и задание их не берёт
+    if (base === null) continue
+    checked++
+    const part = particle(v)
+    const got = part ? `${base} ${part}` : base
+    if (!want.includes(got)) bad.push(`${v.w}: ${got} ∉ ${want.join(' / ')}`)
+  }
+  it('все формы входят в число принятых', () => {
+    expect(bad).toEqual([])
+    expect(checked).toBeGreaterThan(100)
+  })
+
+  it('у глаголов на -eln и -ern формы нет: их три, и все верные', () => {
+    const basteln = bundle.verbs.find((v) => v.w === 'basteln')
+    expect(basteln && imperative(basteln)).toBeNull()
+  })
+
+  // перегласовка в императив не идёт, смена e→i идёт — это и есть всё правило
+  it('перегласовка уходит, смена гласной остаётся', () => {
+    const imperativeOf = (w: string) => imperative(bundle.verbs.find((v) => v.w === w)!)
+    expect(imperativeOf('fahren')).toBe('fahr')
+    expect(imperativeOf('essen')).toBe('iss')
+    expect(imperativeOf('lesen')).toBe('lies')
+    expect(imperativeOf('halten')).toBe('halte')
+    expect(imperativeOf('öffnen')).toBe('öffne')
   })
 })
 

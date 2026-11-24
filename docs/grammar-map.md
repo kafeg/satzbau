@@ -20,7 +20,7 @@
 |---|---|---|
 | род: der / die / das | `nominativ-subjekt` | артикль в именительном и есть род |
 | множественное число | `plural-form` | |
-| n-склонение (der Nachbar → den Nachbarn) | — | формы в данных есть (`nd`), правила нет |
+| n-склонение (der Nachbar → den Nachbarn) | `n-deklination` | Akkusativ и Dativ |
 | сложные слова: род по последнему корню | — | не выражается пропуском |
 
 ## Падеж
@@ -43,10 +43,10 @@
 | kein | `negation-kein` | |
 | mein, dein — Nominativ | `possessiv-nominativ` | |
 | mein — Akkusativ | `possessiv-akkusativ` | |
-| mein — Dativ | — | дырка, рамка есть у `adj-dat-en` |
+| mein — Dativ | `possessiv-dativ` | |
 | слияния: im, ins, zum | `merge-prep-article` | |
 | личные местоимения в Akkusativ | `pronomen-akkusativ` | |
-| личные местоимения в Dativ | — | дырка |
+| личные местоимения в Dativ | `pronomen-dativ` | |
 | man | — | дырка, одна рамка закроет |
 
 ## Прилагательное
@@ -73,8 +73,8 @@
 | модальные глаголы | `modalverben` | |
 | предлог при глаголе | `verb-praeposition` | |
 | два предлога у глагола | `verb-praeposition-zwei` | |
-| возвратные глаголы (sich) | — | данные есть (`refl`), правила нет |
-| Imperativ | — | дырка, рамка «___ bitte die Tür!» |
+| возвратные глаголы (sich) | `reflexiv` | пять глаголов, два лица |
+| Imperativ | `imperativ` | ⚠ глаголы на -eln/-ern не берутся: форм три, и все верные |
 | Futur I (werden + Infinitiv) | — | дырка, пропуском идёт werden |
 | Konjunktiv II (würde, könnte) | — | B1, пропуском идёт würde |
 | Passiv (wird + Partizip II) | — | B1, пропуском идёт wird |
@@ -82,7 +82,7 @@
 ## Синтаксис
 | направление | правило | состояние |
 |---|---|---|
-| nicht против kein | — | дырка; kein есть, nicht нет |
+| nicht против kein | `negation-nicht-kein` | выбор держится на артикле, не на смысле |
 | глагол вторым в главном | — | не выражается одним пропуском |
 | глагол в конец в придаточном (weil, dass) | — | пропуск в конце тренирует форму, позицию показывает рамка |
 | вопрос: W-Frage и Ja/Nein | — | рамки с `wo?`/`wohin?` есть внутри падежей |

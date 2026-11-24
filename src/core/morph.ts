@@ -101,6 +101,34 @@ export function present(v: Verb, person: Person): string {
   return part ? `${forms[person]} ${part}` : forms[person]
 }
 
+const UMLAUT: Record<string, string> = { ä: 'a', ö: 'o', ü: 'u' }
+const deumlaut = (x: string) => x.replace(/[äöü]/g, (c) => UMLAUT[c] as string)
+
+/**
+ * Императив второго лица: «Mach das!», «Gib das!», «Fahr!».
+ *
+ * Перегласовка в императив НЕ идёт (du fährst, но fahr!), а смена гласной e→i идёт
+ * (du gibst → gib!). Отличить их можно так: если основа третьего лица — это основа
+ * инфинитива с перегласовкой, берём инфинитив; иначе третье лицо и есть ответ.
+ * Беглая -e остаётся только там, где основа не менялась: arbeite!, öffne!, но gib!
+ * Проверяется против UniMorph, см. `src/core/__fixtures__/imperative.json`.
+ */
+export function imperative(v: Verb): string | null {
+  const part = particle(v)
+  const w = v.w.startsWith('sich ') ? v.w.slice(5) : v.w
+  const inf = part ? w.slice(part.length) : w
+  const istem = infStem(inf)
+  // ⚠ У основ на -el и -er форм три, и все приняты: bastel, bastele, bastle.
+  // Засчитывать одну — учить неправде, поэтому такие глаголы задание не берёт.
+  // Снять это ограничение можно только вводом с несколькими верными ответами.
+  if (endsAny(istem, ['el', 'er'])) return null
+  const du = p3Stem(v, istem)
+  // ⚠ Сравниваем обе основы без умляутов: у öffnen и lüften умляут В САМОЙ основе,
+  // и сравнение «основа 3 лица без умляута против инфинитива» теряло беглую -e
+  if (deumlaut(du) !== deumlaut(istem)) return du
+  return `${istem}${endsAny(istem, ['t', 'd', 'chn', 'ffn', 'gn', 'tm']) ? 'e' : ''}`
+}
+
 /** Perfekt: вспомогательный берём из таблицы, а не выводим правилом — он нерегулярный. */
 export function perfekt(v: Verb, person: Person, aux?: 'h' | 's'): string {
   const use = aux ?? (v.aux === 'hs' ? 'h' : v.aux)

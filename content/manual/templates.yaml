@@ -700,3 +700,120 @@
   slot: {paradigm: verb_prep, nth: 2}
   options: {paradigm: verb_prep, count: 4}
   why: verb-praeposition-zwei
+
+# ── Императив. Пропуск — сама форма, поэтому ввод: вариантов у неё нет.
+# Перегласовка в императив не идёт (du fährst, но fahr!), а смена e→i идёт (gib!),
+# и это ровно то, на чём ошибаются. Вывод проверяется против UniMorph.
+- id: imperativ-du
+  rule: imperativ
+  level: A1
+  kind: input
+  frame: "{Slot} das bitte!"
+  need: {pos: v, tags: [obj], not: [sep, reflexive, obj_person, placement]}
+  slot: {paradigm: imperative}
+  why: imperativ
+
+- id: imperativ-trennbar
+  rule: imperativ
+  level: A1
+  kind: input
+  frame: "{Slot} das bitte {particle}!"
+  need: {pos: v, tags: [obj], has: [sep], not: [obj_person, reflexive]}
+  slot: {paradigm: imperative}
+  why: imperativ
+
+- id: imperativ-solo
+  rule: imperativ
+  level: A1
+  kind: input
+  frame: "{Slot} bitte!"
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
+  slot: {paradigm: imperative}
+  why: imperativ
+
+# ── nicht или kein. Два шаблона на одном инвентаре вариантов: иначе по виду
+# вариантов видно, какой ответ нужен. Правило видно только из пары:
+# без артикля отрицает kein, с определённым артиклем — nicht.
+- id: nicht-kein-ohne
+  rule: negation-nicht-kein
+  level: A2
+  kind: choice
+  frame: "Ich finde {slot} {w}."
+  need: {pos: n, tags: [thing, document, food, drink, furniture, appliance, vehicle], not: [pl_only, plu, mass]}
+  slot: {paradigm: kein_article, case: akk, gender: from_word}
+  options: {paradigm: negation, count: 4}
+  why: negation-nicht-kein
+
+- id: nicht-kein-mit
+  rule: negation-nicht-kein
+  level: A2
+  kind: choice
+  frame: "Ich finde {art} {w} {slot}."
+  need: {pos: n, tags: [thing, document, food, drink, furniture, appliance, vehicle], not: [pl_only, plu, mass]}
+  slot: {paradigm: nicht, case: akk, gender: from_word}
+  options: {paradigm: negation, count: 4}
+  why: negation-nicht-kein
+
+# ── Местоимение в Dativ: ihm и ihr вместо ihn и sie.
+- id: pronomen-dat-helfen
+  rule: pronomen-dativ
+  level: A2
+  kind: choice
+  frame: "{Nom} {wnom} ist nett — ich helfe {slot}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: pronoun, case: dat, gender: from_word}
+  options: {paradigm: pronoun, count: 4}
+  why: pronomen-dativ
+
+# ── mein в Dativ: meinem и meiner. Рамка с mit, потому что mit всегда Dativ.
+- id: possessiv-dat-mit
+  rule: possessiv-dativ
+  level: A2
+  kind: choice
+  frame: "Ich spreche mit {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: possessive, case: dat, gender: from_word}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-dativ
+
+# ── n-склонение: der Nachbar, но den Nachbarn. Формы в данных есть (nd),
+# и пропуск — само слово, поэтому ввод.
+- id: n-dekl-akk
+  rule: n-deklination
+  level: A2
+  kind: input
+  frame: "Ich sehe {art} {slot}."
+  need: {pos: n, has: [nd], not: [pl_only, plu]}
+  slot: {paradigm: noun_case, case: akk, gender: from_word}
+  why: n-deklination
+
+- id: n-dekl-dat
+  rule: n-deklination
+  level: A2
+  kind: input
+  frame: "Ich helfe {art} {slot}."
+  need: {pos: n, has: [nd], tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: noun_case, case: dat, gender: from_word}
+  why: n-deklination
+
+# ── Возвратные глаголы. Два лица, а не одно: с одним лицом ответ всегда «mich»,
+# и задание угадывается со второго раза.
+- id: reflexiv-ich
+  rule: reflexiv
+  level: A2
+  kind: choice
+  frame: "Ich {v1} {slot} oft {particle}."
+  need: {pos: v, has: [reflexive]}
+  slot: {paradigm: reflexive_pronoun, person: 1sg}
+  options: {paradigm: reflexive_pronoun, count: 4}
+  why: reflexiv
+
+- id: reflexiv-er
+  rule: reflexiv
+  level: A2
+  kind: choice
+  frame: "Er {v3} {slot} oft {particle}."
+  need: {pos: v, has: [reflexive]}
+  slot: {paradigm: reflexive_pronoun, person: 3sg}
+  options: {paradigm: reflexive_pronoun, count: 4}
+  why: reflexiv

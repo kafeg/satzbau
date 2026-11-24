@@ -15,6 +15,22 @@
 "3pl": "fahren ab",
 "3sg": "fährt ab"
 },
+"abgeben": {
+"1pl": "geben ab",
+"1sg": "gebe ab",
+"2pl": "gebt ab",
+"2sg": "gibst ab",
+"3pl": "geben ab",
+"3sg": "gibt ab"
+},
+"abheben": {
+"1pl": "heben ab",
+"1sg": "hebe ab",
+"2pl": "hebt ab",
+"2sg": "hebst ab",
+"3pl": "heben ab",
+"3sg": "hebt ab"
+},
 "abholen": {
 "1pl": "holen ab",
 "1sg": "hole ab",
@@ -38,6 +54,14 @@
 "2sg": "meldest an",
 "3pl": "melden an",
 "3sg": "meldet an"
+},
+"anrufen": {
+"1pl": "rufen an",
+"1sg": "rufe an",
+"2pl": "ruft an",
+"2sg": "rufst an",
+"3pl": "rufen an",
+"3sg": "ruft an"
 },
 "antworten": {
 "1pl": "antworten",
@@ -79,6 +103,22 @@
 "3pl": "räumen auf",
 "3sg": "räumt auf"
 },
+"ausdrucken": {
+"1pl": "drucken aus",
+"1sg": "drucke aus",
+"2pl": "druckt aus",
+"2sg": "druckst aus",
+"3pl": "drucken aus",
+"3sg": "druckt aus"
+},
+"ausfüllen": {
+"1pl": "füllen aus",
+"1sg": "fülle aus",
+"2pl": "füllt aus",
+"2sg": "füllst aus",
+"3pl": "füllen aus",
+"3sg": "füllt aus"
+},
 "aussteigen": {
 "1pl": "steigen aus",
 "1sg": "steige aus",
@@ -111,6 +151,14 @@
 "3pl": "beantragen",
 "3sg": "beantragt"
 },
+"beglaubigen": {
+"1pl": "beglaubigen",
+"1sg": "beglaubige",
+"2pl": "beglaubigt",
+"2sg": "beglaubigst",
+"3pl": "beglaubigen",
+"3sg": "beglaubigt"
+},
 "behandeln": {
 "1pl": "behandeln",
 "1sg": "behandel",
@@ -135,6 +183,14 @@
 "3pl": "besichtigen",
 "3sg": "besichtigt"
 },
+"besorgen": {
+"1pl": "besorgen",
+"1sg": "besorge",
+"2pl": "besorgt",
+"2sg": "besorgst",
+"3pl": "besorgen",
+"3sg": "besorgt"
+},
 "besprechen": {
 "1pl": "besprechen",
 "1sg": "bespreche",
@@ -150,6 +206,14 @@
 "2sg": "bestellst",
 "3pl": "bestellen",
 "3sg": "bestellt"
+},
+"besuchen": {
+"1pl": "besuchen",
+"1sg": "besuche",
+"2pl": "besucht",
+"2sg": "besuchst",
+"3pl": "besuchen",
+"3sg": "besucht"
 },
 "betreuen": {
 "1pl": "betreuen",
@@ -190,6 +254,14 @@
 "2sg": "brätst",
 "3pl": "braten",
 "3sg": "brät"
+},
+"brauchen": {
+"1pl": "brauchen",
+"1sg": "brauche",
+"2pl": "braucht",
+"2sg": "brauchst",
+"3pl": "brauchen",
+"3sg": "braucht"
 },
 "bringen": {
 "1pl": "bringen",
@@ -351,6 +423,14 @@
 "3pl": "erziehen",
 "3sg": "erzieht"
 },
+"eröffnen": {
+"1pl": "eröffnen",
+"1sg": "eröffne",
+"2pl": "eröffnet",
+"2sg": "eröffnest",
+"3pl": "eröffnen",
+"3sg": "eröffnet"
+},
 "essen": {
 "1pl": "essen",
 "1sg": "esse",
@@ -366,6 +446,14 @@
 "2sg": "fährst",
 "3pl": "fahren",
 "3sg": "fährt"
+},
+"finden": {
+"1pl": "finden",
+"1sg": "finde",
+"2pl": "findet",
+"2sg": "findest",
+"3pl": "finden",
+"3sg": "findet"
 },
 "fliegen": {
 "1pl": "fliegen",
@@ -447,6 +535,14 @@
 "3pl": "helfen",
 "3sg": "hilft"
 },
+"holen": {
+"1pl": "holen",
+"1sg": "hole",
+"2pl": "holt",
+"2sg": "holst",
+"3pl": "holen",
+"3sg": "holt"
+},
 "husten": {
 "1pl": "husten",
 "1sg": "huste",
@@ -503,6 +599,14 @@
 "3pl": "kontrollieren",
 "3sg": "kontrolliert"
 },
+"kopieren": {
+"1pl": "kopieren",
+"1sg": "kopiere",
+"2pl": "kopiert",
+"2sg": "kopierst",
+"3pl": "kopieren",
+"3sg": "kopiert"
+},
 "kosten": {
 "1pl": "kosten",
 "1sg": "koste",
@@ -534,6 +638,14 @@
 "2sg": "läufst",
 "3pl": "laufen",
 "3sg": "läuft"
+},
+"leben": {
+"1pl": "leben",
+"1sg": "lebe",
+"2pl": "lebt",
+"2sg": "lebst",
+"3pl": "leben",
+"3sg": "lebt"
 },
 "legen": {
 "1pl": "legen",
@@ -615,6 +727,14 @@
 "3pl": "mieten",
 "3sg": "mietet"
 },
+"mitbringen": {
+"1pl": "bringen mit",
+"1sg": "bringe mit",
+"2pl": "bringt mit",
+"2sg": "bringst mit",
+"3pl": "bringen mit",
+"3sg": "bringt mit"
+},
 "mitnehmen": {
 "1pl": "nehmen mit",
 "1sg": "nehme mit",
@@ -622,6 +742,14 @@
 "2sg": "nimmst mit",
 "3pl": "nehmen mit",
 "3sg": "nimmt mit"
+},
+"nachweisen": {
+"1pl": "weisen nach",
+"1sg": "weise nach",
+"2pl": "weist nach",
+"2sg": "weist nach",
+"3pl": "weisen nach",
+"3sg": "weist nach"
 },
 "operieren": {
 "1pl": "operieren",
@@ -687,6 +815,14 @@
 "3pl": "sanieren",
 "3sg": "saniert"
 },
+"schicken": {
+"1pl": "schicken",
+"1sg": "schicke",
+"2pl": "schickt",
+"2sg": "schickst",
+"3pl": "schicken",
+"3sg": "schickt"
+},
 "schlafen": {
 "1pl": "schlafen",
 "1sg": "schlafe",
@@ -694,6 +830,14 @@
 "2sg": "schläfst",
 "3pl": "schlafen",
 "3sg": "schläft"
+},
+"schließen": {
+"1pl": "schließen",
+"1sg": "schließe",
+"2pl": "schließt",
+"2sg": "schließt",
+"3pl": "schließen",
+"3sg": "schließt"
 },
 "schlucken": {
 "1pl": "schlucken",
@@ -751,6 +895,14 @@
 "3pl": "sitzen",
 "3sg": "sitzt"
 },
+"sparen": {
+"1pl": "sparen",
+"1sg": "spare",
+"2pl": "spart",
+"2sg": "sparst",
+"3pl": "sparen",
+"3sg": "spart"
+},
 "spielen": {
 "1pl": "spielen",
 "1sg": "spiele",
@@ -790,6 +942,14 @@
 "2sg": "streitest",
 "3pl": "streiten",
 "3sg": "streitet"
+},
+"suchen": {
+"1pl": "suchen",
+"1sg": "suche",
+"2pl": "sucht",
+"2sg": "suchst",
+"3pl": "suchen",
+"3sg": "sucht"
 },
 "tanken": {
 "1pl": "tanken",
@@ -895,6 +1055,14 @@
 "3pl": "verletzen",
 "3sg": "verletzt"
 },
+"verlängern": {
+"1pl": "verlängern",
+"1sg": "verlänger",
+"2pl": "verlängert",
+"2sg": "verlängerst",
+"3pl": "verlängern",
+"3sg": "verlängert"
+},
 "verpassen": {
 "1pl": "verpassen",
 "1sg": "verpasse",
@@ -942,6 +1110,14 @@
 "2sg": "verzichtest",
 "3pl": "verzichten",
 "3sg": "verzichtet"
+},
+"vorlegen": {
+"1pl": "legen vor",
+"1sg": "lege vor",
+"2pl": "legt vor",
+"2sg": "legst vor",
+"3pl": "legen vor",
+"3sg": "legt vor"
 },
 "vorlesen": {
 "1pl": "lesen vor",
@@ -999,6 +1175,22 @@
 "3pl": "würzen",
 "3sg": "würzt"
 },
+"zahlen": {
+"1pl": "zahlen",
+"1sg": "zahle",
+"2pl": "zahlt",
+"2sg": "zahlst",
+"3pl": "zahlen",
+"3sg": "zahlt"
+},
+"zeigen": {
+"1pl": "zeigen",
+"1sg": "zeige",
+"2pl": "zeigt",
+"2sg": "zeigst",
+"3pl": "zeigen",
+"3sg": "zeigt"
+},
 "zubereiten": {
 "1pl": "bereiten zu",
 "1sg": "bereite zu",
@@ -1006,6 +1198,14 @@
 "2sg": "bereitest zu",
 "3pl": "bereiten zu",
 "3sg": "bereitet zu"
+},
+"öffnen": {
+"1pl": "öffnen",
+"1sg": "öffne",
+"2pl": "öffnet",
+"2sg": "öffnest",
+"3pl": "öffnen",
+"3sg": "öffnet"
 },
 "überweisen": {
 "1pl": "überweisen",

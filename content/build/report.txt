@@ -1,6 +1,6 @@
-сборка 2026-11-24, версия данных 916965ae07d2
+сборка 2026-11-24, версия данных ace73d460ac8
 
-слов в themes.yaml: 672; собрано: 672; потеряно: 0
+слов в themes.yaml: 676; собрано: 676; потеряно: 0
 
 замечания (4):
   Laden                  род спорный m/n — решение в fixes.yaml:gender
@@ -8,12 +8,13 @@
   altersgerecht          нет в kaikki — степени сравнения выводятся правилом
   qualifiziert           нет в kaikki — степени сравнения выводятся правилом
 
-управление, предложено источниками (12) — проверить и внести
+управление, предложено источниками (13) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   anfangen               von D
   ankommen               auf A
   bewerben               für A
+  freuen                 über A, auf A, für A
   leben                  von D
   schlafen               über A
   setzen                 auf A
@@ -25,19 +26,19 @@
 
 размеры:
   adjs.json         n=97          6.5 КиБ   gzip     1.9 КиБ
-  explain.json      n=30         34.0 КиБ   gzip     9.2 КиБ
+  explain.json      n=36         41.9 КиБ   gzip    11.1 КиБ
   nouns.json        n=418        34.1 КиБ   gzip     8.4 КиБ
-  sentences.json    n=1973      198.6 КиБ   gzip    55.0 КиБ
-  templates.json    n=57         16.9 КиБ   gzip     2.4 КиБ
-  themes.json       n=7          38.6 КиБ   gzip     5.1 КиБ
-  verbs.json        n=157        21.8 КиБ   gzip     5.3 КиБ
-  ИТОГО                       350.4 КиБ   gzip    87.3 КиБ
+  sentences.json    n=1987      200.1 КиБ   gzip    55.4 КиБ
+  templates.json    n=68         19.9 КиБ   gzip     2.7 КиБ
+  themes.json       n=7          38.8 КиБ   gzip     5.1 КиБ
+  verbs.json        n=161        22.3 КиБ   gzip     5.5 КиБ
+  ИТОГО                       363.6 КиБ   gzip    90.1 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      133804
+  незнакомая словоформа      133674
   длина не 3–8               30998
   нет точки в конце          822
-  имя исчерпало квоту        510
-  примеров на имя: Tom 2000, Maria 352, Deutschland 55, Sonntag 42, Oktober 34
-  слов без примеров: 180 из 672
+  имя исчерпало квоту        537
+  примеров на имя: Tom 2000, Maria 351, Deutschland 55, Sonntag 42, Oktober 34
+  слов без примеров: 180 из 676
     Abfahrt, Abmahnung, Abteil, Abteilung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Bürger, Bürgeramt, Café, Dosierung, Durchsage, Eingewöhnung, Einschulung …

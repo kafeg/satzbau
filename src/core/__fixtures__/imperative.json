@@ -1,0 +1,588 @@
+{
+"abbiegen": [
+"bieg ab",
+"biege ab"
+],
+"abfahren": [
+"fahr ab",
+"fahre ab"
+],
+"abgeben": [
+"gib ab"
+],
+"abheben": [
+"heb ab",
+"hebe ab"
+],
+"abholen": [
+"hol ab",
+"hole ab"
+],
+"anfangen": [
+"fang an"
+],
+"anmelden": [
+"melde an"
+],
+"anrufen": [
+"ruf an",
+"rufe an"
+],
+"antworten": [
+"antworte"
+],
+"atmen": [
+"atme"
+],
+"aufhören": [
+"hör auf",
+"höre auf"
+],
+"aufpassen": [
+"pass auf",
+"passe auf"
+],
+"aufräumen": [
+"räum auf",
+"räume auf"
+],
+"ausdrucken": [
+"druck aus",
+"drucke aus"
+],
+"ausfüllen": [
+"füll aus",
+"fülle aus"
+],
+"aussteigen": [
+"steig aus",
+"steige aus"
+],
+"backen": [
+"back",
+"backe"
+],
+"basteln": [
+"bastel",
+"bastele",
+"bastle"
+],
+"beantragen": [
+"beantrag",
+"beantrage"
+],
+"beglaubigen": [
+"beglaubig",
+"beglaubige"
+],
+"behandeln": [
+"behandel",
+"behandele",
+"behandle"
+],
+"beruhigen": [
+"beruhig",
+"beruhige"
+],
+"besichtigen": [
+"besichtig",
+"besichtige"
+],
+"besorgen": [
+"besorg",
+"besorge"
+],
+"besprechen": [
+"besprich"
+],
+"bestellen": [
+"bestell",
+"bestelle"
+],
+"besuchen": [
+"besuch",
+"besuche"
+],
+"betreuen": [
+"betreu",
+"betreue"
+],
+"bewerben": [
+"bewirb"
+],
+"bezahlen": [
+"bezahl",
+"bezahle"
+],
+"bluten": [
+"blute"
+],
+"braten": [
+"brate"
+],
+"brauchen": [
+"brauch",
+"brauche"
+],
+"bringen": [
+"bring",
+"bringe"
+],
+"buchen": [
+"buch",
+"buche"
+],
+"dauern": [
+"dauer",
+"dauere",
+"daure"
+],
+"drucken": [
+"druck",
+"drucke"
+],
+"durchsetzen": [
+"durchsetz",
+"durchsetze",
+"setz durch",
+"setze durch"
+],
+"duschen": [
+"dusch",
+"dusche"
+],
+"einkaufen": [
+"kauf ein",
+"kaufe ein"
+],
+"einnehmen": [
+"nimm ein"
+],
+"einreichen": [
+"reich ein",
+"reiche ein"
+],
+"einsteigen": [
+"steig ein",
+"steige ein"
+],
+"einstellen": [
+"stell ein",
+"stelle ein"
+],
+"einweisen": [
+"weis ein",
+"weise ein"
+],
+"empfehlen": [
+"empfiehl"
+],
+"entfallen": [
+"entfall",
+"entfalle"
+],
+"entlassen": [
+"entlass",
+"entlasse"
+],
+"entwickeln": [
+"entwickel",
+"entwickele",
+"entwickle"
+],
+"erledigen": [
+"erledig",
+"erledige"
+],
+"erreichen": [
+"erreich",
+"erreiche"
+],
+"erstatten": [
+"erstatte"
+],
+"erziehen": [
+"erzieh",
+"erziehe"
+],
+"eröffnen": [
+"eröffne"
+],
+"essen": [
+"iss"
+],
+"fahren": [
+"fahr",
+"fahre"
+],
+"finden": [
+"finde"
+],
+"fliegen": [
+"flieg",
+"fliege"
+],
+"fragen": [
+"frag",
+"frage"
+],
+"fördern": [
+"förder",
+"fördere",
+"fördre"
+],
+"fühlen": [
+"fühl",
+"fühle"
+],
+"füttern": [
+"fütter",
+"füttere",
+"füttre"
+],
+"gehen": [
+"geh",
+"gehe"
+],
+"halten": [
+"halte"
+],
+"heilen": [
+"heil",
+"heile"
+],
+"heizen": [
+"heiz",
+"heize"
+],
+"helfen": [
+"hilf"
+],
+"holen": [
+"hol",
+"hole"
+],
+"husten": [
+"huste"
+],
+"hängen": [
+"häng",
+"hänge"
+],
+"impfen": [
+"impf",
+"impfe"
+],
+"kaufen": [
+"kauf",
+"kaufe"
+],
+"kochen": [
+"koch",
+"koche"
+],
+"kommen": [
+"komm",
+"komme"
+],
+"kontrollieren": [
+"kontrollier",
+"kontrolliere"
+],
+"kopieren": [
+"kopier",
+"kopiere"
+],
+"kosten": [
+"koste"
+],
+"kündigen": [
+"kündig",
+"kündige"
+],
+"lachen": [
+"lach",
+"lache"
+],
+"laufen": [
+"lauf",
+"laufe"
+],
+"leben": [
+"leb",
+"lebe"
+],
+"legen": [
+"leg",
+"lege"
+],
+"leiden": [
+"leide"
+],
+"lernen": [
+"lern",
+"lerne"
+],
+"lesen": [
+"lies"
+],
+"liegen": [
+"lieg",
+"liege"
+],
+"loben": [
+"lob",
+"lobe"
+],
+"lüften": [
+"lüfte"
+],
+"malen": [
+"mal",
+"male"
+],
+"messen": [
+"miss"
+],
+"mieten": [
+"miete"
+],
+"mitbringen": [
+"bring mit",
+"bringe mit"
+],
+"mitnehmen": [
+"nimm mit"
+],
+"nachweisen": [
+"weis nach",
+"weise nach"
+],
+"operieren": [
+"operier",
+"operiere"
+],
+"parken": [
+"park",
+"parke"
+],
+"probieren": [
+"probier",
+"probiere"
+],
+"putzen": [
+"putz",
+"putze"
+],
+"renovieren": [
+"renovier",
+"renoviere"
+],
+"reparieren": [
+"reparier",
+"repariere"
+],
+"reservieren": [
+"reservier",
+"reserviere"
+],
+"sanieren": [
+"sanier",
+"saniere"
+],
+"schicken": [
+"schick",
+"schicke"
+],
+"schlafen": [
+"schlaf",
+"schlafe"
+],
+"schließen": [
+"schließ",
+"schließe"
+],
+"schlucken": [
+"schluck",
+"schlucke"
+],
+"schmecken": [
+"schmeck",
+"schmecke"
+],
+"schneiden": [
+"schneide"
+],
+"schreiben": [
+"schreib",
+"schreibe"
+],
+"setzen": [
+"setz",
+"setze"
+],
+"singen": [
+"sing",
+"singe"
+],
+"sitzen": [
+"sitz"
+],
+"sparen": [
+"spar",
+"spare"
+],
+"spielen": [
+"spiel",
+"spiele"
+],
+"stehen": [
+"steh",
+"stehe"
+],
+"stellen": [
+"stell",
+"stelle"
+],
+"streichen": [
+"streich",
+"streiche"
+],
+"streiten": [
+"streite"
+],
+"suchen": [
+"such",
+"suche"
+],
+"tanken": [
+"tank",
+"tanke"
+],
+"teilen": [
+"teil",
+"teile"
+],
+"telefonieren": [
+"telefonier",
+"telefoniere"
+],
+"trinken": [
+"trink",
+"trinke"
+],
+"trösten": [
+"tröste"
+],
+"umsteigen": [
+"steig um",
+"steige um"
+],
+"umziehen": [
+"zieh um",
+"ziehe um"
+],
+"unterschreiben": [
+"schreib unter",
+"schreibe unter",
+"unterschreib",
+"unterschreibe"
+],
+"untersuchen": [
+"untersuch",
+"untersuche"
+],
+"verdienen": [
+"verdien",
+"verdiene"
+],
+"vereinbaren": [
+"vereinbar",
+"vereinbare"
+],
+"verhandeln": [
+"verhandel",
+"verhandele",
+"verhandle"
+],
+"verletzen": [
+"verletz",
+"verletze"
+],
+"verlängern": [
+"verlänger",
+"verlängere",
+"verlängre"
+],
+"verpassen": [
+"verpass",
+"verpasse"
+],
+"verschieben": [
+"verschieb",
+"verschiebe"
+],
+"verschreiben": [
+"verschreib",
+"verschreibe"
+],
+"vertragen": [
+"vertrag",
+"vertrage"
+],
+"vertreten": [
+"vertritt"
+],
+"verzichten": [
+"verzichte"
+],
+"vorlegen": [
+"leg vor",
+"lege vor"
+],
+"vorlesen": [
+"lies vor"
+],
+"wachsen": [
+"wachs",
+"wachse"
+],
+"warten": [
+"warte"
+],
+"weinen": [
+"wein",
+"weine"
+],
+"wickeln": [
+"wickel",
+"wickele",
+"wickle"
+],
+"wohnen": [
+"wohn",
+"wohne"
+],
+"würzen": [
+"würz",
+"würze"
+],
+"zahlen": [
+"zahl",
+"zahle"
+],
+"zeigen": [
+"zeig",
+"zeige"
+],
+"zubereiten": [
+"bereite zu"
+],
+"öffnen": [
+"öffne"
+],
+"überweisen": [
+"überweis",
+"überweise"
+]
+}

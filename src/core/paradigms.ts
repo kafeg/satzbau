@@ -116,6 +116,16 @@ export function pronoun(c: 'akk' | 'dat', g: Gender, num: Num = 'sg'): string {
   return PRONOUN[c][num === 'pl' ? 'pl' : g]
 }
 
+/** Возвратное местоимение: закрытая таблица, выводить нечего. */
+export const REFLEXIVE: Record<Person, string> = {
+  '1sg': 'mich',
+  '2sg': 'dich',
+  '3sg': 'sich',
+  '1pl': 'uns',
+  '2pl': 'euch',
+  '3pl': 'sich',
+}
+
 export const AUX_PRESENT: Record<Person, { haben: string; sein: string }> = {
   '1sg': { haben: 'habe', sein: 'bin' },
   '2sg': { haben: 'hast', sein: 'bist' },
@@ -221,6 +231,12 @@ export function inventory(
       return einInventory('mein', true)
     case 'kein_article':
       return einInventory('kein', true)
+    case 'reflexive_pronoun':
+      return uniq(Object.values(REFLEXIVE))
+    // выбор «nicht или kein» — это один инвентарь на оба: иначе по виду вариантов
+    // видно, какой ответ нужен, и думать не о чем
+    case 'negation':
+      return uniq(['nicht', ...einInventory('kein', true)])
     case 'aux_present': {
       const row = AUX_PRESENT[p.person ?? '3sg']
       return [row.haben, row.sein]

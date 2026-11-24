@@ -5,6 +5,7 @@ import {
   defArticle,
   govOf,
   govexParts,
+  REFLEXIVE,
   modal,
   type Modal,
   pronoun,
@@ -14,7 +15,15 @@ import {
   merged,
   possessive,
 } from './paradigms.ts'
-import { adjStem, comparative, nounForm, particle, present, superlative } from './morph.ts'
+import {
+  adjStem,
+  comparative,
+  imperative,
+  nounForm,
+  particle,
+  present,
+  superlative,
+} from './morph.ts'
 import type { Word } from './bundle.ts'
 import type { Adj, Case, Gender, Item, Need, Noun, Num, Slot, Template, Verb } from './types.ts'
 
@@ -93,6 +102,16 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
     // формы самого слова: вариантов у них нет, это всегда ввод
     case 'noun_plural':
       return nounForm(w.entry as Noun, c, 'pl')
+    // само существительное в падеже: нужно n-склонению, где форма отличается
+    case 'noun_case':
+      return nounForm(w.entry as Noun, c, num)
+    case 'imperative':
+      return imperative(w.entry as Verb)
+    case 'reflexive_pronoun':
+      return REFLEXIVE[slot.person ?? '3sg']
+    // «nicht» рядом с kein: вариант один, а вот выбрать между ними — и есть задание
+    case 'nicht':
+      return 'nicht'
     case 'participle':
       return (w.entry as Verb).pp
     case 'modal_present':
@@ -164,7 +183,21 @@ function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): s
           .map((g) => govOf(g)?.prep)
           .filter((p): p is string => !!p && p !== answer)
       : []
+  // у «nicht или kein» противоположный вид обязан быть среди вариантов: иначе
+  // выбирать не из чего, и правило не тренируется вовсе
+  const nearNeg =
+    t.options?.paradigm === 'negation'
+      ? [
+          slotForm(
+            { ...t.slot, paradigm: t.slot.paradigm === 'nicht' ? 'kein_article' : 'nicht' },
+            w,
+            t.slot.case ?? 'nom',
+            w2,
+          ),
+        ].filter((f): f is string => !!f && f !== answer)
+      : []
   const near = [
+    ...nearNeg,
     ...nearPrep,
     ...CASES.filter((c) => c !== t.slot.case)
       .map((c) => slotForm(t.slot, w, c, w2))

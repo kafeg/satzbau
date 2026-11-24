@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Эталон спряжения для тестов ядра: Präsens Indikativ из UniMorph.
+"""Эталон форм для тестов ядра: Präsens Indikativ и императив из UniMorph.
 
 Правило вывода форм из `p3` проверять на глаз нельзя, поэтому проверяем сравнением
 с источником. Фикстура маленькая и лежит в репозитории, чтобы тесты не требовали дампов.
@@ -24,3 +24,16 @@ json.dump({k: out[k] for k in sorted(out)}, open(path, 'w', encoding='utf-8'),
 open(path, 'a').write('\n')
 print(f'{len(out)} глаголов из {len(verbs)} → {os.path.relpath(path, ROOT)}')
 print('нет в UniMorph:', ', '.join(sorted(verbs - set(out))) or 'нет')
+
+# Императив: у одного глагола бывает несколько принятых форм (fahr и fahre),
+# поэтому в эталоне список, а тест требует попадания в него.
+imp = collections.defaultdict(set)
+for line in open(f'{ROOT}/data/raw/unimorph-deu.tsv', encoding='utf-8'):
+    p = line.rstrip('\n').split('\t')
+    if len(p) == 3 and p[0] in verbs and p[2] == 'V;IMP;SG;2':
+        imp[p[0]].add(' '.join(p[1].split()))
+path = f'{ROOT}/src/core/__fixtures__/imperative.json'
+json.dump({k: sorted(imp[k]) for k in sorted(imp)}, open(path, 'w', encoding='utf-8'),
+          ensure_ascii=False, indent=0, sort_keys=True)
+open(path, 'a').write('\n')
+print(f'императив: {len(imp)} глаголов из {len(verbs)} → {os.path.relpath(path, ROOT)}')
