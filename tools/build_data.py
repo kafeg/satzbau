@@ -218,7 +218,7 @@ def verb_gov(entry):
     return out[:3]
 
 
-def build_verb(w, lemma, K, ru, fixes, rep, gov_rep):
+def build_verb(w, lemma, K, ru, fixes, rep, gov_rep, imp=None):
     base = lemma[5:] if lemma.startswith('sich ') else lemma
     ke = pick_entry(K.get((base, 'verb')) or [])
     if not ke:
@@ -248,6 +248,17 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep):
         v['auxn'] = amb['note']
     if base in fixes['reflexive']:
         v['refl'] = 1
+    # Принятые формы императива: вывести правилом нельзя, см. read_imperatives.
+    # ⚠ У unterschreiben и durchsetzen UniMorph знает ОБА разбора, отделяемый
+    # и неотделяемый. Оставляем формы только того, который у нас в p3.
+    part = p3.split(' ')[1] if ' ' in p3 else None
+    forms = sorted({
+        f[: -len(part) - 1] if part else f
+        for f in (imp or {}).get(lemma, ())
+        if (f.endswith(' ' + part) if part else ' ' not in f)
+    })
+    if forms:
+        v['imp'] = forms
     k2 = kform(ke, 'past', 'subjunctive')
     if k2 and k2 != pt:
         v['k2'] = k2
@@ -374,6 +385,23 @@ def read_unimorph(path, vocab):
     return out
 
 
+def read_imperatives(path, lemmas):
+    """лемма → принятые формы императива 2 лица ед. ч., без отделяемой приставки
+
+    Вывести их правилом нельзя: у buchen приняты и «buch», и «buche», а у sitzen
+    только «sitz», и никакого признака, отличающего одно от другого, в слове нет.
+    Приложение принимает ВСЕ формы из этого списка, иначе верный ответ считался бы
+    ошибкой. Для шести глаголов, которых в UniMorph нет, остаётся правило в morph.ts.
+    """
+    out = collections.defaultdict(set)
+    for line in open(path, encoding='utf-8'):
+        p = line.rstrip('\n').split('\t')
+        if len(p) != 3 or p[2] != 'V;IMP;SG;2' or p[0] not in lemmas:
+            continue
+        out[p[0]].add(' '.join(p[1].split()))
+    return {k: sorted(v) for k, v in out.items()}
+
+
 def build_sentences(vocab, verbs, rep):
     log('Tatoeba: читаю предложения')
     de = read_tsv_bz2(raw('deu_sentences.tsv.bz2'))
@@ -498,6 +526,9 @@ def main():
     KR = srclib.scan_jsonl(raw('kaikki-ru-de.jsonl'), lemmas)
     log(f'kaikki-ru: статей {sum(len(v) for v in KR.values())}')
 
+    IMP = read_imperatives(raw('unimorph-deu.tsv'), lemmas)
+    log(f'UniMorph: императив известен у {len(IMP)} глаголов')
+
     out = {'n': [], 'v': [], 'a': []}
     rep, gov_rep = [], []
     for w in sorted(words, key=lambda w: (FQ.get(w['w'].lower()) or 10 ** 6)):
@@ -505,7 +536,7 @@ def main():
         ru = fixes['translations'].get(lemma) or ru_for(
             lemma[5:] if lemma.startswith('sich ') else lemma, pos, KR, FD)
         rec = (build_noun(w, lemma, GN, K, ru, fixes, rep) if pos == 'n' else
-               build_verb(w, lemma, K, ru, fixes, rep, gov_rep) if pos == 'v' else
+               build_verb(w, lemma, K, ru, fixes, rep, gov_rep, IMP) if pos == 'v' else
                build_adj(w, lemma, K, ru, fixes, rep))
         if rec:
             out[pos].append(rec)

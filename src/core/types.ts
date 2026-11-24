@@ -37,6 +37,8 @@ export interface Verb {
   govex?: string[]
   auxn?: string
   refl?: 1
+  /** принятые формы императива 2 л. ед. ч. из UniMorph: «buch» и «buche» обе верны */
+  imp?: string[]
   ru?: string
 }
 
@@ -142,6 +144,8 @@ export interface Item {
   /** фраза с подставленным верным ответом */
   full: string
   answer: string
+  /** другие формы, которые тоже верны: «hol» и «hole» — обе. Только для ввода */
+  answers?: string[]
   options?: string[]
   word: string
   /** второе слово, если шаблон его просит */

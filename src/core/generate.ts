@@ -21,6 +21,7 @@ import {
   adjStem,
   comparative,
   imperative,
+  imperativeForms,
   nounForm,
   particle,
   present,
@@ -340,6 +341,11 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
     full: fill(t.frame, answer),
     answer,
     options: t.kind === 'choice' ? buildOptions(t, w, answer, w2) : undefined,
+    // ⚠ Принятых форм бывает несколько: «Hol das!» и «Hole das!» верны обе,
+    // и засчитывать одну значило бы считать ошибкой правильный ответ
+    ...(t.slot.paradigm === 'imperative' && t.kind === 'input'
+      ? { answers: imperativeForms(w.entry as Verb) }
+      : {}),
     word: w.w,
     ...(w2 ? { word2: w2.w } : {}),
     pos: w.pos,

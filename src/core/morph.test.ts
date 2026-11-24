@@ -7,6 +7,7 @@ import {
   adjForm,
   comparative,
   imperative,
+  imperativeForms,
   nounForm,
   particle,
   perfekt,
@@ -72,22 +73,30 @@ describe('императив против UniMorph', () => {
   for (const v of bundle.verbs) {
     const want = imp[v.w]
     if (!want) continue
-    const base = imperative(v)
-    // null — глаголы на -eln/-ern: у них три равноправные формы, и задание их не берёт
-    if (base === null) continue
     checked++
     const part = particle(v)
-    const got = part ? `${base} ${part}` : base
-    if (!want.includes(got)) bad.push(`${v.w}: ${got} ∉ ${want.join(' / ')}`)
+    // ⚠ Проверяется КАЖДАЯ форма, которую приложение примет: лишняя означала бы,
+    // что засчитывается неверный ответ, а недостающая — что верный считается ошибкой
+    for (const base of imperativeForms(v)) {
+      const got = part ? `${base} ${part}` : base
+      if (!want.includes(got)) bad.push(`${v.w}: ${got} ∉ ${want.join(' / ')}`)
+    }
   }
-  it('все формы входят в число принятых', () => {
+  it('все принимаемые формы есть в числе верных', () => {
     expect(bad).toEqual([])
     expect(checked).toBeGreaterThan(100)
   })
 
-  it('у глаголов на -eln и -ern формы нет: их три, и все верные', () => {
-    const basteln = bundle.verbs.find((v) => v.w === 'basteln')
-    expect(basteln && imperative(basteln)).toBeNull()
+  // ⚠ У buchen приняты «buch» и «buche», у sitzen только «sitz»: правилом это
+  // не выводится, список приходит из источника. Первой идёт форма для показа.
+  it('принимаются все формы источника, первой — словарная', () => {
+    const forms = (w: string) => imperativeForms(bundle.verbs.find((v) => v.w === w)!)
+    expect(forms('basteln')).toHaveLength(3)
+    expect(forms('basteln')[0]).toBe('bastle')
+    expect(forms('buchen')).toContain('buche')
+    expect(forms('buchen')[0]).toBe('buch')
+    expect(forms('sitzen')).toEqual(['sitz'])
+    expect(forms('essen')).toEqual(['iss'])
   })
 
   // перегласовка в императив не идёт, смена e→i идёт — это и есть всё правило

@@ -116,20 +116,38 @@ const deumlaut = (x: string) => x.replace(/[äöü]/g, (c) => UMLAUT[c] as strin
  * Беглая -e остаётся только там, где основа не менялась: arbeite!, öffne!, но gib!
  * Проверяется против UniMorph, см. `src/core/__fixtures__/imperative.json`.
  */
-export function imperative(v: Verb): string | null {
+export function imperativeForms(v: Verb): string[] {
+  // ⚠ Какие формы приняты, знает только источник: у buchen это «buch» и «buche»,
+  // у sitzen только «sitz», и признака, отличающего одно от другого, в слове нет.
+  // Поэтому список приходит из UniMorph в данных, а правило ниже — запасной путь
+  // для шести глаголов, которых в источнике нет.
   const part = particle(v)
   const w = v.w.startsWith('sich ') ? v.w.slice(5) : v.w
   const inf = part ? w.slice(part.length) : w
   const istem = infStem(inf)
-  // ⚠ У основ на -el и -er форм три, и все приняты: bastel, bastele, bastle.
-  // Засчитывать одну — учить неправде, поэтому такие глаголы задание не берёт.
-  // Снять это ограничение можно только вводом с несколькими верными ответами.
-  if (endsAny(istem, ['el', 'er'])) return null
   const du = p3Stem(v, istem)
   // ⚠ Сравниваем обе основы без умляутов: у öffnen и lüften умляут В САМОЙ основе,
-  // и сравнение «основа 3 лица без умляута против инфинитива» теряло беглую -e
-  if (deumlaut(du) !== deumlaut(istem)) return du
-  return `${istem}${endsAny(istem, ['t', 'd', 'chn', 'ffn', 'gn', 'tm']) ? 'e' : ''}`
+  // и сравнение «основа 3 лица без умляута против инфинитива» теряло беглую -e.
+  // Смена гласной e→i даёт ровно одну форму: gib, не «gibe».
+  if (deumlaut(du) !== deumlaut(istem)) return v.imp?.length ? v.imp : [du]
+  // ⚠ У основ на -el приняты все три формы: bastle (норма словаря), bastele, bastel.
+  // Засчитывать одну значило бы считать ошибкой правильный ответ.
+  // -eln и -ern: словарная форма с выпавшей -e (bastle). Проверять окончание основы
+  // нельзя — spielen тоже даёт основу на -el, а «spile» не форма
+  const byRule = inf.endsWith('eln')
+    ? `${istem.slice(0, -2)}le`
+    : inf.endsWith('ern')
+      ? `${istem}e`
+      : // беглая -e обязательна после t/d и стечения согласных, в остальном её нет
+        `${istem}${endsAny(istem, ['t', 'd', 'chn', 'ffn', 'gn', 'tm']) ? 'e' : ''}`
+  if (!v.imp?.length) return [byRule]
+  // первой идёт та форма, которую показывает задание: правило выбирает словарную
+  return v.imp.includes(byRule) ? [byRule, ...v.imp.filter((f) => f !== byRule)] : v.imp
+}
+
+/** Форма, которую показывает задание. Остальные принятые — в `imperativeForms`. */
+export function imperative(v: Verb): string {
+  return imperativeForms(v)[0] as string
 }
 
 /** Perfekt: вспомогательный берём из таблицы, а не выводим правилом — он нерегулярный. */

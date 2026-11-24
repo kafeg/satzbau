@@ -29,6 +29,17 @@ describe('очередь заданий', () => {
     expect(items.every((i) => i.rule === 'wechsel-wo')).toBe(true)
   })
 
+  // ⚠ Обход стопок идёт по кругу и берёт по одному заданию, поэтому при порядке
+  // шаблонов «как в файле» сессия из двенадцати заданий состояла из ПЕРВЫХ двенадцати
+  // шаблонов всегда: восемь правил из сорока двух, остальное было недостижимо.
+  it('вперемешку достаёт все правила, а не первые по файлу', () => {
+    const seen = new Set<string>()
+    for (let seed = 0; seed < 60; seed++) {
+      for (const i of newSession({ seed })) seen.add(i.rule)
+    }
+    expect(seen.size).toBe(new Set(bundle.templates.map((t) => t.rule)).size)
+  })
+
   it('слова темы идут раньше остальных', () => {
     const items = newSession({ theme: 'food', size: 30, seed: 8 })
     const mine = items.filter((i) => i.theme === 'food').length

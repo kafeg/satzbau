@@ -35,7 +35,10 @@ export function Drill({
   useEffect(() => onVoices(() => setVoice(!!germanVoice())), [])
 
   const answered = given !== null
-  const correct = given === item.answer
+  // ⚠ Сравнение нечувствительно к регистру и принимает все верные формы: пропуск
+  // в начале фразы человек пишет с заглавной, а у императива форм бывает две.
+  const accepted = [item.answer, ...(item.answers ?? [])].map((a) => a.toLowerCase())
+  const correct = given !== null && accepted.includes(given.toLowerCase())
   const article = item.ctx.nom_article
   // в шапке короткое имя правила (поле name), а в сессии вперемешку — тема и уровень:
   // длинный title — это заголовок разбора, во фразу-чип он не помещается
