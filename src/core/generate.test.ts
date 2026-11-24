@@ -90,6 +90,43 @@ describe(`инвариант генератора: ${all.length} заданий`
   })
 })
 
+// ⚠ Шаблон, у которого ответ один на всё наполнение, ничему не учит: со второго
+// задания его дают не читая фразу. Таких было девятнадцать, и нашлись они только
+// разбором соседних приложений. Проверка постоянная, чтобы класс не вернулся молча.
+describe('ответ зависит от слова', () => {
+  // Исключения — там, где постоянный ответ и ЕСТЬ правило. Каждое с причиной.
+  const KNOWN: Record<string, string> = {
+    'merge-wo-in': 'пара im/ins и есть правило: человек читает вопрос, а не слово',
+    'merge-wohin-in': 'то же',
+    'nicht-kein-mit': 'выбор виден только из пары шаблонов: с артиклем всегда nicht',
+    'passiv-das': 'подлежащее «Das» единственного числа, отсюда всегда wird',
+    'adj-nom-ding': 'после der окончание -e во всех трёх родах — это и есть правило',
+    'adj-plural-die': 'во множественном после артикля всегда -en',
+    'adj-dat-en-neu': 'в Dativ окончание -en во всех родах',
+    'adj-dat-en-klein': 'то же',
+    'perfekt-aux-action': 'работы по дому все переходные, отсюда habe. Перекос лексикона',
+    'verb-prep-ding': 'одно слово в наполнении: hängen',
+  }
+  const share = (t: (typeof bundle.templates)[number]) => {
+    const its = itemsFor(t, words)
+    if (!its.length) return 0
+    const freq = new Map<string, number>()
+    for (const i of its) freq.set(i.answer, (freq.get(i.answer) ?? 0) + 1)
+    return Math.max(...freq.values()) / its.length
+  }
+  // ввод проверяется тоже: постоянный ответ бесполезен и там
+  const constant = bundle.templates.filter((t) => share(t) > 0.95)
+
+  it('ответ не бывает одним на весь шаблон, кроме объяснённых случаев', () => {
+    expect(constant.filter((t) => !(t.id in KNOWN)).map((t) => t.id)).toEqual([])
+  })
+
+  it('в списке исключений нет устаревших записей', () => {
+    const ids = new Set(constant.map((t) => t.id))
+    expect(Object.keys(KNOWN).filter((id) => !ids.has(id))).toEqual([])
+  })
+})
+
 describe('парадигмы', () => {
   it('инвентарь определённого артикля — шесть различных форм', () => {
     expect(inventory('def_article').sort()).toEqual(['das', 'dem', 'den', 'der', 'des', 'die'])
