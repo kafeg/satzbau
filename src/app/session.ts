@@ -20,10 +20,15 @@ export interface Pick {
 
 export interface RuleInfo {
   rule: string
+  name: string
+  group: string
   title: string
   level: Level
   count: number
 }
+
+/** Порядок блоков на главной. Внутри блока — порядок написания шаблонов. */
+export const GROUPS = ['падеж', 'артикль', 'существительное', 'прилагательное', 'глагол']
 
 const LEVELS = { A1: 1, A2: 2, B1: 3 } as const
 
@@ -67,9 +72,12 @@ export function rules(p: Pick = {}): RuleInfo[] {
   templatesOf({ level: p.level }).forEach((t, at) => {
     const got = out.get(t.rule)
     const level = got && LEVELS[got.level] < LEVELS[t.level] ? got.level : t.level
+    const e = bundle.explain[t.rule]
     out.set(t.rule, {
       rule: t.rule,
-      title: bundle.explain[t.rule]?.title ?? t.rule,
+      name: e?.name ?? t.rule,
+      group: e?.group ?? 'падеж',
+      title: e?.title ?? t.rule,
       level,
       count: (got?.count ?? 0) + fillingFor(t, words).length,
       at: got?.at ?? at,

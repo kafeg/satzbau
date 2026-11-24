@@ -31,6 +31,9 @@ const FLAGS: Record<string, (e: Noun & Verb & Adj) => boolean> = {
   nd: (e) => !!e.nd,
   // отделяемый глагол: приставка уедет в конец фразы, и рамка с хвостом сломается
   sep: (e) => !!e.p3?.includes(' '),
+  aux_s: (e) => e.aux === 's',
+  // только с sich: «Er bewirbt oft» — не немецкий язык
+  reflexive: (e) => !!e.refl,
   adjdecl: (e) => !!e.adjdecl,
   mass: (e) => !!e.mass,
   aux_hs: (e) => e.aux === 'hs',

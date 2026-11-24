@@ -44,19 +44,19 @@ transport:
     - {w: Fahrer,        pos: n, lv: A1, tags: [person]}
     - {w: Linie,         pos: n, lv: A1, tags: [abstract]}
     - {w: Richtung,      pos: n, lv: A1, tags: [abstract]}
-    - {w: fahren,        pos: v, lv: A1, tags: [motion]}
-    - {w: gehen,         pos: v, lv: A1, tags: [motion]}
-    - {w: kommen,        pos: v, lv: A1, tags: [motion]}
-    - {w: fliegen,       pos: v, lv: A1, tags: [motion]}
-    - {w: laufen,        pos: v, lv: A1, tags: [motion]}
-    - {w: einsteigen,    pos: v, lv: A1, tags: [motion]}
-    - {w: aussteigen,    pos: v, lv: A1, tags: [motion]}
-    - {w: umsteigen,     pos: v, lv: A1, tags: [motion]}
-    - {w: abfahren,      pos: v, lv: A1, tags: [motion]}
-    - {w: ankommen,      pos: v, lv: A1, tags: [motion]}
-    - {w: warten,        pos: v, lv: A1, tags: [state]}
-    - {w: halten,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: parken,        pos: v, lv: A1, tags: [state]}
+    - {w: fahren,        pos: v, lv: A1, tags: [motion, solo]}
+    - {w: gehen,         pos: v, lv: A1, tags: [motion, solo]}
+    - {w: kommen,        pos: v, lv: A1, tags: [motion, solo]}
+    - {w: fliegen,       pos: v, lv: A1, tags: [motion, solo]}
+    - {w: laufen,        pos: v, lv: A1, tags: [motion, solo]}
+    - {w: einsteigen,    pos: v, lv: A1, tags: [motion, solo]}
+    - {w: aussteigen,    pos: v, lv: A1, tags: [motion, solo]}
+    - {w: umsteigen,     pos: v, lv: A1, tags: [motion, solo]}
+    - {w: abfahren,      pos: v, lv: A1, tags: [motion, solo]}
+    - {w: ankommen,      pos: v, lv: A1, tags: [motion, solo]}
+    - {w: warten,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: halten,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: parken,        pos: v, lv: A1, tags: [state, solo]}
     - {w: dauern,        pos: v, lv: A1, tags: [state]}
     - {w: kosten,        pos: v, lv: A1, tags: [state, obj]}
     - {w: schnell,       pos: a, lv: A1, tags: [quality]}
@@ -92,8 +92,8 @@ transport:
     - {w: buchen,        pos: v, lv: A2, tags: [state, obj]}
     - {w: reservieren,   pos: v, lv: A2, tags: [state, obj]}
     - {w: entwerten,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: tanken,        pos: v, lv: A2, tags: [state, obj]}
-    - {w: abbiegen,      pos: v, lv: A2, tags: [motion]}
+    - {w: tanken,        pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: abbiegen,      pos: v, lv: A2, tags: [motion, solo]}
     - {w: mieten,        pos: v, lv: A2, tags: [state, obj, housework]}
     - {w: pünktlich,     pos: a, lv: A2, tags: [quality]}
     - {w: direkt,        pos: a, lv: A2, tags: [quality]}
@@ -113,7 +113,7 @@ transport:
     - {w: Abteil,        pos: n, lv: B1, tags: [place]}
     - {w: entfallen,     pos: v, lv: B1, tags: [state]}
     - {w: erstatten,     pos: v, lv: B1, tags: [state, obj]}
-    - {w: kontrollieren, pos: v, lv: B1, tags: [state, obj]}
+    - {w: kontrollieren, pos: v, lv: B1, tags: [state, obj, solo]}
     - {w: barrierefrei,  pos: a, lv: B1, tags: [quality]}
 
 home:
@@ -157,19 +157,19 @@ home:
     - {w: Schlüssel,     pos: n, lv: A1, tags: [thing]}
     - {w: Nachbar,       pos: n, lv: A1, tags: [person]}
     - {w: wohnen,        pos: v, lv: A1, tags: [state]}
-    - {w: stehen,        pos: v, lv: A1, tags: [position]}
-    - {w: liegen,        pos: v, lv: A1, tags: [position]}
-    - {w: sitzen,        pos: v, lv: A1, tags: [position]}
+    - {w: stehen,        pos: v, lv: A1, tags: [position, solo]}
+    - {w: liegen,        pos: v, lv: A1, tags: [position, solo]}
+    - {w: sitzen,        pos: v, lv: A1, tags: [position, solo]}
     - {w: hängen,        pos: v, lv: A1, tags: [position]}
     - {w: stellen,       pos: v, lv: A1, tags: [placement, obj]}
     - {w: legen,         pos: v, lv: A1, tags: [placement, obj]}
     - {w: setzen,        pos: v, lv: A1, tags: [placement, obj]}
-    - {w: kochen,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: schlafen,      pos: v, lv: A1, tags: [state]}
-    - {w: duschen,       pos: v, lv: A1, tags: [state]}
-    - {w: aufräumen,     pos: v, lv: A1, tags: [state, obj, housework]}
-    - {w: putzen,        pos: v, lv: A1, tags: [state, obj, housework]}
-    - {w: umziehen,      pos: v, lv: A1, tags: [motion]}
+    - {w: kochen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: schlafen,      pos: v, lv: A1, tags: [state, solo]}
+    - {w: duschen,       pos: v, lv: A1, tags: [state, solo]}
+    - {w: aufräumen,     pos: v, lv: A1, tags: [state, obj, housework, solo]}
+    - {w: putzen,        pos: v, lv: A1, tags: [state, obj, housework, solo]}
+    - {w: umziehen,      pos: v, lv: A1, tags: [motion, solo]}
     - {w: groß,          pos: a, lv: A1, tags: [quality]}
     - {w: klein,         pos: a, lv: A1, tags: [quality]}
     - {w: hell,          pos: a, lv: A1, tags: [quality]}
@@ -197,12 +197,12 @@ home:
     - {w: Anmeldung,     pos: n, lv: A2, tags: [document]}
     - {w: Umzug,         pos: n, lv: A2, tags: [abstract]}
     - {w: anmelden,      pos: v, lv: A2, tags: [state, obj]}
-    - {w: kündigen,      pos: v, lv: A2, tags: [state, obj, housework]}
-    - {w: renovieren,    pos: v, lv: A2, tags: [state, obj, housework]}
-    - {w: streichen,     pos: v, lv: A2, tags: [state, obj, housework]}
-    - {w: reparieren,    pos: v, lv: A2, tags: [state, obj, housework]}
-    - {w: heizen,        pos: v, lv: A2, tags: [state, obj, housework]}
-    - {w: lüften,        pos: v, lv: A2, tags: [state, obj, housework]}
+    - {w: kündigen,      pos: v, lv: A2, tags: [state, obj, housework, solo]}
+    - {w: renovieren,    pos: v, lv: A2, tags: [state, obj, housework, solo]}
+    - {w: streichen,     pos: v, lv: A2, tags: [state, obj, housework, solo]}
+    - {w: reparieren,    pos: v, lv: A2, tags: [state, obj, housework, solo]}
+    - {w: heizen,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
+    - {w: lüften,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
     - {w: möbliert,      pos: a, lv: A2, tags: [quality]}
     - {w: zentral,       pos: a, lv: A2, tags: [quality]}
     - {w: gemütlich,     pos: a, lv: A2, tags: [quality]}
@@ -278,13 +278,13 @@ food:
     - {w: Kellner,       pos: n, lv: A1, tags: [person]}
     - {w: Hunger,        pos: n, lv: A1, tags: [abstract]}
     - {w: Durst,         pos: n, lv: A1, tags: [abstract]}
-    - {w: essen,         pos: v, lv: A1, tags: [state, obj]}
-    - {w: trinken,       pos: v, lv: A1, tags: [state, obj]}
-    - {w: kaufen,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: bezahlen,      pos: v, lv: A1, tags: [state, obj]}
-    - {w: bestellen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: essen,         pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: trinken,       pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: kaufen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: bezahlen,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: bestellen,     pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: schmecken,     pos: v, lv: A1, tags: [state]}
-    - {w: backen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: backen,        pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: lecker,        pos: a, lv: A1, tags: [quality]}
     - {w: frisch,        pos: a, lv: A1, tags: [quality]}
     - {w: süß,           pos: a, lv: A1, tags: [quality]}
@@ -309,10 +309,10 @@ food:
     - {w: Angebot,       pos: n, lv: A2, tags: [money]}
     - {w: Pfand,         pos: n, lv: A2, tags: [money]}
     - {w: Trinkgeld,     pos: n, lv: A2, tags: [money]}
-    - {w: probieren,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: schneiden,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: braten,        pos: v, lv: A2, tags: [state, obj]}
-    - {w: einkaufen,     pos: v, lv: A2, tags: [state]}
+    - {w: probieren,     pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: schneiden,     pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: braten,        pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: einkaufen,     pos: v, lv: A2, tags: [state, solo]}
     - {w: mitnehmen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: empfehlen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: scharf,        pos: a, lv: A2, tags: [quality]}
@@ -362,18 +362,18 @@ work:
     - {w: Bildschirm,    pos: n, lv: A1, tags: [appliance]}
     - {w: Tastatur,      pos: n, lv: A1, tags: [appliance]}
     - {w: Schreibtisch,  pos: n, lv: A1, tags: [furniture, surface]}
-    - {w: arbeiten,      pos: v, lv: A1, tags: [state]}
-    - {w: verdienen,     pos: v, lv: A1, tags: [state, obj]}
-    - {w: anfangen,      pos: v, lv: A1, tags: [state, obj]}
-    - {w: aufhören,      pos: v, lv: A1, tags: [state]}
-    - {w: schreiben,     pos: v, lv: A1, tags: [state, obj]}
-    - {w: lesen,         pos: v, lv: A1, tags: [state, obj]}
-    - {w: telefonieren,  pos: v, lv: A1, tags: [state]}
-    - {w: drucken,       pos: v, lv: A1, tags: [state, obj]}
-    - {w: fragen,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: antworten,     pos: v, lv: A1, tags: [state]}
-    - {w: helfen,        pos: v, lv: A1, tags: [state]}
-    - {w: lernen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: arbeiten,      pos: v, lv: A1, tags: [state, solo]}
+    - {w: verdienen,     pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: anfangen,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: aufhören,      pos: v, lv: A1, tags: [state, solo]}
+    - {w: schreiben,     pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: lesen,         pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: telefonieren,  pos: v, lv: A1, tags: [state, solo]}
+    - {w: drucken,       pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: fragen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: antworten,     pos: v, lv: A1, tags: [state, solo]}
+    - {w: helfen,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: lernen,        pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: wichtig,       pos: a, lv: A1, tags: [quality]}
     - {w: schwer,        pos: a, lv: A1, tags: [quality]}
     - {w: leicht,        pos: a, lv: A1, tags: [quality]}
@@ -407,7 +407,7 @@ work:
     - {w: verschieben,   pos: v, lv: A2, tags: [state, obj]}
     - {w: erledigen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: besprechen,    pos: v, lv: A2, tags: [state, obj]}
-    - {w: unterschreiben, pos: v, lv: A2, tags: [state, obj]}
+    - {w: unterschreiben, pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: beruflich,     pos: a, lv: A2, tags: [quality]}
     - {w: selbstständig, pos: a, lv: A2, tags: [quality]}
     - {w: zuverlässig,   pos: a, lv: A2, tags: [quality]}
@@ -423,7 +423,7 @@ work:
     - {w: Abmahnung,     pos: n, lv: B1, tags: [document]}
     - {w: Krankmeldung,  pos: n, lv: B1, tags: [document]}
     - {w: entlassen,     pos: v, lv: B1, tags: [state, obj]}
-    - {w: verhandeln,    pos: v, lv: B1, tags: [state]}
+    - {w: verhandeln,    pos: v, lv: B1, tags: [state, solo]}
     - {w: beantragen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: einreichen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: vertreten,     pos: v, lv: B1, tags: [state, obj]}
@@ -470,12 +470,12 @@ health:
     - {w: Schnupfen,     pos: n, lv: A1, tags: [illness]}
     - {w: Erkältung,     pos: n, lv: A1, tags: [illness]}
     - {w: Grippe,        pos: n, lv: A1, tags: [illness]}
-    - {w: untersuchen,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: untersuchen,   pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: messen,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: husten,        pos: v, lv: A1, tags: [state]}
-    - {w: atmen,         pos: v, lv: A1, tags: [state]}
+    - {w: husten,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: atmen,         pos: v, lv: A1, tags: [state, solo]}
     - {w: fühlen,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: schlucken,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: schlucken,     pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: krank,         pos: a, lv: A1, tags: [quality]}
     - {w: gesund,        pos: a, lv: A1, tags: [quality]}
     - {w: stark,         pos: a, lv: A1, tags: [quality]}
@@ -498,13 +498,13 @@ health:
     - {w: Hausarzt,      pos: n, lv: A2, tags: [person]}
     - {w: Facharzt,      pos: n, lv: A2, tags: [person]}
     - {w: Allergie,      pos: n, lv: A2, tags: [illness]}
-    - {w: behandeln,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: behandeln,     pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: verschreiben,  pos: v, lv: A2, tags: [state, obj]}
-    - {w: operieren,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: operieren,     pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: einnehmen,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: impfen,        pos: v, lv: A2, tags: [state, obj]}
+    - {w: impfen,        pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: verletzen,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: bluten,        pos: v, lv: A2, tags: [state]}
+    - {w: bluten,        pos: v, lv: A2, tags: [state, solo]}
     - {w: schwanger,     pos: a, lv: A2, tags: [quality]}
     - {w: verletzt,      pos: a, lv: A2, tags: [quality]}
     - {w: ansteckend,    pos: a, lv: A2, tags: [quality]}
@@ -563,13 +563,13 @@ kids:
     - {w: Schnuller,     pos: n, lv: A1, tags: [thing]}
     - {w: Kinderwagen,   pos: n, lv: A1, tags: [thing]}
     - {w: Brotdose,      pos: n, lv: A1, tags: [thing]}
-    - {w: spielen,       pos: v, lv: A1, tags: [state]}
-    - {w: malen,         pos: v, lv: A1, tags: [state, obj]}
-    - {w: singen,        pos: v, lv: A1, tags: [state, obj]}
-    - {w: vorlesen,      pos: v, lv: A1, tags: [state, obj]}
-    - {w: basteln,       pos: v, lv: A1, tags: [state, obj]}
-    - {w: weinen,        pos: v, lv: A1, tags: [state]}
-    - {w: lachen,        pos: v, lv: A1, tags: [state]}
+    - {w: spielen,       pos: v, lv: A1, tags: [state, solo]}
+    - {w: malen,         pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: singen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: vorlesen,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: basteln,       pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: weinen,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: lachen,        pos: v, lv: A1, tags: [state, solo]}
     - {w: abholen,       pos: v, lv: A1, tags: [motion, obj]}
     - {w: bringen,       pos: v, lv: A1, tags: [state, obj]}
     - {w: füttern,       pos: v, lv: A1, tags: [state, obj]}
@@ -600,9 +600,9 @@ kids:
     - {w: beruhigen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: trösten,       pos: v, lv: A2, tags: [state, obj]}
     - {w: loben,         pos: v, lv: A2, tags: [state, obj]}
-    - {w: streiten,      pos: v, lv: A2, tags: [state]}
+    - {w: streiten,      pos: v, lv: A2, tags: [state, solo]}
     - {w: teilen,        pos: v, lv: A2, tags: [state, obj]}
-    - {w: aufpassen,     pos: v, lv: A2, tags: [state]}
+    - {w: aufpassen,     pos: v, lv: A2, tags: [state, solo]}
     - {w: anstrengend,   pos: a, lv: A2, tags: [quality]}
     - {w: geduldig,      pos: a, lv: A2, tags: [quality]}
     - {w: trocken,       pos: a, lv: A2, tags: [quality]}

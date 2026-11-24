@@ -23,6 +23,8 @@ FLAGS = {name: (lambda n: lambda r: bool(r.get(n)))(name)
          for name in ('pl_only', 'plu', 'npl', 'mass', 'nd', 'adjdecl')}
 FLAGS['aux_hs'] = lambda r: r.get('aux') == 'hs'
 FLAGS['sep'] = lambda r: ' ' in (r.get('p3') or '')
+FLAGS['aux_s'] = lambda r: r.get('aux') == 's'
+FLAGS['reflexive'] = lambda r: bool(r.get('refl'))
 errors, warns, notes = [], [], []
 
 
@@ -159,13 +161,20 @@ def main():
         (warns if share < 25 else notes).append(
             line + (' — шаблонов на эту тему почти нет' if share < 25 else ''))
 
+    groups = {'падеж', 'артикль', 'существительное', 'прилагательное', 'глагол'}
     for r in rules:
-        for k in ('title', 'short', 'ru_contrast', 'steps'):
+        for k in ('name', 'group', 'title', 'short', 'ru_contrast', 'steps'):
             if k not in (explain.get(r) or {}):
                 errors.append(f'объяснение {r}: нет поля {k}')
-        # title показывается в списке правил на главной, где задания нет и подставить нечего
-        if '{' in (explain.get(r) or {}).get('title', ''):
-            errors.append(f'объяснение {r}: в title есть подстановка — он виден вне задания')
+        e = explain.get(r) or {}
+        # name и title показываются вне задания — подставлять там нечего
+        for k in ('name', 'title'):
+            if '{' in e.get(k, ''):
+                errors.append(f'объяснение {r}: в {k} есть подстановка — он виден вне задания')
+        if e.get('group') and e['group'] not in groups:
+            errors.append(f'объяснение {r}: группа {e["group"]!r} вне списка {sorted(groups)}')
+        if len((e.get('name') or '').split()) > 4:
+            warns.append(f'объяснение {r}: имя из {len(e["name"].split())} слов — в списке не поместится')
     unused = set(explain) - {t['why'] for t in templates}
     if unused:
         notes.append(f'объяснения без шаблона: {", ".join(sorted(unused))}')

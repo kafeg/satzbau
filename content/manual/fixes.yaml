@@ -129,6 +129,11 @@ mass:
 #    во множественном. Данные их не отличают: у Möbel, Lebensmittel, Geschwister
 #    в nouns.csv стоит род n. Решение педагогическое: не даём в задания на
 #    артикль единственного числа.
+# Глаголы, которые в тренируемом значении живут только с sich: «sich bewerben».
+# Без пометки рамка без sich даёт неграмматичное «Er bewirbt oft».
+reflexive:
+  - bewerben
+
 plural_in_use:
   - Möbel
   - Lebensmittel

@@ -34,6 +34,7 @@ export interface Verb {
   k2?: string
   gov?: string[]
   auxn?: string
+  refl?: 1
   ru?: string
 }
 
@@ -101,6 +102,10 @@ export interface Template {
 }
 
 export interface Explanation {
+  /** короткое имя для списка правил */
+  name: string
+  /** блок на главной */
+  group: string
   title: string
   short: string
   ru_contrast: string

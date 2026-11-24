@@ -117,12 +117,12 @@
 # человек отвечает `bin` не глядя на глагол и прав в 12 случаях из 13. Второй шаблон
 # добавляет 16 глаголов, все на haben: по правилу выходит 12 sein против 17 haben,
 # и ответ без чтения глагола не угадать. Баланс нужен на уровне правила, не шаблона.
-- id: perfekt-aux-motion
+- id: perfekt-aux-solo
   rule: perfekt-aux
   level: A1
   kind: choice
   frame: "Ich {slot} gestern {pp}."
-  need: {pos: v, tags: [motion], not: [aux_hs, obj]}
+  need: {pos: v, tags: [solo], not: [aux_hs, reflexive]}
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
   options: {paradigm: aux_present, count: 2}
   why: perfekt-aux
@@ -256,14 +256,24 @@
   slot: {paradigm: participle}
   why: perfekt-partizip
 
-# Отделяемые глаголы исключены: у них приставка уходит в конец фразы, а в рамке
-# после пропуска стоит «oft» — вышло бы «Er zieht um oft».
+# Условие — не тема, а тег solo: «Er erreicht oft» не фраза, потому что erreichen
+# требует объект. Отделяемые исключены: приставка уходит в конец, а после пропуска
+# стоит «oft» — вышло бы «Er zieht um oft».
+- id: partizip-gestern
+  rule: perfekt-partizip
+  level: A1
+  kind: input
+  frame: "Gestern habe ich {slot}."
+  need: {pos: v, tags: [solo], not: [sep, aux_s, aux_hs, reflexive]}
+  slot: {paradigm: participle}
+  why: perfekt-partizip
+
 - id: praesens-er
   rule: praesens-3sg
   level: A1
   kind: input
   frame: "Er {slot} oft."
-  need: {pos: v, tags: [motion, housework], not: [sep]}
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
   slot: {paradigm: verb_present, person: 3sg}
   why: praesens-3sg
 
@@ -272,7 +282,7 @@
   level: A1
   kind: input
   frame: "Du {slot} oft."
-  need: {pos: v, tags: [motion, housework], not: [sep]}
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
   slot: {paradigm: verb_present, person: 2sg}
   why: praesens-2sg
 

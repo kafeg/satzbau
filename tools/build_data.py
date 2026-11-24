@@ -233,6 +233,8 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep):
             v['aux'] = amb['use']
     if amb and amb.get('note'):
         v['auxn'] = amb['note']
+    if base in fixes['reflexive']:
+        v['refl'] = 1
     k2 = kform(ke, 'past', 'subjunctive')
     if k2 and k2 != pt:
         v['k2'] = k2
@@ -460,7 +462,8 @@ def main():
                  mass=set(fx.get('mass') or []),
                  adj_decl_extra=set(fx.get('adj_declined_extra') or []),
                  translations=fx.get('translations') or {},
-                 aux_ambiguous=fx.get('aux_ambiguous') or {})
+                 aux_ambiguous=fx.get('aux_ambiguous') or {},
+                 reflexive=set(fx.get('reflexive') or []))
 
     words = [dict(w, theme=th) for th, v in themes.items() for w in v['words']]
     lemmas = {w['w'] for w in words} | {w['w'][5:] for w in words if w['w'].startswith('sich ')}

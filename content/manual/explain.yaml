@@ -2,13 +2,17 @@
 # Это главная ценность приложения, и сгенерировать его нельзя.
 #
 # Поля:
-#   title        заголовок разбора; он же строка правила на главной, поэтому БЕЗ подстановок
+#   name         короткое имя для списка правил: 2–4 слова, без подстановок
+#   group        блок на главной: падеж | артикль | существительное | прилагательное | глагол
+#   title        заголовок разбора; виден и вне задания, поэтому тоже БЕЗ подстановок
 #   short        одна строка для списка ошибок («мои ошибки»)
 #   ru_contrast  сопоставление с русским падежом — ядро объяснения
 #   steps        шаги разбора; {…} подставляет генератор
 #   more         что ещё работает по этому правилу
 
 prep-dativ:
+  name: Предлоги + Dativ
+  group: падеж
   title: Предлоги, которые всегда требуют Dativ
   short: "{prep} + Dativ"
   ru_contrast: >-
@@ -24,6 +28,8 @@ prep-dativ:
     Их восемь, и их стоит выучить списком — тогда половина падежей решается без размышлений.
 
 prep-akkusativ:
+  name: Предлоги + Akkusativ
+  group: падеж
   title: Предлоги, которые всегда требуют Akkusativ
   short: "{prep} + Akkusativ"
   ru_contrast: >-
@@ -40,6 +46,8 @@ prep-akkusativ:
     für einen Mann.
 
 wechsel-wo:
+  name: wo? → Dativ
+  group: падеж
   title: Предлог с двумя падежами, вопрос wo? — значит Dativ
   short: "{prep} + wo? → Dativ"
   ru_contrast: >-
@@ -56,6 +64,8 @@ wechsel-wo:
     Подсказка по глаголу: stehen, liegen, sitzen, hängen, sein — это место, значит Dativ.
 
 wechsel-wohin:
+  name: wohin? → Akkusativ
+  group: падеж
   title: Предлог с двумя падежами, вопрос wohin? — значит Akkusativ
   short: "{prep} + wohin? → Akkusativ"
   ru_contrast: >-
@@ -72,6 +82,8 @@ wechsel-wohin:
     и ошибка не видна — но падеж всё равно другой.
 
 merge-prep-article:
+  name: im, ins, zum
+  group: артикль
   title: Предлог и артикль сливаются, и падеж пропадает из вида
   short: "in + dem = im"
   ru_contrast: >-
@@ -88,6 +100,8 @@ merge-prep-article:
     Проверка на себе: если видишь im — мысленно разверни в in dem, и падеж вернётся.
 
 adj-dat-en:
+  name: Прилагательное в Dativ
+  group: прилагательное
   title: Окончание прилагательного в Dativ
   short: "Dativ → прилагательное на -en"
   ru_contrast: >-
@@ -104,6 +118,8 @@ adj-dat-en:
     одно правило вместо таблицы.
 
 perfekt-aux:
+  name: "Perfekt: haben или sein"
+  group: глагол
   title: "Perfekt: haben или sein"
   short: "{w} → Perfekt с {answer}"
   ru_contrast: >-
@@ -121,6 +137,8 @@ perfekt-aux:
     haben. Такие в задания не попадают, пока не размечены вручную.
 
 akkusativ-objekt:
+  name: "Akkusativ: прямой объект"
+  group: падеж
   title: Прямой объект стоит в Akkusativ
   short: brauchen + Akkusativ
   ru_contrast: >-
@@ -139,6 +157,8 @@ akkusativ-objekt:
     спрашивают по падежу, а не наоборот.
 
 nominativ-subjekt:
+  name: "Nominativ: подлежащее"
+  group: падеж
   title: Nominativ — падеж подлежащего и словарной формы
   short: подлежащее → Nominativ
   ru_contrast: >-
@@ -155,6 +175,8 @@ nominativ-subjekt:
     и если род не выучен, не поможет никакое правило.
 
 possessiv-nominativ:
+  name: mein, meine
+  group: артикль
   title: mein склоняется как ein
   short: "mein или meine — по роду слова"
   ru_contrast: >-
@@ -170,6 +192,8 @@ possessiv-nominativ:
     Выучив kein, вы уже знаете mein. Во множественном числе всегда meine: meine Augen.
 
 negation-kein:
+  name: kein
+  group: артикль
   title: kein — отрицание существительного
   short: нет предмета → kein, а не nicht
   ru_contrast: >-
@@ -186,6 +210,8 @@ negation-kein:
     то отрицание будет nicht, а не kein.
 
 plural-form:
+  name: Множественное число
+  group: существительное
   title: Множественное число учится вместе со словом
   short: "множественное: {answer}"
   ru_contrast: >-
@@ -202,6 +228,8 @@ plural-form:
     die Flasche — die Flaschen.
 
 perfekt-partizip:
+  name: Partizip II
+  group: глагол
   title: "Partizip II: когда ge-, а когда нет"
   short: "Partizip II: {answer}"
   ru_contrast: >-
@@ -219,6 +247,8 @@ perfekt-partizip:
     А сильные глаголы берут -en вместо -t: gestrichen.
 
 praesens-3sg:
+  name: "Präsens: er"
+  group: глагол
   title: Третье лицо — -t, а у сильных глаголов ещё и другая гласная
   short: "er → {answer}"
   ru_contrast: >-
@@ -235,6 +265,8 @@ praesens-3sg:
     ich fahre и wir fahren остаются без перегласовки.
 
 praesens-2sg:
+  name: "Präsens: du"
+  group: глагол
   title: Второе лицо — -st, и та же смена гласной
   short: "du → {answer}"
   ru_contrast: >-
