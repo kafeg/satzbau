@@ -1,20 +1,11 @@
-// Главная: что тренировать. Правило — единица обучения, тема — вторая ось: она даёт слова.
-// Карточка сверху — всё вперемешку; на Э5 её место займёт повторение ошибок по FSRS.
+// Главная: тема — вход, грамматика — список ниже. Человек приходит с «в среду врач»,
+// а не с «хочу Dativ», поэтому сетка тем стоит первой.
 
+import { useState } from 'react'
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { countFor, rules, SIZE } from './session.ts'
-
-/** «1 задание, 2 задания, 5 заданий» — иначе цифры в списке читаются как опечатка. */
-function tasks(n: number): string {
-  const ten = n % 100
-  if (ten > 10 && ten < 20) return `${n} заданий`
-  const one = n % 10
-  if (one === 1) return `${n} задание`
-  if (one >= 2 && one <= 4) return `${n} задания`
-  return `${n} заданий`
-}
+import { countFor, GROUPS, rules, SIZE, tasks } from './session.ts'
 
 const LEVELS: { key: Level | undefined; label: string }[] = [
   { key: 'A1', label: 'A1' },
@@ -22,20 +13,16 @@ const LEVELS: { key: Level | undefined; label: string }[] = [
   { key: undefined, label: 'всё' },
 ]
 
-export function Home({
-  theme,
-  level,
-  onTheme,
-  onLevel,
-}: {
-  theme?: string
-  level?: Level
-  onTheme: (t?: string) => void
-  onLevel: (l?: Level) => void
-}) {
-  const themes = Object.entries(getBundle().themes)
-  const list = rules({ theme, level })
-  const total = countFor({ theme, level })
+export function Home({ level, onLevel }: { level?: Level; onLevel: (l?: Level) => void }) {
+  const [open, setOpen] = useState<string | null>(null)
+  const bundle = getBundle()
+  const all = rules({ level })
+  const themes = Object.entries(bundle.themes).map(([key, t]) => ({
+    key,
+    title: t.title,
+    words: t.words.length,
+    live: rules({ level, theme: key }).filter((r) => r.count > 0).length,
+  }))
 
   return (
     <main className="home">
@@ -54,49 +41,74 @@ export function Home({
         </div>
       </div>
 
-      <button className="mix" onClick={() => go({ screen: 'drill' })}>
-        <span className="mix-title">Всё вперемешку</span>
-        <span className="mix-sub">
-          {tasks(SIZE)} · из {total} возможных
-        </span>
-      </button>
-
-      <h2 className="section">Лексика</h2>
-      <div className="chips">
-        <button
-          className={`chip${theme ? '' : ' on'}`}
-          onClick={() => onTheme(undefined)}
-        >
-          все темы
-        </button>
-        {themes.map(([key, t]) => (
-          <button
-            key={key}
-            className={`chip${theme === key ? ' on' : ''}`}
-            onClick={() => onTheme(theme === key ? undefined : key)}
-          >
-            {t.title}
+      <h2 className="section">
+        <span>О чём говорим</span>
+        <span>{themes.length} тем</span>
+      </h2>
+      <div className="tiles">
+        {themes.map((t) => (
+          <button key={t.key} className="tile" onClick={() => go({ screen: 'theme', theme: t.key })}>
+            <span className="tname">{t.title}</span>
+            <span className="tsub">
+              {t.words} слов · {t.live} правил
+            </span>
           </button>
         ))}
       </div>
 
-      <h2 className="section">Грамматика</h2>
-      <ul className="rules">
-        {list.map((r) => (
-          <li key={r.rule}>
-            <button
-              className="rule"
-              disabled={r.count === 0}
-              onClick={() => go({ screen: 'drill', rule: r.rule })}
-            >
-              <span className="rule-title">{r.title}</span>
-              <span className="rule-sub">
-                {r.level} · {r.count === 0 ? 'нет слов в этой теме' : tasks(r.count)}
-              </span>
-            </button>
-          </li>
-        ))}
+      <h2 className="section">
+        <span>Или просто</span>
+      </h2>
+      <button className="mix" onClick={() => go({ screen: 'drill' })}>
+        <span className="mix-title">Всё вперемешку</span>
+        <span className="mix-sub">
+          {tasks(SIZE)} из {countFor({ level })}
+        </span>
+      </button>
+
+      <h2 className="section">
+        <span>Грамматика целиком</span>
+        <span>{all.length} правил</span>
+      </h2>
+      <ul className="groups">
+        {GROUPS.map((g) => {
+          const rs = all.filter((r) => r.group === g)
+          if (!rs.length) return null
+          const shown = open === g
+          return (
+            <li key={g} className="group">
+              <button className="ghead" onClick={() => setOpen(shown ? null : g)}>
+                <span className="arrow">{shown ? '▾' : '▸'}</span>
+                <span className="gname">{GROUP_TITLE[g] ?? g}</span>
+                <span className="gcount">
+                  {rs.length} · {rs.reduce((n, r) => n + r.count, 0)}
+                </span>
+              </button>
+              {shown &&
+                rs.map((r) => (
+                  <button
+                    key={r.rule}
+                    className="grule"
+                    disabled={r.count === 0}
+                    onClick={() => go({ screen: 'drill', rule: r.rule })}
+                  >
+                    <span className="rname">{r.name}</span>
+                    <span className="rn mono">{r.count}</span>
+                    <span className="rlv mono">{r.level}</span>
+                  </button>
+                ))}
+            </li>
+          )
+        })}
       </ul>
     </main>
   )
+}
+
+const GROUP_TITLE: Record<string, string> = {
+  падеж: 'Падежи и предлоги',
+  артикль: 'Артикль и его родня',
+  существительное: 'Существительное',
+  прилагательное: 'Прилагательное',
+  глагол: 'Глагол',
 }

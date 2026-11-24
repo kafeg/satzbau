@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { getBundle } from '../core/bundle.ts'
 import type { Item } from '../core/types.ts'
 import { Explain } from './Explain.tsx'
-import { go } from './route.ts'
+import { go, type Route } from './route.ts'
 import { germanVoice, onVoices, speak } from './speech.ts'
 
 const GENDER_CLASS: Record<string, string> = { der: 'g-m', die: 'g-f', das: 'g-n' }
@@ -15,6 +15,7 @@ export function Drill({
   n,
   total,
   rule,
+  back,
   onNext,
 }: {
   item: Item
@@ -22,6 +23,8 @@ export function Drill({
   total: number
   /** сессия одного правила: в шапке его название, иначе тема и уровень */
   rule?: string
+  /** куда ведёт стрелка назад: на тему, если пришли оттуда */
+  back: Route
   onNext: (correct: boolean, given: string) => void
 }) {
   const [given, setGiven] = useState<string | null>(null)
@@ -54,7 +57,7 @@ export function Drill({
           <div className="fill" style={{ width: `${(n / total) * 100}%` }} />
         </div>
         <div className="row">
-          <button className="back" onClick={() => go({ screen: 'home' })} aria-label="назад">
+          <button className="back" onClick={() => go(back)} aria-label="назад">
             ←
           </button>
           <span className="chip">

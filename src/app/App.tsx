@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { Item, Level } from '../core/types.ts'
 import { Drill } from './Drill.tsx'
 import { Home } from './Home.tsx'
+import { Theme } from './Theme.tsx'
 import { loadBundle } from './load.ts'
 import { go, useRoute } from './route.ts'
 import { newSession } from './session.ts'
@@ -12,7 +13,6 @@ interface Answer {
   correct: boolean
 }
 
-const THEME_KEY = 'satzbau.theme'
 const LEVEL_KEY = 'satzbau.level'
 
 // Тема и уровень — удобство, а не прогресс: приватный просмотр их не сохранит, и ладно.
@@ -37,7 +37,6 @@ export function App() {
   const route = useRoute()
   const [ready, setReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [theme, setTheme] = useState<string | undefined>(() => read(THEME_KEY))
   const [level, setLevel] = useState<Level | undefined>(() => read(LEVEL_KEY) as Level | undefined)
   const [items, setItems] = useState<Item[]>([])
   const [at, setAt] = useState(0)
@@ -53,15 +52,10 @@ export function App() {
 
   useEffect(() => {
     if (!ready || route.screen !== 'drill') return
-    setItems(newSession({ rule: route.rule, theme, level }))
+    setItems(newSession({ rule: route.rule, theme: route.theme, level }))
     setAt(0)
     setLog([])
-  }, [ready, route.screen, route.rule, theme, level, nonce])
-
-  const pickTheme = (t?: string) => {
-    setTheme(t)
-    write(THEME_KEY, t)
-  }
+  }, [ready, route.screen, route.rule, route.theme, level, nonce])
 
   const pickLevel = (l?: Level) => {
     setLevel(l)
@@ -70,8 +64,9 @@ export function App() {
 
   if (error) return <p className="note">Данные не загрузились: {error}</p>
   if (!ready) return <p className="note">Загрузка…</p>
-  if (route.screen === 'home')
-    return <Home theme={theme} level={level} onTheme={pickTheme} onLevel={pickLevel} />
+  if (route.screen === 'home') return <Home level={level} onLevel={pickLevel} />
+  if (route.screen === 'theme')
+    return <Theme theme={route.theme as string} level={level} />
 
   const item = items[at]
   if (!item) {
@@ -96,8 +91,13 @@ export function App() {
         <button className="primary wide" onClick={() => setNonce((n) => n + 1)}>
           Ещё
         </button>
-        <button className="ghost" onClick={() => go({ screen: 'home' })}>
-          к списку правил
+        <button
+          className="ghost"
+          onClick={() =>
+            go(route.theme ? { screen: 'theme', theme: route.theme } : { screen: 'home' })
+          }
+        >
+          {route.theme ? 'к теме' : 'к списку правил'}
         </button>
       </main>
     )
@@ -110,6 +110,7 @@ export function App() {
       n={at + 1}
       total={items.length}
       rule={route.rule}
+      back={route.theme ? { screen: 'theme', theme: route.theme } : { screen: 'home' }}
       onNext={(correct, given) => {
         setLog((l) => [...l, { item, given, correct }])
         setAt((i) => i + 1)

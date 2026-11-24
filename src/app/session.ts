@@ -7,6 +7,16 @@ import type { Item, Level } from '../core/types.ts'
 
 export const SIZE = 12
 
+/** «1 задание, 2 задания, 5 заданий» — иначе цифры в списке читаются как опечатка. */
+export function tasks(n: number): string {
+  const ten = n % 100
+  if (ten > 10 && ten < 20) return `${n} заданий`
+  const one = n % 10
+  if (one === 1) return `${n} задание`
+  if (one >= 2 && one <= 4) return `${n} задания`
+  return `${n} заданий`
+}
+
 export interface Pick {
   /** id правила; без него — все правила вперемешку */
   rule?: string
@@ -54,6 +64,7 @@ function wordsOf(p: Pick) {
   )
 }
 
+
 /** Сколько заданий вообще есть под такой выбор. Считаем по наполнению, не собирая задания. */
 export function countFor(p: Pick): number {
   const words = wordsOf(p)
@@ -88,25 +99,45 @@ export function rules(p: Pick = {}): RuleInfo[] {
 
 export function newSession(p: Pick = {}): Item[] {
   const next = rng(p.seed ?? Date.now())
-  const words = wordsOf(p)
-  const byTemplate = templatesOf(p).map((t) => {
-    const b = itemsFor(t, words)
+  const words = wordsOf({ level: p.level })
+  const shuffle = (b: Item[]) => {
     for (let i = b.length - 1; i > 0; i--) {
       const j = Math.floor(next() * (i + 1))
       ;[b[i], b[j]] = [b[j] as Item, b[i] as Item]
     }
     return b
+  }
+  // ⚠ Тема — мягкий приоритет, а не фильтр. Жёсткий фильтр гасит правила, у которых слов
+  // этой темы нет вовсе: «wo?» живёт только на комнатах, «mein» — только на частях тела.
+  // Поэтому у каждого шаблона две стопки: слова темы и все остальные.
+  const buckets = templatesOf(p).map((t) => {
+    const all = itemsFor(t, words)
+    return {
+      mine: shuffle(p.theme ? all.filter((i) => i.theme === p.theme) : all),
+      rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
+    }
   })
+
   const out: Item[] = []
   const seen = new Set<string>()
-  let pos = 0
-  // по кругу шаблонам: иначе сессия правила выйдет из одного шаблона, а тем — из одной темы
-  while (out.length < (p.size ?? SIZE) && byTemplate.some((b) => b.length)) {
-    const b = byTemplate[pos++ % byTemplate.length] as Item[]
-    const i = b.pop()
-    if (!i || seen.has(i.word)) continue
-    seen.add(i.word)
-    out.push(i)
+  const size = p.size ?? SIZE
+  // сперва по кругу шаблонам разбираем слова темы, и только потом добираем остальными:
+  // иначе шаблон без слов темы съедает место, которое причиталось теме
+  for (const key of ['mine', 'rest'] as const) {
+    let pos = 0
+    let empty = 0
+    while (out.length < size && empty < buckets.length) {
+      const b = buckets[pos++ % buckets.length] as { mine: Item[]; rest: Item[] }
+      const i = b[key].pop()
+      if (!i) {
+        empty++
+        continue
+      }
+      empty = 0
+      if (seen.has(i.word)) continue
+      seen.add(i.word)
+      out.push(i)
+    }
   }
   return out
 }

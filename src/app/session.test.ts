@@ -14,10 +14,27 @@ describe('очередь заданий', () => {
     expect([...new Set(items.map((i) => i.rule))]).toEqual(['prep-dativ'])
   })
 
-  it('сессия темы берёт только её слова', () => {
+  it('сессия темы берёт прежде всего её слова', () => {
     const items = newSession({ theme: 'health', seed: 2 })
     expect(items.length).toBeGreaterThan(0)
-    expect([...new Set(items.map((i) => i.theme))]).toEqual(['health'])
+    expect(items.filter((i) => i.theme === 'health').length).toBe(items.length)
+  })
+
+  // ⚠ Тема — приоритет, а не фильтр: у «wo?» нет ни одного слова Еды, но правило
+  // не должно гаснуть — очередь добирает лексику из других тем.
+  it('правило без слов темы всё равно собирается', () => {
+    expect(countFor({ rule: 'wechsel-wo', theme: 'food' })).toBe(0)
+    const items = newSession({ rule: 'wechsel-wo', theme: 'food', seed: 6 })
+    expect(items.length).toBeGreaterThan(0)
+    expect(items.every((i) => i.rule === 'wechsel-wo')).toBe(true)
+  })
+
+  it('слова темы идут раньше остальных', () => {
+    const items = newSession({ theme: 'food', size: 30, seed: 8 })
+    const mine = items.filter((i) => i.theme === 'food').length
+    const first = items.slice(0, mine).every((i) => i.theme === 'food')
+    expect(mine).toBeGreaterThan(5)
+    expect(first).toBe(true)
   })
 
   it('уровень — потолок: A1 не пускает слова и правила выше', () => {
