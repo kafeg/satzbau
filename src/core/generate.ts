@@ -1,7 +1,15 @@
 // Генератор: шаблон × слово → задание. Задания не хранятся (docs/architecture.md).
 
-import { adjEnding, defArticle, indefArticle, inventory, merged } from './paradigms.ts'
-import { adjStem, nounForm } from './morph.ts'
+import {
+  adjEnding,
+  defArticle,
+  indefArticle,
+  inventory,
+  keinArticle,
+  merged,
+  possessive,
+} from './paradigms.ts'
+import { adjStem, nounForm, present } from './morph.ts'
 import type { Word } from './bundle.ts'
 import type { Adj, Case, Gender, Item, Need, Noun, Num, Slot, Template, Verb } from './types.ts'
 
@@ -21,6 +29,8 @@ const FLAGS: Record<string, (e: Noun & Verb & Adj) => boolean> = {
   plu: (e) => !!e.plu,
   npl: (e) => !!e.npl,
   nd: (e) => !!e.nd,
+  // отделяемый глагол: приставка уедет в конец фразы, и рамка с хвостом сломается
+  sep: (e) => !!e.p3?.includes(' '),
   adjdecl: (e) => !!e.adjdecl,
   mass: (e) => !!e.mass,
   aux_hs: (e) => e.aux === 'hs',
@@ -60,6 +70,17 @@ function slotForm(slot: Slot, w: Word, c: Case): string | null {
       return defArticle(c, genderOf(slot, w), num)
     case 'indef_article':
       return num === 'pl' ? null : indefArticle(c, genderOf(slot, w))
+    case 'possessive':
+      return possessive(c, genderOf(slot, w), num)
+    case 'kein_article':
+      return keinArticle(c, genderOf(slot, w), num)
+    // формы самого слова: вариантов у них нет, это всегда ввод
+    case 'noun_plural':
+      return nounForm(w.entry as Noun, c, 'pl')
+    case 'participle':
+      return (w.entry as Verb).pp
+    case 'verb_present':
+      return present(w.entry as Verb, slot.person ?? '3sg')
     case 'merged_prep_article':
       return merged(slot.prep as string, c, genderOf(slot, w))
     case 'adj_ending':
@@ -126,8 +147,10 @@ export function generate(t: Template, w: Word): Item {
   const g = w.pos === 'n' ? genderOf(t.slot, w) : null
   const word = wordIn(w, t.slot)
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
+  const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1)
   const fill = (s: string, slotText: string) =>
     s.replace('{slot}', slotText)
+      .replace('{Slot}', cap(slotText))
       .replace('{w}', word)
       .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
       .replace('{pp}', pp)

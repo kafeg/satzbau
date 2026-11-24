@@ -121,6 +121,9 @@ mass:
   - Fieber
   - Husten
   - Schnupfen
+  # «Ich esse einen Käse» и «ich trinke eine Milch» — так не говорят
+  - Käse
+  - Milch
 
 # 3. Слова, у которых единственное число формально есть, но в речи они живут
 #    во множественном. Данные их не отличают: у Möbel, Lebensmittel, Geschwister
@@ -130,6 +133,9 @@ plural_in_use:
   - Möbel
   - Lebensmittel
   - Geschwister
+  # боль и жалобы считают во множественном: «Ich habe Schmerzen», не «einen Schmerz»
+  - Schmerz
+  - Beschwerde
 
 # 4. Субстантивированные прилагательные, которых нет в nouns.csv под этой леммой
 #    (остальные распознаются по колонкам «stark»)

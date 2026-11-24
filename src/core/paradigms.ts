@@ -15,12 +15,21 @@ export const DEF_ARTICLE: Record<Case, ByGender> = {
   gen: { m: 'des', f: 'der', n: 'des', pl: 'der' },
 }
 
-// Неопределённый артикль во множественном не существует — отсюда отдельный тип.
-export const INDEF_ARTICLE: Record<Case, Record<Gender, string>> = {
-  nom: { m: 'ein', f: 'eine', n: 'ein' },
-  akk: { m: 'einen', f: 'eine', n: 'ein' },
-  dat: { m: 'einem', f: 'einer', n: 'einem' },
-  gen: { m: 'eines', f: 'einer', n: 'eines' },
+// Склонение ein-слов: ein, kein, mein/dein/sein. Таблица одна на всех, различается
+// только основа — и это ровно то, что человеку надо понять один раз.
+// У `ein` множественного числа не бывает, у `kein` и `mein` бывает.
+const EIN_ENDING: Record<Case, ByGender> = {
+  nom: { m: '', f: 'e', n: '', pl: 'e' },
+  akk: { m: 'en', f: 'e', n: '', pl: 'e' },
+  dat: { m: 'em', f: 'er', n: 'em', pl: 'en' },
+  gen: { m: 'es', f: 'er', n: 'es', pl: 'er' },
+}
+
+const CASES: Case[] = ['nom', 'akk', 'dat', 'gen']
+const GENDERS: Gender[] = ['m', 'f', 'n']
+
+export function einWord(stem: string, c: Case, g: Gender, num: Num = 'sg'): string {
+  return stem + EIN_ENDING[c][num === 'pl' ? 'pl' : g]
 }
 
 /** Обязательные слияния. Их восемь, разговорные aufs/fürs/ums не тренируем. */
@@ -73,7 +82,22 @@ export function defArticle(c: Case, g: Gender, num: Num = 'sg'): string {
 }
 
 export function indefArticle(c: Case, g: Gender): string {
-  return INDEF_ARTICLE[c][g]
+  return einWord('ein', c, g)
+}
+
+/** Притяжательное `mein`. Остальные (dein, sein…) — та же таблица, другая основа. */
+export function possessive(c: Case, g: Gender, num: Num = 'sg'): string {
+  return einWord('mein', c, g, num)
+}
+
+export function keinArticle(c: Case, g: Gender, num: Num = 'sg'): string {
+  return einWord('kein', c, g, num)
+}
+
+function einInventory(stem: string, plural: boolean): string[] {
+  const out = CASES.flatMap((c) => GENDERS.map((g) => einWord(stem, c, g)))
+  if (plural) out.push(...CASES.map((c) => einWord(stem, c, 'm', 'pl')))
+  return uniq(out)
 }
 
 export function adjEnding(decl: Decl, c: Case, g: Gender, num: Num = 'sg'): string {
@@ -100,7 +124,11 @@ export function inventory(paradigm: string, p: { prep?: string; person?: Person 
     case 'def_article':
       return uniq(Object.values(DEF_ARTICLE).flatMap((row) => Object.values(row)))
     case 'indef_article':
-      return uniq(Object.values(INDEF_ARTICLE).flatMap((row) => Object.values(row)))
+      return einInventory('ein', false)
+    case 'possessive':
+      return einInventory('mein', true)
+    case 'kein_article':
+      return einInventory('kein', true)
     case 'aux_present': {
       const row = AUX_PRESENT[p.person ?? '3sg']
       return [row.haben, row.sein]
@@ -155,18 +183,24 @@ export function formMatches(
   o: { decl?: Decl; prep?: string } = {},
 ): FormMatch[] {
   const out: FormMatch[] = []
-  const cases: Case[] = ['nom', 'akk', 'dat', 'gen']
-  const genders: (Gender | 'pl')[] = ['m', 'f', 'n', 'pl']
+  const cases = CASES
+  const genders: (Gender | 'pl')[] = [...GENDERS, 'pl']
   switch (paradigm) {
     case 'def_article':
       for (const c of cases)
         for (const g of genders) if (DEF_ARTICLE[c][g] === form) out.push({ case: c, gender: g })
       return out
     case 'indef_article':
+    case 'possessive':
+    case 'kein_article': {
+      const stem = paradigm === 'indef_article' ? 'ein' : paradigm === 'possessive' ? 'mein' : 'kein'
+      const cols: (Gender | 'pl')[] = paradigm === 'indef_article' ? ['m', 'f', 'n'] : genders
       for (const c of cases)
-        for (const g of ['m', 'f', 'n'] as Gender[])
-          if (INDEF_ARTICLE[c][g] === form) out.push({ case: c, gender: g })
+        for (const g of cols)
+          if (einWord(stem, c, g === 'pl' ? 'm' : g, g === 'pl' ? 'pl' : 'sg') === form)
+            out.push({ case: c, gender: g })
       return out
+    }
     case 'merged_prep_article': {
       const prep = o.prep ?? ''
       for (const c of cases)

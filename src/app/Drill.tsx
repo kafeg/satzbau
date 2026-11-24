@@ -35,6 +35,8 @@ export function Drill({
   // пропуск после окончания слова не отрывается от него: «klein___», а не «klein ___»
   const [before = '', after = ''] = item.text.split('___')
   const tight = /\S$/.test(before)
+  // пропуск первым словом фразы — ответ показывается с заглавной: «Mein Arm tut weh»
+  const start = before === ''
   const cut = tight ? before.lastIndexOf(' ') + 1 : before.length
 
   const check = (value: string) => {
@@ -63,7 +65,11 @@ export function Drill({
           <span className="nowrap">
             {before.slice(cut)}
             <span className={`gap${answered ? ' ok' : ''}${tight ? ' tight' : ''}`}>
-              {answered ? item.answer : '\u00a0\u00a0\u00a0'}
+              {answered
+                ? start
+                  ? item.answer.charAt(0).toUpperCase() + item.answer.slice(1)
+                  : item.answer
+                : '\u00a0\u00a0\u00a0'}
             </span>
           </span>
           {after}

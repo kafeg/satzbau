@@ -8,7 +8,9 @@ import {
   defArticle,
   formMatches,
   indefArticle,
+  keinArticle,
   merged,
+  possessive,
   type FormMatch,
 } from '../core/paradigms.ts'
 import type { Case, Gender, Item, Num, Template } from '../core/types.ts'
@@ -30,6 +32,17 @@ const OF: Record<Gender | 'pl', string> = {
 }
 export const CASE_CLASS: Record<Case, string> = { nom: '', akk: 'akk', dat: 'dat', gen: 'gen' }
 
+// Таблица по родам есть только у склонений. У форм самого слова (множественное,
+// причастие, спряжение) рода нет, и строить из них таблицу нечего.
+const TABLE = new Set([
+  'def_article',
+  'indef_article',
+  'adj_ending',
+  'merged_prep_article',
+  'possessive',
+  'kein_article',
+])
+
 function cell(t: Template, c: Case, g: Gender | 'pl'): string {
   const num: Num = g === 'pl' ? 'pl' : 'sg'
   const gg = (g === 'pl' ? 'm' : g) as Gender
@@ -38,6 +51,10 @@ function cell(t: Template, c: Case, g: Gender | 'pl'): string {
       return defArticle(c, gg, num)
     case 'indef_article':
       return num === 'pl' ? '—' : indefArticle(c, gg)
+    case 'possessive':
+      return possessive(c, gg, num)
+    case 'kein_article':
+      return keinArticle(c, gg, num)
     case 'adj_ending':
       return `-${adjEnding(t.slot.decl ?? 'weak', c, gg, num)}`
     case 'merged_prep_article': {
@@ -96,7 +113,7 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
         </p>
       )}
 
-      {t && t.slot.paradigm !== 'aux_present' && (
+      {t && TABLE.has(t.slot.paradigm) && (
         <table className="forms">
           <thead>
             <tr>

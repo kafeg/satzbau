@@ -136,3 +136,155 @@
   slot: {paradigm: aux_present, person: 1sg, from_word: aux}
   options: {paradigm: aux_present, count: 2}
   why: perfekt-aux
+
+# --- Э7: шаблоны на остальные темы --------------------------------------------
+# До этого места шаблоны держались на Транспорте и Квартире, и четыре темы из шести
+# не имели своих заданий вовсе.
+
+- id: akk-objekt-essen
+  rule: akkusativ-objekt
+  level: A1
+  kind: choice
+  frame: "Ich esse {slot} {w}."
+  need: {pos: n, tags: [food], not: [meal, abstract, mass, pl_only, plu, npl]}
+  slot: {paradigm: indef_article, case: akk, num: sg}
+  options: {paradigm: indef_article, count: 4}
+  why: akkusativ-objekt
+
+- id: akk-objekt-trinken
+  rule: akkusativ-objekt
+  level: A1
+  kind: choice
+  frame: "Ich trinke {slot} {w}."
+  need: {pos: n, tags: [drink], not: [mass, pl_only, plu]}
+  slot: {paradigm: indef_article, case: akk, num: sg}
+  options: {paradigm: indef_article, count: 4}
+  why: akkusativ-objekt
+
+# mit, а не bei или von: те сливаются с артиклем обязательно («beim Arzt», не «bei dem Arzt»),
+# и тренировать на них чистый артикль нельзя — это уже правило о слияниях.
+- id: prep-dat-mit-person
+  rule: prep-dativ
+  level: A1
+  kind: choice
+  frame: "Ich spreche mit {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: dat, num: sg, prep: mit}
+  options: {paradigm: def_article, count: 4}
+  why: prep-dativ
+
+- id: prep-dat-aus-raum
+  rule: prep-dativ
+  level: A1
+  kind: choice
+  frame: "Ich komme gerade aus {slot} {w}."
+  need: {pos: n, tags: [room], not: [pl_only]}
+  slot: {paradigm: def_article, case: dat, num: sg, prep: aus}
+  options: {paradigm: def_article, count: 4}
+  why: prep-dativ
+
+- id: prep-akk-ohne
+  rule: prep-akkusativ
+  level: A1
+  kind: choice
+  frame: "Ich komme ohne {slot} {w}."
+  need: {pos: n, tags: [document], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: akk, num: sg, prep: ohne}
+  options: {paradigm: def_article, count: 4}
+  why: prep-akkusativ
+
+- id: nom-subjekt-hier
+  rule: nominativ-subjekt
+  level: A1
+  kind: choice
+  frame: "Hier ist {slot} {w}."
+  need: {pos: n, tags: [room, place, appliance, furniture], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: nom, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: nominativ-subjekt
+
+# Второй шаблон на то же правило — ради темы Работа: её слова почти все абстрактные,
+# и «Hier ist die Kündigung» не фраза, а «Die Kündigung ist ein Problem» — фраза.
+- id: nom-subjekt-problem
+  rule: nominativ-subjekt
+  level: A2
+  kind: choice
+  frame: "{Slot} {w} ist ein Problem."
+  need: {pos: n, tags: [abstract, money, illness], not: [pl_only, plu]}
+  slot: {paradigm: def_article, case: nom, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: nominativ-subjekt
+
+# Притяжательное склоняется как ein: mein — meine — meinen. Слот стоит первым словом,
+# поэтому {Slot} с большой буквы.
+- id: possessiv-koerper
+  rule: possessiv-nominativ
+  level: A1
+  kind: choice
+  frame: "{Slot} {w} tut weh."
+  need: {pos: n, tags: [body], not: [pl_only, plu, abstract, mass]}
+  slot: {paradigm: possessive, case: nom, num: sg}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-nominativ
+
+- id: negation-kein-haben
+  rule: negation-kein
+  level: A1
+  kind: choice
+  frame: "Ich habe {slot} {w}."
+  need: {pos: n, tags: [illness, document], not: [pl_only, plu]}
+  slot: {paradigm: kein_article, case: akk, num: sg}
+  options: {paradigm: kein_article, count: 4}
+  why: negation-kein
+
+# Формы самого слова: вариантов нет, только ввод.
+- id: plural-kaufen
+  rule: plural-form
+  level: A1
+  kind: input
+  frame: "Hier sind zwei {slot}."
+  need: {pos: n, tags: [food, thing], has: [pl], not: [meal, pl_only, npl, mass, plu]}
+  slot: {paradigm: noun_plural, case: akk, num: pl}
+  why: plural-form
+
+- id: partizip-wohnung
+  rule: perfekt-partizip
+  level: A1
+  kind: input
+  frame: "Ich habe die Wohnung {slot}."
+  need: {pos: v, tags: [housework], not: [aux_hs]}
+  slot: {paradigm: participle}
+  why: perfekt-partizip
+
+# Отделяемые глаголы исключены: у них приставка уходит в конец фразы, а в рамке
+# после пропуска стоит «oft» — вышло бы «Er zieht um oft».
+- id: praesens-er
+  rule: praesens-3sg
+  level: A1
+  kind: input
+  frame: "Er {slot} oft."
+  need: {pos: v, tags: [motion, housework], not: [sep]}
+  slot: {paradigm: verb_present, person: 3sg}
+  why: praesens-3sg
+
+- id: praesens-du
+  rule: praesens-2sg
+  level: A1
+  kind: input
+  frame: "Du {slot} oft."
+  need: {pos: v, tags: [motion, housework], not: [sep]}
+  slot: {paradigm: verb_present, person: 2sg}
+  why: praesens-2sg
+
+# Второй шаблон на то же правило: у «in einer kleinen …» наполнение всего три слова,
+# потому что артикль в рамке прибит гвоздями и род приходится фиксировать. Здесь
+# артикль dem, значит мужской и средний — и это ещё и показывает, что в Dativ
+# окончание -en одинаково при определённом артикле и при неопределённом.
+- id: adj-dat-en-neu
+  rule: adj-dat-en
+  level: A2
+  kind: input
+  frame: "Ich fahre mit dem neu{slot} {w}."
+  need: {pos: n, tags: [vehicle], g: [m, n], not: [pl_only]}
+  slot: {paradigm: adj_ending, decl: weak, case: dat, num: sg, gender: from_word}
+  why: adj-dat-en

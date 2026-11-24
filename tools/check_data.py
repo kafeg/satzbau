@@ -22,6 +22,7 @@ NEED_KEYS = {'pos', 'theme', 'tags', 'g', 'lv_max', 'has', 'not'}
 FLAGS = {name: (lambda n: lambda r: bool(r.get(n)))(name)
          for name in ('pl_only', 'plu', 'npl', 'mass', 'nd', 'adjdecl')}
 FLAGS['aux_hs'] = lambda r: r.get('aux') == 'hs'
+FLAGS['sep'] = lambda r: ' ' in (r.get('p3') or '')
 errors, warns, notes = [], [], []
 
 
@@ -126,7 +127,8 @@ def main():
             errors.append(f'шаблон {t["id"]}: нет объяснения {t["why"]!r} в explain.yaml')
         if t['rule'] != t['why']:
             notes.append(f'шаблон {t["id"]}: rule {t["rule"]} и why {t["why"]} различаются')
-        if '{slot}' not in t['frame']:
+        # {Slot} — тот же пропуск с заглавной буквы: слот стоит первым словом фразы
+        if '{slot}' not in t['frame'] and '{Slot}' not in t['frame']:
             errors.append(f'шаблон {t["id"]}: в рамке нет {{slot}}')
         if t['kind'] == 'choice' and not t.get('options'):
             errors.append(f'шаблон {t["id"]}: kind choice без options')

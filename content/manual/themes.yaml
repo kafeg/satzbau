@@ -87,7 +87,7 @@ transport:
     - {w: Benzin,        pos: n, lv: A2, tags: [thing]}
     - {w: Strecke,       pos: n, lv: A2, tags: [abstract]}
     - {w: Rückfahrt,     pos: n, lv: A2, tags: [abstract]}
-    - {w: erreichen,     pos: v, lv: A2, tags: [motion, obj]}
+    - {w: erreichen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: verpassen,     pos: v, lv: A2, tags: [state, obj]}
     - {w: buchen,        pos: v, lv: A2, tags: [state, obj]}
     - {w: reservieren,   pos: v, lv: A2, tags: [state, obj]}
@@ -196,7 +196,7 @@ home:
     - {w: Strom,         pos: n, lv: A2, tags: [thing]}
     - {w: Anmeldung,     pos: n, lv: A2, tags: [document]}
     - {w: Umzug,         pos: n, lv: A2, tags: [abstract]}
-    - {w: anmelden,      pos: v, lv: A2, tags: [state, obj, housework]}
+    - {w: anmelden,      pos: v, lv: A2, tags: [state, obj]}
     - {w: kündigen,      pos: v, lv: A2, tags: [state, obj, housework]}
     - {w: renovieren,    pos: v, lv: A2, tags: [state, obj, housework]}
     - {w: streichen,     pos: v, lv: A2, tags: [state, obj, housework]}
@@ -227,7 +227,7 @@ food:
   title: Еда
   words:
     # A1 — то, что покупают и едят каждый день
-    - {w: Essen,         pos: n, lv: A1, tags: [food]}
+    - {w: Essen,         pos: n, lv: A1, tags: [food, meal]}
     - {w: Brot,          pos: n, lv: A1, tags: [food]}
     - {w: Brötchen,      pos: n, lv: A1, tags: [food]}
     - {w: Butter,        pos: n, lv: A1, tags: [food]}
@@ -258,9 +258,9 @@ food:
     - {w: Saft,          pos: n, lv: A1, tags: [drink]}
     - {w: Bier,          pos: n, lv: A1, tags: [drink]}
     - {w: Wein,          pos: n, lv: A1, tags: [drink]}
-    - {w: Frühstück,     pos: n, lv: A1, tags: [food, time]}
-    - {w: Mittagessen,   pos: n, lv: A1, tags: [food, time]}
-    - {w: Abendessen,    pos: n, lv: A1, tags: [food, time]}
+    - {w: Frühstück,     pos: n, lv: A1, tags: [food, time, meal]}
+    - {w: Mittagessen,   pos: n, lv: A1, tags: [food, time, meal]}
+    - {w: Abendessen,    pos: n, lv: A1, tags: [food, time, meal]}
     - {w: Teller,        pos: n, lv: A1, tags: [thing]}
     - {w: Glas,          pos: n, lv: A1, tags: [thing]}
     - {w: Tasse,         pos: n, lv: A1, tags: [thing]}
@@ -301,10 +301,10 @@ food:
     - {w: Topf,          pos: n, lv: A2, tags: [thing]}
     - {w: Backofen,      pos: n, lv: A2, tags: [appliance]}
     - {w: Lebensmittel,  pos: n, lv: A2, tags: [food]}
-    - {w: Zutat,         pos: n, lv: A2, tags: [food]}
-    - {w: Vorspeise,     pos: n, lv: A2, tags: [food]}
-    - {w: Nachtisch,     pos: n, lv: A2, tags: [food]}
-    - {w: Beilage,       pos: n, lv: A2, tags: [food]}
+    - {w: Zutat,         pos: n, lv: A2, tags: [food, abstract]}
+    - {w: Vorspeise,     pos: n, lv: A2, tags: [food, meal]}
+    - {w: Nachtisch,     pos: n, lv: A2, tags: [food, meal]}
+    - {w: Beilage,       pos: n, lv: A2, tags: [food, meal]}
     - {w: Preis,         pos: n, lv: A2, tags: [money]}
     - {w: Angebot,       pos: n, lv: A2, tags: [money]}
     - {w: Pfand,         pos: n, lv: A2, tags: [money]}
@@ -323,7 +323,7 @@ food:
     # B1 — что написано на упаковке и в меню
     - {w: Bedienung,     pos: n, lv: B1, tags: [person]}
     - {w: Reservierung,  pos: n, lv: B1, tags: [abstract]}
-    - {w: Spezialität,   pos: n, lv: B1, tags: [food]}
+    - {w: Spezialität,   pos: n, lv: B1, tags: [food, abstract]}
     - {w: Herkunft,      pos: n, lv: B1, tags: [abstract]}
     - {w: Haltbarkeit,   pos: n, lv: B1, tags: [abstract]}
     - {w: zubereiten,    pos: v, lv: B1, tags: [state, obj]}
@@ -489,7 +489,7 @@ health:
     - {w: Pflaster,      pos: n, lv: A2, tags: [thing]}
     - {w: Salbe,         pos: n, lv: A2, tags: [thing]}
     - {w: Blut,          pos: n, lv: A2, tags: [body]}
-    - {w: Blutdruck,     pos: n, lv: A2, tags: [body]}
+    - {w: Blutdruck,     pos: n, lv: A2, tags: [body, abstract]}
     - {w: Untersuchung,  pos: n, lv: A2, tags: [abstract]}
     - {w: Behandlung,    pos: n, lv: A2, tags: [abstract]}
     - {w: Operation,     pos: n, lv: A2, tags: [abstract]}
@@ -571,7 +571,7 @@ kids:
     - {w: weinen,        pos: v, lv: A1, tags: [state]}
     - {w: lachen,        pos: v, lv: A1, tags: [state]}
     - {w: abholen,       pos: v, lv: A1, tags: [motion, obj]}
-    - {w: bringen,       pos: v, lv: A1, tags: [motion, obj]}
+    - {w: bringen,       pos: v, lv: A1, tags: [state, obj]}
     - {w: füttern,       pos: v, lv: A1, tags: [state, obj]}
     - {w: wickeln,       pos: v, lv: A1, tags: [state, obj]}
     - {w: wachsen,       pos: v, lv: A1, tags: [state]}
