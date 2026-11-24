@@ -12,6 +12,8 @@ export interface Pick {
   rule?: string
   /** лексическая тема: она даёт слова, а не задания */
   theme?: string
+  /** потолок уровня: A2 значит «A1 и A2». Фильтрует и слова, и правила */
+  level?: Level
   size?: number
   seed?: number
 }
@@ -34,11 +36,17 @@ function rng(seed: number): () => number {
 }
 
 function templatesOf(p: Pick) {
-  return getBundle().templates.filter((t) => !p.rule || t.rule === p.rule)
+  return getBundle().templates.filter(
+    (t) => (!p.rule || t.rule === p.rule) && (!p.level || LEVELS[t.level] <= LEVELS[p.level]),
+  )
 }
 
+// ⚠ Уровень слова фильтруется здесь и больше нигде: без этого правило A1 спокойно
+// подсовывает слово B1, и шапка «A1» врёт.
 function wordsOf(p: Pick) {
-  return getWords().filter((w) => !p.theme || w.theme === p.theme)
+  return getWords().filter(
+    (w) => (!p.theme || w.theme === p.theme) && (!p.level || LEVELS[w.lv] <= LEVELS[p.level]),
+  )
 }
 
 /** Сколько заданий вообще есть под такой выбор. Считаем по наполнению, не собирая задания. */
@@ -52,11 +60,11 @@ export function countFor(p: Pick): number {
  * Порядок: уровень, затем порядок появления в templates.yaml. ⚠ Это порядок написания,
  * а не порядок обучения: настоящий требует графа предпосылок, которого ещё нет.
  */
-export function rules(theme?: string): RuleInfo[] {
+export function rules(p: Pick = {}): RuleInfo[] {
   const bundle = getBundle()
   const out = new Map<string, RuleInfo & { at: number }>()
-  const words = wordsOf({ theme })
-  bundle.templates.forEach((t, at) => {
+  const words = wordsOf(p)
+  templatesOf({ level: p.level }).forEach((t, at) => {
     const got = out.get(t.rule)
     const level = got && LEVELS[got.level] < LEVELS[t.level] ? got.level : t.level
     out.set(t.rule, {

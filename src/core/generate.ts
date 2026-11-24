@@ -147,22 +147,29 @@ export function generate(t: Template, w: Word): Item {
   const g = w.pos === 'n' ? genderOf(t.slot, w) : null
   const word = wordIn(w, t.slot)
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
-  const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1)
-  const fill = (s: string, slotText: string) =>
-    s.replace('{slot}', slotText)
-      .replace('{Slot}', cap(slotText))
-      .replace('{w}', word)
-      .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
-      .replace('{pp}', pp)
   const plain = g ? defArticle(t.slot.case ?? 'nom', g, t.slot.num ?? 'sg') : ''
+  const ein = g && t.slot.num !== 'pl' ? indefArticle(t.slot.case ?? 'nom', g) : ''
   const article =
     g && t.slot.decl
       ? t.slot.decl === 'mixed'
-        ? indefArticle(t.slot.case ?? 'nom', g)
+        ? ein
         : t.slot.decl === 'weak'
           ? plain
           : ''
       : plain
+  const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1)
+  // {art} и {ein} — артикль, согласованный с родом слова и падежом слота. Без них артикль
+  // приходится писать в рамку буквально, и шаблон вынужден фиксировать род условием.
+  const fill = (s: string, slotText: string) =>
+    s.replace('{slot}', slotText)
+      .replace('{Slot}', cap(slotText))
+      .replace('{art}', plain)
+      .replace('{Art}', cap(plain))
+      .replace('{ein}', ein)
+      .replace('{Ein}', cap(ein))
+      .replace('{w}', word)
+      .replace('{W}', word.charAt(0).toUpperCase() + word.slice(1))
+      .replace('{pp}', pp)
   return {
     templateId: t.id,
     rule: t.rule,

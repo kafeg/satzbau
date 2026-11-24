@@ -2,6 +2,7 @@
 // Карточка сверху — всё вперемешку; на Э5 её место займёт повторение ошибок по FSRS.
 
 import { getBundle } from '../core/bundle.ts'
+import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
 import { countFor, rules, SIZE } from './session.ts'
 
@@ -15,20 +16,43 @@ function tasks(n: number): string {
   return `${n} заданий`
 }
 
+const LEVELS: { key: Level | undefined; label: string }[] = [
+  { key: 'A1', label: 'A1' },
+  { key: 'A2', label: 'A1–A2' },
+  { key: undefined, label: 'всё' },
+]
+
 export function Home({
   theme,
+  level,
   onTheme,
+  onLevel,
 }: {
   theme?: string
+  level?: Level
   onTheme: (t?: string) => void
+  onLevel: (l?: Level) => void
 }) {
   const themes = Object.entries(getBundle().themes)
-  const list = rules(theme)
-  const total = countFor({ theme })
+  const list = rules({ theme, level })
+  const total = countFor({ theme, level })
 
   return (
     <main className="home">
-      <h1>satzbau</h1>
+      <div className="top">
+        <h1>satzbau</h1>
+        <div className="chips">
+          {LEVELS.map((l) => (
+            <button
+              key={l.label}
+              className={`chip${level === l.key ? ' on' : ''}`}
+              onClick={() => onLevel(l.key)}
+            >
+              {l.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
       <button className="mix" onClick={() => go({ screen: 'drill' })}>
         <span className="mix-title">Всё вперемешку</span>

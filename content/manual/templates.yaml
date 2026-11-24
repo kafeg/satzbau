@@ -276,15 +276,14 @@
   slot: {paradigm: verb_present, person: 2sg}
   why: praesens-2sg
 
-# Второй шаблон на то же правило: у «in einer kleinen …» наполнение всего три слова,
-# потому что артикль в рамке прибит гвоздями и род приходится фиксировать. Здесь
-# артикль dem, значит мужской и средний — и это ещё и показывает, что в Dativ
-# окончание -en одинаково при определённом артикле и при неопределённом.
+# Второй шаблон на то же правило. Артикль в рамке — подстановка {art}, согласованная
+# с родом слова, поэтому род фиксировать условием не нужно: берутся все. И заодно видно,
+# что в Dativ окончание -en одинаково при определённом артикле и при неопределённом.
 - id: adj-dat-en-neu
   rule: adj-dat-en
   level: A2
   kind: input
-  frame: "Ich fahre mit dem neu{slot} {w}."
-  need: {pos: n, tags: [vehicle], g: [m, n], not: [pl_only]}
+  frame: "Ich fahre mit {art} neu{slot} {w}."
+  need: {pos: n, tags: [vehicle], not: [pl_only]}
   slot: {paradigm: adj_ending, decl: weak, case: dat, num: sg, gender: from_word}
   why: adj-dat-en

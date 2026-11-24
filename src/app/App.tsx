@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Item } from '../core/types.ts'
+import type { Item, Level } from '../core/types.ts'
 import { Drill } from './Drill.tsx'
 import { Home } from './Home.tsx'
 import { loadBundle } from './load.ts'
@@ -13,13 +13,23 @@ interface Answer {
 }
 
 const THEME_KEY = 'satzbau.theme'
+const LEVEL_KEY = 'satzbau.level'
 
-// Выбранная тема — удобство, а не прогресс: приватный просмотр её не сохранит, и ладно.
-function readTheme(): string | undefined {
+// Тема и уровень — удобство, а не прогресс: приватный просмотр их не сохранит, и ладно.
+function read(key: string): string | undefined {
   try {
-    return localStorage.getItem(THEME_KEY) ?? undefined
+    return localStorage.getItem(key) ?? undefined
   } catch {
     return undefined
+  }
+}
+
+function write(key: string, value?: string): void {
+  try {
+    if (value) localStorage.setItem(key, value)
+    else localStorage.removeItem(key)
+  } catch {
+    // приватный просмотр: выбор просто не запомнится
   }
 }
 
@@ -27,7 +37,8 @@ export function App() {
   const route = useRoute()
   const [ready, setReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [theme, setTheme] = useState<string | undefined>(readTheme)
+  const [theme, setTheme] = useState<string | undefined>(() => read(THEME_KEY))
+  const [level, setLevel] = useState<Level | undefined>(() => read(LEVEL_KEY) as Level | undefined)
   const [items, setItems] = useState<Item[]>([])
   const [at, setAt] = useState(0)
   const [log, setLog] = useState<Answer[]>([])
@@ -42,24 +53,25 @@ export function App() {
 
   useEffect(() => {
     if (!ready || route.screen !== 'drill') return
-    setItems(newSession({ rule: route.rule, theme }))
+    setItems(newSession({ rule: route.rule, theme, level }))
     setAt(0)
     setLog([])
-  }, [ready, route.screen, route.rule, theme, nonce])
+  }, [ready, route.screen, route.rule, theme, level, nonce])
 
   const pickTheme = (t?: string) => {
     setTheme(t)
-    try {
-      if (t) localStorage.setItem(THEME_KEY, t)
-      else localStorage.removeItem(THEME_KEY)
-    } catch {
-      // приватный просмотр: тема просто не запомнится
-    }
+    write(THEME_KEY, t)
+  }
+
+  const pickLevel = (l?: Level) => {
+    setLevel(l)
+    write(LEVEL_KEY, l)
   }
 
   if (error) return <p className="note">Данные не загрузились: {error}</p>
   if (!ready) return <p className="note">Загрузка…</p>
-  if (route.screen === 'home') return <Home theme={theme} onTheme={pickTheme} />
+  if (route.screen === 'home')
+    return <Home theme={theme} level={level} onTheme={pickTheme} onLevel={pickLevel} />
 
   const item = items[at]
   if (!item) {
