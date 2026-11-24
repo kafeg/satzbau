@@ -284,6 +284,17 @@ function buildOptions(t: Template, w: Word, answer: string, slot: Fixed, w2?: Wo
       .map((c) => slotForm(slot, w, c, w2))
       .filter((f): f is string => !!f && f !== answer),
   ]
+  // ⚠ Дистрактор, с которым фраза тоже верна, — это второй правильный ответ.
+  // У n-склонения и во множественном формы слова совпадают: «Ich helfe dem Kollegen»
+  // и «den Kollegen» оба немецкие, а число рамка не задаёт. Падеж задаёт глагол,
+  // поэтому опасно только другое ЧИСЛО при том же падеже.
+  const kase = slot.case ?? 'nom'
+  const other: Num = slot.num === 'pl' ? 'sg' : 'pl'
+  const written = w.pos === 'n' ? nounForm(w.entry as Noun, kase, slot.num ?? 'sg') : null
+  const alsoRight =
+    written && nounForm(w.entry as Noun, kase, other) === written
+      ? slotForm({ ...slot, num: other }, w, kase, w2)
+      : null
   const all = inventory(t.options?.paradigm ?? slot.paradigm, {
     prep: t.options?.prep ?? slot.prep,
     person: slot.person,
@@ -294,10 +305,12 @@ function buildOptions(t: Template, w: Word, answer: string, slot: Fixed, w2?: Wo
   // инвентарём (тринадцать предлогов управления) первые три формы иначе становятся
   // дистракторами ВСЕГДА, и задание угадывается, не читая фразу. Порядок детерминирован.
   const rest = shuffle(
-    all.filter((f) => f !== answer && !near.includes(f)),
+    all.filter((f) => f !== answer && f !== alsoRight && !near.includes(f)),
     `${t.id}${w.w}rest`,
   )
-  const picked = [answer, ...new Set([...near, ...rest])].slice(0, count)
+  const picked = [answer, ...new Set([...near, ...rest])]
+    .filter((f) => f === answer || f !== alsoRight)
+    .slice(0, count)
   return shuffle(picked, t.id + w.w)
 }
 

@@ -224,6 +224,15 @@ describe('конкретные задания', () => {
     )
   })
 
+  // ⚠ «Ich helfe den Kollegen» — тоже немецкий: у n-склонения форма слова одна
+  // на единственное и множественное, а число рамка не задаёт. Такой дистрактор
+  // был вторым верным ответом, и человек получал «неверно» за верный выбор.
+  it('вариант, с которым фраза тоже верна, в задание не попадает', () => {
+    expect(item('dativ-objekt-helfen', 'Kollege').options).not.toContain('den')
+    expect(item('genitiv-besitz', 'Kollege').options).not.toContain('der')
+    expect(item('possessiv-dat-mit', 'Nachbar').options).not.toContain('meinen')
+  })
+
   it('подлежащее-не-человек получает свою рамку', () => {
     expect(item('verb-prep-ding', 'hängen').full).toBe('Das hängt an der Wand.')
   })
