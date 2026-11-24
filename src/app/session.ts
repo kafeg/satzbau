@@ -29,6 +29,8 @@ export interface Pick {
   theme?: string
   /** потолок уровня: A2 значит «A1 и A2». Фильтрует и слова, и правила */
   level?: Level
+  /** конкретные слова: карточки новых слов отправляют тренировать именно их */
+  only?: string[]
   size?: number
   seed?: number
 }
@@ -40,6 +42,10 @@ export interface RuleInfo {
   title: string
   level: Level
   count: number
+  /** слов правила, которые уже встречались в заданиях — для полосы прогресса */
+  seen: number
+  /** всего слов, на которых правило собирается */
+  words: number
 }
 
 /** Порядок блоков на главной. Внутри блока — порядок написания шаблонов. */
@@ -65,7 +71,10 @@ function templatesOf(p: Pick) {
 // подсовывает слово B1, и шапка «A1» врёт.
 function wordsOf(p: Pick) {
   return getWords().filter(
-    (w) => (!p.theme || w.theme === p.theme) && (!p.level || LEVELS[w.lv] <= LEVELS[p.level]),
+    (w) =>
+      (!p.theme || w.theme === p.theme) &&
+      (!p.level || LEVELS[w.lv] <= LEVELS[p.level]) &&
+      (!p.only || p.only.includes(w.w)),
   )
 }
 
@@ -83,20 +92,26 @@ export function countFor(p: Pick): number {
  */
 export function rules(p: Pick = {}): RuleInfo[] {
   const bundle = getBundle()
-  const out = new Map<string, RuleInfo & { at: number }>()
+  const out = new Map<string, RuleInfo & { at: number; set: Set<string> }>()
   const words = wordsOf(p)
   templatesOf({ level: p.level }).forEach((t, at) => {
     const got = out.get(t.rule)
     const level = got && LEVELS[got.level] < LEVELS[t.level] ? got.level : t.level
     const e = bundle.explain[t.rule]
+    const fill = fillingFor(t, words)
+    const set = got?.set ?? new Set<string>()
+    for (const w of fill) set.add(w.w)
     out.set(t.rule, {
       rule: t.rule,
       name: e?.name ?? t.rule,
       group: e?.group ?? 'падеж',
       title: e?.title ?? t.rule,
       level,
-      count: (got?.count ?? 0) + fillingFor(t, words).length,
+      count: (got?.count ?? 0) + fill.length,
+      words: set.size,
+      seen: p.cards ? [...set].filter((w) => p.cards?.has(wordKey(w))).length : 0,
       at: got?.at ?? at,
+      set,
     })
   })
   return [...out.values()].sort((a, b) => LEVELS[a.level] - LEVELS[b.level] || a.at - b.at)
@@ -104,7 +119,7 @@ export function rules(p: Pick = {}): RuleInfo[] {
 
 export function newSession(p: Pick = {}): Item[] {
   const next = rng(p.seed ?? Date.now())
-  const words = wordsOf({ level: p.level })
+  const words = wordsOf({ level: p.level, only: p.only })
   const shuffle = (b: Item[]) => {
     for (let i = b.length - 1; i > 0; i--) {
       const j = Math.floor(next() * (i + 1))

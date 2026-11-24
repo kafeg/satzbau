@@ -52,6 +52,10 @@ export function Theme({ theme, level }: { theme: string; level?: Level }) {
         </span>
       </button>
 
+      <button className="ghost" onClick={() => go({ screen: 'words', theme })}>
+        новые слова темы
+      </button>
+
       {strong.length > 0 && (
         <>
           <h2 className="section">

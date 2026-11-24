@@ -26,7 +26,7 @@ export function Home({
   const repeat = dueCount(cards, 'r:')
   const [open, setOpen] = useState<string | null>(null)
   const bundle = getBundle()
-  const all = rules({ level })
+  const all = rules({ level, cards })
   const themes = Object.entries(bundle.themes).map(([key, t]) => ({
     key,
     title: t.title,
@@ -77,9 +77,17 @@ export function Home({
             : `${tasks(SIZE)} из ${countFor({ level })}`}
         </span>
       </button>
-      <button className="ghost" onClick={() => go({ screen: 'mistakes' })}>
-        мои ошибки и прогресс
-      </button>
+      <div className="links">
+        <button className="ghost" onClick={() => go({ screen: 'mistakes' })}>
+          мои ошибки
+        </button>
+        <button className="ghost" onClick={() => go({ screen: 'tables' })}>
+          таблицы
+        </button>
+        <button className="ghost" onClick={() => go({ screen: 'settings' })}>
+          настройки
+        </button>
+      </div>
 
       <h2 className="section">
         <span>Грамматика целиком</span>
@@ -107,8 +115,15 @@ export function Home({
                     disabled={r.count === 0}
                     onClick={() => go({ screen: 'drill', rule: r.rule })}
                   >
-                    <span className="rname">{r.name}</span>
-                    <span className="rn mono">{r.count}</span>
+                    <span className="rname">
+                      {r.name}
+                      <span className="bar">
+                        <i style={{ width: `${Math.round((100 * r.seen) / Math.max(r.words, 1))}%` }} />
+                      </span>
+                    </span>
+                    <span className="rn mono">
+                      {r.seen}/{r.words}
+                    </span>
                     <span className="rlv mono">{r.level}</span>
                   </button>
                 ))}

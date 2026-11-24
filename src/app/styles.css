@@ -176,6 +176,28 @@ header .row {
   margin-top: 3px;
 }
 
+.rule {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 13px 14px;
+  min-height: 60px;
+}
+.rule-title {
+  display: block;
+  font-size: 16px;
+}
+.rule-sub {
+  display: block;
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 3px;
+}
+
 .groups {
   list-style: none;
   margin: 0;
@@ -443,6 +465,100 @@ footer {
 .mistakes .rlv {
   font-size: 12px;
   white-space: nowrap;
+}
+
+/* карточки слов */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.wcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 13px 14px;
+}
+.wtop {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.wlemma {
+  flex: 1;
+  font-size: 18px;
+}
+.wlv {
+  font-size: 11px;
+  color: var(--text2);
+}
+.wru {
+  font-size: 14px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+.wpl {
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+.wex {
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+  padding-top: 9px;
+}
+.wde {
+  font-size: 15px;
+}
+.wruex {
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 2px;
+}
+
+/* таблицы и ссылки */
+.tblock {
+  margin-bottom: 4px;
+}
+.tblock .forms tr.active {
+  background: none;
+}
+.tblock .forms tr.active.akk {
+  background: var(--m-bg);
+}
+.tblock .forms tr.active.dat {
+  background: var(--f-bg);
+}
+.tblock .forms tr.active.gen {
+  background: var(--n-bg);
+}
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.links .ghost {
+  margin: 10px 0 0;
+  padding: 0 10px;
+}
+.danger {
+  background: var(--f-fg);
+}
+.start {
+  padding-top: 40px;
+}
+.start .rule {
+  margin-bottom: 0;
+}
+.grule .bar {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  margin-top: 6px;
 }
 
 /* разбор */

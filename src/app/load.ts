@@ -12,6 +12,31 @@ async function one(name: string): Promise<unknown> {
   return r.json()
 }
 
+export interface Sentence {
+  i: number
+  de: string
+  ru: string
+  l: string[]
+}
+
+let sentences: Promise<Map<string, Sentence[]>> | null = null
+
+/** Примеры грузятся отдельно: 46 КиБ gzip ради одного экрана не должны висеть на старте. */
+export function loadSentences(): Promise<Map<string, Sentence[]>> {
+  sentences ??= one('sentences').then((xs) => {
+    const by = new Map<string, Sentence[]>()
+    for (const s of xs as Sentence[]) {
+      for (const lemma of s.l) {
+        const got = by.get(lemma)
+        if (got) got.push(s)
+        else by.set(lemma, [s])
+      }
+    }
+    return by
+  })
+  return sentences
+}
+
 let started: Promise<void> | null = null
 
 export function loadBundle(): Promise<void> {

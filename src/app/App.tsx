@@ -7,11 +7,16 @@ import { Mistakes } from './Mistakes.tsx'
 import { go, useRoute } from './route.ts'
 import { newSession } from './session.ts'
 import { init as initSrs, replay, type Cards } from './srs.ts'
-import { addAnswer, allAnswers, persist, type Answer } from './store.ts'
+import { Settings } from './Settings.tsx'
+import { Start } from './Start.tsx'
+import { addAnswer, allAnswers, clearAnswers, persist, type Answer } from './store.ts'
+import { Tables } from './Tables.tsx'
 import { Theme } from './Theme.tsx'
+import { Words } from './Words.tsx'
 import { download, upload } from './transfer.ts'
 
 const LEVEL_KEY = 'satzbau.level'
+const START_KEY = 'satzbau.started'
 
 // Уровень — удобство, а не прогресс: приватный просмотр его не сохранит, и ладно.
 // Прогресс живёт в IndexedDB и выгружается файлом.
@@ -44,6 +49,9 @@ export function App() {
   const [log, setLog] = useState<Answer[]>([])
   const [nonce, setNonce] = useState(0)
   const [asked, setAsked] = useState(false)
+  // какие слова тренировать: приходит с карточек новых слов, живёт до ухода с дрилла
+  const [only, setOnly] = useState<string[] | undefined>(undefined)
+  const [started, setStarted] = useState(() => read(START_KEY) === '1')
 
   useEffect(() => {
     Promise.all([loadBundle(), initSrs()])
@@ -57,13 +65,16 @@ export function App() {
   }, [])
 
   useEffect(() => {
-    if (!ready || route.screen !== 'drill') return
-    setItems(newSession({ rule: route.rule, theme: route.theme, level, cards }))
+    if (!ready || route.screen !== 'drill') {
+      if (route.screen === 'home' || route.screen === 'theme') setOnly(undefined)
+      return
+    }
+    setItems(newSession({ rule: route.rule, theme: route.theme, level, cards, only }))
     setAt(0)
     setLog([])
     // cards нарочно не в зависимостях: иначе ответ пересобирал бы текущую сессию
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready, route.screen, route.rule, route.theme, level, nonce])
+  }, [ready, route.screen, route.rule, route.theme, level, only, nonce])
 
   const pickLevel = (l?: Level) => {
     setLevel(l)
@@ -91,9 +102,43 @@ export function App() {
   if (error) return <p className="note">Данные не загрузились: {error}</p>
   if (!ready) return <p className="note">Загрузка…</p>
 
+  if (!started && !answers.length)
+    return (
+      <Start
+        onPick={(l) => {
+          pickLevel(l)
+          setStarted(true)
+          write(START_KEY, '1')
+        }}
+      />
+    )
   if (route.screen === 'home')
     return <Home level={level} cards={cards} onLevel={pickLevel} />
   if (route.screen === 'theme') return <Theme theme={route.theme as string} level={level} />
+  if (route.screen === 'words')
+    return (
+      <Words
+        theme={route.theme as string}
+        level={level}
+        cards={cards}
+        onTrain={(ws) => {
+          setOnly(ws)
+          go({ screen: 'drill', theme: route.theme })
+        }}
+      />
+    )
+  if (route.screen === 'tables') return <Tables />
+  if (route.screen === 'settings')
+    return (
+      <Settings
+        answers={answers}
+        onReset={async () => {
+          await clearAnswers()
+          setAnswers([])
+          setCards(new Map())
+        }}
+      />
+    )
   if (route.screen === 'mistakes')
     return (
       <Mistakes

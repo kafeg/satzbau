@@ -6,7 +6,10 @@ import { VitePWA } from 'vite-plugin-pwa'
 // Собранные данные едут отдельными файлами, а не внутри JS: их кэширует service worker,
 // и смена данных не переписывает весь бандл (docs/architecture.md). В дев-режиме их отдаёт
 // сам Vite из корня проекта, поэтому путь один и тот же в обоих режимах.
-const DATA = ['nouns', 'verbs', 'adjs', 'themes', 'templates', 'explain', 'meta']
+// sentences.json грузится отдельно и только на экране слов: он весит столько же,
+// сколько весь остальной бандл данных, а нужен одному экрану. В precache он всё равно
+// попадает, поэтому офлайн работает.
+const DATA = ['nouns', 'verbs', 'adjs', 'themes', 'templates', 'explain', 'meta', 'sentences']
 
 function data(): Plugin {
   return {

@@ -2,6 +2,7 @@
 //   #/                      главная
 //   #/mistakes              мои ошибки
 //   #/t/<тема>              экран темы
+//   #/w/<тема>              новые слова темы
 //   #/drill                 всё вперемешку
 //   #/drill/<правило>       одно правило
 //   #/drill/-/<тема>        одна тема
@@ -10,7 +11,7 @@
 import { useEffect, useState } from 'react'
 
 export interface Route {
-  screen: 'home' | 'theme' | 'drill' | 'mistakes'
+  screen: 'home' | 'theme' | 'words' | 'drill' | 'mistakes' | 'tables' | 'settings'
   rule?: string
   theme?: string
 }
@@ -21,13 +22,19 @@ export function parse(hash: string): Route {
   const [head, a, b] = hash.replace(/^#\/?/, '').split('/').filter(Boolean)
   if (head === 'drill') return { screen: 'drill', rule: part(a), theme: part(b) }
   if (head === 't' && a) return { screen: 'theme', theme: decodeURIComponent(a) }
+  if (head === 'w' && a) return { screen: 'words', theme: decodeURIComponent(a) }
   if (head === 'mistakes') return { screen: 'mistakes' }
+  if (head === 'tables') return { screen: 'tables' }
+  if (head === 'settings') return { screen: 'settings' }
   return { screen: 'home' }
 }
 
 export function href(route: Route): string {
   if (route.screen === 'home') return '#/'
   if (route.screen === 'mistakes') return '#/mistakes'
+  if (route.screen === 'tables') return '#/tables'
+  if (route.screen === 'settings') return '#/settings'
+  if (route.screen === 'words') return `#/w/${encodeURIComponent(route.theme as string)}`
   if (route.screen === 'theme') return `#/t/${encodeURIComponent(route.theme as string)}`
   const rule = route.rule ? encodeURIComponent(route.rule) : '-'
   return route.theme
