@@ -88,6 +88,8 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return nounForm(w.entry as Noun, c, 'pl')
     case 'participle':
       return (w.entry as Verb).pp
+    case 'verb_past':
+      return (w.entry as Verb).pt
     case 'adj_comparative':
       return comparative(w.entry as Adj)
     case 'adj_superlative':

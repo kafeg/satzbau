@@ -1,4 +1,4 @@
-сборка 2026-11-24, версия данных 8e05debfaa10
+сборка 2026-11-24, версия данных 912b4c645b0d
 
 слов в themes.yaml: 573; собрано: 573; потеряно: 0
 
@@ -18,13 +18,13 @@
 
 размеры:
   adjs.json         n=82          5.6 КиБ   gzip     1.7 КиБ
-  explain.json      n=22         23.4 КиБ   gzip     6.7 КиБ
+  explain.json      n=24         25.9 КиБ   gzip     7.2 КиБ
   nouns.json        n=360        29.2 КиБ   gzip     7.2 КиБ
   sentences.json    n=1680      168.5 КиБ   gzip    46.1 КиБ
-  templates.json    n=38         11.5 КиБ   gzip     1.7 КиБ
+  templates.json    n=40         12.0 КиБ   gzip     1.8 КиБ
   themes.json       n=6          32.7 КиБ   gzip     4.3 КиБ
   verbs.json        n=131        17.6 КиБ   gzip     4.3 КиБ
-  ИТОГО                       288.4 КиБ   gzip    72.0 КиБ
+  ИТОГО                       291.5 КиБ   gzip    72.7 КиБ
 
 предложения Tatoeba, отбраковка:
   незнакомая словоформа      137319

@@ -456,3 +456,32 @@
   slot: {paradigm: def_article, case: gen, num: sg}
   options: {paradigm: def_article, count: 4}
   why: genitiv-besitz
+
+# Präteritum: форма лежит в данных у всех 131 глагола (72 слабых, 59 сильных),
+# но до сих пор её никто не спрашивал. Отделяемые исключены: у них pt это «zog um»,
+# и приставка внутри пропуска сломала бы фразу.
+- id: praeteritum-frueher
+  rule: praeteritum
+  level: B1
+  kind: input
+  frame: "Früher {slot} ich oft."
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
+  slot: {paradigm: verb_past}
+  why: praeteritum
+
+# Без артикля прилагательное берёт его окончание на себя — сильное склонение.
+# Существительное первым, прилагательное вторым, оба из темы Еда: там без артикля
+# говорят чаще всего («Ich mag frischen Fisch»).
+- id: adj-stark-gut
+  rule: adj-ohne-artikel
+  level: A2
+  kind: input
+  # ⚠ Без артикля стоят только неисчисляемые: «Ich kaufe frische Banane» — ошибка,
+  # там нужен ein. Отсюда has: [mass].
+  # Прилагательное зафиксировано в рамке, а не берётся из лексикона: пары вида
+  # «salzigen Zucker» и «scharfes Salz» собирались сами собой, а «gut» подходит всему.
+  frame: "Ich kaufe gut{slot} {w}."
+  # еда и питьё: «guten Husten» и «guten Schimmel» тоже неисчисляемые, но их не покупают
+  need: {pos: n, tags: [food, drink], has: [mass], not: [pl_only, abstract]}
+  slot: {paradigm: adj_ending, decl: strong, case: akk, num: sg, gender: from_word}
+  why: adj-ohne-artikel
