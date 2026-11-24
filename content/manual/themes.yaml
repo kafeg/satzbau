@@ -197,7 +197,7 @@ home:
     - {w: Aufzug,        pos: n, lv: A2, tags: [thing]}
     - {w: Garage,        pos: n, lv: A2, tags: [place]}
     - {w: Mülltonne,     pos: n, lv: A2, tags: [thing]}
-    - {w: Strom,         pos: n, lv: A2, tags: [thing]}
+    - {w: Strom,         pos: n, lv: A2, tags: [abstract]}
     - {w: Anmeldung,     pos: n, lv: A2, tags: [document]}
     - {w: Umzug,         pos: n, lv: A2, tags: [abstract]}
     - {w: anmelden,      pos: v, lv: A2, tags: [state, obj]}
@@ -220,7 +220,7 @@ home:
     - {w: Kündigungsfrist, pos: n, lv: B1, tags: [abstract]}
     - {w: Besichtigung,  pos: n, lv: B1, tags: [abstract]}
     - {w: Makler,        pos: n, lv: B1, tags: [person]}
-    - {w: Schimmel,      pos: n, lv: B1, tags: [thing]}
+    - {w: Schimmel,      pos: n, lv: B1, tags: [abstract]}
     - {w: besichtigen,   pos: v, lv: B1, tags: [state, obj, housework]}
     - {w: überweisen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: sanieren,      pos: v, lv: B1, tags: [state, obj, housework]}

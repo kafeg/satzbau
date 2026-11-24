@@ -64,7 +64,7 @@
   level: A2
   kind: choice
   frame: "Die Lampe steht auf {slot} {w}."
-  need: {pos: n, tags: [surface], not: [pl_only]}
+  need: {pos: n, tags: [surface], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: dat, num: sg, prep: auf}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wo
@@ -74,7 +74,7 @@
   level: A2
   kind: choice
   frame: "Ich stelle die Lampe auf {slot} {w}."
-  need: {pos: n, tags: [surface], not: [pl_only]}
+  need: {pos: n, tags: [surface], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: akk, num: sg, prep: auf}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wohin
@@ -344,8 +344,8 @@
   rule: wechsel-wo
   level: A2
   kind: choice
-  frame: "Die Lampe steht neben {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only]}
+  frame: "Der Hausmeister steht neben {slot} {w}."
+  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: dat, num: sg, prep: neben}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wo
@@ -354,8 +354,8 @@
   rule: wechsel-wohin
   level: A2
   kind: choice
-  frame: "Ich stelle die Lampe neben {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only]}
+  frame: "Ich stelle den Koffer neben {slot} {w}."
+  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: akk, num: sg, prep: neben}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wohin
@@ -365,7 +365,7 @@
   level: A2
   kind: choice
   frame: "Der Schlüssel liegt unter {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only]}
+  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: dat, num: sg, prep: unter}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wo
@@ -375,7 +375,7 @@
   level: A2
   kind: choice
   frame: "Ich lege den Schlüssel unter {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only]}
+  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: akk, num: sg, prep: unter}
   options: {paradigm: def_article, count: 4}
   why: wechsel-wohin
@@ -482,7 +482,8 @@
   # Прилагательное зафиксировано в рамке, а не берётся из лексикона: пары вида
   # «salzigen Zucker» и «scharfes Salz» собирались сами собой, а «gut» подходит всему.
   frame: "Ich kaufe gut{slot} {w}."
-  # еда, питьё и Benzin: «guten Husten» и «guten Schimmel» тоже неисчисляемые, но их не покупают
+  # еда, питьё и Benzin. «guten Schimmel» и «guten Strom» тоже неисчисляемые, но их
+  # не покупают — оба помечены abstract именно поэтому, и not их отсекает
   need: {pos: n, tags: [food, drink, thing], has: [mass], not: [pl_only, abstract]}
   slot: {paradigm: adj_ending, decl: strong, case: akk, num: sg, gender: from_word}
   why: adj-ohne-artikel
