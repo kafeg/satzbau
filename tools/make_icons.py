@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Иконки приложения: кладка из блоков в цветах рода на тёмном фоне.
 
-Рисуем кодом, а не в редакторе: иконка повторяется в четырёх размерах, и шрифт
+Рисуем кодом, а не в редакторе: иконка повторяется в нескольких размерах, и шрифт
 для неё не нужен — блоки складываются в «предложение собирается из частей».
 Цвета те же, что кодируют род и падеж в интерфейсе (docs/design.md).
 
 Каждый размер рисуется в четыре раза крупнее и усредняется: без сглаживания
 скруглённые углы в мелком размере рвутся. Maskable — то же содержимое, сжатое
-к центру до 80 % поля: Android режет иконку под свою форму.
+к центру до 80 % поля: Android режет иконку под свою форму. Фавиконка наоборот
+чуть крупнее поля (110 %): во вкладке иконка стоит одна, поля ей не нужны.
 
     python3 -I tools/make_icons.py
 """
@@ -21,6 +22,17 @@ BG = (0x17, 0x17, 0x1C)
 BLUE = (0x24, 0x48, 0xB8)     # der / Akkusativ
 ORANGE = (0xD1, 0x67, 0x1A)   # die / Dativ
 PURPLE = (0x7A, 0x4C, 0xB0)   # das / Genitiv
+
+
+def bricks(k):
+    """Три блока: доли поля (x, y, w, h, радиус, цвет); k сжимает кладку к центру."""
+    x, w, h, gap, rad = 0.14, 0.72, 0.20, 0.035, 0.045
+    top, bottom, left = 0.5 - h - gap / 2, 0.5 + gap / 2, w * 0.56
+    plan = [(x, top, left, h, ORANGE),
+            (x + left + gap, top, w - left - gap, h, PURPLE),
+            (x, bottom, w, h, BLUE)]
+    return [(0.5 + (bx - 0.5) * k, 0.5 + (by - 0.5) * k, bw * k, bh * k, rad * k, c)
+            for bx, by, bw, bh, c in plan]
 
 
 def chunk(tag, body):
@@ -48,18 +60,16 @@ def downsample(rows, size):
     return out
 
 
-def rrect(rows, S, k, x, y, w, h, rad, color):
-    """Скруглённый прямоугольник; координаты в долях поля, k сжимает к центру."""
-    x0, y0 = (0.5 + (x - 0.5) * k) * S, (0.5 + (y - 0.5) * k) * S
-    ww, hh = w * k * S, h * k * S
-    rr = min(rad * k * S, ww / 2, hh / 2)
+def rrect(rows, S, x, y, w, h, rad, color):
+    x0, y0, ww, hh = x * S, y * S, w * S, h * S
+    rr = min(rad * S, ww / 2, hh / 2)
     c = bytes(color)
-    for py in range(int(y0), int(y0 + hh) + 1):
+    for py in range(max(0, int(y0)), min(S, int(y0 + hh) + 1)):
         fy = py + 0.5
         if not y0 <= fy <= y0 + hh:
             continue
         row = rows[py]
-        for px in range(int(x0), int(x0 + ww) + 1):
+        for px in range(max(0, int(x0)), min(S, int(x0 + ww) + 1)):
             fx = px + 0.5
             if not x0 <= fx <= x0 + ww:
                 continue
@@ -72,12 +82,24 @@ def rrect(rows, S, k, x, y, w, h, rad, color):
 def icon(size, k):
     S = size * SS
     rows = [bytearray(bytes(BG) * S) for _ in range(S)]
-    x, w, h, gap, rad = 0.14, 0.72, 0.20, 0.035, 0.045
-    top, bottom, left = 0.5 - h - gap / 2, 0.5 + gap / 2, w * 0.56
-    rrect(rows, S, k, x, top, left, h, rad, ORANGE)
-    rrect(rows, S, k, x + left + gap, top, w - left - gap, h, rad, PURPLE)
-    rrect(rows, S, k, x, bottom, w, h, rad, BLUE)
+    for x, y, w, h, rad, color in bricks(k):
+        rrect(rows, S, x, y, w, h, rad, color)
     return downsample(rows, size)
+
+
+def write_svg(path, k):
+    def num(v):
+        return f'{v * 100:.2f}'.rstrip('0').rstrip('.')
+
+    def hexc(c):
+        return '#%02X%02X%02X' % c
+
+    parts = [f'<rect width="100" height="100" fill="{hexc(BG)}"/>']
+    for x, y, w, h, rad, color in bricks(k):
+        parts.append(f'<rect x="{num(x)}" y="{num(y)}" width="{num(w)}" height="{num(h)}" '
+                     f'rx="{num(rad)}" fill="{hexc(color)}"/>')
+    path.write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">'
+                    + ''.join(parts) + '</svg>\n')
 
 
 for name, size, k in [
@@ -85,6 +107,10 @@ for name, size, k in [
     ('icon-512.png', 512, 1.0),
     ('icon-maskable-512.png', 512, 0.8),
     ('apple-touch-icon-180.png', 180, 1.0),
+    ('favicon-32.png', 32, 1.1),
 ]:
     write_png(OUT / name, size, icon(size, k))
     print(name)
+
+write_svg(OUT / 'favicon.svg', 1.1)
+print('favicon.svg')
