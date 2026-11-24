@@ -163,6 +163,9 @@ def main():
         for k in ('title', 'short', 'ru_contrast', 'steps'):
             if k not in (explain.get(r) or {}):
                 errors.append(f'объяснение {r}: нет поля {k}')
+        # title показывается в списке правил на главной, где задания нет и подставить нечего
+        if '{' in (explain.get(r) or {}).get('title', ''):
+            errors.append(f'объяснение {r}: в title есть подстановка — он виден вне задания')
     unused = set(explain) - {t['why'] for t in templates}
     if unused:
         notes.append(f'объяснения без шаблона: {", ".join(sorted(unused))}')
