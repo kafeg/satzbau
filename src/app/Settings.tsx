@@ -40,9 +40,9 @@ export function Settings({
         </p>
       ) : (
         <>
-          <ul className="groups">
+          <ul className="group voices">
             {voices.map((v) => (
-              <li key={v.name} className="group">
+              <li key={v.name}>
                 <button
                   className="grule"
                   onClick={() => {
@@ -67,7 +67,7 @@ export function Settings({
       <h2 className="section">
         <span>Данные</span>
       </h2>
-      <p className="note small">
+      <p className="panel note small">
         Версия {meta.version}, собраны {meta.built}. Слов{' '}
         {meta.counts['nouns.json']! + meta.counts['verbs.json']! + meta.counts['adjs.json']!},
         шаблонов {meta.counts['templates.json']}, правил {meta.counts['explain.json']}.

@@ -1,5 +1,7 @@
-// Экран темы: что внутри неё. Сильные правила — те, у которых много слов этой темы;
-// слабые — те, где их пара штук. Правила без слов темы сюда не попадают, но и не исчезают:
+// Экран темы: что внутри неё. Деление — по числу заданий, которые правило получает
+// на словах ИМЕННО этой темы, а не по тому, насколько человек им владеет: заголовки
+// списков говорят то же, что подпись у строки.
+// Правила без слов темы сюда не попадают, но и не исчезают:
 // они на главной, и сессия темы всё равно доберёт их лексикой из других тем.
 
 import { getBundle } from '../core/bundle.ts'
@@ -59,17 +61,17 @@ export function Theme({ theme, level }: { theme: string; level?: Level }) {
       {strong.length > 0 && (
         <>
           <h2 className="section">
-            <span>Сильные правила темы</span>
+            <span>Много заданий на словах темы</span>
           </h2>
-          <div className="group">{strong.map(row)}</div>
+          <div className="group theme-rules">{strong.map(row)}</div>
         </>
       )}
       {weak.length > 0 && (
         <>
           <h2 className="section">
-            <span>Слабые на этой теме</span>
+            <span>Мало заданий на словах темы</span>
           </h2>
-          <div className="group">{weak.map(row)}</div>
+          <div className="group theme-rules">{weak.map(row)}</div>
         </>
       )}
       {empty > 0 && (

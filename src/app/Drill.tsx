@@ -37,7 +37,8 @@ export function Drill({
   const answered = given !== null
   const correct = given === item.answer
   const article = item.ctx.nom_article
-  // в шапке тема и уровень, а НЕ правило: «prep-dativ» называет падеж до ответа
+  // в шапке короткое имя правила (поле name), а в сессии вперемешку — тема и уровень:
+  // длинный title — это заголовок разбора, во фразу-чип он не помещается
   const theme = getBundle().themes[item.theme]?.title ?? item.theme
   // пропуск после окончания слова не отрывается от него: «klein___», а не «klein ___»
   const [before = '', after = ''] = item.text.split('___')
@@ -61,7 +62,7 @@ export function Drill({
             ←
           </button>
           <span className="chip">
-            {rule ? getBundle().explain[rule]?.title : `${theme} · ${item.level}`}
+            {rule ? getBundle().explain[rule]?.name : `${theme} · ${item.level}`}
           </span>
           <span className="count mono">
             {n} / {total}
@@ -85,16 +86,22 @@ export function Drill({
           {after}
         </p>
 
-        <p className="word">
-          {article && <span className={`tag ${GENDER_CLASS[article] ?? ''}`}>{article}</span>}
-          <span className="lemma">{item.word}</span>
-          {item.ru && <span className="ru">— {item.ru}</span>}
-          {voice && (
-            <button className="speak" onClick={() => speak(item.full)} aria-label="озвучить">
-              🔊
-            </button>
-          )}
-        </p>
+        <div className="word">
+          <span className="wtag">
+            {article && <span className={`tag ${GENDER_CLASS[article] ?? ''}`}>{article}</span>}
+          </span>
+          <span className="wtext">
+            <span className="lemma">{item.word}</span>
+            {item.ru && <span className="ru"> — {item.ru}</span>}
+          </span>
+          <span className="wspeak">
+            {voice && (
+              <button className="speak" onClick={() => speak(item.full)} aria-label="озвучить">
+                🔊
+              </button>
+            )}
+          </span>
+        </div>
 
         {item.options ? (
           <div className="options">

@@ -108,9 +108,9 @@ export function Mistakes({
             ))}
           </div>
 
-          <ul className="groups mistakes">
+          <ul className="group mistakes">
             {rows.map(([key, r]) => (
-              <li key={key} className="group">
+              <li key={key}>
                 <div className="grule">
                   <span className="rname">
                     {r.title}
