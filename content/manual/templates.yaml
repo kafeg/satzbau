@@ -817,3 +817,68 @@
   slot: {paradigm: reflexive_pronoun, person: 3sg}
   options: {paradigm: reflexive_pronoun, count: 4}
   why: reflexiv
+
+# ── Futur I: werden + инфинитив, и инфинитив уезжает в конец.
+- id: futur-ich
+  rule: futur
+  level: A2
+  kind: choice
+  frame: "Ich {slot} morgen {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: werden_present, person: 1sg}
+  options: {paradigm: werden_present, count: 4}
+  why: futur
+
+- id: futur-er
+  rule: futur
+  level: A2
+  kind: choice
+  frame: "Er {slot} morgen {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: werden_present, person: 3sg}
+  options: {paradigm: werden_present, count: 4}
+  why: futur
+
+# ── Konjunktiv II: würde + инфинитив. Два лица, иначе ответ всегда würde:
+# в первом и третьем лице форма одна и та же, и выбирать было бы нечего.
+- id: konjunktiv-ich
+  rule: konjunktiv2
+  level: B1
+  kind: choice
+  frame: "Ich {slot} gern {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: wuerde, person: 1sg}
+  options: {paradigm: wuerde, count: 4}
+  why: konjunktiv2
+
+- id: konjunktiv-du
+  rule: konjunktiv2
+  level: B1
+  kind: choice
+  frame: "Du {slot} gern {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: wuerde, person: 2sg}
+  options: {paradigm: wuerde, count: 4}
+  why: konjunktiv2
+
+# ── Passiv: werden + Partizip II. Подлежащее — то же местоимение без смысла,
+# что и в рамках с объектом: кто делает, пассив как раз и не называет.
+- id: passiv-das
+  rule: passiv
+  level: B1
+  kind: choice
+  frame: "Das {slot} heute {pp}."
+  need: {pos: v, tags: [obj], not: [reflexive, obj_person, placement]}
+  slot: {paradigm: werden_present, person: 3sg}
+  options: {paradigm: werden_present, count: 4}
+  why: passiv
+
+- id: passiv-ich
+  rule: passiv
+  level: B1
+  kind: choice
+  frame: "Ich {slot} heute {pp}."
+  need: {pos: v, tags: [obj_person], not: [reflexive]}
+  slot: {paradigm: werden_present, person: 1sg}
+  options: {paradigm: werden_present, count: 4}
+  why: passiv

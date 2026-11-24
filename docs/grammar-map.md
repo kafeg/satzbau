@@ -75,9 +75,9 @@
 | два предлога у глагола | `verb-praeposition-zwei` | |
 | возвратные глаголы (sich) | `reflexiv` | пять глаголов, два лица |
 | Imperativ | `imperativ` | ⚠ глаголы на -eln/-ern не берутся: форм три, и все верные |
-| Futur I (werden + Infinitiv) | — | дырка, пропуском идёт werden |
-| Konjunktiv II (würde, könnte) | — | B1, пропуском идёт würde |
-| Passiv (wird + Partizip II) | — | B1, пропуском идёт wird |
+| Futur I (werden + Infinitiv) | `futur` | |
+| Konjunktiv II (würde, könnte) | `konjunktiv2` | würde + инфинитив; hätte и wäre только в тексте правила |
+| Passiv (wird + Partizip II) | `passiv` | |
 
 ## Синтаксис
 | направление | правило | состояние |

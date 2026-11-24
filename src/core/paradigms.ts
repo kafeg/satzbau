@@ -126,6 +126,29 @@ export const REFLEXIVE: Record<Person, string> = {
   '3pl': 'sich',
 }
 
+/**
+ * werden и würde — закрытые таблицы. На них стоят сразу три правила: Futur I
+ * (werden + инфинитив), Konjunktiv II (würde + инфинитив) и Passiv (werden + Partizip II).
+ * Сам глагол werden в лексиконе не нужен: он служебный и ни одной теме не принадлежит.
+ */
+export const WERDEN: Record<Person, string> = {
+  '1sg': 'werde',
+  '2sg': 'wirst',
+  '3sg': 'wird',
+  '1pl': 'werden',
+  '2pl': 'werdet',
+  '3pl': 'werden',
+}
+
+export const WUERDE: Record<Person, string> = {
+  '1sg': 'würde',
+  '2sg': 'würdest',
+  '3sg': 'würde',
+  '1pl': 'würden',
+  '2pl': 'würdet',
+  '3pl': 'würden',
+}
+
 export const AUX_PRESENT: Record<Person, { haben: string; sein: string }> = {
   '1sg': { haben: 'habe', sein: 'bin' },
   '2sg': { haben: 'hast', sein: 'bist' },
@@ -233,6 +256,11 @@ export function inventory(
       return einInventory('kein', true)
     case 'reflexive_pronoun':
       return uniq(Object.values(REFLEXIVE))
+    // варианты — формы того же werden в других лицах: ошибка в лице, а не в выборе глагола
+    case 'werden_present':
+      return uniq(Object.values(WERDEN))
+    case 'wuerde':
+      return uniq(Object.values(WUERDE))
     // выбор «nicht или kein» — это один инвентарь на оба: иначе по виду вариантов
     // видно, какой ответ нужен, и думать не о чем
     case 'negation':

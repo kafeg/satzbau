@@ -6,6 +6,8 @@ import {
   govOf,
   govexParts,
   REFLEXIVE,
+  WERDEN,
+  WUERDE,
   modal,
   type Modal,
   pronoun,
@@ -109,6 +111,10 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return imperative(w.entry as Verb)
     case 'reflexive_pronoun':
       return REFLEXIVE[slot.person ?? '3sg']
+    case 'werden_present':
+      return WERDEN[slot.person ?? '3sg']
+    case 'wuerde':
+      return WUERDE[slot.person ?? '3sg']
     // «nicht» рядом с kein: вариант один, а вот выбрать между ними — и есть задание
     case 'nicht':
       return 'nicht'
