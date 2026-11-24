@@ -640,24 +640,52 @@
 # а по-немецки warten AUF den Zug. Дополнение не подбирается из лексикона (так выходило
 # «Er würzt das Salz»), а написано руками по глаголу — fixes.yaml:government_example.
 # Падеж в дополнении уже стоит правильный: его задаёт то же управление.
+# Одна рамка на все формы глагола: пустые подстановки генератор склеивает. {mich} —
+# возвратное у sich bewerben, {pre} — прямое дополнение перед предлогом
+# («das Geld auf das Konto»), {particle} — приставка отделяемого, она всегда последняя.
 - id: verb-prep-ich
   rule: verb-praeposition
   level: A2
   kind: choice
-  frame: "Ich {v1} {slot} {obj}."
-  need: {pos: v, has: [govex], not: [sep, reflexive]}
+  frame: "Ich {v1} {mich} {pre} {slot} {obj} {particle}."
+  # position исключён: «Ich hänge an der Wand» — это про себя, у него своя рамка ниже
+  need: {pos: v, has: [govex], not: [govex2, position]}
   slot: {paradigm: verb_prep}
   options: {paradigm: verb_prep, count: 4}
   why: verb-praeposition
 
-# Тот же предлог, но у отделяемого глагола: приставка уезжает за дополнение.
-# «Ich steige in den Zug ein» — предлог в середине, приставка последней.
-- id: verb-prep-trennbar
+# Подлежащее не человек: hängen, stehen. «Das hängt an der Wand» — то же местоимение
+# без смысла, что и в рамках с объектом.
+- id: verb-prep-ding
   rule: verb-praeposition
   level: A2
   kind: choice
-  frame: "Ich {v1} {slot} {obj} {particle}."
-  need: {pos: v, has: [govex, sep], not: [reflexive]}
+  frame: "Das {v3} {pre} {slot} {obj}."
+  need: {pos: v, has: [govex], tags: [position], not: [govex2]}
   slot: {paradigm: verb_prep}
   options: {paradigm: verb_prep, count: 4}
   why: verb-praeposition
+
+# Два предлога у одного глагола — отдельное правило: сказать «anmelden требует für»
+# было бы неправдой. Пример дополнения решает, какой предлог верный, поэтому ответ
+# по-прежнему один. Два шаблона, а не два задания из одного: журнал хранит пару
+# «шаблон + слово», и задание должно из неё восстанавливаться.
+- id: verb-prep-zwei-a
+  rule: verb-praeposition-zwei
+  level: A2
+  kind: choice
+  frame: "Ich {v1} {mich} {pre} {slot} {obj} {particle}."
+  need: {pos: v, has: [govex2]}
+  slot: {paradigm: verb_prep, nth: 1}
+  options: {paradigm: verb_prep, count: 4}
+  why: verb-praeposition-zwei
+
+- id: verb-prep-zwei-b
+  rule: verb-praeposition-zwei
+  level: A2
+  kind: choice
+  frame: "Ich {v1} {mich} {pre} {slot} {obj} {particle}."
+  need: {pos: v, has: [govex2]}
+  slot: {paradigm: verb_prep, nth: 2}
+  options: {paradigm: verb_prep, count: 4}
+  why: verb-praeposition-zwei

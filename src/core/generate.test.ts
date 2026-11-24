@@ -6,6 +6,7 @@ import {
   adjEndingMatches,
   formMatches,
   GOV_PREPS,
+  govexParts,
   govOf,
   inventory,
   possessive,
@@ -205,8 +206,30 @@ describe('конкретные задания', () => {
     for (const o of i.options!) expect(GOV_PREPS as readonly string[]).toContain(o)
   })
 
-  it('у отделяемого приставка уезжает за дополнение', () => {
-    expect(item('verb-prep-trennbar', 'einsteigen').full).toBe('Ich steige in den Zug ein.')
+  // одна рамка на все формы глагола: пустые подстановки склеиваются, поэтому
+  // отделяемый, возвратный и глагол с прямым дополнением обходятся без своих шаблонов
+  it('одна рамка управления собирает приставку, sich и прямое дополнение', () => {
+    expect(item('verb-prep-ich', 'einsteigen').full).toBe('Ich steige in den Zug ein.')
+    expect(item('verb-prep-ich', 'überweisen').full).toBe('Ich überweise das Geld auf das Konto.')
+    expect(item('verb-prep-ich', 'einreichen').full).toBe(
+      'Ich reiche den Antrag bei der Firma ein.',
+    )
+    expect(item('verb-prep-zwei-a', 'bewerben').full).toBe('Ich bewerbe mich bei der Firma.')
+  })
+
+  it('подлежащее-не-человек получает свою рамку', () => {
+    expect(item('verb-prep-ding', 'hängen').full).toBe('Das hängt an der Wand.')
+  })
+
+  // у двух предлогов верный ответ один: его задаёт дополнение из примера
+  it('два предлога — два шаблона, и второй предлог всегда среди вариантов', () => {
+    const a = item('verb-prep-zwei-a', 'fahren')
+    const b = item('verb-prep-zwei-b', 'fahren')
+    expect([a.full, a.answer]).toEqual(['Ich fahre mit dem Bus.', 'mit'])
+    expect([b.full, b.answer]).toEqual(['Ich fahre nach Berlin.', 'nach'])
+    expect(a.options).toContain('nach')
+    expect(b.options).toContain('mit')
+    expect(explainItem(b).steps.join(' ')).toContain('mit и nach')
   })
 
   // падеж в связке задаёт управление, а не шаблон: у слота verb_prep падежа нет вовсе,
@@ -214,6 +237,17 @@ describe('конкретные задания', () => {
   it('падеж в разборе берётся из управления, а не из шаблона', () => {
     expect(explainItem(item('verb-prep-ich', 'warten')).steps.join(' ')).toContain('винительный')
     expect(explainItem(item('verb-prep-ich', 'arbeiten')).steps.join(' ')).toContain('дательный')
+  })
+
+  it('пример управления делится по предлогу самого глагола', () => {
+    expect(govexParts(['auf A'], 'das Geld auf das Konto')).toEqual({
+      pre: 'das Geld',
+      prep: 'auf',
+      obj: 'das Konto',
+      case: 'akk',
+    })
+    // «nach» предлог управления только у fahren: у warten его в управлении нет
+    expect(govexParts(['auf A'], 'nach Berlin')).toBeNull()
   })
 
   it('запись управления разбирается в предлог и падеж', () => {

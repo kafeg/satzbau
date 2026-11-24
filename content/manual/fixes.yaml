@@ -54,11 +54,15 @@ government:
 #     «Ich warte … den Zug» без дополнения не собирается, а подбирать дополнение
 #     автоматом уже пробовали — выходило «Er würzt das Salz» (отвергнуто,
 #     docs/architecture.md). Здесь оно написано руками, с артиклем в том падеже,
-#     который требует управление: двадцать две строки, и каждую видно глазами.
-#     Проверяется валидатором: предлог один — пример обязателен, и он начинается
-#     с этого предлога. Глаголов, которым нужно ещё и прямое дополнение, здесь нет:
-#     «Ich überweise auf das Konto» не фраза, непонятно что переводят. И нет тех,
-#     у кого подлежащим не может быть человек: «Ich hänge an der Wand» про себя.
+#     который требует управление, и каждую строку видно глазами.
+#     Пример — это весь хвост фразы, вместе с прямым дополнением, если глагол его
+#     требует: «das Geld auf das Konto». Предлог генератор находит сам, по управлению
+#     этого же глагола, и делит пример на «до предлога» и «после».
+#     Два предлога — список из двух примеров, по одному на предлог: у anmelden и
+#     fahren предлог выбирает смысл, и без примера верных ответов было бы два.
+#     Возвратное sich в пример не пишем: его ставит рамка.
+#     Проверяет валидатор: предлог примера есть в управлении, примеров не больше, чем
+#     предложных связок, и глагол с предлогом без примера попадает в заметки.
 government_example:
   anfangen:     "mit der Arbeit"
   ankommen:     "in Berlin"
@@ -68,8 +72,9 @@ government_example:
   aufpassen:    "auf das Kind"
   aussteigen:   "aus dem Bus"
   basteln:      "an einem Bild"
-  bezahlen:     "für die Rechnung"
+  bezahlen:     "für das Essen"
   einsteigen:   "in den Zug"
+  helfen:       "bei der Arbeit"
   impfen:       "gegen die Grippe"
   leiden:       "an einer Allergie"
   spielen:      "mit dem Ball"
@@ -78,6 +83,17 @@ government_example:
   verdienen:    "an einem Auftrag"
   verzichten:   "auf den Nachtisch"
   warten:       "auf den Zug"
+  # глаголу нужно ещё и прямое дополнение: оно в примере перед предлогом
+  einreichen:   "den Antrag bei der Firma"
+  überweisen:   "das Geld auf das Konto"
+  verschieben:  "den Termin auf Montag"
+  # подлежащее не человек: «Ich hänge an der Wand» про себя. Рамка даёт «Das hängt …»
+  hängen:       "an der Wand"
+  # два предлога: порядок примеров — порядок предлогов в задании
+  anmelden:     ["das Kind bei der Stadt", "das Kind für den Kurs"]
+  bewerben:     ["bei der Firma", "um die Stelle"]
+  fahren:       ["mit dem Bus", "nach Berlin"]
+  streiten:     ["mit dem Nachbarn", "um den Platz"]
 
 # 2. Род: решения, которых нет в данных. Два случая.
 #

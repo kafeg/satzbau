@@ -33,8 +33,8 @@ export interface Verb {
   aux: 'h' | 's' | 'hs'
   k2?: string
   gov?: string[]
-  /** пример дополнения с предлогом: «auf den Zug». Руками, см. fixes.yaml */
-  govex?: string
+  /** примеры дополнения с предлогом: «auf den Zug», по одному на предлог. Руками, см. fixes.yaml */
+  govex?: string[]
   auxn?: string
   refl?: 1
   ru?: string
@@ -86,6 +86,8 @@ export interface Slot {
   modal?: string
   prep?: string
   from_word?: 'aux'
+  /** какой по счёту пример управления берём: у глагола их бывает два */
+  nth?: number
 }
 
 export interface SlotOptions {

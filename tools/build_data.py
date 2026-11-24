@@ -244,10 +244,10 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep):
     gov = fixes['government'].get(base)
     if gov:
         v['gov'] = gov
-        # пример дополнения нужен только там, где предлог один: иначе верных ответов два
+        # примеры дополнения: список, по одному на предлог. Порядок — порядок заданий
         ex = fixes['government_example'].get(base)
-        if ex and len(gov) == 1 and ' ' in gov[0]:
-            v['govex'] = ex
+        if ex:
+            v['govex'] = [ex] if isinstance(ex, str) else list(ex)
     auto = [g for g in verb_gov(ke) if g not in (gov or [])]
     if auto:
         gov_rep.append((lemma, auto))

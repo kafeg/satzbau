@@ -79,6 +79,33 @@ export const GOV_PREPS = [
 ] as const
 
 /** Запись управления в предлог и падеж: «auf A» → auf + винительный. */
+/**
+ * Разбор примера дополнения на части: «das Geld auf das Konto» → до предлога, предлог,
+ * после. Предлог ищется по управлению самого глагола, поэтому прямое дополнение перед
+ * ним предлогом не считается. Падеж приходит из управления, не из предлога: auf бывает
+ * и с Dativ, а в связке он зафиксирован.
+ */
+export function govexParts(
+  gov: string[],
+  ex: string,
+): { pre: string; prep: string; obj: string; case: Case } | null {
+  const preps = new Map<string, Case>()
+  for (const g of gov) {
+    const p = govOf(g)
+    if (p) preps.set(p.prep, p.case)
+  }
+  const toks = ex.split(' ')
+  const i = toks.findIndex((t) => preps.has(t))
+  if (i < 0) return null
+  const prep = toks[i] as string
+  return {
+    pre: toks.slice(0, i).join(' '),
+    prep,
+    obj: toks.slice(i + 1).join(' '),
+    case: preps.get(prep) as Case,
+  }
+}
+
 export function govOf(gov: string): { prep: string; case: Case } | null {
   const [prep, c] = gov.split(' ')
   if (!prep || !c || !GOV_PREPS.includes(prep as (typeof GOV_PREPS)[number])) return null

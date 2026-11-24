@@ -4,6 +4,7 @@ import {
   adjEnding,
   defArticle,
   govOf,
+  govexParts,
   modal,
   type Modal,
   pronoun,
@@ -41,6 +42,8 @@ const FLAGS: Record<string, (e: Noun & Verb & Adj) => boolean> = {
   adjdecl: (e) => !!e.adjdecl,
   mass: (e) => !!e.mass,
   aux_hs: (e) => e.aux === 'hs',
+  // два предлога у одного глагола: какой из них нужен, выбирает смысл, а не глагол
+  govex2: (e) => (e.govex?.length ?? 0) >= 2,
 }
 
 /**
@@ -101,11 +104,13 @@ function slotForm(slot: Slot, w: Word, c: Case, w2?: Word | null): string | null
       return pronoun(c === 'dat' ? 'dat' : 'akk', genderOf(slot, w, w2), num)
     case 'adj_predicative':
       return (w.entry as Adj).w
-    // пропуск — сам предлог, который требует глагол. Берётся из gov, а не из шаблона:
-    // это свойство слова, и в данных оно подтверждено руками (fixes.yaml)
+    // пропуск — сам предлог, который требует глагол: свойство слова, а не шаблона.
+    // Берётся из примера управления (их бывает два — какой, говорит nth), и этот
+    // пример в данных написан руками (fixes.yaml)
     case 'verb_prep': {
-      const g = (w.entry as Verb).gov?.[0]
-      return g ? (govOf(g)?.prep ?? null) : null
+      const v = w.entry as Verb
+      const ex = v.govex?.[(slot.nth ?? 1) - 1]
+      return ex ? (govexParts(v.gov ?? [], ex)?.prep ?? null) : null
     }
     case 'adj_comparative':
       return comparative(w.entry as Adj)
@@ -151,9 +156,20 @@ function shuffle<T>(xs: T[], seed: string): T[] {
  */
 function buildOptions(t: Template, w: Word, answer: string, w2?: Word | null): string[] {
   const count = t.options?.count ?? 4
-  const near = CASES.filter((c) => c !== t.slot.case)
-    .map((c) => slotForm(t.slot, w, c, w2))
-    .filter((f): f is string => !!f && f !== answer)
+  // у управления «близкая» форма — другой предлог ТОГО ЖЕ глагола: это ровно та ошибка,
+  // которую надо поймать, поэтому он всегда среди вариантов
+  const nearPrep =
+    t.slot.paradigm === 'verb_prep'
+      ? ((w.entry as Verb).gov ?? [])
+          .map((g) => govOf(g)?.prep)
+          .filter((p): p is string => !!p && p !== answer)
+      : []
+  const near = [
+    ...nearPrep,
+    ...CASES.filter((c) => c !== t.slot.case)
+      .map((c) => slotForm(t.slot, w, c, w2))
+      .filter((f): f is string => !!f && f !== answer),
+  ]
   const all = inventory(t.options?.paradigm ?? t.slot.paradigm, {
     prep: t.options?.prep ?? t.slot.prep,
     person: t.slot.person,
@@ -207,12 +223,21 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   const g = w.pos === 'n' || t.slot.gender === 'from_fill2' ? genderOf(t.slot, w, w2) : null
   const word = wordIn(w, t.slot)
   const pp = w.pos === 'v' ? (w.entry as Verb).pp : ''
-  // {v1} — спрягаемая часть в первом лице, {obj} — дополнение без предлога:
-  // предлог стоит в пропуске, поэтому из govex его надо снять
-  const v1 = w.pos === 'v' ? (present(w.entry as Verb, '1sg').split(' ')[0] ?? '') : ''
-  const obj = (w.pos === 'v' ? (w.entry as Verb).govex : '')?.split(' ').slice(1).join(' ') ?? ''
-  const govCase =
-    t.slot.paradigm === 'verb_prep' ? (govOf((w.entry as Verb).gov?.[0] ?? '')?.case ?? null) : null
+  // {v1} и {v3} — спрягаемая часть без приставки, {pre} и {obj} — то, что в примере
+  // управления стоит до предлога и после: предлог стоит в пропуске
+  const vb = w.pos === 'v' ? (w.entry as Verb) : null
+  const gx = vb?.govex?.[(t.slot.nth ?? 1) - 1]
+  const parts = vb && gx ? govexParts(vb.gov ?? [], gx) : null
+  const v1 = vb ? (present(vb, '1sg').split(' ')[0] ?? '') : ''
+  const v3 = vb ? (present(vb, '3sg').split(' ')[0] ?? '') : ''
+  const pre = parts?.pre ?? ''
+  const obj = parts?.obj ?? ''
+  const mich = vb?.refl ? 'mich' : ''
+  const preps = (vb?.gov ?? [])
+    .map((g) => govOf(g)?.prep)
+    .filter(Boolean)
+    .join(' и ')
+  const govCase = t.slot.paradigm === 'verb_prep' ? (parts?.case ?? null) : null
   const part = w.pos === 'v' ? (particle(w.entry as Verb) ?? '') : ''
   const g2 = w2?.pos === 'n' ? (w2.entry as Noun).g : undefined
   const case2 = t.fill2?.case ?? 'akk'
@@ -254,7 +279,14 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       .replace('{pp}', pp)
       .replace('{particle}', part)
       .replace('{v1}', v1)
+      .replace('{v3}', v3)
+      .replace('{mich}', mich)
+      .replace('{pre}', pre)
       .replace('{obj}', obj)
+      // пустые подстановки оставляют двойные пробелы: одна рамка управления служит
+      // и отделяемому, и возвратному, и глаголу с прямым дополнением
+      .replace(/\s+/g, ' ')
+      .replace(/ ([.?!])/g, '$1')
   return {
     templateId: t.id,
     rule: t.rule,
@@ -278,6 +310,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       pp,
       prep: t.slot.prep ?? t.options?.prep ?? '',
       obj,
+      preps,
       // у управления падеж задаёт не шаблон, а сама связка: «warten auf» это всегда Akkusativ
       case_ru: CASE_RU[govCase ?? t.slot.case ?? 'nom'],
       question: t.slot.case === 'akk' ? 'wohin?' : 'wo?',

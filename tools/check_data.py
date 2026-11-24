@@ -25,6 +25,7 @@ FLAGS['aux_hs'] = lambda r: r.get('aux') == 'hs'
 FLAGS['sep'] = lambda r: ' ' in (r.get('p3') or '')
 FLAGS['aux_s'] = lambda r: r.get('aux') == 's'
 FLAGS['reflexive'] = lambda r: bool(r.get('refl'))
+FLAGS['govex2'] = lambda r: len(r.get('govex') or ()) >= 2
 errors, warns, notes = [], [], []
 
 
@@ -198,25 +199,52 @@ def main():
     # его может только человек, а вот согласованность с gov проверяется здесь.
     gov_ex = fixes.get('government_example') or {}
     gov_all = fixes.get('government') or {}
+    parsed = []
     for v, ex in sorted(gov_ex.items()):
         gov = gov_all.get(v)
         if not gov:
             errors.append(f'fixes.yaml:government_example — у {v} нет управления в government')
             continue
-        preps = [g for g in gov if ' ' in g]
-        if len(gov) != 1 or not preps:
-            errors.append(f'fixes.yaml:government_example — у {v} управление {gov}: '
-                          f'пример годится только там, где предлог один, иначе верных ответов два')
-        elif not ex.startswith(preps[0].split()[0] + ' '):
-            errors.append(f'fixes.yaml:government_example — {v}: {ex!r} не начинается '
-                          f'с предлога {preps[0].split()[0]!r} из управления')
-    # обратная сторона: глагол с одним предлогом и без примера в правило не попадёт
-    one_prep = sorted(v for v, g in gov_all.items()
-                      if len(g) == 1 and ' ' in g[0] and v not in gov_ex
-                      and v in {w['w'] for w in words})
-    if one_prep:
-        notes.append(f'управление с одним предлогом, но без примера ({len(one_prep)}) — '
-                     f'в правило о предлоге не попадут: {", ".join(one_prep)}')
+        preps = {g.split()[0]: g.split()[1] for g in gov if ' ' in g}
+        exs = [ex] if isinstance(ex, str) else list(ex)
+        if not preps:
+            errors.append(f'fixes.yaml:government_example — у {v} управление {gov} '
+                          f'без предлога: пропуску нечего показывать')
+            continue
+        if len(exs) > len(preps):
+            errors.append(f'fixes.yaml:government_example — у {v} примеров {len(exs)}, '
+                          f'а предложных связок {len(preps)}')
+        seen = []
+        for e in exs:
+            hit = [(i, w) for i, w in enumerate(e.split()) if w in preps]
+            if not hit:
+                errors.append(f'fixes.yaml:government_example — {v}: в {e!r} нет предлога '
+                              f'из управления {sorted(preps)}')
+                continue
+            if len(hit) > 1:
+                errors.append(f'fixes.yaml:government_example — {v}: в {e!r} предлогов '
+                              f'управления несколько ({", ".join(w for _, w in hit)})')
+                continue
+            i, prep = hit[0]
+            if prep in seen:
+                errors.append(f'fixes.yaml:government_example — {v}: предлог {prep!r} '
+                              f'в примерах дважды, второй связки у него нет')
+            seen.append(prep)
+            toks = e.split()
+            parsed.append((v, ' '.join(toks[:i]) or '—', prep, preps[prep],
+                           ' '.join(toks[i + 1:])))
+    if parsed:
+        notes.append('примеры управления, как их делит генератор '
+                     '(до предлога | предлог | падеж | после) — прочитать глазами:')
+        for v, pre, prep, c, obj in parsed:
+            notes.append(f'    {v:14} {pre:18} {prep:7} {c:3} {obj}')
+    # обратная сторона: глагол с предлогом и без примера в правило не попадёт
+    no_ex = sorted(v for v, g in gov_all.items()
+                   if any(' ' in x for x in g) and v not in gov_ex
+                   and v in {w['w'] for w in words})
+    if no_ex:
+        notes.append(f'управление с предлогом, но без примера ({len(no_ex)}) — '
+                     f'в правило о предлоге не попадут: {", ".join(no_ex)}')
 
     # --- правки, которые ни на что не ложатся
     lemmas = {w['w'] for w in words}
