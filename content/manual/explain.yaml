@@ -4,6 +4,8 @@
 # Поля:
 #   name         короткое имя для списка правил: 2–4 слова, без подстановок
 #   group        блок на главной: падеж | артикль | существительное | прилагательное | глагол
+#   after        правила, которые разумно знать раньше: задаёт ПОРЯДОК внутри группы.
+#                Правило не запирается — это подсказка очереди и списка, а не замок
 #   title        заголовок разбора; виден и вне задания, поэтому тоже БЕЗ подстановок
 #   short        одна строка для списка ошибок («мои ошибки»)
 #   ru_contrast  сопоставление с русским падежом — ядро объяснения
@@ -13,6 +15,7 @@
 prep-dativ:
   name: Предлоги + Dativ
   group: падеж
+  after: [nominativ-subjekt]
   title: Предлоги, которые всегда требуют Dativ
   short: "{prep} + Dativ"
   ru_contrast: >-
@@ -30,6 +33,7 @@ prep-dativ:
 prep-akkusativ:
   name: Предлоги + Akkusativ
   group: падеж
+  after: [akkusativ-objekt]
   title: Предлоги, которые всегда требуют Akkusativ
   short: "{prep} + Akkusativ"
   ru_contrast: >-
@@ -48,6 +52,7 @@ prep-akkusativ:
 wechsel-wo:
   name: wo? → Dativ
   group: падеж
+  after: [prep-dativ]
   title: Предлог с двумя падежами, вопрос wo? — значит Dativ
   short: "{prep} + wo? → Dativ"
   ru_contrast: >-
@@ -66,6 +71,7 @@ wechsel-wo:
 wechsel-wohin:
   name: wohin? → Akkusativ
   group: падеж
+  after: [wechsel-wo, prep-akkusativ]
   title: Предлог с двумя падежами, вопрос wohin? — значит Akkusativ
   short: "{prep} + wohin? → Akkusativ"
   ru_contrast: >-
@@ -84,6 +90,7 @@ wechsel-wohin:
 merge-prep-article:
   name: im, ins, zum
   group: артикль
+  after: [prep-dativ, prep-akkusativ]
   title: Предлог и артикль сливаются, и падеж пропадает из вида
   short: "in + dem = im"
   ru_contrast: >-
@@ -102,6 +109,7 @@ merge-prep-article:
 adj-dat-en:
   name: Прилагательное в Dativ
   group: прилагательное
+  after: [adj-akk-en, prep-dativ]
   title: Окончание прилагательного в Dativ
   short: "Dativ → прилагательное на -en"
   ru_contrast: >-
@@ -120,6 +128,7 @@ adj-dat-en:
 perfekt-aux:
   name: "Perfekt: haben или sein"
   group: глагол
+  after: [perfekt-partizip]
   title: "Perfekt: haben или sein"
   short: "{w} → Perfekt с {answer}"
   ru_contrast: >-
@@ -139,6 +148,7 @@ perfekt-aux:
 akkusativ-objekt:
   name: "Akkusativ: прямой объект"
   group: падеж
+  after: [nominativ-subjekt]
   title: Прямой объект стоит в Akkusativ
   short: brauchen + Akkusativ
   ru_contrast: >-
@@ -177,6 +187,7 @@ nominativ-subjekt:
 possessiv-nominativ:
   name: mein, meine
   group: артикль
+  after: [nominativ-subjekt]
   title: mein склоняется как ein
   short: "mein или meine — по роду слова"
   ru_contrast: >-
@@ -194,6 +205,7 @@ possessiv-nominativ:
 negation-kein:
   name: kein
   group: артикль
+  after: [akkusativ-objekt]
   title: kein — отрицание существительного
   short: нет предмета → kein, а не nicht
   ru_contrast: >-
@@ -212,6 +224,7 @@ negation-kein:
 plural-form:
   name: Множественное число
   group: существительное
+  after: [nominativ-subjekt]
   title: Множественное число учится вместе со словом
   short: "множественное: {answer}"
   ru_contrast: >-
@@ -230,6 +243,7 @@ plural-form:
 perfekt-partizip:
   name: Partizip II
   group: глагол
+  after: [praesens-3sg]
   title: "Partizip II: когда ge-, а когда нет"
   short: "Partizip II: {answer}"
   ru_contrast: >-
@@ -267,6 +281,7 @@ praesens-3sg:
 praesens-2sg:
   name: "Präsens: du"
   group: глагол
+  after: [praesens-3sg]
   title: Второе лицо — -st, и та же смена гласной
   short: "du → {answer}"
   ru_contrast: >-
@@ -285,6 +300,7 @@ praesens-2sg:
 adj-nom-e:
   name: Прилагательное в Nominativ
   group: прилагательное
+  after: [adj-praedikativ]
   title: После определённого артикля в Nominativ всегда -e
   short: "Nominativ после der → -e"
   ru_contrast: >-
@@ -302,6 +318,7 @@ adj-nom-e:
 adj-akk-en:
   name: Прилагательное в Akkusativ
   group: прилагательное
+  after: [adj-nom-e, akkusativ-objekt]
   title: В Akkusativ меняется только мужской род
   short: "Akkusativ: мужской -en, остальные -e"
   ru_contrast: >-
@@ -320,6 +337,7 @@ adj-akk-en:
 praesens-trennbar:
   name: Отделяемая приставка
   group: глагол
+  after: [praesens-3sg]
   title: Приставка уезжает в конец предложения
   short: "{w} → приставка в конец"
   ru_contrast: >-
@@ -341,6 +359,7 @@ praesens-trennbar:
 possessiv-akkusativ:
   name: "mein в Akkusativ"
   group: артикль
+  after: [possessiv-nominativ, akkusativ-objekt]
   title: В Akkusativ меняется только мужской род
   short: "Akkusativ: meinen у мужского"
   ru_contrast: >-
@@ -359,6 +378,7 @@ possessiv-akkusativ:
 komparativ:
   name: Степени сравнения
   group: прилагательное
+  after: [adj-praedikativ]
   title: Сравнительная на -er, превосходная на -sten
   short: "{w} → {answer}"
   ru_contrast: >-
@@ -378,6 +398,7 @@ komparativ:
 dativ-objekt:
   name: Глаголы с Dativ
   group: падеж
+  after: [prep-dativ]
   title: Эти глаголы требуют Dativ без всякого предлога
   short: helfen, antworten + Dativ
   ru_contrast: >-
@@ -396,6 +417,7 @@ dativ-objekt:
 genitiv-besitz:
   name: Genitiv принадлежности
   group: падеж
+  after: [dativ-objekt]
   title: Чей — это Genitiv, и он стоит после
   short: "чей? → {answer} {w}"
   ru_contrast: >-
@@ -413,6 +435,7 @@ genitiv-besitz:
 praeteritum:
   name: Präteritum
   group: глагол
+  after: [perfekt-aux]
   title: Второе прошедшее время — для письма и рассказа
   short: "{w} → {answer}"
   ru_contrast: >-
@@ -431,6 +454,7 @@ praeteritum:
 adj-ohne-artikel:
   name: Прилагательное без артикля
   group: прилагательное
+  after: [adj-gemischt]
   title: Нет артикля — окончание берёт на себя прилагательное
   short: "без артикля → окончание артикля"
   ru_contrast: >-
@@ -451,6 +475,7 @@ adj-ohne-artikel:
 modalverben:
   name: Модальные глаголы
   group: глагол
+  after: [praesens-3sg]
   title: У модальных в единственном числе нет -t
   short: "{answer}, не «{answer}t»"
   ru_contrast: >-
@@ -471,6 +496,7 @@ modalverben:
 adj-plural:
   name: Прилагательное во множественном
   group: прилагательное
+  after: [adj-nom-e, plural-form]
   title: Во множественном после артикля всегда -en
   short: "множественное после die → -en"
   ru_contrast: >-
@@ -488,6 +514,7 @@ adj-plural:
 adj-praedikativ:
   name: Прилагательное после ist
   group: прилагательное
+  after: [nominativ-subjekt]
   title: После ist прилагательное не меняется вообще
   short: "после ist — без окончания"
   ru_contrast: >-
@@ -506,6 +533,7 @@ adj-praedikativ:
 pronomen-akkusativ:
   name: "Он, она, оно про вещи"
   group: артикль
+  after: [akkusativ-objekt]
   title: Местоимение берёт род предмета, а не одушевлённость
   short: "{nom_article} {w} → {answer}"
   ru_contrast: >-
@@ -525,6 +553,7 @@ pronomen-akkusativ:
 verb-praeposition:
   name: Предлог при глаголе
   group: глагол
+  after: [prep-dativ, prep-akkusativ]
   title: Какой предлог требует глагол — надо помнить вместе с глаголом
   short: "{w} + {answer}"
   ru_contrast: >-
@@ -547,6 +576,7 @@ verb-praeposition:
 verb-praeposition-zwei:
   name: Два предлога у глагола
   group: глагол
+  after: [verb-praeposition]
   title: У одного глагола два предлога, и выбирает смысл, а не глагол
   short: "{w} + {answer}"
   ru_contrast: >-
@@ -568,6 +598,7 @@ verb-praeposition-zwei:
 imperativ:
   name: Повелительное наклонение
   group: глагол
+  after: [praesens-2sg]
   title: Приказ и просьба — глагол без подлежащего
   short: "{w} → {answer}"
   ru_contrast: >-
@@ -589,6 +620,7 @@ imperativ:
 negation-nicht-kein:
   name: nicht или kein
   group: артикль
+  after: [negation-kein]
   title: Отрицаем предмет или всё действие
   short: "{answer}"
   ru_contrast: >-
@@ -610,6 +642,7 @@ negation-nicht-kein:
 pronomen-dativ:
   name: ihm или ihr
   group: артикль
+  after: [pronomen-akkusativ, dativ-objekt]
   title: Местоимение в Dativ — ihm, ihr, ihnen
   short: "{w} → {answer}"
   ru_contrast: >-
@@ -630,6 +663,7 @@ pronomen-dativ:
 possessiv-dativ:
   name: mein в Dativ
   group: артикль
+  after: [possessiv-akkusativ, prep-dativ]
   title: Мой, моя, моё после предлога с Dativ
   short: "mit {answer} {w}"
   ru_contrast: >-
@@ -649,6 +683,7 @@ possessiv-dativ:
 n-deklination:
   name: n-склонение
   group: существительное
+  after: [akkusativ-objekt]
   title: der Nachbar, но den Nachbarn
   short: "{nom_article} {w} → {answer}"
   ru_contrast: >-
@@ -669,6 +704,7 @@ n-deklination:
 reflexiv:
   name: Возвратные глаголы
   group: глагол
+  after: [praesens-3sg, pronomen-akkusativ]
   title: sich — часть глагола, а не отдельное слово
   short: "{w} {answer}"
   ru_contrast: >-
@@ -689,6 +725,7 @@ reflexiv:
 futur:
   name: Будущее время
   group: глагол
+  after: [praesens-3sg]
   title: werden + инфинитив, и инфинитив в конец
   short: "{answer} … {w}"
   ru_contrast: >-
@@ -711,6 +748,7 @@ futur:
 konjunktiv2:
   name: Konjunktiv II
   group: глагол
+  after: [futur]
   title: Вежливость и «я бы» — würde + инфинитив
   short: "{answer} … {w}"
   ru_contrast: >-
@@ -731,6 +769,7 @@ konjunktiv2:
 passiv:
   name: Passiv
   group: глагол
+  after: [perfekt-partizip, futur]
   title: Действие есть, а кто делает — не называют
   short: "{answer} {pp}"
   ru_contrast: >-
@@ -752,6 +791,7 @@ passiv:
 man-subjekt:
   name: Безличное man
   group: глагол
+  after: [praesens-3sg]
   title: man — «люди вообще», и глагол при нём как при er
   short: "man {answer}"
   ru_contrast: >-
@@ -773,6 +813,7 @@ man-subjekt:
 es-gibt:
   name: es gibt
   group: падеж
+  after: [akkusativ-objekt]
   title: После es gibt всегда Akkusativ
   short: "es gibt {answer} {w}"
   ru_contrast: >-
@@ -793,6 +834,7 @@ es-gibt:
 prep-genitiv:
   name: Предлоги + Genitiv
   group: падеж
+  after: [genitiv-besitz]
   title: wegen и während требуют Genitiv
   short: "wegen {answer} {w}"
   ru_contrast: >-
@@ -813,6 +855,7 @@ prep-genitiv:
 adj-gemischt:
   name: Прилагательное после ein
   group: прилагательное
+  after: [adj-nom-e]
   title: После ein окончание показывает род, после der — нет
   short: "{ein} {w2}{answer} {w}"
   ru_contrast: >-

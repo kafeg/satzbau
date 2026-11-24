@@ -1,4 +1,4 @@
-сборка 2026-11-24, версия данных 564f05eb829d
+сборка 2026-11-24, версия данных 73f2d13b7388
 
 слов в themes.yaml: 688; собрано: 688; потеряно: 0
 
@@ -26,9 +26,19 @@
 
 размеры:
   adjs.json         n=97          6.5 КиБ   gzip     1.9 КиБ
-  explain.json      n=43         51.6 КиБ   gzip    13.5 КиБ
+  explain.json      n=43         52.8 КиБ   gzip    13.7 КиБ
   nouns.json        n=430        36.3 КиБ   gzip     8.9 КиБ
+  sentences.json    n=2012      202.5 КиБ   gzip    56.0 КиБ
   templates.json    n=77         22.9 КиБ   gzip     3.0 КиБ
   themes.json       n=7          39.4 КиБ   gzip     5.2 КиБ
   verbs.json        n=161        26.0 КиБ   gzip     6.4 КиБ
-  ИТОГО                       182.7 КиБ   gzip    38.9 КиБ
+  ИТОГО                       386.5 КиБ   gzip    95.1 КиБ
+
+предложения Tatoeba, отбраковка:
+  незнакомая словоформа      133577
+  длина не 3–8               30998
+  нет точки в конце          822
+  имя исчерпало квоту        538
+  примеров на имя: Tom 2000, Maria 356, Deutschland 55, Sonntag 42, Oktober 34
+  слов без примеров: 186 из 688
+    Abfahrt, Abmahnung, Abteil, Abteilung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Backofen, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Bürger, Bürgeramt, Café, Dosierung, Durchsage, Eingewöhnung, Einschulung …

@@ -4,7 +4,7 @@
 import { getBundle, getWords } from '../core/bundle.ts'
 import { due, dueAt, ruleKey, wordKey, type Cards } from './srs.ts'
 import { fillingFor, itemsFor } from '../core/generate.ts'
-import type { Item, Level } from '../core/types.ts'
+import type { Bundle, Item, Level } from '../core/types.ts'
 
 export const SIZE = 12
 
@@ -86,9 +86,20 @@ export function countFor(p: Pick): number {
 }
 
 /**
+ * Глубина правила в графе предпосылок: 0 — точка входа, дальше на единицу больше
+ * самой глубокой предпосылки. Это и есть порядок обучения внутри группы.
+ */
+function depthOf(rule: string, explain: Bundle['explain'], seen = new Set<string>()): number {
+  const after = explain[rule]?.after ?? []
+  if (!after.length || seen.has(rule)) return 0
+  seen.add(rule)
+  return 1 + Math.max(...after.map((a) => depthOf(a, explain, seen)))
+}
+
+/**
  * Правила для главной: заголовок из объяснения, уровень — самый ранний из шаблонов.
- * Порядок: уровень, затем порядок появления в templates.yaml. ⚠ Это порядок написания,
- * а не порядок обучения: настоящий требует графа предпосылок, которого ещё нет.
+ * Порядок: уровень, затем глубина в графе предпосылок (`after` в explain.yaml),
+ * и только потом порядок появления в templates.yaml.
  */
 export function rules(p: Pick = {}): RuleInfo[] {
   const bundle = getBundle()
@@ -114,7 +125,13 @@ export function rules(p: Pick = {}): RuleInfo[] {
       set,
     })
   })
-  return [...out.values()].sort((a, b) => LEVELS[a.level] - LEVELS[b.level] || a.at - b.at)
+  const depth = new Map([...out.keys()].map((r) => [r, depthOf(r, bundle.explain)]))
+  return [...out.values()].sort(
+    (a, b) =>
+      LEVELS[a.level] - LEVELS[b.level] ||
+      (depth.get(a.rule) ?? 0) - (depth.get(b.rule) ?? 0) ||
+      a.at - b.at,
+  )
 }
 
 export function newSession(p: Pick = {}): Item[] {

@@ -191,6 +191,43 @@ def main():
             errors.append(f'объяснение {r}: группа {e["group"]!r} вне списка {sorted(groups)}')
         if len((e.get('name') or '').split()) > 4:
             warns.append(f'объяснение {r}: имя из {len(e["name"].split())} слов — в списке не поместится')
+    # --- граф предпосылок: он задаёт порядок обучения, и врать ему нельзя
+    lvl_of = {}
+    for t in templates:
+        r = t['why']
+        lvl_of[r] = min(lvl_of.get(r, 'B1'), t['level'])
+    for r, e in sorted(explain.items()):
+        for a in (e.get('after') or []):
+            if a not in explain:
+                errors.append(f'объяснение {r}: after ссылается на {a!r}, такого правила нет')
+            elif a == r:
+                errors.append(f'объяснение {r}: after ссылается на себя')
+            elif LEVELS.get(lvl_of.get(a, 'A1'), 1) > LEVELS.get(lvl_of.get(r, 'A1'), 1):
+                errors.append(f'объяснение {r} ({lvl_of.get(r)}): предпосылка {a} '
+                              f'уровнем выше ({lvl_of.get(a)})')
+    # цикл в графе означал бы, что порядок обучения не существует
+    seen, stack = set(), set()
+
+    def walk(r, path):
+        if r in stack:
+            errors.append(f'граф предпосылок: цикл {" → ".join(path + [r])}')
+            return
+        if r in seen:
+            return
+        stack.add(r)
+        for a in (explain.get(r, {}).get('after') or []):
+            if a in explain:
+                walk(a, path + [r])
+        stack.discard(r)
+        seen.add(r)
+
+    for r in explain:
+        walk(r, [])
+    no_after = sorted(r for r in explain if not (explain[r].get('after') or []))
+    if len(no_after) > 3:
+        notes.append(f'правил без предпосылок ({len(no_after)}) — это точки входа '
+                     f'в обучение: {", ".join(no_after)}')
+
     unused = set(explain) - {t['why'] for t in templates}
     if unused:
         notes.append(f'объяснения без шаблона: {", ".join(sorted(unused))}')

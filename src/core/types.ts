@@ -123,6 +123,8 @@ export interface Template {
 }
 
 export interface Explanation {
+  /** правила, которые разумно знать раньше: порядок обучения, а не запрет */
+  after?: string[]
   /** короткое имя для списка правил */
   name: string
   /** блок на главной */
