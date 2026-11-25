@@ -33,6 +33,8 @@ export interface Pick {
   only?: string[]
   size?: number
   seed?: number
+  /** момент, на который считается «пора»; без него — сейчас. Нужен симулятору ученика */
+  now?: number
 }
 
 export interface RuleInfo {
@@ -122,7 +124,7 @@ const CACHE = new WeakMap<object, Map<string, RuleInfo[]>>()
  */
 export function rules(p: Pick = {}): RuleInfo[] {
   const bundle = getBundle()
-  const key = `${p.level ?? ''}|${p.theme ?? ''}|${p.only?.join(',') ?? ''}`
+  const key = `${p.level ?? ''}|${p.theme ?? ''}|${p.only?.join(',') ?? ''}|${p.now ?? ''}`
   let box = CACHE.get(p.cards ?? bundle)
   if (!box) CACHE.set(p.cards ?? bundle, (box = new Map()))
   const hit = box.get(key)
@@ -159,7 +161,7 @@ export function rules(p: Pick = {}): RuleInfo[] {
         (depth.get(a.rule) ?? 0) - (depth.get(b.rule) ?? 0) ||
         a.at - b.at,
     )
-    .map(({ at: _at, set, ...r }) => ({ ...r, state: ruleState(r, set, p.cards) }))
+    .map(({ at: _at, set, ...r }) => ({ ...r, state: ruleState(r, set, p.cards, p.now) }))
   box.set(key, out2)
   return out2
 }
@@ -170,11 +172,16 @@ export function rules(p: Pick = {}): RuleInfo[] {
  * род либо знаешь у слова, либо нет, и правил таких одно на весь лексикон.
  * Карточка правила у него значит только «встречалось».
  */
-function ruleState(r: { rule: string; lex: boolean }, set: Set<string>, cards?: Cards): State {
+function ruleState(
+  r: { rule: string; lex: boolean },
+  set: Set<string>,
+  cards?: Cards,
+  now?: number,
+): State {
   if (!cards) return 'new'
-  const met = stateOf(cards, ruleKey(r.rule))
+  const met = stateOf(cards, ruleKey(r.rule), now)
   if (!r.lex || met === 'new') return met
-  const words = [...set].map((w) => stateOf(cards, wordKey(w)))
+  const words = [...set].map((w) => stateOf(cards, wordKey(w), now))
   if (words.includes('due')) return 'due'
   return words.every((x) => x === 'solid') ? 'solid' : 'learning'
 }
@@ -188,7 +195,7 @@ function ruleState(r: { rule: string; lex: boolean }, set: Set<string>, cards?: 
  */
 export function nextNew(p: Pick = {}): RuleInfo | null {
   const explain = getBundle().explain
-  const fresh = rules({ level: p.level, cards: p.cards }).filter(
+  const fresh = rules({ level: p.level, cards: p.cards, now: p.now }).filter(
     (r) => r.count > 0 && r.state === 'new',
   )
   const met = (r: string) => p.cards?.has(ruleKey(r)) === true
@@ -221,7 +228,7 @@ export function newSession(p: Pick = {}): Item[] {
   // у лексического правила расписание идёт по словам, но «встречалось» — по нему же.
   // Без карточек (тесты, CLI) ограничения нет: новое от знакомого там не отличить.
   const limit = Boolean(p.cards) && !p.rule && !p.only
-  const fresh = limit ? nextNew({ level: p.level, cards: p.cards })?.rule : undefined
+  const fresh = limit ? nextNew({ level: p.level, cards: p.cards, now: p.now })?.rule : undefined
   const allowed = (rule: string) =>
     !limit || rule === fresh || p.cards?.has(ruleKey(rule)) === true
 
@@ -247,7 +254,7 @@ export function newSession(p: Pick = {}): Item[] {
       .filter(([, e]) => e.lex)
       .map(([r]) => r),
   )
-  const state = (key: string) => (p.cards ? RANK[stateOf(p.cards, key)] : 0)
+  const state = (key: string) => (p.cards ? RANK[stateOf(p.cards, key, p.now)] : 0)
   const rank = (i: Item) => {
     const word = state(wordKey(i.word))
     return (lex.has(i.rule) ? word : state(ruleKey(i.rule))) * 4 + word

@@ -31,6 +31,7 @@
 | `app/Drill.tsx`, `app/Explain.tsx` | дрилл и разбор; `app/App.tsx` — маршруты, сессия, итог |
 | `app/speech.ts` | немецкий голос Web Speech, если он есть на устройстве |
 | `cli/sample.ts` | печать заданий для чтения глазами (`npm run sample`) |
+| `cli/learner.ts`, `cli/learner/` | симулятор ученика: модель знаний, заблуждения, персоны, метрики (`docs/learner-sim.md`) |
 
 ## Что важно знать
 - **ein-слова — одна таблица на всех.** `ein`, `kein`, `mein` склоняются одинаково,

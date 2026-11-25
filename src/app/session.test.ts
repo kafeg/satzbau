@@ -161,3 +161,24 @@ describe('задание восстанавливается из пары шаб
     expect(bad).toEqual([])
   })
 })
+
+// Симулятор ученика гоняет очередь на своих часах: «пора» обязано считаться от p.now.
+describe('очередь на заданный момент', () => {
+  it('правило с давним ответом — «пора» через год и не «пора» через минуту', () => {
+    const t0 = Date.UTC(2026, 0, 5, 8)
+    const rule = 'prep-dativ'
+    const cards = replay([
+      {
+        t: t0,
+        tpl: bundle.templates.find((t) => t.rule === rule)!.id,
+        word: 'Zug',
+        rule,
+        ok: 1,
+        given: '-',
+      },
+    ])
+    const at = (now: number) => rules({ cards, now }).find((r) => r.rule === rule)?.state
+    expect(at(t0 + 60_000)).toBe('learning')
+    expect(at(t0 + 365 * 86_400_000)).toBe('due')
+  })
+})
