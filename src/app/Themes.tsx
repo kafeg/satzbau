@@ -9,7 +9,7 @@
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { rules, wordsOf } from './session.ts'
+import { wordsOf } from './session.ts'
 import { wordKey, type Cards } from './srs.ts'
 
 export function Themes({
@@ -30,7 +30,6 @@ export function Themes({
       title: t.title,
       words: mine.length,
       seen: mine.filter((w) => cards.has(wordKey(w.w))).length,
-      live: rules({ level, theme: key }).filter((r) => r.count > 0).length,
     }
   })
   const started = list
