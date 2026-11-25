@@ -173,6 +173,10 @@ n_declension:
 no_plural:
   - Popcorn
   - Silvester   # праздник раз в год: «die Silvester» не говорят
+  # ⚠ der Stock у нас «этаж», а «Stöcke» — множественное от «палка». У этажа множественного
+  # в речи нет: говорят Stockwerke или Etagen, с числом — «drei Stock». Задание «Hier gibt es
+  # viele Stöcke» учило, что этажи — это палки. Найдено сверкой со сторонним учебным словарём.
+  - Stock
   - Bargeld
   - Polizei
   - Post
