@@ -48,6 +48,16 @@ describe(`инвариант генератора: ${all.length} заданий`
     expect(bad).toEqual([])
   })
 
+  // ⚠ Бейдж над фразой («die Auskunft») называет род, а значит и ответ, когда ответ —
+  // это артикль в именительном. Так жило правило «Nominativ: подлежащее»: угадать можно
+  // было, не читая фразу. Проверка структурная, чтобы следующий такой шаблон поймался сам.
+  it('подсказка над фразой не называет ответ', () => {
+    const bad = all
+      .filter((i) => i.ctx.badge && i.ctx.badge.toLowerCase() === i.answer.toLowerCase())
+      .map((i) => `${i.templateId} × ${i.word}: ${i.ctx.badge} при ответе ${i.answer}`)
+    expect(bad).toEqual([])
+  })
+
   it('в тексте задания нет незаполненных подстановок', () => {
     const bad = all.filter((i) => /\{\w+\}/.test(i.text) || /\{\w+\}/.test(i.full))
     expect(bad.map((i) => `${i.templateId} × ${i.word}: ${i.text}`)).toEqual([])

@@ -399,6 +399,7 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
           : ''
       : plain
   const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1)
+  const nomArticle = g ? defArticle('nom', g, slot.num ?? 'sg') : ''
   // {art} и {ein} — артикль, согласованный с родом слова и падежом слота. Без них артикль
   // приходится писать в рамку буквально, и шаблон вынужден фиксировать род условием.
   const fill = (s: string, slotText: string) =>
@@ -467,10 +468,13 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       case_ru: CASE_RU[govCase ?? slot.case ?? 'nom'],
       question: slot.case === 'akk' ? 'wohin?' : 'wo?',
       gender_ru: g ? GENDER_RU[g] : '',
-      nom_article: g ? defArticle('nom', g, slot.num ?? 'sg') : '',
-      // ⚠ Бейдж рода у слова в дрилле — подсказка, и в задании ПРО РОД он называет ответ.
-      // Разбору тот же артикль нужен (он подсвечивает колонку таблицы), поэтому поля разные
-      badge: t.options?.paradigm === 'genus' ? '' : g ? defArticle('nom', g, slot.num ?? 'sg') : '',
+      nom_article: nomArticle,
+      // ⚠ Бейдж рода у слова в дрилле — подсказка, но когда ответ и ЕСТЬ артикль
+      // в именительном, он называет ответ вслух: так было и в «der, die или das»,
+      // и в «Nominativ: подлежащее». Условие структурное, а не по имени правила:
+      // совпал с ответом — не показываем. Разбору тот же артикль нужен всегда
+      // (он подсвечивает колонку таблицы), поэтому поля разные.
+      badge: nomArticle.toLowerCase() === answer.toLowerCase() ? '' : nomArticle,
       plain_article: plain,
       ein,
       aux_why: vb ? auxWhy(vb) : '',
