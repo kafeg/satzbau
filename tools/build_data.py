@@ -123,6 +123,11 @@ def ru_for(lemma, pos, KR, FD):
 
 # ---------------------------------------------------------------- записи лексикона
 
+# Слова, где источник спорит о роде, а решения нет ни в одном из трёх списков.
+# Пусто в норме; едет в meta.json только когда не пусто, и тогда check_data.py падает.
+GENDER_OPEN = []
+
+
 def build_noun(w, lemma, GN, K, ru, fixes, rep):
     e = GN.get(lemma)
     ke = pick_entry(K.get((lemma, 'noun')) or [])
@@ -146,6 +151,10 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
             and lemma not in fixes['gender_single']):
         rep.append((lemma, f'источник допускает и {"/".join(g_alt)}: если оба рода приняты — '
                            'строка в fixes.yaml:gender_also, иначе решение в gender'))
+        # ⚠ Заметки в report.txt мало: сборка с нерешённым словом проходит, а страховка,
+        # которая держится на том, что текстовый отчёт кто-то откроет, однажды не сработает.
+        # Поэтому список едет в meta.json, и check_data.py падает, пока он не пуст.
+        GENDER_OPEN.append(lemma)
     if lemma in fixes['gender_also']:
         n_g2 = fixes['gender_also'][lemma]
         if n_g2 == g:
@@ -646,6 +655,8 @@ def main():
         'version': version.hexdigest()[:12],
         'built': time.strftime('%Y-%m-%d'),
         'counts': {k: v[2] for k, v in sorted(sizes.items())},
+        # в норме ключа нет вовсе: пустой список незачем возить в браузер
+        **({'gender_open': sorted(set(GENDER_OPEN))} if GENDER_OPEN else {}),
         'license': 'CC BY-SA 4.0',
         'attribution': ['en.wiktionary / kaikki.org (CC BY-SA)',
                         'ru.wiktionary / kaikki.org (CC BY-SA)',

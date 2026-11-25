@@ -355,6 +355,15 @@ def main():
     for name, n in counts.items():
         if meta['counts'].get(name) != n:
             errors.append(f'meta.json: {name} обещает {meta["counts"].get(name)}, в файле {n}')
+    # ⚠ Спор источника о роде, не закрытый ни одним из трёх списков `fixes.yaml`.
+    # Такое слово попадает в задание «der, die или das», где ответ по построению один,
+    # и если род у него и правда двойной — верный выбор получит минус. Сборка пишет
+    # список в meta.json, здесь он становится ошибкой: заметку в report.txt однажды
+    # не прочтут, а код 1 не пропустить.
+    for w in meta.get('gender_open') or []:
+        errors.append(f'{w}: источник спорит о роде, решения нет — строка в fixes.yaml '
+                      'в gender, gender_also или gender_single')
+
     # Собрать с --no-sents поверх полной сборки — и meta не знает про лежащий рядом файл,
     # а версия данных посчитана без него. Service worker отдаст старое.
     on_disk = {f for f in os.listdir(BUILD) if f.endswith('.json') and f != 'meta.json'}
