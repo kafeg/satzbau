@@ -1,6 +1,6 @@
-сборка 2026-11-25, версия данных 58f60e731777
+сборка 2026-11-25, версия данных a48ffe987c3a
 
-слов в themes.yaml: 1731; собрано: 1731; потеряно: 0
+слов в themes.yaml: 1728; собрано: 1728; потеряно: 0
 
 замечания (55):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
@@ -59,7 +59,7 @@
   trainiert              нет в kaikki — степени сравнения выводятся правилом
   wegfahren              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (32) — проверить и внести
+управление, предложено источниками (31) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   anfangen               von D
@@ -87,7 +87,6 @@
   verdienen              für A
   vertiefen              in A
   vorbereiten            auf A
-  wundern                über A
   zahlen                 an A
   zeigen                 auf A
   ärgern                 über A
@@ -98,17 +97,17 @@
   adjs.json         n=268        17.0 КиБ   gzip     4.4 КиБ
   explain.json      n=44         54.6 КиБ   gzip    14.2 КиБ
   nouns.json        n=1119       90.9 КиБ   gzip    21.3 КиБ
-  sentences.json    n=4968      525.2 КиБ   gzip   154.7 КиБ
+  sentences.json    n=4955      523.7 КиБ   gzip   154.2 КиБ
   templates.json    n=80         23.6 КиБ   gzip     3.1 КиБ
-  themes.json       n=20         99.7 КиБ   gzip    12.7 КиБ
-  verbs.json        n=344        53.8 КиБ   gzip    12.5 КиБ
-  ИТОГО                       864.7 КиБ   gzip   222.8 КиБ
+  themes.json       n=20         99.5 КиБ   gzip    12.6 КиБ
+  verbs.json        n=341        53.3 КиБ   gzip    12.4 КиБ
+  ИТОГО                       862.5 КиБ   gzip   222.1 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      111983
+  незнакомая словоформа      112024
   длина не 3–8               30998
-  имя исчерпало квоту        3351
+  имя исчерпало квоту        3348
   нет точки в конце          822
   примеров на имя: Tom 2000, Maria 655, Deutschland 77, Oktober 42, Berlin 39
-  слов без примеров: 451 из 1731
+  слов без примеров: 451 из 1728
     Abfall, Abflug, Abmahnung, Abneigung, Abschluss, Abteil, Abteilung, Abwechslung, Advent, Adventskranz, Altersvorsorge, Amt, Anlage, Anschluss, Antrag, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Ast, Attest, Aufregung, Ausbildung, Ausdauer, Ausgabe, Auskunft, Ausländerbehörde, Autobahn, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beitrag, Benutzer, Berater, Beschwerde …

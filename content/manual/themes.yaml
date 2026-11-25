@@ -1532,7 +1532,7 @@ tech:
     - {w: aufladen,      pos: v, lv: A2, tags: [state, obj]}
     - {w: surfen,        pos: v, lv: A2, tags: [state, solo]}
     - {w: chatten,       pos: v, lv: A2, tags: [state, solo]}
-    - {w: funktionieren, pos: v, lv: A2, tags: [state, solo]}
+    - {w: funktionieren, pos: v, lv: A2, tags: [state]}
     - {w: scannen,       pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: eingeben,      pos: v, lv: A2, tags: [state, obj]}
     - {w: abmelden,      pos: v, lv: A2, tags: [state, solo]}
@@ -1604,11 +1604,8 @@ feelings:
     - {w: aufregen,      pos: v, lv: A2, tags: [state, obj, obj_person]}
     - {w: überraschen,   pos: v, lv: A2, tags: [state, obj, obj_person]}
     - {w: enttäuschen,   pos: v, lv: A2, tags: [state, obj, obj_person]}
-    - {w: erschrecken,   pos: v, lv: A2, tags: [state, obj, obj_person]}
     - {w: vermissen,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: genügen,       pos: v, lv: A2, tags: [state]}
     - {w: verzeihen,     pos: v, lv: A2, tags: [state, obj]}
-    - {w: wundern,       pos: v, lv: A2, tags: [state, obj, obj_person]}
     - {w: aufgeregt,     pos: a, lv: A2, tags: [quality, person]}
     - {w: enttäuscht,    pos: a, lv: A2, tags: [quality, person]}
     - {w: überrascht,    pos: a, lv: A2, tags: [quality, person]}
@@ -1705,7 +1702,7 @@ nature:
     - {w: Schwanz,       pos: n, lv: A2, tags: [thing]}
     - {w: Flügel,        pos: n, lv: A2, tags: [thing]}
     - {w: schützen,      pos: v, lv: A2, tags: [state, obj]}
-    - {w: bellen,        pos: v, lv: A2, tags: [state, solo]}
+    - {w: bellen,        pos: v, lv: A2, tags: [state]}
     - {w: jagen,         pos: v, lv: A2, tags: [state, obj, solo]}
     - {w: trennen,       pos: v, lv: A2, tags: [state, obj]}
     - {w: giftig,        pos: a, lv: A2, tags: [quality]}
@@ -1728,7 +1725,7 @@ nature:
     - {w: Ressource,     pos: n, lv: B1, tags: [abstract]}
     - {w: verschmutzen,  pos: v, lv: B1, tags: [state, obj]}
     - {w: recyceln,      pos: v, lv: B1, tags: [state, obj]}
-    - {w: aussterben,    pos: v, lv: B1, tags: [state, solo]}
+    - {w: aussterben,    pos: v, lv: B1, tags: [state]}
     - {w: umweltfreundlich, pos: a, lv: B1, tags: [quality, absolute]}
     - {w: nachhaltig,    pos: a, lv: B1, tags: [quality, absolute]}
     - {w: selten,        pos: a, lv: B1, tags: [quality]}
