@@ -1304,7 +1304,11 @@
   rule: konjunktiv2
   level: B1
   kind: choice
-  frame: "An deiner Stelle {slot} {subj} {w}."
+  # ⚠ Было «An deiner Stelle …» — а это идиома ПЕРВОГО лица: «на твоём месте я бы…».
+  # С любым другим подлежащим выходит бессмыслица вроде «An deiner Stelle würdest
+  # du warten» — 148 заданий из 179. «Mit mehr Zeit» годится всем лицам и так же
+  # выносит обстоятельство вперёд, оставляя глагол вторым.
+  frame: "Mit mehr Zeit {slot} {subj} {w}."
   need: {pos: v, tags: [solo], not: [reflexive]}
   slot: {paradigm: wuerde, person: from_word}
   options: {paradigm: wuerde, count: 4}
