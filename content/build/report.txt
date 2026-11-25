@@ -1,8 +1,8 @@
-сборка 2026-11-25, версия данных e0c488aabcc7
+сборка 2026-11-25, версия данных 3178b6937e96
 
-слов в themes.yaml: 2417; собрано: 2417; потеряно: 0
+слов в themes.yaml: 2675; собрано: 2675; потеряно: 0
 
-замечания (77):
+замечания (78):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
   Boot                   род спорный n/m — решение в fixes.yaml:gender
   Drittel                род спорный n/m — решение в fixes.yaml:gender
@@ -19,6 +19,7 @@
   Hut                    род спорный m/f — решение в fixes.yaml:gender
   Kilo                   род спорный n/m — решение в fixes.yaml:gender
   Kilometer              род спорный m/n — решение в fixes.yaml:gender
+  Kiste                  род спорный f/m — решение в fixes.yaml:gender
   Kompromiss             род спорный m/n — решение в fixes.yaml:gender
   Kredit                 род спорный m/n — решение в fixes.yaml:gender
   Laden                  род спорный m/n — решение в fixes.yaml:gender
@@ -81,18 +82,22 @@
   trainiert              нет в kaikki — степени сравнения выводятся правилом
   wegfahren              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (43) — проверить и внести
+управление, предложено источниками (51) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
+  abstimmen              über A, mit D
   anfangen               von D
   ankommen               auf A
   aufregen               über A
   ausgeben               für A
   befestigen             an D
   beginnen               mit D
+  begründen              mit D
   berichten              über A, von D
   bestehen               aus D, auf D
   bewerben               für A
+  denken                 an A
+  diskutieren            über A
   eingreifen             in A
   einigen                auf A
   einladen               zu D
@@ -101,14 +106,17 @@
   erzählen               von D
   flüchten               vor D
   freuen                 über A, auf A, für A
+  glauben                an A
   gratulieren            zu D
   haften                 an D
   hoffen                 auf A
   jagen                  durch A, in A
   kleben                 auf A, an D
   leben                  von D
+  liefern                an A
   melden                 zu D
   passen                 für A, zu D
+  protestieren           gegen A
   rechnen                mit D
   retten                 vor D
   rufen                  nach D
@@ -126,22 +134,23 @@
   ärgern                 über A
   üben                   in D
   übersetzen             in A, aus D
+  überzeugen             von D
 
 размеры:
-  adjs.json         n=332        20.8 КиБ   gzip     5.3 КиБ
+  adjs.json         n=355        22.2 КиБ   gzip     5.6 КиБ
   explain.json      n=44         54.6 КиБ   gzip    14.2 КиБ
-  nouns.json        n=1644      138.3 КиБ   gzip    32.1 КиБ
-  sentences.json    n=5840      632.6 КиБ   gzip   188.2 КиБ
+  nouns.json        n=1836      156.3 КиБ   gzip    35.9 КиБ
+  sentences.json    n=6197      679.0 КиБ   gzip   202.0 КиБ
   templates.json    n=80         23.6 КиБ   gzip     3.1 КиБ
-  themes.json       n=28        139.1 КиБ   gzip    17.7 КиБ
-  verbs.json        n=441        68.8 КиБ   gzip    15.8 КиБ
-  ИТОГО                      1077.8 КиБ   gzip   276.3 КиБ
+  themes.json       n=31        154.4 КиБ   gzip    19.6 КиБ
+  verbs.json        n=484        75.5 КиБ   gzip    17.2 КиБ
+  ИТОГО                      1165.5 КиБ   gzip   297.7 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      107751
+  незнакомая словоформа      105285
   длина не 3–8               30998
-  имя исчерпало квоту        3879
+  имя исчерпало квоту        4277
   нет точки в конце          822
-  примеров на имя: Tom 2000, Maria 681, Berlin 43, Oktober 42, Thomas 22
-  слов без примеров: 836 из 2417
-    Abfall, Abflug, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschleppdienst, Abschleppwagen, Abschluss, Abstammung, Abteil, Abteilung, Abwechslung, Achsel, Achtel, Advent, Adventskranz, Airbag, Akkuschrauber, Alarm, Alarmanlage, Altersvorsorge, Amt, Amtssprache, Anerkennung, Anhänger, Anlage, Anschluss, Antrag, Antragsteller, Anwaltskosten, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Arbeitserlaubnis, Ast, Asyl, Attest …
+  примеров на имя: Tom 2000, Maria 706, Berlin 44, Oktober 42, Thomas 22
+  слов без примеров: 980 из 2675
+    Abfall, Abflug, Abholfach, Abholung, Ablehnung, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschleppdienst, Abschleppwagen, Abschluss, Absender, Abstammung, Abstimmung, Abteil, Abteilung, Abwechslung, Abwägung, Achsel, Achtel, Advent, Adventskranz, Airbag, Akkuschrauber, Alarm, Alarmanlage, Altersvorsorge, Amt, Amtssprache, Amtszeit, Anerkennung, Anhänger, Anlage, Anmerkung, Anschluss, Antrag, Antragsteller, Anwaltskosten, Anwendung …

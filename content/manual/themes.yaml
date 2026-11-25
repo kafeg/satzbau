@@ -2618,3 +2618,280 @@ emergency:
     - {w: lebensgefährlich, pos: a, lv: B1, tags: [quality, absolute]}
     - {w: brennbar,      pos: a, lv: B1, tags: [quality, absolute]}
     - {w: verletzlich,   pos: a, lv: B1, tags: [quality, person]}
+
+opinion:
+  title: Мнение и аргумент
+  words:
+    # A1 — что я думаю и почему
+    - {w: Ansicht,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Standpunkt,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Argument,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Grund,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Vorteil,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Nachteil,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Vorschlag,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Zustimmung,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Ablehnung,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Gespräch,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Diskussion,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Wahrheit,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Tatsache,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Entscheidung,  pos: n, lv: A1, tags: [abstract]}
+    - {w: meinen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: denken,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: glauben,       pos: v, lv: A1, tags: [state, solo]}
+    - {w: vorschlagen,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: zustimmen,     pos: v, lv: A1, tags: [state, solo]}
+    - {w: ablehnen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: einverstanden, pos: a, lv: A1, tags: [quality, absolute, person]}
+    # A2 — спор по правилам: довод, возражение, итог
+    - {w: Auffassung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Haltung,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Sichtweise,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Behauptung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Begründung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Vermutung,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Überzeugung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Stellungnahme, pos: n, lv: A2, tags: [abstract]}
+    - {w: Debatte,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Einigung,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Alternative,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Gegenargument, pos: n, lv: A2, tags: [abstract]}
+    - {w: Gegenvorschlag, pos: n, lv: A2, tags: [abstract]}
+    - {w: Kritikpunkt,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Aussage,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Einschätzung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Anmerkung,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Rücksicht,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Zusammenhang,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Irrtum,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Meinungsverschiedenheit, pos: n, lv: A2, tags: [abstract]}
+    - {w: Wortmeldung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: behaupten,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: begründen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: bezweifeln,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: diskutieren,   pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: argumentieren, pos: v, lv: A2, tags: [state, solo]}
+    - {w: überzeugen,    pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: vermuten,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: zugeben,       pos: v, lv: A2, tags: [state, obj]}
+    - {w: betonen,       pos: v, lv: A2, tags: [state, obj]}
+    - {w: überzeugt,     pos: a, lv: A2, tags: [quality, absolute, person]}
+    - {w: skeptisch,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: vernünftig,    pos: a, lv: A2, tags: [quality, person]}
+    - {w: eindeutig,     pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: umstritten,    pos: a, lv: A2, tags: [quality, absolute]}
+    # B1 — доказательство, вывод, оговорка
+    - {w: Beweislage,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Schlussfolgerung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Fazit,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Abwägung,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Gewissheit,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Unsicherheit,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Bauchgefühl,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Logik,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Vernunft,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Sachlage,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Darstellung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Deutung,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Meinungsbildung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Zweifelsfall,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Zwischenruf,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Bedenken,      pos: n, lv: B1, tags: [abstract]}
+    - {w: bestreiten,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: abwägen,       pos: v, lv: B1, tags: [state, obj]}
+    - {w: einschätzen,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: widerlegen,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: fraglich,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: begründet,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: subjektiv,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: logisch,       pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: nachvollziehbar, pos: a, lv: B1, tags: [quality, absolute]}
+society:
+  title: Государство и общество
+  words:
+    # A1 — кто правит и по каким правилам
+    - {w: Bundesland,    pos: n, lv: A1, tags: [place]}
+    - {w: Regierung,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Wahl,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Gesetz,        pos: n, lv: A1, tags: [document]}
+    - {w: Recht,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Partei,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Gemeinde,      pos: n, lv: A1, tags: [place]}
+    - {w: Politik,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Volk,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Gesellschaft,  pos: n, lv: A1, tags: [abstract]}
+    - {w: Freiheit,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Pflicht,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Stimmzettel,   pos: n, lv: A1, tags: [document]}
+    - {w: Bürgermeister, pos: n, lv: A1, tags: [person]}
+    - {w: Bürgermeisterin, pos: n, lv: A1, tags: [person]}
+    - {w: Politiker,     pos: n, lv: A1, tags: [person]}
+    - {w: Politikerin,   pos: n, lv: A1, tags: [person]}
+    - {w: Wähler,        pos: n, lv: A1, tags: [person]}
+    - {w: wählen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: abstimmen,     pos: v, lv: A1, tags: [state, solo]}
+    - {w: regieren,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: politisch,     pos: a, lv: A1, tags: [quality, absolute]}
+    # A2 — выборы, суд, запрет
+    - {w: Verfassung,    pos: n, lv: A2, tags: [document]}
+    - {w: Bundestag,     pos: n, lv: A2, tags: [place]}
+    - {w: Bundeskanzler, pos: n, lv: A2, tags: [person]}
+    - {w: Kanzlerin,     pos: n, lv: A2, tags: [person]}
+    - {w: Minister,      pos: n, lv: A2, tags: [person]}
+    - {w: Ministerium,   pos: n, lv: A2, tags: [place]}
+    - {w: Opposition,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Koalition,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Demokratie,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Diktatur,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Gleichheit,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Staatsbürger,  pos: n, lv: A2, tags: [person]}
+    - {w: Wahlrecht,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Wahlkampf,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Wahllokal,     pos: n, lv: A2, tags: [place]}
+    - {w: Wahlbeteiligung, pos: n, lv: A2, tags: [abstract]}
+    - {w: Wahlergebnis,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Abstimmung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Mehrheit,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Minderheit,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Verwaltung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Gericht,       pos: n, lv: A2, tags: [place]}
+    - {w: Richter,       pos: n, lv: A2, tags: [person]}
+    - {w: Urteil,        pos: n, lv: A2, tags: [document]}
+    - {w: Strafe,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Geldstrafe,    pos: n, lv: A2, tags: [money]}
+    - {w: Verbot,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Erlaubnis,     pos: n, lv: A2, tags: [document]}
+    - {w: Vorschrift,    pos: n, lv: A2, tags: [document]}
+    - {w: Verordnung,    pos: n, lv: A2, tags: [document]}
+    - {w: Demonstration, pos: n, lv: A2, tags: [abstract]}
+    - {w: Protest,       pos: n, lv: A2, tags: [abstract]}
+    - {w: verbieten,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: erlauben,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: bestrafen,     pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: demonstrieren, pos: v, lv: A2, tags: [state, solo]}
+    - {w: protestieren,  pos: v, lv: A2, tags: [state, solo]}
+    - {w: beschließen,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: demokratisch,  pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: gesetzlich,    pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: verboten,      pos: a, lv: A2, tags: [quality, absolute]}
+    # B1 — основной закон, суд, социальное государство
+    - {w: Grundgesetz,   pos: n, lv: B1, tags: [document]}
+    - {w: Grundrecht,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Meinungsfreiheit, pos: n, lv: B1, tags: [abstract]}
+    - {w: Pressefreiheit, pos: n, lv: B1, tags: [abstract]}
+    - {w: Rechtsstaat,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Gewaltenteilung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Justiz,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Staatsanwalt,  pos: n, lv: B1, tags: [person]}
+    - {w: Strafrecht,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Steuerzahler,  pos: n, lv: B1, tags: [person]}
+    - {w: Staatshaushalt, pos: n, lv: B1, tags: [money]}
+    - {w: Sozialstaat,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Sozialhilfe,   pos: n, lv: B1, tags: [money]}
+    - {w: Rentenalter,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Legislaturperiode, pos: n, lv: B1, tags: [time]}
+    - {w: Amtszeit,      pos: n, lv: B1, tags: [time]}
+    - {w: Bundesregierung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Landesregierung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Landtag,       pos: n, lv: B1, tags: [place]}
+    - {w: Staatsoberhaupt, pos: n, lv: B1, tags: [person]}
+    - {w: Bürgerinitiative, pos: n, lv: B1, tags: [abstract]}
+    - {w: Volksabstimmung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Gesetzentwurf, pos: n, lv: B1, tags: [document]}
+    - {w: Gesetzgebung,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Stimmrecht,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Wahlurne,      pos: n, lv: B1, tags: [thing]}
+    - {w: verurteilen,   pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: kandidieren,   pos: v, lv: B1, tags: [state, solo]}
+    - {w: einhalten,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: verstoßen,     pos: v, lv: B1, tags: [state]}
+    - {w: herrschen,     pos: v, lv: B1, tags: [state]}
+    - {w: illegal,       pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: rechtlich,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: staatlich,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: sozial,        pos: a, lv: B1, tags: [quality, person]}
+    - {w: konservativ,   pos: a, lv: B1, tags: [quality, person]}
+    - {w: liberal,       pos: a, lv: B1, tags: [quality, person]}
+post:
+  title: Почта и доставка
+  words:
+    # A1 — что отправляют и кто приносит
+    - {w: Päckchen,      pos: n, lv: A1, tags: [thing]}
+    - {w: Lieferung,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Briefkasten,   pos: n, lv: A1, tags: [thing]}
+    - {w: Umschlag,      pos: n, lv: A1, tags: [thing]}
+    - {w: Briefumschlag, pos: n, lv: A1, tags: [thing]}
+    - {w: Karton,        pos: n, lv: A1, tags: [thing]}
+    - {w: Kiste,         pos: n, lv: A1, tags: [thing]}
+    - {w: Inhalt,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Porto,         pos: n, lv: A1, tags: [money]}
+    - {w: Postamt,       pos: n, lv: A1, tags: [place]}
+    - {w: Empfänger,     pos: n, lv: A1, tags: [person]}
+    - {w: Empfängerin,   pos: n, lv: A1, tags: [person]}
+    - {w: Absender,      pos: n, lv: A1, tags: [person]}
+    - {w: Zusteller,     pos: n, lv: A1, tags: [person]}
+    - {w: Zustellerin,   pos: n, lv: A1, tags: [person]}
+    - {w: Postbote,      pos: n, lv: A1, tags: [person]}
+    - {w: Briefträger,   pos: n, lv: A1, tags: [person]}
+    - {w: Kurier,        pos: n, lv: A1, tags: [person]}
+    - {w: zustellen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: verschicken,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: liefern,       pos: v, lv: A1, tags: [state, obj]}
+    - {w: verpacken,     pos: v, lv: A1, tags: [state, obj]}
+    # A2 — заказное, выдача, возврат
+    - {w: Einschreiben,  pos: n, lv: A2, tags: [document]}
+    - {w: Abholung,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Postfiliale,   pos: n, lv: A2, tags: [place]}
+    - {w: Postschalter,  pos: n, lv: A2, tags: [place]}
+    - {w: Postfach,      pos: n, lv: A2, tags: [thing]}
+    - {w: Packstation,   pos: n, lv: A2, tags: [place]}
+    - {w: Paketshop,     pos: n, lv: A2, tags: [place]}
+    - {w: Paketbote,     pos: n, lv: A2, tags: [person]}
+    - {w: Lieferdienst,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Lieferschein,  pos: n, lv: A2, tags: [document]}
+    - {w: Zustellung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Versand,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Versandkosten, pos: n, lv: A2, tags: [money]}
+    - {w: Rücksendung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Retoure,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Laufzeit,      pos: n, lv: A2, tags: [time]}
+    - {w: Benachrichtigung, pos: n, lv: A2, tags: [document]}
+    - {w: Luftpost,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Nachnahme,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Eilsendung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Wertsendung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Paketkarte,    pos: n, lv: A2, tags: [document]}
+    - {w: Abholfach,     pos: n, lv: A2, tags: [thing]}
+    - {w: Einwurf,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Briefpapier,   pos: n, lv: A2, tags: [thing]}
+    - {w: Poststempel,   pos: n, lv: A2, tags: [thing]}
+    - {w: Aufkleber,     pos: n, lv: A2, tags: [thing]}
+    - {w: Klebestreifen, pos: n, lv: A2, tags: [thing]}
+    - {w: Schnur,        pos: n, lv: A2, tags: [thing]}
+    - {w: Barcode,       pos: n, lv: A2, tags: [thing]}
+    - {w: Auslieferung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Übergabe,      pos: n, lv: A2, tags: [abstract]}
+    - {w: versenden,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: frankieren,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: einwerfen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: abschicken,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: benachrichtigen, pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: zerbrechlich,  pos: a, lv: A2, tags: [quality, thing_only]}
+    - {w: sperrig,       pos: a, lv: A2, tags: [quality, thing_only]}
+    # B1 — отслеживание, таможня, тарифы
+    - {w: Sendungsverfolgung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Postgebühr,    pos: n, lv: B1, tags: [money]}
+    - {w: Nachporto,     pos: n, lv: B1, tags: [money]}
+    - {w: Frachtbrief,   pos: n, lv: B1, tags: [document]}
+    - {w: Empfangsbestätigung, pos: n, lv: B1, tags: [document]}
+    - {w: Postweg,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Postverkehr,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Freimachung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Frankiermaschine, pos: n, lv: B1, tags: [appliance]}
+    - {w: Postsack,      pos: n, lv: B1, tags: [thing]}
+    - {w: Schalterhalle, pos: n, lv: B1, tags: [place]}
+    - {w: Briefkastenschlüssel, pos: n, lv: B1, tags: [thing]}
+    - {w: verzollen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: Zollamt,       pos: n, lv: B1, tags: [place]}
+    - {w: Postgeheimnis, pos: n, lv: B1, tags: [abstract]}

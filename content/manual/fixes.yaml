@@ -40,6 +40,8 @@ government:
   streiten:      ["mit D", "um A"]
   haften:        ["für A"]
   beschweren:    ["über A"]
+  verstoßen:     ["gegen A"]
+  herrschen:     ["über A"]
   telefonieren:  ["mit D"]
   verzichten:    ["auf A"]
   verschieben:   ["auf A"]
@@ -98,6 +100,8 @@ government_example:
   streiten:     ["mit dem Nachbarn", "um den Platz"]
   haften:       "für den Schaden"
   beschweren:   "über den Lärm"
+  verstoßen:    "gegen die Vorschrift"
+  herrschen:    "über das Land"
 
 # 2. Род: решения, которых нет в данных. Два случая.
 #
@@ -146,6 +150,7 @@ gender:
   Bruch:     {g: m, note: "der Bruch — дробь, перелом; das Bruch — болото"}
   Achtel:    {g: n}
   Hundertstel: {g: n}
+  Abholung:  {g: f, note: "в nouns.csv леммы нет совсем, род и падежи взяты отсюда"}
   Russland:  {g: n}
   Polen:     {g: n, note: "das Polen — страна; der Pole — поляк"}
   Trotzphase:  {g: f}
@@ -252,6 +257,18 @@ no_plural:
   - Watte
   - Schminke
   - Zahnseide
+  # мнение, общество, почта
+  - Vernunft
+  - Gewaltenteilung
+  - Justiz
+  - Strafrecht
+  - Sozialhilfe
+  - Versand
+  - Luftpost
+  - Postverkehr
+  - Postgeheimnis
+  - Freimachung
+  - Abholung
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -1329,6 +1346,130 @@ translations:
   Wiederbelebung: реанимация
   brennbar:       горючий
   dringend:       срочный
+  # мнение и аргумент
+  Kritikpunkt:    спорный пункт
+  überzeugt:      убеждённый
+  Bedenken:       сомнения, возражения
+  # государство и общество
+  Politikerin:    женщина-политик
+  # почта и доставка
+  Zustellerin:    почтальонша
+  Abholung:       получение на месте
+  Packstation:    автоматический пункт выдачи
+  Paketshop:      пункт выдачи посылок
+  Paketbote:      курьер с посылками
+  Lieferdienst:   служба доставки
+  Lieferschein:   накладная
+  Retoure:        возврат товара
+  Wertsendung:    отправление с объявленной ценностью
+  Abholfach:      ячейка для получения
+  Klebestreifen:  клейкая лента
+  sperrig:        громоздкий
+  Sendungsverfolgung: отслеживание отправления
+  Postgebühr:     почтовый тариф
+  Nachporto:      доплата за недостающий тариф
+  Empfangsbestätigung: подтверждение получения
+  Postweg:        путь по почте
+  Frankiermaschine: машина для франкировки
+  Postsack:       мешок для почты
+  Briefkastenschlüssel: ключ от почтового ящика
+  Zollamt:        таможня
+  Postgeheimnis:  тайна переписки
+  # ⚠ не то значение: мнение и аргумент
+  Grund:          причина, основание
+  Vorschlag:      предложение
+  zugeben:        признавать
+  meinen:         считать, иметь в виду
+  Vorteil:        преимущество
+  Nachteil:       недостаток
+  Haltung:        позиция, отношение
+  Auffassung:     понимание, трактовка
+  Einigung:       договорённость
+  Unsicherheit:   неуверенность
+  begründen:      обосновывать
+  abwägen:        взвешивать за и против
+  nachvollziehbar: понятный, объяснимый
+  Fazit:          итог
+  Darstellung:    изложение
+  Stellungnahme:  официальное высказывание
+  Standpunkt:     точка зрения
+  Rücksicht:      внимание к другому
+  Beweislage:     что есть из доказательств
+  Bauchgefühl:    интуиция
+  Wortmeldung:    просьба дать слово
+  Ansicht:        мнение
+  Argument:       аргумент, довод
+  ablehnen:       отклонять, отказываться
+  Begründung:     обоснование
+  eindeutig:      однозначный
+  logisch:        логичный
+  Abwägung:       взвешивание доводов
+  bezweifeln:     подвергать сомнению
+  widerlegen:     опровергать
+  Schlussfolgerung: вывод
+  Debatte:        дебаты
+  einverstanden:  согласен
+  # ⚠ не то значение: государство и общество
+  Freiheit:       свобода
+  Urteil:         приговор
+  regieren:       править страной
+  verstoßen:      нарушать правило
+  einhalten:      соблюдать
+  Vorschrift:     предписание, правило
+  Bürgermeisterin: женщина-мэр
+  bestrafen:      наказывать
+  Bundesland:     федеральная земля
+  Kanzlerin:      канцлер, женщина
+  Grundgesetz:    основной закон ФРГ
+  Legislaturperiode: срок полномочий парламента
+  Amtszeit:       срок в должности
+  kandidieren:    выдвигаться кандидатом
+  Wahllokal:      избирательный участок
+  Wahlurne:       урна для голосования
+  Volksabstimmung: референдум
+  Landtag:        парламент земли
+  Justiz:         правосудие
+  Wahl:           выборы
+  Gemeinde:       община, муниципалитет
+  demonstrieren:  выходить на демонстрацию
+  Bürgermeister:  мэр города
+  Verbot:         запрет
+  Koalition:      коалиция
+  Abstimmung:     голосование
+  Erlaubnis:      разрешение
+  Strafe:         наказание
+  wählen:         голосовать, выбирать
+  # ⚠ не то значение: почта и доставка
+  Päckchen:       маленькая посылка
+  Karton:         коробка
+  Inhalt:         содержимое
+  liefern:        доставлять
+  einwerfen:      опускать в ящик
+  Einwurf:        щель почтового ящика
+  Porto:          почтовый сбор
+  zustellen:      доставлять по адресу
+  Zusteller:      почтальон-доставщик
+  Postfiliale:    отделение почты
+  Postschalter:   окно на почте
+  Postfach:       абонентский ящик
+  Auslieferung:   доставка получателю
+  Laufzeit:       срок доставки
+  Eilsendung:     срочное отправление
+  Freimachung:    оплата почтового сбора
+  verzollen:      платить пошлину
+  frankieren:     наклеивать марки
+  Frachtbrief:    транспортная накладная
+  Rücksendung:    отправка обратно
+  Schnur:         верёвка
+  zerbrechlich:   хрупкий
+  verschicken:    отправлять
+  benachrichtigen: извещать
+  Benachrichtigung: извещение
+  Zustellung:     доставка
+  Versand:        отправка
+  abschicken:     отправлять
+  Kurier:         курьер
+  Schalterhalle:  операционный зал
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);
