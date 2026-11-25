@@ -1008,3 +1008,340 @@
   slot: {paradigm: adj_ending, decl: strong, case: nom, num: pl, gender: from_word}
   why: adj-plural
 
+
+# ══ Вторые и третьи рамки правилам, у которых была ровно одна ══
+# ⚠ При одной рамке через месяц человек знает не правило, а конкретную фразу:
+# «Ich fahre mit dem …» он доигрывает по памяти, не прочитав, какой падеж нужен.
+# Медиана была две рамки на правило, у девятнадцати правил — одна.
+
+- id: possessiv-nom-ding
+  rule: possessiv-nominativ
+  level: A1
+  kind: choice
+  frame: "{Slot} {w} ist weg."
+  need: {pos: n, tags: [thing, document, vehicle], not: [pl_only, plu, mass]}
+  slot: {paradigm: possessive, case: nom, num: sg}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-nominativ
+
+- id: possessiv-nom-person
+  rule: possessiv-nominativ
+  level: A1
+  kind: choice
+  frame: "{Slot} {w} kommt heute."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: possessive, case: nom, num: sg}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-nominativ
+
+# именительный: kein/keine/kein — против keinen в винительном у соседней рамки
+- id: negation-kein-nom
+  rule: negation-kein
+  level: A1
+  kind: choice
+  frame: "Das ist {slot} {w}."
+  need: {pos: n, tags: [thing, food, drink, document], not: [pl_only, plu, mass, noart]}
+  slot: {paradigm: kein_article, case: nom, num: sg}
+  options: {paradigm: kein_article, count: 4}
+  why: negation-kein
+
+- id: negation-kein-sehen
+  rule: negation-kein
+  level: A1
+  kind: choice
+  frame: "Ich sehe {slot} {w}."
+  need: {pos: n, tags: [thing, vehicle, furniture], not: [pl_only, plu, mass]}
+  slot: {paradigm: kein_article, case: akk, num: sg}
+  options: {paradigm: kein_article, count: 4}
+  why: negation-kein
+
+- id: plural-sind-neu
+  rule: plural-form
+  level: A1
+  kind: input
+  frame: "Die {slot} sind neu."
+  need: {pos: n, tags: [thing, furniture, vehicle], has: [pl], not: [pl_only, npl, mass, plu]}
+  slot: {paradigm: noun_plural, case: nom, num: pl}
+  why: plural-form
+
+- id: plural-viele
+  rule: plural-form
+  level: A1
+  kind: input
+  frame: "Hier gibt es viele {slot}."
+  need: {pos: n, tags: [place, document, food], has: [pl], not: [meal, pl_only, npl, mass, plu]}
+  slot: {paradigm: noun_plural, case: akk, num: pl}
+  why: plural-form
+
+# слабое склонение в винительном после предлога, а не после глагола
+- id: adj-akk-ohne
+  rule: adj-akk-en
+  level: A2
+  kind: input
+  frame: "Ich komme ohne {art} {w2}{slot} {w}."
+  need: {pos: n, tags: [document, thing], not: [pl_only, plu, abstract, mass]}
+  fill2: {need: {pos: a, tags: [generic]}}
+  slot: {paradigm: adj_ending, decl: weak, case: akk, num: sg, gender: from_word}
+  why: adj-akk-en
+
+- id: adj-akk-fuer
+  rule: adj-akk-en
+  level: A2
+  kind: input
+  frame: "Das Geschenk ist für {art} {w2}{slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu, nd]}
+  # ⚠ tags это ИЛИ: [quality, person] брало любое прилагательное, и выходило
+  # «für die billige Fahrerin». Человеку годятся только помеченные person.
+  fill2: {need: {pos: a, tags: [person]}}
+  slot: {paradigm: adj_ending, decl: weak, case: akk, num: sg, gender: from_word}
+  why: adj-akk-en
+
+- id: possessiv-akk-ohne
+  rule: possessiv-akkusativ
+  level: A1
+  kind: choice
+  frame: "Ich komme ohne {slot} {w}."
+  need: {pos: n, tags: [document, thing], not: [pl_only, plu, mass]}
+  slot: {paradigm: possessive, case: akk, num: sg}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-akkusativ
+
+- id: possessiv-akk-sehen
+  rule: possessiv-akkusativ
+  level: A1
+  kind: choice
+  frame: "Ich sehe {slot} {w} nicht."
+  need: {pos: n, tags: [vehicle, furniture, appliance], not: [pl_only, plu, mass]}
+  slot: {paradigm: possessive, case: akk, num: sg}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-akkusativ
+
+- id: genitiv-name
+  rule: genitiv-besitz
+  level: B1
+  kind: choice
+  frame: "Ich kenne den Namen {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu, nd]}
+  slot: {paradigm: def_article, case: gen, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: genitiv-besitz
+
+- id: genitiv-tasche
+  rule: genitiv-besitz
+  level: B1
+  kind: choice
+  frame: "Die Tasche {slot} {w} ist weg."
+  need: {pos: n, tags: [person], not: [pl_only, plu, nd]}
+  slot: {paradigm: def_article, case: gen, num: sg}
+  options: {paradigm: def_article, count: 4}
+  why: genitiv-besitz
+
+- id: possessiv-dat-helfen
+  rule: possessiv-dativ
+  level: A2
+  kind: choice
+  frame: "Ich helfe {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: possessive, case: dat, gender: from_word}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-dativ
+
+- id: possessiv-dat-bei
+  rule: possessiv-dativ
+  level: A2
+  kind: choice
+  frame: "Ich wohne bei {slot} {w}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: possessive, case: dat, gender: from_word}
+  options: {paradigm: possessive, count: 4}
+  why: possessiv-dativ
+
+- id: es-gibt-stadt
+  rule: es-gibt
+  level: A1
+  kind: choice
+  frame: "In der Stadt gibt es {slot} {w}."
+  need: {pos: n, tags: [place], not: [pl_only, plu, mass, noart]}
+  slot: {paradigm: indef_article, case: akk, gender: from_word}
+  options: {paradigm: indef_article, count: 4}
+  why: es-gibt
+
+- id: es-gibt-frage
+  rule: es-gibt
+  level: A1
+  kind: choice
+  frame: "Gibt es hier {slot} {w}?"
+  need: {pos: n, tags: [thing, food, drink, appliance], not: [pl_only, plu, mass]}
+  slot: {paradigm: indef_article, case: akk, gender: from_word}
+  options: {paradigm: indef_article, count: 4}
+  why: es-gibt
+
+- id: genus-wo-ist
+  rule: genus
+  level: A1
+  kind: choice
+  frame: "Wo ist {slot} {w}?"
+  need: {pos: n, tags: [thing, place, furniture, appliance, vehicle, document], not: [pl_only, plu, noart]}
+  slot: {paradigm: def_article, case: nom, num: sg, gender: from_word}
+  options: {paradigm: def_article, count: 3}
+  why: genus
+
+- id: genus-ist-neu
+  rule: genus
+  level: A1
+  kind: choice
+  frame: "{Slot} {w} ist neu."
+  need: {pos: n, tags: [thing, furniture, appliance, vehicle, document, place], not: [pl_only, plu, noart]}
+  slot: {paradigm: def_article, case: nom, num: sg, gender: from_word}
+  options: {paradigm: def_article, count: 3}
+  why: genus
+
+- id: praeteritum-damals
+  rule: praeteritum
+  level: B1
+  kind: input
+  frame: "Damals {slot} er hier."
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
+  slot: {paradigm: verb_past, person: 3sg}
+  why: praeteritum
+
+- id: praeteritum-kind
+  rule: praeteritum
+  level: B1
+  kind: input
+  frame: "Als Kind {slot} ich viel."
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
+  slot: {paradigm: verb_past, person: 1sg}
+  why: praeteritum
+
+# сильное склонение в именительном: -er / -e / -es, то есть окончание РАЗНОЕ
+# по родам. В винительном у соседней рамки оно вырождается, здесь — нет
+- id: adj-stark-nom
+  rule: adj-ohne-artikel
+  level: A2
+  kind: input
+  frame: "Gut{slot} {w} ist teuer."
+  need: {pos: n, tags: [food, drink, thing], has: [mass], not: [pl_only, abstract]}
+  slot: {paradigm: adj_ending, decl: strong, case: nom, num: sg, gender: from_word}
+  why: adj-ohne-artikel
+
+- id: adj-stark-dat
+  rule: adj-ohne-artikel
+  level: B1
+  kind: input
+  frame: "Mit gut{slot} {w} schmeckt alles besser."
+  need: {pos: n, tags: [food, drink], has: [mass], not: [pl_only, abstract]}
+  slot: {paradigm: adj_ending, decl: strong, case: dat, num: sg, gender: from_word}
+  why: adj-ohne-artikel
+
+- id: pronomen-akk-kaufen
+  rule: pronomen-akkusativ
+  level: A1
+  kind: choice
+  frame: "{Nom} {wnom} ist neu — ich kaufe {slot}."
+  need: {pos: n, tags: [food, drink, appliance, thing], not: [pl_only, plu, mass]}
+  slot: {paradigm: pronoun, case: akk, num: sg}
+  options: {paradigm: pronoun, count: 4}
+  why: pronomen-akkusativ
+
+- id: pronomen-akk-brauchen
+  rule: pronomen-akkusativ
+  level: A1
+  kind: choice
+  frame: "{Nom} {wnom} ist wichtig — ich brauche {slot}."
+  need: {pos: n, tags: [document, place], not: [pl_only, plu, mass, noart]}
+  slot: {paradigm: pronoun, case: akk, num: sg}
+  options: {paradigm: pronoun, count: 4}
+  why: pronomen-akkusativ
+
+- id: pronomen-dat-danken
+  rule: pronomen-dativ
+  level: A2
+  kind: choice
+  frame: "{Nom} {wnom} war nett — ich danke {slot}."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: pronoun, case: dat, gender: from_word}
+  options: {paradigm: pronoun, count: 4}
+  why: pronomen-dativ
+
+- id: pronomen-dat-geben
+  rule: pronomen-dativ
+  level: A2
+  kind: choice
+  frame: "{Nom} {wnom} wartet — ich gebe {slot} das Paket."
+  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  slot: {paradigm: pronoun, case: dat, gender: from_word}
+  options: {paradigm: pronoun, count: 4}
+  why: pronomen-dativ
+
+# ⚠ Обстоятельство вынесено вперёд, поэтому глагол стоит ВТОРЫМ, а подлежащее
+# после него. Это единственное место, где порядок слов виден в формате «один пропуск»
+- id: futur-bald
+  rule: futur
+  level: A2
+  kind: choice
+  frame: "Bald {slot} {subj} {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: werden_present, person: from_word}
+  options: {paradigm: werden_present, count: 4}
+  why: futur
+
+- id: futur-nie
+  rule: futur
+  level: A2
+  kind: choice
+  frame: "{Subj} {slot} das nie {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: werden_present, person: from_word}
+  options: {paradigm: werden_present, count: 4}
+  why: futur
+
+- id: konjunktiv-lieber
+  rule: konjunktiv2
+  level: B1
+  kind: choice
+  frame: "An deiner Stelle {slot} {subj} {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: wuerde, person: from_word}
+  options: {paradigm: wuerde, count: 4}
+  why: konjunktiv2
+
+- id: konjunktiv-wenn
+  rule: konjunktiv2
+  level: B1
+  kind: choice
+  frame: "{Subj} {slot} heute lieber {w}."
+  need: {pos: v, tags: [solo], not: [reflexive]}
+  slot: {paradigm: wuerde, person: from_word}
+  options: {paradigm: wuerde, count: 4}
+  why: konjunktiv2
+
+- id: man-darf
+  rule: man-subjekt
+  level: A2
+  kind: input
+  frame: "Hier {slot} man nicht."
+  need: {pos: v, tags: [solo], not: [sep, reflexive]}
+  slot: {paradigm: verb_present, person: 3sg}
+  why: man-subjekt
+
+- id: man-wie
+  rule: man-subjekt
+  level: A2
+  kind: input
+  frame: "Wie {slot} man das?"
+  need: {pos: v, tags: [obj], not: [sep, reflexive, obj_person, placement]}
+  slot: {paradigm: verb_present, person: 3sg}
+  why: man-subjekt
+
+# последнее правило с одной рамкой. Обстоятельство вперёд — и глагол встаёт вторым,
+# а подлежащее уходит за него: «Heute beeile ich mich»
+- id: reflexiv-heute
+  rule: reflexiv
+  level: A2
+  kind: choice
+  frame: "Heute {vp} {subj} {slot} {particle}."
+  need: {pos: v, has: [reflexive]}
+  slot: {paradigm: reflexive_pronoun, person: from_word}
+  options: {paradigm: reflexive_pronoun, count: 4}
+  why: reflexiv

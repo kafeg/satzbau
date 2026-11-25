@@ -296,6 +296,16 @@ mass:
   # «Ich esse einen Käse» и «ich trinke eine Milch» — так не говорят
   - Käse
   - Milch
+  # неисчисляемые из новых тем: всплыли, когда появилась рамка «Die … sind neu»
+  - Kleidung
+  - Wäsche
+  - Unterwäsche
+  - Zement
+  - Silikon
+  - Mörtel
+  - Diesel
+  - Bauschaum
+  - Schleifpapier
   # уход за собой: «eine Watte» и «eine Schminke» так не говорят
   - Watte
   - Schminke
