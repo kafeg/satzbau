@@ -1879,3 +1879,353 @@ media:
     - {w: objektiv,      pos: a, lv: B1, tags: [quality, absolute]}
     - {w: glaubwürdig,   pos: a, lv: B1, tags: [quality]}
     - {w: anspruchsvoll, pos: a, lv: B1, tags: [quality]}
+
+migration:
+  title: Переезд и статус
+  words:
+    # A1 — откуда человек и какие бумаги у него на руках
+    - {w: Heimat,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Herkunftsland, pos: n, lv: A1, tags: [abstract]}
+    - {w: Geburtsort,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Nationalität,  pos: n, lv: A1, tags: [abstract]}
+    - {w: Reisepass,     pos: n, lv: A1, tags: [document]}
+    - {w: Behörde,       pos: n, lv: A1, tags: [place]}
+    - {w: Bescheinigung, pos: n, lv: A1, tags: [document]}
+    - {w: Übersetzung,   pos: n, lv: A1, tags: [document]}
+    - {w: Dolmetscher,   pos: n, lv: A1, tags: [person]}
+    - {w: Dolmetscherin, pos: n, lv: A1, tags: [person]}
+    - {w: Einwanderer,   pos: n, lv: A1, tags: [person]}
+    - {w: Flüchtling,    pos: n, lv: A1, tags: [person]}
+    - {w: Antragsteller, pos: n, lv: A1, tags: [person]}
+    - {w: Integration,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Integrationskurs,pos: n, lv: A1, tags: [abstract]}
+    - {w: Wohnsitz,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Asyl,          pos: n, lv: A1, tags: [abstract]}
+    - {w: einwandern,    pos: v, lv: A1, tags: [motion, solo]}
+    - {w: auswandern,    pos: v, lv: A1, tags: [motion, solo]}
+    - {w: bleiben,       pos: v, lv: A1, tags: [state, solo]}
+    - {w: ausländisch,   pos: a, lv: A1, tags: [quality, absolute]}
+    # A2 — заявление, срок, продление
+    - {w: Aufenthaltstitel,pos: n, lv: A2, tags: [document]}
+    - {w: Aufenthaltserlaubnis,pos: n, lv: A2, tags: [document]}
+    - {w: Arbeitserlaubnis,pos: n, lv: A2, tags: [document]}
+    - {w: Diplom,        pos: n, lv: A2, tags: [document]}
+    - {w: Verlängerung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Sprachtest,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Sprachniveau,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Behördengang,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Anerkennung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Einbürgerung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Staatsbürgerschaft,pos: n, lv: A2, tags: [abstract]}
+    - {w: Migration,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Migrant,       pos: n, lv: A2, tags: [person]}
+    - {w: Zuwanderer,    pos: n, lv: A2, tags: [person]}
+    - {w: Gastarbeiter,  pos: n, lv: A2, tags: [person]}
+    - {w: Einwanderung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Auswanderung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Rückkehr,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Zusage,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Rückmeldung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Bearbeitung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Bearbeitungszeit,pos: n, lv: A2, tags: [time]}
+    - {w: Wartezeit,     pos: n, lv: A2, tags: [time]}
+    - {w: Beratungsstelle,pos: n, lv: A2, tags: [place]}
+    - {w: Zweitsprache,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Kulturschock,  pos: n, lv: A2, tags: [abstract]}
+    - {w: zurückkehren,  pos: v, lv: A2, tags: [motion, solo]}
+    - {w: einreisen,     pos: v, lv: A2, tags: [motion, solo]}
+    - {w: ausreisen,     pos: v, lv: A2, tags: [motion, solo]}
+    - {w: anerkennen,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: integrieren,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: mehrsprachig,  pos: a, lv: A2, tags: [quality, absolute, person]}
+    - {w: anerkannt,     pos: a, lv: A2, tags: [quality, absolute, person]}
+    # B1 — статус, отказ, выдворение
+    - {w: Duldung,       pos: n, lv: B1, tags: [document]}
+    - {w: Abschiebung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Zuwanderung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Niederlassung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Einwanderungsland,pos: n, lv: B1, tags: [abstract]}
+    - {w: Aufenthaltsdauer,pos: n, lv: B1, tags: [time]}
+    - {w: Eingliederung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Abstammung,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Mehrsprachigkeit,pos: n, lv: B1, tags: [abstract]}
+    - {w: Doppelstaatler,pos: n, lv: B1, tags: [person]}
+    - {w: Diskriminierung,pos: n, lv: B1, tags: [abstract]}
+    - {w: Anpassung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Willkommenskultur,pos: n, lv: B1, tags: [abstract]}
+    - {w: Fristverlängerung,pos: n, lv: B1, tags: [abstract]}
+    - {w: Gesuch,        pos: n, lv: B1, tags: [document]}
+    - {w: Formblatt,     pos: n, lv: B1, tags: [document]}
+    - {w: Sachstand,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Behördensprache,pos: n, lv: B1, tags: [abstract]}
+    - {w: abschieben,    pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: einbürgern,    pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: dolmetschen,   pos: v, lv: B1, tags: [state, solo]}
+    - {w: fliehen,       pos: v, lv: B1, tags: [motion, solo]}
+    - {w: stammen,       pos: v, lv: B1, tags: [state]}
+    - {w: fremdsprachig, pos: a, lv: B1, tags: [quality, absolute, person]}
+    - {w: vorläufig,     pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: integriert,    pos: a, lv: B1, tags: [quality, absolute, person]}
+complaint:
+  title: Жалоба и спор
+  words:
+    # A1 — что не так и кто виноват
+    - {w: Problem,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Reklamation,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Schaden,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Mangel,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Entschuldigung,pos: n, lv: A1, tags: [abstract]}
+    - {w: Beleg,         pos: n, lv: A1, tags: [document]}
+    - {w: Reparatur,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Rückgabe,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Umtausch,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Vorwurf,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Streitfall,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Konflikt,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Verantwortung, pos: n, lv: A1, tags: [abstract]}
+    - {w: Schuld,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Ausrede,       pos: n, lv: A1, tags: [abstract]}
+    - {w: reklamieren,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: beschweren,    pos: v, lv: A1, tags: [state]}
+    - {w: zurückgeben,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: klären,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: unzufrieden,   pos: a, lv: A1, tags: [quality, person]}
+    # A2 — возражение, срок, возврат денег
+    - {w: Widerspruch,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Einwand,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Kompromiss,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Missverständnis,pos: n, lv: A2, tags: [abstract]}
+    - {w: Gutschrift,    pos: n, lv: A2, tags: [money]}
+    - {w: Rückerstattung,pos: n, lv: A2, tags: [money]}
+    - {w: Nachlass,      pos: n, lv: A2, tags: [money]}
+    - {w: Schadensersatz,pos: n, lv: A2, tags: [money]}
+    - {w: Beschwerdebrief,pos: n, lv: A2, tags: [document]}
+    - {w: Garantiefall,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Gewährleistung,pos: n, lv: A2, tags: [abstract]}
+    - {w: Kulanz,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Verzug,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Vorfall,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Zuständigkeit, pos: n, lv: A2, tags: [abstract]}
+    - {w: Verhandlung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Vermittler,    pos: n, lv: A2, tags: [person]}
+    - {w: Entschädigung, pos: n, lv: A2, tags: [money]}
+    - {w: Klage,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Beweis,        pos: n, lv: A2, tags: [document]}
+    - {w: widersprechen, pos: v, lv: A2, tags: [state, solo]}
+    - {w: bemängeln,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: beanstanden,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: einigen,       pos: v, lv: A2, tags: [state]}
+    - {w: nachgeben,     pos: v, lv: A2, tags: [state, solo]}
+    - {w: bedauern,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: haften,        pos: v, lv: A2, tags: [state]}
+    - {w: unhöflich,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: fehlerhaft,    pos: a, lv: A2, tags: [quality, thing_only]}
+    - {w: berechtigt,    pos: a, lv: A2, tags: [quality, absolute]}
+    # B1 — адвокат, претензия, компромисс
+    - {w: Schlichtung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Zugeständnis,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Vorbehalt,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Unmut,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Auseinandersetzung,pos: n, lv: B1, tags: [abstract]}
+    - {w: Zwischenlösung,pos: n, lv: B1, tags: [abstract]}
+    - {w: Rechtsanwalt,  pos: n, lv: B1, tags: [person]}
+    - {w: Anwaltskosten, pos: n, lv: B1, tags: [money]}
+    - {w: Vergleich,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Haftung,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Sachbeschädigung,pos: n, lv: B1, tags: [abstract]}
+    - {w: Gegenseite,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Ärgernis,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Beweisstück,   pos: n, lv: B1, tags: [thing]}
+    - {w: schlichten,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: vermitteln,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: entschädigen,  pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: einräumen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: mangelhaft,    pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: unberechtigt,  pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: sachlich,      pos: a, lv: B1, tags: [quality, person]}
+    - {w: strittig,      pos: a, lv: B1, tags: [quality, absolute]}
+countries:
+  title: Страны и языки
+  words:
+    # A1 — где мы и на каком языке говорим
+    - {w: Deutschland,   pos: n, lv: A1, tags: [noart]}
+    - {w: Österreich,    pos: n, lv: A1, tags: [noart]}
+    - {w: Russland,      pos: n, lv: A1, tags: [noart]}
+    - {w: Polen,         pos: n, lv: A1, tags: [noart]}
+    - {w: Europa,        pos: n, lv: A1, tags: [noart]}
+    - {w: Schweiz,       pos: n, lv: A1, tags: []}
+    - {w: Türkei,        pos: n, lv: A1, tags: []}
+    - {w: Staat,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Hauptstadt,    pos: n, lv: A1, tags: [place]}
+    - {w: Norden,        pos: n, lv: A1, tags: []}
+    - {w: Süden,         pos: n, lv: A1, tags: []}
+    - {w: Osten,         pos: n, lv: A1, tags: []}
+    - {w: Westen,        pos: n, lv: A1, tags: []}
+    - {w: Landkarte,     pos: n, lv: A1, tags: [thing]}
+    - {w: Flagge,        pos: n, lv: A1, tags: [thing]}
+    - {w: Einwohner,     pos: n, lv: A1, tags: [person]}
+    - {w: Europäer,      pos: n, lv: A1, tags: [person]}
+    - {w: Europäerin,    pos: n, lv: A1, tags: [person]}
+    - {w: deutsch,       pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: russisch,      pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: englisch,      pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: türkisch,      pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: polnisch,      pos: a, lv: A1, tags: [quality, absolute]}
+    # A2 — соседи, границы, направления
+    - {w: Ukraine,       pos: n, lv: A2, tags: []}
+    - {w: Bundesrepublik,pos: n, lv: A2, tags: []}
+    - {w: Kontinent,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Nachbarland,   pos: n, lv: A2, tags: [place]}
+    - {w: Nachbarstaat,  pos: n, lv: A2, tags: [place]}
+    - {w: Heimatland,    pos: n, lv: A2, tags: [place]}
+    - {w: Landesgrenze,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Grenzübergang, pos: n, lv: A2, tags: [place]}
+    - {w: Region,        pos: n, lv: A2, tags: [place]}
+    - {w: Gegend,        pos: n, lv: A2, tags: [place]}
+    - {w: Bevölkerung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Landessprache, pos: n, lv: A2, tags: [abstract]}
+    - {w: Amtssprache,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Dialekt,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Akzent,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Landsmann,     pos: n, lv: A2, tags: [person]}
+    - {w: Nordosten,     pos: n, lv: A2, tags: []}
+    - {w: Nordwesten,    pos: n, lv: A2, tags: []}
+    - {w: Südosten,      pos: n, lv: A2, tags: []}
+    - {w: Südwesten,     pos: n, lv: A2, tags: []}
+    - {w: Zeitzone,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Entfernung,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Weltkarte,     pos: n, lv: A2, tags: [thing]}
+    - {w: Fahne,         pos: n, lv: A2, tags: [thing]}
+    - {w: Nationalfeiertag,pos: n, lv: A2, tags: [time]}
+    - {w: französisch,   pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: italienisch,   pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: spanisch,      pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: europäisch,    pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: nördlich,      pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: südlich,       pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: östlich,       pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: westlich,      pos: a, lv: A2, tags: [quality, absolute]}
+    # B1 — государство на карте: территория, море, горы
+    - {w: Erdteil,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Festland,      pos: n, lv: B1, tags: [place]}
+    - {w: Landstrich,    pos: n, lv: B1, tags: [place]}
+    - {w: Staatsgebiet,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Hoheitsgebiet, pos: n, lv: B1, tags: [abstract]}
+    - {w: Staatsform,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Einwohnerzahl, pos: n, lv: B1, tags: [abstract]}
+    - {w: Grenzkontrolle,pos: n, lv: B1, tags: [abstract]}
+    - {w: Grenzgebiet,   pos: n, lv: B1, tags: [place]}
+    - {w: Binnenland,    pos: n, lv: B1, tags: [place]}
+    - {w: Inselstaat,    pos: n, lv: B1, tags: [place]}
+    - {w: Stadtstaat,    pos: n, lv: B1, tags: [place]}
+    - {w: Gebirge,       pos: n, lv: B1, tags: [place]}
+    - {w: Tiefland,      pos: n, lv: B1, tags: [place]}
+    - {w: Hochland,      pos: n, lv: B1, tags: [place]}
+    - {w: Balkan,        pos: n, lv: B1, tags: []}
+    - {w: Nordsee,       pos: n, lv: B1, tags: []}
+    - {w: Ostsee,        pos: n, lv: B1, tags: []}
+    - {w: Breitengrad,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Längengrad,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Äquator,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Nordpol,       pos: n, lv: B1, tags: []}
+    - {w: Südpol,        pos: n, lv: B1, tags: []}
+    - {w: Weltbevölkerung,pos: n, lv: B1, tags: [abstract]}
+    - {w: Muttersprachler,pos: n, lv: B1, tags: [person]}
+    - {w: Sprachfamilie, pos: n, lv: B1, tags: [abstract]}
+measures:
+  title: Числа, меры, вес
+  words:
+    # A1 — сколько это в килограммах и метрах
+    - {w: Zahl,          pos: n, lv: A1, tags: []}
+    - {w: Kilo,          pos: n, lv: A1, tags: []}
+    - {w: Gramm,         pos: n, lv: A1, tags: []}
+    - {w: Liter,         pos: n, lv: A1, tags: []}
+    - {w: Meter,         pos: n, lv: A1, tags: []}
+    - {w: Zentimeter,    pos: n, lv: A1, tags: []}
+    - {w: Prozent,       pos: n, lv: A1, tags: []}
+    - {w: Pfund,         pos: n, lv: A1, tags: []}
+    - {w: Hälfte,        pos: n, lv: A1, tags: []}
+    - {w: Paar,          pos: n, lv: A1, tags: []}
+    - {w: Rest,          pos: n, lv: A1, tags: []}
+    - {w: Menge,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Gewicht,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Länge,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Waage,         pos: n, lv: A1, tags: [thing]}
+    - {w: zählen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: rechnen,       pos: v, lv: A1, tags: [state, solo]}
+    - {w: wiegen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: genau,         pos: a, lv: A1, tags: [quality]}
+    - {w: halb,          pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: gleich,        pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: doppelt,       pos: a, lv: A1, tags: [quality, absolute]}
+    # A2 — доли, единицы, приборы
+    - {w: Drittel,       pos: n, lv: A2, tags: []}
+    - {w: Achtel,        pos: n, lv: A2, tags: []}
+    - {w: Dutzend,       pos: n, lv: A2, tags: []}
+    - {w: Kilogramm,     pos: n, lv: A2, tags: []}
+    - {w: Millimeter,    pos: n, lv: A2, tags: []}
+    - {w: Kilometer,     pos: n, lv: A2, tags: []}
+    - {w: Million,       pos: n, lv: A2, tags: []}
+    - {w: Ziffer,        pos: n, lv: A2, tags: []}
+    - {w: Anzahl,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Durchschnitt,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Breite,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Höhe,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Tiefe,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Fläche,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Einheit,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Maßeinheit,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Maßband,       pos: n, lv: A2, tags: [thing]}
+    - {w: Messbecher,    pos: n, lv: A2, tags: [thing]}
+    - {w: Taschenrechner,pos: n, lv: A2, tags: [thing]}
+    - {w: Teelöffel,     pos: n, lv: A2, tags: [thing]}
+    - {w: Esslöffel,     pos: n, lv: A2, tags: [thing]}
+    - {w: Prise,         pos: n, lv: A2, tags: []}
+    - {w: Handvoll,      pos: n, lv: A2, tags: []}
+    - {w: Hektar,        pos: n, lv: A2, tags: []}
+    - {w: Zuschlag,      pos: n, lv: A2, tags: [money]}
+    - {w: Stückpreis,    pos: n, lv: A2, tags: [money]}
+    - {w: Mindestalter,  pos: n, lv: A2, tags: [abstract]}
+    - {w: schätzen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: runden,        pos: v, lv: A2, tags: [state, obj]}
+    - {w: halbieren,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: verdoppeln,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: abnehmen,      pos: v, lv: A2, tags: [state, solo]}
+    - {w: zunehmen,      pos: v, lv: A2, tags: [state, solo]}
+    - {w: vergleichen,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: durchschnittlich,pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: zusätzlich,    pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: hoch,          pos: a, lv: A2, tags: [quality, thing_only]}
+    # B1 — объём, доля, средние значения
+    - {w: Milliarde,     pos: n, lv: B1, tags: []}
+    - {w: Volumen,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Kubikmeter,    pos: n, lv: B1, tags: []}
+    - {w: Rauminhalt,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Umfang,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Durchmesser,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Radius,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Winkel,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Quadrat,       pos: n, lv: B1, tags: []}
+    - {w: Quader,        pos: n, lv: B1, tags: [thing]}
+    - {w: Zehntel,       pos: n, lv: B1, tags: []}
+    - {w: Hundertstel,   pos: n, lv: B1, tags: []}
+    - {w: Bruch,         pos: n, lv: B1, tags: []}
+    - {w: Steigerung,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Verdopplung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Verhältnis,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Anteil,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Mehrwert,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Stückzahl,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Maßstab,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Gesamtzahl,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Gesamtgewicht, pos: n, lv: B1, tags: [abstract]}
+    - {w: Höchstwert,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Tiefstwert,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Mittelwert,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Abschlag,      pos: n, lv: B1, tags: [money]}
+    - {w: Spanne,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Richtwert,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Faustregel,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Rechenaufgabe, pos: n, lv: B1, tags: [abstract]}
+    - {w: tief,          pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: schmal,        pos: a, lv: B1, tags: [quality, thing_only]}

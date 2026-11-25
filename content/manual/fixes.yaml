@@ -38,6 +38,8 @@ government:
   leiden:        ["an D"]
   spielen:       ["mit D"]
   streiten:      ["mit D", "um A"]
+  haften:        ["für A"]
+  beschweren:    ["über A"]
   telefonieren:  ["mit D"]
   verzichten:    ["auf A"]
   verschieben:   ["auf A"]
@@ -94,6 +96,8 @@ government_example:
   bewerben:     ["bei der Firma", "um die Stelle"]
   fahren:       ["mit dem Bus", "nach Berlin"]
   streiten:     ["mit dem Nachbarn", "um den Platz"]
+  haften:       "für den Schaden"
+  beschweren:   "über den Lärm"
 
 # 2. Род: решения, которых нет в данных. Два случая.
 #
@@ -136,6 +140,14 @@ gender:
   Virus:   {g: m, note: "der Virus в быту и в технике; das Virus — в биологии"}
   Trikot:  {g: n, note: "das Trikot"}
   Silvester: {g: n, note: "das Silvester — новогодняя ночь"}
+  # названия стран среднего рода: в nouns.csv род у них не заполнен
+  Österreich: {g: n}
+  Europa:    {g: n, note: "das Europa — часть света; die Europa — спутник Юпитера"}
+  Bruch:     {g: m, note: "der Bruch — дробь, перелом; das Bruch — болото"}
+  Achtel:    {g: n}
+  Hundertstel: {g: n}
+  Russland:  {g: n}
+  Polen:     {g: n, note: "das Polen — страна; der Pole — поляк"}
   Trotzphase:  {g: f}
 
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
@@ -200,6 +212,36 @@ no_plural:
   - Fernsehen
   - Rundfunk
   - Konfetti
+  # переезд, жалоба, страны, меры
+  - Rückkehr
+  - Mehrsprachigkeit
+  - Schadensersatz
+  - Kulanz
+  - Unmut
+  - Mindestalter
+  - Mehrwert
+  - Weltbevölkerung
+  # имена собственные и страны света: множественного у них не бывает
+  - Deutschland
+  - Österreich
+  - Russland
+  - Polen
+  - Europa
+  - Türkei
+  - Ukraine
+  - Balkan
+  - Nordsee
+  - Ostsee
+  - Nordpol
+  - Südpol
+  - Norden
+  - Süden
+  - Osten
+  - Westen
+  - Nordosten
+  - Nordwesten
+  - Südosten
+  - Südwesten
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -244,6 +286,8 @@ reflexive:
   - entschuldigen
   - verspäten
   - schämen
+  - beschweren
+  - einigen
 
 # 2b. Множественное руками. Нужно там, где источник даёт форму ДРУГОГО значения
 #     омонима: die Bank — банк даёт Banken, а скамья Bänke, и в заданиях появлялись
@@ -941,6 +985,128 @@ translations:
   streamen:       смотреть онлайн
   recherchieren:  искать материал
   glaubwürdig:    достоверный
+  # переезд и статус
+  Integrationskurs: интеграционный курс
+  Sprachtest:     языковой тест
+  Behördengang:   поход в ведомство
+  Zweitsprache:   второй язык
+  Aufenthaltsdauer: срок пребывания
+  Doppelstaatler: человек с двойным гражданством
+  Behördensprache: канцелярский язык ведомств
+  integriert:     освоившийся в стране
+  anerkannt:      признанный
+  # жалоба и спор
+  Schlichtung:    примирительная процедура
+  Anwaltskosten:  расходы на адвоката
+  # страны и языки
+  Grenzkontrolle: пограничный контроль
+  Südpol:         Южный полюс
+  # числа, меры, вес
+  Handvoll:       горсть
+  Stückpreis:     цена за штуку
+  Mindestalter:   минимальный возраст
+  Zehntel:        десятая часть
+  Tiefstwert:     наименьшее значение
+  Spanne:         разброс, диапазон
+  Richtwert:      ориентировочное значение
+  # ⚠ словарь дал не то значение, которое нужно теме
+  # переезд и статус
+  Übersetzung:    перевод текста
+  Anpassung:      приспособление, адаптация
+  Verlängerung:   продление
+  Zusage:         согласие, положительный ответ
+  Bearbeitung:    рассмотрение заявления
+  Rückmeldung:    ответ ведомства
+  Duldung:        отсрочка выдворения
+  Niederlassung:  обустройство на постоянное жительство
+  Eingliederung:  включение в общество
+  Zuwanderer:     приезжий, иммигрант
+  Zuwanderung:    иммиграция
+  integrieren:    интегрировать, включать
+  anerkennen:     признавать документ
+  abschieben:     выдворять из страны
+  einbürgern:     принимать в гражданство
+  dolmetschen:    переводить устно
+  stammen:        быть родом откуда-то
+  Heimat:         родина
+  Asyl:           убежище
+  Dolmetscher:    устный переводчик
+  Dolmetscherin:  устная переводчица
+  Bescheinigung:  справка, свидетельство
+  Beratungsstelle: консультационный пункт
+  auswandern:     эмигрировать
+  Auswanderung:   эмиграция
+  einwandern:     иммигрировать
+  ausreisen:      выезжать из страны
+  mehrsprachig:   многоязычный
+  fremdsprachig:  иноязычный
+  vorläufig:      временный, предварительный
+  # жалоба и спор
+  Schuld:         вина
+  Klage:          иск, жалоба в суд
+  Beweisstück:    вещественное доказательство
+  nachgeben:      уступать
+  haften:         нести ответственность
+  Ärgernis:       досада, неприятность
+  schlichten:     урегулировать спор
+  einräumen:      признавать правоту
+  einigen:        договариваться
+  Nachlass:       скидка
+  Zuständigkeit:  компетенция, кто отвечает
+  Auseinandersetzung: спор, стычка
+  Gutschrift:     возврат суммы на счёт
+  Kulanz:         уступка по доброй воле
+  bemängeln:      предъявлять претензию
+  beanstanden:    заявлять о недостатке
+  Zugeständnis:   уступка
+  Vergleich:      мировое соглашение
+  Beleg:          чек, подтверждающий документ
+  beschweren:     жаловаться
+  bedauern:       сожалеть
+  unberechtigt:   необоснованный
+  mangelhaft:     с дефектом, неудовлетворительный
+  sachlich:       по существу, без эмоций
+  Rückerstattung: возврат денег
+  Unmut:          недовольство
+  Umtausch:       обмен товара
+  Garantiefall:   гарантийный случай
+  Schadensersatz: возмещение ущерба
+  Widerspruch:    возражение, протест
+  # страны и языки
+  Balkan:         Балканы
+  Ostsee:         Балтийское море
+  Westen:         запад
+  Bevölkerung:    население
+  Gegend:         местность, округа
+  Grenzübergang:  пограничный переход
+  Landsmann:      соотечественник, земляк
+  Heimatland:     родная страна
+  Festland:       материк, суша
+  Landstrich:     край, полоса земли
+  Binnenland:     страна без выхода к морю
+  # числа, меры, вес
+  genau:          точный
+  hoch:           высокий
+  Menge:          количество
+  schätzen:       оценивать приблизительно
+  Einheit:        единица измерения
+  Höhe:           высота
+  abnehmen:       убавляться, худеть
+  Durchschnitt:   среднее значение
+  Bruch:          дробь
+  Fläche:         площадь
+  Maßstab:        масштаб
+  Abschlag:       скидка, частичный платёж
+  Mehrwert:       добавленная стоимость
+  Mittelwert:     среднее значение
+  Höchstwert:     максимальное значение
+  Umfang:         обхват, периметр
+  zunehmen:       прибавляться, расти
+  runden:         округлять
+  halbieren:      делить пополам
+  rechnen:        считать, вычислять
+  halb:           половинный
+  Faustregel:     правило на глазок
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);
@@ -958,3 +1124,4 @@ aux_ambiguous:
   hängen:   {use: h, note: "hat gehangen — висело; hat gehängt — повесил, это слабый глагол"}
   setzen:   {use: h, note: "hat sich gesetzt — сел; сидел — это sitzen, hat gesessen"}
   heilen:   {use: h, note: "hat geheilt — вылечил; ist geheilt — зажило само"}
+  abschieben: {use: h, note: "hat abgeschoben — выдворил; ist abgeschoben — ушёл, разг."}

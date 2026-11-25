@@ -928,7 +928,7 @@
   level: A1
   kind: choice
   frame: "Das ist {slot} {w}."
-  need: {pos: n, not: [pl_only, plu]}
+  need: {pos: n, not: [pl_only, plu, noart]}
   slot: {paradigm: def_article, case: nom, num: sg, gender: from_word}
   options: {paradigm: genus, count: 3}
   why: genus

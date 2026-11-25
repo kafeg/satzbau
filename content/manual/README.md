@@ -37,6 +37,7 @@
 | `time` | время и точки расписания: Abfahrt, Ankunft |
 | `date` | точка или отрезок календаря: Montag, Sommer, Abend, Woche. Нужен, чтобы «Wann ist der Montag?» не собиралось: вопрос «когда?» задают о событии, а не о самом дне. В «Während …» такие слова, наоборот, идут |
 | `abstract` | то, что нельзя показать пальцем: Verspätung, Umzug |
+| `noart` | имя собственное без артикля: Deutschland, Europa, Nordpol. Нужен, чтобы «Das ist das Deutschland» не собиралось: у таких имён артикля нет, и рода, который можно спросить, тоже. Страны с артиклем (die Schweiz, die Türkei) его не получают |
 | `motion` | глагол движения: fahren, gehen, umsteigen |
 | `position` | глагол места: stehen, liegen, sitzen, hängen |
 | `placement` | глагол перемещения: stellen, legen, setzen |

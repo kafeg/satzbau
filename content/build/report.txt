@@ -1,21 +1,30 @@
-сборка 2026-11-25, версия данных a48ffe987c3a
+сборка 2026-11-25, версия данных 3ab0826b23ac
 
-слов в themes.yaml: 1728; собрано: 1728; потеряно: 0
+слов в themes.yaml: 2053; собрано: 2053; потеряно: 0
 
-замечания (55):
+замечания (68):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
   Boot                   род спорный n/m — решение в fixes.yaml:gender
+  Drittel                род спорный n/m — решение в fixes.yaml:gender
   Euro                   род спорный m/f — решение в fixes.yaml:gender
   Grad                   род спорный m/n — решение в fixes.yaml:gender
   Haar                   род спорный n/f — решение в fixes.yaml:gender
   Hantel                 род спорный f/n — решение в fixes.yaml:gender
   Hase                   род спорный m/f — решение в fixes.yaml:gender
+  Hektar                 род спорный n/m — решение в fixes.yaml:gender
   Hut                    род спорный m/f — решение в fixes.yaml:gender
+  Kilo                   род спорный n/m — решение в fixes.yaml:gender
+  Kilometer              род спорный m/n — решение в fixes.yaml:gender
+  Kompromiss             род спорный m/n — решение в fixes.yaml:gender
   Kredit                 род спорный m/n — решение в fixes.yaml:gender
   Laden                  род спорный m/n — решение в fixes.yaml:gender
   Laptop                 род спорный m/n — решение в fixes.yaml:gender
+  Liter                  род спорный m/n — решение в fixes.yaml:gender
   Luft                   род спорный f/m — решение в fixes.yaml:gender
+  Mangel                 род спорный m/f — решение в fixes.yaml:gender
   Matte                  род спорный f/n — решение в fixes.yaml:gender
+  Meter                  род спорный m/n — решение в fixes.yaml:gender
+  Millimeter             род спорный m/n — решение в fixes.yaml:gender
   Mittag                 род спорный m/n — решение в fixes.yaml:gender
   Mode                   род спорный f/m — решение в fixes.yaml:gender
   Monat                  род спорный m/n — решение в fixes.yaml:gender
@@ -24,6 +33,7 @@
   Neffe                  род спорный m/f — решение в fixes.yaml:gender
   Podcast                род спорный m/n — решение в fixes.yaml:gender
   Post                   род спорный f/m — решение в fixes.yaml:gender
+  Quadrat                род спорный n/m — решение в fixes.yaml:gender
   Radio                  род спорный n/m — решение в fixes.yaml:gender
   Rolle                  род спорный f/m/n — решение в fixes.yaml:gender
   See                    род спорный m/f — решение в fixes.yaml:gender
@@ -36,13 +46,16 @@
   Wetter                 род спорный n/m — решение в fixes.yaml:gender
   Wolf                   род спорный m/f — решение в fixes.yaml:gender
   Yoga                   род спорный m/n — решение в fixes.yaml:gender
+  Zehntel                род спорный n/m/f — решение в fixes.yaml:gender
   Zelt                   род спорный n/m — решение в fixes.yaml:gender
+  Zentimeter             род спорный m/n — решение в fixes.yaml:gender
   Zoll                   род спорный m/n — решение в fixes.yaml:gender
   altersgerecht          нет в kaikki — степени сравнения выводятся правилом
   anziehen               aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   aufstehen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   ausziehen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   erleichtert            нет в kaikki — степени сравнения выводятся правилом
+  fliehen                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   frieren                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   gereizt                нет в kaikki — степени сравнения выводятся правилом
   joggen                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
@@ -59,7 +72,7 @@
   trainiert              нет в kaikki — степени сравнения выводятся правилом
   wegfahren              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (31) — проверить и внести
+управление, предложено источниками (35) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   anfangen               von D
@@ -70,15 +83,19 @@
   berichten              über A, von D
   bestehen               aus D, auf D
   bewerben               für A
+  einigen                auf A
   einladen               zu D
+  einreisen              in A, nach D
   erholen                von D
   erzählen               von D
   freuen                 über A, auf A, für A
   gratulieren            zu D
+  haften                 an D
   hoffen                 auf A
   jagen                  durch A, in A
   leben                  von D
   passen                 für A, zu D
+  rechnen                mit D
   schlafen               über A
   setzen                 auf A
   streiten               über A
@@ -94,20 +111,20 @@
   übersetzen             in A, aus D
 
 размеры:
-  adjs.json         n=268        17.0 КиБ   gzip     4.4 КиБ
+  adjs.json         n=304        19.2 КиБ   gzip     4.9 КиБ
   explain.json      n=44         54.6 КиБ   gzip    14.2 КиБ
-  nouns.json        n=1119       90.9 КиБ   gzip    21.3 КиБ
-  sentences.json    n=4955      523.7 КиБ   gzip   154.2 КиБ
+  nouns.json        n=1370      114.3 КиБ   gzip    26.5 КиБ
+  sentences.json    n=5424      583.3 КиБ   gzip   173.1 КиБ
   templates.json    n=80         23.6 КиБ   gzip     3.1 КиБ
-  themes.json       n=20         99.5 КиБ   gzip    12.6 КиБ
-  verbs.json        n=341        53.3 КиБ   gzip    12.4 КиБ
-  ИТОГО                       862.5 КиБ   gzip   222.1 КиБ
+  themes.json       n=24        118.2 КиБ   gzip    15.0 КиБ
+  verbs.json        n=379        59.5 КиБ   gzip    13.6 КиБ
+  ИТОГО                       972.6 КиБ   gzip   250.4 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      112024
+  незнакомая словоформа      109208
   длина не 3–8               30998
-  имя исчерпало квоту        3348
+  имя исчерпало квоту        3710
   нет точки в конце          822
-  примеров на имя: Tom 2000, Maria 655, Deutschland 77, Oktober 42, Berlin 39
-  слов без примеров: 451 из 1728
-    Abfall, Abflug, Abmahnung, Abneigung, Abschluss, Abteil, Abteilung, Abwechslung, Advent, Adventskranz, Altersvorsorge, Amt, Anlage, Anschluss, Antrag, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Ast, Attest, Aufregung, Ausbildung, Ausdauer, Ausgabe, Auskunft, Ausländerbehörde, Autobahn, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beitrag, Benutzer, Berater, Beschwerde …
+  примеров на имя: Tom 2000, Maria 675, Berlin 43, Oktober 42, Thomas 22
+  слов без примеров: 632 из 2053
+    Abfall, Abflug, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschluss, Abstammung, Abteil, Abteilung, Abwechslung, Achtel, Advent, Adventskranz, Altersvorsorge, Amt, Amtssprache, Anerkennung, Anlage, Anschluss, Antrag, Antragsteller, Anwaltskosten, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Arbeitserlaubnis, Ast, Asyl, Attest, Aufenthaltsdauer, Aufenthaltserlaubnis, Aufenthaltstitel, Aufregung, Ausbildung, Ausdauer, Auseinandersetzung, Auskunft …
