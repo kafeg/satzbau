@@ -99,8 +99,15 @@ export function Drill({
             {item.ru && <span className="ru"> — {item.ru}</span>}
           </span>
           <span className="wspeak">
+            {/* ⚠ До ответа озвучивается СЛОВО, а не фраза: `item.full` — это фраза
+                с подставленным ответом, и кнопка читала решение вслух. После ответа
+                фраза целиком полезна: слышно, как звучит верная форма в предложении. */}
             {voice && (
-              <button className="speak" onClick={() => speak(item.full)} aria-label="озвучить">
+              <button
+                className="speak"
+                onClick={() => speak(answered ? item.full : item.word)}
+                aria-label={answered ? 'озвучить фразу' : 'озвучить слово'}
+              >
                 🔊
               </button>
             )}
