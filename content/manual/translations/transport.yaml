@@ -42,3 +42,23 @@ translations:
   gültig:         действительный
   umsteigen:      пересаживаться
   Fahrplan:       расписание
+  # бытовая лексика A1, добавленная вторым заходом
+  Touristenbus:      туристический автобус
+  Wartehäuschen:     павильон на остановке
+  Liniennummer:      номер маршрута
+  Fahrersitz:        сиденье водителя
+  Fahrpreis:         стоимость проезда
+  Fahrschein:        проездной билет
+  Gepäckfach:        багажное отделение
+  Haltegriff:        поручень
+  Halteknopf:        кнопка остановки
+  Rollstuhlzugang:   въезд для инвалидной коляски
+  Automatiktür:      автоматическая дверь
+  Busführerschein:   права на автобус
+  Fahrkartenautomat: билетный автомат
+  Fahrradmitnahme:   провоз велосипеда
+  Schnellbahnplan:   схема линий S-Bahn
+  Wagen:             вагон; машина
+  Station:           станция
+  Hauptbahnhof:      главный вокзал
+  Roller:            мотороллер; самокат

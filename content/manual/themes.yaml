@@ -69,6 +69,41 @@ transport:
     - {w: leer,          pos: a, lv: A1, tags: [quality, generic]}
     - {w: billig,        pos: a, lv: A1, tags: [quality, generic]}
     - {w: teuer,         pos: a, lv: A1, tags: [quality, generic]}
+    - {w: Obus,          pos: n, lv: A1, tags: [vehicle]}
+    - {w: Oberleitungsbus, pos: n, lv: A1, tags: [vehicle]}
+    - {w: Schulbus,      pos: n, lv: A1, tags: [vehicle]}
+    - {w: Touristenbus,  pos: n, lv: A1, tags: [vehicle]}
+    - {w: Busbahnhof,    pos: n, lv: A1, tags: [place]}
+    - {w: Bushaltestelle, pos: n, lv: A1, tags: [place]}
+    - {w: Wartehäuschen, pos: n, lv: A1, tags: [place]}
+    - {w: Busverbindung, pos: n, lv: A1, tags: [abstract]}
+    - {w: Buslinie,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Liniennummer,  pos: n, lv: A1, tags: [abstract]}
+    - {w: Fahrersitz,    pos: n, lv: A1, tags: []}
+    - {w: Fahrpreis,     pos: n, lv: A1, tags: [money]}
+    - {w: Fahrschein,    pos: n, lv: A1, tags: [document]}
+    - {w: Gepäckfach,    pos: n, lv: A1, tags: []}
+    - {w: Haltegriff,    pos: n, lv: A1, tags: []}
+    - {w: Halteknopf,    pos: n, lv: A1, tags: []}
+    - {w: Hinterrad,     pos: n, lv: A1, tags: []}
+    - {w: Rollstuhlzugang, pos: n, lv: A1, tags: [abstract]}
+    - {w: Automatiktür,  pos: n, lv: A1, tags: []}
+    - {w: Vorderrad,     pos: n, lv: A1, tags: []}
+    - {w: Busfahrer,     pos: n, lv: A1, tags: [person]}
+    - {w: Busführerschein, pos: n, lv: A1, tags: [document]}
+    - {w: Fahrkartenautomat, pos: n, lv: A1, tags: [thing]}
+    - {w: Fahrradmitnahme, pos: n, lv: A1, tags: [abstract]}
+    - {w: Schnellbahnplan, pos: n, lv: A1, tags: [document]}
+    - {w: Tram,          pos: n, lv: A1, tags: [vehicle, rail]}
+    - {w: U-Bahnhof,     pos: n, lv: A1, tags: [place]}
+    - {w: Wagen,         pos: n, lv: A1, tags: [vehicle]}
+    - {w: Hauptbahnhof,  pos: n, lv: A1, tags: [place]}
+    - {w: Station,       pos: n, lv: A1, tags: [place]}
+    - {w: Polizeiauto,   pos: n, lv: A1, tags: [vehicle]}
+    - {w: Motorrad,      pos: n, lv: A1, tags: [vehicle]}
+    - {w: Moped,         pos: n, lv: A1, tags: [vehicle]}
+    - {w: Roller,        pos: n, lv: A1, tags: [vehicle]}
+    - {w: Feuerwehrauto, pos: n, lv: A1, tags: [vehicle]}
     # A2 — то, что ломается и чем это починить
     - {w: Verspätung,    pos: n, lv: A2, tags: [abstract]}
     - {w: Verbindung,    pos: n, lv: A2, tags: [abstract]}
@@ -185,6 +220,36 @@ home:
     - {w: warm,          pos: a, lv: A1, tags: [quality]}
     - {w: kalt,          pos: a, lv: A1, tags: [quality]}
     - {w: sauber,        pos: a, lv: A1, tags: [quality, generic]}
+    - {w: Abstellraum,   pos: n, lv: A1, tags: [room]}
+    - {w: Arbeitszimmer, pos: n, lv: A1, tags: [room]}
+    - {w: Fahrstuhl,     pos: n, lv: A1, tags: [thing]}
+    - {w: Dach,          pos: n, lv: A1, tags: [thing]}
+    - {w: Decke,         pos: n, lv: A1, tags: [thing]}
+    - {w: Esszimmer,     pos: n, lv: A1, tags: [room]}
+    - {w: Fußboden,      pos: n, lv: A1, tags: [surface]}
+    - {w: Gästezimmer,   pos: n, lv: A1, tags: [room]}
+    - {w: Guckloch,      pos: n, lv: A1, tags: [thing]}
+    - {w: Haustür,       pos: n, lv: A1, tags: [thing]}
+    - {w: Hof,           pos: n, lv: A1, tags: [place]}
+    - {w: Kinderzimmer,  pos: n, lv: A1, tags: [room]}
+    - {w: Terrasse,      pos: n, lv: A1, tags: [place, surface]}
+    - {w: Türklingel,    pos: n, lv: A1, tags: [thing]}
+    - {w: Wasserbecken,  pos: n, lv: A1, tags: [thing]}
+    - {w: Zaun,          pos: n, lv: A1, tags: [thing]}
+    - {w: Apartment,     pos: n, lv: A1, tags: [place]}
+    - {w: Computertisch, pos: n, lv: A1, tags: [furniture, surface]}
+    - {w: Esstisch,      pos: n, lv: A1, tags: [furniture, surface]}
+    - {w: Familienfoto,  pos: n, lv: A1, tags: [thing]}
+    - {w: Gasherd,       pos: n, lv: A1, tags: [appliance]}
+    - {w: Geschirrspüler, pos: n, lv: A1, tags: [appliance]}
+    - {w: Hausfrau,      pos: n, lv: A1, tags: [person]}
+    - {w: Mikrowelle,    pos: n, lv: A1, tags: [appliance]}
+    - {w: Kaffeemaschine, pos: n, lv: A1, tags: [appliance]}
+    - {w: Toaster,       pos: n, lv: A1, tags: [appliance]}
+    - {w: Bügeleisen,    pos: n, lv: A1, tags: [appliance]}
+    - {w: Fernsehgerät,  pos: n, lv: A1, tags: [appliance]}
+    - {w: einziehen,     pos: v, lv: A1, tags: [motion, solo]}
+    - {w: staubsaugen,   pos: v, lv: A1, tags: [state, obj, solo, housework]}
     # A2 — бумаги и счёты
     - {w: Nebenkosten,   pos: n, lv: A2, tags: [money]}
     - {w: Mietvertrag,   pos: n, lv: A2, tags: [document]}
@@ -293,6 +358,47 @@ food:
     - {w: frisch,        pos: a, lv: A1, tags: [quality]}
     - {w: süß,           pos: a, lv: A1, tags: [quality]}
     - {w: satt,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: Alkohol,       pos: n, lv: A1, tags: [drink]}
+    - {w: Toastbrot,     pos: n, lv: A1, tags: [food]}
+    - {w: Nudel,         pos: n, lv: A1, tags: [food]}
+    - {w: Schinken,      pos: n, lv: A1, tags: [food]}
+    - {w: Gurke,         pos: n, lv: A1, tags: [food]}
+    - {w: Knoblauch,     pos: n, lv: A1, tags: [food]}
+    - {w: Birne,         pos: n, lv: A1, tags: [food]}
+    - {w: Kiwi,          pos: n, lv: A1, tags: [food]}
+    - {w: Pfirsich,      pos: n, lv: A1, tags: [food]}
+    - {w: Mandarine,     pos: n, lv: A1, tags: [food]}
+    - {w: Aprikose,      pos: n, lv: A1, tags: [food]}
+    - {w: Melone,        pos: n, lv: A1, tags: [food]}
+    - {w: Wassermelone,  pos: n, lv: A1, tags: [food]}
+    - {w: Weintraube,    pos: n, lv: A1, tags: [food]}
+    - {w: Erdbeere,      pos: n, lv: A1, tags: [food]}
+    - {w: Himbeere,      pos: n, lv: A1, tags: [food]}
+    - {w: Kirsche,       pos: n, lv: A1, tags: [food]}
+    - {w: Zitrone,       pos: n, lv: A1, tags: [food]}
+    - {w: Rosine,        pos: n, lv: A1, tags: [food]}
+    - {w: Nuss,          pos: n, lv: A1, tags: [food]}
+    - {w: Mandel,        pos: n, lv: A1, tags: [food]}
+    - {w: Chip,          pos: n, lv: A1, tags: [food]}
+    - {w: Müsli,         pos: n, lv: A1, tags: [food]}
+    - {w: Cornflakes,    pos: n, lv: A1, tags: [food]}
+    - {w: Keks,          pos: n, lv: A1, tags: [food]}
+    - {w: Honig,         pos: n, lv: A1, tags: [food]}
+    - {w: Joghurt,       pos: n, lv: A1, tags: [food]}
+    - {w: Quark,         pos: n, lv: A1, tags: [food]}
+    - {w: Ketchup,       pos: n, lv: A1, tags: [food]}
+    - {w: Senf,          pos: n, lv: A1, tags: [food]}
+    - {w: Mayonnaise,    pos: n, lv: A1, tags: [food]}
+    - {w: Soße,          pos: n, lv: A1, tags: [food]}
+    - {w: Pfeffer,       pos: n, lv: A1, tags: [food]}
+    - {w: Einkaufsliste, pos: n, lv: A1, tags: [thing]}
+    - {w: Einkaufstasche, pos: n, lv: A1, tags: [thing]}
+    - {w: Plastiktüte,   pos: n, lv: A1, tags: [thing]}
+    - {w: Kochtopf,      pos: n, lv: A1, tags: [thing]}
+    - {w: verkaufen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: nehmen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: flüssig,       pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: hungrig,       pos: a, lv: A1, tags: [quality, person]}
     # A2 — касса, упаковка, порция
     - {w: Metzgerei,     pos: n, lv: A2, tags: [place]}
     - {w: Kasse,         pos: n, lv: A2, tags: [place]}
@@ -388,6 +494,27 @@ work:
     - {w: freundlich,    pos: a, lv: A1, tags: [quality, person]}
     - {w: müde,          pos: a, lv: A1, tags: [quality, person]}
     - {w: fleißig,       pos: a, lv: A1, tags: [quality, person]}
+    - {w: Maschine,      pos: n, lv: A1, tags: [thing]}
+    - {w: Apotheker,     pos: n, lv: A1, tags: [person]}
+    - {w: Arbeiter,      pos: n, lv: A1, tags: [person]}
+    - {w: Architekt,     pos: n, lv: A1, tags: [person]}
+    - {w: Bäcker,        pos: n, lv: A1, tags: [person]}
+    - {w: Bibliothekar,  pos: n, lv: A1, tags: [person]}
+    - {w: Clown,         pos: n, lv: A1, tags: [person]}
+    - {w: Fischer,       pos: n, lv: A1, tags: [person]}
+    - {w: Fotograf,      pos: n, lv: A1, tags: [person]}
+    - {w: Gärtner,       pos: n, lv: A1, tags: [person]}
+    - {w: Historiker,    pos: n, lv: A1, tags: [person]}
+    - {w: Ingenieur,     pos: n, lv: A1, tags: [person]}
+    - {w: Jurist,        pos: n, lv: A1, tags: [person]}
+    - {w: Kaufmann,      pos: n, lv: A1, tags: [person]}
+    - {w: Koch,          pos: n, lv: A1, tags: [person]}
+    - {w: Komponist,     pos: n, lv: A1, tags: [person]}
+    - {w: Maler,         pos: n, lv: A1, tags: [person]}
+    - {w: Schlosser,     pos: n, lv: A1, tags: [person]}
+    - {w: Schriftsteller, pos: n, lv: A1, tags: [person]}
+    - {w: Sekretär,      pos: n, lv: A1, tags: [person]}
+    - {w: Tänzer,        pos: n, lv: A1, tags: [person]}
     # A2 — бумаги, которые подписывают
     - {w: Bewerbung,     pos: n, lv: A2, tags: [document]}
     - {w: Lebenslauf,    pos: n, lv: A2, tags: [document]}
@@ -492,6 +619,15 @@ health:
     - {w: gesund,        pos: a, lv: A1, tags: [quality, person]}
     - {w: stark,         pos: a, lv: A1, tags: [quality]}
     - {w: schwach,       pos: a, lv: A1, tags: [quality, person]}
+    - {w: Lippe,         pos: n, lv: A1, tags: [body]}
+    - {w: Backe,         pos: n, lv: A1, tags: [body]}
+    - {w: Gehirn,        pos: n, lv: A1, tags: []}
+    - {w: Kinn,          pos: n, lv: A1, tags: [body]}
+    - {w: Stirn,         pos: n, lv: A1, tags: [body]}
+    - {w: Augenbraue,    pos: n, lv: A1, tags: [body]}
+    - {w: Wimper,        pos: n, lv: A1, tags: [body]}
+    - {w: Brust,         pos: n, lv: A1, tags: [body]}
+    - {w: rauchen,       pos: v, lv: A1, tags: [state, obj, solo]}
     # A2 — страховка, укол, больничный
     - {w: Krankenkasse,  pos: n, lv: A2, tags: [abstract]}
     - {w: Überweisung,   pos: n, lv: A2, tags: [document]}
@@ -594,6 +730,17 @@ kids:
     - {w: fröhlich,      pos: a, lv: A1, tags: [quality, person]}
     - {w: traurig,       pos: a, lv: A1, tags: [quality, person]}
     - {w: brav,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: Vati,          pos: n, lv: A1, tags: [person]}
+    - {w: Papa,          pos: n, lv: A1, tags: [person]}
+    - {w: Mutti,         pos: n, lv: A1, tags: [person]}
+    - {w: Mama,          pos: n, lv: A1, tags: [person]}
+    - {w: Großvater,     pos: n, lv: A1, tags: [person]}
+    - {w: Großmutter,    pos: n, lv: A1, tags: [person]}
+    - {w: Roboter,       pos: n, lv: A1, tags: [thing]}
+    - {w: Dinosaurier,   pos: n, lv: A1, tags: [thing]}
+    - {w: Rechenbrett,   pos: n, lv: A1, tags: [thing]}
+    - {w: Teddybär,      pos: n, lv: A1, tags: [thing]}
+    - {w: Zinnsoldat,    pos: n, lv: A1, tags: [thing]}
     # A2 — место в садике и родительское собрание
     - {w: Krippe,        pos: n, lv: A2, tags: [place]}
     - {w: Kitaplatz,     pos: n, lv: A2, tags: [abstract]}
@@ -699,6 +846,24 @@ city:
     - {w: sicher,        pos: a, lv: A1, tags: [quality]}
     - {w: breit,         pos: a, lv: A1, tags: [quality, thing_only]}
     - {w: eng,           pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: Geburtsdatum,  pos: n, lv: A1, tags: [abstract]}
+    - {w: Geburtsland,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Geschlecht,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Information,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Wohnort,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Boulevard,     pos: n, lv: A1, tags: [place]}
+    - {w: Denkmal,       pos: n, lv: A1, tags: [place]}
+    - {w: Gasse,         pos: n, lv: A1, tags: [place]}
+    - {w: Großstadt,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Marktplatz,    pos: n, lv: A1, tags: [place]}
+    - {w: Vorort,        pos: n, lv: A1, tags: [place]}
+    - {w: Wohngebiet,    pos: n, lv: A1, tags: [place]}
+    - {w: Zebrastreifen, pos: n, lv: A1, tags: [place]}
+    - {w: Gemüseladen,   pos: n, lv: A1, tags: [place]}
+    - {w: Gemüsegeschäft, pos: n, lv: A1, tags: [place]}
+    - {w: Kaufhaus,      pos: n, lv: A1, tags: [place]}
+    - {w: überqueren,    pos: v, lv: A1, tags: [state, obj]}
+    - {w: frei,          pos: a, lv: A1, tags: [quality]}
     # A2 — очередь, окошко, бумажка со штампом
     - {w: Bürgeramt,     pos: n, lv: A2, tags: [place]}
     - {w: Finanzamt,     pos: n, lv: A2, tags: [place]}
@@ -799,6 +964,14 @@ weather:
     - {w: wolkig,        pos: a, lv: A1, tags: [quality]}
     - {w: windig,        pos: a, lv: A1, tags: [quality]}
     - {w: nass,          pos: a, lv: A1, tags: [quality]}
+    - {w: Sonnabend,     pos: n, lv: A1, tags: [date]}
+    - {w: Thermometer,   pos: n, lv: A1, tags: [thing]}
+    - {w: Unwetter,      pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Blitz,         pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Donner,        pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Frost,         pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Regenbogen,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Wärme,         pos: n, lv: A1, tags: [weather, abstract]}
     # A2 — то, из-за чего остаёшься дома, и то, что записывают в календарь
     - {w: Hitze,         pos: n, lv: A2, tags: [weather, abstract]}
     - {w: Kälte,         pos: n, lv: A2, tags: [weather, abstract]}
@@ -887,6 +1060,34 @@ people:
     - {w: jung,          pos: a, lv: A1, tags: [quality, person]}
     - {w: hübsch,        pos: a, lv: A1, tags: [quality, person]}
     - {w: lustig,        pos: a, lv: A1, tags: [quality, person]}
+    - {w: Abschied,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Anrede,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Begrüßung,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Bitte,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Gruß,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Enkelkind,     pos: n, lv: A1, tags: [person]}
+    - {w: Enkelin,       pos: n, lv: A1, tags: [person]}
+    - {w: Großeltern,    pos: n, lv: A1, tags: [person]}
+    - {w: Urenkel,       pos: n, lv: A1, tags: [person]}
+    - {w: Urenkelin,     pos: n, lv: A1, tags: [person]}
+    - {w: Urgroßeltern,  pos: n, lv: A1, tags: [person]}
+    - {w: Cousine,       pos: n, lv: A1, tags: [person]}
+    - {w: danken,        pos: v, lv: A1, tags: [state]}
+    - {w: heißen,        pos: v, lv: A1, tags: [state]}
+    - {w: geben,         pos: v, lv: A1, tags: [state]}
+    - {w: sterben,       pos: v, lv: A1, tags: [state]}
+    - {w: bitten,        pos: v, lv: A1, tags: [state, obj, obj_person]}
+    - {w: folgen,        pos: v, lv: A1, tags: [state]}
+    - {w: verwitwet,     pos: a, lv: A1, tags: [quality, absolute, person]}
+    - {w: schlecht,      pos: a, lv: A1, tags: [quality]}
+    - {w: kahl,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: rund,          pos: a, lv: A1, tags: [quality, thing_only]}
+    - {w: oval,          pos: a, lv: A1, tags: [quality, absolute, thing_only]}
+    - {w: intelligent,   pos: a, lv: A1, tags: [quality, person]}
+    - {w: dumm,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: naiv,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: faul,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: energisch,     pos: a, lv: A1, tags: [quality, person]}
     # A2 — отношения и характер
     - {w: Partner,       pos: n, lv: A2, tags: [person]}
     - {w: Partnerin,     pos: n, lv: A2, tags: [person]}
@@ -986,6 +1187,12 @@ clothes:
     - {w: kurz,          pos: a, lv: A1, tags: [quality]}
     - {w: lang,          pos: a, lv: A1, tags: [quality]}
     - {w: schmutzig,     pos: a, lv: A1, tags: [quality]}
+    - {w: Pyjama,        pos: n, lv: A1, tags: [thing]}
+    - {w: Strumpf,       pos: n, lv: A1, tags: [thing]}
+    - {w: Trainingsanzug, pos: n, lv: A1, tags: [thing]}
+    - {w: T-Shirt,       pos: n, lv: A1, tags: [thing]}
+    - {w: Shorts,        pos: n, lv: A1, tags: [thing]}
+    - {w: elegant,       pos: a, lv: A1, tags: [quality]}
     # A2 — примерочная, касса, обмен
     - {w: Anzug,         pos: n, lv: A2, tags: [thing]}
     - {w: Bluse,         pos: n, lv: A2, tags: [thing]}
@@ -1069,6 +1276,29 @@ leisure:
     - {w: treffen,       pos: v, lv: A1, tags: [state, obj, obj_person]}
     - {w: interessant,   pos: a, lv: A1, tags: [quality]}
     - {w: langweilig,    pos: a, lv: A1, tags: [quality]}
+    - {w: Verabredung,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Radtour,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Band,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Musikinstrument, pos: n, lv: A1, tags: [thing]}
+    - {w: Geige,         pos: n, lv: A1, tags: [thing]}
+    - {w: Trompete,      pos: n, lv: A1, tags: [thing]}
+    - {w: Schlagzeug,    pos: n, lv: A1, tags: [thing]}
+    - {w: Flöte,         pos: n, lv: A1, tags: [thing]}
+    - {w: Dirigent,      pos: n, lv: A1, tags: [person]}
+    - {w: Pianist,       pos: n, lv: A1, tags: [person]}
+    - {w: Schlagzeuger,  pos: n, lv: A1, tags: [person]}
+    - {w: Gitarrist,     pos: n, lv: A1, tags: [person]}
+    - {w: Lieblingsmusik, pos: n, lv: A1, tags: [abstract]}
+    - {w: Lieblingsband, pos: n, lv: A1, tags: [abstract]}
+    - {w: Lieblingssänger, pos: n, lv: A1, tags: [person]}
+    - {w: Lieblingslied, pos: n, lv: A1, tags: [thing]}
+    - {w: Rockmusik,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Popmusik,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Hip-Hop,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Rap,           pos: n, lv: A1, tags: [abstract]}
+    - {w: sehen,         pos: v, lv: A1, tags: [state, obj]}
+    - {w: komponieren,   pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: toll,          pos: a, lv: A1, tags: [quality]}
     # A2 — кружок, сцена, билет
     - {w: Verein,        pos: n, lv: A2, tags: [abstract]}
     - {w: Mitglied,      pos: n, lv: A2, tags: [person]}
@@ -1170,6 +1400,26 @@ study:
     - {w: richtig,       pos: a, lv: A1, tags: [quality, absolute]}
     - {w: falsch,        pos: a, lv: A1, tags: [quality, absolute]}
     - {w: einfach,       pos: a, lv: A1, tags: [quality]}
+    - {w: Dialog,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Radiergummi,   pos: n, lv: A1, tags: [thing]}
+    - {w: Kuli,          pos: n, lv: A1, tags: [thing]}
+    - {w: Bleistift,     pos: n, lv: A1, tags: [thing]}
+    - {w: Mensa,         pos: n, lv: A1, tags: [place]}
+    - {w: Semester,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Algebra,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Biologie,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Geometrie,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Informatik,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Literatur,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Physik,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Philosophie,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Labor,         pos: n, lv: A1, tags: [place]}
+    - {w: Schulbank,     pos: n, lv: A1, tags: [furniture]}
+    - {w: Kreide,        pos: n, lv: A1, tags: [thing]}
+    - {w: lehren,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: bedeuten,      pos: v, lv: A1, tags: [state]}
+    - {w: ablegen,       pos: v, lv: A1, tags: [state, obj]}
+    - {w: klar,          pos: a, lv: A1, tags: [quality]}
     # A2 — словарь, тема, результат
     - {w: Vokabel,       pos: n, lv: A2, tags: [abstract]}
     - {w: Grammatik,     pos: n, lv: A2, tags: [abstract]}
@@ -1253,6 +1503,8 @@ travel:
     - {w: Schiff,        pos: n, lv: A1, tags: [vehicle]}
     - {w: reisen,        pos: v, lv: A1, tags: [motion, solo]}
     - {w: packen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: Flugdatum,     pos: n, lv: A1, tags: [abstract]}
+    - {w: abfliegen,     pos: v, lv: A1, tags: [motion, solo]}
     # A2 — отель, рейс, достопримечательности
     - {w: Flug,          pos: n, lv: A2, tags: [abstract]}
     - {w: Abflug,        pos: n, lv: A2, tags: [time]}
@@ -1340,6 +1592,8 @@ sport:
     - {w: verlieren,     pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: joggen,        pos: v, lv: A1, tags: [motion, solo]}
     - {w: klettern,      pos: v, lv: A1, tags: [motion, solo]}
+    - {w: Sportsaal,     pos: n, lv: A1, tags: [place]}
+    - {w: Tennisplatz,   pos: n, lv: A1, tags: [place]}
     # A2 — тренировка, матч, счёт
     - {w: Sportart,      pos: n, lv: A2, tags: [abstract]}
     - {w: Bewegung,      pos: n, lv: A2, tags: [abstract]}
@@ -1504,6 +1758,8 @@ tech:
     - {w: klicken,       pos: v, lv: A1, tags: [state, solo]}
     - {w: kaputt,        pos: a, lv: A1, tags: [quality, thing_only, absolute]}
     - {w: digital,       pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: E-Mail-Adresse, pos: n, lv: A1, tags: [abstract]}
+    - {w: Fax,           pos: n, lv: A1, tags: [thing]}
     # A2 — файлы, сеть, зарядка
     - {w: Datei,         pos: n, lv: A2, tags: [thing]}
     - {w: Ordner,        pos: n, lv: A2, tags: [thing]}
@@ -1673,6 +1929,23 @@ nature:
     - {w: gießen,        pos: v, lv: A1, tags: [state, obj, solo]}
     - {w: wild,          pos: a, lv: A1, tags: [quality]}
     - {w: natürlich,     pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: Alligator,     pos: n, lv: A1, tags: []}
+    - {w: Kamel,         pos: n, lv: A1, tags: []}
+    - {w: Känguru,       pos: n, lv: A1, tags: []}
+    - {w: Kätzchen,      pos: n, lv: A1, tags: [thing]}
+    - {w: Krokodil,      pos: n, lv: A1, tags: []}
+    - {w: Zebra,         pos: n, lv: A1, tags: []}
+    - {w: Affe,          pos: n, lv: A1, tags: []}
+    - {w: Elefant,       pos: n, lv: A1, tags: []}
+    - {w: Frosch,        pos: n, lv: A1, tags: []}
+    - {w: Hamster,       pos: n, lv: A1, tags: [thing]}
+    - {w: Igel,          pos: n, lv: A1, tags: []}
+    - {w: Kater,         pos: n, lv: A1, tags: [thing]}
+    - {w: Löwe,          pos: n, lv: A1, tags: []}
+    - {w: Papagei,       pos: n, lv: A1, tags: [thing]}
+    - {w: Tiger,         pos: n, lv: A1, tags: []}
+    - {w: Giraffe,       pos: n, lv: A1, tags: []}
+    - {w: Schildkröte,   pos: n, lv: A1, tags: [thing]}
     # A2 — лес, поле и то, что в них водится
     - {w: Pflanze,       pos: n, lv: A2, tags: [thing]}
     - {w: Wurzel,        pos: n, lv: A2, tags: [thing]}
@@ -2360,6 +2633,11 @@ car:
     - {w: starten,       pos: v, lv: A1, tags: [state, obj]}
     - {w: lenken,        pos: v, lv: A1, tags: [state, obj]}
     - {w: defekt,        pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: Autofahren,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Automechaniker, pos: n, lv: A1, tags: [person]}
+    - {w: Autovermietung, pos: n, lv: A1, tags: [place]}
+    - {w: Autowerkstatt, pos: n, lv: A1, tags: [place]}
+    - {w: Pkw,           pos: n, lv: A1, tags: [vehicle]}
     # A2 — сервис, шины, штраф
     - {w: Ölwechsel,     pos: n, lv: A2, tags: [abstract]}
     - {w: Ersatzteil,    pos: n, lv: A2, tags: [thing]}

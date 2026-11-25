@@ -34,6 +34,9 @@ government:
   bezahlen:      ["für A"]
   einreichen:    ["bei D"]
   helfen:        ["bei D", "D"]
+  danken:        ["D", "für A"]
+  bitten:        ["um A"]
+  folgen:        ["D"]
   impfen:        ["gegen A"]
   leiden:        ["an D"]
   spielen:       ["mit D"]
@@ -75,6 +78,8 @@ government_example:
   aufhören:     "mit der Arbeit"
   aufpassen:    "auf das Kind"
   aussteigen:   "aus dem Bus"
+  bitten:       "um Hilfe"
+  danken:       "für die Hilfe"
   basteln:      "an einem Bild"
   bezahlen:     "für das Essen"
   einsteigen:   "in den Zug"
@@ -116,7 +121,12 @@ gender:
   Leiter:  {g: f, note: "die Leiter — стремянка; der Leiter — руководитель"}
   Steuer:  {g: f, note: "die Steuer — налог; das Steuer — руль"}
   Teil:    {g: n, note: "das Teil — деталь; der Teil — часть целого"}
-  Band:    {g: n, note: "das Band — лента; die Band — группа; der Band — том книги"}
+  Band:    {g: f, note: "die Band — музыкальная группа; das Band — лента; der Band — том книги"}
+  Kiwi:    {g: f, note: "die Kiwi — фрукт; der Kiwi — птица"}
+  Koch:    {g: m, note: "der Koch — повар; das Koch — каша, в Австрии"}
+  Quark:   {g: m, note: "der Quark — творог; das Quark — кварк в физике"}
+  Tram:    {g: f, note: "die Tram; das Tram — в Швейцарии, принят и он (gender_also)"}
+  Wartehäuschen: {g: n, note: "рода в источнике нет; на -chen всегда средний"}
   Kunde:   {g: m, note: "der Kunde — клиент; die Kunde — весть"}
   Gang:    {g: m, note: "der Gang — передача, коридор; die Gang — банда"}
   Hut:     {g: m, note: "der Hut — шляпа; die Hut — попечение"}
@@ -160,6 +170,7 @@ gender:
   Russland:  {g: n}
   Polen:     {g: n, note: "das Polen — страна; der Pole — поляк"}
   Trotzphase:  {g: f}
+  Wagen:     {g: m, note: "der Wagen; средний род в источнике ошибочен"}
 
 # 2а2. n-склонение руками. Обычно оно распознаётся само — по тому, что аккузатив
 #      в nouns.csv не равен лемме. У некоторых слов источник этого не даёт, и тогда
@@ -167,6 +178,9 @@ gender:
 n_declension:
   Mensch: Menschen
   Bär: Bären
+  # обратный случай: источник дал слабые формы, а литературная норма сильная —
+  # den Papagei, des Papageis. Форма, равная лемме, снимает n-склонение
+  Papagei: Papagei
 
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
 #     Иначе сборка каждый раз сообщает «нет множественного» про Hunger и Obst.
@@ -177,6 +191,22 @@ no_plural:
   # в речи нет: говорят Stockwerke или Etagen, с числом — «drei Stock». Задание «Hier gibt es
   # viele Stöcke» учило, что этажи — это палки. Найдено сверкой со сторонним учебным словарём.
   - Stock
+  - Quark      # творог; «Quarks» — это кварки
+  # музыка и школьные предметы: «Musiken», «Algebren» есть в словаре, но в речи A1 их нет
+  - Musik
+  - Popmusik
+  - Algebra
+  - Geometrie
+  - Literatur
+  - Physik
+  - Biologie
+  - Informatik
+  - Rockmusik
+  - Hip-Hop
+  - Wärme
+  - Knoblauch
+  - Autofahren   # отглагольное: езда как занятие
+  - Fahrradmitnahme
   - Bargeld
   - Polizei
   - Post
@@ -337,6 +367,17 @@ mass:
   - Öl
   - Leder
   - Wolle
+  # приправы и продукты, которые не считают штуками
+  - Knoblauch
+  - Honig
+  - Quark
+  - Senf
+  - Ketchup
+  - Mayonnaise
+  - Pfeffer
+  - Schinken   # «Ich esse einen Schinken» — целый окорок
+  - Soße
+  - Alkohol
   - Baumwolle
   - Stoff
   # уход за собой: «eine Watte» и «eine Schminke» так не говорят
@@ -377,6 +418,11 @@ plural:
   # от ДРУГОГО слова. Сборка теперь сама требует здесь строку, когда ручной род
   # не совпал с родом источника (`report.txt`).
   Bank: Banken          # банк, не скамья (Bänke)
+  Band: Bands           # группа, не ленты (Bänder) и не тома (Bände)
+  Kiwi: Kiwis
+  Tram: Trams
+  Wagen: Wagen         # Wägen — на юге, в литературной норме Wagen
+  Kaufmann: Kaufleute  # Kaufmänner — устаревшее
   Leiter: Leitern       # стремянка, не руководитель (Leiter)
   Steuer: Steuern       # налог, не руль (Steuer)
   Gehalt: Gehälter      # зарплата, не содержание чего-либо (Gehalte)
@@ -427,6 +473,14 @@ gender_also:
   Puder:        n     # der Puder (осн.), das Puder
   Spachtel:     f     # der Spachtel (инструмент), die Spachtel
   Vokabel:      n     # die Vokabel (осн.), das Vokabel в Австрии
+  Fax:          m     # das Fax (осн.), der Fax в Швейцарии
+  Joghurt:      n     # der Joghurt (осн.), das Joghurt; die — в Австрии, не принимаем
+  Keks:         n     # der Keks (осн.), das Keks в Австрии
+  Ketchup:      n     # der и das — оба литературные
+  Pyjama:       n     # der Pyjama (осн.), das в Австрии и Швейцарии
+  Radiergummi:  n     # der Radiergummi (осн.), das реже
+  Thermometer:  m     # das Thermometer (осн.), der в Австрии и Швейцарии
+  Tram:         n
 
 # Источник спорит о роде, а род один: редкое значение, диалект или чужая часть речи
 # в той же строке. Проверено по одному; список нужен, чтобы сборка не спрашивала о них
@@ -438,6 +492,7 @@ gender_single:
   - Euro
   - Grad
   - Haar
+  - Papa         # der Papa; женский род в строке — другое слово
   - Hantel
   - Hase
   - Kiste
@@ -476,6 +531,7 @@ plural_also:
   Balkon:     [Balkone]
   Deodorant:  [Deodorante]
   Sauna:      [Saunas]
+  Pkw:        [Pkws]
   Visum:      [Visen]
   Schal:      [Schale]      # Duden: -s, реже -e; «die Schale» (миска) — другое слово
   Tank:       [Tanke]       # Duden: -s, также -e
@@ -494,6 +550,11 @@ plural_in_use:
   # боль и жалобы считают во множественном: «Ich habe Schmerzen», не «einen Schmerz»
   - Schmerz
   - Beschwerde
+  # едят и видят горстью, не штукой: «Ich esse Nudeln», не «eine Nudel»
+  - Nudel
+  - Chip
+  - Rosine
+  - Wimper
 
 # 4. Субстантивированные прилагательные, которых нет в nouns.csv под этой леммой
 #    (остальные распознаются по колонкам «stark»)
@@ -517,3 +578,26 @@ aux_ambiguous:
   abtrocknen: {use: h, note: "hat abgetrocknet — вытер; ist abgetrocknet — высохло само"}
   flüchten: {use: s, note: "ist geflüchtet — убежал; hat sich geflüchtet — укрылся"}
   stürzen:  {use: s, note: "ist gestürzt — упал; hat gestürzt — сбросил, низверг"}
+  abfliegen: {use: s, note: "ist abgeflogen — вылетел; hat abgeflogen — облетел, вывез самолётом"}
+  einziehen: {use: s, note: "ist eingezogen — въехал; hat eingezogen — втянул, призвал"}
+
+# 5. Составные слова, которых нет в словарях. Род, склонение и множественное у немецкого
+#    сложного слова — от последней части, поэтому слово собирается из неё:
+#    Touristenbus → Bus, Touristenbusse. Только там, где последняя часть — то же слово
+#    в том же значении; перевод — строкой в translations.
+compound:
+  Touristenbus:     Bus
+  Busverbindung:    Verbindung
+  Liniennummer:     Nummer
+  Haltegriff:       Griff
+  Halteknopf:       Knopf
+  Rollstuhlzugang:  Zugang
+  Automatiktür:     Tür
+  Busführerschein:  Führerschein
+  Fahrradmitnahme:  Mitnahme
+  Schnellbahnplan:  Plan
+  Lieblingsmusik:   Musik
+  Lieblingsband:    Band
+  Lieblingssänger:  Sänger
+  Sportsaal:        Saal
+  Flugdatum:        Datum

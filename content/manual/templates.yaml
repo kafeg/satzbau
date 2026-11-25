@@ -751,7 +751,7 @@
   level: A2
   kind: input
   frame: "Hier sind {art} {w2}{slot} {w}."
-  need: {pos: n, tags: [thing, food, vehicle, furniture], has: [pl], not: [npl, mass, abstract]}
+  need: {pos: n, tags: [thing, food, vehicle, furniture], has: [pl], not: [npl, mass, abstract, pl_only]}
   fill2: {need: {pos: a, tags: [generic]}}
   slot: {paradigm: adj_ending, decl: weak, case: nom, num: pl, gender: from_word}
   why: adj-nom-e

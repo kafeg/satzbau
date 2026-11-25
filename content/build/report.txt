@@ -1,8 +1,8 @@
-сборка 2026-11-25, версия данных 68be43b61af8
+сборка 2026-11-25, версия данных 49fe6608c3f8
 
-слов в themes.yaml: 2675; собрано: 2675; потеряно: 0
+слов в themes.yaml: 2953; собрано: 2953; потеряно: 0
 
-замечания (74):
+замечания (83):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
   Boot                   род спорный n/m — решение в fixes.yaml:gender
   Butter                 нет множественного
@@ -11,12 +11,16 @@
   Ersatzteil             fixes.yaml:gender_also повторяет основной род m
   Ersatzteil             род спорный m/n — решение в fixes.yaml:gender
   Euro                   род спорный m/f — решение в fixes.yaml:gender
+  Fax                    род спорный n/m — решение в fixes.yaml:gender
   Grad                   род спорный m/n — решение в fixes.yaml:gender
   Haar                   род спорный n/f — решение в fixes.yaml:gender
   Haarspray              род спорный m/n — решение в fixes.yaml:gender
   Hantel                 род спорный f/n — решение в fixes.yaml:gender
   Hase                   род спорный m/f — решение в fixes.yaml:gender
   Hektar                 род спорный n/m — решение в fixes.yaml:gender
+  Joghurt                род спорный m/f/n — решение в fixes.yaml:gender
+  Keks                   род спорный m/n — решение в fixes.yaml:gender
+  Ketchup                род спорный m/n — решение в fixes.yaml:gender
   Kilo                   род спорный n/m — решение в fixes.yaml:gender
   Kilometer              род спорный m/n — решение в fixes.yaml:gender
   Kiste                  род спорный f/m — решение в fixes.yaml:gender
@@ -31,15 +35,19 @@
   Matte                  род спорный f/n — решение в fixes.yaml:gender
   Meter                  род спорный m/n — решение в fixes.yaml:gender
   Millimeter             род спорный m/n — решение в fixes.yaml:gender
+  Mitnahme               нет множественного
   Mittag                 род спорный m/n — решение в fixes.yaml:gender
   Mode                   род спорный f/m — решение в fixes.yaml:gender
   Monat                  род спорный m/n — решение в fixes.yaml:gender
   Morgen                 род спорный m/n — решение в fixes.yaml:gender
   Nebel                  род спорный m/f — решение в fixes.yaml:gender
   Neffe                  род спорный m/f — решение в fixes.yaml:gender
+  Papa                   род спорный m/f — решение в fixes.yaml:gender
   Podcast                род спорный m/n — решение в fixes.yaml:gender
   Puder                  род спорный m/n — решение в fixes.yaml:gender
+  Pyjama                 род спорный m/n — решение в fixes.yaml:gender
   Quadrat                род спорный n/m — решение в fixes.yaml:gender
+  Radiergummi            род спорный m/n — решение в fixes.yaml:gender
   Radio                  род спорный n/m — решение в fixes.yaml:gender
   Rohr                   род спорный n/f — решение в fixes.yaml:gender
   Rolle                  род спорный f/m/n — решение в fixes.yaml:gender
@@ -48,6 +56,7 @@
   Spam                   род спорный n/m/f — решение в fixes.yaml:gender
   Staffel                род спорный f/m — решение в fixes.yaml:gender
   Tag                    род спорный m/n — решение в fixes.yaml:gender
+  Thermometer            род спорный n/m — решение в fixes.yaml:gender
   Vokabel                род спорный f/n — решение в fixes.yaml:gender
   Wetter                 род спорный n/m — решение в fixes.yaml:gender
   Wolf                   род спорный m/f — решение в fixes.yaml:gender
@@ -78,7 +87,7 @@
   trainiert              нет в kaikki — степени сравнения выводятся правилом
   wegfahren              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (51) — проверить и внести
+управление, предложено источниками (53) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   abstimmen              über A, mit D
@@ -92,6 +101,7 @@
   berichten              über A, von D
   bestehen               aus D, auf D
   bewerben               für A
+  bitten                 auf A, zu D, in A
   denken                 an A
   diskutieren            über A
   eingreifen             in A
@@ -101,6 +111,7 @@
   erholen                von D
   erzählen               von D
   flüchten               vor D
+  folgen                 aus D
   freuen                 über A, auf A, für A
   glauben                an A
   gratulieren            zu D
@@ -133,20 +144,20 @@
   überzeugen             von D
 
 размеры:
-  adjs.json         n=355        22.6 КиБ   gzip     5.8 КиБ
+  adjs.json         n=371        23.5 КиБ   gzip     5.9 КиБ
   explain.json      n=33         40.1 КиБ   gzip    10.6 КиБ
-  nouns.json        n=1836      155.6 КиБ   gzip    35.8 КиБ
-  sentences.json    n=6197      679.0 КиБ   gzip   202.0 КиБ
+  nouns.json        n=2080      176.3 КиБ   gzip    40.6 КиБ
+  sentences.json    n=6939      766.9 КиБ   gzip   229.0 КиБ
   templates.json    n=94         28.7 КиБ   gzip     3.3 КиБ
-  themes.json       n=31        154.4 КиБ   gzip    19.6 КиБ
-  verbs.json        n=484        74.8 КиБ   gzip    17.0 КиБ
-  ИТОГО                      1155.1 КиБ   gzip   294.1 КиБ
+  themes.json       n=31        169.5 КиБ   gzip    21.5 КиБ
+  verbs.json        n=502        77.6 КиБ   gzip    17.7 КиБ
+  ИТОГО                      1282.6 КиБ   gzip   328.7 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      105285
+  незнакомая словоформа      100733
   длина не 3–8               30998
-  имя исчерпало квоту        4277
+  имя исчерпало квоту        4808
   нет точки в конце          822
-  примеров на имя: Tom 2000, Maria 706, Berlin 44, Oktober 42, Thomas 22
-  слов без примеров: 980 из 2675
-    Abfall, Abflug, Abholfach, Abholung, Ablehnung, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschleppdienst, Abschleppwagen, Abschluss, Absender, Abstammung, Abstimmung, Abteil, Abteilung, Abwechslung, Abwägung, Achsel, Achtel, Advent, Adventskranz, Airbag, Akkuschrauber, Alarm, Alarmanlage, Altersvorsorge, Amt, Amtssprache, Amtszeit, Anerkennung, Anhänger, Anlage, Anmerkung, Anschluss, Antrag, Antragsteller, Anwaltskosten, Anwendung …
+  примеров на имя: Tom 2000, Maria 757, Berlin 45, Oktober 42, Thomas 23
+  слов без примеров: 1051 из 2953
+    Abfall, Abflug, Abholfach, Abholung, Ablehnung, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschleppdienst, Abschleppwagen, Abschluss, Absender, Abstammung, Abstellraum, Abstimmung, Abteil, Abteilung, Abwechslung, Abwägung, Achsel, Achtel, Advent, Adventskranz, Airbag, Akkuschrauber, Alarm, Alarmanlage, Algebra, Altersvorsorge, Amt, Amtssprache, Amtszeit, Anerkennung, Anhänger, Anlage, Anmerkung, Anrede, Anschluss, Antragsteller …

@@ -131,6 +131,9 @@ GENDER_OPEN = []
 def build_noun(w, lemma, GN, K, ru, fixes, rep):
     e = GN.get(lemma)
     ke = pick_entry(K.get((lemma, 'noun')) or [])
+    head = fixes['compound'].get(lemma)
+    if head and not e and not ke:
+        return compound_noun(build_noun(w, head, GN, K, ru, fixes, rep), lemma, head, fixes)
     if not e and not ke:
         rep.append((lemma, 'нет ни в nouns.csv, ни в kaikki'))
         return None
@@ -237,6 +240,26 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         n['ru'] = ru
     else:
         rep.append((lemma, 'нет перевода'))
+    return n
+
+
+def compound_noun(n, lemma, head, fixes):
+    """Составное слово, которого нет в словарях: род и все формы — от последней части."""
+    pre = lemma[:-len(head)]
+    assert n is None or lemma[len(pre):] == head.lower(), lemma
+    if not n:
+        return None
+    join = lambda f: pre + f[0].lower() + f[1:]
+    n = dict(n, w=lemma)
+    for k in ('pl', 'gen', 'dpl'):
+        if k in n:
+            n[k] = join(n[k])
+    if 'pla' in n:
+        n['pla'] = [join(f) for f in n['pla']]
+    if lemma in fixes['no_plural']:
+        n = {k: v for k, v in n.items() if k not in ('pl', 'pla', 'dpl')} | {'npl': 1}
+    if lemma in fixes['mass']:
+        n['mass'] = 1
     return n
 
 
@@ -616,10 +639,12 @@ def main():
                  adj_decl_extra=set(fx.get('adj_declined_extra') or []),
                  translations=load_translations(fx),
                  aux_ambiguous=fx.get('aux_ambiguous') or {},
-                 reflexive=set(fx.get('reflexive') or []))
+                 reflexive=set(fx.get('reflexive') or []),
+                 compound=fx.get('compound') or {})
 
     words = [dict(w, theme=th) for th, v in themes.items() for w in v['words']]
     lemmas = {w['w'] for w in words} | {w['w'][5:] for w in words if w['w'].startswith('sich ')}
+    lemmas |= set(fixes['compound'].values())
     log(f'тем {len(themes)}, слов {len(words)}, шаблонов {len(templates)}')
 
     GN = srclib.read_nouns_csv(raw('nouns.csv'))
