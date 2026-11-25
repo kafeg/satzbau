@@ -1,8 +1,27 @@
 // Слой приложения: выбор того, ЧТО тренировать. Ядро проверяется отдельно.
-import { describe, expect, it } from 'vitest'
+import { beforeAll, describe, expect, it } from 'vitest'
 import { bundle, words } from '../core/data.ts'
 import { fillingFor, generate } from '../core/generate.ts'
-import { countFor, newSession, rules } from './session.ts'
+import { countFor, newSession, nextNew, rules } from './session.ts'
+import { init, replay, type Cards } from './srs.ts'
+import type { Answer } from './store.ts'
+
+beforeAll(init)
+
+/** Журнал из одного верного ответа на каждое названное правило: они «встречались». */
+const met = (...rules: string[]): Cards =>
+  replay(
+    rules.map(
+      (rule, i): Answer => ({
+        t: Date.now() - (rules.length - i) * 60000,
+        tpl: bundle.templates.find((t) => t.rule === rule)!.id,
+        word: 'Zug',
+        rule,
+        ok: 1,
+        given: '-',
+      }),
+    ),
+  )
 
 const LV = { A1: 1, A2: 2, B1: 3 } as const
 const level = (w: string) => words.find((x) => x.w === w)?.lv
@@ -51,6 +70,38 @@ describe('очередь заданий', () => {
     // одна длинная сессия вместо полусотни коротких: обход тот же, а времени втрое меньше
     const seen = new Set(newSession({ seed: 3, size: 400 }).map((i) => i.rule))
     expect(seen.size).toBe(new Set(bundle.templates.map((t) => t.rule)).size)
+  })
+
+  // ⚠ Без ограничения двенадцать заданий давали двенадцать незнакомых правил:
+  // «Заниматься» у человека с пустым журналом превращалось в экскурсию по грамматике.
+  it('в сессии не больше одного незнакомого правила', () => {
+    const cards = met('nominativ-subjekt', 'prep-dativ')
+    const items = newSession({ cards, size: 40, seed: 11 })
+    const fresh = [...new Set(items.map((i) => i.rule))].filter(
+      (r) => !cards.has(`r:${r}`),
+    )
+    expect(items.length).toBeGreaterThan(10)
+    expect(fresh.length).toBeLessThanOrEqual(1)
+  })
+
+  // Порядок обучения задаёт граф: правило с неначатой предпосылкой новым не берётся.
+  it('новое правило берётся по графу предпосылок', () => {
+    const first = nextNew({ cards: new Map() })
+    expect(first).not.toBeNull()
+    expect(bundle.explain[first!.rule]?.after ?? []).toEqual([])
+    const next = nextNew({ cards: met(first!.rule) })
+    expect(next?.rule).not.toBe(first!.rule)
+    for (const a of bundle.explain[next!.rule]?.after ?? []) {
+      expect(a).toBe(first!.rule)
+    }
+  })
+
+  // ⚠ Род либо знаешь у слова, либо нет: карточка правила «der, die или das» ничего
+  // не планирует, и состояние у такого правила считается по карточкам СЛОВ.
+  it('лексическое правило отмечено и живёт по словам', () => {
+    const lex = rules().filter((r) => r.lex).map((r) => r.rule)
+    expect(lex).toEqual(['genus'])
+    expect(rules({ cards: new Map() }).find((r) => r.rule === 'genus')?.state).toBe('new')
   })
 
   it('слова темы идут раньше остальных', () => {
