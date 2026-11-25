@@ -10,7 +10,7 @@
         │
         │  tools/build_data.py            на машине разработчика, вручную, редко
         ▼
-content/build/*.json  +  sources.lock     ≈300 КиБ, КОММИТИТСЯ в репозиторий
+content/build/*.json  +  sources.lock     сотни КиБ, КОММИТИТСЯ в репозиторий
         ▲
         │  content/manual/*.yaml          темы, шаблоны, объяснения — пишутся руками
         │
