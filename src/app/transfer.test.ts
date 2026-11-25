@@ -17,7 +17,7 @@ const good = {
 
 describe('разбор файла прогресса', () => {
   it('берёт целую запись', () => {
-    expect(parse(dump([good]))).toEqual([good])
+    expect(parse(dump([good]))).toEqual({ answers: [good], dropped: 0 })
   })
 
   // ⚠ Без этих проверок запись без `rule` заводила карточку `r:undefined`, а без `ok`
@@ -26,12 +26,19 @@ describe('разбор файла прогресса', () => {
     const { rule: _r, ...noRule } = good
     const { ok: _o, ...noOk } = good
     const broken = [noRule, noOk, { ...good, ok: 2 }, { ...good, t: NaN }, { ...good, given: 7 }]
-    expect(parse(dump([...broken, good]))).toEqual([good])
+    expect(parse(dump([...broken, good]))).toEqual({ answers: [good], dropped: broken.length })
+  })
+
+  // ⚠ Загрузка ЗАМЕНЯЕТ журнал целиком: «Прогресс загружен» после файла, где половина
+  // записей побита, — это молчаливая потеря. Поэтому число выброшенных идёт наверх.
+  it('считает выброшенные записи, чтобы интерфейс о них сказал', () => {
+    expect(parse(dump([good, { t: 1 }, good])).dropped).toBe(1)
+    expect(parse(dump([good])).dropped).toBe(0)
   })
 
   it('сортирует по времени: журнал проигрывается по порядку', () => {
     const late = { ...good, t: good.t + 1000 }
-    expect(parse(dump([late, good])).map((a) => a.t)).toEqual([good.t, late.t])
+    expect(parse(dump([late, good])).answers.map((a) => a.t)).toEqual([good.t, late.t])
   })
 
   it('отказывается от чужого файла понятным текстом', () => {

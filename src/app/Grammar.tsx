@@ -49,15 +49,15 @@ export function Grammar({ level, cards }: { level?: Level; cards: Cards }) {
                 onClick={() => setOpen(shown ? null : g)}
               >
                 <span className="gname">{GROUP_TITLE[g] ?? g}</span>
-                {/* сводка по группе: обычно просто сколько правил, а когда что-то
-                    подошло к повтору — метка, потому что это единственное действие */}
-                {rs.some((r) => r.state === 'due') ? (
+                {/* ⚠ Метка повтора ДОБАВЛЯЕТСЯ к числу правил, а не заменяет его: пока
+                    она его съедала, «сколько тут правил» пропадало ровно в тот день,
+                    когда человек заходит сюда чаще всего. */}
+                {rs.some((r) => r.state === 'due') && (
                   <span className="rstate due">
                     {rs.filter((r) => r.state === 'due').length} пора
                   </span>
-                ) : (
-                  <span className="gcount mono">{rs.length}</span>
                 )}
+                <span className="gcount mono">{rs.length}</span>
                 <span className="arrow" aria-hidden="true" />
               </button>
               {shown &&

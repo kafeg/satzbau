@@ -188,9 +188,10 @@ export function App() {
         lost={lost}
         onExport={() => download(answers)}
         onImport={async (file) => {
-          const next = await upload(file)
+          const { answers: next, dropped } = await upload(file)
           setAnswers(next)
           setCards(replay(next))
+          return dropped
         }}
       />,
     )
@@ -235,13 +236,18 @@ export function App() {
             перезагрузки прогресс пропадёт.
           </p>
         )}
+        {/* ⚠ Слово обязательно: без него строки «der → die» повторяются по три раза
+            и не различаются, а по одной форме не вспомнить, о чём было задание. */}
         <ul className="recap">
           {log
             .filter((a) => !a.ok)
-            .map((a) => (
-              <li key={a.tpl + a.word}>
-                <span className="mono bad">{a.given}</span> →{' '}
-                <span className="mono ok">{a.right}</span>
+            .map((a, i) => (
+              <li key={`${a.tpl}/${a.word}/${i}`}>
+                <span className="rword">{a.word}</span>
+                <span>
+                  <span className="mono bad">{a.given}</span> →{' '}
+                  <span className="mono ok">{a.right}</span>
+                </span>
               </li>
             ))}
         </ul>

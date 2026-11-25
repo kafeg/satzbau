@@ -58,7 +58,7 @@ export function Progress({
   /** запись в журнал не прошла: приватный просмотр или переполненное хранилище */
   lost?: boolean
   onExport: () => void
-  onImport: (file: File) => Promise<void>
+  onImport: (file: File) => Promise<number>
 }) {
   const [by, setBy] = useState<By>('rule')
   // выбранное состояние: пока не выбрали руками — первое непустое, иначе экран
@@ -212,7 +212,12 @@ export function Progress({
                 const file = e.target.files?.[0]
                 if (!file) return
                 onImport(file).then(
-                  () => setNote('Прогресс загружен'),
+                  (dropped) =>
+                    setNote(
+                      dropped
+                        ? `Прогресс загружен. Повреждённых записей в файле: ${dropped} — они пропущены`
+                        : 'Прогресс загружен',
+                    ),
                   (err: unknown) => setNote(err instanceof Error ? err.message : String(err)),
                 )
                 e.target.value = ''

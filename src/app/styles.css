@@ -1231,6 +1231,19 @@ footer {
   line-height: 1.8;
 }
 
+.recap li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.rword {
+  color: var(--text-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .bad {
   color: var(--err-fg);
 }

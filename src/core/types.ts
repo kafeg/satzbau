@@ -13,6 +13,8 @@ export interface Noun {
   lv: Level
   g?: Gender
   pl?: string
+  /** второе принятое множественное: Parfüms и Parfüme. Руками, см. fixes.yaml */
+  pla?: string[]
   gen?: string
   dpl?: string
   nd?: 1
@@ -37,6 +39,8 @@ export interface Verb {
   govex?: string[]
   auxn?: string
   refl?: 1
+  /** второе принятое причастие: gesendet и gesandt. Руками, см. fixes.yaml */
+  ppa?: string[]
   /** принятые формы императива 2 л. ед. ч. из UniMorph: «buch» и «buche» обе верны */
   imp?: string[]
   ru?: string
@@ -48,6 +52,9 @@ export interface Adj {
   st?: string
   cmp?: string
   sup?: string
+  /** принятые формы степеней из UniMorph: «leckerer» и «leckrer» верны обе */
+  cmps?: string[]
+  sups?: string[]
   ru?: string
 }
 
@@ -149,7 +156,11 @@ export interface Item {
   /** фраза с подставленным верным ответом */
   full: string
   answer: string
-  /** другие формы, которые тоже верны: «hol» и «hole» — обе. Только для ввода */
+  /**
+   * ВСЕ принятые формы, включая показанную: «hol» и «hole» верны обе. Только для ввода.
+   * Показанная входит нарочно — так список читается как «что засчитывается», и `accepts`
+   * не зависит от того, не забыли ли её добавить.
+   */
   answers?: string[]
   options?: string[]
   word: string

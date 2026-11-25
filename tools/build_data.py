@@ -168,6 +168,10 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         n['npl'] = 1                      # множественного нет и не должно быть: Hunger, Obst
     elif pl:
         n['pl'] = pl
+        # второе принятое множественное: показываем одно, засчитываем оба
+        also = fixes['plural_also'].get(lemma)
+        if also:
+            n['pla'] = [f for f in also if f != pl]
     elif not pl_only:
         rep.append((lemma, 'нет множественного'))
     gen = (e or {}).get('gen') or (ke and kform(ke, 'genitive'))
@@ -264,6 +268,10 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep, imp=None):
         v['auxn'] = amb['note']
     if base in fixes['reflexive']:
         v['refl'] = 1
+    # второе принятое причастие: gesendet и gesandt, versendet и versandt
+    ppa = [f for f in (fixes['participle_also'].get(base) or []) if f != pp]
+    if ppa:
+        v['ppa'] = ppa
     # Принятые формы императива: вывести правилом нельзя, см. read_imperatives.
     # ⚠ У unterschreiben и durchsetzen UniMorph знает ОБА разбора, отделяемый
     # и неотделяемый. Оставляем формы только того, который у нас в p3.
@@ -298,7 +306,7 @@ def build_verb(w, lemma, K, ru, fixes, rep, gov_rep, imp=None):
     return v
 
 
-def build_adj(w, lemma, K, ru, fixes, rep):
+def build_adj(w, lemma, K, ru, fixes, rep, deg=None):
     """Прилагательному kaikki не обязателен: окончания — закрытая парадигма в коде,
     а `cmp`/`sup`/`st` хранятся только при отклонении от правила. У причастий в роли
     прилагательного (`befristet`, `qualifiziert`) отклонений не бывает — для них
@@ -317,6 +325,11 @@ def build_adj(w, lemma, K, ru, fixes, rep):
             a['cmp'] = cmp_
         if sup and sup not in (f'am {lemma}sten', f'am {lemma}esten', f'am {stem}sten'):
             a['sup'] = sup
+    # Принятые формы степеней: показывается одна, засчитываются все, см. read_degrees
+    for cell, field in (('cmp', 'cmps'), ('sup', 'sups')):
+        forms = (deg or {}).get(lemma, {}).get(cell) or []
+        if len(forms) > 1:
+            a[field] = forms
     if ru:
         a['ru'] = ru
     else:
@@ -416,6 +429,23 @@ def read_imperatives(path, lemmas):
             continue
         out[p[0]].add(' '.join(p[1].split()))
     return {k: sorted(v) for k, v in out.items()}
+
+
+def read_degrees(path, lemmas):
+    """лемма → принятые формы сравнительной и превосходной степени
+
+    Нужны по той же причине, что и формы императива: «am frischesten» и «am frischsten»
+    верны обе, «leckerer» и «leckrer» тоже, а признака, по которому одну форму можно
+    счесть единственной, в слове нет. Показывается форма из kaikki или из правила,
+    принимаются все.
+    """
+    out = collections.defaultdict(lambda: collections.defaultdict(set))
+    for line in open(path, encoding='utf-8'):
+        p = line.rstrip('\n').split('\t')
+        if len(p) != 3 or p[0] not in lemmas or p[2] not in ('ADJ;CMPR', 'ADJ;SPRL'):
+            continue
+        out[p[0]]['cmp' if p[2].endswith('CMPR') else 'sup'].add(' '.join(p[1].split()))
+    return {k: {c: sorted(v) for c, v in d.items()} for k, d in out.items()}
 
 
 def build_sentences(vocab, verbs, rep):
@@ -520,6 +550,8 @@ def main():
                  government_example=fx.get('government_example') or {},
                  plural_in_use=set(fx.get('plural_in_use') or []),
                  plural=fx.get('plural') or {},
+                 plural_also=fx.get('plural_also') or {},
+                 participle_also=fx.get('participle_also') or {},
                  n_declension=fx.get('n_declension') or {},
                  pl_only_extra=set(fx.get('pl_only_extra') or []),
                  no_plural=set(fx.get('no_plural') or []),
@@ -545,6 +577,8 @@ def main():
 
     IMP = read_imperatives(raw('unimorph-deu.tsv'), lemmas)
     log(f'UniMorph: императив известен у {len(IMP)} глаголов')
+    DEG = read_degrees(raw('unimorph-deu.tsv'), lemmas)
+    log(f'UniMorph: степени сравнения известны у {len(DEG)} прилагательных')
 
     out = {'n': [], 'v': [], 'a': []}
     rep, gov_rep = [], []
@@ -554,7 +588,7 @@ def main():
             lemma[5:] if lemma.startswith('sich ') else lemma, pos, KR, FD)
         rec = (build_noun(w, lemma, GN, K, ru, fixes, rep) if pos == 'n' else
                build_verb(w, lemma, K, ru, fixes, rep, gov_rep, IMP) if pos == 'v' else
-               build_adj(w, lemma, K, ru, fixes, rep))
+               build_adj(w, lemma, K, ru, fixes, rep, DEG))
         if rec:
             out[pos].append(rec)
 

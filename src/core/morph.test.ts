@@ -137,9 +137,18 @@ describe('императив против UniMorph', () => {
  * и каждое такое слово просилось в список известных расхождений — список рос бы с каждым
  * новым словом лексикона. Поэтому сверка принимает обе наравне с тем, что даёт источник:
  * тогда в списке остаётся только настоящий сигнал. Подсказано сквозным аудитом.
+ *
+ * ⚠ Но только там, где источник САМ даёт -s или -es. Без этого условия допуск принимал
+ * «des Junges» при источнике «des Jungen» и снимал страховку с одиннадцати слов, у которых
+ * пропущенную метку `nd` не ловит и винительный. Цена условия — три именные записи ниже;
+ * замерено сквозным аудитом, не на глаз.
  */
 const genOk = (n: { w: string; g?: string; nd?: 1 }, got: string, want: string[]): boolean =>
-  want.includes(got) || (n.g !== 'f' && !n.nd && (got === `${n.w}s` || got === `${n.w}es`))
+  want.includes(got) ||
+  (n.g !== 'f' &&
+    !n.nd &&
+    (got === `${n.w}s` || got === `${n.w}es`) &&
+    want.some((f) => f === `${n.w}s` || f === `${n.w}es`))
 
 describe('родительный против UniMorph', () => {
   // Правило короткое, но ошибается тихо: «das Auto der Bedienungs» доехало до живого
@@ -147,6 +156,10 @@ describe('родительный против UniMorph', () => {
   const gen = genitive_fixture as Record<string, string[]>
   const KNOWN_GEN: Record<string, string> = {
     Post: 'в UniMorph мужской омоним der Post «пост, должность», у нас die Post «почта»',
+    // источник держит эти три несклоняемыми, но родительный на -s у них принят
+    Kilo: 'UniMorph даёт несклоняемое, «des Kilos» принято',
+    Silvester: 'UniMorph даёт несклоняемое, «des Silvesters» принято',
+    Aufenthaltstitel: 'UniMorph даёт несклоняемое, норма — des Aufenthaltstitels',
   }
   const bad: string[] = []
   const diverged = new Set<string>()
@@ -278,6 +291,7 @@ describe('склонение против UniMorph', () => {
     Paketbote: 'n-Deklination: den Paketboten, UniMorph даёт винительный без -n',
     Kilo: 'UniMorph даёт несклоняемое, разговорные Kilos приняты',
     Post: 'в UniMorph мужской омоним der Post «должность», у нас die Post «почта»',
+    Aufenthaltstitel: 'UniMorph даёт несклоняемое, норма — des Aufenthaltstitels',
   }
   const bad: string[] = []
   const diverged = new Set<string>()
@@ -323,6 +337,10 @@ describe('степени сравнения против UniMorph', () => {
     berechtigt: 'то же',
     unberechtigt: 'то же',
     veraltet: 'то же, причастие на -etet',
+    // ⚠ Дифтонг на конце: у neu, genau, blau, treu источник даёт ОБЕ формы, а у этих
+    // двух только краткую — пробел покрытия, а не другая норма. Duden: am grau[e]sten.
+    grau: 'UniMorph знает только am grausten, приняты обе',
+    barrierefrei: 'то же: am barrierefrei[e]sten',
   }
   const bad: string[] = []
   const diverged = new Set<string>()

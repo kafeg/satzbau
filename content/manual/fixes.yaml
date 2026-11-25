@@ -384,6 +384,29 @@ plural:
   Stift: Stifte         # ручка-карандаш; «Stifter» это основатель
   Bruch: Brüche
 
+# Второе принятое множественное. Показываем одно, засчитываем оба: заимствования
+# на -on/-üm/-a держат и немецкое, и исходное окончание, и обе формы в словаре.
+# ⚠ Списком из источника это не берётся: там же лежат множественные чужого омонима
+# (Schal → «Schale» это миска, Stift → «Stifter» это основатель) и диалектные
+# («Kinderwägen», «Rettungswägen»). Поэтому строки руками, по одной на слово.
+plural_also:
+  Ski:        [Skier]
+  Parfüm:     [Parfüme]
+  Karton:     [Kartone]
+  Balkon:     [Balkone]
+  Deodorant:  [Deodorante]
+  Sauna:      [Saunas]
+  Visum:      [Visen]
+  Schal:      [Schale]      # Duden: -s, реже -e; «die Schale» (миска) — другое слово
+  Tank:       [Tanke]       # Duden: -s, также -e
+
+# Второе принятое причастие. У senden и wenden форма зависит от значения
+# («Nachricht gesendet», но «Brief gesandt»), и обе верны в заданиях на Perfekt.
+participle_also:
+  senden:     [gesandt]
+  versenden:  [versendet]
+  wiegen:     [gewiegt]
+
 plural_in_use:
   - Möbel
   - Lebensmittel

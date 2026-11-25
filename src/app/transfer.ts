@@ -38,8 +38,14 @@ export function download(answers: Answer[]): void {
   setTimeout(() => URL.revokeObjectURL(url), 0)
 }
 
+export interface Parsed {
+  answers: Answer[]
+  /** сколько записей выброшено как повреждённые: про это ОБЯЗАТЕЛЬНО сказать */
+  dropped: number
+}
+
 /** Разбор файла. Бросает с человеческим текстом: это видно в интерфейсе. */
-export function parse(text: string): Answer[] {
+export function parse(text: string): Parsed {
   let dump: unknown
   try {
     dump = JSON.parse(text)
@@ -69,11 +75,14 @@ export function parse(text: string): Answer[] {
       typeof a.given === 'string',
   )
   if (!ok.length) throw new Error('в файле нет ответов')
-  return ok.sort((a, b) => a.t - b.t)
+  // ⚠ Выброшенные записи нельзя замалчивать: загрузка ЗАМЕНЯЕТ журнал целиком,
+  // и «Прогресс загружен» после файла, где половина записей побита, — это молчаливая
+  // потеря. Решает человек, но знать он должен до того, как закроет экран.
+  return { answers: ok.sort((a, b) => a.t - b.t), dropped: d.answers.length - ok.length }
 }
 
-export async function upload(file: File): Promise<Answer[]> {
-  const answers = parse(await file.text())
-  await replaceAnswers(answers)
-  return answers
+export async function upload(file: File): Promise<Parsed> {
+  const parsed = parse(await file.text())
+  await replaceAnswers(parsed.answers)
+  return parsed
 }

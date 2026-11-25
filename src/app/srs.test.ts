@@ -63,7 +63,7 @@ describe('перенос прогресса', () => {
       saved: '2026-11-24',
       answers: [a({ ok: 1, t: T0 + 5 }), a({ ok: 0 })],
     }
-    const got = parse(JSON.stringify(dump))
+    const got = parse(JSON.stringify(dump)).answers
     expect(got.map((x) => x.t)).toEqual([T0, T0 + 5])
   })
 

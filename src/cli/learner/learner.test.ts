@@ -77,7 +77,7 @@ describe('симулятор ученика', () => {
     const r = run(p, 7, 5)
     const today = Date.UTC(2026, 10, 25, 13, 7)
     const d = dayDump(r.answers, 7, today)
-    const got = parse(JSON.stringify(d))
+    const got = parse(JSON.stringify(d)).answers
     const shift = (got[0]?.t ?? 0) - (r.answers[0]?.t ?? 0)
     expect(shift % DAY).toBe(0)
     expect(Math.max(...got.map((a) => a.t))).toBeLessThan(today)

@@ -231,14 +231,17 @@ export function comparative(a: Adj): string {
 export function superlative(a: Adj): string {
   if (a.sup) return a.sup
   const w = a.w
-  // -e- вставляется после t, d, шипящих и после гласной с -h: am frühesten.
+  // -e- вставляется после t, d, шипящих, после дифтонга и после гласной с -h: am frühesten.
   // ⚠ Именно ГЛАСНАЯ с h: pünktlich тоже кончается на h, но даёт am pünktlichsten.
   // ⚠ Причастия на -end -e- НЕ получают: am anstrengendsten, не «anstrengendesten».
   // Правило «после t и d» слишком широкое, и это давало «am ansteckendesten»
-  // ⚠ -isch — исключение среди шипящих: am typischsten, am stürmischsten,
-  // но am hübschesten. Поэтому sch проверяется отдельно, без -isch.
-  const sch = w.endsWith('sch') && !w.endsWith('isch')
+  // ⚠ -isch — исключение среди шипящих: am typischsten, am stürmischsten, но am hübschesten.
+  // Исключение МНОГОСЛОЖНОЕ: односложное frisch ведёт себя как hübsch — am frischesten.
+  // ⚠ Ударный дифтонг на конце требует -e-: am neuesten, am genauesten, am blauesten,
+  // am barrierefreiesten. Без него выходило «am neusten» — форма принятая, но не словарная.
+  const sch = w.endsWith('sch') && !(w.endsWith('isch') && syllables(w) > 1)
   const esten =
-    !w.endsWith('end') && (sch || endsAny(w, ['t', 'd', 's', 'ß', 'z']) || /[aeiouäöü]h$/.test(w))
+    !w.endsWith('end') &&
+    (sch || endsAny(w, ['t', 'd', 's', 'ß', 'z']) || /(au|eu|äu|ei|ai|oi|[aeiouäöü]h)$/.test(w))
   return esten ? `am ${w}esten` : `am ${w}sten`
 }

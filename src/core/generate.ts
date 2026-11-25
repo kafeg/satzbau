@@ -313,6 +313,19 @@ function otherForms(t: Template, slot: Fixed, w: Word): string[] | null {
   // спрягаемая часть отделяемого: приставка уехала в конец фразы, в пропуске её нет
   if (p === 'verb_stem')
     return presentForms(w.entry as Verb, person).map((f) => f.split(' ')[0] as string)
+  if (p === 'participle') {
+    const v = w.entry as Verb
+    return v.ppa ? [v.pp, ...v.ppa] : null
+  }
+  if (p === 'adj_comparative') return (w.entry as Adj).cmps ?? null
+  if (p === 'adj_superlative') return (w.entry as Adj).sups ?? null
+  // ⚠ Дательное множественное считается от показанной формы (`dativePl`), и у второго
+  // множественного оно своё: «Saunen → Saunen», но «Saunas → Saunas». Поэтому варианты
+  // отдаём только там, где в рамке стоит само множественное.
+  if (p === 'noun_plural' && slot.case !== 'dat') {
+    const n = w.entry as Noun
+    return n.pla ? [n.pl as string, ...n.pla] : null
+  }
   return null
 }
 
