@@ -1,0 +1,100 @@
+- id: n:Quader
+  lemma: Quader
+  gender: [m]
+  plural: [Quader]
+  gen_sg: [Quaders]
+  ru: прямоугольный параллелепипед
+  en: rectangular cuboid, cuboid
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quadrat
+  lemma: Quadrat
+  sense: квадрат
+  gender: [n]
+  plural: [Quadrate]
+  gen_sg: [Quadrats, Quadrates]
+  ru: квадрат
+  en: square
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quadrat:2
+  lemma: Quadrat
+  sense: квадрат
+  gender: [m]
+  plural: [Quadraten]
+  gen_sg: [Quadrats, Quadrates]
+  ru: квадрат
+  en: quad, quadrat
+  freq: 13000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quadratmeter
+  lemma: Quadratmeter
+  gender: [m, n]
+  plural: [Quadratmeter]
+  gen_sg: [Quadratmeters]
+  ru: квадратный метр
+  en: square metre, square meter
+  freq: 15000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quark
+  lemma: Quark
+  sense: творог
+  gender: [m]
+  plural: []
+  gen_sg: [Quarks, Quarkes]
+  ru: творог
+  en: quark, cottage cheese
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quark:2
+  lemma: Quark
+  sense: кварк
+  gender: [n]
+  plural: [Quarks]
+  gen_sg: [Quarks]
+  ru: кварк
+  en: quark
+  freq: 9000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quelle
+  lemma: Quelle
+  gender: [f]
+  plural: [Quellen]
+  gen_sg: [Quelle]
+  ru: источник, родник
+  en: spring
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Quittung
+  lemma: Quittung
+  gender: [f]
+  plural: [Quittungen]
+  gen_sg: [Quittung]
+  ru: квитанция
+  en: receipt
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}

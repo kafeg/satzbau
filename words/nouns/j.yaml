@@ -1,0 +1,170 @@
+- id: n:Jacke
+  lemma: Jacke
+  gender: [f]
+  plural: [Jacken]
+  gen_sg: [Jacke]
+  ru: куртка, кофта, кофточка
+  en: jacket, coat
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jahr
+  lemma: Jahr
+  gender: [n]
+  plural: [Jahre]
+  gen_sg: [Jahrs, Jahres]
+  ru: год
+  en: year
+  freq: 200
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jahreszeit
+  lemma: Jahreszeit
+  gender: [f]
+  plural: [Jahreszeiten]
+  gen_sg: [Jahreszeit]
+  ru: время года
+  en: season
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jeans
+  lemma: Jeans
+  sense: джинсы
+  gender: [f]
+  plural: [Jeans]
+  gen_sg: [Jeans]
+  ru: джинсы
+  en: jeans
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jeans:2
+  lemma: Jeans
+  sense: джинсы
+  gender: [n]
+  plural: []
+  gen_sg: [Jeans]
+  ru: джинсы
+  en: denim trousers
+  freq: 5000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Joghurt
+  lemma: Joghurt
+  gender: [m, f, n]
+  plural: [Joghurts]
+  gen_sg: [Joghurts, Joghurt]
+  ru: йогурт
+  en: yogurt, yoghurt
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Journalist
+  lemma: Journalist
+  gender: [m]
+  plural: [Journalisten]
+  gen_sg: [Journalisten]
+  ru: журналист
+  en: journalist, magaziner
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jubiläum
+  lemma: Jubiläum
+  gender: [n]
+  plural: [Jubiläen]
+  gen_sg: [Jubiläums]
+  ru: юбилей
+  en: anniversary, jubilee
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jugend
+  lemma: Jugend
+  gender: [f]
+  plural: []
+  gen_sg: [Jugend]
+  ru: молодость
+  en: youth, adolescence
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jugendamt
+  lemma: Jugendamt
+  gender: [n]
+  plural: [Jugendämter]
+  gen_sg: [Jugendamtes, Jugendamts]
+  ru: null
+  en: child protective services
+  freq: 11000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jugendherberge
+  lemma: Jugendherberge
+  gender: [f]
+  plural: [Jugendherbergen]
+  gen_sg: [Jugendherberge]
+  ru: молодёжная турбаза, хостел
+  en: youth hostel
+  freq: 36000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Junge
+  lemma: Junge
+  gender: [m]
+  plural: [Jungen, Jungs, Jungens]
+  gen_sg: [Jungen]
+  ru: мальчик
+  en: boy
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Jurist
+  lemma: Jurist
+  gender: [m]
+  plural: [Juristen]
+  gen_sg: [Juristen]
+  ru: юрист
+  en: jurist, lawyer
+  freq: 22000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Justiz
+  lemma: Justiz
+  gender: [f]
+  plural: []
+  gen_sg: [Justiz]
+  ru: правосудие
+  en: justice
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}

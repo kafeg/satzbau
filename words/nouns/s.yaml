@@ -1,0 +1,3163 @@
+- id: n:S-Bahn
+  lemma: S-Bahn
+  gender: [f]
+  plural: [S-Bahnen]
+  gen_sg: [S-Bahn]
+  ru: городская электричка
+  en: commuter railway, suburban railway
+  freq: 44000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sachbearbeiter
+  lemma: Sachbearbeiter
+  gender: [m]
+  plural: [Sachbearbeiter]
+  gen_sg: [Sachbearbeiters]
+  ru: исполнитель, консультант
+  en: case worker, official in charge
+  freq: 40000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sachbearbeiterin
+  lemma: Sachbearbeiterin
+  gender: [f]
+  plural: [Sachbearbeiterinnen]
+  gen_sg: [Sachbearbeiterin]
+  ru: null
+  en: null
+  freq: 41000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sachbeschädigung
+  lemma: Sachbeschädigung
+  gender: [f]
+  plural: [Sachbeschädigungen]
+  gen_sg: [Sachbeschädigung]
+  ru: повреждение  чужого имущества
+  en: property damage, vandalism
+  freq: 33000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sachlage
+  lemma: Sachlage
+  gender: [f]
+  plural: [Sachlagen]
+  gen_sg: [Sachlage]
+  ru: положение вещей, положение дела, ситуация
+  en: situation, circumstance
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sachstand
+  lemma: Sachstand
+  gender: [m]
+  plural: [Sachstände]
+  gen_sg: [Sachstands, Sachstandes]
+  ru: положение дел
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Saft
+  lemma: Saft
+  gender: [m]
+  plural: [Säfte]
+  gen_sg: [Saftes, Safts]
+  ru: сок
+  en: juice
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Salat
+  lemma: Salat
+  gender: [m]
+  plural: [Salate]
+  gen_sg: [Salats, Salates]
+  ru: салат
+  en: lettuce
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Salbe
+  lemma: Salbe
+  gender: [f]
+  plural: [Salben]
+  gen_sg: [Salbe]
+  ru: мазь
+  en: salve, ointment
+  freq: 21000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Salz
+  lemma: Salz
+  gender: [n]
+  plural: [Salze]
+  gen_sg: [Salzes]
+  ru: соль
+  en: salt
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sammlung
+  lemma: Sammlung
+  gender: [f]
+  plural: [Sammlungen]
+  gen_sg: [Sammlung]
+  ru: коллекция
+  en: collection
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Samstag
+  lemma: Samstag
+  gender: [m]
+  plural: [Samstage]
+  gen_sg: [Samstags, Samstages]
+  ru: суббота
+  en: Saturday
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sand
+  lemma: Sand
+  gender: [m]
+  plural: [Sande, Sände]
+  gen_sg: [Sands, Sandes]
+  ru: песок
+  en: sand
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sandale
+  lemma: Sandale
+  gender: [f]
+  plural: [Sandalen]
+  gen_sg: [Sandale]
+  ru: сандалия
+  en: sandal
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sanitäter
+  lemma: Sanitäter
+  gender: [m]
+  plural: [Sanitäter]
+  gen_sg: [Sanitäters]
+  ru: мед. санитар
+  en: paramedic
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Satz
+  lemma: Satz
+  gender: [m]
+  plural: [Sätze]
+  gen_sg: [Satzes]
+  ru: предложение
+  en: sentence, period
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sauna
+  lemma: Sauna
+  gender: [f]
+  plural: [Saunen, Saunas]
+  gen_sg: [Sauna]
+  ru: сауна
+  en: sauna
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Scanner
+  lemma: Scanner
+  gender: [m]
+  plural: [Scanner]
+  gen_sg: [Scanners]
+  ru: сканер
+  en: scanner
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schach
+  lemma: Schach
+  gender: [n]
+  plural: [Schachs]
+  gen_sg: [Schachs, Schaches]
+  ru: шахматы
+  en: chess
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schaden
+  lemma: Schaden
+  gender: [m]
+  plural: [Schäden]
+  gen_sg: [Schadens]
+  ru: вред, повреждение, ущерб
+  en: damage, harm
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schadensersatz
+  lemma: Schadensersatz
+  gender: [m]
+  plural: []
+  gen_sg: [Schadensersatzes]
+  ru: возмещение ущерба
+  en: indemnification, restitution of damage
+  freq: 25000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schaf
+  lemma: Schaf
+  gender: [n]
+  plural: [Schafe]
+  gen_sg: [Schafes, Schafs]
+  ru: овца
+  en: sheep
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schaffner
+  lemma: Schaffner
+  gender: [m]
+  plural: [Schaffner]
+  gen_sg: [Schaffners]
+  ru: кондуктор
+  en: conductor, guard
+  freq: 25000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schal
+  lemma: Schal
+  gender: [m]
+  plural: [Schals, Schale]
+  gen_sg: [Schals]
+  ru: шарф
+  en: scarf, shawl
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schalter
+  lemma: Schalter
+  gender: [m]
+  plural: [Schalter]
+  gen_sg: [Schalters]
+  ru: выключатель
+  en: switch
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schalterhalle
+  lemma: Schalterhalle
+  gender: [f]
+  plural: [Schalterhallen]
+  gen_sg: [Schalterhalle]
+  ru: кассовый зал
+  en: counter hall
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Scham
+  lemma: Scham
+  gender: [f]
+  plural: []
+  gen_sg: [Scham]
+  ru: стыд
+  en: shame
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schaufenster
+  lemma: Schaufenster
+  gender: [n]
+  plural: [Schaufenster]
+  gen_sg: [Schaufensters]
+  ru: витрина
+  en: shop window
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schaum
+  lemma: Schaum
+  gender: [m]
+  plural: [Schäume]
+  gen_sg: [Schaums, Schaumes]
+  ru: пена
+  en: foam, froth
+  freq: 12000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schauspieler
+  lemma: Schauspieler
+  gender: [m]
+  plural: [Schauspieler]
+  gen_sg: [Schauspielers]
+  ru: актёр, артист
+  en: actor
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schauspielerin
+  lemma: Schauspielerin
+  gender: [f]
+  plural: [Schauspielerinnen]
+  gen_sg: [Schauspielerin]
+  ru: актриса, артистка
+  en: actor, actress
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Scheibe
+  lemma: Scheibe
+  gender: [f]
+  plural: [Scheiben]
+  gen_sg: [Scheibe]
+  ru: ломтик
+  en: disk
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Scheibenwischer
+  lemma: Scheibenwischer
+  gender: [m]
+  plural: [Scheibenwischer]
+  gen_sg: [Scheibenwischers]
+  ru: стеклоочиститель
+  en: windscreen wiper, windshield wiper
+  freq: 30000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schein
+  lemma: Schein
+  gender: [m]
+  plural: [Scheine]
+  gen_sg: [Scheins, Scheines]
+  ru: сияние
+  en: shine, gleam
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Scheinwerfer
+  lemma: Scheinwerfer
+  gender: [m]
+  plural: [Scheinwerfer]
+  gen_sg: [Scheinwerfers]
+  ru: фара
+  en: spotlight
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schere
+  lemma: Schere
+  gender: [f]
+  plural: [Scheren]
+  gen_sg: [Schere]
+  ru: ножницы
+  en: scissors
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schiedsrichter
+  lemma: Schiedsrichter
+  gender: [m]
+  plural: [Schiedsrichter]
+  gen_sg: [Schiedsrichters]
+  ru: судья, арбитр
+  en: referee, umpire
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schiff
+  lemma: Schiff
+  gender: [n]
+  plural: [Schiffe]
+  gen_sg: [Schiffs, Schiffes]
+  ru: корабль
+  en: ship, boat
+  freq: 1000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schildkröte
+  lemma: Schildkröte
+  gender: [f]
+  plural: [Schildkröten]
+  gen_sg: [Schildkröte]
+  ru: черепаха
+  en: tortoise turtle
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schimmel
+  lemma: Schimmel
+  sense: плесень
+  gender: [m]
+  plural: [Schimmel]
+  gen_sg: [Schimmels]
+  ru: плесень
+  en: white horse, gray horse
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schimmel:2
+  lemma: Schimmel
+  sense: плесень
+  gender: [m]
+  plural: []
+  gen_sg: [Schimmels]
+  ru: плесень
+  en: mould mold
+  freq: 5000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schinken
+  lemma: Schinken
+  gender: [m]
+  plural: [Schinken]
+  gen_sg: [Schinkens]
+  ru: ветчина
+  en: ham
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlafanzug
+  lemma: Schlafanzug
+  gender: [m]
+  plural: [Schlafanzüge]
+  gen_sg: [Schlafanzuges, Schlafanzugs]
+  ru: пижама
+  en: pyjamas, nightgown
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlafzimmer
+  lemma: Schlafzimmer
+  gender: [n]
+  plural: [Schlafzimmer]
+  gen_sg: [Schlafzimmers]
+  ru: спальня
+  en: bedroom
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlaganfall
+  lemma: Schlaganfall
+  gender: [m]
+  plural: [Schlaganfälle]
+  gen_sg: [Schlaganfalles, Schlaganfalls]
+  ru: мед. инсульт, апоплексия
+  en: stroke
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlagzeile
+  lemma: Schlagzeile
+  gender: [f]
+  plural: [Schlagzeilen]
+  gen_sg: [Schlagzeile]
+  ru: крупный заголовок
+  en: headline
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlagzeug
+  lemma: Schlagzeug
+  gender: [n]
+  plural: [Schlagzeuge]
+  gen_sg: [Schlagzeugs, Schlagzeuges]
+  ru: ударная установка
+  en: drum kit, drum set
+  freq: 15000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlagzeuger
+  lemma: Schlagzeuger
+  gender: [m]
+  plural: [Schlagzeuger]
+  gen_sg: [Schlagzeugers]
+  ru: барабанщик, ударник
+  en: drummer
+  freq: 33000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlange
+  lemma: Schlange
+  gender: [f]
+  plural: [Schlangen]
+  gen_sg: [Schlange]
+  ru: очередь, змея
+  en: snake, serpent
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schleifpapier
+  lemma: Schleifpapier
+  gender: [n]
+  plural: [Schleifpapiere]
+  gen_sg: [Schleifpapieres, Schleifpapiers]
+  ru: наждачная_бумага
+  en: abrasive paper
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlichtung
+  lemma: Schlichtung
+  gender: [f]
+  plural: [Schlichtungen]
+  gen_sg: [Schlichtung]
+  ru: null
+  en: mediation, arbitration
+  freq: 49000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlittschuh
+  lemma: Schlittschuh
+  gender: [m]
+  plural: [Schlittschuhe]
+  gen_sg: [Schlittschuhes, Schlittschuhs]
+  ru: конёк
+  en: ice skate
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schloss
+  lemma: Schloss
+  gender: [n]
+  plural: [Schlösser]
+  gen_sg: [Schlosses]
+  ru: замок
+  en: lock, bolt
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlosser
+  lemma: Schlosser
+  gender: [m]
+  plural: [Schlosser]
+  gen_sg: [Schlossers]
+  ru: слесарь
+  en: fitter, locksmith
+  freq: 43000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlussfolgerung
+  lemma: Schlussfolgerung
+  gender: [f]
+  plural: [Schlussfolgerungen]
+  gen_sg: [Schlussfolgerung]
+  ru: вывод
+  en: conclusion, implication
+  freq: 11000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schlüssel
+  lemma: Schlüssel
+  gender: [m]
+  plural: [Schlüssel]
+  gen_sg: [Schlüssels]
+  ru: ключ
+  en: key
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schmerz
+  lemma: Schmerz
+  gender: [m]
+  plural: [Schmerzen]
+  gen_sg: [Schmerzes]
+  ru: боль
+  en: ache, pain
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schminke
+  lemma: Schminke
+  gender: [f]
+  plural: [Schminken]
+  gen_sg: [Schminke]
+  ru: макияж
+  en: make-up, makeup
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnee
+  lemma: Schnee
+  gender: [m]
+  plural: []
+  gen_sg: [Schnees]
+  ru: снег
+  en: snow
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnittstelle
+  lemma: Schnittstelle
+  gender: [f]
+  plural: [Schnittstellen]
+  gen_sg: [Schnittstelle]
+  ru: информ. интерфейс
+  en: interface
+  freq: 30000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnuller
+  lemma: Schnuller
+  gender: [m]
+  plural: [Schnuller]
+  gen_sg: [Schnullers]
+  ru: соска, пустышка
+  en: dummy, pacifier
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnupfen
+  lemma: Schnupfen
+  sense: нюханье
+  gender: [n]
+  plural: []
+  gen_sg: [Schnupfens]
+  ru: нюханье
+  en: nasal congestion
+  freq: 12000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnupfen:2
+  lemma: Schnupfen
+  sense: насморк
+  gender: [m]
+  plural: [Schnupfen]
+  gen_sg: [Schnupfens]
+  ru: насморк
+  en: coryza, sniffles
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnur
+  lemma: Schnur
+  sense: верёвка
+  gender: [f]
+  plural: [Schnüre]
+  gen_sg: [Schnur]
+  ru: верёвка
+  en: string, cord
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnur:2
+  lemma: Schnur
+  sense: верёвка
+  gender: [f]
+  plural: [Schnuren]
+  gen_sg: [Schnur]
+  ru: верёвка, бечёвка
+  en: daughter-in-law
+  freq: 10000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schnurrbart
+  lemma: Schnurrbart
+  gender: [m]
+  plural: [Schnurrbärte]
+  gen_sg: [Schnurrbartes, Schnurrbarts]
+  ru: усы
+  en: moustache
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schokolade
+  lemma: Schokolade
+  gender: [f]
+  plural: [Schokoladen]
+  gen_sg: [Schokolade]
+  ru: шоколад
+  en: chocolate
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schrank
+  lemma: Schrank
+  gender: [m]
+  plural: [Schränke]
+  gen_sg: [Schranks, Schrankes]
+  ru: шкаф
+  en: cabinet, cupboard
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schraube
+  lemma: Schraube
+  gender: [f]
+  plural: [Schrauben]
+  gen_sg: [Schraube]
+  ru: винт, болт
+  en: screw, bolt
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schraubendreher
+  lemma: Schraubendreher
+  gender: [m]
+  plural: [Schraubendreher]
+  gen_sg: [Schraubendrehers]
+  ru: отвёртка
+  en: screwdriver
+  freq: 45000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schraubenmutter
+  lemma: Schraubenmutter
+  gender: [f]
+  plural: [Schraubenmuttern]
+  gen_sg: [Schraubenmutter]
+  ru: техн. гайка
+  en: nut, female screw
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schraubenschlüssel
+  lemma: Schraubenschlüssel
+  gender: [m]
+  plural: [Schraubenschlüssel]
+  gen_sg: [Schraubenschlüssels]
+  ru: гаечный ключ
+  en: wrench, spanner
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schraubenzieher
+  lemma: Schraubenzieher
+  gender: [m]
+  plural: [Schraubenzieher]
+  gen_sg: [Schraubenziehers]
+  ru: отвёртка
+  en: screwdriver
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schreck
+  lemma: Schreck
+  gender: [m]
+  plural: [Schrecke]
+  gen_sg: [Schrecks, Schreckes]
+  ru: испуг
+  en: fright, scare
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schreibtisch
+  lemma: Schreibtisch
+  gender: [m]
+  plural: [Schreibtische]
+  gen_sg: [Schreibtisches, Schreibtischs]
+  ru: письменный стол
+  en: desk, writing desk
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schriftsteller
+  lemma: Schriftsteller
+  gender: [m]
+  plural: [Schriftsteller]
+  gen_sg: [Schriftstellers]
+  ru: писатель
+  en: writer, author
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schuh
+  lemma: Schuh
+  gender: [m]
+  plural: [Schuhe]
+  gen_sg: [Schuhs, Schuhes]
+  ru: ботинок, туфля
+  en: shoe
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schulbank
+  lemma: Schulbank
+  gender: [f]
+  plural: [Schulbänke]
+  gen_sg: [Schulbank]
+  ru: школьная скамья
+  en: school desk
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schulbus
+  lemma: Schulbus
+  gender: [m]
+  plural: [Schulbusse]
+  gen_sg: [Schulbusses]
+  ru: школьный автобус
+  en: school bus
+  freq: 19000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schuld
+  lemma: Schuld
+  gender: [f]
+  plural: [Schulden]
+  gen_sg: [Schuld]
+  ru: вина
+  en: guilt
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schulden
+  lemma: Schulden
+  gender: [f]
+  plural: [Schulden]
+  gen_sg: []
+  ru: null
+  en: debt, debts
+  freq: 700
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schule
+  lemma: Schule
+  gender: [f]
+  plural: [Schulen]
+  gen_sg: [Schule]
+  ru: школа
+  en: school
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schulter
+  lemma: Schulter
+  gender: [f]
+  plural: [Schultern]
+  gen_sg: [Schulter]
+  ru: плечо
+  en: shoulder
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schutzbrille
+  lemma: Schutzbrille
+  gender: [f]
+  plural: [Schutzbrillen]
+  gen_sg: [Schutzbrille]
+  ru: защитные очки
+  en: goggles
+  freq: 28000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schutzhelm
+  lemma: Schutzhelm
+  gender: [m]
+  plural: [Schutzhelme]
+  gen_sg: [Schutzhelmes, Schutzhelms]
+  ru: защитный шлем
+  en: hard hat
+  freq: 50000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schutzraum
+  lemma: Schutzraum
+  gender: [m]
+  plural: [Schutzräume]
+  gen_sg: [Schutzraumes, Schutzraums]
+  ru: убежище
+  en: shelter
+  freq: 21000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schwanz
+  lemma: Schwanz
+  gender: [m]
+  plural: [Schwänze]
+  gen_sg: [Schwanzes]
+  ru: хвост
+  en: tail, pecker
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schwein
+  lemma: Schwein
+  gender: [n]
+  plural: [Schweine]
+  gen_sg: [Schweins, Schweines]
+  ru: свинья
+  en: pig, swine
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schweiz
+  lemma: Schweiz
+  gender: [f]
+  plural: [Schweizen]
+  gen_sg: [Schweiz]
+  ru: Швейцария
+  en: Switzerland
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schweiß
+  lemma: Schweiß
+  gender: [m]
+  plural: [Schweiße]
+  gen_sg: [Schweißes]
+  ru: пот, испарина
+  en: sweat
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schwester
+  lemma: Schwester
+  gender: [f]
+  plural: [Schwestern]
+  gen_sg: [Schwester]
+  ru: сестра
+  en: sister, sis
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schwiegermutter
+  lemma: Schwiegermutter
+  gender: [f]
+  plural: [Schwiegermütter]
+  gen_sg: [Schwiegermutter]
+  ru: тёща, свекровь
+  en: mother-in-law
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schwiegervater
+  lemma: Schwiegervater
+  gender: [m]
+  plural: [Schwiegerväter]
+  gen_sg: [Schwiegervaters]
+  ru: тесть, свёкор
+  en: father-in-law
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schwimmbad
+  lemma: Schwimmbad
+  gender: [n]
+  plural: [Schwimmbäder]
+  gen_sg: [Schwimmbades, Schwimmbads]
+  ru: бассейн
+  en: swimming bath, pool
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schüler
+  lemma: Schüler
+  gender: [m]
+  plural: [Schüler]
+  gen_sg: [Schülers]
+  ru: ученик
+  en: pupil, student
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Schülerin
+  lemma: Schülerin
+  gender: [f]
+  plural: [Schülerinnen]
+  gen_sg: [Schülerin]
+  ru: ученица
+  en: schoolgirl, pupil
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:See
+  lemma: See
+  sense: озеро
+  gender: [m]
+  plural: [Seen]
+  gen_sg: [Sees]
+  ru: озеро
+  en: lake
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:See:2
+  lemma: See
+  sense: море
+  gender: [f]
+  plural: [Seen]
+  gen_sg: [See]
+  ru: море
+  en: sea
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sehenswürdigkeit
+  lemma: Sehenswürdigkeit
+  gender: [f]
+  plural: [Sehenswürdigkeiten]
+  gen_sg: [Sehenswürdigkeit]
+  ru: достопримечательность
+  en: tourist attraction, sight
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sehnsucht
+  lemma: Sehnsucht
+  gender: [f]
+  plural: [Sehnsüchte]
+  gen_sg: [Sehnsucht]
+  ru: тоска, страстное желание
+  en: longing, yearning
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Seife
+  lemma: Seife
+  gender: [f]
+  plural: [Seifen]
+  gen_sg: [Seife]
+  ru: мыло
+  en: soap
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Seite
+  lemma: Seite
+  gender: [f]
+  plural: [Seiten]
+  gen_sg: [Seite]
+  ru: страница
+  en: side
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sekretär
+  lemma: Sekretär
+  gender: [m]
+  plural: [Sekretäre]
+  gen_sg: [Sekretärs]
+  ru: секретарь
+  en: secretary
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sekt
+  lemma: Sekt
+  gender: [m]
+  plural: [Sekte]
+  gen_sg: [Sektes, Sekts]
+  ru: шампанское
+  en: sparkling wine
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Semester
+  lemma: Semester
+  gender: [n]
+  plural: [Semester]
+  gen_sg: [Semesters]
+  ru: семестр, учебное полугодие
+  en: semester
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Seminar
+  lemma: Seminar
+  gender: [n]
+  plural: [Seminare, Seminarien]
+  gen_sg: [Seminars, Seminares]
+  ru: семинар
+  en: seminar
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sendung
+  lemma: Sendung
+  gender: [f]
+  plural: [Sendungen]
+  gen_sg: [Sendung]
+  ru: передача
+  en: broadcasting
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sendungsverfolgung
+  lemma: Sendungsverfolgung
+  gender: [f]
+  plural: [Sendungsverfolgungen]
+  gen_sg: [Sendungsverfolgung]
+  ru: null
+  en: track and trace
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Senf
+  lemma: Senf
+  gender: [m]
+  plural: [Senfe]
+  gen_sg: [Senfs, Senfes]
+  ru: горчица
+  en: mustard
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Serie
+  lemma: Serie
+  gender: [f]
+  plural: [Serien]
+  gen_sg: [Serie]
+  ru: серия
+  en: series
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Server
+  lemma: Server
+  gender: [m]
+  plural: [Server]
+  gen_sg: [Servers]
+  ru: сервер
+  en: server
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Shampoo
+  lemma: Shampoo
+  gender: [n]
+  plural: [Shampoos]
+  gen_sg: [Shampoos]
+  ru: шампунь
+  en: shampoo
+  freq: 18000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Shorts
+  lemma: Shorts
+  gender: []
+  plural: [Shorts]
+  gen_sg: []
+  number: pl
+  ru: null
+  en: shorts
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sicherheitsgurt
+  lemma: Sicherheitsgurt
+  gender: [m]
+  plural: [Sicherheitsgurte]
+  gen_sg: [Sicherheitsgurtes, Sicherheitsgurts]
+  ru: ремень безопасности
+  en: seat belt, safety belt
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sicherung
+  lemma: Sicherung
+  gender: [f]
+  plural: [Sicherungen]
+  gen_sg: [Sicherung]
+  ru: обеспечение, гарантия
+  en: fuse
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sichtweise
+  lemma: Sichtweise
+  gender: [f]
+  plural: [Sichtweisen]
+  gen_sg: [Sichtweise]
+  ru: взгляд
+  en: standpoint
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sieg
+  lemma: Sieg
+  gender: [m]
+  plural: [Siege]
+  gen_sg: [Siegs, Sieges]
+  ru: победа
+  en: victory
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Silikon
+  lemma: Silikon
+  gender: [n]
+  plural: [Silikone]
+  gen_sg: [Silikons]
+  ru: силикон
+  en: silicone
+  freq: 27000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Silvester
+  lemma: Silvester
+  gender: [m, n]
+  plural: [Silvester]
+  gen_sg: [Silvesters]
+  ru: новогодний вечер, канун Нового года
+  en: New Year's Eve, Hogmanay
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sirene
+  lemma: Sirene
+  gender: [f]
+  plural: [Sirenen]
+  gen_sg: [Sirene]
+  ru: мифол. сирена, морская нимфа
+  en: siren
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ski
+  lemma: Ski
+  gender: [m]
+  plural: [Ski, Skier]
+  gen_sg: [Skis]
+  ru: лыжа
+  en: ski
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Smartphone
+  lemma: Smartphone
+  gender: [n]
+  plural: [Smartphones]
+  gen_sg: [Smartphones]
+  ru: смартфон
+  en: smartphone, smart phone
+  freq: 24000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Socke
+  lemma: Socke
+  gender: [f]
+  plural: [Socken]
+  gen_sg: [Socke]
+  ru: носок
+  en: sock
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sofa
+  lemma: Sofa
+  gender: [n]
+  plural: [Sofas]
+  gen_sg: [Sofas]
+  ru: диван
+  en: sofa, couch
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Software
+  lemma: Software
+  gender: [f]
+  plural: [Softwares]
+  gen_sg: [Software]
+  ru: программное обеспечение, софт
+  en: software
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sohn
+  lemma: Sohn
+  gender: [m]
+  plural: [Söhne]
+  gen_sg: [Sohns, Sohnes]
+  ru: сын
+  en: son
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sommer
+  lemma: Sommer
+  gender: [m]
+  plural: [Sommer]
+  gen_sg: [Sommers]
+  ru: лето
+  en: summer
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sommerreifen
+  lemma: Sommerreifen
+  gender: [m]
+  plural: [Sommerreifen]
+  gen_sg: [Sommerreifens]
+  ru: летняя шина
+  en: summer tyre, summer tire
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sommerzeit
+  lemma: Sommerzeit
+  gender: [f]
+  plural: [Sommerzeiten]
+  gen_sg: [Sommerzeit]
+  ru: летнее время
+  en: summer time
+  freq: 39000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sonnabend
+  lemma: Sonnabend
+  gender: [m]
+  plural: [Sonnabende]
+  gen_sg: [Sonnabends]
+  ru: суббота
+  en: Saturday
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sonne
+  lemma: Sonne
+  gender: [f]
+  plural: [Sonnen]
+  gen_sg: [Sonne]
+  ru: солнце
+  en: sun, Sun
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sonnenbrille
+  lemma: Sonnenbrille
+  gender: [f]
+  plural: [Sonnenbrillen]
+  gen_sg: [Sonnenbrille]
+  ru: солнечные очки
+  en: sunglasses, shades
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sonnencreme
+  lemma: Sonnencreme
+  gender: [f]
+  plural: [Sonnencremes]
+  gen_sg: [Sonnencreme]
+  ru: солнцезащитный крем
+  en: sunblock, sun creme
+  freq: 37000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sonnenschutz
+  lemma: Sonnenschutz
+  gender: [m]
+  plural: [Sonnenschutze]
+  gen_sg: [Sonnenschutzes]
+  ru: защита от солнца
+  en: sunshade
+  freq: 41000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sonntag
+  lemma: Sonntag
+  gender: [m]
+  plural: [Sonntage]
+  gen_sg: [Sonntags, Sonntages]
+  ru: воскресенье
+  en: Sunday
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sorge
+  lemma: Sorge
+  gender: [f]
+  plural: [Sorgen]
+  gen_sg: [Sorge]
+  ru: забота, тревога
+  en: worry, concern
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sorgerecht
+  lemma: Sorgerecht
+  gender: [n]
+  plural: [Sorgerechte]
+  gen_sg: [Sorgerechtes, Sorgerechts]
+  ru: родительские права
+  en: custody
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Souvenir
+  lemma: Souvenir
+  gender: [n]
+  plural: [Souvenirs]
+  gen_sg: [Souvenirs]
+  ru: сувенир
+  en: souvenir
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sozialhilfe
+  lemma: Sozialhilfe
+  gender: [f]
+  plural: []
+  gen_sg: [Sozialhilfe]
+  ru: социальное пособие
+  en: income support, social assistance
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sozialstaat
+  lemma: Sozialstaat
+  gender: [m]
+  plural: [Sozialstaaten]
+  gen_sg: [Sozialstaats, Sozialstaates]
+  ru: социальное государство
+  en: welfare state
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Soße
+  lemma: Soße
+  gender: [f]
+  plural: [Soßen]
+  gen_sg: [Soße]
+  ru: соус
+  en: sauce
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spachtel
+  lemma: Spachtel
+  gender: [m, f]
+  plural: [Spachtel, Spachteln]
+  gen_sg: [Spachtels, Spachtel]
+  ru: шпатель
+  en: putty knife
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spam
+  lemma: Spam
+  gender: [f, m, n]
+  plural: [Spams]
+  gen_sg: [Spams, Spam]
+  ru: спам
+  en: spam
+  freq: 30000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spanne
+  lemma: Spanne
+  gender: [f]
+  plural: [Spannen]
+  gen_sg: [Spanne]
+  ru: null
+  en: span
+  freq: 26000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spannung
+  lemma: Spannung
+  gender: [f]
+  plural: [Spannungen]
+  gen_sg: [Spannung]
+  ru: напряжение
+  en: voltage
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sparbuch
+  lemma: Sparbuch
+  gender: [n]
+  plural: [Sparbücher]
+  gen_sg: [Sparbuchs, Sparbuches]
+  ru: сберкнижка
+  en: bankbook, passbook
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spaziergang
+  lemma: Spaziergang
+  gender: [m]
+  plural: [Spaziergänge]
+  gen_sg: [Spazierganges, Spaziergangs]
+  ru: прогулка
+  en: walk, stroll
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spaß
+  lemma: Spaß
+  gender: [m]
+  plural: [Späße]
+  gen_sg: [Spaßes]
+  ru: удовольствие, потеха
+  en: fun, humour
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Speicher
+  lemma: Speicher
+  gender: [m]
+  plural: [Speicher]
+  gen_sg: [Speichers]
+  ru: склад, хранилище
+  en: storehouse, warehouse
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Speisekarte
+  lemma: Speisekarte
+  gender: [f]
+  plural: [Speisekarten]
+  gen_sg: [Speisekarte]
+  ru: меню
+  en: menu
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spende
+  lemma: Spende
+  gender: [f]
+  plural: [Spenden]
+  gen_sg: [Spende]
+  ru: пожертвование, взнос
+  en: donation
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spezialität
+  lemma: Spezialität
+  gender: [f]
+  plural: [Spezialitäten]
+  gen_sg: [Spezialität]
+  ru: специальность
+  en: specialty
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spiegel
+  lemma: Spiegel
+  gender: [m]
+  plural: [Spiegel]
+  gen_sg: [Spiegels]
+  ru: зеркало
+  en: mirror, looking glass
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spiegelbild
+  lemma: Spiegelbild
+  gender: [n]
+  plural: [Spiegelbilder]
+  gen_sg: [Spiegelbilds, Spiegelbildes]
+  ru: отражение
+  en: mirror image, reflection
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spiel
+  lemma: Spiel
+  gender: [n]
+  plural: [Spiele]
+  gen_sg: [Spiels, Spieles]
+  ru: игра
+  en: play, game
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spieler
+  lemma: Spieler
+  gender: [m]
+  plural: [Spieler]
+  gen_sg: [Spielers]
+  ru: игрок
+  en: player
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielerin
+  lemma: Spielerin
+  gender: [f]
+  plural: [Spielerinnen]
+  gen_sg: [Spielerin]
+  ru: игрок
+  en: player
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielfeld
+  lemma: Spielfeld
+  gender: [n]
+  plural: [Spielfelder]
+  gen_sg: [Spielfeldes, Spielfelds]
+  ru: игровое поле
+  en: field, playing field
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielfilm
+  lemma: Spielfilm
+  gender: [m]
+  plural: [Spielfilme]
+  gen_sg: [Spielfilms, Spielfilmes]
+  ru: художественный фильм, игровой фильм
+  en: feature film
+  freq: 24000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielplatz
+  lemma: Spielplatz
+  gender: [m]
+  plural: [Spielplätze]
+  gen_sg: [Spielplatzes]
+  ru: детская площадка
+  en: playground
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielregel
+  lemma: Spielregel
+  gender: [f]
+  plural: [Spielregeln]
+  gen_sg: [Spielregel]
+  ru: правило игры
+  en: a rule
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielstand
+  lemma: Spielstand
+  gender: [m]
+  plural: [Spielstände]
+  gen_sg: [Spielstandes, Spielstands]
+  ru: спорт. счёт очков
+  en: null
+  freq: 37000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spielzeug
+  lemma: Spielzeug
+  gender: [n]
+  plural: [Spielzeuge]
+  gen_sg: [Spielzeugs, Spielzeuges]
+  ru: игрушка
+  en: toy
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spinne
+  lemma: Spinne
+  gender: [f]
+  plural: [Spinnen]
+  gen_sg: [Spinne]
+  ru: паук
+  en: spider
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sport
+  lemma: Sport
+  gender: [m]
+  plural: [Sporte]
+  gen_sg: [Sports, Sportes]
+  ru: спорт
+  en: sport, sports
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sportart
+  lemma: Sportart
+  gender: [f]
+  plural: [Sportarten]
+  gen_sg: [Sportart]
+  ru: вид спорта
+  en: sport, kind of sport
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sporthalle
+  lemma: Sporthalle
+  gender: [f]
+  plural: [Sporthallen]
+  gen_sg: [Sporthalle]
+  ru: спортзал
+  en: sports hall, gymnasium
+  freq: 19000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sportler
+  lemma: Sportler
+  gender: [m]
+  plural: [Sportler]
+  gen_sg: [Sportlers]
+  ru: спортсмен
+  en: athlete, sportsman
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sportlerin
+  lemma: Sportlerin
+  gender: [f]
+  plural: [Sportlerinnen]
+  gen_sg: [Sportlerin]
+  ru: спортсменка
+  en: athlete
+  freq: 15000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sportplatz
+  lemma: Sportplatz
+  gender: [m]
+  plural: [Sportplätze]
+  gen_sg: [Sportplatzes]
+  ru: спортивная площадка
+  en: sports field, sports ground
+  freq: 27000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sprache
+  lemma: Sprache
+  gender: [f]
+  plural: [Sprachen]
+  gen_sg: [Sprache]
+  ru: язык
+  en: speech, language
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sprachfamilie
+  lemma: Sprachfamilie
+  gender: [f]
+  plural: [Sprachfamilien]
+  gen_sg: [Sprachfamilie]
+  ru: языковая семья
+  en: language family, family of languages
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sprachkurs
+  lemma: Sprachkurs
+  gender: [m]
+  plural: [Sprachkurse]
+  gen_sg: [Sprachkurses]
+  ru: null
+  en: language course
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sprachniveau
+  lemma: Sprachniveau
+  gender: [n]
+  plural: [Sprachniveaus]
+  gen_sg: [Sprachniveaus]
+  ru: языковой уровень
+  en: language level, register
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sprachtest
+  lemma: Sprachtest
+  gender: [m]
+  plural: [Sprachtests, Sprachteste]
+  gen_sg: [Sprachtests, Sprachtestes]
+  ru: null
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sprechstunde
+  lemma: Sprechstunde
+  gender: [f]
+  plural: [Sprechstunden]
+  gen_sg: [Sprechstunde]
+  ru: приёмное время
+  en: consultation hours
+  freq: 19000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spritze
+  lemma: Spritze
+  gender: [f]
+  plural: [Spritzen]
+  gen_sg: [Spritze]
+  ru: укол, шприц
+  en: syringe
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Spülung
+  lemma: Spülung
+  gender: [f]
+  plural: [Spülungen]
+  gen_sg: [Spülung]
+  ru: полоскание, промывка
+  en: flushing
+  freq: 21000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staat
+  lemma: Staat
+  gender: [m]
+  plural: [Staaten, Stäte, Staat, Staate]
+  gen_sg: [Staats, Staates]
+  ru: государство
+  en: state
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsangehörigkeit
+  lemma: Staatsangehörigkeit
+  gender: [f]
+  plural: [Staatsangehörigkeiten]
+  gen_sg: [Staatsangehörigkeit]
+  ru: гражданство
+  en: citizenship, nationality
+  freq: 46000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsanwalt
+  lemma: Staatsanwalt
+  gender: [m]
+  plural: [Staatsanwälte]
+  gen_sg: [Staatsanwaltes, Staatsanwalts]
+  ru: прокурор
+  en: public prosecutor, district attorney
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsbürger
+  lemma: Staatsbürger
+  gender: [m]
+  plural: [Staatsbürger]
+  gen_sg: [Staatsbürgers]
+  ru: гражданин
+  en: citizen, national
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsbürgerschaft
+  lemma: Staatsbürgerschaft
+  gender: [f]
+  plural: [Staatsbürgerschaften]
+  gen_sg: [Staatsbürgerschaft]
+  ru: гражданство, подданство
+  en: citizenship
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsform
+  lemma: Staatsform
+  gender: [f]
+  plural: [Staatsformen]
+  gen_sg: [Staatsform]
+  ru: форма государственного правления
+  en: form of state
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsgebiet
+  lemma: Staatsgebiet
+  gender: [n]
+  plural: [Staatsgebiete]
+  gen_sg: [Staatsgebietes, Staatsgebiets]
+  ru: территория государства
+  en: national territory
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatshaushalt
+  lemma: Staatshaushalt
+  gender: [m]
+  plural: [Staatshaushalte]
+  gen_sg: [Staatshaushaltes, Staatshaushalts]
+  ru: государственный бюджет
+  en: national budget
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staatsoberhaupt
+  lemma: Staatsoberhaupt
+  gender: [n]
+  plural: [Staatsoberhäupter]
+  gen_sg: [Staatsoberhaupts, Staatsoberhauptes]
+  ru: глава государства
+  en: head of State, chief of State
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stadion
+  lemma: Stadion
+  gender: [n]
+  plural: [Stadien]
+  gen_sg: [Stadions]
+  ru: стадион
+  en: stadium
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stadt
+  lemma: Stadt
+  gender: [f]
+  plural: [Städte]
+  gen_sg: [Stadt]
+  ru: город
+  en: city, town
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stadtführung
+  lemma: Stadtführung
+  gender: [f]
+  plural: [Stadtführungen]
+  gen_sg: [Stadtführung]
+  ru: экскурсия по городу
+  en: city tour
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stadtplan
+  lemma: Stadtplan
+  gender: [m]
+  plural: [Stadtpläne]
+  gen_sg: [Stadtplans, Stadtplanes]
+  ru: план города
+  en: city map
+  freq: 29000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stadtstaat
+  lemma: Stadtstaat
+  gender: [m]
+  plural: [Stadtstaaten]
+  gen_sg: [Stadtstaates, Stadtstaats]
+  ru: город-государство
+  en: city state
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stadtteil
+  lemma: Stadtteil
+  gender: [m]
+  plural: [Stadtteile]
+  gen_sg: [Stadtteils, Stadtteiles]
+  ru: городской район, часть города
+  en: quarter
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staffel
+  lemma: Staffel
+  sense: сезон
+  gender: [f]
+  plural: [Staffeln]
+  gen_sg: [Staffel]
+  ru: сезон
+  en: squadron
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Staffel:2
+  lemma: Staffel
+  sense: ступень
+  gender: [f, m]
+  plural: [Staffeln]
+  gen_sg: [Staffel]
+  ru: ступень, уступ
+  en: season
+  freq: 7000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Standesamt
+  lemma: Standesamt
+  gender: [n]
+  plural: [Standesämter]
+  gen_sg: [Standesamts, Standesamtes]
+  ru: загс
+  en: civil registry office
+  freq: 21000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Standpunkt
+  lemma: Standpunkt
+  gender: [m]
+  plural: [Standpunkte]
+  gen_sg: [Standpunktes, Standpunkts]
+  ru: точка зрения
+  en: standpoint
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Station
+  lemma: Station
+  gender: [f]
+  plural: [Stationen]
+  gen_sg: [Station]
+  ru: станция
+  en: station
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stau
+  lemma: Stau
+  gender: [m]
+  plural: [Staus, Staue]
+  gen_sg: [Staus, Staues]
+  ru: пробка
+  en: congestion
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Steckdose
+  lemma: Steckdose
+  gender: [f]
+  plural: [Steckdosen]
+  gen_sg: [Steckdose]
+  ru: электрическая розетка, электророзетка
+  en: socket, electrical outlet
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stecker
+  lemma: Stecker
+  gender: [m]
+  plural: [Stecker]
+  gen_sg: [Steckers]
+  ru: штепсель, штепсельная вилка
+  en: plug, male connector
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Steigerung
+  lemma: Steigerung
+  gender: [f]
+  plural: [Steigerungen]
+  gen_sg: [Steigerung]
+  ru: увеличение, повышение
+  en: increase
+  freq: 25000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stein
+  lemma: Stein
+  gender: [m]
+  plural: [Steine]
+  gen_sg: [Steins, Steines]
+  ru: камень
+  en: stone, rock
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stelle
+  lemma: Stelle
+  gender: [f]
+  plural: [Stellen]
+  gen_sg: [Stelle]
+  ru: должность, рабочее место
+  en: job
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stellungnahme
+  lemma: Stellungnahme
+  gender: [f]
+  plural: [Stellungnahmen]
+  gen_sg: [Stellungnahme]
+  ru: оценка, точка зрения
+  en: statement, opinion
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stempel
+  lemma: Stempel
+  gender: [m]
+  plural: [Stempel]
+  gen_sg: [Stempels]
+  ru: печать, штамп
+  en: rubber stamp, stamp
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stern
+  lemma: Stern
+  sense: звезда
+  gender: [m]
+  plural: [Sterne]
+  gen_sg: [Sterns, Sternes]
+  ru: звезда
+  en: star
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stern:2
+  lemma: Stern
+  sense: астрон. звезда
+  gender: [m]
+  plural: [Sterne]
+  gen_sg: [Sterns, Sternes]
+  ru: астрон. звезда, разг. звезда
+  en: asterisk
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Steuer
+  lemma: Steuer
+  sense: руль
+  gender: [n]
+  plural: [Steuer]
+  gen_sg: [Steuers]
+  ru: руль, штурвал
+  en: steering wheel, helm
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Steuer:2
+  lemma: Steuer
+  sense: налог
+  gender: [f]
+  plural: [Steuern]
+  gen_sg: [Steuer]
+  ru: налог
+  en: tax
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Steuererklärung
+  lemma: Steuererklärung
+  gender: [f]
+  plural: [Steuererklärungen]
+  gen_sg: [Steuererklärung]
+  ru: налоговая декларация
+  en: tax return, tax declaration
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Steuerzahler
+  lemma: Steuerzahler
+  gender: [m]
+  plural: [Steuerzahler]
+  gen_sg: [Steuerzahlers]
+  ru: налогоплательщик
+  en: taxpayer, tax payer
+  freq: 22000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stichsäge
+  lemma: Stichsäge
+  gender: [f]
+  plural: [Stichsägen]
+  gen_sg: [Stichsäge]
+  ru: лобзик
+  en: jigsaw
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stiefel
+  lemma: Stiefel
+  gender: [m]
+  plural: [Stiefel]
+  gen_sg: [Stiefels]
+  ru: сапог
+  en: boot
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stift
+  lemma: Stift
+  sense: ручка
+  gender: [m]
+  plural: [Stifte]
+  gen_sg: [Stifts, Stiftes]
+  ru: ручка, карандаш
+  en: pin, pivot
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stift:2
+  lemma: Stift
+  sense: обрубок
+  gender: [m]
+  plural: [Stifte]
+  gen_sg: [Stifts, Stiftes]
+  ru: обрубок, штифт
+  en: trifle
+  freq: 6000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stift:3
+  lemma: Stift
+  sense: заведение
+  gender: [n]
+  plural: [Stifte, Stifter]
+  gen_sg: [Stifts, Stiftes]
+  ru: заведение, приют  для престарелых
+  en: foundation
+  freq: 6000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stift:4
+  lemma: Stift
+  sense: карандаш
+  gender: [f]
+  plural: [Stiften]
+  gen_sg: [Stift, Stiften]
+  ru: карандаш, штифт
+  en: null
+  freq: 6000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stimme
+  lemma: Stimme
+  gender: [f]
+  plural: [Stimmen]
+  gen_sg: [Stimme]
+  ru: голос
+  en: voice
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stimmrecht
+  lemma: Stimmrecht
+  gender: [n]
+  plural: [Stimmrechte]
+  gen_sg: [Stimmrechts, Stimmrechtes]
+  ru: право голоса
+  en: right to vote, suffrage
+  freq: 36000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stimmung
+  lemma: Stimmung
+  gender: [f]
+  plural: [Stimmungen]
+  gen_sg: [Stimmung]
+  ru: настроение
+  en: mood, humour
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stimmzettel
+  lemma: Stimmzettel
+  gender: [m]
+  plural: [Stimmzettel]
+  gen_sg: [Stimmzettels]
+  ru: избирательный бюллетень
+  en: ballot
+  freq: 37000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stipendium
+  lemma: Stipendium
+  gender: [n]
+  plural: [Stipendien]
+  gen_sg: [Stipendiums]
+  ru: стипендия
+  en: scholarship, grant
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stirn
+  lemma: Stirn
+  gender: [f]
+  plural: [Stirnen]
+  gen_sg: [Stirn]
+  ru: лоб
+  en: forehead
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stock
+  lemma: Stock
+  gender: [m]
+  plural: [Stöcke, Stöcker]
+  gen_sg: [Stocks, Stockes]
+  ru: этаж
+  en: stick, walking stick
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stoff
+  lemma: Stoff
+  gender: [m]
+  plural: [Stoffe]
+  gen_sg: [Stoffs, Stoffes]
+  ru: материя, материал, ткань
+  en: substance, material
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stolz
+  lemma: Stolz
+  gender: [m]
+  plural: []
+  gen_sg: [Stolzes]
+  ru: гордость
+  en: pride
+  freq: 900
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strafe
+  lemma: Strafe
+  gender: [f]
+  plural: [Strafen]
+  gen_sg: [Strafe]
+  ru: наказание
+  en: penalty, punishment
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strafrecht
+  lemma: Strafrecht
+  gender: [n]
+  plural: []
+  gen_sg: [Strafrechtes, Strafrechts]
+  ru: юр. уголовное право
+  en: criminal law
+  freq: 32000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strand
+  lemma: Strand
+  gender: [m]
+  plural: [Strände]
+  gen_sg: [Strands, Strandes]
+  ru: пляж
+  en: beach, shore
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Straße
+  lemma: Straße
+  gender: [f]
+  plural: [Straßen]
+  gen_sg: [Straße]
+  ru: улица
+  en: street, road
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Straßenbahn
+  lemma: Straßenbahn
+  gender: [f]
+  plural: [Straßenbahnen]
+  gen_sg: [Straßenbahn]
+  ru: трамвай
+  en: streetcar, tramway
+  freq: 15000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strecke
+  lemma: Strecke
+  gender: [f]
+  plural: [Strecken]
+  gen_sg: [Strecke]
+  ru: маршрут
+  en: route, way
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Streik
+  lemma: Streik
+  gender: [m]
+  plural: [Streiks, Streike]
+  gen_sg: [Streiks, Streikes]
+  ru: забастовка
+  en: strike
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Streit
+  lemma: Streit
+  gender: [m]
+  plural: [Streite]
+  gen_sg: [Streites, Streits]
+  ru: ссора
+  en: argument, dispute
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Streitfall
+  lemma: Streitfall
+  gender: [m]
+  plural: [Streitfälle]
+  gen_sg: [Streitfalls, Streitfalles]
+  ru: спорный случай
+  en: null
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stress
+  lemma: Stress
+  gender: [m]
+  plural: [Stresse]
+  gen_sg: [Stresses]
+  ru: стресс
+  en: stress, general adaptation syndrome
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strom
+  lemma: Strom
+  gender: [m]
+  plural: [Ströme]
+  gen_sg: [Stroms, Stromes]
+  ru: течение
+  en: current, stream
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stromausfall
+  lemma: Stromausfall
+  gender: [m]
+  plural: [Stromausfälle]
+  gen_sg: [Stromausfalles, Stromausfalls]
+  ru: прекращение подачи электроэнергии
+  en: blackout, power failure
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strumpf
+  lemma: Strumpf
+  gender: [m]
+  plural: [Strümpfe]
+  gen_sg: [Strumpfes, Strumpfs]
+  ru: чулок
+  en: stocking, sock
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Strähne
+  lemma: Strähne
+  gender: [f]
+  plural: [Strähnen]
+  gen_sg: [Strähne]
+  ru: прядь
+  en: strand
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Student
+  lemma: Student
+  gender: [m]
+  plural: [Studenten]
+  gen_sg: [Studenten]
+  ru: студент
+  en: student
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Studentin
+  lemma: Studentin
+  gender: [f]
+  plural: [Studentinnen]
+  gen_sg: [Studentin]
+  ru: студентка
+  en: student
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Studium
+  lemma: Studium
+  gender: [n]
+  plural: [Studien]
+  gen_sg: [Studiums]
+  ru: учёба
+  en: studies
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stuhl
+  lemma: Stuhl
+  gender: [m]
+  plural: [Stühle]
+  gen_sg: [Stuhls, Stuhles]
+  ru: стул
+  en: chair
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stunde
+  lemma: Stunde
+  gender: [f]
+  plural: [Stunden]
+  gen_sg: [Stunde]
+  ru: час
+  en: hour
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sturm
+  lemma: Sturm
+  gender: [m]
+  plural: [Stürme]
+  gen_sg: [Sturmes, Sturms]
+  ru: шторм, буря
+  en: storm
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stück
+  lemma: Stück
+  gender: [n]
+  plural: [Stücke]
+  gen_sg: [Stücks, Stückes]
+  ru: кусок
+  en: part
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stückpreis
+  lemma: Stückpreis
+  gender: [m]
+  plural: [Stückpreise]
+  gen_sg: [Stückpreises]
+  ru: null
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Stückzahl
+  lemma: Stückzahl
+  gender: [f]
+  plural: [Stückzahlen]
+  gen_sg: [Stückzahl]
+  ru: количество экземпляров
+  en: number of items
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Suchmaschine
+  lemma: Suchmaschine
+  gender: [f]
+  plural: [Suchmaschinen]
+  gen_sg: [Suchmaschine]
+  ru: комп. поисковая система
+  en: search engine
+  freq: 41000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Summe
+  lemma: Summe
+  gender: [f]
+  plural: [Summen]
+  gen_sg: [Summe]
+  ru: сумма
+  en: sum
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Supermarkt
+  lemma: Supermarkt
+  gender: [m]
+  plural: [Supermärkte]
+  gen_sg: [Supermarkts, Supermarktes]
+  ru: супермаркет
+  en: supermarket
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Suppe
+  lemma: Suppe
+  gender: [f]
+  plural: [Suppen]
+  gen_sg: [Suppe]
+  ru: суп
+  en: soup
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Symbol
+  lemma: Symbol
+  gender: [n]
+  plural: [Symbole]
+  gen_sg: [Symbols]
+  ru: символ
+  en: symbol
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Szene
+  lemma: Szene
+  gender: [f]
+  plural: [Szenen]
+  gen_sg: [Szene]
+  ru: сцена
+  en: scene
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Säge
+  lemma: Säge
+  gender: [f]
+  plural: [Sägen]
+  gen_sg: [Säge]
+  ru: пила
+  en: saw
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Sänger
+  lemma: Sänger
+  gender: [m]
+  plural: [Sänger]
+  gen_sg: [Sängers]
+  ru: певец
+  en: singer, songster
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Süden
+  lemma: Süden
+  gender: [m]
+  plural: []
+  gen_sg: [Südens]
+  ru: юг
+  en: south
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Südosten
+  lemma: Südosten
+  gender: [m]
+  plural: []
+  gen_sg: [Südostens]
+  ru: юго-восток
+  en: southeast, south-east
+  freq: 200
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Südpol
+  lemma: Südpol
+  gender: [m]
+  plural: [Südpole]
+  gen_sg: [Südpols, Südpoles]
+  ru: null
+  en: South Pole, south pole
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Südwesten
+  lemma: Südwesten
+  gender: [m]
+  plural: []
+  gen_sg: [Südwestens]
+  ru: юго-запад
+  en: southwest, south-west
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}

@@ -1,0 +1,517 @@
+- id: n:U-Bahn
+  lemma: U-Bahn
+  gender: [f]
+  plural: [U-Bahnen]
+  gen_sg: [U-Bahn]
+  ru: метро
+  en: subway, metro
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Uhr
+  lemma: Uhr
+  gender: [f]
+  plural: [Uhren]
+  gen_sg: [Uhr]
+  ru: часы
+  en: clock, watch
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Uhrzeit
+  lemma: Uhrzeit
+  gender: [f]
+  plural: [Uhrzeiten]
+  gen_sg: [Uhrzeit]
+  ru: время, час
+  en: time, time of day
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ukraine
+  lemma: Ukraine
+  gender: [f]
+  plural: []
+  gen_sg: [Ukraine]
+  ru: Украина
+  en: Ukraine
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umarmung
+  lemma: Umarmung
+  gender: [f]
+  plural: [Umarmungen]
+  gen_sg: [Umarmung]
+  ru: объятие
+  en: hug, embrace
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umfang
+  lemma: Umfang
+  gender: [m]
+  plural: [Umfänge]
+  gen_sg: [Umfanges, Umfangs]
+  ru: геометр. периметр, длина окружности
+  en: circumference, perimeter
+  freq: 22000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umfrage
+  lemma: Umfrage
+  gender: [f]
+  plural: [Umfragen]
+  gen_sg: [Umfrage]
+  ru: опрос
+  en: poll, survey
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umkleidekabine
+  lemma: Umkleidekabine
+  gender: [f]
+  plural: [Umkleidekabinen]
+  gen_sg: [Umkleidekabine]
+  ru: примерочная
+  en: cabin, changing room
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umleitung
+  lemma: Umleitung
+  gender: [f]
+  plural: [Umleitungen]
+  gen_sg: [Umleitung]
+  ru: объезд
+  en: detour
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umschlag
+  lemma: Umschlag
+  gender: [m]
+  plural: [Umschläge]
+  gen_sg: [Umschlags, Umschlages]
+  ru: конверт
+  en: envelope
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umtausch
+  lemma: Umtausch
+  gender: [m]
+  plural: [Umtausche, Umtäusche]
+  gen_sg: [Umtausches, Umtauschs]
+  ru: обмен, мена
+  en: exchange
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umwelt
+  lemma: Umwelt
+  gender: [f]
+  plural: [Umwelten]
+  gen_sg: [Umwelt]
+  ru: окружающая среда
+  en: environment
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umweltschutz
+  lemma: Umweltschutz
+  gender: [m]
+  plural: []
+  gen_sg: [Umweltschutzes]
+  ru: защита окружающей среды
+  en: environmental protection, ecology protection
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Umzug
+  lemma: Umzug
+  gender: [m]
+  plural: [Umzüge]
+  gen_sg: [Umzuges, Umzugs]
+  ru: переезд
+  en: move, relocation
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unfall
+  lemma: Unfall
+  gender: [m]
+  plural: [Unfälle]
+  gen_sg: [Unfalls, Unfalles]
+  ru: авария
+  en: accident, casualty
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unglück
+  lemma: Unglück
+  gender: [n]
+  plural: [Unglücke]
+  gen_sg: [Unglücks, Unglückes]
+  ru: неудача
+  en: misfortune
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Universität
+  lemma: Universität
+  gender: [f]
+  plural: [Universitäten]
+  gen_sg: [Universität]
+  ru: университет
+  en: university
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unmut
+  lemma: Unmut
+  gender: [m]
+  plural: []
+  gen_sg: [Unmuts, Unmutes]
+  ru: раздражение, досада
+  en: discontent, dissatisfaction
+  freq: 31000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unsicherheit
+  lemma: Unsicherheit
+  gender: [f]
+  plural: [Unsicherheiten]
+  gen_sg: [Unsicherheit]
+  ru: неуверенность
+  en: danger
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unterhaltung
+  lemma: Unterhaltung
+  gender: [f]
+  plural: [Unterhaltungen]
+  gen_sg: [Unterhaltung]
+  ru: развлечение, беседа
+  en: maintenance
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unterkunft
+  lemma: Unterkunft
+  gender: [f]
+  plural: [Unterkünfte]
+  gen_sg: [Unterkunft]
+  ru: убежище
+  en: accommodation, lodging
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unterlegscheibe
+  lemma: Unterlegscheibe
+  gender: [f]
+  plural: [Unterlegscheiben]
+  gen_sg: [Unterlegscheibe]
+  ru: null
+  en: washer, flat washer
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unterricht
+  lemma: Unterricht
+  gender: [m]
+  plural: [Unterrichte]
+  gen_sg: [Unterrichts, Unterrichtes]
+  ru: урок, занятия
+  en: instruction, classes
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unterschrift
+  lemma: Unterschrift
+  gender: [f]
+  plural: [Unterschriften]
+  gen_sg: [Unterschrift]
+  ru: подпись
+  en: signature
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Untersuchung
+  lemma: Untersuchung
+  gender: [f]
+  plural: [Untersuchungen]
+  gen_sg: [Untersuchung]
+  ru: исследование, следствие
+  en: investigation, examination test study
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Untertitel
+  lemma: Untertitel
+  gender: [m]
+  plural: [Untertitel]
+  gen_sg: [Untertitels]
+  ru: субтитры
+  en: subtitle
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unterwäsche
+  lemma: Unterwäsche
+  gender: [f]
+  plural: [Unterwäschen]
+  gen_sg: [Unterwäsche]
+  ru: нижнее бельё
+  en: underwear, undergarments
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Unwetter
+  lemma: Unwetter
+  gender: [n]
+  plural: [Unwetter]
+  gen_sg: [Unwetters]
+  ru: непогода
+  en: thunderstorm
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Update
+  lemma: Update
+  gender: [n, m]
+  plural: [Updates]
+  gen_sg: [Updates]
+  ru: null
+  en: update
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Urenkel
+  lemma: Urenkel
+  gender: [m]
+  plural: [Urenkel]
+  gen_sg: [Urenkels]
+  ru: правнук
+  en: great-grandson
+  freq: 42000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Urenkelin
+  lemma: Urenkelin
+  gender: [f]
+  plural: [Urenkelinnen]
+  gen_sg: [Urenkelin]
+  ru: правнучка
+  en: great-granddaughter
+  freq: 44000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Urgroßeltern
+  lemma: Urgroßeltern
+  gender: []
+  plural: [Urgroßeltern]
+  gen_sg: []
+  number: pl
+  ru: прародители
+  en: great grandparents
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Urlaub
+  lemma: Urlaub
+  gender: [m]
+  plural: [Urlaube]
+  gen_sg: [Urlaubes, Urlaubs]
+  ru: отпуск
+  en: holiday, vacation
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Urteil
+  lemma: Urteil
+  gender: [n]
+  plural: [Urteile]
+  gen_sg: [Urteils]
+  ru: приговор
+  en: verdict, judgement
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Überfall
+  lemma: Überfall
+  gender: [m]
+  plural: [Überfälle]
+  gen_sg: [Überfalls, Überfalles]
+  ru: нападение
+  en: raid, holdup
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Übergabe
+  lemma: Übergabe
+  gender: [f]
+  plural: [Übergaben]
+  gen_sg: [Übergabe]
+  ru: передача
+  en: transfer, handover
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Überraschung
+  lemma: Überraschung
+  gender: [f]
+  plural: [Überraschungen]
+  gen_sg: [Überraschung]
+  ru: неожиданность, внезапность
+  en: surprise
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Überschwemmung
+  lemma: Überschwemmung
+  gender: [f]
+  plural: [Überschwemmungen]
+  gen_sg: [Überschwemmung]
+  ru: наводнение
+  en: flood, inundation
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Übersetzung
+  lemma: Übersetzung
+  gender: [f]
+  plural: [Übersetzungen]
+  gen_sg: [Übersetzung]
+  ru: перевод
+  en: translation
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Überstunde
+  lemma: Überstunde
+  gender: [f]
+  plural: [Überstunden]
+  gen_sg: [Überstunde]
+  ru: сверхурочная работа
+  en: overtime
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Überweisung
+  lemma: Überweisung
+  gender: [f]
+  plural: [Überweisungen]
+  gen_sg: [Überweisung]
+  ru: перевод, перечисление
+  en: remittance, transaction
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Überzeugung
+  lemma: Überzeugung
+  gender: [f]
+  plural: [Überzeugungen]
+  gen_sg: [Überzeugung]
+  ru: убеждённость, убеждение
+  en: conviction, opinion
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Übung
+  lemma: Übung
+  gender: [f]
+  plural: [Übungen]
+  gen_sg: [Übung]
+  ru: упражнение, задание
+  en: training, practice
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

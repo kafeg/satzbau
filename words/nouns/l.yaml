@@ -1,0 +1,936 @@
+- id: n:Labor
+  lemma: Labor
+  gender: [n]
+  plural: [Labore, Labors]
+  gen_sg: [Labors]
+  ru: лаборатория
+  en: laboratory, lab
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lack
+  lemma: Lack
+  gender: [m]
+  plural: [Lacke]
+  gen_sg: [Lackes, Lacks]
+  ru: лак
+  en: varnish, lacquer
+  freq: 24000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ladegerät
+  lemma: Ladegerät
+  gender: [n]
+  plural: [Ladegeräte]
+  gen_sg: [Ladegerätes, Ladegeräts]
+  ru: зарядное устройство
+  en: charger
+  freq: 25000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Laden
+  lemma: Laden
+  sense: магазин
+  gender: [m]
+  plural: [Läden, Laden]
+  gen_sg: [Ladens]
+  ru: магазин
+  en: shop, store
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Laden:2
+  lemma: Laden
+  sense: заряжание
+  gender: [n]
+  plural: []
+  gen_sg: [Ladens]
+  ru: заряжание
+  en: loading
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lampe
+  lemma: Lampe
+  gender: [f]
+  plural: [Lampen]
+  gen_sg: [Lampe]
+  ru: лампа
+  en: lamp
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Land
+  lemma: Land
+  gender: [n]
+  plural: [Länder, Lande]
+  gen_sg: [Lands, Landes]
+  ru: страна
+  en: land, earth
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landesgrenze
+  lemma: Landesgrenze
+  gender: [f]
+  plural: [Landesgrenzen]
+  gen_sg: [Landesgrenze]
+  ru: сухопутная граница
+  en: state boundary
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landesregierung
+  lemma: Landesregierung
+  gender: [f]
+  plural: [Landesregierungen]
+  gen_sg: [Landesregierung]
+  ru: правительство земли
+  en: state government
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landessprache
+  lemma: Landessprache
+  gender: [f]
+  plural: [Landessprachen]
+  gen_sg: [Landessprache]
+  ru: национальный язык, язык страны
+  en: national language
+  freq: 31000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landkarte
+  lemma: Landkarte
+  gender: [f]
+  plural: [Landkarten]
+  gen_sg: [Landkarte]
+  ru: географическая карта
+  en: map
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landschaft
+  lemma: Landschaft
+  gender: [f]
+  plural: [Landschaften]
+  gen_sg: [Landschaft]
+  ru: пейзаж
+  en: landscape
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landsmann
+  lemma: Landsmann
+  gender: [m]
+  plural: [Landsmänner, Landsleute]
+  gen_sg: [Landsmannes]
+  ru: соотечественник, земляк
+  en: compatriot
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landstrich
+  lemma: Landstrich
+  gender: [m]
+  plural: [Landstriche]
+  gen_sg: [Landstriches, Landstrichs]
+  ru: местность, полоса
+  en: area, district
+  freq: 40000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Landtag
+  lemma: Landtag
+  gender: [m]
+  plural: [Landtage]
+  gen_sg: [Landtages, Landtags]
+  ru: парламент земли
+  en: Landtag, land diet
+  freq: 28000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Langeweile
+  lemma: Langeweile
+  gender: [f]
+  plural: []
+  gen_sg: [Langeweile]
+  ru: скука
+  en: boredom
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lappen
+  lemma: Lappen
+  gender: [m]
+  plural: [Lappen]
+  gen_sg: [Lappens]
+  ru: тряпка
+  en: rag, cloth
+  freq: 15000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Laptop
+  lemma: Laptop
+  gender: [m, n]
+  plural: [Laptops]
+  gen_sg: [Laptops]
+  ru: ноутбук
+  en: laptop computer, laptop
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lastschrift
+  lemma: Lastschrift
+  gender: [f]
+  plural: [Lastschriften]
+  gen_sg: [Lastschrift]
+  ru: дебет
+  en: debit entry
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Latte
+  lemma: Latte
+  sense: рейка
+  gender: [f]
+  plural: [Latten]
+  gen_sg: [Latte]
+  ru: рейка
+  en: lath, 4-cornered bar
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Latte:2
+  lemma: Latte
+  sense: латте
+  gender: [f, m]
+  plural: [Latte]
+  gen_sg: [Latte]
+  ru: латте
+  en: null
+  freq: 14000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Laufzeit
+  lemma: Laufzeit
+  gender: [f]
+  plural: [Laufzeiten]
+  gen_sg: [Laufzeit]
+  ru: срок действия, техн. продолжительность хода
+  en: time
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Laune
+  lemma: Laune
+  gender: [f]
+  plural: [Launen]
+  gen_sg: [Laune]
+  ru: настроение, расположение духа
+  en: mood whim
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lautsprecher
+  lemma: Lautsprecher
+  gender: [m]
+  plural: [Lautsprecher]
+  gen_sg: [Lautsprechers]
+  ru: громкоговоритель, динамик
+  en: loudspeaker, speaker
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lebensgefahr
+  lemma: Lebensgefahr
+  gender: [f]
+  plural: [Lebensgefahren]
+  gen_sg: [Lebensgefahr]
+  ru: опасность для жизни
+  en: danger to life, mortal danger
+  freq: 12000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lebenslauf
+  lemma: Lebenslauf
+  gender: [m]
+  plural: [Lebensläufe]
+  gen_sg: [Lebenslaufs, Lebenslaufes]
+  ru: резюме
+  en: curriculum vitae
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lebensmittel
+  lemma: Lebensmittel
+  gender: [n]
+  plural: [Lebensmittel]
+  gen_sg: [Lebensmittels]
+  ru: продукты питания
+  en: food, groceries
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lebensraum
+  lemma: Lebensraum
+  gender: [m]
+  plural: [Lebensräume]
+  gen_sg: [Lebensraumes, Lebensraums]
+  ru: жизненное пространство
+  en: living space
+  freq: 19000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lebkuchen
+  lemma: Lebkuchen
+  gender: [m]
+  plural: [Lebkuchen]
+  gen_sg: [Lebkuchens]
+  ru: пряник, коврижка
+  en: gingerbread
+  freq: 36000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leder
+  lemma: Leder
+  gender: [n]
+  plural: [Leder]
+  gen_sg: [Leders]
+  ru: кожа
+  en: leather
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Legislaturperiode
+  lemma: Legislaturperiode
+  gender: [f]
+  plural: [Legislaturperioden]
+  gen_sg: [Legislaturperiode]
+  ru: легислатура
+  en: parliamentary term, legislative period
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lehrbuch
+  lemma: Lehrbuch
+  gender: [n]
+  plural: [Lehrbücher]
+  gen_sg: [Lehrbuchs, Lehrbuches]
+  ru: учебник
+  en: textbook, coursebook
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lehrer
+  lemma: Lehrer
+  gender: [m]
+  plural: [Lehrer]
+  gen_sg: [Lehrers]
+  ru: учитель
+  en: teacher, instructor
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lehrerin
+  lemma: Lehrerin
+  gender: [f]
+  plural: [Lehrerinnen]
+  gen_sg: [Lehrerin]
+  ru: учительница
+  en: female ) teacher, instructor
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leidenschaft
+  lemma: Leidenschaft
+  gender: [f]
+  plural: [Leidenschaften]
+  gen_sg: [Leidenschaft]
+  ru: страсть
+  en: passion
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leihwagen
+  lemma: Leihwagen
+  gender: [m]
+  plural: [Leihwagen, Leihwägen]
+  gen_sg: [Leihwagens]
+  ru: автомобиль, взятый напрокат
+  en: null
+  freq: 37000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leistung
+  lemma: Leistung
+  gender: [f]
+  plural: [Leistungen]
+  gen_sg: [Leistung]
+  ru: мощность
+  en: performance
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leiter
+  lemma: Leiter
+  sense: руководитель
+  gender: [m]
+  plural: [Leiter]
+  gen_sg: [Leiters]
+  ru: руководитель, директор
+  en: head, director
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leiter:2
+  lemma: Leiter
+  sense: лестница
+  gender: [f]
+  plural: [Leitern]
+  gen_sg: [Leiter]
+  ru: лестница, лестница-стремянка
+  en: ladder
+  freq: 5000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leiter:3
+  lemma: Leiter
+  sense: лестница
+  gender: [f]
+  plural: [Leitern]
+  gen_sg: [Leiter]
+  ru: лестница
+  en: ladder
+  freq: 5000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leitung
+  lemma: Leitung
+  gender: [f]
+  plural: [Leitungen]
+  gen_sg: [Leitung]
+  ru: управление, руководство
+  en: management, leadership
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lenkrad
+  lemma: Lenkrad
+  gender: [n]
+  plural: [Lenkräder]
+  gen_sg: [Lenkrades, Lenkrads]
+  ru: руль
+  en: steering wheel
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leser
+  lemma: Leser
+  gender: [m]
+  plural: [Leser]
+  gen_sg: [Lesers]
+  ru: читатель
+  en: reader
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Leute
+  lemma: Leute
+  gender: []
+  plural: [Leute]
+  gen_sg: []
+  number: pl
+  ru: люди
+  en: people, persons
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Liebe
+  lemma: Liebe
+  gender: [f]
+  plural: [Lieben]
+  gen_sg: [Liebe]
+  ru: любовь
+  en: love
+  freq: 500
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieblingsband
+  lemma: Lieblingsband
+  gender: [f]
+  plural: [Lieblingsbands]
+  gen_sg: [Lieblingsband]
+  ru: null
+  en: favorite band, favourite band
+  freq: 39000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieblingslied
+  lemma: Lieblingslied
+  gender: [n]
+  plural: [Lieblingslieder]
+  gen_sg: [Lieblingsliedes, Lieblingslieds]
+  ru: любимая песня
+  en: favorite song, favourite song
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieblingsmusik
+  lemma: Lieblingsmusik
+  gender: [f]
+  plural: [Lieblingsmusiken]
+  gen_sg: [Lieblingsmusik]
+  ru: null
+  en: null
+  freq: 48000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieblingssänger
+  lemma: Lieblingssänger
+  gender: [m]
+  plural: [Lieblingssänger]
+  gen_sg: [Lieblingssängers]
+  ru: null
+  en: favourite singer, favorite singer
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lied
+  lemma: Lied
+  gender: [n]
+  plural: [Lieder]
+  gen_sg: [Liedes, Lieds]
+  ru: песня
+  en: song
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieferdienst
+  lemma: Lieferdienst
+  gender: [m]
+  plural: [Lieferdienste]
+  gen_sg: [Lieferdiensts, Lieferdienstes]
+  ru: null
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieferschein
+  lemma: Lieferschein
+  gender: [m]
+  plural: [Lieferscheine]
+  gen_sg: [Lieferscheines, Lieferscheins]
+  ru: null
+  en: delivery note, bordereau
+  freq: 47000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lieferung
+  lemma: Lieferung
+  gender: [f]
+  plural: [Lieferungen]
+  gen_sg: [Lieferung]
+  ru: доставка
+  en: delivery, shipment
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lineal
+  lemma: Lineal
+  gender: [n]
+  plural: [Lineale]
+  gen_sg: [Lineals]
+  ru: линейка
+  en: ruler, rule
+  freq: 31000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Linie
+  lemma: Linie
+  gender: [f]
+  plural: [Linien]
+  gen_sg: [Linie]
+  ru: линия, маршрут
+  en: line
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Link
+  lemma: Link
+  gender: [m, n]
+  plural: [Links]
+  gen_sg: [Links]
+  ru: ссылка
+  en: link
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lippe
+  lemma: Lippe
+  gender: [f]
+  plural: [Lippen]
+  gen_sg: [Lippe]
+  ru: губа
+  en: lip
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lippenstift
+  lemma: Lippenstift
+  gender: [m]
+  plural: [Lippenstifte]
+  gen_sg: [Lippenstiftes, Lippenstifts]
+  ru: губная помада
+  en: lipstick
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Liter
+  lemma: Liter
+  gender: [m, n]
+  plural: [Liter]
+  gen_sg: [Liters]
+  ru: литр
+  en: litre, liter
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Literatur
+  lemma: Literatur
+  gender: [f]
+  plural: [Literaturen]
+  gen_sg: [Literatur]
+  ru: литература
+  en: literature
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Loch
+  lemma: Loch
+  sense: дыра
+  gender: [n]
+  plural: [Löcher]
+  gen_sg: [Lochs, Loches]
+  ru: дыра, дырка, отверстие
+  en: hole
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Loch:2
+  lemma: Loch
+  sense: лох
+  gender: [m]
+  plural: [Lochs]
+  gen_sg: [Lochs]
+  ru: лох
+  en: loch, lough
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Locke
+  lemma: Locke
+  gender: [f]
+  plural: [Locken]
+  gen_sg: [Locke]
+  ru: локон
+  en: curl, lock
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Logik
+  lemma: Logik
+  gender: [f]
+  plural: [Logiken]
+  gen_sg: [Logik]
+  ru: логика
+  en: logic
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lohn
+  lemma: Lohn
+  gender: [m]
+  plural: [Löhne]
+  gen_sg: [Lohns, Lohnes]
+  ru: заработная плата, зарплата
+  en: wage
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Luft
+  lemma: Luft
+  sense: воздух
+  gender: [f]
+  plural: [Lüfte]
+  gen_sg: [Luft]
+  ru: воздух
+  en: air
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Luft:2
+  lemma: Luft
+  sense: воздух
+  gender: [m]
+  plural: [Lüfte]
+  gen_sg: [Lufts]
+  ru: воздух, ветер
+  en: air, atmosphere
+  freq: 800
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Luftballon
+  lemma: Luftballon
+  gender: [m]
+  plural: [Luftballons, Luftballone]
+  gen_sg: [Luftballons]
+  ru: воздушный шарик
+  en: balloon, toy balloon
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Luftpost
+  lemma: Luftpost
+  gender: [f]
+  plural: []
+  gen_sg: [Luftpost]
+  ru: авиапочта
+  en: airmail
+  freq: 34000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lust
+  lemma: Lust
+  gender: [f]
+  plural: [Lüste]
+  gen_sg: [Lust]
+  ru: желание, стремление
+  en: inclination
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lächeln
+  lemma: Lächeln
+  gender: [n]
+  plural: [Lächeln]
+  gen_sg: [Lächelns]
+  ru: улыбка
+  en: smile
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Länge
+  lemma: Länge
+  gender: [f]
+  plural: [Längen]
+  gen_sg: [Länge]
+  ru: длина
+  en: length
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Längengrad
+  lemma: Längengrad
+  gender: [m]
+  plural: [Längengrade]
+  gen_sg: [Längengrads, Längengrades]
+  ru: долгота
+  en: longitude, meridian
+  freq: 35000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Löffel
+  lemma: Löffel
+  gender: [m]
+  plural: [Löffel]
+  gen_sg: [Löffels]
+  ru: ложка
+  en: spoon
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Löschfahrzeug
+  lemma: Löschfahrzeug
+  gender: [n]
+  plural: [Löschfahrzeuge]
+  gen_sg: [Löschfahrzeuges, Löschfahrzeugs]
+  ru: пожарный автомобиль
+  en: null
+  freq: 50000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Lösung
+  lemma: Lösung
+  gender: [f]
+  plural: [Lösungen]
+  gen_sg: [Lösung]
+  ru: решение
+  en: solution, answer
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Löwe
+  lemma: Löwe
+  gender: [m]
+  plural: [Löwen]
+  gen_sg: [Löwen]
+  ru: лев
+  en: lion
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

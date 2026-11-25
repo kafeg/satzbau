@@ -1,0 +1,2161 @@
+- id: n:Baby
+  lemma: Baby
+  gender: [n]
+  plural: [Babys]
+  gen_sg: [Babys]
+  ru: младенец
+  en: baby, infant
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Backe
+  lemma: Backe
+  gender: [f]
+  plural: [Backen]
+  gen_sg: [Backe]
+  ru: щека
+  en: cheek, jowl
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Backofen
+  lemma: Backofen
+  gender: [m]
+  plural: [Backöfen]
+  gen_sg: [Backofens]
+  ru: духовка
+  en: oven
+  freq: 27000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bad
+  lemma: Bad
+  gender: [n]
+  plural: [Bäder]
+  gen_sg: [Bads, Bades]
+  ru: ванная
+  en: bath
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Badeanzug
+  lemma: Badeanzug
+  gender: [m]
+  plural: [Badeanzüge]
+  gen_sg: [Badeanzugs, Badeanzuges]
+  ru: купальник
+  en: bathing suit, swimsuit
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bademantel
+  lemma: Bademantel
+  gender: [m]
+  plural: [Bademäntel]
+  gen_sg: [Bademantels]
+  ru: халат
+  en: bathrobe
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Badewanne
+  lemma: Badewanne
+  gender: [f]
+  plural: [Badewannen]
+  gen_sg: [Badewanne]
+  ru: ванна
+  en: bathtub, bath
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Badezimmer
+  lemma: Badezimmer
+  gender: [n]
+  plural: [Badezimmer]
+  gen_sg: [Badezimmers]
+  ru: ванная комната
+  en: bathroom, bath
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bahn
+  lemma: Bahn
+  gender: [f]
+  plural: [Bahnen]
+  gen_sg: [Bahn]
+  ru: поезд, железная дорога
+  en: path, way
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bahnhof
+  lemma: Bahnhof
+  gender: [m]
+  plural: [Bahnhöfe]
+  gen_sg: [Bahnhofes, Bahnhofs]
+  ru: вокзал
+  en: train station, railroad station
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bahnsteig
+  lemma: Bahnsteig
+  gender: [m]
+  plural: [Bahnsteige]
+  gen_sg: [Bahnsteiges, Bahnsteigs]
+  ru: платформа, перрон
+  en: platform
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Balkan
+  lemma: Balkan
+  gender: [m]
+  plural: []
+  gen_sg: [Balkans, Balkan]
+  ru: Балкан, Холм
+  en: Balkans
+  freq: 25000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Balkon
+  lemma: Balkon
+  gender: [m]
+  plural: [Balkons, Balkone]
+  gen_sg: [Balkons]
+  ru: балкон
+  en: balcony
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ball
+  lemma: Ball
+  sense: мяч
+  gender: [m]
+  plural: [Bälle]
+  gen_sg: [Balles, Balls]
+  ru: мяч
+  en: ball
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ball:2
+  lemma: Ball
+  sense: бал
+  gender: [m]
+  plural: [Bälle]
+  gen_sg: [Balles, Balls]
+  ru: бал
+  en: ball
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Banane
+  lemma: Banane
+  gender: [f]
+  plural: [Bananen]
+  gen_sg: [Banane]
+  ru: банан
+  en: banana, plantain
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Band
+  lemma: Band
+  sense: лента
+  gender: [n]
+  plural: [Bänder, Bande]
+  gen_sg: [Bandes, Bands]
+  ru: лента
+  en: ribbon, band
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Band:2
+  lemma: Band
+  sense: том
+  gender: [m]
+  plural: [Bände]
+  gen_sg: [Bandes, Bands]
+  ru: том
+  en: tome
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Band:3
+  lemma: Band
+  sense: группа
+  gender: [f]
+  plural: [Bands]
+  gen_sg: [Band]
+  ru: группа
+  en: band, group
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Band:4
+  lemma: Band
+  sense: лента
+  gender: [n]
+  plural: []
+  gen_sg: [Bandes, Bands]
+  ru: лента, бант
+  en: tape, ribbon
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bank
+  lemma: Bank
+  sense: скамейка
+  gender: [f]
+  plural: [Bänke]
+  gen_sg: [Bank]
+  ru: скамейка, скамья
+  en: bench
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bank:2
+  lemma: Bank
+  sense: банк
+  gender: [f]
+  plural: [Banken]
+  gen_sg: [Bank]
+  ru: банк
+  en: bank
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Barcode
+  lemma: Barcode
+  gender: [m]
+  plural: [Barcodes]
+  gen_sg: [Barcodes]
+  ru: штрихкод
+  en: bar code
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bargeld
+  lemma: Bargeld
+  gender: [n]
+  plural: []
+  gen_sg: [Bargelds, Bargeldes]
+  ru: наличные
+  en: cash, currency
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bart
+  lemma: Bart
+  gender: [m]
+  plural: [Bärte]
+  gen_sg: [Barts, Bartes]
+  ru: борода
+  en: beard, whiskers
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Basketball
+  lemma: Basketball
+  gender: [m]
+  plural: [Basketbälle]
+  gen_sg: [Basketballes, Basketballs]
+  ru: баскетбол
+  en: basketball
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Batterie
+  lemma: Batterie
+  gender: [f]
+  plural: [Batterien]
+  gen_sg: [Batterie]
+  ru: батарея
+  en: battery
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bauch
+  lemma: Bauch
+  gender: [m]
+  plural: [Bäuche]
+  gen_sg: [Bauches, Bauchs]
+  ru: живот
+  en: belly, womb
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bauchgefühl
+  lemma: Bauchgefühl
+  gender: [n]
+  plural: [Bauchgefühle]
+  gen_sg: [Bauchgefühls, Bauchgefühles]
+  ru: интуиция
+  en: gut feeling, gut instinct
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bauernhof
+  lemma: Bauernhof
+  gender: [m]
+  plural: [Bauernhöfe]
+  gen_sg: [Bauernhofs, Bauernhofes]
+  ru: хозяйство, усадьба
+  en: farm
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bauhelm
+  lemma: Bauhelm
+  gender: [m]
+  plural: [Bauhelme]
+  gen_sg: [Bauhelmes, Bauhelms]
+  ru: null
+  en: hard hat, construction helmet
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Baum
+  lemma: Baum
+  gender: [m]
+  plural: [Bäume]
+  gen_sg: [Baums, Baumes]
+  ru: дерево
+  en: tree
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Baumarkt
+  lemma: Baumarkt
+  gender: [m]
+  plural: [Baumärkte]
+  gen_sg: [Baumarktes, Baumarkts]
+  ru: строительный рынок
+  en: DIY shop, ironmonger's
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Baumwolle
+  lemma: Baumwolle
+  gender: [f]
+  plural: [Baumwollen]
+  gen_sg: [Baumwolle]
+  ru: хлопок
+  en: cotton
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bauschaum
+  lemma: Bauschaum
+  gender: [m]
+  plural: [Bauschäume]
+  gen_sg: [Bauschaumes, Bauschaums]
+  ru: монтажная пена
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Baustelle
+  lemma: Baustelle
+  gender: [f]
+  plural: [Baustellen]
+  gen_sg: [Baustelle]
+  ru: стройплощадка
+  en: building site, construction site
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bearbeitung
+  lemma: Bearbeitung
+  gender: [f]
+  plural: [Bearbeitungen]
+  gen_sg: [Bearbeitung]
+  ru: обработка, разработка
+  en: edit, adaptation
+  freq: 27000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bearbeitungszeit
+  lemma: Bearbeitungszeit
+  gender: [f]
+  plural: [Bearbeitungszeiten]
+  gen_sg: [Bearbeitungszeit]
+  ru: время обработки
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bedenken
+  lemma: Bedenken
+  gender: [n]
+  plural: [Bedenken]
+  gen_sg: [Bedenkens]
+  ru: null
+  en: consideration, reflection
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bedienung
+  lemma: Bedienung
+  gender: [f]
+  plural: [Bedienungen]
+  gen_sg: [Bedienung]
+  ru: прислуживание, обслуживание
+  en: service
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beerdigung
+  lemma: Beerdigung
+  gender: [f]
+  plural: [Beerdigungen]
+  gen_sg: [Beerdigung]
+  ru: похороны
+  en: funeral, burial
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beere
+  lemma: Beere
+  gender: [f]
+  plural: [Beeren]
+  gen_sg: [Beere]
+  ru: ягода
+  en: berry
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Befund
+  lemma: Befund
+  gender: [m]
+  plural: [Befunde]
+  gen_sg: [Befundes, Befunds]
+  ru: состояние, данные осмотра
+  en: results, finding
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Begeisterung
+  lemma: Begeisterung
+  gender: [f]
+  plural: [Begeisterungen]
+  gen_sg: [Begeisterung]
+  ru: воодушевление
+  en: enthusiasm, ardor
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beglaubigung
+  lemma: Beglaubigung
+  gender: [f]
+  plural: [Beglaubigungen]
+  gen_sg: [Beglaubigung]
+  ru: удостоверение, скрепление подписью
+  en: certification, certificate
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Begründung
+  lemma: Begründung
+  gender: [f]
+  plural: [Begründungen]
+  gen_sg: [Begründung]
+  ru: обоснование
+  en: establishment, foundation
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Begrüßung
+  lemma: Begrüßung
+  gender: [f]
+  plural: [Begrüßungen]
+  gen_sg: [Begrüßung]
+  ru: приветствие
+  en: greeting, welcoming
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Behandlung
+  lemma: Behandlung
+  gender: [f]
+  plural: [Behandlungen]
+  gen_sg: [Behandlung]
+  ru: лечение
+  en: treatment
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Behauptung
+  lemma: Behauptung
+  gender: [f]
+  plural: [Behauptungen]
+  gen_sg: [Behauptung]
+  ru: утверждение
+  en: claim, assertion
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Behörde
+  lemma: Behörde
+  gender: [f]
+  plural: [Behörden]
+  gen_sg: [Behörde]
+  ru: учреждение, ведомство
+  en: authority, agency
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Behördengang
+  lemma: Behördengang
+  gender: [m]
+  plural: [Behördengänge]
+  gen_sg: [Behördengangs, Behördenganges]
+  ru: null
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Behördensprache
+  lemma: Behördensprache
+  gender: [f]
+  plural: [Behördensprachen]
+  gen_sg: [Behördensprache]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beilage
+  lemma: Beilage
+  gender: [f]
+  plural: [Beilagen]
+  gen_sg: [Beilage]
+  ru: гарнир
+  en: side dish, garnishings
+  freq: 24000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bein
+  lemma: Bein
+  gender: [n]
+  plural: [Beine]
+  gen_sg: [Beins, Beines]
+  ru: нога
+  en: leg
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beispiel
+  lemma: Beispiel
+  gender: [n]
+  plural: [Beispiele]
+  gen_sg: [Beispiels, Beispieles]
+  ru: пример
+  en: example
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beitrag
+  lemma: Beitrag
+  gender: [m]
+  plural: [Beiträge]
+  gen_sg: [Beitrags, Beitrages]
+  ru: взнос
+  en: dues, contribution
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beleg
+  lemma: Beleg
+  gender: [m]
+  plural: [Belege]
+  gen_sg: [Beleges, Belegs]
+  ru: доказательство, свидетельство
+  en: record, evidence
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Benachrichtigung
+  lemma: Benachrichtigung
+  gender: [f]
+  plural: [Benachrichtigungen]
+  gen_sg: [Benachrichtigung]
+  ru: сообщение, оповещение
+  en: notification, advice
+  freq: 33000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Benutzer
+  lemma: Benutzer
+  gender: [m]
+  plural: [Benutzer]
+  gen_sg: [Benutzers]
+  ru: пользователь
+  en: user
+  freq: 38000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Benzin
+  lemma: Benzin
+  gender: [n]
+  plural: [Benzine]
+  gen_sg: [Benzins]
+  ru: бензин
+  en: gasoline, petrol
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Berater
+  lemma: Berater
+  gender: [m]
+  plural: [Berater]
+  gen_sg: [Beraters]
+  ru: советник, советчик
+  en: consultant, adviser
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beratungsstelle
+  lemma: Beratungsstelle
+  gender: [f]
+  plural: [Beratungsstellen]
+  gen_sg: [Beratungsstelle]
+  ru: консультационный пункт
+  en: advice centre, advisory body
+  freq: 45000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bereitschaft
+  lemma: Bereitschaft
+  gender: [f]
+  plural: [Bereitschaften]
+  gen_sg: [Bereitschaft]
+  ru: готовность
+  en: standby
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Berg
+  lemma: Berg
+  gender: [m]
+  plural: [Berge]
+  gen_sg: [Bergs, Berges]
+  ru: гора
+  en: hill, mountain
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bericht
+  lemma: Bericht
+  gender: [m]
+  plural: [Berichte]
+  gen_sg: [Berichtes, Berichts]
+  ru: репортаж, отчёт
+  en: report
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beruf
+  lemma: Beruf
+  gender: [m]
+  plural: [Berufe]
+  gen_sg: [Berufs, Berufes]
+  ru: профессия, специальность
+  en: profession, trade
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bescheid
+  lemma: Bescheid
+  gender: [m]
+  plural: [Bescheide]
+  gen_sg: [Bescheides, Bescheids]
+  ru: уведомление
+  en: notification, answer
+  freq: 2000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bescheinigung
+  lemma: Bescheinigung
+  gender: [f]
+  plural: [Bescheinigungen]
+  gen_sg: [Bescheinigung]
+  ru: справка, свидетельство
+  en: certificate
+  freq: 31000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beschwerde
+  lemma: Beschwerde
+  gender: [f]
+  plural: [Beschwerden]
+  gen_sg: [Beschwerde]
+  ru: жалоба, претензия
+  en: complaint, moan
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beschwerdebrief
+  lemma: Beschwerdebrief
+  gender: [m]
+  plural: [Beschwerdebriefe]
+  gen_sg: [Beschwerdebriefes, Beschwerdebriefs]
+  ru: письменная жалоба, письменная претензия
+  en: complaint letter
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Besichtigung
+  lemma: Besichtigung
+  gender: [f]
+  plural: [Besichtigungen]
+  gen_sg: [Besichtigung]
+  ru: осмотр, освидетельствование
+  en: inspection, viewing
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Besprechung
+  lemma: Besprechung
+  gender: [f]
+  plural: [Besprechungen]
+  gen_sg: [Besprechung]
+  ru: совещание
+  en: meeting, discussion
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bestseller
+  lemma: Bestseller
+  gender: [m]
+  plural: [Bestseller]
+  gen_sg: [Bestsellers]
+  ru: бестселлер
+  en: bestseller, best seller
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bestätigung
+  lemma: Bestätigung
+  gender: [f]
+  plural: [Bestätigungen]
+  gen_sg: [Bestätigung]
+  ru: подтверждение
+  en: acknowledgement, confirmaton
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Betrag
+  lemma: Betrag
+  gender: [m]
+  plural: [Beträge]
+  gen_sg: [Betrages, Betrags]
+  ru: сумма
+  en: amount, extent
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Betreuung
+  lemma: Betreuung
+  gender: [f]
+  plural: [Betreuungen]
+  gen_sg: [Betreuung]
+  ru: опека
+  en: care
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Betriebskosten
+  lemma: Betriebskosten
+  gender: []
+  plural: [Betriebskosten]
+  gen_sg: []
+  number: pl
+  ru: null
+  en: overhead, overheads
+  freq: 48000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Betriebsrat
+  lemma: Betriebsrat
+  gender: [m]
+  plural: [Betriebsräte]
+  gen_sg: [Betriebsrates, Betriebsrats]
+  ru: производственный совет
+  en: works council
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bett
+  lemma: Bett
+  gender: [n]
+  plural: [Betten]
+  gen_sg: [Betts, Bettes]
+  ru: кровать
+  en: bed
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bevölkerung
+  lemma: Bevölkerung
+  gender: [f]
+  plural: [Bevölkerungen]
+  gen_sg: [Bevölkerung]
+  ru: население
+  en: population
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bewegung
+  lemma: Bewegung
+  gender: [f]
+  plural: [Bewegungen]
+  gen_sg: [Bewegung]
+  ru: движение, шевеление
+  en: movement, move
+  freq: 1000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beweis
+  lemma: Beweis
+  gender: [m]
+  plural: [Beweise]
+  gen_sg: [Beweises]
+  ru: доказательство, довод
+  en: evidence
+  freq: 1000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beweislage
+  lemma: Beweislage
+  gender: [f]
+  plural: [Beweislagen]
+  gen_sg: [Beweislage]
+  ru: null
+  en: null
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beweisstück
+  lemma: Beweisstück
+  gender: [n]
+  plural: [Beweisstücke]
+  gen_sg: [Beweisstücks, Beweisstückes]
+  ru: вещественное доказательство
+  en: piece of evidence, exhibit
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bewerbung
+  lemma: Bewerbung
+  gender: [f]
+  plural: [Bewerbungen]
+  gen_sg: [Bewerbung]
+  ru: просьба, заявка
+  en: application
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bewusstlosigkeit
+  lemma: Bewusstlosigkeit
+  gender: [f]
+  plural: []
+  gen_sg: [Bewusstlosigkeit]
+  ru: бессознательное состояние
+  en: unconsciousness
+  freq: 33000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Beziehung
+  lemma: Beziehung
+  gender: [f]
+  plural: [Beziehungen]
+  gen_sg: [Beziehung]
+  ru: отношение
+  en: relation, relationship
+  freq: 1000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bibliothek
+  lemma: Bibliothek
+  gender: [f]
+  plural: [Bibliotheken]
+  gen_sg: [Bibliothek]
+  ru: библиотека
+  en: library
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bibliothekar
+  lemma: Bibliothekar
+  gender: [m]
+  plural: [Bibliothekare]
+  gen_sg: [Bibliothekars]
+  ru: библиотекарь
+  en: librarian
+  freq: 21000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Biene
+  lemma: Biene
+  gender: [f]
+  plural: [Bienen]
+  gen_sg: [Biene]
+  ru: пчела
+  en: bee, honeybee
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bier
+  lemma: Bier
+  gender: [n]
+  plural: [Biere]
+  gen_sg: [Bieres, Biers]
+  ru: пиво
+  en: beer, ale
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bild
+  lemma: Bild
+  gender: [n]
+  plural: [Bilder]
+  gen_sg: [Bilds, Bildes]
+  ru: картина
+  en: picture, painting
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bildschirm
+  lemma: Bildschirm
+  gender: [m]
+  plural: [Bildschirme]
+  gen_sg: [Bildschirmes, Bildschirms]
+  ru: экран
+  en: screen
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bildung
+  lemma: Bildung
+  sense: образование
+  gender: [f]
+  plural: [Bildungen]
+  gen_sg: [Bildung]
+  ru: образование
+  en: formation, creation
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bildung:2
+  lemma: Bildung
+  sense: образование
+  gender: [f]
+  plural: []
+  gen_sg: [Bildung]
+  ru: образование
+  en: education, cultivation
+  freq: 8000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Binnenland
+  lemma: Binnenland
+  gender: [n]
+  plural: [Binnenländer]
+  gen_sg: [Binnenlandes, Binnenlands]
+  ru: местность, удалённая от моря
+  en: inland
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Biologie
+  lemma: Biologie
+  gender: [f]
+  plural: []
+  gen_sg: [Biologie]
+  ru: биология
+  en: biology
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Birne
+  lemma: Birne
+  gender: [f]
+  plural: [Birnen]
+  gen_sg: [Birne]
+  ru: груша
+  en: pear
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bitte
+  lemma: Bitte
+  gender: [f]
+  plural: [Bitten]
+  gen_sg: [Bitte]
+  ru: просьба
+  en: plea, request
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blatt
+  lemma: Blatt
+  gender: [n]
+  plural: [Blätter]
+  gen_sg: [Blatts, Blattes]
+  ru: лист
+  en: leaf
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blaulicht
+  lemma: Blaulicht
+  gender: [n]
+  plural: [Blaulichter]
+  gen_sg: [Blaulichtes, Blaulichts]
+  ru: синий свет
+  en: emergency flashing light, flashing lights
+  freq: 29000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bleistift
+  lemma: Bleistift
+  gender: [m]
+  plural: [Bleistifte]
+  gen_sg: [Bleistifts, Bleistiftes]
+  ru: карандаш
+  en: pencil
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blick
+  lemma: Blick
+  gender: [m]
+  plural: [Blicke]
+  gen_sg: [Blicks, Blickes]
+  ru: взгляд
+  en: look, glance
+  freq: 2000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blinker
+  lemma: Blinker
+  gender: [m]
+  plural: [Blinker]
+  gen_sg: [Blinkers]
+  ru: поворотник
+  en: indicator, blinker
+  freq: 28000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blitz
+  lemma: Blitz
+  gender: [m]
+  plural: [Blitze]
+  gen_sg: [Blitzes]
+  ru: молния
+  en: flash, lightning
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blume
+  lemma: Blume
+  gender: [f]
+  plural: [Blumen]
+  gen_sg: [Blume]
+  ru: цветок
+  en: flower
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blumenstrauß
+  lemma: Blumenstrauß
+  gender: [m]
+  plural: [Blumensträuße]
+  gen_sg: [Blumenstraußes]
+  ru: букет цветов
+  en: bouquet, flower bouquet
+  freq: 21000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bluse
+  lemma: Bluse
+  gender: [f]
+  plural: [Blusen]
+  gen_sg: [Bluse]
+  ru: блуза
+  en: blouse
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blut
+  lemma: Blut
+  gender: [n]
+  plural: [Blute]
+  gen_sg: [Bluts, Blutes]
+  ru: кровь
+  en: blood
+  freq: 1000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Blutdruck
+  lemma: Blutdruck
+  gender: [m]
+  plural: [Blutdrucke, Blutdrücke]
+  gen_sg: [Blutdruckes, Blutdrucks]
+  ru: кровяное давление
+  en: blood pressure
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Boden
+  lemma: Boden
+  gender: [m]
+  plural: [Böden]
+  gen_sg: [Bodens]
+  ru: пол
+  en: ground, soil
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bohrer
+  lemma: Bohrer
+  gender: [m]
+  plural: [Bohrer]
+  gen_sg: [Bohrers]
+  ru: сверло
+  en: drill
+  freq: 20000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bohrfutter
+  lemma: Bohrfutter
+  gender: [n]
+  plural: [Bohrfutter]
+  gen_sg: [Bohrfutters]
+  ru: техн. сверлильный патрон
+  en: chuck
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bohrmaschine
+  lemma: Bohrmaschine
+  gender: [f]
+  plural: [Bohrmaschinen]
+  gen_sg: [Bohrmaschine]
+  ru: дрель, перфоратор
+  en: drill
+  freq: 31000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Boot
+  lemma: Boot
+  sense: лодка
+  gender: [n]
+  plural: [Boote, Böte]
+  gen_sg: [Boots, Bootes]
+  ru: лодка
+  en: boat
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Boot:2
+  lemma: Boot
+  sense: ботинок
+  gender: [m]
+  plural: [Boots]
+  gen_sg: [Boots]
+  ru: ботинок, бот
+  en: boot
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Boulevard
+  lemma: Boulevard
+  gender: [m]
+  plural: [Boulevards]
+  gen_sg: [Boulevards]
+  ru: бульвар
+  en: boulevard
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brand
+  lemma: Brand
+  gender: [m]
+  plural: [Brände]
+  gen_sg: [Brandes, Brands]
+  ru: пожар
+  en: fire, blaze
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brandgefahr
+  lemma: Brandgefahr
+  gender: [f]
+  plural: [Brandgefahren]
+  gen_sg: [Brandgefahr]
+  ru: угроза пожара
+  en: fire hazard
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brandmelder
+  lemma: Brandmelder
+  gender: [m]
+  plural: [Brandmelder]
+  gen_sg: [Brandmelders]
+  ru: пожарный датчик
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brauch
+  lemma: Brauch
+  gender: [m]
+  plural: [Bräuche]
+  gen_sg: [Brauchs, Brauches]
+  ru: обычай
+  en: custom, practice
+  freq: 600
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brauchtum
+  lemma: Brauchtum
+  gender: [n]
+  plural: [Brauchtümer]
+  gen_sg: [Brauchtums]
+  ru: обычай
+  en: traditional customs
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Breite
+  lemma: Breite
+  gender: [f]
+  plural: [Breiten]
+  gen_sg: [Breite]
+  ru: ширина
+  en: width, breadth
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Breitengrad
+  lemma: Breitengrad
+  gender: [m]
+  plural: [Breitengrade]
+  gen_sg: [Breitengrads, Breitengrades]
+  ru: градус широты
+  en: latitude
+  freq: 26000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bremse
+  lemma: Bremse
+  sense: тормоз
+  gender: [f]
+  plural: [Bremsen]
+  gen_sg: [Bremse]
+  ru: тормоз
+  en: brake
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bremse:2
+  lemma: Bremse
+  sense: слепень
+  gender: [f]
+  plural: [Bremsen]
+  gen_sg: [Bremse]
+  ru: слепень
+  en: gadfly, horsefly
+  freq: 7000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bremsflüssigkeit
+  lemma: Bremsflüssigkeit
+  gender: [f]
+  plural: [Bremsflüssigkeiten]
+  gen_sg: [Bremsflüssigkeit]
+  ru: тормозная жидкость
+  en: brake fluid
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brett
+  lemma: Brett
+  gender: [n]
+  plural: [Bretter]
+  gen_sg: [Brettes, Bretts]
+  ru: доска
+  en: plank, board
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brettspiel
+  lemma: Brettspiel
+  gender: [n]
+  plural: [Brettspiele]
+  gen_sg: [Brettspieles, Brettspiels]
+  ru: настольная игра
+  en: board game
+  freq: 25000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brief
+  lemma: Brief
+  gender: [m]
+  plural: [Briefe]
+  gen_sg: [Briefes, Briefs]
+  ru: письмо
+  en: letter
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Briefkasten
+  lemma: Briefkasten
+  gender: [m]
+  plural: [Briefkästen, Briefkasten]
+  gen_sg: [Briefkastens]
+  ru: почтовый ящик
+  en: mailbox, letterbox
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Briefkastenschlüssel
+  lemma: Briefkastenschlüssel
+  gender: [m]
+  plural: [Briefkastenschlüssel]
+  gen_sg: [Briefkastenschlüssels]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Briefmarke
+  lemma: Briefmarke
+  gender: [f]
+  plural: [Briefmarken]
+  gen_sg: [Briefmarke]
+  ru: почтовая марка
+  en: postage stamp, stamp
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Briefpapier
+  lemma: Briefpapier
+  gender: [n]
+  plural: [Briefpapiere]
+  gen_sg: [Briefpapieres, Briefpapiers]
+  ru: почтовая бумага
+  en: letter paper
+  freq: 28000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Briefträger
+  lemma: Briefträger
+  gender: [m]
+  plural: [Briefträger]
+  gen_sg: [Briefträgers]
+  ru: почтальон
+  en: postman, mailman
+  freq: 22000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Briefumschlag
+  lemma: Briefumschlag
+  gender: [m]
+  plural: [Briefumschläge]
+  gen_sg: [Briefumschlages, Briefumschlags]
+  ru: конверт
+  en: envelope
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brille
+  lemma: Brille
+  gender: [f]
+  plural: [Brillen]
+  gen_sg: [Brille]
+  ru: очки
+  en: goggles
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brot
+  lemma: Brot
+  gender: [n]
+  plural: [Brote]
+  gen_sg: [Brots, Brotes]
+  ru: хлеб
+  en: bread
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brotdose
+  lemma: Brotdose
+  gender: [f]
+  plural: [Brotdosen]
+  gen_sg: [Brotdose]
+  ru: контейнер для бутербродов, тормозок
+  en: lunchbox
+  freq: 40000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bruch
+  lemma: Bruch
+  sense: дробь
+  gender: [m]
+  plural: [Brüche]
+  gen_sg: [Bruchs, Bruches]
+  ru: дробь
+  en: break, rupture
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bruch:2
+  lemma: Bruch
+  sense: поломка
+  gender: [m, n]
+  plural: [Brüche, Brücher]
+  gen_sg: [Bruchs, Bruches]
+  ru: поломка, процесс ломания
+  en: marsh
+  freq: 7000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bruder
+  lemma: Bruder
+  gender: [m]
+  plural: [Brüder]
+  gen_sg: [Bruders]
+  ru: брат
+  en: brother
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brust
+  lemma: Brust
+  gender: [f]
+  plural: [Brüste]
+  gen_sg: [Brust]
+  ru: грудь
+  en: breast, chest
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brötchen
+  lemma: Brötchen
+  gender: [n]
+  plural: [Brötchen]
+  gen_sg: [Brötchens]
+  ru: булочка
+  en: bread roll, roll
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Brücke
+  lemma: Brücke
+  gender: [f]
+  plural: [Brücken]
+  gen_sg: [Brücke]
+  ru: мост
+  en: bridge
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Buch
+  lemma: Buch
+  gender: [n]
+  plural: [Bücher]
+  gen_sg: [Buchs, Buches]
+  ru: книга
+  en: book
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Buchhandlung
+  lemma: Buchhandlung
+  gender: [f]
+  plural: [Buchhandlungen]
+  gen_sg: [Buchhandlung]
+  ru: книжный магазин
+  en: bookstore, bookshop
+  freq: 20000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Budget
+  lemma: Budget
+  gender: [n]
+  plural: [Budgets]
+  gen_sg: [Budgets]
+  ru: бюджет
+  en: budget
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bundeskanzler
+  lemma: Bundeskanzler
+  gender: [m]
+  plural: [Bundeskanzler]
+  gen_sg: [Bundeskanzlers]
+  ru: федеральный канцлер
+  en: Federal Chancellor
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bundesland
+  lemma: Bundesland
+  gender: [n]
+  plural: [Bundesländer]
+  gen_sg: [Bundeslandes, Bundeslands]
+  ru: федеральная земля
+  en: federal state, state
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bundesregierung
+  lemma: Bundesregierung
+  gender: [f]
+  plural: [Bundesregierungen]
+  gen_sg: [Bundesregierung]
+  ru: федеральное правительство
+  en: federal government
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bundesrepublik
+  lemma: Bundesrepublik
+  gender: [f]
+  plural: [Bundesrepubliken]
+  gen_sg: [Bundesrepublik]
+  ru: федеративная республика
+  en: federal republic
+  freq: 30000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bundestag
+  lemma: Bundestag
+  gender: [m]
+  plural: [Bundestage]
+  gen_sg: [Bundestages, Bundestags]
+  ru: бундестаг
+  en: Bundestag, Lower House
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bus
+  lemma: Bus
+  sense: автобус
+  gender: [m]
+  plural: [Busse]
+  gen_sg: [Busses]
+  ru: автобус
+  en: bus, coach
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bus:2
+  lemma: Bus
+  sense: автобус
+  gender: [m, f]
+  plural: [Buses]
+  gen_sg: [Buses, Bus]
+  ru: автобус
+  en: bus
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bus:3
+  lemma: Bus
+  sense: магистраль
+  gender: [m]
+  plural: [Busse]
+  gen_sg: [Busses]
+  ru: магистраль
+  en: bus
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bus:4
+  lemma: Bus
+  sense: автобус
+  gender: [m]
+  plural: []
+  gen_sg: [Bus]
+  ru: автобус
+  en: bus
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Busbahnhof
+  lemma: Busbahnhof
+  gender: [m]
+  plural: [Busbahnhöfe]
+  gen_sg: [Busbahnhofes, Busbahnhofs]
+  ru: автовокзал
+  en: bus terminal
+  freq: 200
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Busfahrer
+  lemma: Busfahrer
+  gender: [m]
+  plural: [Busfahrer]
+  gen_sg: [Busfahrers]
+  ru: водитель автобуса
+  en: bus driver
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bushaltestelle
+  lemma: Bushaltestelle
+  gender: [f]
+  plural: [Bushaltestellen]
+  gen_sg: [Bushaltestelle]
+  ru: автобусная остановка
+  en: bus stop, bus shelter
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Buslinie
+  lemma: Buslinie
+  gender: [f]
+  plural: [Buslinien]
+  gen_sg: [Buslinie]
+  ru: автобусный маршрут
+  en: bus route, bus line
+  freq: 49000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Busverbindung
+  lemma: Busverbindung
+  gender: [f]
+  plural: [Busverbindungen]
+  gen_sg: [Busverbindung]
+  ru: автобусное сообщение
+  en: null
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Butter
+  lemma: Butter
+  sense: сливочное масло
+  gender: [f, m, n]
+  plural: []
+  gen_sg: [Butter, Butters]
+  ru: сливочное масло
+  en: butter
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Butter:2
+  lemma: Butter
+  sense: масло
+  gender: [n]
+  plural: [Butters]
+  gen_sg: [Butters]
+  ru: масло
+  en: butter
+  freq: 7000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bußgeld
+  lemma: Bußgeld
+  gender: [n]
+  plural: [Bußgelder]
+  gen_sg: [Bußgeldes, Bußgelds]
+  ru: штраф
+  en: fine
+  freq: 22000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bäcker
+  lemma: Bäcker
+  gender: [m]
+  plural: [Bäcker]
+  gen_sg: [Bäckers]
+  ru: пекарь
+  en: baker
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bäckerei
+  lemma: Bäckerei
+  gender: [f]
+  plural: [Bäckereien]
+  gen_sg: [Bäckerei]
+  ru: булочная
+  en: bakery, bread shop
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bär
+  lemma: Bär
+  sense: медведь
+  gender: [m]
+  plural: [Bären]
+  gen_sg: [Bären]
+  ru: медведь
+  en: bear
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bär:2
+  lemma: Bär
+  sense: зоол. медведь
+  gender: [m]
+  plural: [Bären, Bäre]
+  gen_sg: [Bärs]
+  ru: зоол. медведь, вульг. вульва
+  en: mechanical ram
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bügeleisen
+  lemma: Bügeleisen
+  gender: [n]
+  plural: [Bügeleisen]
+  gen_sg: [Bügeleisens]
+  ru: утюг
+  en: iron, flat iron
+  freq: 24000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bügelsäge
+  lemma: Bügelsäge
+  gender: [f]
+  plural: [Bügelsägen]
+  gen_sg: [Bügelsäge]
+  ru: лучковая пила
+  en: bow saw
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bühne
+  lemma: Bühne
+  gender: [f]
+  plural: [Bühnen]
+  gen_sg: [Bühne]
+  ru: сцена
+  en: stage, theatre
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bürger
+  lemma: Bürger
+  gender: [m]
+  plural: [Bürger]
+  gen_sg: [Bürgers]
+  ru: гражданин, горожанин
+  en: inhabitant, citizen
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bürgerinitiative
+  lemma: Bürgerinitiative
+  gender: [f]
+  plural: [Bürgerinitiativen]
+  gen_sg: [Bürgerinitiative]
+  ru: гражданская инициатива
+  en: citizens' action committee, citizens' action group
+  freq: 29000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bürgermeister
+  lemma: Bürgermeister
+  gender: [m]
+  plural: [Bürgermeister]
+  gen_sg: [Bürgermeisters]
+  ru: бургомистр, мэр
+  en: mayor, provost
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bürgermeisterin
+  lemma: Bürgermeisterin
+  gender: [f]
+  plural: [Bürgermeisterinnen]
+  gen_sg: [Bürgermeisterin]
+  ru: жена бургомистра
+  en: mayor
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Büro
+  lemma: Büro
+  gender: [n]
+  plural: [Büros]
+  gen_sg: [Büros]
+  ru: офис
+  en: office, bureau
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Bürste
+  lemma: Bürste
+  gender: [f]
+  plural: [Bürsten]
+  gen_sg: [Bürste]
+  ru: щётка
+  en: brush
+  freq: 18000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

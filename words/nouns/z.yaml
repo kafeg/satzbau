@@ -1,0 +1,883 @@
+- id: n:Zahl
+  lemma: Zahl
+  gender: [f]
+  plural: [Zahlen]
+  gen_sg: [Zahl]
+  ru: число
+  en: number, figure
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zahn
+  lemma: Zahn
+  gender: [m]
+  plural: [Zähne]
+  gen_sg: [Zahns, Zahnes]
+  ru: зуб
+  en: tooth
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zahnarzt
+  lemma: Zahnarzt
+  gender: [m]
+  plural: [Zahnärzte]
+  gen_sg: [Zahnarztes]
+  ru: стоматолог
+  en: dentist
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zahnbürste
+  lemma: Zahnbürste
+  gender: [f]
+  plural: [Zahnbürsten]
+  gen_sg: [Zahnbürste]
+  ru: зубная щётка
+  en: toothbrush
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zahnpasta
+  lemma: Zahnpasta
+  gender: [f]
+  plural: [Zahnpasten]
+  gen_sg: [Zahnpasta]
+  ru: зубная паста
+  en: toothpaste
+  freq: 21000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zahnseide
+  lemma: Zahnseide
+  gender: [f]
+  plural: [Zahnseiden]
+  gen_sg: [Zahnseide]
+  ru: зубная нить
+  en: dental floss
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zange
+  lemma: Zange
+  gender: [f]
+  plural: [Zangen]
+  gen_sg: [Zange]
+  ru: щипцы, кусачки
+  en: pliers tongs pincers
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zaun
+  lemma: Zaun
+  gender: [m]
+  plural: [Zäune]
+  gen_sg: [Zaunes, Zauns]
+  ru: забор
+  en: fence
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zebra
+  lemma: Zebra
+  sense: зебра
+  gender: [n]
+  plural: [Zebras]
+  gen_sg: [Zebras]
+  ru: зебра
+  en: zebra
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zebra:2
+  lemma: Zebra
+  sense: зоол. зебра
+  gender: [n]
+  plural: [Zebras]
+  gen_sg: [Zebras]
+  ru: зоол. зебра
+  en: zebra
+  freq: 10000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zebrastreifen
+  lemma: Zebrastreifen
+  gender: [m]
+  plural: [Zebrastreifen]
+  gen_sg: [Zebrastreifens]
+  ru: зебра
+  en: zebra stripes
+  freq: 49000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zehntel
+  lemma: Zehntel
+  gender: [n, m]
+  plural: [Zehntel]
+  gen_sg: [Zehntels]
+  ru: null
+  en: tenth
+  freq: 36000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zehntel:2
+  lemma: Zehntel
+  gender: [f]
+  plural: [Zehntel]
+  gen_sg: [Zehntel]
+  ru: null
+  en: tenth
+  freq: 36000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeit
+  lemma: Zeit
+  gender: [f]
+  plural: [Zeiten]
+  gen_sg: [Zeit]
+  ru: время
+  en: time
+  freq: 200
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeitpunkt
+  lemma: Zeitpunkt
+  gender: [m]
+  plural: [Zeitpunkte]
+  gen_sg: [Zeitpunktes, Zeitpunkts]
+  ru: момент
+  en: moment
+  freq: 2000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeitraum
+  lemma: Zeitraum
+  gender: [m]
+  plural: [Zeiträume]
+  gen_sg: [Zeitraums, Zeitraumes]
+  ru: период
+  en: period, space
+  freq: 12000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeitschrift
+  lemma: Zeitschrift
+  gender: [f]
+  plural: [Zeitschriften]
+  gen_sg: [Zeitschrift]
+  ru: журнал
+  en: magazine, journal
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeitumstellung
+  lemma: Zeitumstellung
+  gender: [f]
+  plural: [Zeitumstellungen]
+  gen_sg: [Zeitumstellung]
+  ru: перевод времени
+  en: time change
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeitung
+  lemma: Zeitung
+  gender: [f]
+  plural: [Zeitungen]
+  gen_sg: [Zeitung]
+  ru: газета
+  en: newspaper, paper
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeitzone
+  lemma: Zeitzone
+  gender: [f]
+  plural: [Zeitzonen]
+  gen_sg: [Zeitzone]
+  ru: часовой пояс, временная зона
+  en: time zone
+  freq: 23000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zelt
+  lemma: Zelt
+  sense: палатка
+  gender: [n]
+  plural: [Zelte]
+  gen_sg: [Zelts, Zeltes]
+  ru: палатка
+  en: tent
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zelt:2
+  lemma: Zelt
+  sense: палатка
+  gender: [m]
+  plural: []
+  gen_sg: [Zelts, Zeltes]
+  ru: палатка, шатёр
+  en: tent, marquee
+  freq: 8000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zelt:3
+  lemma: Zelt
+  sense: палатка
+  gender: [m]
+  plural: [Zelte]
+  gen_sg: [Zeltes]
+  ru: палатка, шатёр
+  en: tent, marquee
+  freq: 8000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zement
+  lemma: Zement
+  gender: [m, n]
+  plural: [Zemente]
+  gen_sg: [Zements, Zementes]
+  ru: цемент
+  en: cement
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zensur
+  lemma: Zensur
+  gender: [f]
+  plural: [Zensuren]
+  gen_sg: [Zensur]
+  ru: цензура
+  en: mark, grade
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zentimeter
+  lemma: Zentimeter
+  gender: [m, n]
+  plural: [Zentimeter]
+  gen_sg: [Zentimeters]
+  ru: сантиметр
+  en: centimetre, centimeter
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zentrum
+  lemma: Zentrum
+  gender: [n]
+  plural: [Zentren]
+  gen_sg: [Zentrums]
+  ru: центр
+  en: centre, center
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeremonie
+  lemma: Zeremonie
+  gender: [f]
+  plural: [Zeremonien]
+  gen_sg: [Zeremonie]
+  ru: церемония
+  en: ceremony
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zertifikat
+  lemma: Zertifikat
+  gender: [n]
+  plural: [Zertifikate]
+  gen_sg: [Zertifikats, Zertifikates]
+  ru: сертификат
+  en: certificate
+  freq: 28000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeuge
+  lemma: Zeuge
+  gender: [m]
+  plural: [Zeugen]
+  gen_sg: [Zeugen]
+  ru: свидетель, очевидец
+  en: witness
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeugin
+  lemma: Zeugin
+  gender: [f]
+  plural: [Zeuginnen]
+  gen_sg: [Zeugin]
+  ru: свидетельница
+  en: witness
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zeugnis
+  lemma: Zeugnis
+  gender: [n]
+  plural: [Zeugnisse]
+  gen_sg: [Zeugnisses]
+  ru: свидетельство, показание
+  en: testimony
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ziege
+  lemma: Ziege
+  gender: [f]
+  plural: [Ziegen]
+  gen_sg: [Ziege]
+  ru: коза
+  en: goat
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ziffer
+  lemma: Ziffer
+  gender: [f]
+  plural: [Ziffern]
+  gen_sg: [Ziffer]
+  ru: цифра
+  en: digit, numeral
+  freq: 20000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zimmer
+  lemma: Zimmer
+  gender: [n]
+  plural: [Zimmer]
+  gen_sg: [Zimmers]
+  ru: комната
+  en: room, chamber
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zinnsoldat
+  lemma: Zinnsoldat
+  gender: [m]
+  plural: [Zinnsoldaten]
+  gen_sg: [Zinnsoldaten]
+  ru: оловянный солдатик
+  en: tin soldier
+  freq: 50000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zins
+  lemma: Zins
+  gender: [m]
+  plural: [Zinsen, Zinse]
+  gen_sg: [Zinses]
+  ru: процент
+  en: interest
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zinssatz
+  lemma: Zinssatz
+  gender: [m]
+  plural: [Zinssätze]
+  gen_sg: [Zinssatzes]
+  ru: процентная ставка
+  en: interest rate, coupon
+  freq: 32000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zitrone
+  lemma: Zitrone
+  gender: [f]
+  plural: [Zitronen]
+  gen_sg: [Zitrone]
+  ru: лимон
+  en: lemon
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zoll
+  lemma: Zoll
+  sense: таможня
+  gender: [m]
+  plural: [Zölle]
+  gen_sg: [Zolls, Zolles]
+  ru: таможня
+  en: customs, toll
+  freq: 12000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zoll:2
+  lemma: Zoll
+  sense: дюйм
+  gender: [m, n]
+  plural: [Zoll]
+  gen_sg: [Zolls]
+  ru: дюйм
+  en: inch
+  freq: 12000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zollamt
+  lemma: Zollamt
+  gender: [n]
+  plural: [Zollämter]
+  gen_sg: [Zollamtes, Zollamts]
+  ru: null
+  en: customs office, custom office
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zollstock
+  lemma: Zollstock
+  gender: [m]
+  plural: [Zollstöcke]
+  gen_sg: [Zollstockes, Zollstocks]
+  ru: складной метр
+  en: folding rule
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zoo
+  lemma: Zoo
+  gender: [m]
+  plural: [Zoos]
+  gen_sg: [Zoos]
+  ru: зоопарк
+  en: zoo
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zopf
+  lemma: Zopf
+  gender: [m]
+  plural: [Zöpfe]
+  gen_sg: [Zopfes, Zopfs]
+  ru: коса
+  en: plait, braid
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zucker
+  lemma: Zucker
+  gender: [m]
+  plural: [Zucker]
+  gen_sg: [Zuckers]
+  ru: сахар
+  en: sugar
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zufriedenheit
+  lemma: Zufriedenheit
+  gender: [f]
+  plural: []
+  gen_sg: [Zufriedenheit]
+  ru: удовлетворённость
+  en: satisfaction, content
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zug
+  lemma: Zug
+  gender: [m]
+  plural: [Züge]
+  gen_sg: [Zuges, Zugs]
+  ru: поезд
+  en: train
+  freq: 1000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zugang
+  lemma: Zugang
+  gender: [m]
+  plural: [Zugänge]
+  gen_sg: [Zugangs, Zuganges]
+  ru: доступ
+  en: access
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zugeständnis
+  lemma: Zugeständnis
+  gender: [n]
+  plural: [Zugeständnisse]
+  gen_sg: [Zugeständnisses]
+  ru: уступка
+  en: concession
+  freq: 21000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zulassung
+  lemma: Zulassung
+  gender: [f]
+  plural: [Zulassungen]
+  gen_sg: [Zulassung]
+  ru: допуск, приём
+  en: admission, approval
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zuneigung
+  lemma: Zuneigung
+  gender: [f]
+  plural: [Zuneigungen]
+  gen_sg: [Zuneigung]
+  ru: симпатия
+  en: affection
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zusage
+  lemma: Zusage
+  gender: [f]
+  plural: [Zusagen]
+  gen_sg: [Zusage]
+  ru: обещание, согласие
+  en: covenant, commitment
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zusammenhang
+  lemma: Zusammenhang
+  gender: [m]
+  plural: [Zusammenhänge]
+  gen_sg: [Zusammenhanges, Zusammenhangs]
+  ru: связь
+  en: coherence, context
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zuschauer
+  lemma: Zuschauer
+  gender: [m]
+  plural: [Zuschauer]
+  gen_sg: [Zuschauers]
+  ru: зритель
+  en: spectator, viewer
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zuschlag
+  lemma: Zuschlag
+  gender: [m]
+  plural: [Zuschläge]
+  gen_sg: [Zuschlages, Zuschlags]
+  ru: прибавка, надбавка
+  en: surcharge, supplement
+  freq: 24000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zusteller
+  lemma: Zusteller
+  gender: [m]
+  plural: [Zusteller]
+  gen_sg: [Zustellers]
+  ru: почтальон, письмоносец
+  en: deliveryman, delivery agent
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zustellerin
+  lemma: Zustellerin
+  gender: [f]
+  plural: [Zustellerinnen]
+  gen_sg: [Zustellerin]
+  ru: null
+  en: delivery agent, deliveryman
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zustellung
+  lemma: Zustellung
+  gender: [f]
+  plural: [Zustellungen]
+  gen_sg: [Zustellung]
+  ru: доставка
+  en: delivery, notification
+  freq: 49000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zustimmung
+  lemma: Zustimmung
+  gender: [f]
+  plural: [Zustimmungen]
+  gen_sg: [Zustimmung]
+  ru: согласие, одобрение
+  en: agreement, consent
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zuständigkeit
+  lemma: Zuständigkeit
+  gender: [f]
+  plural: [Zuständigkeiten]
+  gen_sg: [Zuständigkeit]
+  ru: принадлежность, компетентность
+  en: responsibility, competence
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zutat
+  lemma: Zutat
+  gender: [f]
+  plural: [Zutaten]
+  gen_sg: [Zutat]
+  ru: ингредиент
+  en: ingredient
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zuwanderer
+  lemma: Zuwanderer
+  gender: [m]
+  plural: [Zuwanderer]
+  gen_sg: [Zuwanderers]
+  ru: иммигрант
+  en: newcomer
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zuwanderung
+  lemma: Zuwanderung
+  gender: [f]
+  plural: [Zuwanderungen]
+  gen_sg: [Zuwanderung]
+  ru: иммиграция
+  en: immigration
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zweifel
+  lemma: Zweifel
+  gender: [m]
+  plural: [Zweifel]
+  gen_sg: [Zweifels]
+  ru: сомнение
+  en: doubt
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zweifelsfall
+  lemma: Zweifelsfall
+  gender: [m]
+  plural: [Zweifelsfälle]
+  gen_sg: [Zweifelsfalls, Zweifelsfalles]
+  ru: сомнительный случай
+  en: case of doubt
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zweitsprache
+  lemma: Zweitsprache
+  gender: [f]
+  plural: [Zweitsprachen]
+  gen_sg: [Zweitsprache]
+  ru: второй язык
+  en: second language
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zwiebel
+  lemma: Zwiebel
+  gender: [f, m]
+  plural: [Zwiebeln]
+  gen_sg: [Zwiebel, Zwiebels]
+  ru: лук
+  en: onion
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zwilling
+  lemma: Zwilling
+  gender: [m]
+  plural: [Zwillinge]
+  gen_sg: [Zwillings]
+  ru: близнец
+  en: twin
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zwischenlösung
+  lemma: Zwischenlösung
+  gender: [f]
+  plural: [Zwischenlösungen]
+  gen_sg: [Zwischenlösung]
+  ru: компромисс, компромиссное решение
+  en: interim solution, temporary solution
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zwischenruf
+  lemma: Zwischenruf
+  gender: [m]
+  plural: [Zwischenrufe]
+  gen_sg: [Zwischenrufes, Zwischenrufs]
+  ru: реплика
+  en: null
+  freq: 49000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zündkerze
+  lemma: Zündkerze
+  gender: [f]
+  plural: [Zündkerzen]
+  gen_sg: [Zündkerze]
+  ru: свеча зажигания
+  en: spark plug, sparking plug
+  freq: 25000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Zündung
+  lemma: Zündung
+  gender: [f]
+  plural: [Zündungen]
+  gen_sg: [Zündung]
+  ru: зажигание
+  en: ignition firing
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}

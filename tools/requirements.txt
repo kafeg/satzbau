@@ -1,0 +1,4 @@
+PyYAML>=6
+spacy==3.8.18
+spacy-transformers
+de_dep_news_trf @ https://github.com/explosion/spacy-models/releases/download/de_dep_news_trf-3.8.0/de_dep_news_trf-3.8.0-py3-none-any.whl

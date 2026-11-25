@@ -1,0 +1,1300 @@
+- id: n:Haar
+  lemma: Haar
+  gender: [n]
+  plural: [Haare]
+  gen_sg: [Haars, Haares]
+  ru: волосы
+  en: hair
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haarbürste
+  lemma: Haarbürste
+  gender: [f]
+  plural: [Haarbürsten]
+  gen_sg: [Haarbürste]
+  ru: null
+  en: hairbrush
+  freq: 34000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haarfarbe
+  lemma: Haarfarbe
+  gender: [f]
+  plural: [Haarfarben]
+  gen_sg: [Haarfarbe]
+  ru: цвет волос
+  en: hair color, hair colour
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haarschnitt
+  lemma: Haarschnitt
+  gender: [m]
+  plural: [Haarschnitte]
+  gen_sg: [Haarschnitts, Haarschnittes]
+  ru: стрижка
+  en: haircut
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haarspray
+  lemma: Haarspray
+  gender: [m, n]
+  plural: [Haarsprays]
+  gen_sg: [Haarsprays]
+  ru: null
+  en: hair spray, hairspray
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haartrockner
+  lemma: Haartrockner
+  gender: [m]
+  plural: [Haartrockner]
+  gen_sg: [Haartrockners]
+  ru: null
+  en: hairdryer, hairdrier
+  freq: 47000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hafen
+  lemma: Hafen
+  gender: [m]
+  plural: [Häfen]
+  gen_sg: [Hafens]
+  ru: порт, гавань
+  en: port, harbour
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haftung
+  lemma: Haftung
+  gender: [f]
+  plural: [Haftungen]
+  gen_sg: [Haftung]
+  ru: юр. материальная ответственность, порука
+  en: liability, guarantee
+  freq: 26000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Halbpension
+  lemma: Halbpension
+  gender: [f]
+  plural: []
+  gen_sg: [Halbpension]
+  ru: null
+  en: half board
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Halbzeit
+  lemma: Halbzeit
+  gender: [f]
+  plural: [Halbzeiten]
+  gen_sg: [Halbzeit]
+  ru: тайм
+  en: half-time
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hals
+  lemma: Hals
+  gender: [m]
+  plural: [Hälse]
+  gen_sg: [Halses]
+  ru: шея, горло
+  en: neck
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haltbarkeit
+  lemma: Haltbarkeit
+  gender: [f]
+  plural: [Haltbarkeiten]
+  gen_sg: [Haltbarkeit]
+  ru: прочность, носкость
+  en: durability, long-lastingness
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haltegriff
+  lemma: Haltegriff
+  gender: [m]
+  plural: [Haltegriffe]
+  gen_sg: [Haltegriffes, Haltegriffs]
+  ru: null
+  en: null
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haltestelle
+  lemma: Haltestelle
+  gender: [f]
+  plural: [Haltestellen]
+  gen_sg: [Haltestelle]
+  ru: остановка
+  en: stop
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haltung
+  lemma: Haltung
+  gender: [f]
+  plural: [Haltungen]
+  gen_sg: [Haltung]
+  ru: позиция, отношение
+  en: posture
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hammer
+  lemma: Hammer
+  sense: молоток
+  gender: [m]
+  plural: [Hämmer]
+  gen_sg: [Hammers]
+  ru: молоток
+  en: hammer
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hammer:2
+  lemma: Hammer
+  sense: молот
+  gender: [m]
+  plural: [Hammer]
+  gen_sg: [Hammers]
+  ru: молот, молоток
+  en: Hamm inhabitant
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hamster
+  lemma: Hamster
+  gender: [m]
+  plural: [Hamster]
+  gen_sg: [Hamsters]
+  ru: хомяк
+  en: hamster
+  freq: 19000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hand
+  lemma: Hand
+  gender: [f]
+  plural: [Hände]
+  gen_sg: [Hand]
+  ru: рука, кисть
+  en: hand
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handball
+  lemma: Handball
+  sense: гандбол
+  gender: [m]
+  plural: [Handbälle]
+  gen_sg: [Handballes, Handballs]
+  ru: гандбол
+  en: handball
+  freq: 43000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handball:2
+  lemma: Handball
+  sense: гандбол
+  gender: [m]
+  plural: []
+  gen_sg: [Handballs]
+  ru: гандбол
+  en: handball
+  freq: 43000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handbremse
+  lemma: Handbremse
+  gender: [f]
+  plural: [Handbremsen]
+  gen_sg: [Handbremse]
+  ru: ручной тормоз
+  en: handbrake, parking brake
+  freq: 23000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handcreme
+  lemma: Handcreme
+  gender: [f]
+  plural: [Handcremes, Handcremen]
+  gen_sg: [Handcreme]
+  ru: null
+  en: hand cream
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handschuh
+  lemma: Handschuh
+  gender: [m]
+  plural: [Handschuhe]
+  gen_sg: [Handschuhes, Handschuhs]
+  ru: перчатка
+  en: glove
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handtuch
+  lemma: Handtuch
+  gender: [n]
+  plural: [Handtücher]
+  gen_sg: [Handtuches, Handtuchs]
+  ru: полотенце
+  en: towel
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handvoll
+  lemma: Handvoll
+  gender: [f]
+  plural: [Handvoll]
+  gen_sg: [Handvoll]
+  ru: null
+  en: handful, fistful
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handwerker
+  lemma: Handwerker
+  gender: [m]
+  plural: [Handwerker]
+  gen_sg: [Handwerkers]
+  ru: ремесленник
+  en: craftsman, workman
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handwerkerin
+  lemma: Handwerkerin
+  gender: [f]
+  plural: [Handwerkerinnen]
+  gen_sg: [Handwerkerin]
+  ru: null
+  en: craftswoman
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Handy
+  lemma: Handy
+  gender: [n]
+  plural: [Handys]
+  gen_sg: [Handys]
+  ru: мобильник, мобильный телефон
+  en: mobile phone, mobile
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hantel
+  lemma: Hantel
+  gender: [f, n]
+  plural: [Hanteln]
+  gen_sg: [Hantel, Hantels]
+  ru: гантель
+  en: barbell, dumbbell
+  freq: 50000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hase
+  lemma: Hase
+  gender: [m]
+  plural: [Hasen]
+  gen_sg: [Hasen]
+  ru: заяц
+  en: hare
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hauptbahnhof
+  lemma: Hauptbahnhof
+  gender: [m]
+  plural: [Hauptbahnhöfe]
+  gen_sg: [Hauptbahnhofes, Hauptbahnhofs]
+  ru: главный вокзал
+  en: central station, main station
+  freq: 25000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hauptrolle
+  lemma: Hauptrolle
+  gender: [f]
+  plural: [Hauptrollen]
+  gen_sg: [Hauptrolle]
+  ru: главная роль
+  en: main role, lead part
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hauptstadt
+  lemma: Hauptstadt
+  gender: [f]
+  plural: [Hauptstädte]
+  gen_sg: [Hauptstadt]
+  ru: столица
+  en: capital, capital city
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hauptuntersuchung
+  lemma: Hauptuntersuchung
+  gender: [f]
+  plural: [Hauptuntersuchungen]
+  gen_sg: [Hauptuntersuchung]
+  ru: технический осмотр
+  en: general inspection, MOT test
+  freq: 15000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haus
+  lemma: Haus
+  gender: [n]
+  plural: [Häuser]
+  gen_sg: [Hauses]
+  ru: дом
+  en: house
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausarzt
+  lemma: Hausarzt
+  gender: [m]
+  plural: [Hausärzte]
+  gen_sg: [Hausarztes]
+  ru: семейный врач
+  en: family doctor, family physician
+  freq: 29000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausaufgabe
+  lemma: Hausaufgabe
+  gender: [f]
+  plural: [Hausaufgaben]
+  gen_sg: [Hausaufgabe]
+  ru: домашнее задание
+  en: homework
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausfrau
+  lemma: Hausfrau
+  gender: [f]
+  plural: [Hausfrauen]
+  gen_sg: [Hausfrau]
+  ru: домохозяйка
+  en: housewife
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haushalt
+  lemma: Haushalt
+  gender: [m]
+  plural: [Haushalte]
+  gen_sg: [Haushaltes, Haushalts]
+  ru: домашнее хозяйство, бюджет
+  en: budget
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haushaltsbuch
+  lemma: Haushaltsbuch
+  gender: [n]
+  plural: [Haushaltsbücher]
+  gen_sg: [Haushaltsbuchs, Haushaltsbuches]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausmeister
+  lemma: Hausmeister
+  gender: [m]
+  plural: [Hausmeister]
+  gen_sg: [Hausmeisters]
+  ru: управдом
+  en: janitor, caretaker
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausmittel
+  lemma: Hausmittel
+  gender: [n]
+  plural: [Hausmittel]
+  gen_sg: [Hausmittels]
+  ru: домашнее  средство
+  en: home remedy, domestic remedy
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausnummer
+  lemma: Hausnummer
+  gender: [f]
+  plural: [Hausnummern]
+  gen_sg: [Hausnummer]
+  ru: номер дома
+  en: house number
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausordnung
+  lemma: Hausordnung
+  gender: [f]
+  plural: [Hausordnungen]
+  gen_sg: [Hausordnung]
+  ru: правила внутреннего распорядка, режим
+  en: house rule
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hausschuh
+  lemma: Hausschuh
+  gender: [m]
+  plural: [Hausschuhe]
+  gen_sg: [Hausschuhes, Hausschuhs]
+  ru: домашняя туфля, ночная туфля
+  en: slipper
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haustür
+  lemma: Haustür
+  gender: [f]
+  plural: [Haustüren]
+  gen_sg: [Haustür]
+  ru: входная дверь
+  en: front door
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Haut
+  lemma: Haut
+  gender: [f]
+  plural: [Häute]
+  gen_sg: [Haut]
+  ru: кожа
+  en: skin
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hautarzt
+  lemma: Hautarzt
+  gender: [m]
+  plural: [Hautärzte]
+  gen_sg: [Hautarztes]
+  ru: null
+  en: dermatologist
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hauttyp
+  lemma: Hauttyp
+  gender: [m]
+  plural: [Hauttypen]
+  gen_sg: [Hauttyps]
+  ru: null
+  en: skin type
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hebebühne
+  lemma: Hebebühne
+  gender: [f]
+  plural: [Hebebühnen]
+  gen_sg: [Hebebühne]
+  ru: подъёмная платформа, подъёмник с платформой
+  en: lifting platform, lifting ramp
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Heft
+  lemma: Heft
+  sense: тетрадь
+  gender: [n]
+  plural: [Hefte]
+  gen_sg: [Hefts, Heftes]
+  ru: тетрадь
+  en: notebook
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Heft:2
+  lemma: Heft
+  sense: тетрадь
+  gender: [n]
+  plural: [Hefte]
+  gen_sg: [Hefts, Heftes]
+  ru: тетрадь, выпуск
+  en: hilt, haft
+  freq: 12000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Heimat
+  lemma: Heimat
+  gender: [f]
+  plural: [Heimaten]
+  gen_sg: [Heimat]
+  ru: родина
+  en: home, homeland
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Heimatland
+  lemma: Heimatland
+  gender: [n]
+  plural: [Heimatländer]
+  gen_sg: [Heimatlands, Heimatlandes]
+  ru: родная страна
+  en: homeland, native country
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Heimweh
+  lemma: Heimweh
+  gender: [n]
+  plural: []
+  gen_sg: [Heimwehs]
+  ru: тоска по родине
+  en: homesickness
+  freq: 11000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Heizung
+  lemma: Heizung
+  gender: [f]
+  plural: [Heizungen]
+  gen_sg: [Heizung]
+  ru: отопление
+  en: heating
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hektar
+  lemma: Hektar
+  gender: [n, m]
+  plural: [Hektare]
+  gen_sg: [Hektars]
+  ru: гектар
+  en: hectare
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hemd
+  lemma: Hemd
+  gender: [n]
+  plural: [Hemden]
+  gen_sg: [Hemdes, Hemds]
+  ru: рубашка
+  en: shirt
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herbst
+  lemma: Herbst
+  gender: [m]
+  plural: [Herbste]
+  gen_sg: [Herbsts, Herbstes]
+  ru: осень
+  en: autumn, fall
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herd
+  lemma: Herd
+  gender: [m]
+  plural: [Herde]
+  gen_sg: [Herdes, Herds]
+  ru: плита
+  en: hearth, stove
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herkunft
+  lemma: Herkunft
+  gender: [f]
+  plural: [Herkünfte]
+  gen_sg: [Herkunft]
+  ru: происхождение
+  en: origin, source
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herkunftsland
+  lemma: Herkunftsland
+  gender: [n]
+  plural: [Herkunftsländer]
+  gen_sg: [Herkunftslandes, Herkunftslands]
+  ru: страна происхождения
+  en: country of origin
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herr
+  lemma: Herr
+  gender: [m]
+  plural: [Herren, Herrn]
+  gen_sg: [Herrn, Herren]
+  ru: господин
+  en: gentleman
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herz
+  lemma: Herz
+  gender: [n]
+  plural: [Herzen]
+  gen_sg: [Herzens, Herzes]
+  ru: сердце
+  en: heart
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Herzinfarkt
+  lemma: Herzinfarkt
+  gender: [m]
+  plural: [Herzinfarkte]
+  gen_sg: [Herzinfarkts, Herzinfarktes]
+  ru: сердечный приступ, инфаркт миокарда
+  en: heart attack, myocardial infarction
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hilfe
+  lemma: Hilfe
+  gender: [f]
+  plural: [Hilfen]
+  gen_sg: [Hilfe]
+  ru: помощь, поддержка
+  en: help
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hilferuf
+  lemma: Hilferuf
+  gender: [m]
+  plural: [Hilferufe]
+  gen_sg: [Hilferufes, Hilferufs]
+  ru: крик  о помощи, зов на помощь
+  en: appeal for help, cry for help
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Himbeere
+  lemma: Himbeere
+  gender: [f]
+  plural: [Himbeeren]
+  gen_sg: [Himbeere]
+  ru: малина
+  en: raspberry
+  freq: 22000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Himmel
+  lemma: Himmel
+  gender: [m]
+  plural: [Himmel]
+  gen_sg: [Himmels]
+  ru: небо
+  en: sky, firmament
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Himmelsrichtung
+  lemma: Himmelsrichtung
+  gender: [f]
+  plural: [Himmelsrichtungen]
+  gen_sg: [Himmelsrichtung]
+  ru: сторона света
+  en: compass point, cardinal direction
+  freq: 42000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hinterrad
+  lemma: Hinterrad
+  gender: [n]
+  plural: [Hinterräder]
+  gen_sg: [Hinterrades, Hinterrads]
+  ru: заднее колесо
+  en: back wheel
+  freq: 41000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hip-Hop
+  lemma: Hip-Hop
+  gender: [m]
+  plural: []
+  gen_sg: [Hip-Hops, Hip-Hop]
+  ru: хип-хоп
+  en: hip-hop
+  freq: 32000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Historiker
+  lemma: Historiker
+  gender: [m]
+  plural: [Historiker]
+  gen_sg: [Historikers]
+  ru: историк
+  en: historian
+  freq: 22000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hitze
+  lemma: Hitze
+  gender: [f]
+  plural: [Hitzen]
+  gen_sg: [Hitze]
+  ru: жара
+  en: heat
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hobby
+  lemma: Hobby
+  gender: [n]
+  plural: [Hobbys]
+  gen_sg: [Hobbys]
+  ru: хобби, увлечение
+  en: hobby
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hochland
+  lemma: Hochland
+  gender: [n]
+  plural: [Hochländer, Hochlande]
+  gen_sg: [Hochlandes, Hochlands]
+  ru: геогр. нагорье
+  en: highlands
+  freq: 31000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hochwasser
+  lemma: Hochwasser
+  gender: [n]
+  plural: [Hochwasser]
+  gen_sg: [Hochwassers]
+  ru: наводнение
+  en: high water, flood
+  freq: 32000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hochzeit
+  lemma: Hochzeit
+  sense: свадьба
+  gender: [f]
+  plural: [Hochzeiten]
+  gen_sg: [Hochzeit]
+  ru: свадьба, брак
+  en: marriage, wedding
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hochzeit:2
+  lemma: Hochzeit
+  sense: время расцвета
+  gender: [f]
+  plural: [Hochzeiten]
+  gen_sg: [Hochzeit]
+  ru: время расцвета
+  en: golden age
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hof
+  lemma: Hof
+  gender: [m]
+  plural: [Höfe]
+  gen_sg: [Hofs, Hofes]
+  ru: двор
+  en: yard, courtyard
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hoffnung
+  lemma: Hoffnung
+  gender: [f]
+  plural: [Hoffnungen]
+  gen_sg: [Hoffnung]
+  ru: надежда
+  en: hope
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hoheitsgebiet
+  lemma: Hoheitsgebiet
+  gender: [n]
+  plural: [Hoheitsgebiete]
+  gen_sg: [Hoheitsgebietes, Hoheitsgebiets]
+  ru: государственная территория
+  en: territory
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Holz
+  lemma: Holz
+  sense: древесина
+  gender: [n]
+  plural: [Hölzer]
+  gen_sg: [Holzes]
+  ru: древесина, дерево
+  en: wood, timber
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Holz:2
+  lemma: Holz
+  sense: Хольц
+  gender: [n]
+  plural: [Hölzer]
+  gen_sg: [Holzes]
+  ru: Хольц
+  en: wood
+  freq: 5000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Honig
+  lemma: Honig
+  gender: [m]
+  plural: [Honige]
+  gen_sg: [Honigs]
+  ru: мёд
+  en: honey
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hose
+  lemma: Hose
+  gender: [f]
+  plural: [Hosen]
+  gen_sg: [Hose]
+  ru: брюки, штаны
+  en: pantaloon, pants trousers
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hotel
+  lemma: Hotel
+  gender: [n]
+  plural: [Hotels]
+  gen_sg: [Hotels]
+  ru: гостиница, отель
+  en: hotel
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Huhn
+  lemma: Huhn
+  gender: [n]
+  plural: [Hühner]
+  gen_sg: [Huhns, Huhnes]
+  ru: курица
+  en: chicken, fowl
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hund
+  lemma: Hund
+  gender: [m]
+  plural: [Hunde]
+  gen_sg: [Hunds, Hundes]
+  ru: собака, пёс
+  en: dog, hound
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hundertstel
+  lemma: Hundertstel
+  sense: сотая часть
+  gender: [n, m]
+  plural: [Hundertstel]
+  gen_sg: [Hundertstels]
+  ru: сотая часть
+  en: hundredth
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hundertstel:2
+  lemma: Hundertstel
+  sense: сотая часть
+  gender: [f]
+  plural: [Hundertstel]
+  gen_sg: [Hundertstel]
+  ru: сотая часть
+  en: hundredth
+  freq: null
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hunger
+  lemma: Hunger
+  gender: [m]
+  plural: []
+  gen_sg: [Hungers]
+  ru: голод
+  en: hunger
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hupe
+  lemma: Hupe
+  gender: [f]
+  plural: [Hupen]
+  gen_sg: [Hupe]
+  ru: null
+  en: horn, klaxon
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Husten
+  lemma: Husten
+  sense: кашель
+  gender: [m]
+  plural: [Husten]
+  gen_sg: [Hustens]
+  ru: кашель
+  en: cough
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Husten:2
+  lemma: Husten
+  sense: кашель
+  gender: [n]
+  plural: []
+  gen_sg: [Hustens]
+  ru: кашель
+  en: cough, coughing
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hut
+  lemma: Hut
+  sense: шляпа
+  gender: [m]
+  plural: [Hüte]
+  gen_sg: [Hutes, Huts]
+  ru: шляпа
+  en: hat
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hut:2
+  lemma: Hut
+  sense: устар. вахта
+  gender: [f]
+  plural: [Huten]
+  gen_sg: [Hut]
+  ru: устар. вахта, пост
+  en: protection, supervision
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hygiene
+  lemma: Hygiene
+  gender: [f]
+  plural: []
+  gen_sg: [Hygiene]
+  ru: гигиена
+  en: hygiene
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hälfte
+  lemma: Hälfte
+  gender: [f]
+  plural: [Hälften]
+  gen_sg: [Hälfte]
+  ru: половина
+  en: half
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Höchstwert
+  lemma: Höchstwert
+  gender: [m]
+  plural: [Höchstwerte]
+  gen_sg: [Höchstwertes, Höchstwerts]
+  ru: наивысшее значение, максимум
+  en: peak
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Höhe
+  lemma: Höhe
+  gender: [f]
+  plural: [Höhen]
+  gen_sg: [Höhe]
+  ru: высота
+  en: height, elevation
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Höhle
+  lemma: Höhle
+  gender: [f]
+  plural: [Höhlen]
+  gen_sg: [Höhle]
+  ru: пещера, грот
+  en: cave, cavern
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hörbuch
+  lemma: Hörbuch
+  gender: [n]
+  plural: [Hörbücher]
+  gen_sg: [Hörbuches, Hörbuchs]
+  ru: аудиокнига
+  en: audiobook, audio book
+  freq: 40000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hörer
+  lemma: Hörer
+  gender: [m]
+  plural: [Hörer]
+  gen_sg: [Hörers]
+  ru: null
+  en: listener
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hörsaal
+  lemma: Hörsaal
+  gender: [m]
+  plural: [Hörsäle]
+  gen_sg: [Hörsaales, Hörsaals]
+  ru: аудитория, лекционный зал
+  en: lecture hall, lecture theatre
+  freq: 35000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Hütte
+  lemma: Hütte
+  gender: [f]
+  plural: [Hütten]
+  gen_sg: [Hütte]
+  ru: хижина, хата
+  en: hut, cabin
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}

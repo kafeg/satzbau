@@ -1,0 +1,797 @@
+- id: n:Nachbar
+  lemma: Nachbar
+  gender: [m]
+  plural: [Nachbarn]
+  gen_sg: [Nachbarn, Nachbars]
+  ru: сосед
+  en: neighbour
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachbarin
+  lemma: Nachbarin
+  gender: [f]
+  plural: [Nachbarinnen]
+  gen_sg: [Nachbarin]
+  ru: соседка
+  en: neighbour
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachbarland
+  lemma: Nachbarland
+  gender: [n]
+  plural: [Nachbarländer]
+  gen_sg: [Nachbarlands, Nachbarlandes]
+  ru: соседняя страна
+  en: neighbouring country
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachbarschaft
+  lemma: Nachbarschaft
+  gender: [f]
+  plural: [Nachbarschaften]
+  gen_sg: [Nachbarschaft]
+  ru: соседство
+  en: neighbourhood
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachbarstaat
+  lemma: Nachbarstaat
+  gender: [m]
+  plural: [Nachbarstaaten]
+  gen_sg: [Nachbarstaates, Nachbarstaats]
+  ru: соседнее государство
+  en: neighbouring state
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachhilfe
+  lemma: Nachhilfe
+  gender: [f]
+  plural: [Nachhilfen]
+  gen_sg: [Nachhilfe]
+  ru: репетиторство
+  en: private coaching, extra tuition
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachlass
+  lemma: Nachlass
+  gender: [m]
+  plural: [Nachlässe, Nachlasse]
+  gen_sg: [Nachlasses]
+  ru: скидка
+  en: estate
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachmittag
+  lemma: Nachmittag
+  gender: [m]
+  plural: [Nachmittage]
+  gen_sg: [Nachmittags, Nachmittages]
+  ru: вторая половина дня
+  en: afternoon
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachnahme
+  lemma: Nachnahme
+  gender: [f]
+  plural: [Nachnahmen]
+  gen_sg: [Nachnahme]
+  ru: наложенный платёж
+  en: collect on delivery
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachname
+  lemma: Nachname
+  gender: [m]
+  plural: [Nachnamen]
+  gen_sg: [Nachnamens]
+  ru: фамилия
+  en: last name, surname
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachporto
+  lemma: Nachporto
+  gender: [n]
+  plural: [Nachportos, Nachporti]
+  gen_sg: [Nachportos]
+  ru: null
+  en: excess postage
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachricht
+  lemma: Nachricht
+  gender: [f]
+  plural: [Nachrichten]
+  gen_sg: [Nachricht]
+  ru: сообщение
+  en: news, message
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nacht
+  lemma: Nacht
+  gender: [f]
+  plural: [Nächte]
+  gen_sg: [Nacht]
+  ru: ночь
+  en: night
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachteil
+  lemma: Nachteil
+  gender: [m]
+  plural: [Nachteile]
+  gen_sg: [Nachteils, Nachteiles]
+  ru: недостаток
+  en: disadvantage, drawback
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachtisch
+  lemma: Nachtisch
+  gender: [m]
+  plural: [Nachtische]
+  gen_sg: [Nachtisches, Nachtischs]
+  ru: десерт, сладкое
+  en: dessert, pudding
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachweis
+  lemma: Nachweis
+  gender: [m]
+  plural: [Nachweise]
+  gen_sg: [Nachweises]
+  ru: доказательство
+  en: proof, confirmation
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nachzahlung
+  lemma: Nachzahlung
+  gender: [f]
+  plural: [Nachzahlungen]
+  gen_sg: [Nachzahlung]
+  ru: null
+  en: back payment, subsequent payment
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nagel
+  lemma: Nagel
+  gender: [m]
+  plural: [Nägel]
+  gen_sg: [Nagels]
+  ru: гвоздь
+  en: nail
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nagelfeile
+  lemma: Nagelfeile
+  gender: [f]
+  plural: [Nagelfeilen]
+  gen_sg: [Nagelfeile]
+  ru: null
+  en: nail file
+  freq: 41000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nagellack
+  lemma: Nagellack
+  gender: [m]
+  plural: [Nagellacke]
+  gen_sg: [Nagellackes, Nagellacks]
+  ru: null
+  en: nail polish
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nagelschere
+  lemma: Nagelschere
+  gender: [f]
+  plural: [Nagelscheren]
+  gen_sg: [Nagelschere]
+  ru: null
+  en: nail scissors
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Name
+  lemma: Name
+  gender: [m]
+  plural: [Namen]
+  gen_sg: [Namens]
+  ru: имя
+  en: name
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Narkose
+  lemma: Narkose
+  gender: [f]
+  plural: [Narkosen]
+  gen_sg: [Narkose]
+  ru: наркоз
+  en: general anaesthesia
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nase
+  lemma: Nase
+  gender: [f]
+  plural: [Nasen]
+  gen_sg: [Nase]
+  ru: нос
+  en: nose
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nationalfeiertag
+  lemma: Nationalfeiertag
+  gender: [m]
+  plural: [Nationalfeiertage]
+  gen_sg: [Nationalfeiertags, Nationalfeiertages]
+  ru: национальный праздник
+  en: National Day
+  freq: 42000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nationalität
+  lemma: Nationalität
+  gender: [f]
+  plural: [Nationalitäten]
+  gen_sg: [Nationalität]
+  ru: книжн. национальность, книжн. государственная принадлежность
+  en: nationality
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nationalpark
+  lemma: Nationalpark
+  gender: [m]
+  plural: [Nationalparks, Nationalparke, Nationalpärke]
+  gen_sg: [Nationalparks, Nationalparkes]
+  ru: национальный парк
+  en: national park
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Natur
+  lemma: Natur
+  gender: [f]
+  plural: [Naturen]
+  gen_sg: [Natur]
+  ru: природа
+  en: nature
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nebel
+  lemma: Nebel
+  gender: [m]
+  plural: [Nebel]
+  gen_sg: [Nebels]
+  ru: туман
+  en: fog, haze
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nebenkosten
+  lemma: Nebenkosten
+  gender: []
+  plural: [Nebenkosten]
+  gen_sg: []
+  number: pl
+  ru: добавочные расходы
+  en: additional costs, utilities
+  freq: 33000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nebenwirkung
+  lemma: Nebenwirkung
+  gender: [f]
+  plural: [Nebenwirkungen]
+  gen_sg: [Nebenwirkung]
+  ru: побочный эффект
+  en: side effect, adverse effect
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neffe
+  lemma: Neffe
+  sense: племянник
+  gender: [m]
+  plural: [Neffen]
+  gen_sg: [Neffen]
+  ru: племянник
+  en: nephew
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neffe:2
+  lemma: Neffe
+  sense: племянник
+  gender: [m]
+  plural: [Neffen]
+  gen_sg: [Neffen, Neffe]
+  ru: племянник
+  en: nephew
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neffe:3
+  lemma: Neffe
+  sense: племянник
+  gender: [f]
+  plural: [Neffen]
+  gen_sg: [Neffe]
+  ru: племянник
+  en: nephew
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neffe:4
+  lemma: Neffe
+  sense: племянник
+  gender: [f]
+  plural: [Neffen]
+  gen_sg: [Neffe]
+  ru: племянник
+  en: nephew
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neid
+  lemma: Neid
+  gender: [m]
+  plural: []
+  gen_sg: [Neides, Neids]
+  ru: зависть
+  en: envy
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nervosität
+  lemma: Nervosität
+  gender: [f]
+  plural: []
+  gen_sg: [Nervosität]
+  ru: нервозность, нервность
+  en: nervousness
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nest
+  lemma: Nest
+  gender: [n]
+  plural: [Nester]
+  gen_sg: [Nests, Nestes]
+  ru: гнездо
+  en: nest
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Netz
+  lemma: Netz
+  gender: [n]
+  plural: [Netze]
+  gen_sg: [Netzes]
+  ru: сеть
+  en: net
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Netzwerk
+  lemma: Netzwerk
+  gender: [n]
+  plural: [Netzwerke]
+  gen_sg: [Netzwerks, Netzwerkes]
+  ru: сеть
+  en: network
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neujahr
+  lemma: Neujahr
+  gender: [n]
+  plural: []
+  gen_sg: [Neujahrs, Neujahres]
+  ru: Новый год, 1-е января
+  en: New Year, New Year's Day
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Neuwagen
+  lemma: Neuwagen
+  gender: [m]
+  plural: [Neuwagen, Neuwägen]
+  gen_sg: [Neuwagens]
+  ru: новый автомобиль
+  en: new car
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nichte
+  lemma: Nichte
+  gender: [f]
+  plural: [Nichten]
+  gen_sg: [Nichte]
+  ru: племянница
+  en: niece
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Niederlage
+  lemma: Niederlage
+  gender: [f]
+  plural: [Niederlagen]
+  gen_sg: [Niederlage]
+  ru: поражение
+  en: defeat
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Niederlassung
+  lemma: Niederlassung
+  gender: [f]
+  plural: [Niederlassungen]
+  gen_sg: [Niederlassung]
+  ru: спуск, опускание
+  en: establishment
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Niederschlag
+  lemma: Niederschlag
+  gender: [m]
+  plural: [Niederschläge]
+  gen_sg: [Niederschlages, Niederschlags]
+  ru: осадки
+  en: precipitation
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nikolaus
+  lemma: Nikolaus
+  gender: [m]
+  plural: [Nikolause, Nikoläuse]
+  gen_sg: [Nikolaus, Nikolauses]
+  ru: Николай
+  en: Saint Nicholas
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Niveau
+  lemma: Niveau
+  gender: [n]
+  plural: [Niveaus]
+  gen_sg: [Niveaus]
+  ru: уровень
+  en: level
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Norden
+  lemma: Norden
+  gender: [m]
+  plural: []
+  gen_sg: [Nordens]
+  ru: север
+  en: north
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nordosten
+  lemma: Nordosten
+  gender: [m]
+  plural: []
+  gen_sg: [Nordostens]
+  ru: северо-восток
+  en: northeast, north-east
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nordpol
+  lemma: Nordpol
+  gender: [m]
+  plural: [Nordpole]
+  gen_sg: [Nordpols, Nordpoles]
+  ru: Северный полюс
+  en: North Pole
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nordsee
+  lemma: Nordsee
+  gender: [f]
+  plural: []
+  gen_sg: [Nordsee]
+  ru: Северное море
+  en: North Sea, German Sea
+  freq: 26000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nordwesten
+  lemma: Nordwesten
+  gender: [m]
+  plural: []
+  gen_sg: [Nordwestens]
+  ru: северо-запад
+  en: northwest, north-west
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notarzt
+  lemma: Notarzt
+  gender: [m]
+  plural: [Notärzte]
+  gen_sg: [Notarztes]
+  ru: врач скорой помощи
+  en: emergency physician
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notaufnahme
+  lemma: Notaufnahme
+  gender: [f]
+  plural: [Notaufnahmen]
+  gen_sg: [Notaufnahme]
+  ru: отделение экстренной помощи
+  en: emergency room, emergency department
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notausgang
+  lemma: Notausgang
+  gender: [m]
+  plural: [Notausgänge]
+  gen_sg: [Notausganges, Notausgangs]
+  ru: аварийный выход
+  en: emergency exit, fire escape
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notbremse
+  lemma: Notbremse
+  gender: [f]
+  plural: [Notbremsen]
+  gen_sg: [Notbremse]
+  ru: null
+  en: emergency brake
+  freq: 27000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notdienst
+  lemma: Notdienst
+  gender: [m]
+  plural: [Notdienste]
+  gen_sg: [Notdienstes, Notdiensts]
+  ru: null
+  en: emergency service
+  freq: 30000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Note
+  lemma: Note
+  gender: [f]
+  plural: [Noten]
+  gen_sg: [Note]
+  ru: оценка
+  en: note
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notfall
+  lemma: Notfall
+  gender: [m]
+  plural: [Notfälle]
+  gen_sg: [Notfalles, Notfalls]
+  ru: экстренный случай
+  en: emergency
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notiz
+  lemma: Notiz
+  gender: [f]
+  plural: [Notizen]
+  gen_sg: [Notiz]
+  ru: заметка
+  en: note
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Notruf
+  lemma: Notruf
+  gender: [m]
+  plural: [Notrufe]
+  gen_sg: [Notrufes, Notrufs]
+  ru: null
+  en: emergency call
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nudel
+  lemma: Nudel
+  gender: [f]
+  plural: [Nudeln]
+  gen_sg: [Nudel]
+  ru: лапша
+  en: pasta, noodle
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nummer
+  lemma: Nummer
+  gender: [f]
+  plural: [Nummern]
+  gen_sg: [Nummer]
+  ru: номер
+  en: number
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nummernschild
+  lemma: Nummernschild
+  gender: [n]
+  plural: [Nummernschilder]
+  gen_sg: [Nummernschildes, Nummernschilds]
+  ru: null
+  en: license plate, license tag
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Nuss
+  lemma: Nuss
+  gender: [f]
+  plural: [Nüsse]
+  gen_sg: [Nuss]
+  ru: орех
+  en: nut
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

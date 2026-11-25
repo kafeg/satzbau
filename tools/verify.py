@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""Проверка базы слов по выпискам evidence/: каждый факт подтверждён источниками или `decided`.
+
+  python3 -I tools/verify.py          проверка, код 1 при ошибке
+  python3 -I tools/verify.py -v       со списком всех ошибок, а не первых по 10 на вид
+"""
+import collections, glob, json, os, re, sys
+
+import yaml
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import srcs  # noqa: E402
+
+ROOT = srcs.ROOT
+LEVELS = {'A1', 'A2', 'B1', None}
+NOUN_KEYS = ['id', 'lemma', 'gender', 'plural', 'gen_sg', 'ru', 'en', 'freq', 'level', 'themes', 'decided', 'skip']
+NOUN_OPT = {'sense', 'number'}
+FORM_SOURCES = ('dewikt', 'enwikt', 'ruwikt')
+
+
+def load_words(pos):
+    out = []
+    for p in sorted(glob.glob(os.path.join(ROOT, 'words', pos, '*.yaml'))):
+        out += yaml.safe_load(open(p, encoding='utf-8')) or []
+    return out
+
+
+def load_evidence(name):
+    path = os.path.join(ROOT, 'evidence', f'{name}.jsonl')
+    return {e['lemma']: e for e in map(json.loads, open(path, encoding='utf-8'))}
+
+
+def votes(ev, field, value):
+    return sum(any(value in e.get(field, []) for e in ev.get(src, [])) for src in FORM_SOURCES)
+
+
+def speaks(ev, field):
+    """Сколько источников вообще что-то говорят об этом поле у леммы."""
+    return sum(any(e.get(field) for e in ev.get(src, [])) for src in FORM_SOURCES)
+
+
+def proof(ev, field, value, w, err, warn, first):
+    v = votes(ev, field, value)
+    if v >= (2 if first else 1):
+        return
+    if v == 1 and speaks(ev, field) == 1:
+        warn(f'{field}-single', w, f'{value}: только один источник, остальные о слове молчат')
+    else:
+        err(f'{field}-disagree' if v else f'{field}-none', w,
+            f'{value}: подтверждён {v} из {speaks(ev, field)} источников, которые знают слово')
+
+
+def check_forms(w, ev, field, err, warn):
+    xs = w[field]
+    if field in w['decided']:
+        return
+    if not xs:
+        if speaks(ev, field) > (1 if any(e.get(field) for e in ev.get('dewikt', [])) else 0):
+            err(f'{field}-empty', w, 'пусто, а другие источники форму дают')
+        return
+    for i, x in enumerate(xs):
+        proof(ev, field, x, w, err, warn, i == 0)
+
+
+def pool(ev, lang):
+    out = set()
+    for e in ev.get('dewikt', []):
+        out |= {srcs.norm(y) for v in e[lang].values() for x in v for y in srcs.ru_items(x)}
+    if lang == 'ru':
+        out |= {srcs.norm(x) for e in ev.get('ruwikt', []) for x in e.get('ru', [])}
+        out |= {srcs.norm(x) for x in ev.get('freedict', [])}
+    else:
+        out |= {srcs.norm(x) for e in ev.get('enwikt', []) for g in e.get('en', []) for x in srcs.ru_items(g)}
+    return out
+
+
+def check_noun(w, ev, err, warn):
+    keys = set(w)
+    if missing := [k for k in NOUN_KEYS if k not in keys]:
+        err('schema', w, f'нет полей {missing}')
+        return
+    if extra := keys - set(NOUN_KEYS) - NOUN_OPT:
+        err('schema', w, f'лишние поля {sorted(extra)}')
+    if not re.fullmatch(rf'n:{re.escape(w["lemma"])}(:\d+)?', w['id']):
+        err('schema', w, 'id не по формату n:<лемма>[:n]')
+    if not set(w['gender']) <= {'m', 'f', 'n'} or (not w['gender'] and w.get('number') != 'pl'):
+        err('schema', w, f'род {w["gender"]}')
+    if w['level'] not in LEVELS:
+        err('schema', w, f'уровень {w["level"]}')
+    for k in ('decided', 'skip'):
+        if not isinstance(w[k], dict) or any(not isinstance(v, str) or not v.strip() for v in w[k].values()):
+            err('schema', w, f'{k}: у каждой записи нужна причина')
+    if ev is None:
+        err('evidence', w, 'нет выписки из источников')
+        return
+    if 'gender' not in w['decided']:
+        for i, g in enumerate(w['gender']):
+            proof(ev, 'gender', g, w, err, warn, i == 0)
+    if w.get('number') != 'pl':
+        check_forms(w, ev, 'plural', err, warn)
+    check_forms(w, ev, 'gen_sg', err, warn)
+    for lang in ('ru', 'en'):
+        if lang in w['decided']:
+            continue
+        if not w[lang]:
+            if w['level']:
+                err(f'{lang}-none', w, 'нет перевода у слова с уровнем')
+            continue
+        known = pool(ev, lang)
+        bad = [x for x in srcs.ru_items(w[lang]) if srcs.norm(x) not in known]
+        if bad or not srcs.ru_items(w[lang]):
+            err(f'{lang}-proof', w, f'нет в словарях: {bad or w[lang]}')
+    if w['freq'] != srcs.bucket(ev.get('rank')):
+        err('freq', w, f'{w["freq"]} ≠ {srcs.bucket(ev.get("rank"))} по рангу {ev.get("rank")}')
+
+
+def main():
+    verbose = '-v' in sys.argv
+    errors, warnings = collections.defaultdict(list), collections.defaultdict(list)
+    def err(kind, w, msg):
+        errors[kind].append(f'{w["id"]}: {msg}')
+    def warn(kind, w, msg):
+        warnings[kind].append(f'{w["id"]}: {msg}')
+    nouns = load_words('nouns')
+    ev = load_evidence('nouns')
+    ids = collections.Counter(w.get('id') for w in nouns)
+    for i, n in ids.items():
+        if n > 1:
+            errors['id-dup'].append(f'{i}: {n} раз')
+    for w in nouns:
+        # вне курса (level: null) — справочные значения из dewikt: строгая проверка только у курса
+        soft = w.get('level') is None
+        check_noun(w, ev.get(w.get('lemma')), warn if soft else err, warn)
+    levels = collections.Counter(w.get('level') for w in nouns)
+    print(f'существительных: {len(nouns)} (A1 {levels["A1"]}, A2 {levels["A2"]}, B1 {levels["B1"]}, вне курса {levels[None]})')
+    total = sum(map(len, errors.values()))
+    for kind, xs in sorted(warnings.items()):
+        print(f'предупреждение {kind}: {len(xs)}')
+        for x in xs if verbose else xs[:3]:
+            print('  ' + x)
+    for kind, xs in sorted(errors.items()):
+        print(f'\n{kind}: {len(xs)}')
+        for x in xs if verbose else xs[:10]:
+            print('  ' + x)
+    print(f'\nошибок: {total}' if total else '\nвсё подтверждено')
+    sys.exit(1 if total else 0)
+
+
+if __name__ == '__main__':
+    main()

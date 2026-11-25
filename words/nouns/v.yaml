@@ -1,0 +1,914 @@
+- id: n:Valentinstag
+  lemma: Valentinstag
+  gender: [m]
+  plural: [Valentinstage]
+  gen_sg: [Valentinstags, Valentinstages]
+  ru: Валентинов день
+  en: Valentine's Day, Saint Valentine's Day
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vater
+  lemma: Vater
+  gender: [m]
+  plural: [Väter]
+  gen_sg: [Vaters]
+  ru: отец
+  en: father, daddy
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vati
+  lemma: Vati
+  gender: [m]
+  plural: [Vatis]
+  gen_sg: [Vatis]
+  ru: разг. папа
+  en: daddy
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verabredung
+  lemma: Verabredung
+  gender: [f]
+  plural: [Verabredungen]
+  gen_sg: [Verabredung]
+  ru: условие, уговор
+  en: appointment, date
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Veranstaltung
+  lemma: Veranstaltung
+  gender: [f]
+  plural: [Veranstaltungen]
+  gen_sg: [Veranstaltung]
+  ru: мероприятие
+  en: organizing
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verantwortung
+  lemma: Verantwortung
+  gender: [f]
+  plural: [Verantwortungen]
+  gen_sg: [Verantwortung]
+  ru: ответственность
+  en: responsibility
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verband
+  lemma: Verband
+  gender: [m]
+  plural: [Verbände]
+  gen_sg: [Verbandes, Verbands]
+  ru: повязка, бинт
+  en: association
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verbandskasten
+  lemma: Verbandskasten
+  gender: [m]
+  plural: [Verbandskästen, Verbandskasten]
+  gen_sg: [Verbandskastens]
+  ru: null
+  en: first aid kit
+  freq: 38000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verbindung
+  lemma: Verbindung
+  gender: [f]
+  plural: [Verbindungen]
+  gen_sg: [Verbindung]
+  ru: связь, соединение
+  en: connection, bond
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verbot
+  lemma: Verbot
+  gender: [n]
+  plural: [Verbote]
+  gen_sg: [Verbotes, Verbots]
+  ru: запрет
+  en: prohibition, restriction
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verdacht
+  lemma: Verdacht
+  gender: [m]
+  plural: [Verdachte, Verdächte]
+  gen_sg: [Verdachtes, Verdachts]
+  ru: подозрение
+  en: suspicion
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verdopplung
+  lemma: Verdopplung
+  gender: [f]
+  plural: [Verdopplungen]
+  gen_sg: [Verdopplung]
+  ru: удваивание, удвоение
+  en: doubling
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verein
+  lemma: Verein
+  gender: [m]
+  plural: [Vereine]
+  gen_sg: [Vereins, Vereines]
+  ru: объединение
+  en: association, club
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verfassung
+  lemma: Verfassung
+  gender: [f]
+  plural: [Verfassungen]
+  gen_sg: [Verfassung]
+  ru: конституция
+  en: constitution, state
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vergleich
+  lemma: Vergleich
+  gender: [m]
+  plural: [Vergleiche]
+  gen_sg: [Vergleichs, Vergleiches]
+  ru: сравнение
+  en: comparison
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vergnügen
+  lemma: Vergnügen
+  gender: [n]
+  plural: [Vergnügen]
+  gen_sg: [Vergnügens]
+  ru: удовольствие
+  en: pleasure, fun
+  freq: 2000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verhandlung
+  lemma: Verhandlung
+  gender: [f]
+  plural: [Verhandlungen]
+  gen_sg: [Verhandlung]
+  ru: переговоры
+  en: trial
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verhältnis
+  lemma: Verhältnis
+  gender: [n]
+  plural: [Verhältnisse]
+  gen_sg: [Verhältnisses]
+  ru: отношение, пропорция
+  en: relation
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verkehrskontrolle
+  lemma: Verkehrskontrolle
+  gender: [f]
+  plural: [Verkehrskontrollen]
+  gen_sg: [Verkehrskontrolle]
+  ru: null
+  en: traffic stop
+  freq: 35000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verkäufer
+  lemma: Verkäufer
+  gender: [m]
+  plural: [Verkäufer]
+  gen_sg: [Verkäufers]
+  ru: продавец
+  en: seller, vendor
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verkäuferin
+  lemma: Verkäuferin
+  gender: [f]
+  plural: [Verkäuferinnen]
+  gen_sg: [Verkäuferin]
+  ru: продавщица
+  en: seller
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verlag
+  lemma: Verlag
+  gender: [m]
+  plural: [Verlage, Verläge]
+  gen_sg: [Verlages, Verlags]
+  ru: издательство, книгоиздательство
+  en: publishing company
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verletzung
+  lemma: Verletzung
+  gender: [f]
+  plural: [Verletzungen]
+  gen_sg: [Verletzung]
+  ru: повреждение, травма
+  en: injury, wound
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verlängerung
+  lemma: Verlängerung
+  gender: [f]
+  plural: [Verlängerungen]
+  gen_sg: [Verlängerung]
+  ru: продление
+  en: lengthening, prolongation
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vermieter
+  lemma: Vermieter
+  gender: [m]
+  plural: [Vermieter]
+  gen_sg: [Vermieters]
+  ru: наймодатель, арендодатель
+  en: landlord
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vermieterin
+  lemma: Vermieterin
+  gender: [f]
+  plural: [Vermieterinnen]
+  gen_sg: [Vermieterin]
+  ru: наймодательница, арендодательница
+  en: landlady
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vermittler
+  lemma: Vermittler
+  gender: [m]
+  plural: [Vermittler]
+  gen_sg: [Vermittlers]
+  ru: посредник
+  en: mediator, arbitrator
+  freq: 21000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vermutung
+  lemma: Vermutung
+  gender: [f]
+  plural: [Vermutungen]
+  gen_sg: [Vermutung]
+  ru: предположение, догадка
+  en: guess, supposition
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vermögen
+  lemma: Vermögen
+  gender: [n]
+  plural: [Vermögen]
+  gen_sg: [Vermögens]
+  ru: состояние, имущество
+  en: capability
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vernunft
+  lemma: Vernunft
+  gender: [f]
+  plural: []
+  gen_sg: [Vernunft]
+  ru: разум
+  en: reason, good sense
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verordnung
+  lemma: Verordnung
+  gender: [f]
+  plural: [Verordnungen]
+  gen_sg: [Verordnung]
+  ru: распоряжение
+  en: regulation, statutory instrument
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verpflegung
+  lemma: Verpflegung
+  gender: [f]
+  plural: [Verpflegungen]
+  gen_sg: [Verpflegung]
+  ru: довольствие, продовольствие
+  en: catering
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Versand
+  lemma: Versand
+  gender: [m]
+  plural: []
+  gen_sg: [Versands, Versandes]
+  ru: отправка
+  en: dispatch, consignation
+  freq: 42000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Versandkosten
+  lemma: Versandkosten
+  gender: [f]
+  plural: [Versandkosten]
+  gen_sg: []
+  ru: стоимость пересылки
+  en: shipping costs, forwarding charges
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verschleiß
+  lemma: Verschleiß
+  gender: [m]
+  plural: [Verschleiße]
+  gen_sg: [Verschleißes]
+  ru: износ
+  en: wearout
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verschmutzung
+  lemma: Verschmutzung
+  gender: [f]
+  plural: [Verschmutzungen]
+  gen_sg: [Verschmutzung]
+  ru: загрязнение
+  en: pollution
+  freq: 28000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Versicherung
+  lemma: Versicherung
+  gender: [f]
+  plural: [Versicherungen]
+  gen_sg: [Versicherung]
+  ru: страховка
+  en: insurance
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verspätung
+  lemma: Verspätung
+  gender: [f]
+  plural: [Verspätungen]
+  gen_sg: [Verspätung]
+  ru: опоздание
+  en: delay
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vertrag
+  lemma: Vertrag
+  gender: [m]
+  plural: [Verträge]
+  gen_sg: [Vertrages, Vertrags]
+  ru: договор, контракт
+  en: agreement, contract
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vertrauen
+  lemma: Vertrauen
+  gender: [n]
+  plural: []
+  gen_sg: [Vertrauens]
+  ru: доверие
+  en: trust, confidence
+  freq: 600
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verwaltung
+  lemma: Verwaltung
+  gender: [f]
+  plural: [Verwaltungen]
+  gen_sg: [Verwaltung]
+  ru: администрация
+  en: administration
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verzug
+  lemma: Verzug
+  gender: [m]
+  plural: [Verzüge]
+  gen_sg: [Verzuges, Verzugs]
+  ru: промедление, задержка, затяжка
+  en: delay
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verzweiflung
+  lemma: Verzweiflung
+  gender: [f]
+  plural: [Verzweiflungen]
+  gen_sg: [Verzweiflung]
+  ru: отчаяние
+  en: despair
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Verzögerung
+  lemma: Verzögerung
+  gender: [f]
+  plural: [Verzögerungen]
+  gen_sg: [Verzögerung]
+  ru: задержка
+  en: delay
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Veröffentlichung
+  lemma: Veröffentlichung
+  gender: [f]
+  plural: [Veröffentlichungen]
+  gen_sg: [Veröffentlichung]
+  ru: публикация
+  en: publication, release
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Video
+  lemma: Video
+  gender: [n]
+  plural: [Videos]
+  gen_sg: [Videos]
+  ru: видео
+  en: video
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Viertel
+  lemma: Viertel
+  sense: четверть
+  gender: [n, m]
+  plural: [Viertel]
+  gen_sg: [Viertels]
+  ru: четверть
+  en: quarter
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Viertel:2
+  lemma: Viertel
+  sense: четверть
+  gender: [f]
+  plural: [Viertel]
+  gen_sg: [Viertel]
+  ru: четверть
+  en: quarter, fourth
+  freq: 5000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Virus
+  lemma: Virus
+  gender: [m, n]
+  plural: [Viren]
+  gen_sg: [Virus]
+  ru: вирус
+  en: virus
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Visum
+  lemma: Visum
+  gender: [n]
+  plural: [Visa, Visen]
+  gen_sg: [Visums]
+  ru: виза
+  en: visa
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vogel
+  lemma: Vogel
+  gender: [m]
+  plural: [Vögel]
+  gen_sg: [Vogels]
+  ru: птица
+  en: bird, fowl
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vokabel
+  lemma: Vokabel
+  gender: [f, n]
+  plural: [Vokabeln, Vokabel]
+  gen_sg: [Vokabels, Vokabel]
+  ru: вокабула
+  en: word, vocabulary
+  freq: 41000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Volk
+  lemma: Volk
+  gender: [n]
+  plural: [Völker]
+  gen_sg: [Volks, Volkes]
+  ru: народ
+  en: people, folk
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Volksabstimmung
+  lemma: Volksabstimmung
+  gender: [f]
+  plural: [Volksabstimmungen]
+  gen_sg: [Volksabstimmung]
+  ru: референдум
+  en: referendum
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Volksfest
+  lemma: Volksfest
+  gender: [n]
+  plural: [Volksfeste]
+  gen_sg: [Volksfestes, Volksfests]
+  ru: народный праздник
+  en: fair, folk festival
+  freq: 38000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Volleyball
+  lemma: Volleyball
+  gender: [m]
+  plural: [Volleybälle]
+  gen_sg: [Volleyballes, Volleyballs]
+  ru: волейбол
+  en: volleyball
+  freq: 22000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vollmacht
+  lemma: Vollmacht
+  gender: [f]
+  plural: [Vollmachten]
+  gen_sg: [Vollmacht]
+  ru: доверенность
+  en: power of attorney, proxy
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vollzeit
+  lemma: Vollzeit
+  gender: [f]
+  plural: []
+  gen_sg: [Vollzeit]
+  ru: полный рабочий день
+  en: full time
+  freq: 28000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Volumen
+  lemma: Volumen
+  gender: [n]
+  plural: [Volumen, Volumina]
+  gen_sg: [Volumens]
+  ru: объём
+  en: volume
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorbehalt
+  lemma: Vorbehalt
+  gender: [m]
+  plural: [Vorbehalte]
+  gen_sg: [Vorbehalts, Vorbehaltes]
+  ru: оговорка
+  en: caveat, reservation
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorderrad
+  lemma: Vorderrad
+  gender: [n]
+  plural: [Vorderräder]
+  gen_sg: [Vorderrades, Vorderrads]
+  ru: переднее колесо
+  en: front wheel
+  freq: 45000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorfall
+  lemma: Vorfall
+  gender: [m]
+  plural: [Vorfälle]
+  gen_sg: [Vorfalles, Vorfalls]
+  ru: случай, инцидент
+  en: incident
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorhersage
+  lemma: Vorhersage
+  gender: [f]
+  plural: [Vorhersagen]
+  gen_sg: [Vorhersage]
+  ru: прогноз
+  en: prediction
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorlesung
+  lemma: Vorlesung
+  gender: [f]
+  plural: [Vorlesungen]
+  gen_sg: [Vorlesung]
+  ru: лекция
+  en: lecture
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorname
+  lemma: Vorname
+  gender: [m]
+  plural: [Vornamen]
+  gen_sg: [Vornamens]
+  ru: имя
+  en: given name, first name
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorort
+  lemma: Vorort
+  gender: [m]
+  plural: [Vororte]
+  gen_sg: [Vorortes, Vororts]
+  ru: пригород, предместье
+  en: suburb, outskirts
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorschlag
+  lemma: Vorschlag
+  gender: [m]
+  plural: [Vorschläge]
+  gen_sg: [Vorschlages, Vorschlags]
+  ru: предложение
+  en: proposal, suggestion
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorschrift
+  lemma: Vorschrift
+  gender: [f]
+  plural: [Vorschriften]
+  gen_sg: [Vorschrift]
+  ru: пропись, образец
+  en: rule, regulation
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorschule
+  lemma: Vorschule
+  gender: [f]
+  plural: [Vorschulen]
+  gen_sg: [Vorschule]
+  ru: дошкольная подготовка, дошкольное образование
+  en: preschool, infant school
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorsorge
+  lemma: Vorsorge
+  gender: [f]
+  plural: []
+  gen_sg: [Vorsorge]
+  ru: предусмотрительность, заботливость
+  en: precaution, foresight
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorspeise
+  lemma: Vorspeise
+  gender: [f]
+  plural: [Vorspeisen]
+  gen_sg: [Vorspeise]
+  ru: закуска
+  en: appetizer, starter
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorstellungsgespräch
+  lemma: Vorstellungsgespräch
+  gender: [n]
+  plural: [Vorstellungsgespräche]
+  gen_sg: [Vorstellungsgespräches, Vorstellungsgesprächs]
+  ru: собеседование
+  en: interview, job interview
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorteil
+  lemma: Vorteil
+  gender: [m]
+  plural: [Vorteile]
+  gen_sg: [Vorteils, Vorteiles]
+  ru: преимущество
+  en: advantage, benefit
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vortrag
+  lemma: Vortrag
+  gender: [m]
+  plural: [Vorträge]
+  gen_sg: [Vortrags, Vortrages]
+  ru: доклад
+  en: talk, speech
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorurteil
+  lemma: Vorurteil
+  gender: [n]
+  plural: [Vorurteile]
+  gen_sg: [Vorurteils]
+  ru: предрассудок, предубеждение
+  en: prejudice
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Vorwurf
+  lemma: Vorwurf
+  gender: [m]
+  plural: [Vorwürfe]
+  gen_sg: [Vorwurfs, Vorwurfes]
+  ru: упрёк, укор
+  en: accusation
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

@@ -1,0 +1,1176 @@
+- id: n:Rabatt
+  lemma: Rabatt
+  gender: [m]
+  plural: [Rabatte]
+  gen_sg: [Rabatts, Rabattes]
+  ru: скидка
+  en: discount
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Radiergummi
+  lemma: Radiergummi
+  gender: [m, n]
+  plural: [Radiergummis]
+  gen_sg: [Radiergummis]
+  ru: ластик
+  en: eraser, rubber
+  freq: 31000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Radio
+  lemma: Radio
+  gender: [n, m]
+  plural: [Radios]
+  gen_sg: [Radios]
+  ru: радио
+  en: radio
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Radius
+  lemma: Radius
+  gender: [m]
+  plural: [Radien]
+  gen_sg: [Radius]
+  ru: радиус
+  en: radius
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Radtour
+  lemma: Radtour
+  gender: [f]
+  plural: [Radtouren]
+  gen_sg: [Radtour]
+  ru: велопоход
+  en: bicycle tour, bike ride
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rap
+  lemma: Rap
+  gender: [m]
+  plural: [Raps]
+  gen_sg: [Raps, Rap]
+  ru: null
+  en: rap
+  freq: 28000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rasierer
+  lemma: Rasierer
+  gender: [m]
+  plural: [Rasierer]
+  gen_sg: [Rasierers]
+  ru: бритва
+  en: shaver, razor
+  freq: 18000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rasur
+  lemma: Rasur
+  gender: [f]
+  plural: [Rasuren]
+  gen_sg: [Rasur]
+  ru: бритьё
+  en: shave
+  freq: 23000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ratenzahlung
+  lemma: Ratenzahlung
+  gender: [f]
+  plural: [Ratenzahlungen]
+  gen_sg: [Ratenzahlung]
+  ru: уплата в рассрочку, уплата отдельными взносами
+  en: payment by instalments
+  freq: 40000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rathaus
+  lemma: Rathaus
+  gender: [n]
+  plural: [Rathäuser]
+  gen_sg: [Rathauses]
+  ru: ратуша
+  en: town hall, city hall
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rauch
+  lemma: Rauch
+  gender: [m]
+  plural: [Rauche]
+  gen_sg: [Rauchs, Rauches]
+  ru: дым
+  en: smoke, fume
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rauchmelder
+  lemma: Rauchmelder
+  gender: [m]
+  plural: [Rauchmelder]
+  gen_sg: [Rauchmelders]
+  ru: детектор дыма
+  en: smoke detector, smoke alarm
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rauminhalt
+  lemma: Rauminhalt
+  gender: [m]
+  plural: [Rauminhalte]
+  gen_sg: [Rauminhalts]
+  ru: объём
+  en: volume
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rechenaufgabe
+  lemma: Rechenaufgabe
+  gender: [f]
+  plural: [Rechenaufgaben]
+  gen_sg: [Rechenaufgabe]
+  ru: арифметическая задача
+  en: mathematical exercise, arithmetical problem
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rechenbrett
+  lemma: Rechenbrett
+  gender: [n]
+  plural: [Rechenbretter]
+  gen_sg: [Rechenbrettes, Rechenbretts]
+  ru: счёты
+  en: A calculation slate
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rechnung
+  lemma: Rechnung
+  gender: [f]
+  plural: [Rechnungen]
+  gen_sg: [Rechnung]
+  ru: счёт
+  en: bill
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Recht
+  lemma: Recht
+  gender: [n]
+  plural: [Rechte]
+  gen_sg: [Rechts, Rechtes]
+  ru: право
+  en: law
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rechtsanwalt
+  lemma: Rechtsanwalt
+  gender: [m]
+  plural: [Rechtsanwälte]
+  gen_sg: [Rechtsanwaltes, Rechtsanwalts]
+  ru: адвокат, защитник
+  en: lawyer, barrister
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rechtschreibung
+  lemma: Rechtschreibung
+  gender: [f]
+  plural: [Rechtschreibungen]
+  gen_sg: [Rechtschreibung]
+  ru: правописание
+  en: orthography, spelling
+  freq: 25000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rechtsstaat
+  lemma: Rechtsstaat
+  gender: [m]
+  plural: [Rechtsstaaten]
+  gen_sg: [Rechtsstaats, Rechtsstaates]
+  ru: правовое государство
+  en: constitutional state, rule of law
+  freq: 49000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Redaktion
+  lemma: Redaktion
+  gender: [f]
+  plural: [Redaktionen]
+  gen_sg: [Redaktion]
+  ru: редакция
+  en: editing
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rede
+  lemma: Rede
+  gender: [f]
+  plural: [Reden]
+  gen_sg: [Rede]
+  ru: речь
+  en: speech, address
+  freq: 300
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Referat
+  lemma: Referat
+  gender: [n]
+  plural: [Referate]
+  gen_sg: [Referates, Referats]
+  ru: доклад
+  en: oral ) report
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regal
+  lemma: Regal
+  gender: [n]
+  plural: [Regale, Regalien]
+  gen_sg: [Regals, Regales]
+  ru: полка
+  en: rack, shelf
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regel
+  lemma: Regel
+  gender: [f]
+  plural: [Regeln]
+  gen_sg: [Regel]
+  ru: правило
+  en: rule
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regen
+  lemma: Regen
+  gender: [m]
+  plural: [Regen]
+  gen_sg: [Regens]
+  ru: дождь
+  en: rain
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regenbogen
+  lemma: Regenbogen
+  gender: [m]
+  plural: [Regenbögen, Regenbogen]
+  gen_sg: [Regenbogens]
+  ru: радуга
+  en: rainbow
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regenschirm
+  lemma: Regenschirm
+  gender: [m]
+  plural: [Regenschirme]
+  gen_sg: [Regenschirmes, Regenschirms]
+  ru: зонт
+  en: umbrella, brolly
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regierung
+  lemma: Regierung
+  gender: [f]
+  plural: [Regierungen]
+  gen_sg: [Regierung]
+  ru: правительство
+  en: government
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Region
+  lemma: Region
+  gender: [f]
+  plural: [Regionen]
+  gen_sg: [Region]
+  ru: район, область
+  en: region, area
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Regisseur
+  lemma: Regisseur
+  gender: [m]
+  plural: [Regisseure]
+  gen_sg: [Regisseurs]
+  ru: режиссёр
+  en: director, producer
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reichtum
+  lemma: Reichtum
+  gender: [m]
+  plural: [Reichtümer]
+  gen_sg: [Reichtums]
+  ru: богатство
+  en: wealth
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reifen
+  lemma: Reifen
+  gender: [m]
+  plural: [Reifen]
+  gen_sg: [Reifens]
+  ru: шина, покрышка
+  en: tyre, tire
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reifenwechsel
+  lemma: Reifenwechsel
+  gender: [m]
+  plural: [Reifenwechsel]
+  gen_sg: [Reifenwechsels]
+  ru: смена шины
+  en: tyre change, tire change
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reis
+  lemma: Reis
+  sense: рис
+  gender: [m]
+  plural: [Reise]
+  gen_sg: [Reises]
+  ru: рис
+  en: rice
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reis:2
+  lemma: Reis
+  sense: ботан. отросток
+  gender: [n]
+  plural: [Reiser]
+  gen_sg: [Reises]
+  ru: ботан. отросток, росток
+  en: shoot, sprout
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reise
+  lemma: Reise
+  gender: [f]
+  plural: [Reisen]
+  gen_sg: [Reise]
+  ru: поездка, путешествие
+  en: travel, journey
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reisebüro
+  lemma: Reisebüro
+  gender: [n]
+  plural: [Reisebüros]
+  gen_sg: [Reisebüros]
+  ru: бюро путешествий
+  en: travel agency
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reiseführer
+  lemma: Reiseführer
+  gender: [m]
+  plural: [Reiseführer]
+  gen_sg: [Reiseführers]
+  ru: путеводитель
+  en: guide
+  freq: 30000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reisegruppe
+  lemma: Reisegruppe
+  gender: [f]
+  plural: [Reisegruppen]
+  gen_sg: [Reisegruppe]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reisepass
+  lemma: Reisepass
+  gender: [m]
+  plural: [Reisepässe]
+  gen_sg: [Reisepasses]
+  ru: паспорт
+  en: passport
+  freq: 15000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reiseziel
+  lemma: Reiseziel
+  gender: [n]
+  plural: [Reiseziele]
+  gen_sg: [Reisezieles, Reiseziels]
+  ru: пункт назначения
+  en: destination
+  freq: 32000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reißverschluss
+  lemma: Reißverschluss
+  gender: [m]
+  plural: [Reißverschlüsse]
+  gen_sg: [Reißverschlusses]
+  ru: молния
+  en: zipper, zip fastener
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reklamation
+  lemma: Reklamation
+  gender: [f]
+  plural: [Reklamationen]
+  gen_sg: [Reklamation]
+  ru: рекламация
+  en: consumer complaint, customer complaint
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rekord
+  lemma: Rekord
+  gender: [m]
+  plural: [Rekorde]
+  gen_sg: [Rekordes, Rekords]
+  ru: рекорд
+  en: record
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rente
+  lemma: Rente
+  gender: [f]
+  plural: [Renten]
+  gen_sg: [Rente]
+  ru: пенсия
+  en: pension, retirement
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rentenalter
+  lemma: Rentenalter
+  gender: [n]
+  plural: [Rentenalter]
+  gen_sg: [Rentenalters]
+  ru: пенсионный возраст
+  en: retirement age, pension age
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reparatur
+  lemma: Reparatur
+  gender: [f]
+  plural: [Reparaturen]
+  gen_sg: [Reparatur]
+  ru: починка, ремонт
+  en: repair
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Reservierung
+  lemma: Reservierung
+  gender: [f]
+  plural: [Reservierungen]
+  gen_sg: [Reservierung]
+  ru: резервирование, бронирование
+  en: reservation
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Respekt
+  lemma: Respekt
+  gender: [m]
+  plural: []
+  gen_sg: [Respekts, Respektes]
+  ru: уважение, почтение
+  en: respect
+  freq: 2000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ressource
+  lemma: Ressource
+  gender: [f]
+  plural: [Ressourcen]
+  gen_sg: [Ressource]
+  ru: null
+  en: resource
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rest
+  lemma: Rest
+  gender: [m]
+  plural: [Reste]
+  gen_sg: [Rests, Restes]
+  ru: остаток, оставшаяся часть
+  en: remainder, rest
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Restaurant
+  lemma: Restaurant
+  gender: [n]
+  plural: [Restaurants]
+  gen_sg: [Restaurants]
+  ru: ресторан
+  en: restaurant
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Retoure
+  lemma: Retoure
+  gender: [f]
+  plural: [Retouren]
+  gen_sg: [Retoure]
+  ru: null
+  en: return
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rettung
+  lemma: Rettung
+  gender: [f]
+  plural: [Rettungen]
+  gen_sg: [Rettung]
+  ru: спасение
+  en: rescue
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rettungsdienst
+  lemma: Rettungsdienst
+  gender: [m]
+  plural: [Rettungsdienste]
+  gen_sg: [Rettungsdienstes, Rettungsdiensts]
+  ru: спасательная служба
+  en: emergency medical services, rescue service
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rettungswagen
+  lemma: Rettungswagen
+  gender: [m]
+  plural: [Rettungswägen, Rettungswagen]
+  gen_sg: [Rettungswagens]
+  ru: аварийная машина
+  en: ambulance vehicle
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rezept
+  lemma: Rezept
+  gender: [n]
+  plural: [Rezepte]
+  gen_sg: [Rezeptes, Rezepts]
+  ru: рецепт
+  en: recipe
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rezeption
+  lemma: Rezeption
+  gender: [f]
+  plural: [Rezeptionen]
+  gen_sg: [Rezeption]
+  ru: рецепция, ресепшен
+  en: reception, reception desk
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Richter
+  lemma: Richter
+  gender: [m]
+  plural: [Richter]
+  gen_sg: [Richters]
+  ru: судья
+  en: judge
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Richtung
+  lemma: Richtung
+  gender: [f]
+  plural: [Richtungen]
+  gen_sg: [Richtung]
+  ru: направление
+  en: direction
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Richtwert
+  lemma: Richtwert
+  gender: [m]
+  plural: [Richtwerte]
+  gen_sg: [Richtwertes, Richtwerts]
+  ru: null
+  en: guidance level, guide level
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ring
+  lemma: Ring
+  gender: [m]
+  plural: [Ringe]
+  gen_sg: [Ringes, Rings]
+  ru: кольцо
+  en: ring
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Riss
+  lemma: Riss
+  sense: трещина
+  gender: [m]
+  plural: [Risse]
+  gen_sg: [Risses]
+  ru: трещина
+  en: tear, burst
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Riss:2
+  lemma: Riss
+  sense: трещина
+  gender: [f]
+  plural: []
+  gen_sg: []
+  ru: трещина, щель
+  en: fissure, crack
+  freq: 7000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Roboter
+  lemma: Roboter
+  gender: [m]
+  plural: [Roboter]
+  gen_sg: [Roboters]
+  ru: робот
+  en: robot
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rock
+  lemma: Rock
+  sense: юбка
+  gender: [m]
+  plural: [Röcke]
+  gen_sg: [Rocks, Rockes]
+  ru: юбка
+  en: skirt
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rock:2
+  lemma: Rock
+  sense: рок
+  gender: [m]
+  plural: []
+  gen_sg: [Rocks, Rock]
+  ru: рок
+  en: rock
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rock:3
+  lemma: Rock
+  sense: юбка
+  gender: [m]
+  plural: []
+  gen_sg: [Rocks, Rock]
+  ru: юбка, диал. пиджак
+  en: skirt
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rockmusik
+  lemma: Rockmusik
+  gender: [f]
+  plural: []
+  gen_sg: [Rockmusik]
+  ru: рок-музыка, рок
+  en: rock music
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rohr
+  lemma: Rohr
+  gender: [n]
+  plural: [Rohre]
+  gen_sg: [Rohrs, Rohres]
+  ru: труба, трубка
+  en: tube, pipe
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rolle
+  lemma: Rolle
+  sense: роль
+  gender: [f]
+  plural: [Rollen]
+  gen_sg: [Rolle]
+  ru: роль
+  en: roller
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rolle:2
+  lemma: Rolle
+  sense: ролик
+  gender: [m]
+  plural: [Rolle]
+  gen_sg: [Rolle]
+  ru: ролик, колесико
+  en: roll, reel
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rolle:3
+  lemma: Rolle
+  sense: ролик
+  gender: [n]
+  plural: []
+  gen_sg: [Rolle]
+  ru: ролик, колесико
+  en: roll, reel
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Roller
+  lemma: Roller
+  gender: [m]
+  plural: [Roller]
+  gen_sg: [Rollers]
+  ru: самокат
+  en: scooter
+  freq: 11000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Roman
+  lemma: Roman
+  gender: [m]
+  plural: [Romane]
+  gen_sg: [Romans]
+  ru: роман
+  en: novel
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rosine
+  lemma: Rosine
+  gender: [f]
+  plural: [Rosinen]
+  gen_sg: [Rosine]
+  ru: изюм
+  en: raisin, currant
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rost
+  lemma: Rost
+  sense: ржавчина
+  gender: [m]
+  plural: [Roste]
+  gen_sg: [Rostes, Rosts]
+  ru: ржавчина
+  en: rust
+  freq: 15000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rost:2
+  lemma: Rost
+  sense: решётка
+  gender: [m]
+  plural: [Roste]
+  gen_sg: [Rostes, Rosts]
+  ru: решётка, техн. колосниковая решётка
+  en: grill, grid
+  freq: 15000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rucksack
+  lemma: Rucksack
+  gender: [m]
+  plural: [Rucksäcke]
+  gen_sg: [Rucksackes, Rucksacks]
+  ru: рюкзак
+  en: rucksack, knapsack
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ruhe
+  lemma: Ruhe
+  gender: [f]
+  plural: []
+  gen_sg: [Ruhe]
+  ru: покой, неподвижность
+  en: calm, quiet
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rundfunk
+  lemma: Rundfunk
+  gender: [m]
+  plural: []
+  gen_sg: [Rundfunks, Rundfunkes]
+  ru: радиовещание
+  en: radio, broadcast
+  freq: 22000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rundreise
+  lemma: Rundreise
+  gender: [f]
+  plural: [Rundreisen]
+  gen_sg: [Rundreise]
+  ru: экскурсионная поездка
+  en: round trip
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Russland
+  lemma: Russland
+  gender: [n]
+  plural: []
+  gen_sg: [Russlands]
+  ru: Россия
+  en: Russia
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rätsel
+  lemma: Rätsel
+  gender: [n]
+  plural: [Rätsel]
+  gen_sg: [Rätsels]
+  ru: загадка
+  en: puzzle, riddle
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rücken
+  lemma: Rücken
+  gender: [m]
+  plural: [Rücken]
+  gen_sg: [Rückens]
+  ru: спина
+  en: back
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückerstattung
+  lemma: Rückerstattung
+  gender: [f]
+  plural: [Rückerstattungen]
+  gen_sg: [Rückerstattung]
+  ru: возмещение, отдача
+  en: refund, reimbursement
+  freq: 27000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückfahrt
+  lemma: Rückfahrt
+  gender: [f]
+  plural: [Rückfahrten]
+  gen_sg: [Rückfahrt]
+  ru: обратный путь
+  en: return trip
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückflug
+  lemma: Rückflug
+  gender: [m]
+  plural: [Rückflüge]
+  gen_sg: [Rückflugs, Rückfluges]
+  ru: обратный полет
+  en: inward flight, return flight
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückgabe
+  lemma: Rückgabe
+  gender: [f]
+  plural: [Rückgaben]
+  gen_sg: [Rückgabe]
+  ru: возврат, отдача
+  en: return
+  freq: 24000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückkehr
+  lemma: Rückkehr
+  gender: [f]
+  plural: []
+  gen_sg: [Rückkehr]
+  ru: возвращение
+  en: return
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rücklage
+  lemma: Rücklage
+  gender: [f]
+  plural: [Rücklagen]
+  gen_sg: [Rücklage]
+  ru: накопления
+  en: savings
+  freq: 42000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückmeldung
+  lemma: Rückmeldung
+  gender: [f]
+  plural: [Rückmeldungen]
+  gen_sg: [Rückmeldung]
+  ru: обратный контроль, обратная информация
+  en: feedback
+  freq: 28000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rücksendung
+  lemma: Rücksendung
+  gender: [f]
+  plural: [Rücksendungen]
+  gen_sg: [Rücksendung]
+  ru: отсылка  назад, возвращение
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rücksicht
+  lemma: Rücksicht
+  gender: [f]
+  plural: [Rücksichten]
+  gen_sg: [Rücksicht]
+  ru: внимание
+  en: consideration
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rücksitz
+  lemma: Rücksitz
+  gender: [m]
+  plural: [Rücksitze]
+  gen_sg: [Rücksitzes]
+  ru: заднее сидение
+  en: back-seat
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Rückspiegel
+  lemma: Rückspiegel
+  gender: [m]
+  plural: [Rückspiegel]
+  gen_sg: [Rückspiegels]
+  ru: null
+  en: rear-view mirror
+  freq: 21000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

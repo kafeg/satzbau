@@ -19,8 +19,11 @@
 ## Как запускать
 | что | как |
 |---|---|
-| питон | `python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt` |
-| скачать источники | `.venv/bin/python -I tools/fetch.py` — в `data/raw/`, по `sources.lock` |
+| питон 3.12 (spaCy) | `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r tools/requirements.txt` |
+| скачать источники | `.venv/bin/python -I tools/fetch.py` — в `data/raw/`, по `sources.lock`; большие — в 8 соединений |
+| импорт существительных | `.venv/bin/python -I tools/import_nouns.py` — ⚠ перезаписывает `words/nouns`: после ручных правок не запускать |
+| фразы | `.venv/bin/python -I tools/import_sentences.py` (`--no-nlp` — только отбор, без разметки) |
+| проверка | `.venv/bin/python -I tools/verify.py` (`-v` — все ошибки) |
 
 ## Правила
 - **Только нужное текущему шагу, но архитектурно правильно.** Будущему — шов, не код.

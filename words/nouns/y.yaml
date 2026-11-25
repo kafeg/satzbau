@@ -1,0 +1,12 @@
+- id: n:Yoga
+  lemma: Yoga
+  gender: [m, n]
+  plural: []
+  gen_sg: [Yogas, Yoga]
+  ru: йога
+  en: yoga
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}

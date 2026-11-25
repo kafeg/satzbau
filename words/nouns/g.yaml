@@ -1,0 +1,1575 @@
+- id: n:Gabel
+  lemma: Gabel
+  gender: [f]
+  plural: [Gabeln]
+  gen_sg: [Gabel]
+  ru: вилка
+  en: fork
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gang
+  lemma: Gang
+  sense: проход
+  gender: [m]
+  plural: [Gänge]
+  gen_sg: [Gangs, Ganges]
+  ru: проход
+  en: gait
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gang:2
+  lemma: Gang
+  sense: шайка
+  gender: [f]
+  plural: [Gangs]
+  gen_sg: [Gang]
+  ru: шайка
+  en: gang
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Garage
+  lemma: Garage
+  gender: [f]
+  plural: [Garagen]
+  gen_sg: [Garage]
+  ru: гараж
+  en: garage
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Garagentor
+  lemma: Garagentor
+  gender: [n]
+  plural: [Garagentore]
+  gen_sg: [Garagentores, Garagentors]
+  ru: null
+  en: garage door
+  freq: 38000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Garantie
+  lemma: Garantie
+  gender: [f]
+  plural: [Garantien]
+  gen_sg: [Garantie]
+  ru: гарантия
+  en: guarantee
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Garantiefall
+  lemma: Garantiefall
+  gender: [m]
+  plural: [Garantiefälle]
+  gen_sg: [Garantiefalls, Garantiefalles]
+  ru: гарантийный случай
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Garten
+  lemma: Garten
+  gender: [m]
+  plural: [Gärten]
+  gen_sg: [Gartens]
+  ru: сад
+  en: garden
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gasgeruch
+  lemma: Gasgeruch
+  gender: [m]
+  plural: [Gasgerüche]
+  gen_sg: [Gasgeruches, Gasgeruchs]
+  ru: запах газа
+  en: smell of gas
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gasherd
+  lemma: Gasherd
+  gender: [m]
+  plural: [Gasherde]
+  gen_sg: [Gasherdes, Gasherds]
+  ru: газовая плита
+  en: gas stove, gas cooker
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gasse
+  lemma: Gasse
+  gender: [f]
+  plural: [Gassen]
+  gen_sg: [Gasse]
+  ru: переулок
+  en: alley, lane
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gast
+  lemma: Gast
+  sense: гость
+  gender: [m]
+  plural: [Gäste]
+  gen_sg: [Gastes, Gasts]
+  ru: гость
+  en: guest, sojourner
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gast:2
+  lemma: Gast
+  sense: гость
+  gender: [m]
+  plural: [Gasten]
+  gen_sg: [Gastes, Gasts]
+  ru: гость, гостья
+  en: guest
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gastarbeiter
+  lemma: Gastarbeiter
+  gender: [m]
+  plural: [Gastarbeiter]
+  gen_sg: [Gastarbeiters]
+  ru: гастарбайтер
+  en: migrant worker, guest worker
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gastfamilie
+  lemma: Gastfamilie
+  gender: [f]
+  plural: [Gastfamilien]
+  gen_sg: [Gastfamilie]
+  ru: принимающая семья
+  en: host family
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gastgeber
+  lemma: Gastgeber
+  gender: [m]
+  plural: [Gastgeber]
+  gen_sg: [Gastgebers]
+  ru: хозяин дома
+  en: host
+  freq: 11000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gastgeberin
+  lemma: Gastgeberin
+  gender: [f]
+  plural: [Gastgeberinnen]
+  gen_sg: [Gastgeberin]
+  ru: null
+  en: hostess
+  freq: 11000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gastgeschenk
+  lemma: Gastgeschenk
+  gender: [n]
+  plural: [Gastgeschenke]
+  gen_sg: [Gastgeschenks, Gastgeschenkes]
+  ru: подарок гостю
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gebirge
+  lemma: Gebirge
+  gender: [n]
+  plural: [Gebirge]
+  gen_sg: [Gebirges]
+  ru: горы
+  en: mountain range
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gebrauchtwagen
+  lemma: Gebrauchtwagen
+  gender: [m]
+  plural: [Gebrauchtwagen, Gebrauchtwägen]
+  gen_sg: [Gebrauchtwagens]
+  ru: подержанный автомобиль
+  en: second-hand car
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geburtsdatum
+  lemma: Geburtsdatum
+  gender: [n]
+  plural: [Geburtsdaten]
+  gen_sg: [Geburtsdatums]
+  ru: дата рождения
+  en: date of birth
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geburtsland
+  lemma: Geburtsland
+  gender: [n]
+  plural: [Geburtsländer]
+  gen_sg: [Geburtslandes, Geburtslands]
+  ru: родина
+  en: null
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geburtsort
+  lemma: Geburtsort
+  gender: [m]
+  plural: [Geburtsorte]
+  gen_sg: [Geburtsortes, Geburtsorts]
+  ru: место рождения
+  en: birthplace
+  freq: 19000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geburtstag
+  lemma: Geburtstag
+  gender: [m]
+  plural: [Geburtstage]
+  gen_sg: [Geburtstags, Geburtstages]
+  ru: день рождения
+  en: birthday, day of birth
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gebühr
+  lemma: Gebühr
+  gender: [f]
+  plural: [Gebühren]
+  gen_sg: [Gebühr]
+  ru: пошлина, сбор
+  en: fee
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gedicht
+  lemma: Gedicht
+  gender: [n]
+  plural: [Gedichte]
+  gen_sg: [Gedichtes, Gedichts]
+  ru: стихотворение
+  en: poem
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geduld
+  lemma: Geduld
+  gender: [f]
+  plural: []
+  gen_sg: [Geduld]
+  ru: терпение
+  en: patience
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gefahr
+  lemma: Gefahr
+  gender: [f]
+  plural: [Gefahren]
+  gen_sg: [Gefahr]
+  ru: опасность, риск, угроза
+  en: danger, risk
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gefühl
+  lemma: Gefühl
+  gender: [n]
+  plural: [Gefühle]
+  gen_sg: [Gefühls, Gefühles]
+  ru: чувство
+  en: feeling, affection
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gegenargument
+  lemma: Gegenargument
+  gender: [n]
+  plural: [Gegenargumente]
+  gen_sg: [Gegenarguments, Gegenargumentes]
+  ru: контраргумент
+  en: counterargument
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gegend
+  lemma: Gegend
+  gender: [f]
+  plural: [Gegenden]
+  gen_sg: [Gegend]
+  ru: местность, окрестность
+  en: region
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gegenseite
+  lemma: Gegenseite
+  gender: [f]
+  plural: [Gegenseiten]
+  gen_sg: [Gegenseite]
+  ru: противоположная сторона
+  en: opposite side
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gegenvorschlag
+  lemma: Gegenvorschlag
+  gender: [m]
+  plural: [Gegenvorschläge]
+  gen_sg: [Gegenvorschlags, Gegenvorschlages]
+  ru: встречное предложение
+  en: counterproposal, counte-proposal
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gegner
+  lemma: Gegner
+  gender: [m]
+  plural: [Gegner]
+  gen_sg: [Gegners]
+  ru: противник, оппонент
+  en: adversary, opponent
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gehalt
+  lemma: Gehalt
+  sense: содержание
+  gender: [m]
+  plural: [Gehalte]
+  gen_sg: [Gehalts, Gehaltes]
+  ru: содержание
+  en: content
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gehalt:2
+  lemma: Gehalt
+  sense: зарплата
+  gender: [m, n]
+  plural: [Gehälter]
+  gen_sg: [Gehaltes, Gehalts]
+  ru: зарплата
+  en: salary
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gehaltserhöhung
+  lemma: Gehaltserhöhung
+  gender: [f]
+  plural: [Gehaltserhöhungen]
+  gen_sg: [Gehaltserhöhung]
+  ru: повышение оклада
+  en: pay rise, salary increase
+  freq: 12000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gehirn
+  lemma: Gehirn
+  gender: [n]
+  plural: [Gehirne]
+  gen_sg: [Gehirns, Gehirnes]
+  ru: мозг
+  en: brain
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geige
+  lemma: Geige
+  gender: [f]
+  plural: [Geigen]
+  gen_sg: [Geige]
+  ru: скрипка
+  en: violin, fiddle
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gelassenheit
+  lemma: Gelassenheit
+  gender: [f]
+  plural: []
+  gen_sg: [Gelassenheit]
+  ru: спокойствие
+  en: calm, serenity
+  freq: 21000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geld
+  lemma: Geld
+  gender: [n]
+  plural: [Gelder]
+  gen_sg: [Gelds, Geldes]
+  ru: деньги
+  en: money, dough
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geldautomat
+  lemma: Geldautomat
+  gender: [m]
+  plural: [Geldautomaten]
+  gen_sg: [Geldautomaten]
+  ru: банкомат
+  en: ATM, automated teller machine
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geldbeutel
+  lemma: Geldbeutel
+  gender: [m]
+  plural: [Geldbeutel]
+  gen_sg: [Geldbeutels]
+  ru: кошелёк
+  en: purse, wallet
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geldstrafe
+  lemma: Geldstrafe
+  gender: [f]
+  plural: [Geldstrafen]
+  gen_sg: [Geldstrafe]
+  ru: денежный штраф
+  en: fine
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gemeinde
+  lemma: Gemeinde
+  gender: [f]
+  plural: [Gemeinden]
+  gen_sg: [Gemeinde]
+  ru: община, муниципалитет
+  en: municipality
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gemüse
+  lemma: Gemüse
+  gender: [n]
+  plural: [Gemüse]
+  gen_sg: [Gemüses]
+  ru: овощ, зелень
+  en: vegetable, vegetables
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gemüsegeschäft
+  lemma: Gemüsegeschäft
+  gender: [n]
+  plural: [Gemüsegeschäfte]
+  gen_sg: [Gemüsegeschäftes, Gemüsegeschäfts]
+  ru: null
+  en: greengrocery, greengrocer’s
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gemüseladen
+  lemma: Gemüseladen
+  gender: [m]
+  plural: [Gemüseläden, Gemüseladen]
+  gen_sg: [Gemüseladens]
+  ru: овощной магазин
+  en: greengrocery
+  freq: 50000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geometrie
+  lemma: Geometrie
+  gender: [f]
+  plural: [Geometrien]
+  gen_sg: [Geometrie]
+  ru: геометрия
+  en: geometry
+  freq: 22000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gepäck
+  lemma: Gepäck
+  gender: [n]
+  plural: [Gepäcke]
+  gen_sg: [Gepäcks, Gepäckes]
+  ru: багаж
+  en: luggage
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gepäckfach
+  lemma: Gepäckfach
+  gender: [n]
+  plural: [Gepäckfächer]
+  gen_sg: [Gepäckfaches, Gepäckfachs]
+  ru: null
+  en: luggage compartment, overhead compartment
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gericht
+  lemma: Gericht
+  sense: суд
+  gender: [n]
+  plural: [Gerichte]
+  gen_sg: [Gerichts, Gerichtes]
+  ru: суд
+  en: court
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gericht:2
+  lemma: Gericht
+  sense: блюдо
+  gender: [n]
+  plural: [Gerichte]
+  gen_sg: [Gerichts, Gerichtes]
+  ru: блюдо
+  en: dish
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geruch
+  lemma: Geruch
+  gender: [m]
+  plural: [Gerüche]
+  gen_sg: [Geruchs, Geruches]
+  ru: запах
+  en: smell, odour
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gerät
+  lemma: Gerät
+  gender: [n]
+  plural: [Geräte]
+  gen_sg: [Geräts, Gerätes]
+  ru: прибор, аппарат
+  en: device, appliance
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gerüst
+  lemma: Gerüst
+  gender: [n]
+  plural: [Gerüste]
+  gen_sg: [Gerüstes, Gerüsts]
+  ru: строительные леса
+  en: scaffold, scaffolding
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesamtgewicht
+  lemma: Gesamtgewicht
+  gender: [n]
+  plural: [Gesamtgewichte]
+  gen_sg: [Gesamtgewichtes, Gesamtgewichts]
+  ru: суммарный вес, вес брутто
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesamtzahl
+  lemma: Gesamtzahl
+  gender: [f]
+  plural: [Gesamtzahlen]
+  gen_sg: [Gesamtzahl]
+  ru: общее число, общая численность
+  en: total number
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschenk
+  lemma: Geschenk
+  gender: [n]
+  plural: [Geschenke]
+  gen_sg: [Geschenkes, Geschenks]
+  ru: подарок
+  en: gift, present
+  freq: 1000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschenkpapier
+  lemma: Geschenkpapier
+  gender: [n]
+  plural: [Geschenkpapiere]
+  gen_sg: [Geschenkpapiers, Geschenkpapieres]
+  ru: подарочная бумага
+  en: gift wrap paper
+  freq: 32000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschichte
+  lemma: Geschichte
+  gender: [f]
+  plural: [Geschichten]
+  gen_sg: [Geschichte]
+  ru: история, рассказ
+  en: history
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschirrspüler
+  lemma: Geschirrspüler
+  gender: [m]
+  plural: [Geschirrspüler]
+  gen_sg: [Geschirrspülers]
+  ru: посудомоечная машина
+  en: dishwasher
+  freq: 26000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschlecht
+  lemma: Geschlecht
+  gender: [n]
+  plural: [Geschlechter]
+  gen_sg: [Geschlechts, Geschlechtes]
+  ru: пол
+  en: gender, sex
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschwindigkeit
+  lemma: Geschwindigkeit
+  gender: [f]
+  plural: [Geschwindigkeiten]
+  gen_sg: [Geschwindigkeit]
+  ru: скорость
+  en: pace, speed
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschwindigkeitsbegrenzung
+  lemma: Geschwindigkeitsbegrenzung
+  gender: [f]
+  plural: [Geschwindigkeitsbegrenzungen]
+  gen_sg: [Geschwindigkeitsbegrenzung]
+  ru: ограничение скорости движения
+  en: speed limit
+  freq: 50000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschwister
+  lemma: Geschwister
+  gender: [n]
+  plural: [Geschwister]
+  gen_sg: [Geschwisters]
+  ru: брат и сестра
+  en: siblings, brother and sister
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Geschäft
+  lemma: Geschäft
+  gender: [n]
+  plural: [Geschäfte]
+  gen_sg: [Geschäftes, Geschäfts]
+  ru: магазин, дело, сделка
+  en: business
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesellschaft
+  lemma: Gesellschaft
+  gender: [f]
+  plural: [Gesellschaften]
+  gen_sg: [Gesellschaft]
+  ru: общество
+  en: society
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesetz
+  lemma: Gesetz
+  gender: [n]
+  plural: [Gesetze]
+  gen_sg: [Gesetzes]
+  ru: закон
+  en: law, act
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesetzentwurf
+  lemma: Gesetzentwurf
+  gender: [m]
+  plural: [Gesetzentwürfe]
+  gen_sg: [Gesetzentwurfs, Gesetzentwurfes]
+  ru: законопроект
+  en: bill, draft law
+  freq: 42000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesetzgebung
+  lemma: Gesetzgebung
+  gender: [f]
+  plural: [Gesetzgebungen]
+  gen_sg: [Gesetzgebung]
+  ru: законодательство
+  en: legislation
+  freq: 31000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesicht
+  lemma: Gesicht
+  gender: [n]
+  plural: [Gesichter, Gesichte]
+  gen_sg: [Gesichts, Gesichtes]
+  ru: лицо
+  en: face
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesichtscreme
+  lemma: Gesichtscreme
+  gender: [f]
+  plural: [Gesichtscremes, Gesichtscremen]
+  gen_sg: [Gesichtscreme]
+  ru: null
+  en: face cream
+  freq: 49000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gespräch
+  lemma: Gespräch
+  gender: [n]
+  plural: [Gespräche]
+  gen_sg: [Gespräches, Gesprächs]
+  ru: разговор, беседа
+  en: conversation, talk
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gesuch
+  lemma: Gesuch
+  gender: [n]
+  plural: [Gesuche]
+  gen_sg: [Gesuches, Gesuchs]
+  ru: прошение, заявление, ходатайство
+  en: petition, request
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Getriebe
+  lemma: Getriebe
+  gender: [n]
+  plural: [Getriebe]
+  gen_sg: [Getriebes]
+  ru: коробка передач
+  en: gear, transmission
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewaltenteilung
+  lemma: Gewaltenteilung
+  gender: [f]
+  plural: []
+  gen_sg: [Gewaltenteilung]
+  ru: разделение властей
+  en: separation of powers, checks and balances
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewerkschaft
+  lemma: Gewerkschaft
+  gender: [f]
+  plural: [Gewerkschaften]
+  gen_sg: [Gewerkschaft]
+  ru: профсоюз
+  en: trade union, labor union
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewicht
+  lemma: Gewicht
+  gender: [n]
+  plural: [Gewichte]
+  gen_sg: [Gewichtes, Gewichts]
+  ru: вес
+  en: weight
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewissheit
+  lemma: Gewissheit
+  gender: [f]
+  plural: [Gewissheiten]
+  gen_sg: [Gewissheit]
+  ru: уверенность
+  en: certainty
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewitter
+  lemma: Gewitter
+  gender: [n]
+  plural: [Gewitter]
+  gen_sg: [Gewitters]
+  ru: гроза
+  en: thunderstorm
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewohnheit
+  lemma: Gewohnheit
+  gender: [f]
+  plural: [Gewohnheiten]
+  gen_sg: [Gewohnheit]
+  ru: привычка
+  en: habit
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gewährleistung
+  lemma: Gewährleistung
+  gender: [f]
+  plural: [Gewährleistungen]
+  gen_sg: [Gewährleistung]
+  ru: гарантия
+  en: guarantee, warranty
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gipfel
+  lemma: Gipfel
+  gender: [m]
+  plural: [Gipfel]
+  gen_sg: [Gipfels]
+  ru: вершина
+  en: peak, summit
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Giraffe
+  lemma: Giraffe
+  gender: [f]
+  plural: [Giraffen]
+  gen_sg: [Giraffe]
+  ru: жираф
+  en: giraffe
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Girokonto
+  lemma: Girokonto
+  gender: [n]
+  plural: [Girokonten, Girokontos, Girokonti]
+  gen_sg: [Girokontos]
+  ru: текущий счёт, жиросчёт
+  en: checking account, giro account
+  freq: 38000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gitarre
+  lemma: Gitarre
+  gender: [f]
+  plural: [Gitarren]
+  gen_sg: [Gitarre]
+  ru: гитара
+  en: guitar
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gitarrist
+  lemma: Gitarrist
+  gender: [m]
+  plural: [Gitarristen]
+  gen_sg: [Gitarristen]
+  ru: гитарист
+  en: guitarist
+  freq: 24000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glas
+  lemma: Glas
+  sense: стакан
+  gender: [n]
+  plural: [Gläser]
+  gen_sg: [Glases]
+  ru: стакан
+  en: glass
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glas:2
+  lemma: Glas
+  sense: склянки
+  gender: [n]
+  plural: [Glasen]
+  gen_sg: [Glases]
+  ru: склянки
+  en: null
+  freq: 2000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glatteis
+  lemma: Glatteis
+  gender: [n]
+  plural: []
+  gen_sg: [Glatteises]
+  ru: гололёд
+  en: black ice
+  freq: 42000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gleichheit
+  lemma: Gleichheit
+  gender: [f]
+  plural: [Gleichheiten]
+  gen_sg: [Gleichheit]
+  ru: равенство
+  en: equality
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gleis
+  lemma: Gleis
+  gender: [n]
+  plural: [Gleise]
+  gen_sg: [Gleises]
+  ru: рельсы, путь
+  en: rail track
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gläubiger
+  lemma: Gläubiger
+  sense: кредитор
+  gender: [m]
+  plural: [Gläubiger]
+  gen_sg: [Gläubigers]
+  ru: кредитор
+  en: creditor
+  freq: 15000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gläubiger:2
+  lemma: Gläubiger
+  sense: верующий
+  gender: [m]
+  plural: [Gläubige]
+  gen_sg: [Gläubigen]
+  ru: верующий
+  en: believer
+  freq: 15000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glück
+  lemma: Glück
+  gender: [n]
+  plural: []
+  gen_sg: [Glücks, Glückes]
+  ru: счастье
+  en: luck, fortune
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glückwunsch
+  lemma: Glückwunsch
+  gender: [m]
+  plural: [Glückwünsche]
+  gen_sg: [Glückwunsches, Glückwunschs]
+  ru: поздравление
+  en: congratulation
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glühbirne
+  lemma: Glühbirne
+  gender: [f]
+  plural: [Glühbirnen]
+  gen_sg: [Glühbirne]
+  ru: лампочка
+  en: light bulb, bulb
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Glühwein
+  lemma: Glühwein
+  gender: [m]
+  plural: [Glühweine]
+  gen_sg: [Glühweines, Glühweins]
+  ru: глинтвейн
+  en: mulled wine, mulled claret
+  freq: 32000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gottesdienst
+  lemma: Gottesdienst
+  gender: [m]
+  plural: [Gottesdienste]
+  gen_sg: [Gottesdienstes, Gottesdiensts]
+  ru: богослужение
+  en: service
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grad
+  lemma: Grad
+  sense: градус
+  gender: [m]
+  plural: [Grade]
+  gen_sg: [Grads, Grades]
+  ru: градус
+  en: degree
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grad:2
+  lemma: Grad
+  sense: степень
+  gender: [m, n]
+  plural: [Grade]
+  gen_sg: [Grads, Grades]
+  ru: степень
+  en: degree
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gramm
+  lemma: Gramm
+  gender: [n]
+  plural: [Gramme]
+  gen_sg: [Gramms]
+  ru: грамм
+  en: gram, gramme (
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grammatik
+  lemma: Grammatik
+  gender: [f]
+  plural: [Grammatiken]
+  gen_sg: [Grammatik]
+  ru: грамматика
+  en: grammar
+  freq: 21000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gras
+  lemma: Gras
+  gender: [n]
+  plural: [Gräser]
+  gen_sg: [Grases]
+  ru: трава
+  en: grass, herbage
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grenze
+  lemma: Grenze
+  gender: [f]
+  plural: [Grenzen]
+  gen_sg: [Grenze]
+  ru: граница
+  en: border, borderline
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grenzgebiet
+  lemma: Grenzgebiet
+  gender: [n]
+  plural: [Grenzgebiete]
+  gen_sg: [Grenzgebietes, Grenzgebiets]
+  ru: пограничная область
+  en: border area, borderland
+  freq: 45000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grenzkontrolle
+  lemma: Grenzkontrolle
+  gender: [f]
+  plural: [Grenzkontrollen]
+  gen_sg: [Grenzkontrolle]
+  ru: null
+  en: border control
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grenzübergang
+  lemma: Grenzübergang
+  gender: [m]
+  plural: [Grenzübergänge]
+  gen_sg: [Grenzübergangs, Grenzüberganges]
+  ru: место, пограничная станция
+  en: checkpoint
+  freq: 37000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grippe
+  lemma: Grippe
+  gender: [f]
+  plural: [Grippen]
+  gen_sg: [Grippe]
+  ru: грипп
+  en: influenza, flu
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Großeltern
+  lemma: Großeltern
+  gender: []
+  plural: [Großeltern]
+  gen_sg: []
+  number: pl
+  ru: дедушка и бабушка
+  en: grandparents
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Großmutter
+  lemma: Großmutter
+  gender: [f]
+  plural: [Großmütter]
+  gen_sg: [Großmutter]
+  ru: бабушка
+  en: grandmother
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Großstadt
+  lemma: Großstadt
+  gender: [f]
+  plural: [Großstädte]
+  gen_sg: [Großstadt]
+  ru: большой город
+  en: big city, city
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Großvater
+  lemma: Großvater
+  gender: [m]
+  plural: [Großväter]
+  gen_sg: [Großvaters]
+  ru: дедушка, дед
+  en: grandfather, grandsire
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grund
+  lemma: Grund
+  gender: [m]
+  plural: [Gründe]
+  gen_sg: [Grunds, Grundes]
+  ru: причина, основание
+  en: reason
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grundgesetz
+  lemma: Grundgesetz
+  gender: [n]
+  plural: [Grundgesetze]
+  gen_sg: [Grundgesetzes]
+  ru: конституция
+  en: constitution, German constitution
+  freq: 31000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grundrecht
+  lemma: Grundrecht
+  gender: [n]
+  plural: [Grundrechte]
+  gen_sg: [Grundrechts, Grundrechtes]
+  ru: основное право
+  en: basic right
+  freq: 30000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gruppe
+  lemma: Gruppe
+  gender: [f]
+  plural: [Gruppen]
+  gen_sg: [Gruppe]
+  ru: группа
+  en: group
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gruß
+  lemma: Gruß
+  gender: [m]
+  plural: [Grüße]
+  gen_sg: [Grußes]
+  ru: привет, приветствие
+  en: salute, salutation
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Grußkarte
+  lemma: Grußkarte
+  gender: [f]
+  plural: [Grußkarten]
+  gen_sg: [Grußkarte]
+  ru: null
+  en: greeting card
+  freq: 36000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Größe
+  lemma: Größe
+  gender: [f]
+  plural: [Größen]
+  gen_sg: [Größe]
+  ru: размер
+  en: size
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Guckloch
+  lemma: Guckloch
+  gender: [n]
+  plural: [Gucklöcher]
+  gen_sg: [Guckloches, Gucklochs]
+  ru: разг. глазок
+  en: peephole
+  freq: 44000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gurke
+  lemma: Gurke
+  gender: [f]
+  plural: [Gurken]
+  gen_sg: [Gurke]
+  ru: огурец
+  en: cucumber, gherkin
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gutschein
+  lemma: Gutschein
+  gender: [m]
+  plural: [Gutscheine]
+  gen_sg: [Gutscheines, Gutscheins]
+  ru: ваучер
+  en: coupon, voucher
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gutschrift
+  lemma: Gutschrift
+  gender: [f]
+  plural: [Gutschriften]
+  gen_sg: [Gutschrift]
+  ru: null
+  en: crediting, credit entry
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gymnastik
+  lemma: Gymnastik
+  gender: [f]
+  plural: []
+  gen_sg: [Gymnastik]
+  ru: гимнастика
+  en: gymnastics
+  freq: 23000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gärtner
+  lemma: Gärtner
+  gender: [m]
+  plural: [Gärtner]
+  gen_sg: [Gärtners]
+  ru: садовник
+  en: gardener
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gästeliste
+  lemma: Gästeliste
+  gender: [f]
+  plural: [Gästelisten]
+  gen_sg: [Gästeliste]
+  ru: null
+  en: guest list
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gästezimmer
+  lemma: Gästezimmer
+  gender: [n]
+  plural: [Gästezimmer]
+  gen_sg: [Gästezimmers]
+  ru: гостиная
+  en: guest room
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Gürtel
+  lemma: Gürtel
+  gender: [m]
+  plural: [Gürtel]
+  gen_sg: [Gürtels]
+  ru: ремень, пояс
+  en: belt
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

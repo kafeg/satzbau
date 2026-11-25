@@ -1,0 +1,1520 @@
+- id: n:Fach
+  lemma: Fach
+  gender: [n]
+  plural: [Fächer]
+  gen_sg: [Fachs, Faches]
+  ru: предмет
+  en: compartment
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Facharzt
+  lemma: Facharzt
+  gender: [m]
+  plural: [Fachärzte]
+  gen_sg: [Facharztes]
+  ru: врач-специалист
+  en: specialist
+  freq: 40000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahne
+  lemma: Fahne
+  gender: [f]
+  plural: [Fahnen]
+  gen_sg: [Fahne]
+  ru: знамя, флаг
+  en: flag
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrer
+  lemma: Fahrer
+  gender: [m]
+  plural: [Fahrer]
+  gen_sg: [Fahrers]
+  ru: водитель
+  en: driver
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrerin
+  lemma: Fahrerin
+  gender: [f]
+  plural: [Fahrerinnen]
+  gen_sg: [Fahrerin]
+  ru: null
+  en: driver
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrersitz
+  lemma: Fahrersitz
+  gender: [m]
+  plural: [Fahrersitze]
+  gen_sg: [Fahrersitzes]
+  ru: сиденье водителя машины, устар. козлы
+  en: driver's seat
+  freq: 28000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrgast
+  lemma: Fahrgast
+  gender: [m]
+  plural: [Fahrgäste]
+  gen_sg: [Fahrgastes, Fahrgasts]
+  ru: пассажир
+  en: passenger
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrkarte
+  lemma: Fahrkarte
+  gender: [f]
+  plural: [Fahrkarten]
+  gen_sg: [Fahrkarte]
+  ru: билет
+  en: ticket
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrkartenautomat
+  lemma: Fahrkartenautomat
+  gender: [m]
+  plural: [Fahrkartenautomaten]
+  gen_sg: [Fahrkartenautomaten]
+  ru: null
+  en: ticket machine
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrlehrer
+  lemma: Fahrlehrer
+  gender: [m]
+  plural: [Fahrlehrer]
+  gen_sg: [Fahrlehrers]
+  ru: инструктор по вождению
+  en: driving instructor
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrplan
+  lemma: Fahrplan
+  gender: [m]
+  plural: [Fahrpläne]
+  gen_sg: [Fahrplanes, Fahrplans]
+  ru: расписание
+  en: timetable, time table
+  freq: 21000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrpreis
+  lemma: Fahrpreis
+  gender: [m]
+  plural: [Fahrpreise]
+  gen_sg: [Fahrpreises]
+  ru: null
+  en: fare
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrrad
+  lemma: Fahrrad
+  gender: [n]
+  plural: [Fahrräder]
+  gen_sg: [Fahrrades, Fahrrads]
+  ru: велосипед
+  en: bicycle, pedal cycle
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrschein
+  lemma: Fahrschein
+  gender: [m]
+  plural: [Fahrscheine]
+  gen_sg: [Fahrscheins, Fahrscheines]
+  ru: билет
+  en: ticket
+  freq: 19000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrschule
+  lemma: Fahrschule
+  gender: [f]
+  plural: [Fahrschulen]
+  gen_sg: [Fahrschule]
+  ru: автошкола
+  en: driving school
+  freq: 35000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrstuhl
+  lemma: Fahrstuhl
+  gender: [m]
+  plural: [Fahrstühle]
+  gen_sg: [Fahrstuhls, Fahrstuhles]
+  ru: лифт
+  en: lift, elevator
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrt
+  lemma: Fahrt
+  gender: [f]
+  plural: [Fahrten]
+  gen_sg: [Fahrt]
+  ru: поездка
+  en: journey, ride
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fahrzeug
+  lemma: Fahrzeug
+  gender: [n]
+  plural: [Fahrzeuge]
+  gen_sg: [Fahrzeugs, Fahrzeuges]
+  ru: транспортное средство
+  en: vehicle
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Falschmeldung
+  lemma: Falschmeldung
+  gender: [f]
+  plural: [Falschmeldungen]
+  gen_sg: [Falschmeldung]
+  ru: ложное сообщение
+  en: false report
+  freq: 41000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Falte
+  lemma: Falte
+  gender: [f]
+  plural: [Falten]
+  gen_sg: [Falte]
+  ru: морщина
+  en: fold, wrinkle
+  freq: 12000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Familie
+  lemma: Familie
+  gender: [f]
+  plural: [Familien]
+  gen_sg: [Familie]
+  ru: семья
+  en: family
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Familienfoto
+  lemma: Familienfoto
+  gender: [n]
+  plural: [Familienfotos]
+  gen_sg: [Familienfotos]
+  ru: семейная фотография
+  en: family photo
+  freq: 20000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fan
+  lemma: Fan
+  gender: [m]
+  plural: [Fans]
+  gen_sg: [Fans]
+  ru: любитель, поклонник
+  en: fan, enthusiast
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Farbe
+  lemma: Farbe
+  gender: [f]
+  plural: [Farben]
+  gen_sg: [Farbe]
+  ru: цвет
+  en: colour, color
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fastenzeit
+  lemma: Fastenzeit
+  gender: [f]
+  plural: [Fastenzeiten]
+  gen_sg: [Fastenzeit]
+  ru: время поста, пост
+  en: fasting period
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Faustregel
+  lemma: Faustregel
+  gender: [f]
+  plural: [Faustregeln]
+  gen_sg: [Faustregel]
+  ru: общее правило
+  en: rule of thumb
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fax
+  lemma: Fax
+  gender: [n, m]
+  plural: [Faxe]
+  gen_sg: [Fax]
+  ru: факс
+  en: fax
+  freq: 18000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fazit
+  lemma: Fazit
+  gender: [n]
+  plural: [Fazits, Fazite]
+  gen_sg: [Fazits]
+  ru: итог
+  en: conclusion, result
+  freq: 23000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feder
+  lemma: Feder
+  gender: [f]
+  plural: [Federn]
+  gen_sg: [Feder]
+  ru: перо
+  en: feather, crest
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fehler
+  lemma: Fehler
+  gender: [m]
+  plural: [Fehler]
+  gen_sg: [Fehlers]
+  ru: ошибка
+  en: error, mistake
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fehlermeldung
+  lemma: Fehlermeldung
+  gender: [f]
+  plural: [Fehlermeldungen]
+  gen_sg: [Fehlermeldung]
+  ru: сигнализация сбоев, сигнализация повреждений
+  en: error message
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feier
+  lemma: Feier
+  gender: [f]
+  plural: [Feiern]
+  gen_sg: [Feier]
+  ru: праздник
+  en: party, ceremony
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feierabend
+  lemma: Feierabend
+  gender: [m]
+  plural: [Feierabende]
+  gen_sg: [Feierabends]
+  ru: конец рабочего дня
+  en: quitting time, closing time
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feiertag
+  lemma: Feiertag
+  gender: [m]
+  plural: [Feiertage]
+  gen_sg: [Feiertages, Feiertags]
+  ru: праздник, празднество
+  en: holiday
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feld
+  lemma: Feld
+  sense: поле
+  gender: [n]
+  plural: [Felder]
+  gen_sg: [Feldes, Felds]
+  ru: поле
+  en: field
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feld:2
+  lemma: Feld
+  sense: поле
+  gender: [n]
+  plural: [Felder, Felde, Felden]
+  gen_sg: [Feldes, Felds]
+  ru: поле, пашня
+  en: field
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Felge
+  lemma: Felge
+  gender: [f]
+  plural: [Felgen]
+  gen_sg: [Felge]
+  ru: обод
+  en: rim
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fell
+  lemma: Fell
+  gender: [n]
+  plural: [Felle]
+  gen_sg: [Felles, Fells]
+  ru: шерсть, мех
+  en: fur, pelt
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fenster
+  lemma: Fenster
+  gender: [n]
+  plural: [Fenster]
+  gen_sg: [Fensters]
+  ru: окно
+  en: window
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ferienwohnung
+  lemma: Ferienwohnung
+  gender: [f]
+  plural: [Ferienwohnungen]
+  gen_sg: [Ferienwohnung]
+  ru: квартира
+  en: holiday home, vacation home
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fernsehen
+  lemma: Fernsehen
+  gender: [n]
+  plural: []
+  gen_sg: [Fernsehens]
+  ru: телевидение
+  en: television, TV
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fernseher
+  lemma: Fernseher
+  gender: [m]
+  plural: [Fernseher]
+  gen_sg: [Fernsehers]
+  ru: телевизор
+  en: a television set, a TV
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fernsehgerät
+  lemma: Fernsehgerät
+  gender: [n]
+  plural: [Fernsehgeräte]
+  gen_sg: [Fernsehgerätes, Fernsehgeräts]
+  ru: телевизор
+  en: television set, television
+  freq: 41000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fest
+  lemma: Fest
+  gender: [n]
+  plural: [Feste]
+  gen_sg: [Festes, Fests]
+  ru: праздник
+  en: feast, festival
+  freq: 1000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Festessen
+  lemma: Festessen
+  gender: [n]
+  plural: [Festessen]
+  gen_sg: [Festessens]
+  ru: банкет, званый обед
+  en: banquet
+  freq: 19000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Festland
+  lemma: Festland
+  gender: [n]
+  plural: [Festländer, Festlande]
+  gen_sg: [Festlandes, Festlands]
+  ru: материк, суша
+  en: mainland
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Festplatte
+  lemma: Festplatte
+  gender: [f]
+  plural: [Festplatten]
+  gen_sg: [Festplatte]
+  ru: жёсткий диск, НЖМД, винчестер
+  en: hard disk, hard disk drive
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Festtag
+  lemma: Festtag
+  gender: [m]
+  plural: [Festtage]
+  gen_sg: [Festtages, Festtags]
+  ru: праздничный день
+  en: festive day
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feuer
+  lemma: Feuer
+  gender: [n]
+  plural: [Feuer]
+  gen_sg: [Feuers]
+  ru: огонь, пламя
+  en: fire
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feuerlöscher
+  lemma: Feuerlöscher
+  gender: [m]
+  plural: [Feuerlöscher]
+  gen_sg: [Feuerlöschers]
+  ru: огнетушитель
+  en: fire extinguisher
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feuerwehr
+  lemma: Feuerwehr
+  gender: [f]
+  plural: [Feuerwehren]
+  gen_sg: [Feuerwehr]
+  ru: пожарная команда
+  en: fire department, fire brigade
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feuerwehrauto
+  lemma: Feuerwehrauto
+  gender: [n]
+  plural: [Feuerwehrautos]
+  gen_sg: [Feuerwehrautos]
+  ru: пожарная машина
+  en: fire engine, fire truck
+  freq: 33000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Feuerwerk
+  lemma: Feuerwerk
+  gender: [n]
+  plural: [Feuerwerke]
+  gen_sg: [Feuerwerks, Feuerwerkes]
+  ru: фейерверк, салют
+  en: fireworks, firework
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fieber
+  lemma: Fieber
+  gender: [n]
+  plural: [Fieber]
+  gen_sg: [Fiebers]
+  ru: температура, жар
+  en: fever
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Figur
+  lemma: Figur
+  gender: [f]
+  plural: [Figuren]
+  gen_sg: [Figur]
+  ru: фигура
+  en: figure
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Filiale
+  lemma: Filiale
+  gender: [f]
+  plural: [Filialen]
+  gen_sg: [Filiale]
+  ru: ветвь
+  en: branch, office
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Film
+  lemma: Film
+  gender: [m]
+  plural: [Filme]
+  gen_sg: [Films, Filmes]
+  ru: фильм
+  en: film, movie
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Finanzamt
+  lemma: Finanzamt
+  gender: [n]
+  plural: [Finanzämter]
+  gen_sg: [Finanzamtes, Finanzamts]
+  ru: финансовое учреждение, финансовое управление
+  en: revenue office, revenue board
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Finger
+  lemma: Finger
+  gender: [m]
+  plural: [Finger]
+  gen_sg: [Fingers]
+  ru: палец
+  en: finger
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fingernagel
+  lemma: Fingernagel
+  gender: [m]
+  plural: [Fingernägel]
+  gen_sg: [Fingernagels]
+  ru: ноготь
+  en: fingernail, nail
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Firma
+  lemma: Firma
+  gender: [f]
+  plural: [Firmen]
+  gen_sg: [Firma]
+  ru: фирма
+  en: firm
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fisch
+  lemma: Fisch
+  gender: [m]
+  plural: [Fische]
+  gen_sg: [Fischs, Fisches]
+  ru: рыба
+  en: fish
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fischer
+  lemma: Fischer
+  gender: [m]
+  plural: [Fischer]
+  gen_sg: [Fischers]
+  ru: рыбак
+  en: fisherman, fisher
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fitnessstudio
+  lemma: Fitnessstudio
+  gender: [n]
+  plural: [Fitnessstudios]
+  gen_sg: [Fitnessstudios]
+  ru: null
+  en: health club, fitness club
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flagge
+  lemma: Flagge
+  gender: [f]
+  plural: [Flaggen]
+  gen_sg: [Flagge]
+  ru: флаг
+  en: flag, colours
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flasche
+  lemma: Flasche
+  gender: [f]
+  plural: [Flaschen]
+  gen_sg: [Flasche]
+  ru: бутылка
+  en: bottle, flask
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fleck
+  lemma: Fleck
+  gender: [m]
+  plural: [Flecke, Flecken]
+  gen_sg: [Flecks, Fleckes]
+  ru: пятно
+  en: stain, spot
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fleisch
+  lemma: Fleisch
+  gender: [n]
+  plural: []
+  gen_sg: [Fleisches, Fleischs]
+  ru: мясо
+  en: flesh
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fliese
+  lemma: Fliese
+  gender: [f]
+  plural: [Fliesen]
+  gen_sg: [Fliese]
+  ru: каменная плита, кафель
+  en: tile
+  freq: 28000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flohmarkt
+  lemma: Flohmarkt
+  gender: [m]
+  plural: [Flohmärkte]
+  gen_sg: [Flohmarktes, Flohmarkts]
+  ru: блошиный рынок
+  en: flea market
+  freq: 15000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fluchtweg
+  lemma: Fluchtweg
+  gender: [m]
+  plural: [Fluchtwege]
+  gen_sg: [Fluchtweges, Fluchtwegs]
+  ru: путь отхода, запасный выход
+  en: escape route
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flug
+  lemma: Flug
+  gender: [m]
+  plural: [Flüge]
+  gen_sg: [Flugs, Fluges]
+  ru: полёт, перелёт
+  en: flight
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flughafen
+  lemma: Flughafen
+  gender: [m]
+  plural: [Flughäfen]
+  gen_sg: [Flughafens]
+  ru: аэропорт
+  en: airport
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flugzeug
+  lemma: Flugzeug
+  gender: [n]
+  plural: [Flugzeuge]
+  gen_sg: [Flugzeuges, Flugzeugs]
+  ru: самолёт
+  en: airplane, aeroplane  aircraft
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flur
+  lemma: Flur
+  sense: коридор
+  gender: [m]
+  plural: [Flure]
+  gen_sg: [Flurs, Flures]
+  ru: коридор, прихожая
+  en: corridor, hall
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flur:2
+  lemma: Flur
+  sense: передняя
+  gender: [f]
+  plural: [Fluren]
+  gen_sg: [Flur]
+  ru: передняя, прихожая
+  en: farmland, field
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fluss
+  lemma: Fluss
+  gender: [m]
+  plural: [Flüsse]
+  gen_sg: [Flusses]
+  ru: река
+  en: river
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fläche
+  lemma: Fläche
+  gender: [f]
+  plural: [Flächen]
+  gen_sg: [Fläche]
+  ru: площадь
+  en: surface, area
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flöte
+  lemma: Flöte
+  gender: [f]
+  plural: [Flöten]
+  gen_sg: [Flöte]
+  ru: флейта
+  en: flute, whistle
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flüchtling
+  lemma: Flüchtling
+  gender: [m]
+  plural: [Flüchtlinge]
+  gen_sg: [Flüchtlings]
+  ru: беженец
+  en: refugee
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Flügel
+  lemma: Flügel
+  gender: [m]
+  plural: [Flügel]
+  gen_sg: [Flügels]
+  ru: крыло
+  en: wing, pinna
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Folge
+  lemma: Folge
+  gender: [f]
+  plural: [Folgen]
+  gen_sg: [Folge]
+  ru: последствие
+  en: consequence
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Formblatt
+  lemma: Formblatt
+  gender: [n]
+  plural: [Formblätter]
+  gen_sg: [Formblatts, Formblattes]
+  ru: формуляр
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Formular
+  lemma: Formular
+  gender: [n]
+  plural: [Formulare]
+  gen_sg: [Formulars]
+  ru: формуляр, бланк
+  en: form
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fortbildung
+  lemma: Fortbildung
+  gender: [f]
+  plural: [Fortbildungen]
+  gen_sg: [Fortbildung]
+  ru: повышение квалификации
+  en: further education
+  freq: 42000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fortschritt
+  lemma: Fortschritt
+  gender: [m]
+  plural: [Fortschritte]
+  gen_sg: [Fortschritts, Fortschrittes]
+  ru: прогресс
+  en: progress
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Foto
+  lemma: Foto
+  sense: фото
+  gender: [n, f]
+  plural: [Fotos]
+  gen_sg: [Fotos, Foto]
+  ru: фото
+  en: photo, photography
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Foto:2
+  lemma: Foto
+  sense: фото
+  gender: [m]
+  plural: [Fotos]
+  gen_sg: [Fotos]
+  ru: фото
+  en: camera
+  freq: 900
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fotoalbum
+  lemma: Fotoalbum
+  gender: [n]
+  plural: [Fotoalben]
+  gen_sg: [Fotoalbums]
+  ru: фотоальбом
+  en: photo album
+  freq: 22000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fotograf
+  lemma: Fotograf
+  gender: [m]
+  plural: [Fotografen]
+  gen_sg: [Fotografen]
+  ru: фотограф
+  en: photographer
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Foul
+  lemma: Foul
+  gender: [n]
+  plural: [Fouls]
+  gen_sg: [Fouls]
+  ru: null
+  en: foul
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frachtbrief
+  lemma: Frachtbrief
+  gender: [m]
+  plural: [Frachtbriefe]
+  gen_sg: [Frachtbriefes, Frachtbriefs]
+  ru: накладная, коносамент
+  en: waybill
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frage
+  lemma: Frage
+  gender: [f]
+  plural: [Fragen]
+  gen_sg: [Frage]
+  ru: вопрос
+  en: question
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frankiermaschine
+  lemma: Frankiermaschine
+  gender: [f]
+  plural: [Frankiermaschinen]
+  gen_sg: [Frankiermaschine]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frau
+  lemma: Frau
+  gender: [f]
+  plural: [Frauen]
+  gen_sg: [Frau]
+  ru: женщина
+  en: woman
+  freq: 200
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freiheit
+  lemma: Freiheit
+  gender: [f]
+  plural: [Freiheiten]
+  gen_sg: [Freiheit]
+  ru: свобода
+  en: liberty, freedom
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freimachung
+  lemma: Freimachung
+  gender: [f]
+  plural: [Freimachungen]
+  gen_sg: [Freimachung]
+  ru: освобождение, очистка
+  en: emancipation
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freitag
+  lemma: Freitag
+  sense: пятница
+  gender: [m]
+  plural: [Freitage]
+  gen_sg: [Freitags, Freitages]
+  ru: пятница
+  en: Friday
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freitag:2
+  lemma: Freitag
+  sense: пятница
+  gender: [m]
+  plural: [Freitage]
+  gen_sg: [Freitags, Freitages]
+  ru: пятница
+  en: day off, day of leave
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freizeit
+  lemma: Freizeit
+  gender: [f]
+  plural: [Freizeiten]
+  gen_sg: [Freizeit]
+  ru: свободное время
+  en: free time, spare time
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freizeitpark
+  lemma: Freizeitpark
+  gender: [m]
+  plural: [Freizeitparks, Freizeitparke, Freizeitpärke]
+  gen_sg: [Freizeitparks, Freizeitparkes]
+  ru: парк развлечений
+  en: amusement park, theme park
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fremdsprache
+  lemma: Fremdsprache
+  gender: [f]
+  plural: [Fremdsprachen]
+  gen_sg: [Fremdsprache]
+  ru: иностранный язык
+  en: foreign language
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freude
+  lemma: Freude
+  gender: [f]
+  plural: [Freuden]
+  gen_sg: [Freude]
+  ru: радость
+  en: joy, delight
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freund
+  lemma: Freund
+  gender: [m]
+  plural: [Freunde]
+  gen_sg: [Freunds, Freundes]
+  ru: друг
+  en: friend
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freundin
+  lemma: Freundin
+  gender: [f]
+  plural: [Freundinnen]
+  gen_sg: [Freundin]
+  ru: подруга
+  en: friend
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Freundschaft
+  lemma: Freundschaft
+  gender: [f]
+  plural: [Freundschaften]
+  gen_sg: [Freundschaft]
+  ru: дружба
+  en: friendship
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Friseur
+  lemma: Friseur
+  gender: [m]
+  plural: [Friseure]
+  gen_sg: [Friseurs]
+  ru: парикмахер
+  en: barber, hairdresser
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Friseurin
+  lemma: Friseurin
+  gender: [f]
+  plural: [Friseurinnen]
+  gen_sg: [Friseurin]
+  ru: парикмахерша
+  en: hairdresser
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Friseursalon
+  lemma: Friseursalon
+  gender: [m]
+  plural: [Friseursalons]
+  gen_sg: [Friseursalons]
+  ru: парикмахерская
+  en: hairdressing salon
+  freq: 25000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frist
+  lemma: Frist
+  gender: [f]
+  plural: [Fristen]
+  gen_sg: [Frist]
+  ru: срок
+  en: period, respite
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fristverlängerung
+  lemma: Fristverlängerung
+  gender: [f]
+  plural: [Fristverlängerungen]
+  gen_sg: [Fristverlängerung]
+  ru: продление срока, отсрочка
+  en: deadline extension
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frisur
+  lemma: Frisur
+  gender: [f]
+  plural: [Frisuren]
+  gen_sg: [Frisur]
+  ru: причёска
+  en: haircut, hairstyle
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frosch
+  lemma: Frosch
+  gender: [m]
+  plural: [Frösche]
+  gen_sg: [Froschs, Frosches]
+  ru: лягушка
+  en: frog
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frost
+  lemma: Frost
+  gender: [m]
+  plural: [Fröste]
+  gen_sg: [Frosts, Frostes]
+  ru: мороз
+  en: frost, frostiness
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frühling
+  lemma: Frühling
+  gender: [m]
+  plural: [Frühlinge]
+  gen_sg: [Frühlings]
+  ru: весна
+  en: spring, springtime
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Frühstück
+  lemma: Frühstück
+  gender: [n]
+  plural: [Frühstücke]
+  gen_sg: [Frühstücks, Frühstückes]
+  ru: завтрак
+  en: breakfast
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fuchs
+  lemma: Fuchs
+  gender: [m]
+  plural: [Füchse]
+  gen_sg: [Fuchses]
+  ru: лиса, лисица
+  en: fox
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fuge
+  lemma: Fuge
+  gender: [f]
+  plural: [Fugen]
+  gen_sg: [Fuge]
+  ru: щель
+  en: joint, gap
+  freq: 28000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fuß
+  lemma: Fuß
+  gender: [m]
+  plural: [Füße]
+  gen_sg: [Fußes]
+  ru: ступня, нога
+  en: foot
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fußball
+  lemma: Fußball
+  gender: [m]
+  plural: [Fußbälle]
+  gen_sg: [Fußballs, Fußballes]
+  ru: футбол
+  en: football, soccer
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fußboden
+  lemma: Fußboden
+  gender: [m]
+  plural: [Fußböden]
+  gen_sg: [Fußbodens]
+  ru: пол
+  en: floor, flooring
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fußpflege
+  lemma: Fußpflege
+  gender: [f]
+  plural: []
+  gen_sg: [Fußpflege]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Fähre
+  lemma: Fähre
+  gender: [f]
+  plural: [Fähren]
+  gen_sg: [Fähre]
+  ru: паром
+  en: ferry
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Föhn
+  lemma: Föhn
+  gender: [m]
+  plural: [Föhne]
+  gen_sg: [Föhns, Föhnes]
+  ru: фен
+  en: föhn / foehn
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Förderung
+  lemma: Förderung
+  gender: [f]
+  plural: [Förderungen]
+  gen_sg: [Förderung]
+  ru: поддержка, в особенности финансовая
+  en: promotion
+  freq: 21000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Führerschein
+  lemma: Führerschein
+  gender: [m]
+  plural: [Führerscheine]
+  gen_sg: [Führerscheins, Führerscheines]
+  ru: водительские права
+  en: driving licence, driver's license
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

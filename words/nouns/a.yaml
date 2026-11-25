@@ -1,0 +1,1800 @@
+- id: n:Abend
+  lemma: Abend
+  gender: [m]
+  plural: [Abende]
+  gen_sg: [Abends]
+  ru: вечер
+  en: evening, eve
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abendessen
+  lemma: Abendessen
+  gender: [n]
+  plural: [Abendessen]
+  gen_sg: [Abendessens]
+  ru: ужин
+  en: supper, dinner
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abenteuer
+  lemma: Abenteuer
+  gender: [n]
+  plural: [Abenteuer]
+  gen_sg: [Abenteuers]
+  ru: приключение
+  en: adventure
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abfahrt
+  lemma: Abfahrt
+  gender: [f]
+  plural: [Abfahrten]
+  gen_sg: [Abfahrt]
+  ru: отправление
+  en: departure, start
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abfall
+  lemma: Abfall
+  gender: [m]
+  plural: [Abfälle]
+  gen_sg: [Abfalls, Abfalles]
+  ru: отбросы
+  en: rubbish, garbage
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abflug
+  lemma: Abflug
+  gender: [m]
+  plural: [Abflüge]
+  gen_sg: [Abflugs, Abfluges]
+  ru: вылет
+  en: departure
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abholfach
+  lemma: Abholfach
+  gender: [n]
+  plural: [Abholfächer]
+  gen_sg: [Abholfaches, Abholfachs]
+  ru: null
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ablehnung
+  lemma: Ablehnung
+  gender: [f]
+  plural: [Ablehnungen]
+  gen_sg: [Ablehnung]
+  ru: отклонение, отказ
+  en: rejection, refusal
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abmahnung
+  lemma: Abmahnung
+  gender: [f]
+  plural: [Abmahnungen]
+  gen_sg: [Abmahnung]
+  ru: предупреждение
+  en: warning
+  freq: 45000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abneigung
+  lemma: Abneigung
+  gender: [f]
+  plural: [Abneigungen]
+  gen_sg: [Abneigung]
+  ru: неприязнь
+  en: aversion, dislike
+  freq: 16000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abschiebung
+  lemma: Abschiebung
+  gender: [f]
+  plural: [Abschiebungen]
+  gen_sg: [Abschiebung]
+  ru: высылка, выдворение
+  en: deportation
+  freq: 37000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abschied
+  lemma: Abschied
+  gender: [m]
+  plural: [Abschiede]
+  gen_sg: [Abschieds, Abschiedes]
+  ru: прощание, расставание, разлука
+  en: farewell, parting
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abschlag
+  lemma: Abschlag
+  gender: [m]
+  plural: [Abschläge]
+  gen_sg: [Abschlags, Abschlages]
+  ru: обрубание, срубание
+  en: discount, disagio
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abschleppdienst
+  lemma: Abschleppdienst
+  gender: [m]
+  plural: [Abschleppdienste]
+  gen_sg: [Abschleppdiensts, Abschleppdienstes]
+  ru: буксировочная служба
+  en: breakdown service, towing service
+  freq: 34000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abschleppwagen
+  lemma: Abschleppwagen
+  gender: [m]
+  plural: [Abschleppwagen, Abschleppwägen]
+  gen_sg: [Abschleppwagens]
+  ru: эвакуатор
+  en: tow truck, breakdown lorry
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abschluss
+  lemma: Abschluss
+  gender: [m]
+  plural: [Abschlüsse]
+  gen_sg: [Abschlusses]
+  ru: выпуск
+  en: exclusion, shutting up
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Absender
+  lemma: Absender
+  gender: [m]
+  plural: [Absender]
+  gen_sg: [Absenders]
+  ru: отправитель
+  en: sender
+  freq: 21000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abstammung
+  lemma: Abstammung
+  gender: [f]
+  plural: [Abstammungen]
+  gen_sg: [Abstammung]
+  ru: происхождение
+  en: descent
+  freq: 15000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abstellraum
+  lemma: Abstellraum
+  gender: [m]
+  plural: [Abstellräume]
+  gen_sg: [Abstellraumes, Abstellraums]
+  ru: чулан
+  en: storeroom, boxroom
+  freq: 37000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abstimmung
+  lemma: Abstimmung
+  gender: [f]
+  plural: [Abstimmungen]
+  gen_sg: [Abstimmung]
+  ru: голосование
+  en: vote, ballot
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abteil
+  lemma: Abteil
+  gender: [n]
+  plural: [Abteile]
+  gen_sg: [Abteils, Abteiles]
+  ru: купе
+  en: section
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abteilung
+  lemma: Abteilung
+  sense: отдел
+  gender: [f]
+  plural: [Abteilungen]
+  gen_sg: [Abteilung]
+  ru: отдел
+  en: department
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abteilung:2
+  lemma: Abteilung
+  sense: отдел
+  gender: [f]
+  plural: [Abteilungen]
+  gen_sg: [Abteilung]
+  ru: отдел, отделение
+  en: division
+  freq: 3000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abwechslung
+  lemma: Abwechslung
+  gender: [f]
+  plural: [Abwechslungen]
+  gen_sg: [Abwechslung]
+  ru: разнообразие
+  en: change, variation
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Abwägung
+  lemma: Abwägung
+  gender: [f]
+  plural: [Abwägungen]
+  gen_sg: [Abwägung]
+  ru: обдумывание
+  en: weighing up, assessment
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Achsel
+  lemma: Achsel
+  gender: [f]
+  plural: [Achseln]
+  gen_sg: [Achsel]
+  ru: подмышка
+  en: shoulder
+  freq: 22000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Achtel
+  lemma: Achtel
+  sense: восьмая
+  gender: [n, m]
+  plural: [Achtel]
+  gen_sg: [Achtels]
+  ru: восьмая
+  en: eighth
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Achtel:2
+  lemma: Achtel
+  sense: восьмая
+  gender: [f]
+  plural: [Achtel]
+  gen_sg: [Achtel]
+  ru: восьмая
+  en: eighth
+  freq: null
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Adresse
+  lemma: Adresse
+  gender: [f]
+  plural: [Adressen]
+  gen_sg: [Adresse]
+  ru: адрес
+  en: address
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Advent
+  lemma: Advent
+  gender: [m]
+  plural: [Advente]
+  gen_sg: [Adventes, Advents]
+  ru: предрождественское время
+  en: Advent
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Adventskranz
+  lemma: Adventskranz
+  gender: [m]
+  plural: [Adventskränze]
+  gen_sg: [Adventskranzes]
+  ru: рождественский венок
+  en: Advent wreath
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Affe
+  lemma: Affe
+  gender: [m]
+  plural: [Affen]
+  gen_sg: [Affen]
+  ru: обезьяна
+  en: monkey, ape
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Airbag
+  lemma: Airbag
+  gender: [m]
+  plural: [Airbags]
+  gen_sg: [Airbags]
+  ru: подушка безопасности
+  en: airbag, air cushion
+  freq: 22000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Akku
+  lemma: Akku
+  gender: [m]
+  plural: [Akkus]
+  gen_sg: [Akkus]
+  ru: аккумулятор
+  en: rechargeable battery, accumulator
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Akkuschrauber
+  lemma: Akkuschrauber
+  gender: [m]
+  plural: [Akkuschrauber]
+  gen_sg: [Akkuschraubers]
+  ru: аккумуляторный шуруповёрт
+  en: cordless drill, cordless screwdriver
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aktie
+  lemma: Aktie
+  gender: [f]
+  plural: [Aktien]
+  gen_sg: [Aktie]
+  ru: акция
+  en: share, stock
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Akzent
+  lemma: Akzent
+  gender: [m]
+  plural: [Akzente]
+  gen_sg: [Akzentes, Akzents]
+  ru: акцент, ударение
+  en: accent
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alarm
+  lemma: Alarm
+  gender: [m]
+  plural: [Alarme]
+  gen_sg: [Alarms, Alarmes]
+  ru: тревога, сигнал тревоги
+  en: alarm, alert
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alarmanlage
+  lemma: Alarmanlage
+  gender: [f]
+  plural: [Alarmanlagen]
+  gen_sg: [Alarmanlage]
+  ru: null
+  en: alarm system, burglar alarm
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Algebra
+  lemma: Algebra
+  gender: [f]
+  plural: [Algebren]
+  gen_sg: [Algebra]
+  ru: алгебра
+  en: algebra
+  freq: 23000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alkohol
+  lemma: Alkohol
+  gender: [m]
+  plural: [Alkohole]
+  gen_sg: [Alkohols]
+  ru: алкоголь
+  en: alcohol
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Allergie
+  lemma: Allergie
+  gender: [f]
+  plural: [Allergien]
+  gen_sg: [Allergie]
+  ru: аллергия
+  en: allergy
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alligator
+  lemma: Alligator
+  gender: [m]
+  plural: [Alligatoren]
+  gen_sg: [Alligators]
+  ru: аллигатор
+  en: alligator
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alter
+  lemma: Alter
+  sense: возраст
+  gender: [m]
+  plural: [Alte]
+  gen_sg: [Alten]
+  ru: возраст
+  en: old man
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alter:2
+  lemma: Alter
+  sense: возраст
+  gender: [n]
+  plural: [Alter]
+  gen_sg: [Alters]
+  ru: возраст
+  en: age
+  freq: 600
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alternative
+  lemma: Alternative
+  sense: альтернатива
+  gender: [f]
+  plural: [Alternativen]
+  gen_sg: [Alternative]
+  ru: альтернатива
+  en: alternative, option
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alternative:2
+  lemma: Alternative
+  sense: альтернатива
+  gender: [f]
+  plural: [Alternative]
+  gen_sg: [Alternativer]
+  ru: альтернатива
+  en: alternative
+  freq: 9000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Alternative:3
+  lemma: Alternative
+  sense: альтернатива
+  gender: [m]
+  plural: []
+  gen_sg: []
+  ru: альтернатива
+  en: alternative
+  freq: 9000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Altersvorsorge
+  lemma: Altersvorsorge
+  gender: [f]
+  plural: [Altersvorsorgen]
+  gen_sg: [Altersvorsorge]
+  ru: пенсионное страхование
+  en: null
+  freq: 43000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ampel
+  lemma: Ampel
+  gender: [f]
+  plural: [Ampeln]
+  gen_sg: [Ampel]
+  ru: светофор
+  en: hanging lamp
+  freq: 8000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Amt
+  lemma: Amt
+  gender: [n]
+  plural: [Ämter]
+  gen_sg: [Amtes, Amts]
+  ru: ведомство, учреждение
+  en: office
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Amtssprache
+  lemma: Amtssprache
+  gender: [f]
+  plural: [Amtssprachen]
+  gen_sg: [Amtssprache]
+  ru: официальный язык
+  en: official language
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Amtszeit
+  lemma: Amtszeit
+  gender: [f]
+  plural: [Amtszeiten]
+  gen_sg: [Amtszeit]
+  ru: null
+  en: term, incumbency
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anerkennung
+  lemma: Anerkennung
+  gender: [f]
+  plural: [Anerkennungen]
+  gen_sg: [Anerkennung]
+  ru: признание, похвала, одобрение
+  en: appreciation, allowance
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anfänger
+  lemma: Anfänger
+  gender: [m]
+  plural: [Anfänger]
+  gen_sg: [Anfängers]
+  ru: начинающий
+  en: beginner, newbie
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Angebot
+  lemma: Angebot
+  gender: [n]
+  plural: [Angebote]
+  gen_sg: [Angebots, Angebotes]
+  ru: предложение
+  en: offer, offering
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Angst
+  lemma: Angst
+  gender: [f]
+  plural: [Ängste]
+  gen_sg: [Angst]
+  ru: страх, боязнь
+  en: anxiety, fear
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anhänger
+  lemma: Anhänger
+  gender: [m]
+  plural: [Anhänger]
+  gen_sg: [Anhängers]
+  ru: прицеп
+  en: trailer
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ankunft
+  lemma: Ankunft
+  gender: [f]
+  plural: [Ankünfte]
+  gen_sg: [Ankunft]
+  ru: прибытие
+  en: arrival
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anlage
+  lemma: Anlage
+  gender: [f]
+  plural: [Anlagen]
+  gen_sg: [Anlage]
+  ru: мн. ч. сооружение, устройство
+  en: disposition
+  freq: 5000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anleitung
+  lemma: Anleitung
+  gender: [f]
+  plural: [Anleitungen]
+  gen_sg: [Anleitung]
+  ru: инструкция
+  en: manual, instruction
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anmeldung
+  lemma: Anmeldung
+  gender: [f]
+  plural: [Anmeldungen]
+  gen_sg: [Anmeldung]
+  ru: объявление, заявление
+  en: registration
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anmerkung
+  lemma: Anmerkung
+  gender: [f]
+  plural: [Anmerkungen]
+  gen_sg: [Anmerkung]
+  ru: примечание
+  en: remark, footnote
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anpassung
+  lemma: Anpassung
+  gender: [f]
+  plural: [Anpassungen]
+  gen_sg: [Anpassung]
+  ru: приспособление
+  en: accommodation
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anrede
+  lemma: Anrede
+  gender: [f]
+  plural: [Anreden]
+  gen_sg: [Anrede]
+  ru: обращение
+  en: salutation, form of address
+  freq: 30000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anruf
+  lemma: Anruf
+  gender: [m]
+  plural: [Anrufe]
+  gen_sg: [Anrufes, Anrufs]
+  ru: телефонный звонок
+  en: phone call, call
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anschluss
+  lemma: Anschluss
+  gender: [m]
+  plural: [Anschlüsse]
+  gen_sg: [Anschlusses]
+  ru: стыковка, подключение
+  en: connection, connexion
+  freq: 8000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ansicht
+  lemma: Ansicht
+  gender: [f]
+  plural: [Ansichten]
+  gen_sg: [Ansicht]
+  ru: мнение
+  en: view, opinion
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anteil
+  lemma: Anteil
+  gender: [m]
+  plural: [Anteile]
+  gen_sg: [Anteils, Anteiles]
+  ru: часть
+  en: share, portion
+  freq: 3000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Antrag
+  lemma: Antrag
+  gender: [m]
+  plural: [Anträge]
+  gen_sg: [Antrags, Antrages]
+  ru: заявление, ходатайство
+  en: application, petition
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Antragsteller
+  lemma: Antragsteller
+  gender: [m]
+  plural: [Antragsteller]
+  gen_sg: [Antragstellers]
+  ru: заявитель, податель заявления
+  en: applicant, petitioner
+  freq: 33000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Antwort
+  lemma: Antwort
+  gender: [f]
+  plural: [Antworten]
+  gen_sg: [Antwort]
+  ru: ответ
+  en: answer
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anwaltskosten
+  lemma: Anwaltskosten
+  gender: []
+  plural: [Anwaltskosten]
+  gen_sg: []
+  number: pl
+  ru: null
+  en: attorney's fee, solicitor's fee
+  freq: 40000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anwendung
+  lemma: Anwendung
+  gender: [f]
+  plural: [Anwendungen]
+  gen_sg: [Anwendung]
+  ru: применение
+  en: application, use
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anzahl
+  lemma: Anzahl
+  gender: [f]
+  plural: [Anzahlen]
+  gen_sg: [Anzahl]
+  ru: количество, число
+  en: number
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anzeige
+  lemma: Anzeige
+  gender: [f]
+  plural: [Anzeigen]
+  gen_sg: [Anzeige]
+  ru: объявление
+  en: announcement, advertisement
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Anzug
+  lemma: Anzug
+  gender: [m]
+  plural: [Anzüge]
+  gen_sg: [Anzugs, Anzuges]
+  ru: костюм
+  en: approach
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Apartment
+  lemma: Apartment
+  gender: [n]
+  plural: [Apartments]
+  gen_sg: [Apartments]
+  ru: квартира, жилище
+  en: apartment
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Apfel
+  lemma: Apfel
+  gender: [m]
+  plural: [Äpfel]
+  gen_sg: [Apfels]
+  ru: яблоко
+  en: apple
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Apotheke
+  lemma: Apotheke
+  gender: [f]
+  plural: [Apotheken]
+  gen_sg: [Apotheke]
+  ru: аптека
+  en: pharmacy, chemist's
+  freq: 7000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Apotheker
+  lemma: Apotheker
+  gender: [m]
+  plural: [Apotheker]
+  gen_sg: [Apothekers]
+  ru: аптекарь, фармацевт
+  en: apothecary, druggist
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aprikose
+  lemma: Aprikose
+  gender: [f]
+  plural: [Aprikosen]
+  gen_sg: [Aprikose]
+  ru: абрикос
+  en: apricot
+  freq: 24000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeit
+  lemma: Arbeit
+  gender: [f]
+  plural: [Arbeiten]
+  gen_sg: [Arbeit]
+  ru: работа
+  en: work, labour labor
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeiter
+  lemma: Arbeiter
+  gender: [m]
+  plural: [Arbeiter]
+  gen_sg: [Arbeiters]
+  ru: рабочий, работник
+  en: worker
+  freq: 700
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeitgeber
+  lemma: Arbeitgeber
+  gender: [m]
+  plural: [Arbeitgeber]
+  gen_sg: [Arbeitgebers]
+  ru: работодатель
+  en: employer
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeitnehmer
+  lemma: Arbeitnehmer
+  gender: [m]
+  plural: [Arbeitnehmer]
+  gen_sg: [Arbeitnehmers]
+  ru: служащий
+  en: employee
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeitsamt
+  lemma: Arbeitsamt
+  gender: [n]
+  plural: [Arbeitsämter]
+  gen_sg: [Arbeitsamtes, Arbeitsamts]
+  ru: служба занятости
+  en: employment agency, employment office
+  freq: 23000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeitsblatt
+  lemma: Arbeitsblatt
+  gender: [n]
+  plural: [Arbeitsblätter]
+  gen_sg: [Arbeitsblattes, Arbeitsblatts]
+  ru: электронная таблица, рабочий бланк
+  en: worksheet
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeitserlaubnis
+  lemma: Arbeitserlaubnis
+  gender: [f]
+  plural: [Arbeitserlaubnisse]
+  gen_sg: [Arbeitserlaubnis]
+  ru: разрешение на работу
+  en: work permit, employment permit
+  freq: 36000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arbeitszimmer
+  lemma: Arbeitszimmer
+  gender: [n]
+  plural: [Arbeitszimmer]
+  gen_sg: [Arbeitszimmers]
+  ru: кабинет
+  en: study, workroom
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Architekt
+  lemma: Architekt
+  gender: [m]
+  plural: [Architekten]
+  gen_sg: [Architekten]
+  ru: архитектор
+  en: architect, building designer
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Argument
+  lemma: Argument
+  gender: [n]
+  plural: [Argumente]
+  gen_sg: [Argumentes, Arguments]
+  ru: аргумент, довод
+  en: argument
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arm
+  lemma: Arm
+  gender: [m]
+  plural: [Arme]
+  gen_sg: [Arms, Armes]
+  ru: рука
+  en: arm
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Armut
+  lemma: Armut
+  gender: [f]
+  plural: []
+  gen_sg: [Armut]
+  ru: бедность
+  en: poverty
+  freq: 8000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Art
+  lemma: Art
+  gender: [f]
+  plural: [Arten]
+  gen_sg: [Art]
+  ru: вид
+  en: kind, sort
+  freq: 2000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Artikel
+  lemma: Artikel
+  gender: [m]
+  plural: [Artikel]
+  gen_sg: [Artikels]
+  ru: статья
+  en: article, commodity
+  freq: 2000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Arzt
+  lemma: Arzt
+  gender: [m]
+  plural: [Ärzte]
+  gen_sg: [Arztes]
+  ru: врач, доктор
+  en: doctor, physician
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ast
+  lemma: Ast
+  gender: [m]
+  plural: [Äste]
+  gen_sg: [Astes, Asts]
+  ru: ветка
+  en: branch, bough
+  freq: 19000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Asyl
+  lemma: Asyl
+  gender: [n]
+  plural: [Asyle]
+  gen_sg: [Asyls]
+  ru: убежище
+  en: place of refuge
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Attest
+  lemma: Attest
+  gender: [n]
+  plural: [Atteste]
+  gen_sg: [Attestes, Attests]
+  ru: удостоверение, свидетельство
+  en: certificate
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufenthalt
+  lemma: Aufenthalt
+  gender: [m]
+  plural: [Aufenthalte]
+  gen_sg: [Aufenthaltes, Aufenthalts]
+  ru: пребывание, остановка
+  en: stay
+  freq: 6000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufenthaltsdauer
+  lemma: Aufenthaltsdauer
+  gender: [f]
+  plural: [Aufenthaltsdauern]
+  gen_sg: [Aufenthaltsdauer]
+  ru: null
+  en: duration of stay, length of stay
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufenthaltserlaubnis
+  lemma: Aufenthaltserlaubnis
+  gender: [f]
+  plural: [Aufenthaltserlaubnisse]
+  gen_sg: [Aufenthaltserlaubnis]
+  ru: разрешение на пребывание, вид на жительство
+  en: residence permit
+  freq: 49000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufenthaltstitel
+  lemma: Aufenthaltstitel
+  gender: [m]
+  plural: [Aufenthaltstitel]
+  gen_sg: [Aufenthaltstitels]
+  ru: разрешение на пребывание, разрешение на проживание
+  en: residence permit
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auffassung
+  lemma: Auffassung
+  gender: [f]
+  plural: [Auffassungen]
+  gen_sg: [Auffassung]
+  ru: мнение, взгляд
+  en: view, concept
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufgabe
+  lemma: Aufgabe
+  gender: [f]
+  plural: [Aufgaben]
+  gen_sg: [Aufgabe]
+  ru: задача
+  en: task, job
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufkleber
+  lemma: Aufkleber
+  gender: [m]
+  plural: [Aufkleber]
+  gen_sg: [Aufklebers]
+  ru: наклейка, этикетка
+  en: sticker
+  freq: 15000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufregung
+  lemma: Aufregung
+  gender: [f]
+  plural: [Aufregungen]
+  gen_sg: [Aufregung]
+  ru: волнение, возбуждение
+  en: excitement, stir
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aufzug
+  lemma: Aufzug
+  gender: [m]
+  plural: [Aufzüge]
+  gen_sg: [Aufzugs, Aufzuges]
+  ru: лифт
+  en: elevator, lift
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auge
+  lemma: Auge
+  gender: [n]
+  plural: [Augen]
+  gen_sg: [Auges]
+  ru: глаз
+  en: eye
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Augenbraue
+  lemma: Augenbraue
+  gender: [f]
+  plural: [Augenbrauen]
+  gen_sg: [Augenbraue]
+  ru: бровь
+  en: eyebrow, brow
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Augenzeuge
+  lemma: Augenzeuge
+  gender: [m]
+  plural: [Augenzeugen]
+  gen_sg: [Augenzeugen]
+  ru: очевидец
+  en: eyewitness
+  freq: 10000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausbildung
+  lemma: Ausbildung
+  gender: [f]
+  plural: [Ausbildungen]
+  gen_sg: [Ausbildung]
+  ru: профессиональное образование
+  en: education, training
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausdauer
+  lemma: Ausdauer
+  gender: [f]
+  plural: []
+  gen_sg: [Ausdauer]
+  ru: выносливость
+  en: perseverance, persistence
+  freq: 14000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auseinandersetzung
+  lemma: Auseinandersetzung
+  gender: [f]
+  plural: [Auseinandersetzungen]
+  gen_sg: [Auseinandersetzung]
+  ru: критический разбор темы, анализ
+  en: analysis
+  freq: 11000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausflug
+  lemma: Ausflug
+  gender: [m]
+  plural: [Ausflüge]
+  gen_sg: [Ausflugs, Ausfluges]
+  ru: экскурсия
+  en: excursion, outing
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausgabe
+  lemma: Ausgabe
+  gender: [f]
+  plural: [Ausgaben]
+  gen_sg: [Ausgabe]
+  ru: расход
+  en: issue, expenditure
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausgang
+  lemma: Ausgang
+  gender: [m]
+  plural: [Ausgänge]
+  gen_sg: [Ausgangs, Ausganges]
+  ru: выход
+  en: exit
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auskunft
+  lemma: Auskunft
+  gender: [f]
+  plural: [Auskünfte]
+  gen_sg: [Auskunft]
+  ru: информация, справочная
+  en: information
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausland
+  lemma: Ausland
+  gender: [n]
+  plural: []
+  gen_sg: [Auslands, Auslandes]
+  ru: заграница, зарубежье
+  en: abroad, outland
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auslieferung
+  lemma: Auslieferung
+  gender: [f]
+  plural: [Auslieferungen]
+  gen_sg: [Auslieferung]
+  ru: экстрадиция
+  en: delivery, extradition
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausländer
+  lemma: Ausländer
+  gender: [m]
+  plural: [Ausländer]
+  gen_sg: [Ausländers]
+  ru: иностранец
+  en: foreigner, alien
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausländerbehörde
+  lemma: Ausländerbehörde
+  gender: [f]
+  plural: [Ausländerbehörden]
+  gen_sg: [Ausländerbehörde]
+  ru: иммиграционная служба
+  en: foreigners' registration office
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auspuff
+  lemma: Auspuff
+  gender: [m]
+  plural: [Auspuffe]
+  gen_sg: [Auspuffs, Auspuffes]
+  ru: выхлопная труба, глушитель
+  en: exhaust system, exhaust pipe
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausrede
+  lemma: Ausrede
+  gender: [f]
+  plural: [Ausreden]
+  gen_sg: [Ausrede]
+  ru: отговорка, увёртка
+  en: pretext
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aussage
+  lemma: Aussage
+  gender: [f]
+  plural: [Aussagen]
+  gen_sg: [Aussage]
+  ru: высказывание
+  en: statement, stated view
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aussehen
+  lemma: Aussehen
+  gender: [n]
+  plural: []
+  gen_sg: [Aussehens]
+  ru: вид, внешность
+  en: look, appearance
+  freq: 700
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aussicht
+  lemma: Aussicht
+  gender: [f]
+  plural: [Aussichten]
+  gen_sg: [Aussicht]
+  ru: вид, перспектива
+  en: view
+  freq: 4000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Aussprache
+  lemma: Aussprache
+  gender: [f]
+  plural: [Aussprachen]
+  gen_sg: [Aussprache]
+  ru: произношение
+  en: pronunciation
+  freq: 17000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausstellung
+  lemma: Ausstellung
+  gender: [f]
+  plural: [Ausstellungen]
+  gen_sg: [Ausstellung]
+  ru: выставка
+  en: exhibition, exposition
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auswahl
+  lemma: Auswahl
+  gender: [f]
+  plural: [Auswahlen]
+  gen_sg: [Auswahl]
+  ru: выбор
+  en: selection, choice
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auswanderung
+  lemma: Auswanderung
+  gender: [f]
+  plural: [Auswanderungen]
+  gen_sg: [Auswanderung]
+  ru: эмиграция
+  en: emigration, external migration
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ausweis
+  lemma: Ausweis
+  gender: [m]
+  plural: [Ausweise]
+  gen_sg: [Ausweises]
+  ru: удостоверение личности
+  en: identity card
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auto
+  lemma: Auto
+  sense: автомобиль
+  gender: [n]
+  plural: [Autos]
+  gen_sg: [Autos]
+  ru: автомобиль, машина
+  en: car, auto
+  freq: 600
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Auto:2
+  lemma: Auto
+  sense: автомобиль
+  gender: [n]
+  plural: [Autos]
+  gen_sg: [Autos]
+  ru: автомобиль, машина
+  en: order, resolution
+  freq: 600
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autobahn
+  lemma: Autobahn
+  gender: [f]
+  plural: [Autobahnen]
+  gen_sg: [Autobahn]
+  ru: автомагистраль
+  en: motorway, freeway
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autofahren
+  lemma: Autofahren
+  gender: [n]
+  plural: []
+  gen_sg: [Autofahrens]
+  ru: езда на автомобиле
+  en: driving, motoring
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autohaus
+  lemma: Autohaus
+  gender: [n]
+  plural: [Autohäuser]
+  gen_sg: [Autohauses]
+  ru: автомобильный гараж, автогараж
+  en: car dealer, car dealership
+  freq: 26000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Automat
+  lemma: Automat
+  gender: [m]
+  plural: [Automaten]
+  gen_sg: [Automaten]
+  ru: автомат
+  en: automaton
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Automechaniker
+  lemma: Automechaniker
+  gender: [m]
+  plural: [Automechaniker]
+  gen_sg: [Automechanikers]
+  ru: автомеханик
+  en: automotive mechanic, car mechanic
+  freq: 44000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autor
+  lemma: Autor
+  gender: [m]
+  plural: [Autoren]
+  gen_sg: [Autors]
+  ru: автор
+  en: author literator
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autoschlüssel
+  lemma: Autoschlüssel
+  gender: [m]
+  plural: [Autoschlüssel]
+  gen_sg: [Autoschlüssels]
+  ru: ключ от машины
+  en: car key
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autovermietung
+  lemma: Autovermietung
+  gender: [f]
+  plural: [Autovermietungen]
+  gen_sg: [Autovermietung]
+  ru: аренда автомобиля
+  en: car hire
+  freq: 34000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Autowerkstatt
+  lemma: Autowerkstatt
+  gender: [f]
+  plural: [Autowerkstätten]
+  gen_sg: [Autowerkstatt]
+  ru: авторемонтная мастерская
+  en: garage, auto repair shop
+  freq: 36000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Äquator
+  lemma: Äquator
+  gender: [m]
+  plural: [Äquatoren]
+  gen_sg: [Äquators]
+  ru: экватор
+  en: equator
+  freq: 27000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ärger
+  lemma: Ärger
+  gender: [m]
+  plural: []
+  gen_sg: [Ärgers]
+  ru: гнев, досада, раздражение
+  en: annoyance, anger
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ärgernis
+  lemma: Ärgernis
+  gender: [n]
+  plural: [Ärgernisse]
+  gen_sg: [Ärgernisses]
+  ru: досада, неприятность
+  en: annoyance
+  freq: 18000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ärmel
+  lemma: Ärmel
+  gender: [m]
+  plural: [Ärmel]
+  gen_sg: [Ärmels]
+  ru: рукав
+  en: sleeve
+  freq: 7000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Ärztin
+  lemma: Ärztin
+  gender: [f]
+  plural: [Ärztinnen]
+  gen_sg: [Ärztin]
+  ru: женщина-врач
+  en: doctor, physican
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}

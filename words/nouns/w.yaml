@@ -1,0 +1,1132 @@
+- id: n:Waage
+  lemma: Waage
+  gender: [f]
+  plural: [Waagen]
+  gen_sg: [Waage]
+  ru: весы
+  en: scales
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wagen
+  lemma: Wagen
+  gender: [m]
+  plural: [Wagen, Wägen]
+  gen_sg: [Wagens]
+  ru: вагон, машина
+  en: cart, wain
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wagenheber
+  lemma: Wagenheber
+  gender: [m]
+  plural: [Wagenheber]
+  gen_sg: [Wagenhebers]
+  ru: автомобильный  домкрат
+  en: car jack
+  freq: 24000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahl
+  lemma: Wahl
+  gender: [f]
+  plural: [Wahlen]
+  gen_sg: [Wahl]
+  ru: выборы
+  en: choice, selection
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahlbeteiligung
+  lemma: Wahlbeteiligung
+  gender: [f]
+  plural: [Wahlbeteiligungen]
+  gen_sg: [Wahlbeteiligung]
+  ru: участие в выборах
+  en: voter turnout, turnout
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahlergebnis
+  lemma: Wahlergebnis
+  gender: [n]
+  plural: [Wahlergebnisse]
+  gen_sg: [Wahlergebnisses]
+  ru: результат выборов
+  en: election result
+  freq: 41000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahlkampf
+  lemma: Wahlkampf
+  gender: [m]
+  plural: [Wahlkämpfe]
+  gen_sg: [Wahlkampfs, Wahlkampfes]
+  ru: предвыборная кампания, избирательная кампания
+  en: election campaign
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahllokal
+  lemma: Wahllokal
+  gender: [n]
+  plural: [Wahllokale]
+  gen_sg: [Wahllokales, Wahllokals]
+  ru: избирательный пункт, помещение
+  en: polling station, voting station
+  freq: 32000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahlrecht
+  lemma: Wahlrecht
+  gender: [n]
+  plural: [Wahlrechte]
+  gen_sg: [Wahlrechtes, Wahlrechts]
+  ru: избирательное право
+  en: suffrage
+  freq: 25000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahlurne
+  lemma: Wahlurne
+  gender: [f]
+  plural: [Wahlurnen]
+  gen_sg: [Wahlurne]
+  ru: урна для голосования
+  en: ballot box, voting box
+  freq: 49000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wahrheit
+  lemma: Wahrheit
+  gender: [f]
+  plural: [Wahrheiten]
+  gen_sg: [Wahrheit]
+  ru: правда, истина
+  en: truth
+  freq: 500
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wald
+  lemma: Wald
+  gender: [m]
+  plural: [Wälder]
+  gen_sg: [Waldes, Walds]
+  ru: лес
+  en: forest, wood
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wand
+  lemma: Wand
+  gender: [f]
+  plural: [Wände]
+  gen_sg: [Wand]
+  ru: стена
+  en: wall
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wanderung
+  lemma: Wanderung
+  gender: [f]
+  plural: [Wanderungen]
+  gen_sg: [Wanderung]
+  ru: поход
+  en: hike
+  freq: 17000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wanderweg
+  lemma: Wanderweg
+  gender: [m]
+  plural: [Wanderwege]
+  gen_sg: [Wanderweges, Wanderwegs]
+  ru: маршрут туристского похода
+  en: hiking trail
+  freq: 41000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Warnblinker
+  lemma: Warnblinker
+  gender: [m]
+  plural: [Warnblinker]
+  gen_sg: [Warnblinkers]
+  ru: аварийный световой сигнал, аварийка
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Warndreieck
+  lemma: Warndreieck
+  gender: [n]
+  plural: [Warndreiecke]
+  gen_sg: [Warndreieckes, Warndreiecks]
+  ru: знак аварийной остановки
+  en: breakdown triangle, warning triangle
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Warnung
+  lemma: Warnung
+  gender: [f]
+  plural: [Warnungen]
+  gen_sg: [Warnung]
+  ru: предостережение, предупреждение
+  en: warning
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wartehäuschen
+  lemma: Wartehäuschen
+  gender: [n]
+  plural: [Wartehäuschen]
+  gen_sg: [Wartehäuschens]
+  ru: null
+  en: diminutive of Wartehaus
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wartezeit
+  lemma: Wartezeit
+  gender: [f]
+  plural: [Wartezeiten]
+  gen_sg: [Wartezeit]
+  ru: время ожидания
+  en: waiting time
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wartezimmer
+  lemma: Wartezimmer
+  gender: [n]
+  plural: [Wartezimmer]
+  gen_sg: [Wartezimmers]
+  ru: зал ожидания
+  en: waiting room
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wartung
+  lemma: Wartung
+  gender: [f]
+  plural: [Wartungen]
+  gen_sg: [Wartung]
+  ru: уход, присмотр
+  en: maintenance
+  freq: 18000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Waschbecken
+  lemma: Waschbecken
+  gender: [n]
+  plural: [Waschbecken]
+  gen_sg: [Waschbeckens]
+  ru: умывальник
+  en: sink, wash-basin
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Waschmaschine
+  lemma: Waschmaschine
+  gender: [f]
+  plural: [Waschmaschinen]
+  gen_sg: [Waschmaschine]
+  ru: стиральная машина
+  en: washing machine
+  freq: 10000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wasser
+  lemma: Wasser
+  gender: [n]
+  plural: [Wässer, Wasser]
+  gen_sg: [Wassers]
+  ru: вода
+  en: water
+  freq: 900
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wasserbecken
+  lemma: Wasserbecken
+  gender: [n]
+  plural: [Wasserbecken]
+  gen_sg: [Wasserbeckens]
+  ru: null
+  en: tank, water basin
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wassermelone
+  lemma: Wassermelone
+  gender: [f]
+  plural: [Wassermelonen]
+  gen_sg: [Wassermelone]
+  ru: арбуз
+  en: watermelon
+  freq: 17000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wasserwaage
+  lemma: Wasserwaage
+  gender: [f]
+  plural: [Wasserwaagen]
+  gen_sg: [Wasserwaage]
+  ru: уровень, ватерпас
+  en: spirit level, level
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Watte
+  lemma: Watte
+  gender: [f]
+  plural: [Watten]
+  gen_sg: [Watte]
+  ru: вата
+  en: cotton wool, cotton
+  freq: 34000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wattestäbchen
+  lemma: Wattestäbchen
+  gender: [n]
+  plural: [Wattestäbchen]
+  gen_sg: [Wattestäbchens]
+  ru: null
+  en: cotton swab, cotton bud
+  freq: 46000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Webseite
+  lemma: Webseite
+  gender: [f]
+  plural: [Webseiten]
+  gen_sg: [Webseite]
+  ru: веб-страница
+  en: web page
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wechselkurs
+  lemma: Wechselkurs
+  gender: [m]
+  plural: [Wechselkurse]
+  gen_sg: [Wechselkurses]
+  ru: валютный курс
+  en: exchange rate
+  freq: 34000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weg
+  lemma: Weg
+  gender: [m]
+  plural: [Wege]
+  gen_sg: [Wegs, Weges]
+  ru: дорога, путь
+  en: track, route
+  freq: 200
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weihnachten
+  lemma: Weihnachten
+  gender: [n]
+  plural: [Weihnachten]
+  gen_sg: [Weihnachten]
+  ru: Рождество
+  en: Christmas, Xmas
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weihnachtsbaum
+  lemma: Weihnachtsbaum
+  gender: [m]
+  plural: [Weihnachtsbäume]
+  gen_sg: [Weihnachtsbaums, Weihnachtsbaumes]
+  ru: рождественская ёлка
+  en: Christmas tree
+  freq: 12000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weihnachtsmarkt
+  lemma: Weihnachtsmarkt
+  gender: [m]
+  plural: [Weihnachtsmärkte]
+  gen_sg: [Weihnachtsmarkts, Weihnachtsmarktes]
+  ru: рождественская ярмарка
+  en: Christmas market, Christmas fair
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wein
+  lemma: Wein
+  gender: [m]
+  plural: [Weine]
+  gen_sg: [Weins, Weines]
+  ru: вино
+  en: vine
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weintraube
+  lemma: Weintraube
+  gender: [f]
+  plural: [Weintrauben]
+  gen_sg: [Weintraube]
+  ru: виноград
+  en: grape
+  freq: 22000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Welle
+  lemma: Welle
+  gender: [f]
+  plural: [Wellen]
+  gen_sg: [Welle]
+  ru: волна
+  en: wave
+  freq: 6000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Welt
+  lemma: Welt
+  gender: [f]
+  plural: [Welten]
+  gen_sg: [Welt]
+  ru: мир
+  en: World, world
+  freq: 300
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weltbevölkerung
+  lemma: Weltbevölkerung
+  gender: [f]
+  plural: []
+  gen_sg: [Weltbevölkerung]
+  ru: население Земли, мировое население
+  en: world population
+  freq: 32000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Weltkarte
+  lemma: Weltkarte
+  gender: [f]
+  plural: [Weltkarten]
+  gen_sg: [Weltkarte]
+  ru: карта мира
+  en: world map
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werbepause
+  lemma: Werbepause
+  gender: [f]
+  plural: [Werbepausen]
+  gen_sg: [Werbepause]
+  ru: null
+  en: commercial break
+  freq: 37000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werbung
+  lemma: Werbung
+  gender: [f]
+  plural: [Werbungen]
+  gen_sg: [Werbung]
+  ru: реклама
+  en: advertising, publicity
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werkbank
+  lemma: Werkbank
+  gender: [f]
+  plural: [Werkbänke]
+  gen_sg: [Werkbank]
+  ru: верстак
+  en: workbench
+  freq: 47000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werkstatt
+  lemma: Werkstatt
+  gender: [f]
+  plural: [Werkstätten]
+  gen_sg: [Werkstatt]
+  ru: мастерская
+  en: workshop, garage
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werkstattrechnung
+  lemma: Werkstattrechnung
+  gender: [f]
+  plural: [Werkstattrechnungen]
+  gen_sg: [Werkstattrechnung]
+  ru: null
+  en: null
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werkstoff
+  lemma: Werkstoff
+  gender: [m]
+  plural: [Werkstoffe]
+  gen_sg: [Werkstoffs, Werkstoffes]
+  ru: материал
+  en: material
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werkzeug
+  lemma: Werkzeug
+  gender: [n]
+  plural: [Werkzeuge]
+  gen_sg: [Werkzeuges, Werkzeugs]
+  ru: инструмент, орудие
+  en: tool
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Werkzeugkasten
+  lemma: Werkzeugkasten
+  gender: [m]
+  plural: [Werkzeugkästen, Werkzeugkasten]
+  gen_sg: [Werkzeugkastens]
+  ru: инструментальный ящик
+  en: toolbox
+  freq: 24000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wertsendung
+  lemma: Wertsendung
+  gender: [f]
+  plural: [Wertsendungen]
+  gen_sg: [Wertsendung]
+  ru: null
+  en: null
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Westen
+  lemma: Westen
+  gender: [m]
+  plural: []
+  gen_sg: [Westens]
+  ru: запад
+  en: west
+  freq: 5000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wettbewerb
+  lemma: Wettbewerb
+  gender: [m]
+  plural: [Wettbewerbe]
+  gen_sg: [Wettbewerbs, Wettbewerbes]
+  ru: соревнование
+  en: competition
+  freq: 5000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wetter
+  lemma: Wetter
+  sense: погода
+  gender: [n]
+  plural: [Wetter]
+  gen_sg: [Wetters]
+  ru: погода
+  en: weather
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wetter:2
+  lemma: Wetter
+  sense: понтёр
+  gender: [m]
+  plural: [Wetter]
+  gen_sg: [Wetters]
+  ru: понтёр
+  en: punter
+  freq: 4000
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wettkampf
+  lemma: Wettkampf
+  gender: [m]
+  plural: [Wettkämpfe]
+  gen_sg: [Wettkampfs, Wettkampfes]
+  ru: соревнование
+  en: contest, competition
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Widerspruch
+  lemma: Widerspruch
+  gender: [m]
+  plural: [Widersprüche]
+  gen_sg: [Widerspruches, Widerspruchs]
+  ru: противоречие
+  en: contradiction, inconsistency
+  freq: 10000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wiederbelebung
+  lemma: Wiederbelebung
+  gender: [f]
+  plural: [Wiederbelebungen]
+  gen_sg: [Wiederbelebung]
+  ru: оживление
+  en: reanimation
+  freq: 20000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wiese
+  lemma: Wiese
+  gender: [f]
+  plural: [Wiesen]
+  gen_sg: [Wiese]
+  ru: луг
+  en: meadow
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Willkommenskultur
+  lemma: Willkommenskultur
+  gender: [f]
+  plural: [Willkommenskulturen]
+  gen_sg: [Willkommenskultur]
+  ru: культура гостеприимства
+  en: welcoming culture
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wimper
+  lemma: Wimper
+  gender: [f]
+  plural: [Wimpern]
+  gen_sg: [Wimper]
+  ru: ресница
+  en: eyelash
+  freq: 13000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wimperntusche
+  lemma: Wimperntusche
+  gender: [f]
+  plural: [Wimperntuschen]
+  gen_sg: [Wimperntusche]
+  ru: null
+  en: mascara
+  freq: 35000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wind
+  lemma: Wind
+  gender: [m]
+  plural: [Winde]
+  gen_sg: [Windes, Winds]
+  ru: ветер
+  en: wind
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Windel
+  lemma: Windel
+  gender: [f]
+  plural: [Windeln]
+  gen_sg: [Windel]
+  ru: подгузник
+  en: diaper, nappy
+  freq: 9000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Windschutzscheibe
+  lemma: Windschutzscheibe
+  gender: [f]
+  plural: [Windschutzscheiben]
+  gen_sg: [Windschutzscheibe]
+  ru: ветровое стекло
+  en: windscreen, windshield
+  freq: 16000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Winkel
+  lemma: Winkel
+  gender: [m]
+  plural: [Winkel]
+  gen_sg: [Winkels]
+  ru: угол
+  en: angle
+  freq: 9000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Winter
+  lemma: Winter
+  gender: [m]
+  plural: [Winter]
+  gen_sg: [Winters]
+  ru: зима
+  en: winter
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Winterreifen
+  lemma: Winterreifen
+  gender: [m]
+  plural: [Winterreifen]
+  gen_sg: [Winterreifens]
+  ru: null
+  en: winter tire
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Woche
+  lemma: Woche
+  gender: [f]
+  plural: [Wochen]
+  gen_sg: [Woche]
+  ru: неделя
+  en: week
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wochenende
+  lemma: Wochenende
+  gender: [n]
+  plural: [Wochenenden]
+  gen_sg: [Wochenendes]
+  ru: выходные
+  en: weekend
+  freq: 2000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohnfläche
+  lemma: Wohnfläche
+  gender: [f]
+  plural: [Wohnflächen]
+  gen_sg: [Wohnfläche]
+  ru: жилая площадь
+  en: living space, living area
+  freq: null
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohngebiet
+  lemma: Wohngebiet
+  gender: [n]
+  plural: [Wohngebiete]
+  gen_sg: [Wohngebiets, Wohngebietes]
+  ru: жилой район
+  en: residential area
+  freq: 34000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohnmobil
+  lemma: Wohnmobil
+  gender: [n]
+  plural: [Wohnmobile]
+  gen_sg: [Wohnmobils]
+  ru: кемпер
+  en: motor home, camper
+  freq: 13000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohnort
+  lemma: Wohnort
+  gender: [m]
+  plural: [Wohnorte]
+  gen_sg: [Wohnortes, Wohnorts]
+  ru: место жительства
+  en: residence
+  freq: 25000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohnsitz
+  lemma: Wohnsitz
+  gender: [m]
+  plural: [Wohnsitze]
+  gen_sg: [Wohnsitzes]
+  ru: местожительство
+  en: domicile, residence
+  freq: 16000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohnung
+  lemma: Wohnung
+  gender: [f]
+  plural: [Wohnungen]
+  gen_sg: [Wohnung]
+  ru: квартира
+  en: flat, apartment
+  freq: 800
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wohnzimmer
+  lemma: Wohnzimmer
+  gender: [n]
+  plural: [Wohnzimmer]
+  gen_sg: [Wohnzimmers]
+  ru: гостиная
+  en: living room, parlor / parlour
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wolf
+  lemma: Wolf
+  gender: [m]
+  plural: [Wölfe]
+  gen_sg: [Wolfs, Wolfes]
+  ru: волк
+  en: wolf
+  freq: 3000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wolke
+  lemma: Wolke
+  gender: [f]
+  plural: [Wolken]
+  gen_sg: [Wolke]
+  ru: облако, туча
+  en: cloud
+  freq: 4000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wolle
+  lemma: Wolle
+  gender: [f]
+  plural: [Wollen]
+  gen_sg: [Wolle]
+  ru: шерсть
+  en: wool
+  freq: 400
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wort
+  lemma: Wort
+  sense: слово
+  gender: [n]
+  plural: [Wörter]
+  gen_sg: [Worts, Wortes]
+  ru: слово
+  en: word, term
+  freq: 400
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wort:2
+  lemma: Wort
+  sense: слово
+  gender: [n]
+  plural: [Worte]
+  gen_sg: [Worts, Wortes]
+  ru: слово, речь
+  en: saying
+  freq: 400
+  level: null
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wortmeldung
+  lemma: Wortmeldung
+  gender: [f]
+  plural: [Wortmeldungen]
+  gen_sg: [Wortmeldung]
+  ru: слово
+  en: request to speak
+  freq: null
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wortschatz
+  lemma: Wortschatz
+  gender: [m]
+  plural: [Wortschätze]
+  gen_sg: [Wortschatzes]
+  ru: словарный запас
+  en: vocabulary, wordstock
+  freq: 26000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wurst
+  lemma: Wurst
+  gender: [f]
+  plural: [Würste]
+  gen_sg: [Wurst]
+  ru: колбаса
+  en: sausage, wors
+  freq: 6000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wurzel
+  lemma: Wurzel
+  gender: [f]
+  plural: [Wurzeln]
+  gen_sg: [Wurzel]
+  ru: корень
+  en: root
+  freq: 9000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wut
+  lemma: Wut
+  gender: [f]
+  plural: []
+  gen_sg: [Wut]
+  ru: гнев, ярость
+  en: anger, fury
+  freq: 3000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wähler
+  lemma: Wähler
+  gender: [m]
+  plural: [Wähler]
+  gen_sg: [Wählers]
+  ru: избиратель
+  en: voter
+  freq: 14000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Währung
+  lemma: Währung
+  gender: [f]
+  plural: [Währungen]
+  gen_sg: [Währung]
+  ru: валюта
+  en: currency
+  freq: 13000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wärme
+  lemma: Wärme
+  gender: [f]
+  plural: []
+  gen_sg: [Wärme]
+  ru: тепло
+  en: heat, warmth
+  freq: 12000
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wäsche
+  lemma: Wäsche
+  gender: [f]
+  plural: [Wäschen]
+  gen_sg: [Wäsche]
+  ru: бельё, стирка
+  en: laundry
+  freq: 4000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wörterbuch
+  lemma: Wörterbuch
+  gender: [n]
+  plural: [Wörterbücher]
+  gen_sg: [Wörterbuches, Wörterbuchs]
+  ru: словарь
+  en: dictionary, wordbook
+  freq: 14000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Würfel
+  lemma: Würfel
+  gender: [m]
+  plural: [Würfel]
+  gen_sg: [Würfels]
+  ru: куб
+  en: cube
+  freq: 11000
+  level: A2
+  themes: []
+  decided: {}
+  skip: {}
+- id: n:Wüste
+  lemma: Wüste
+  gender: [f]
+  plural: [Wüsten]
+  gen_sg: [Wüste]
+  ru: пустыня
+  en: desert
+  freq: 7000
+  level: B1
+  themes: []
+  decided: {}
+  skip: {}

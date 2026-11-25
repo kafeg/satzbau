@@ -1,0 +1,83 @@
+{
+ "dewikt": {
+  "url": "https://kaikki.org/dewiktionary/raw-wiktextract-data.jsonl.gz",
+  "file": "dewikt.jsonl.gz",
+  "license": "CC BY-SA",
+  "gives": "немецкий Викисловарь: записи по значениям, род, формы, переводы",
+  "size": 312173123,
+  "sha256": "3405adc801ae68406304f9317421d3df6bca74ffcaa041a88afc44c5a5debcbe",
+  "fetched": "2026-11-25"
+ },
+ "enwikt": {
+  "url": "https://kaikki.org/dictionary/German/kaikki.org-dictionary-German.jsonl",
+  "file": "kaikki-de.jsonl",
+  "license": "CC BY-SA",
+  "gives": "английский Викисловарь, немецкие слова: род, формы, английская глосса",
+  "size": 1095258648,
+  "sha256": "4fb15662a125085e1eb6b533a210b45edcdffa7b8e72e07634f46e1485e4e715",
+  "fetched": "2026-11-23"
+ },
+ "freedict": {
+  "url": "https://download.freedict.org/dictionaries/deu-rus/2025.11.23/freedict-deu-rus-2025.11.23.src.tar.xz",
+  "file": "freedict-deu-rus.src.tar.xz",
+  "license": "CC BY-SA 3.0",
+  "gives": "русские переводы",
+  "size": 1456744,
+  "sha256": "8bd193eeb058e65d9085beb7e90ef48e8ea7de16afaae4af637821c40de9ed4c",
+  "fetched": "2026-11-23"
+ },
+ "freq": {
+  "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/de/de_full.txt",
+  "file": "de_full.txt",
+  "license": "CC BY-SA 4.0",
+  "gives": "частотность словоформ по субтитрам",
+  "size": 17479451,
+  "sha256": "a5fc13f4efaaf70fd9226d11295fd3cd4c2264852ee1fad22c0abaf64acec8dc",
+  "fetched": "2026-11-25"
+ },
+ "ruwikt": {
+  "url": "https://kaikki.org/ruwiktionary/%D0%9D%D0%B5%D0%BC%D0%B5%D1%86%D0%BA%D0%B8%D0%B9/kaikki.org-dictionary-%D0%9D%D0%B5%D0%BC%D0%B5%D1%86%D0%BA%D0%B8%D0%B9.jsonl",
+  "file": "kaikki-ru-de.jsonl",
+  "license": "CC BY-SA",
+  "gives": "русский Викисловарь, немецкие слова: русский перевод",
+  "size": 115130101,
+  "sha256": "41f81bdff21ec660a031b7e00795e58cc4d0acd27d2e41224c73e4661e93c5e5",
+  "fetched": "2026-11-23"
+ },
+ "tatoeba_deu": {
+  "url": "https://downloads.tatoeba.org/exports/per_language/deu/deu_sentences.tsv.bz2",
+  "file": "deu_sentences.tsv.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "немецкие предложения",
+  "size": 12154139,
+  "sha256": "e16c57e695bfeccccb455c305d262c5cbe2aa74a5c1e1edb725d53cf907309ac",
+  "fetched": "2026-11-23"
+ },
+ "tatoeba_eng": {
+  "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2",
+  "file": "eng_sentences.tsv.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "английские предложения",
+  "size": 24954390,
+  "sha256": "0c4d3b18152bd6507bbf77ab690532b25de1e60da950f68705b3c88935c01fb4",
+  "fetched": "2026-11-25"
+ },
+ "tatoeba_links": {
+  "url": "https://downloads.tatoeba.org/exports/links.tar.bz2",
+  "file": "links.tar.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "связи переводов",
+  "size": 150798085,
+  "sha256": "7a6e0438fe8f1b083ffadf45150ff7ed22404a86ab70b72d7d67eba8873fb427",
+  "fetched": "2026-11-23"
+ },
+ "tatoeba_rus": {
+  "url": "https://downloads.tatoeba.org/exports/per_language/rus/rus_sentences.tsv.bz2",
+  "file": "rus_sentences.tsv.bz2",
+  "license": "CC BY 2.0 FR",
+  "gives": "русские предложения",
+  "size": 15665808,
+  "sha256": "5dc86aaa70b4a8aa18eff17690394f7bddb5f2437cd22878d5f694fbaf1dab55",
+  "fetched": "2026-11-23"
+ }
+}

@@ -12,7 +12,6 @@ Tatoeba с переводами. Модель данных — [docs/data-model.
 Код — **MIT** (`LICENSE`). Данные — **CC BY-SA 4.0**, с атрибуцией источников:
 
 - **kaikki.org** — выгрузки немецкого, английского и русского Викисловаря (CC BY-SA);
-- **korrekturen.de / Morphy** — род и формы слов (CC BY-SA 4.0);
 - **FreeDict deu-rus** — русские переводы (CC BY-SA 3.0);
 - **Tatoeba** — предложения с переводами (CC BY 2.0 FR);
 - **hermitdave/FrequencyWords** — частотность по OpenSubtitles (CC BY-SA 4.0).
