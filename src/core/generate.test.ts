@@ -116,6 +116,11 @@ describe('ответ зависит от слова', () => {
     'adj-dat-en-klein': 'то же',
     'perfekt-aux-action': 'работы по дому все переходные, отсюда habe. Перекос лексикона',
     'verb-prep-ding': 'одно слово в наполнении: hängen',
+    // рамки, добавленные НАРОЧНО как вторая половина факта: каждая внутри себя
+    // постоянна, а правило целиком благодаря им перестало быть константой
+    'adj-nom-plural': 'во множественном после артикля всегда -en — это и есть контраст к -e',
+    'adj-plural-ohne': 'без артикля во множественном всегда -e — контраст к -en',
+    'passiv-plural': 'подлежащее во множественном, отсюда всегда werden — контраст к wird',
   }
   const share = (t: (typeof bundle.templates)[number]) => {
     const its = itemsFor(t, words)
@@ -134,6 +139,37 @@ describe('ответ зависит от слова', () => {
   it('в списке исключений нет устаревших записей', () => {
     const ids = new Set(constant.map((t) => t.id))
     expect(Object.keys(KNOWN).filter((id) => !ids.has(id))).toEqual([])
+  })
+
+  // ⚠ Главная проверка — не по шаблону, а по ПРАВИЛУ. Шаблон вправе иметь один ответ,
+  // если правило в целом заставляет выбирать: «Das wird …» против «Die Sachen werden …»
+  // — внутри каждой рамки ответ постоянный, а правило работает. А вот правило
+  // с единственным ответом на всё наполнение не тренирует ничего, сколько бы заданий
+  // оно ни давало: единица повтора — правило, и именно его человек «знает».
+  describe('по правилу', () => {
+    const RULE_KNOWN: Record<string, string> = {
+      'adj-dat-en': 'в Dativ слабое окончание -en во всех родах и числах — факт и есть урок',
+    }
+    const byRule = new Map<string, Map<string, number>>()
+    for (const t of bundle.templates) {
+      const freq = byRule.get(t.rule) ?? new Map<string, number>()
+      for (const i of itemsFor(t, words)) freq.set(i.answer, (freq.get(i.answer) ?? 0) + 1)
+      byRule.set(t.rule, freq)
+    }
+    const constant = [...byRule.entries()]
+      .filter(([, freq]) => {
+        const n = [...freq.values()].reduce((a, b) => a + b, 0)
+        return n > 0 && Math.max(...freq.values()) / n > 0.95
+      })
+      .map(([rule]) => rule)
+
+    it('у правила ответ не бывает одним на всё наполнение', () => {
+      expect(constant.filter((r) => !(r in RULE_KNOWN))).toEqual([])
+    })
+
+    it('в списке исключений нет устаревших записей', () => {
+      expect(Object.keys(RULE_KNOWN).filter((r) => !constant.includes(r))).toEqual([])
+    })
   })
 })
 
