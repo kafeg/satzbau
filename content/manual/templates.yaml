@@ -953,3 +953,57 @@
   need: {pos: v, tags: [weather]}
   slot: {paradigm: participle}
   why: perfekt-partizip
+
+# ⚠ Рамка против вырожденного ответа. `merge-wo-in` даёт `im` на ВС�ём наполнении:
+# in + dem склеивается одинаково у мужского и среднего, а женский в неё не пускают
+# (in + der не склеивается вовсе). У `zu` склеиваются все три рода и по-разному —
+# zum против zur, — поэтому ответ наконец зависит от слова, а не от шаблона.
+- id: merge-wohin-zu
+  rule: merge-prep-article
+  level: A2
+  kind: choice
+  frame: "Ich gehe {slot} {w}."
+  need: {pos: n, tags: [place, room], not: [pl_only, plu, noart]}
+  slot: {paradigm: merged_prep_article, prep: zu, case: dat, num: sg}
+  options: {paradigm: merged_prep_article, count: 4}
+  why: merge-prep-article
+
+# ⚠ То же лекарство для пассива: в `passiv-das` подлежащее всегда «Das», то есть
+# единственного числа, и ответ всегда `wird`. Здесь подлежащее во множественном,
+# и форма werden берётся не из памяти, а из подлежащего.
+- id: passiv-plural
+  rule: passiv
+  level: B1
+  kind: choice
+  frame: "Die Sachen {slot} heute {pp}."
+  need: {pos: v, tags: [obj], not: [reflexive, obj_person, placement]}
+  slot: {paradigm: werden_present, person: 3pl}
+  options: {paradigm: werden_present, count: 4}
+  why: passiv
+
+# ⚠ Рамки против вырожденного правила. «Слабое склонение в именительном» — это
+# окончание -e у ВСЕХ трёх родов, то есть у правила один ответ на всё наполнение
+# и тренировать нечего. Меняется оно во множественном: «der gute Weg», но
+# «die guten Wege». Теперь правило охватывает обе половины факта, и прочитать
+# рамку приходится.
+- id: adj-nom-plural
+  rule: adj-nom-e
+  level: A2
+  kind: input
+  frame: "Hier sind die gut{slot} {w}."
+  need: {pos: n, tags: [thing, food, vehicle, furniture], has: [pl], not: [npl, mass, abstract]}
+  slot: {paradigm: adj_ending, decl: weak, case: nom, num: pl, gender: from_word}
+  why: adj-nom-e
+
+# ⚠ То же у множественного: после артикля всегда -en, без артикля -e. Пока правило
+# знало только рамку с «die», ответ был константой. Контраст «die guten Wege» против
+# «gute Wege» и есть то, чему учит правило.
+- id: adj-plural-ohne
+  rule: adj-plural
+  level: B1
+  kind: input
+  frame: "Hier sind gut{slot} {w}."
+  need: {pos: n, tags: [thing, food, vehicle, furniture], has: [pl], not: [npl, mass, abstract]}
+  slot: {paradigm: adj_ending, decl: strong, case: nom, num: pl, gender: from_word}
+  why: adj-plural
+
