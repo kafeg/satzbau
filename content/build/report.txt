@@ -1,14 +1,18 @@
-сборка 2026-11-25, версия данных 3ab0826b23ac
+сборка 2026-11-25, версия данных e0c488aabcc7
 
-слов в themes.yaml: 2053; собрано: 2053; потеряно: 0
+слов в themes.yaml: 2417; собрано: 2417; потеряно: 0
 
-замечания (68):
+замечания (77):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
   Boot                   род спорный n/m — решение в fixes.yaml:gender
   Drittel                род спорный n/m — решение в fixes.yaml:gender
+  Eimer                  род спорный m/f — решение в fixes.yaml:gender
+  Ersatzteil             род спорный m/n — решение в fixes.yaml:gender
   Euro                   род спорный m/f — решение в fixes.yaml:gender
+  Gang                   род спорный m/f — решение в fixes.yaml:gender
   Grad                   род спорный m/n — решение в fixes.yaml:gender
   Haar                   род спорный n/f — решение в fixes.yaml:gender
+  Haarspray              род спорный m/n — решение в fixes.yaml:gender
   Hantel                 род спорный f/n — решение в fixes.yaml:gender
   Hase                   род спорный m/f — решение в fixes.yaml:gender
   Hektar                 род спорный n/m — решение в fixes.yaml:gender
@@ -19,7 +23,9 @@
   Kredit                 род спорный m/n — решение в fixes.yaml:gender
   Laden                  род спорный m/n — решение в fixes.yaml:gender
   Laptop                 род спорный m/n — решение в fixes.yaml:gender
+  Latte                  род спорный f/m — решение в fixes.yaml:gender
   Liter                  род спорный m/n — решение в fixes.yaml:gender
+  Loch                   род спорный n/m — решение в fixes.yaml:gender
   Luft                   род спорный f/m — решение в fixes.yaml:gender
   Mangel                 род спорный m/f — решение в fixes.yaml:gender
   Matte                  род спорный f/n — решение в fixes.yaml:gender
@@ -33,11 +39,14 @@
   Neffe                  род спорный m/f — решение в fixes.yaml:gender
   Podcast                род спорный m/n — решение в fixes.yaml:gender
   Post                   род спорный f/m — решение в fixes.yaml:gender
+  Puder                  род спорный m/n — решение в fixes.yaml:gender
   Quadrat                род спорный n/m — решение в fixes.yaml:gender
   Radio                  род спорный n/m — решение в fixes.yaml:gender
+  Rohr                   род спорный n/f — решение в fixes.yaml:gender
   Rolle                  род спорный f/m/n — решение в fixes.yaml:gender
   See                    род спорный m/f — решение в fixes.yaml:gender
   Sieg                   род спорный m/f — решение в fixes.yaml:gender
+  Spachtel               род спорный m/f — решение в fixes.yaml:gender
   Spam                   род спорный n/m/f — решение в fixes.yaml:gender
   Staffel                род спорный f/m — решение в fixes.yaml:gender
   Tag                    род спорный m/n — решение в fixes.yaml:gender
@@ -72,30 +81,37 @@
   trainiert              нет в kaikki — степени сравнения выводятся правилом
   wegfahren              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (35) — проверить и внести
+управление, предложено источниками (43) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   anfangen               von D
   ankommen               auf A
   aufregen               über A
   ausgeben               für A
+  befestigen             an D
   beginnen               mit D
   berichten              über A, von D
   bestehen               aus D, auf D
   bewerben               für A
+  eingreifen             in A
   einigen                auf A
   einladen               zu D
   einreisen              in A, nach D
   erholen                von D
   erzählen               von D
+  flüchten               vor D
   freuen                 über A, auf A, für A
   gratulieren            zu D
   haften                 an D
   hoffen                 auf A
   jagen                  durch A, in A
+  kleben                 auf A, an D
   leben                  von D
+  melden                 zu D
   passen                 für A, zu D
   rechnen                mit D
+  retten                 vor D
+  rufen                  nach D
   schlafen               über A
   setzen                 auf A
   streiten               über A
@@ -104,6 +120,7 @@
   verdienen              für A
   vertiefen              in A
   vorbereiten            auf A
+  warnen                 vor D
   zahlen                 an A
   zeigen                 auf A
   ärgern                 über A
@@ -111,20 +128,20 @@
   übersetzen             in A, aus D
 
 размеры:
-  adjs.json         n=304        19.2 КиБ   gzip     4.9 КиБ
+  adjs.json         n=332        20.8 КиБ   gzip     5.3 КиБ
   explain.json      n=44         54.6 КиБ   gzip    14.2 КиБ
-  nouns.json        n=1370      114.3 КиБ   gzip    26.5 КиБ
-  sentences.json    n=5424      583.3 КиБ   gzip   173.1 КиБ
+  nouns.json        n=1644      138.3 КиБ   gzip    32.1 КиБ
+  sentences.json    n=5840      632.6 КиБ   gzip   188.2 КиБ
   templates.json    n=80         23.6 КиБ   gzip     3.1 КиБ
-  themes.json       n=24        118.2 КиБ   gzip    15.0 КиБ
-  verbs.json        n=379        59.5 КиБ   gzip    13.6 КиБ
-  ИТОГО                       972.6 КиБ   gzip   250.4 КиБ
+  themes.json       n=28        139.1 КиБ   gzip    17.7 КиБ
+  verbs.json        n=441        68.8 КиБ   gzip    15.8 КиБ
+  ИТОГО                      1077.8 КиБ   gzip   276.3 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      109208
+  незнакомая словоформа      107751
   длина не 3–8               30998
-  имя исчерпало квоту        3710
+  имя исчерпало квоту        3879
   нет точки в конце          822
-  примеров на имя: Tom 2000, Maria 675, Berlin 43, Oktober 42, Thomas 22
-  слов без примеров: 632 из 2053
-    Abfall, Abflug, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschluss, Abstammung, Abteil, Abteilung, Abwechslung, Achtel, Advent, Adventskranz, Altersvorsorge, Amt, Amtssprache, Anerkennung, Anlage, Anschluss, Antrag, Antragsteller, Anwaltskosten, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Arbeitserlaubnis, Ast, Asyl, Attest, Aufenthaltsdauer, Aufenthaltserlaubnis, Aufenthaltstitel, Aufregung, Ausbildung, Ausdauer, Auseinandersetzung, Auskunft …
+  примеров на имя: Tom 2000, Maria 681, Berlin 43, Oktober 42, Thomas 22
+  слов без примеров: 836 из 2417
+    Abfall, Abflug, Abmahnung, Abneigung, Abschiebung, Abschlag, Abschleppdienst, Abschleppwagen, Abschluss, Abstammung, Abteil, Abteilung, Abwechslung, Achsel, Achtel, Advent, Adventskranz, Airbag, Akkuschrauber, Alarm, Alarmanlage, Altersvorsorge, Amt, Amtssprache, Anerkennung, Anhänger, Anlage, Anschluss, Antrag, Antragsteller, Anwaltskosten, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Arbeitserlaubnis, Ast, Asyl, Attest …

@@ -242,6 +242,16 @@ no_plural:
   - Nordwesten
   - Südosten
   - Südwesten
+  # уход за собой, машина, ремонт, экстренный случай
+  - Pflege
+  - Hygiene
+  - Körperpflege
+  - Fußpflege
+  - Kühlwasser
+  - Bewusstlosigkeit
+  - Watte
+  - Schminke
+  - Zahnseide
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -269,6 +279,11 @@ mass:
   # «Ich esse einen Käse» и «ich trinke eine Milch» — так не говорят
   - Käse
   - Milch
+  # уход за собой: «eine Watte» и «eine Schminke» так не говорят
+  - Watte
+  - Schminke
+  - Schaum
+  - Puder
 
 # 3. Слова, у которых единственное число формально есть, но в речи они живут
 #    во множественном. Данные их не отличают: у Möbel, Lebensmittel, Geschwister
@@ -288,6 +303,11 @@ reflexive:
   - schämen
   - beschweren
   - einigen
+  - rasieren
+  - kämmen
+  - schminken
+  - abschminken
+  - anschnallen
 
 # 2b. Множественное руками. Нужно там, где источник даёт форму ДРУГОГО значения
 #     омонима: die Bank — банк даёт Banken, а скамья Bänke, и в заданиях появлялись
@@ -1107,6 +1127,208 @@ translations:
   rechnen:        считать, вычислять
   halb:           половинный
   Faustregel:     правило на глазок
+  # уход за собой
+  Wimperntusche:  тушь для ресниц
+  Nagellack:      лак для ногтей
+  Nagelschere:    маникюрные ножницы
+  Nagelfeile:     пилочка для ногтей
+  Wattestäbchen:  ватная палочка
+  Haarbürste:     щётка для волос
+  gepflegt:       опрятный, ухоженный
+  Fußpflege:      уход за ногами, педикюр
+  Hauttyp:        тип кожи
+  Hautarzt:       дерматолог
+  Mundgeruch:     запах изо рта
+  Peeling:        пилинг, скраб
+  Gesichtscreme:  крем для лица
+  Handcreme:      крем для рук
+  Haarspray:      лак для волос
+  Pflegemittel:   средство для ухода
+  Spülung:        бальзам для волос
+  Schminke:       косметика для макияжа
+  Strähne:        прядь
+  Achsel:         подмышка
+  Rasur:          бритьё
+  Schaum:         пена
+  zupfen:         выщипывать
+  glätten:        разглаживать, выпрямлять
+  auftragen:      наносить крем
+  abschminken:    смывать макияж
+  lockig:         вьющийся
+  fettig:         жирный
+  sanft:          мягкий, нежный
+  ungepflegt:     неопрятный, запущенный
+  # машина и мастерская
+  Hupe:           гудок, клаксон
+  Rückspiegel:    зеркало заднего вида
+  Ölwechsel:      замена масла
+  Parkschein:     парковочный талон
+  Tempolimit:     ограничение скорости
+  gebraucht:      подержанный
+  Werkstattrechnung: счёт из мастерской
+  Verkehrskontrolle: проверка на дороге
+  Garagentor:     гаражные ворота
+  ölen:           смазывать маслом
+  fahrbereit:     готовый к поездке
+  verkehrssicher: пригодный для дорог
+  Wagenheber:     домкрат
+  Handbremse:     ручной тормоз
+  # ремонт и инструменты
+  Handwerkerin:   мастерица, рабочая
+  Montage:        сборка, установка
+  Unterlegscheibe: шайба
+  Bauhelm:        строительная каска
+  Bohrfutter:     патрон дрели
+  # экстренный случай
+  Notruf:         экстренный вызов
+  Alarmanlage:    сигнализация
+  Notbremse:      стоп-кран
+  Verbandskasten: аптечка
+  Notdienst:      дежурная служба
+  Ersthelfer:     тот, кто оказывает первую помощь
+  # ⚠ не то значение: уход за собой
+  glatt:          гладкий
+  riechen:        пахнуть, нюхать
+  Badewanne:      ванна
+  Parfüm:         духи
+  Pickel:         прыщ
+  Creme:          крем
+  Kamm:           расчёска
+  Rasierer:       бритва
+  bürsten:        чистить щёткой
+  schminken:      красить лицо
+  rasieren:       бриться
+  Pflege:         уход
+  föhnen:         сушить феном
+  Föhn:           фен
+  Hausschuh:      тапок
+  Friseurin:      парикмахерша
+  Deodorant:      дезодорант
+  Falte:          морщина
+  Fingernagel:    ноготь
+  wasserfest:     водостойкий
+  hygienisch:     гигиеничный
+  Sauna:          сауна
+  # ⚠ не то значение: машина и мастерская
+  Gang:           передача в коробке
+  Reifen:         шина, покрышка
+  starten:        запускать двигатель
+  Öl:             масло
+  hupen:          сигналить
+  Anhänger:       прицеп
+  Kennzeichen:    номерной знак
+  abstellen:      ставить машину
+  defekt:         неисправный
+  Nummernschild:  номерной знак
+  Zulassung:      регистрация автомобиля
+  Panne:          поломка в пути
+  Lenkrad:        руль
+  Inspektion:     плановый техосмотр
+  Kühler:         радиатор
+  Blinker:        указатель поворота
+  blinken:        мигать поворотником
+  Probefahrt:     пробная поездка
+  Autohaus:       автосалон
+  Diesel:         дизельное топливо
+  Wartung:        техобслуживание
+  abschleppen:    буксировать
+  anlassen:       заводить двигатель
+  Abschleppwagen: эвакуатор
+  Mietauto:       машина в аренду
+  Winterreifen:   зимняя шина
+  Sommerreifen:   летняя шина
+  Reifenwechsel:  замена шин
+  Kundendienst:   сервисная служба
+  Rücksitz:       заднее сиденье
+  Hebebühne:      подъёмник
+  Felge:          диск колеса
+  Verschleiß:     износ
+  Keilriemen:     ремень привода
+  Zündkerze:      свеча зажигания
+  Delle:          вмятина
+  schalten:       переключать передачу
+  prüfen:         проверять
+  lenken:         рулить
+  Mechanikerin:   женщина-механик
+  Leihwagen:      машина напрокат
+  Motorhaube:     капот
+  # ⚠ не то значение: ремонт и инструменты
+  Leitung:        проводка, трубопровод
+  verlegen:       укладывать плитку, кабель
+  Platte:         плита, панель
+  Nagel:          гвоздь
+  Kleber:         клей
+  Dichtung:       прокладка, уплотнитель
+  Hammer:         молоток
+  Leiter:         стремянка
+  Handwerker:     мастер, рабочий
+  spitz:          острый на конце
+  schleifen:      шлифовать
+  fegen:          подметать
+  Zange:          щипцы, кусачки
+  Bohrer:         сверло
+  Schleifpapier:  наждачная бумага
+  Fliese:         плитка
+  Gerüst:         строительные леса
+  Kelle:          мастерок
+  Mörtel:         строительный раствор
+  Bügelsäge:      ручная пила по металлу
+  Stichsäge:      электролобзик
+  Akkuschrauber:  аккумуляторный шуруповёрт
+  provisorisch:   временный
+  Zollstock:      складной метр
+  Wasserwaage:    строительный уровень
+  befestigen:     закреплять
+  Latte:          рейка
+  Riss:           трещина
+  Anleitung:      инструкция
+  austauschen:    заменять
+  schrauben:      прикручивать
+  Baumarkt:       строительный магазин
+  demontieren:    разбирать
+  undicht:        негерметичный, протекает
+  haltbar:        прочный
+  Werkzeugkasten: ящик с инструментами
+  wackelig:       шаткий
+  # ⚠ не то значение: экстренный случай
+  rufen:          звать, вызывать
+  brennen:        гореть
+  Rettungswagen:  машина скорой помощи
+  Sirene:         сирена
+  Blaulicht:      синий проблесковый маячок
+  Unglück:        несчастный случай
+  Anzeige:        заявление в полицию
+  anzeigen:       подавать заявление в полицию
+  bergen:         извлекать пострадавших
+  Täter:          преступник
+  Notausgang:     запасной выход
+  Fluchtweg:      путь эвакуации
+  Polizeiwache:   полицейский участок
+  Polizistin:     женщина-полицейский
+  Evakuierung:    эвакуация
+  Stromausfall:   отключение света
+  verletzlich:    уязвимый
+  Bereitschaft:   дежурство
+  Schutzhelm:     каска
+  Brandmelder:    пожарный извещатель
+  Herzinfarkt:    инфаркт
+  Schlaganfall:   инсульт
+  Warnblinker:    аварийная сигнализация
+  lebensgefährlich: опасный для жизни
+  retten:         спасать
+  bewusstlos:     без сознания
+  einbrechen:     вламываться
+  flüchten:       спасаться бегством
+  Hilferuf:       крик о помощи
+  Notfall:        экстренный случай
+  Überfall:       нападение
+  Rettung:        спасение
+  explodieren:    взрываться
+  Notarzt:        врач скорой помощи
+  alarmieren:     вызывать по тревоге
+  Wiederbelebung: реанимация
+  brennbar:       горючий
+  dringend:       срочный
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);
@@ -1125,3 +1347,7 @@ aux_ambiguous:
   setzen:   {use: h, note: "hat sich gesetzt — сел; сидел — это sitzen, hat gesessen"}
   heilen:   {use: h, note: "hat geheilt — вылечил; ist geheilt — зажило само"}
   abschieben: {use: h, note: "hat abgeschoben — выдворил; ist abgeschoben — ушёл, разг."}
+  starten:  {use: h, note: "hat gestartet — запустил; ist gestartet — стартовал сам"}
+  abtrocknen: {use: h, note: "hat abgetrocknet — вытер; ist abgetrocknet — высохло само"}
+  flüchten: {use: s, note: "ist geflüchtet — убежал; hat sich geflüchtet — укрылся"}
+  stürzen:  {use: s, note: "ist gestürzt — упал; hat gestürzt — сбросил, низверг"}
