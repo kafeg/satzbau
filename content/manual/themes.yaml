@@ -747,3 +747,108 @@ city:
     - {w: vorlegen,      pos: v, lv: B1, tags: [state, obj]}
     - {w: nachweisen,    pos: v, lv: B1, tags: [state, obj]}
     - {w: vollständig,   pos: a, lv: B1, tags: [quality, absolute]}
+
+weather:
+  title: Погода и время
+  words:
+    # A1 — что за окном и который час
+    - {w: Wetter,        pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Sonne,         pos: n, lv: A1, tags: [weather]}
+    - {w: Regen,         pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Schnee,        pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Wind,          pos: n, lv: A1, tags: [weather, abstract]}
+    - {w: Wolke,         pos: n, lv: A1, tags: [weather]}
+    - {w: Himmel,        pos: n, lv: A1, tags: [weather]}
+    - {w: Luft,          pos: n, lv: A1, tags: [weather]}
+    - {w: Temperatur,    pos: n, lv: A1, tags: [weather]}
+    - {w: Grad,          pos: n, lv: A1, tags: [weather]}
+    - {w: Zeit,          pos: n, lv: A1, tags: [date]}
+    - {w: Uhr,           pos: n, lv: A1, tags: [date]}
+    - {w: Minute,        pos: n, lv: A1, tags: [date]}
+    - {w: Stunde,        pos: n, lv: A1, tags: [date, time]}
+    - {w: Tag,           pos: n, lv: A1, tags: [date, time]}
+    - {w: Woche,         pos: n, lv: A1, tags: [date, time]}
+    - {w: Monat,         pos: n, lv: A1, tags: [date, time]}
+    - {w: Jahr,          pos: n, lv: A1, tags: [date, time]}
+    - {w: Morgen,        pos: n, lv: A1, tags: [date, time]}
+    - {w: Mittag,        pos: n, lv: A1, tags: [date, time]}
+    - {w: Nachmittag,    pos: n, lv: A1, tags: [date, time]}
+    - {w: Abend,         pos: n, lv: A1, tags: [date, time]}
+    - {w: Nacht,         pos: n, lv: A1, tags: [date, time]}
+    - {w: Wochenende,    pos: n, lv: A1, tags: [date, time]}
+    - {w: Montag,        pos: n, lv: A1, tags: [date]}
+    - {w: Dienstag,      pos: n, lv: A1, tags: [date]}
+    - {w: Mittwoch,      pos: n, lv: A1, tags: [date]}
+    - {w: Donnerstag,    pos: n, lv: A1, tags: [date]}
+    - {w: Freitag,       pos: n, lv: A1, tags: [date]}
+    - {w: Samstag,       pos: n, lv: A1, tags: [date]}
+    - {w: Sonntag,       pos: n, lv: A1, tags: [date]}
+    - {w: Frühling,      pos: n, lv: A1, tags: [date, time]}
+    - {w: Sommer,        pos: n, lv: A1, tags: [date, time]}
+    - {w: Herbst,        pos: n, lv: A1, tags: [date, time]}
+    - {w: Winter,        pos: n, lv: A1, tags: [date, time]}
+    # безличные: подлежащее у них только es, поэтому ни solo, ни obj им не ставим
+    - {w: regnen,        pos: v, lv: A1, tags: [weather]}
+    - {w: schneien,      pos: v, lv: A1, tags: [weather]}
+    - {w: aufstehen,     pos: v, lv: A1, tags: [motion, solo]}
+    - {w: frühstücken,   pos: v, lv: A1, tags: [state, solo]}
+    - {w: beginnen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: heiß,          pos: a, lv: A1, tags: [quality]}
+    - {w: kühl,          pos: a, lv: A1, tags: [quality]}
+    - {w: sonnig,        pos: a, lv: A1, tags: [quality]}
+    - {w: wolkig,        pos: a, lv: A1, tags: [quality]}
+    - {w: windig,        pos: a, lv: A1, tags: [quality]}
+    - {w: nass,          pos: a, lv: A1, tags: [quality]}
+    # A2 — то, из-за чего остаёшься дома, и то, что записывают в календарь
+    - {w: Hitze,         pos: n, lv: A2, tags: [weather, abstract]}
+    - {w: Kälte,         pos: n, lv: A2, tags: [weather, abstract]}
+    - {w: Nebel,         pos: n, lv: A2, tags: [weather, abstract]}
+    - {w: Gewitter,      pos: n, lv: A2, tags: [weather, abstract]}
+    - {w: Sturm,         pos: n, lv: A2, tags: [weather, abstract]}
+    - {w: Vorhersage,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Regenschirm,   pos: n, lv: A2, tags: [thing]}
+    - {w: Kalender,      pos: n, lv: A2, tags: [thing]}
+    - {w: Jahreszeit,    pos: n, lv: A2, tags: [date]}
+    - {w: Uhrzeit,       pos: n, lv: A2, tags: [date]}
+    - {w: Datum,         pos: n, lv: A2, tags: [date]}
+    - {w: Feiertag,      pos: n, lv: A2, tags: [time]}
+    - {w: nieseln,       pos: v, lv: A2, tags: [weather]}
+    - {w: hageln,        pos: v, lv: A2, tags: [weather]}
+    - {w: stürmen,       pos: v, lv: A2, tags: [weather]}
+    - {w: aufwachen,     pos: v, lv: A2, tags: [motion, solo]}
+    - {w: einschlafen,   pos: v, lv: A2, tags: [motion, solo]}
+    - {w: frieren,       pos: v, lv: A2, tags: [state, solo]}
+    - {w: schwitzen,     pos: v, lv: A2, tags: [state, solo]}
+    - {w: verspäten,     pos: v, lv: A2, tags: [state]}
+    - {w: vergessen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: neblig,        pos: a, lv: A2, tags: [quality]}
+    - {w: bewölkt,       pos: a, lv: A2, tags: [quality]}
+    - {w: regnerisch,    pos: a, lv: A2, tags: [quality]}
+    - {w: feucht,        pos: a, lv: A2, tags: [quality]}
+    - {w: mild,          pos: a, lv: A2, tags: [quality]}
+    - {w: angenehm,      pos: a, lv: A2, tags: [quality]}
+    - {w: rechtzeitig,   pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: täglich,       pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: wöchentlich,   pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: monatlich,     pos: a, lv: A2, tags: [quality, absolute]}
+    # B1 — прогноз, срок и перевод часов
+    - {w: Niederschlag,  pos: n, lv: B1, tags: [weather, abstract]}
+    - {w: Glatteis,      pos: n, lv: B1, tags: [weather, abstract]}
+    - {w: Hochwasser,    pos: n, lv: B1, tags: [weather, abstract]}
+    - {w: Dürre,         pos: n, lv: B1, tags: [weather, abstract]}
+    - {w: Verzögerung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Zeitpunkt,     pos: n, lv: B1, tags: [date]}
+    - {w: Zeitraum,      pos: n, lv: B1, tags: [date]}
+    - {w: Sommerzeit,    pos: n, lv: B1, tags: [date]}
+    - {w: Zeitumstellung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Frist,         pos: n, lv: B1, tags: [time]}
+    - {w: vorhersagen,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: einplanen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: eisig,         pos: a, lv: B1, tags: [quality]}
+    - {w: schwül,        pos: a, lv: B1, tags: [quality]}
+    - {w: stürmisch,     pos: a, lv: B1, tags: [quality]}
+    - {w: frostig,       pos: a, lv: B1, tags: [quality]}
+    - {w: jährlich,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: vorübergehend, pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: langfristig,   pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: kurzfristig,   pos: a, lv: B1, tags: [quality, absolute]}

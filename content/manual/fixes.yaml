@@ -147,6 +147,11 @@ no_plural:
   - Kindergeld
   - Mittagsschlaf
   - Sorgerecht
+  - Schnee
+  - Kälte
+  - Glatteis
+  - Luft
+  - Hitze
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -189,6 +194,7 @@ reflexive:
   - beeilen
   - ausruhen
   - entschuldigen
+  - verspäten
 
 # 2b. Множественное руками. Нужно там, где источник даёт форму ДРУГОГО значения
 #     омонима: die Bank — банк даёт Banken, а скамья Bänke, и в заданиях появлялись
@@ -474,6 +480,38 @@ translations:
   schüchtern:     стеснительный
   zweisprachig:   двуязычный
   altersgerecht:  по возрасту
+  # погода и время: словарь даёт либо другое значение (stürmen — «штурмовать»),
+  # либо список синонимов там, где теме нужно одно слово
+  Minute:         минута
+  Sonne:          солнце
+  Abend:          вечер
+  Nachmittag:     вторая половина дня
+  Wochenende:     выходные
+  Uhrzeit:        время на часах
+  Zeitpunkt:      момент времени
+  Zeitraum:       промежуток времени
+  Zeitumstellung: перевод часов
+  Frist:          срок
+  Feiertag:       праздничный день
+  Verzögerung:    задержка
+  Niederschlag:   осадки
+  Glatteis:       гололёд
+  Regenschirm:    зонт
+  regnen:         о дожде — идти
+  schneien:       о снеге — идти
+  hageln:         о граде — идти
+  stürmen:        о буре — бушевать
+  verspäten:      опаздывать
+  einplanen:      планировать заранее
+  aufwachen:      просыпаться
+  nass:           мокрый
+  feucht:         влажный
+  kühl:           прохладный
+  mild:           мягкий, тёплый
+  bewölkt:        пасмурный
+  frostig:        морозный
+  langfristig:    долгосрочный
+  monatlich:      ежемесячный
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);

@@ -180,7 +180,10 @@ export function superlative(a: Adj): string {
   // ⚠ Именно ГЛАСНАЯ с h: pünktlich тоже кончается на h, но даёт am pünktlichsten.
   // ⚠ Причастия на -end -e- НЕ получают: am anstrengendsten, не «anstrengendesten».
   // Правило «после t и d» слишком широкое, и это давало «am ansteckendesten»
+  // ⚠ -isch — исключение среди шипящих: am typischsten, am stürmischsten,
+  // но am hübschesten. Поэтому sch проверяется отдельно, без -isch.
+  const sch = w.endsWith('sch') && !w.endsWith('isch')
   const esten =
-    !w.endsWith('end') && (endsAny(w, ['t', 'd', 's', 'ß', 'z', 'sch']) || /[aeiouäöü]h$/.test(w))
+    !w.endsWith('end') && (sch || endsAny(w, ['t', 'd', 's', 'ß', 'z']) || /[aeiouäöü]h$/.test(w))
   return esten ? `am ${w}esten` : `am ${w}sten`
 }

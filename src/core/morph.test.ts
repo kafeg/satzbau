@@ -74,6 +74,15 @@ describe('разбор ошибки совпадает с заданием', () 
     expect(superlative(adj('alt'))).toBe('am ältesten')
     expect(superlative(adj('früh'))).toBe('am frühesten')
   })
+
+  // ⚠ Правило «после шипящих -esten» верно для hübsch, но не для -isch:
+  // восьмая тема дала первое несравнимое-не-абсолютное прилагательное на -isch.
+  it('прилагательные на -isch не получают -e- в превосходной', () => {
+    const adj = (w: string) => bundle.adjs.find((a) => a.w === w)!
+    expect(superlative(adj('stürmisch'))).toBe('am stürmischsten')
+    expect(superlative(adj('regnerisch'))).toBe('am regnerischsten')
+    expect(superlative(adj('heiß'))).toBe('am heißesten')
+  })
 })
 
 describe('императив против UniMorph', () => {

@@ -30,10 +30,12 @@
 | `drink` | питьё: Wasser, Kaffee, Bier |
 | `body` | часть тела: Kopf, Hand, Zahn |
 | `illness` | то, что болит и как это называется: Fieber, Husten, Grippe |
+| `weather` | погода: и явление за окном, и безличный глагол о нём — Regen, Nebel, regnen, hageln. Нужен, потому что подлежащее у таких глаголов только `es`: ни `solo`, ни `obj` им не подходят, и до него их не брала ни одна рамка |
 | `document` | бумага и билеты: Fahrkarte, Mietvertrag, Anmeldung |
 | `person` | человек: Fahrer, Nachbar, Makler |
 | `money` | деньги и платежи: Miete, Kaution, Ermäßigung |
 | `time` | время и точки расписания: Abfahrt, Ankunft |
+| `date` | точка или отрезок календаря: Montag, Sommer, Abend, Woche. Нужен, чтобы «Wann ist der Montag?» не собиралось: вопрос «когда?» задают о событии, а не о самом дне. В «Während …» такие слова, наоборот, идут |
 | `abstract` | то, что нельзя показать пальцем: Verspätung, Umzug |
 | `motion` | глагол движения: fahren, gehen, umsteigen |
 | `position` | глагол места: stehen, liegen, sitzen, hängen |

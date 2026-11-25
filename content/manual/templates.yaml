@@ -547,7 +547,7 @@
   level: A1
   kind: choice
   frame: "Wann ist {slot} {w}?"
-  need: {pos: n, tags: [time], not: [pl_only, plu]}
+  need: {pos: n, tags: [time], not: [pl_only, plu, date]}
   slot: {paradigm: def_article, case: nom, num: sg}
   options: {paradigm: def_article, count: 4}
   why: nominativ-subjekt
@@ -932,3 +932,24 @@
   slot: {paradigm: def_article, case: nom, num: sg, gender: from_word}
   options: {paradigm: genus, count: 3}
   why: genus
+
+# Безличные глаголы погоды: подлежащее у них только es. Ни solo, ни obj им не подходят
+# («Er regnet oft», «Er regnet das heute»), поэтому до тега weather их не брала ни одна
+# рамка. Здесь пропуск — та же форма третьего лица, что и в «Er … oft».
+- id: praesens-es-wetter
+  rule: praesens-3sg
+  level: A1
+  kind: input
+  frame: "Heute {slot} es."
+  need: {pos: v, tags: [weather]}
+  slot: {paradigm: verb_present, person: 3sg}
+  why: praesens-3sg
+
+- id: partizip-es-wetter
+  rule: perfekt-partizip
+  level: A1
+  kind: input
+  frame: "Gestern hat es {slot}."
+  need: {pos: v, tags: [weather]}
+  slot: {paradigm: participle}
+  why: perfekt-partizip
