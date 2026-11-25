@@ -21,7 +21,13 @@ export interface Sentence {
 
 let sentences: Promise<Map<string, Sentence[]>> | null = null
 
-/** Примеры грузятся отдельно: 46 КиБ gzip ради одного экрана не должны висеть на старте. */
+/**
+ * Примеры грузятся отдельно и только для экрана новых слов.
+ *
+ * ⚠ Это не мелкая оптимизация, а главное решение о весе: примеры — ДВЕ ТРЕТИ всех данных
+ * (на тридцати одной теме 204 КиБ gzip из 302), и на старте их нет. Холодный старт грузит
+ * около сотни КиБ. Числа здесь не фиксируем, их печатает `tools/build_data.py`.
+ */
 export function loadSentences(): Promise<Map<string, Sentence[]>> {
   sentences ??= one('sentences').then((xs) => {
     const by = new Map<string, Sentence[]>()
