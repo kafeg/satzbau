@@ -28,7 +28,7 @@ export class Boundary extends Component<{ children: ReactNode }, { error: Error 
             this.setState({ error: null })
           }}
         >
-          К списку правил
+          На главную
         </button>
       </main>
     )

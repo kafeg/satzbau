@@ -2,6 +2,7 @@
 
 import {
   adjEnding,
+  auxPresent,
   defArticle,
   govOf,
   govexParts,
@@ -239,8 +240,9 @@ function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | nul
       return nn(gender(), (g) => adjEnding(slot.decl ?? 'weak', c, g, num))
     case 'aux_present': {
       const v = w.entry as Verb
+      // 'hs' — источник даёт оба вспомогательных, значение не выбрано: задания нет
       if (v.aux === 'hs') return null
-      return inventory('aux_present', { person: slot.person ?? '3sg' })[v.aux === 'h' ? 0 : 1] ?? null
+      return auxPresent(slot.person ?? '3sg', v.aux)
     }
     default:
       throw new Error(`неизвестная парадигма: ${slot.paradigm}`)
