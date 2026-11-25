@@ -276,7 +276,11 @@ export function App() {
       back={route.theme ? { screen: 'theme', theme: route.theme } : { screen: 'home' }}
       onNext={(correct, given, hinted) => {
         const a: Answer = {
-          t: Date.now(),
+          // ⚠ Журнал обязан идти по возрастанию времени: на этом стоит и пересчёт
+          // карточек, и перенос файлом. Часы на устройстве могут уйти назад — смена
+          // пояса, поправка по сети, — и тогда ответ «раньше предыдущего» ломает
+          // планировщик. Поэтому время не меньше, чем у последнего ответа.
+          t: Math.max(Date.now(), (answers.at(-1)?.t ?? 0) + 1),
           tpl: item.templateId,
           word: item.word,
           rule: item.rule,
