@@ -1,9 +1,8 @@
 .DS_Store
 *.log
-node_modules/
-dist/
 __pycache__/
 .venv/
-# сырые дампы источников (1,4 ГБ): качает tools/build_data.py, в репозиторий не идут
+# сырые дампы источников: качает tools/fetch.py по sources.lock, в репозиторий не идут
 /data/
-# собранные content/build/*.json НЕ игнорируются: они коммитятся, см. docs/architecture.md
+# база приложения собирается tools/build.py
+/build/
