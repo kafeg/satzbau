@@ -100,6 +100,14 @@ function depthOf(rule: string, explain: Bundle['explain'], seen = new Set<string
   return 1 + Math.max(...after.map((a) => depthOf(a, explain, seen)))
 }
 
+// ⚠ rules() обходит все шаблоны и всё наполнение: 18 мс на ноутбуке и втрое больше
+// на телефоне. Главная зовёт её девять раз — свод, семь тем, выбор нового правила, —
+// поэтому результат запоминается. Ключ верхнего уровня — объект карточек: после ответа
+// журнал проигрывается заново и Map всегда новый, так что устареть ответ не может.
+// Цена: «пора» внутри одного открытого экрана не пересчитывается, но интервалы FSRS
+// меряются днями, а любой ответ кэш и так сбрасывает.
+const CACHE = new WeakMap<object, Map<string, RuleInfo[]>>()
+
 /**
  * Правила для главной: заголовок из объяснения, уровень — самый ранний из шаблонов.
  * Порядок: уровень, затем глубина в графе предпосылок (`after` в explain.yaml),
@@ -107,6 +115,11 @@ function depthOf(rule: string, explain: Bundle['explain'], seen = new Set<string
  */
 export function rules(p: Pick = {}): RuleInfo[] {
   const bundle = getBundle()
+  const key = `${p.level ?? ''}|${p.theme ?? ''}|${p.only?.join(',') ?? ''}`
+  let box = CACHE.get(p.cards ?? bundle)
+  if (!box) CACHE.set(p.cards ?? bundle, (box = new Map()))
+  const hit = box.get(key)
+  if (hit) return hit
   type Acc = Omit<RuleInfo, 'state'> & { at: number; set: Set<string> }
   const out = new Map<string, Acc>()
   const words = wordsOf(p)
@@ -132,7 +145,7 @@ export function rules(p: Pick = {}): RuleInfo[] {
     })
   })
   const depth = new Map([...out.keys()].map((r) => [r, depthOf(r, bundle.explain)]))
-  return [...out.values()]
+  const out2 = [...out.values()]
     .sort(
       (a, b) =>
         LEVELS[a.level] - LEVELS[b.level] ||
@@ -140,6 +153,8 @@ export function rules(p: Pick = {}): RuleInfo[] {
         a.at - b.at,
     )
     .map(({ at: _at, set, ...r }) => ({ ...r, state: ruleState(r, set, p.cards) }))
+  box.set(key, out2)
+  return out2
 }
 
 /**
