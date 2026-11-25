@@ -1,0 +1,44 @@
+# Тема «Транспорт». Вычитано по списку темы в themes.json; слова из 00-base.yaml не дублируются.
+# Две причины правок: словарь дал не то значение, которое нужно теме (halten, Platz, Baustelle),
+# и словарь выгрузил синонимы вместо перевода (schnell, warten, Flugzeug).
+translations:
+  # не то значение: значение выбирает тема
+  halten:         останавливаться
+  Platz:          место, площадка
+  kontrollieren:  проверять
+  verpassen:      пропустить, опоздать на
+  pünktlich:      вовремя, пунктуальный
+  Linie:          линия, маршрут
+  einsteigen:     садиться
+  Bahn:           поезд, железная дорога
+  mieten:         арендовать, снимать
+  Baustelle:      дорожные работы, стройка
+  Auskunft:       информация, справочная
+  Automat:        билетный автомат
+  Unfall:         авария
+  # перевод верный, но это выгрузка синонимов из словаря
+  schnell:        быстрый
+  warten:         ждать
+  langsam:        медленный
+  Zug:            поезд
+  Richtung:       направление
+  Flugzeug:       самолёт
+  teuer:          дорогой
+  Fahrer:         водитель
+  aussteigen:     выходить
+  Ankunft:        прибытие
+  Ausgang:        выход
+  Führerschein:   водительские права
+  ankommen:       прибывать, приезжать
+  Verspätung:     опоздание
+  U-Bahn:         метро
+  Tankstelle:     заправка
+  Autobahn:       автомагистраль
+  Streik:         забастовка
+  Abfahrt:        отправление
+  Stau:           пробка
+  reservieren:    бронировать
+  abfahren:       отъезжать, отправляться
+  gültig:         действительный
+  umsteigen:      пересаживаться
+  Fahrplan:       расписание
