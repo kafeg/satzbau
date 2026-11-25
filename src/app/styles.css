@@ -801,6 +801,9 @@ body:has(.tabs) #root {
   color: var(--text-2);
 }
 
+/* «текущая тема» — тот же вид, что у «пора»: это единственная отметка в списке,
+   и значит она здесь то же самое — «вот на чём ты сейчас» */
+.rstate.cur,
 .rstate.due {
   background: var(--accent);
   color: var(--accent-ink);

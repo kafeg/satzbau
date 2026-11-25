@@ -1,5 +1,10 @@
 // Раздел «Темы»: о чём говорим. Начатые сверху — по доле увиденных слов,
 // нетронутые ниже в порядке themes.yaml.
+//
+// ⚠ Строками, а не плитками: в плитке шириной 167 px длинное название переносится
+// («Люди и знакомство», «Город и ведомства»), и соседние плитки в ряду расходятся
+// по высоте. Порог был записан в docs/ia.md как «около пятнадцати тем» — на двадцати
+// он наступил.
 
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
@@ -26,6 +31,30 @@ export function Themes({
   const started = list.filter((t) => t.seen > 0).sort((a, b) => b.seen / b.words - a.seen / a.words)
   const rest = list.filter((t) => t.seen === 0)
 
+  const rows = (group: typeof list) => (
+    <ul className="group">
+      {group.map((t) => (
+        <li key={t.key}>
+          <button className="grule" onClick={() => go({ screen: 'theme', theme: t.key })}>
+            <span className="rname">
+              {t.title}
+              {t.seen > 0 && (
+                <span className="bar">
+                  <i style={{ width: `${Math.round((100 * t.seen) / t.words)}%` }} />
+                </span>
+              )}
+            </span>
+            {t.key === current && <span className="rstate cur">текущая</span>}
+            <span className="rn mono">
+              {t.seen ? `${t.seen}/${t.words}` : `${t.words} сл.`}
+            </span>
+            <span className="arrow" aria-hidden="true" />
+          </button>
+        </li>
+      ))}
+    </ul>
+  )
+
   return (
     <main className="home">
       <h1>Темы</h1>
@@ -34,33 +63,20 @@ export function Themes({
         Текущая переживает сессию, пока её не сменить.
       </p>
 
-      {[
-        ['В работе', started],
-        [started.length ? 'Остальные' : 'Все темы', rest],
-      ].map(([title, group]) =>
-        (group as typeof list).length === 0 ? null : (
-          <section key={title as string}>
-            <h2 className="section">
-              <span>{title as string}</span>
-              <span>{(group as typeof list).length}</span>
-            </h2>
-            <div className="tiles">
-              {(group as typeof list).map((t) => (
-                <button
-                  key={t.key}
-                  className={`tile${t.key === current ? ' on' : ''}`}
-                  onClick={() => go({ screen: 'theme', theme: t.key })}
-                >
-                  <span className="tname">{t.title}</span>
-                  <span className="tsub">
-                    {t.seen ? `${t.seen} из ${t.words} слов` : `${t.words} слов · ${t.live} правил`}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </section>
-        ),
+      {started.length > 0 && (
+        <>
+          <h2 className="section">
+            <span>В работе</span>
+            <span>{started.length}</span>
+          </h2>
+          {rows(started)}
+        </>
       )}
+      <h2 className="section">
+        <span>{started.length ? 'Остальные' : 'Все темы'}</span>
+        <span>{rest.length}</span>
+      </h2>
+      {rows(rest)}
     </main>
   )
 }
