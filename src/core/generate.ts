@@ -27,7 +27,10 @@ import {
   particle,
   present,
   presentForms,
+  duStem,
+  stemChange,
   superlative,
+  verbStem,
 } from './morph.ts'
 import type { Word } from './bundle.ts'
 import type {
@@ -117,6 +120,94 @@ function partizipWhy(v: Verb): string {
   if (!pp.startsWith('ge')) return 'неотделяемая приставка: ge- не ставится'
   if (pp.endsWith('en')) return 'сильный глагол: окончание -en, а не -t'
   return 'обычный глагол: ge- + основа + -t'
+}
+
+/**
+ * ⚠ Суффиксы, которые задают род БЕЗ исключений в нашем лексиконе — это проверяет тест.
+ * -ion сюда не входит (das Stadion), -ik (der Streik), -ment (der Zement). -chen — только
+ * уменьшительное: der Kuchen и der Lebkuchen на -chen, но не уменьшительные.
+ */
+export const GENUS_SUFFIX: [string, Gender][] = [
+  ['ung', 'f'],
+  ['heit', 'f'],
+  ['keit', 'f'],
+  ['schaft', 'f'],
+  ['tion', 'f'],
+  ['tät', 'f'],
+  ['chen', 'n'],
+  ['lein', 'n'],
+]
+
+export function genusSuffix(w: string): [string, Gender] | null {
+  if (w.toLowerCase().endsWith('kuchen')) return null
+  return GENUS_SUFFIX.find(([s]) => w.endsWith(s)) ?? null
+}
+
+/**
+ * ⚠ Разбор рода говорил «вывести род из слова нельзя» и на Überraschung, где -ung
+ * даёт женский род всегда. Теперь шаг про само слово: есть надёжный суффикс — называем.
+ */
+function genusWhy(w: string): string {
+  const s = genusSuffix(w)
+  if (s) return `слова на -${s[0]} всегда ${{ m: 'мужского', f: 'женского', n: 'среднего' }[s[1]]} рода`
+  if (w.endsWith('e')) return 'на -e чаще женский род, но не всегда (der Junge, das Auge): этот учится со словом'
+  return 'надёжного признака в слове нет: род учится вместе со словом'
+}
+
+/**
+ * ⚠ Шаг «окончание -t» стоял у всех глаголов: и у zeichnet, где -et, и у hält, где
+ * окончание слилось с основой. Ветку считаем по самому глаголу и лицу.
+ */
+function presentWhy(v: Verb, person: Person, answer: string): string {
+  const core = answer.split(' ')[0] as string
+  const ch = stemChange(v)
+  const p3 = v.p3.split(' ')[0] as string
+  const vowel =
+    ch === 'umlaut'
+      ? `сильный глагол: перегласовка, ${v.w} → er ${p3}`
+      : ch === 'vowel'
+        ? `сильный глагол: основа меняется, ${v.w} → er ${p3}`
+        : 'основа как в инфинитиве'
+  if (person === '3sg') {
+    const end = core.endsWith('et') && !ch
+      ? `основа на -${verbStem(v).slice(-1)}: окончание -et`
+      : ch && verbStem(v).endsWith('t') && !core.endsWith('tt')
+        ? 'основа уже на -t, окончание с ней сливается'
+        : 'окончание -t'
+    return `${vowel}; ${end}`
+  }
+  if (person === '2sg') {
+    const du = duStem(v)
+    const end = /[sßzx]$/.test(du)
+      ? `основа ${du} уже на ${du.slice(-1)}: только -t`
+      : !ch && /(t|d|chn|ffn|gn|tm)$/.test(du)
+        ? `основа на -${du.slice(-1)}: окончание -est`
+        : 'окончание -st'
+    return `${vowel}; ${end}`
+  }
+  return vowel
+}
+
+/**
+ * ⚠ Шаг «перегласовки не бывает, смена e→i бывает» стоял одинаково у anfangen, atmen
+ * и holen, где нет ни того, ни другого. Называем то, что есть у ЭТОГО глагола.
+ */
+function impWhy(v: Verb, answer: string): string {
+  const ch = stemChange(v)
+  const du = present(v, '2sg').split(' ')[0] as string
+  const stem = verbStem(v)
+  const a = answer.toLowerCase()
+  const out: string[] = []
+  if (ch === 'umlaut') out.push(`du ${du}, но ${a}!: перегласовка сюда не идёт`)
+  else if (ch === 'vowel') out.push(`основа как в du ${du}: смена гласной остаётся`)
+  else if (a === `${stem}e` && /(t|d|chn|ffn|gn|tm)$/.test(stem))
+    out.push(`основа на -${stem.slice(-1)}: нужна -e`)
+  else if (/e[lr]n$/.test(v.w)) out.push(`глагол на -${v.w.slice(-3)}: ${a}`)
+  else if (a === stem) out.push(`основа ${stem} без окончания`)
+  else out.push(`от основы ${stem}`)
+  const part = particle(v)
+  if (part) out.push(`приставка ${part} уходит в конец`)
+  return out.join('; ')
 }
 
 /** Предлоги с двумя падежами: у них падеж задаёт вопрос, а не сам предлог. */
@@ -436,12 +527,41 @@ function wordIn(w: Word, slot: Slot): string {
  * задание перестало бы восстанавливаться из журнала, где хранится именно пара.
  * Слово той же темы в приоритете — тогда фраза остаётся про то, что человек выбрал.
  */
+/**
+ * Кто подходит шаблону вторым словом. Зависит только от шаблона и набора слов,
+ * а не от первого слова, — но считалось заново на КАЖДОЕ первое: восемь шаблонов
+ * с `fill2` на 2675 словах давали 57 миллионов проверок, и это была почти вся цена
+ * сборки очереди. Теперь список считается один раз на (набор слов, шаблон).
+ */
+const POOL2 = new WeakMap<
+  Word[],
+  Map<string, { all: Word[]; byTheme: Map<string, Word[]>; names: Set<string> }>
+>()
+
+function pool2(t: Template, all: Word[]) {
+  let box = POOL2.get(all)
+  if (!box) POOL2.set(all, (box = new Map()))
+  let got = box.get(t.id)
+  if (!got) {
+    const ok = all.filter((x) => fits(t.fill2!.need, x))
+    const byTheme = new Map<string, Word[]>()
+    for (const x of ok) byTheme.set(x.theme, [...(byTheme.get(x.theme) ?? []), x])
+    got = { all: ok, byTheme, names: new Set(ok.map((x) => x.w)) }
+    box.set(t.id, got)
+  }
+  return got
+}
+
 export function second(t: Template, w: Word, all: Word[]): Word | null {
   if (!t.fill2) return null
-  const fits2 = all.filter((x) => x.w !== w.w && fits(t.fill2!.need, x))
-  if (!fits2.length) return null
-  const mine = fits2.filter((x) => x.theme === w.theme)
-  const pool = mine.length ? mine : fits2
+  const p = pool2(t, all)
+  // слово-основа может само попасть в список второго: тогда и только тогда копируем
+  const drop = p.names.has(w.w)
+  const mineRaw = p.byTheme.get(w.theme) ?? []
+  const mine = drop ? mineRaw.filter((x) => x.w !== w.w) : mineRaw
+  const rest = drop ? p.all.filter((x) => x.w !== w.w) : p.all
+  const pool = mine.length ? mine : rest
+  if (!pool.length) return null
   let h = 2166136261
   for (const ch of t.id + w.w) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0
   return pool[h % pool.length] as Word
@@ -580,6 +700,9 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       ein,
       aux_why: vb ? auxWhy(vb) : '',
       pp_why: vb ? partizipWhy(vb) : '',
+      genus_why: w.pos === 'n' ? genusWhy(w.w) : '',
+      present_why: vb && slot.paradigm === 'verb_present' ? presentWhy(vb, person, answer) : '',
+      imp_why: vb && slot.paradigm === 'imperative' ? impWhy(vb, answer) : '',
       person_ru: PERSON_RU[person],
       degree_ru: slot.paradigm === 'adj_superlative' ? 'превосходная' : 'сравнительная',
       // пример к шагу про умлаут обязан стоять в ТОЙ ЖЕ степени, что и задание

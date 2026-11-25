@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { bundle, words } from './data.ts'
 import { explainItem } from './explain.ts'
-import { fillingFor, generate, itemsFor, second } from './generate.ts'
+import { fillingFor, generate, genusSuffix, itemsFor, second } from './generate.ts'
 import {
   adjEndingMatches,
   formMatches,
@@ -356,5 +356,41 @@ describe('конкретные задания', () => {
     expect(govOf('bei D')).toEqual({ prep: 'bei', case: 'dat' })
     // «D» без предлога — это Dativ-объект, а не предложное управление
     expect(govOf('D')).toBeNull()
+  })
+})
+
+// Разбор говорит о ЭТОМ слове: суффикс рода, перегласовка, окончание. Раньше один текст
+// на правило уверял «род из слова не вывести» на Überraschung и «смена e→i бывает» у holen.
+describe('разбор про само слово', () => {
+  const why = (tpl: string, w: string, key: string) => {
+    const t = bundle.templates.find((x) => x.id === tpl)!
+    return generate(t, words.find((x) => x.w === w)!, words).ctx[key]
+  }
+
+  it('суффиксы рода без исключений во всём лексиконе', () => {
+    const bad = bundle.nouns.filter((n) => {
+      const s = genusSuffix(n.w)
+      return n.g && s && s[1] !== n.g
+    })
+    expect(bad.map((n) => `${n.g} ${n.w}`)).toEqual([])
+  })
+
+  it('называет суффикс, когда он есть, и не выдумывает, когда нет', () => {
+    expect(genusSuffix('Überraschung')).toEqual(['ung', 'f'])
+    expect(genusSuffix('Kuchen')).toBeNull()
+    expect(genusSuffix('Tisch')).toBeNull()
+  })
+
+  it('Präsens: -et, слияние с основой, только -t', () => {
+    expect(why('praesens-er', 'zeichnen', 'present_why')).toContain('-et')
+    expect(why('praesens-er', 'halten', 'present_why')).toContain('сливается')
+    expect(why('praesens-er', 'kaufen', 'present_why')).toBe('основа как в инфинитиве; окончание -t')
+    expect(why('praesens-du', 'lesen', 'present_why')).toContain('только -t')
+  })
+
+  it('императив: перегласовка, смена гласной и приставка — только у тех, у кого есть', () => {
+    expect(why('imperativ-du', 'holen', 'imp_why')).not.toMatch(/e→i|перегласовк/)
+    expect(why('imperativ-du', 'essen', 'imp_why')).toContain('смена гласной остаётся')
+    expect(why('imperativ-trennbar', 'anfangen', 'imp_why')).toContain('приставка an')
   })
 })

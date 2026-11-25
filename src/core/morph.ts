@@ -163,6 +163,32 @@ const UMLAUT: Record<string, string> = { ä: 'a', ö: 'o', ü: 'u' }
 const deumlaut = (x: string) => x.replace(/[äöü]/g, (c) => UMLAUT[c] as string)
 
 /**
+ * Чем основа второго и третьего лица отличается от инфинитива: перегласовкой (fährt),
+ * другой гласной или основой (gibt, liest) — или ничем (kauft, öffnet). Нужно разбору:
+ * общий текст про «смену гласной» стоял и у глаголов, где её нет.
+ */
+export function stemChange(v: Verb): 'umlaut' | 'vowel' | null {
+  const part = particle(v)
+  const w = v.w.startsWith('sich ') ? v.w.slice(5) : v.w
+  const istem = infStem(part ? w.slice(part.length) : w)
+  const du = p3Stem(v, istem)
+  if (deumlaut(du) !== deumlaut(istem)) return 'vowel'
+  return du !== istem ? 'umlaut' : null
+}
+
+/** Основа второго лица, к которой прибавляется -st: fahren → fähr, lesen → lies. */
+export function duStem(v: Verb): string {
+  return p3Stem(v, verbStem(v))
+}
+
+/** Основа инфинитива без приставки и sich: abholen → hol, sich waschen → wasch. */
+export function verbStem(v: Verb): string {
+  const part = particle(v)
+  const w = v.w.startsWith('sich ') ? v.w.slice(5) : v.w
+  return infStem(part ? w.slice(part.length) : w)
+}
+
+/**
  * Императив второго лица: «Mach das!», «Gib das!», «Fahr!».
  *
  * Перегласовка в императив НЕ идёт (du fährst, но fahr!), а смена гласной e→i идёт
