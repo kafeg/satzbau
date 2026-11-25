@@ -7,7 +7,7 @@
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { rules, SIZE, tasks } from './session.ts'
+import { plural, rules, SIZE, tasks, wordsOf } from './session.ts'
 
 const STRONG = 10
 
@@ -24,6 +24,9 @@ export function Theme({
 }) {
   const t = getBundle().themes[theme]
   if (!t) return <p className="note">Такой темы нет.</p>
+  // ⚠ Слова считаются в пределах уровня, тем же `wordsOf`, что и в разделе «Темы»:
+  // иначе один экран обещает сто слов, а соседний — пятьдесят, и оба про одну тему.
+  const words = wordsOf({ theme, level }).length
   const mine = rules({ theme, level })
   const total = new Map(rules({ level }).map((r) => [r.rule, r.count]))
   const strong = mine.filter((r) => r.count >= STRONG)
@@ -39,7 +42,7 @@ export function Theme({
       <span className="rname">
         {r.name}
         <span className="rtheme">
-          {r.count} из {total.get(r.rule) ?? r.count} заданий на словах темы
+          {r.count} из {tasks(total.get(r.rule) ?? r.count)} на словах темы
         </span>
       </span>
       <span className="rlv mono">{r.level}</span>
@@ -53,8 +56,8 @@ export function Theme({
       </button>
       <h1>{t.title}</h1>
       <p className="lead">
-        {t.words.length} слов. Эти правила тренируются на её словах — остальные доберут
-        лексику из других тем.
+        {plural(words, ['слово', 'слова', 'слов'])}. Эти правила тренируются на её словах —
+        остальные доберут лексику из других тем.
       </p>
 
       {/* тема становится текущей: приоритет переживает сессию, и «Заниматься» с главной
@@ -94,7 +97,8 @@ export function Theme({
       )}
       {empty > 0 && (
         <p className="note small">
-          Ещё {empty} правил на словах этой темы не тренируются — они в списке на главной.
+          Ещё {plural(empty, ['правило', 'правила', 'правил'])} на словах этой темы{' '}
+          {empty === 1 ? 'не тренируется' : 'не тренируются'} — ищите в списке на главной.
         </p>
       )}
     </main>
