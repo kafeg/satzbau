@@ -152,30 +152,42 @@ const fixSlot = (t: Template, w: Word): Fixed => {
   return person ? { ...rest, person: personOf(t.slot, w, t.id) } : rest
 }
 
-function genderOf(slot: Slot, w: Word, w2?: Word | null): Gender {
+/**
+ * ⚠ Возвращает null, а НЕ бросает. Род есть не у всех: у pl_only-слов (Leute, Eltern,
+ * Schulden) его нет вовсе. Бросок отсюда уходил в `fillingFor`, то есть в `rules()`,
+ * то есть на главный экран: одно новое слово без рода под подходящим тегом — и вместо
+ * приложения показывался Boundary. Несобираемое сочетание должно просто выпадать
+ * из наполнения, как любое другое.
+ */
+function genderOf(slot: Slot, w: Word, w2?: Word | null): Gender | null {
   if (slot.gender && slot.gender !== 'from_word' && slot.gender !== 'from_fill2') {
     return slot.gender
   }
   // прилагательное согласуется с существительным, а оно во втором слоте
   const from = slot.gender === 'from_fill2' ? w2 : w
-  const g = from ? (from.entry as Noun).g : undefined
-  if (!g) throw new Error(`${w.w}: у слова нет рода, шаблон его требовать не должен`)
-  return g
+  return from ? ((from.entry as Noun).g ?? null) : null
 }
+
+/** Применяет функцию к роду, если род известен. Нет рода — нет формы, а не исключение. */
+const nn = (g: Gender | null, f: (g: Gender) => string | null): string | null => (g ? f(g) : null)
 
 /** Форма в пропуске для заданного падежа. null — такого сочетания в парадигме нет. */
 function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | null {
   const num: Num = slot.num ?? 'sg'
   if (slot.gender === 'from_fill2' && !w2) return null
+  // Род нужен не всем парадигмам, поэтому спрашивается лениво. Во множественном
+  // артикли и окончания у всех трёх родов одинаковы (`defArticle`, `adjEnding`),
+  // так что слово без рода там собирается нормально.
+  const gender = (): Gender | null => (num === 'pl' ? 'm' : genderOf(slot, w, w2))
   switch (slot.paradigm) {
     case 'def_article':
-      return defArticle(c, genderOf(slot, w, w2), num)
+      return nn(gender(), (g) => defArticle(c, g, num))
     case 'indef_article':
-      return num === 'pl' ? null : indefArticle(c, genderOf(slot, w, w2))
+      return num === 'pl' ? null : nn(gender(), (g) => indefArticle(c, g))
     case 'possessive':
-      return possessive(c, genderOf(slot, w, w2), num)
+      return nn(gender(), (g) => possessive(c, g, num))
     case 'kein_article':
-      return keinArticle(c, genderOf(slot, w, w2), num)
+      return nn(gender(), (g) => keinArticle(c, g, num))
     // формы самого слова: вариантов у них нет, это всегда ввод
     case 'noun_plural':
       return nounForm(w.entry as Noun, c, 'pl')
@@ -201,7 +213,7 @@ function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | nul
       return (w.entry as Verb).pt
     // в предикативе прилагательное стоит в словарной форме, без всякого окончания
     case 'pronoun':
-      return pronoun(c === 'dat' ? 'dat' : 'akk', genderOf(slot, w, w2), num)
+      return nn(gender(), (g) => pronoun(c === 'dat' ? 'dat' : 'akk', g, num))
     case 'adj_predicative':
       return (w.entry as Adj).w
     // пропуск — сам предлог, который требует глагол: свойство слова, а не шаблона.
@@ -222,9 +234,9 @@ function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | nul
     case 'verb_stem':
       return present(w.entry as Verb, slot.person ?? '3sg').split(' ')[0] ?? null
     case 'merged_prep_article':
-      return merged(slot.prep as string, c, genderOf(slot, w))
+      return nn(genderOf(slot, w), (g) => merged(slot.prep as string, c, g))
     case 'adj_ending':
-      return adjEnding(slot.decl ?? 'weak', c, genderOf(slot, w, w2), num)
+      return nn(gender(), (g) => adjEnding(slot.decl ?? 'weak', c, g, num))
     case 'aux_present': {
       const v = w.entry as Verb
       if (v.aux === 'hs') return null
@@ -487,14 +499,19 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
   }
 }
 
-/** Все слова, которые шаблон может взять. */
+/**
+ * Все слова, которые шаблон может взять.
+ *
+ * ⚠ `second()` зовётся РОВНО ОДИН раз на слово. Раньше их было два на каждое слово,
+ * и на четырёх шаблонах с `fill2` это удваивало самую дорогую часть подбора.
+ */
 export function fillingFor(t: Template, all: Word[]): Word[] {
-  return all.filter(
-    (w) =>
-      fits(t.need, w) &&
-      slotForm(fixSlot(t, w), w, t.slot.case ?? 'nom', second(t, w, all)) !== null &&
-      (!t.fill2 || second(t, w, all) !== null),
-  )
+  return all.filter((w) => {
+    if (!fits(t.need, w)) return false
+    const w2 = second(t, w, all)
+    if (t.fill2 && w2 === null) return false
+    return slotForm(fixSlot(t, w), w, t.slot.case ?? 'nom', w2) !== null
+  })
 }
 
 /** Все задания шаблона. Их столько, сколько подходящих слов. */
