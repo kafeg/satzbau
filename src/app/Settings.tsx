@@ -7,6 +7,17 @@ import { plural } from './session.ts'
 import { germanVoice, germanVoices, onVoices, pickVoice, speak } from './speech.ts'
 import type { Answer } from './store.ts'
 
+// ⚠ Треугольник здесь означал «нажми — услышишь», но выглядел как индикатор
+// выпадающего списка: тот же глиф, что у групп правил, в другом значении.
+function Speaker() {
+  return (
+    <svg className="icon" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M3.5 6h2L8.5 3.2v9.6L5.5 10h-2z" />
+      <path d="M10.6 5.6a3.4 3.4 0 0 1 0 4.8" fill="none" stroke="currentColor" strokeWidth="1.4" />
+    </svg>
+  )
+}
+
 export function Settings({
   answers,
   onReset,
@@ -55,7 +66,8 @@ export function Settings({
                     {v.name}
                     <span className="rtheme mono">{v.lang}</span>
                   </span>
-                  <span className="rlv">{current?.name === v.name ? '✓' : '▸'}</span>
+                  {current?.name === v.name && <span className="rpick">✓</span>}
+                  <Speaker />
                 </button>
               </li>
             ))}
@@ -78,30 +90,32 @@ export function Settings({
         <span>Прогресс</span>
         <span>{plural(answers.length, ['ответ', 'ответа', 'ответов'])}</span>
       </h2>
-      <p className="note small">
-        ⚠ Сброс удаляет журнал ответов без возврата. Выгрузите его на экране «мои ошибки»,
-        если хотите сохранить.
-      </p>
-      <div className="row-buttons">
-        {sure ? (
-          <>
-            <button
-              className="primary danger"
-              onClick={() => {
-                void onReset().then(() => setSure(false))
-              }}
-            >
-              Да, удалить всё
+      <div className="panel stack">
+        <p className="note small">
+          ⚠ Сброс удаляет журнал ответов без возврата. Выгрузите его на экране «мои ошибки»,
+          если хотите сохранить.
+        </p>
+        <div className="row-buttons">
+          {sure ? (
+            <>
+              <button
+                className="primary danger"
+                onClick={() => {
+                  void onReset().then(() => setSure(false))
+                }}
+              >
+                Да, удалить всё
+              </button>
+              <button className="ghost" onClick={() => setSure(false)}>
+                отмена
+              </button>
+            </>
+          ) : (
+            <button className="ghost" disabled={!answers.length} onClick={() => setSure(true)}>
+              сбросить прогресс
             </button>
-            <button className="ghost" onClick={() => setSure(false)}>
-              отмена
-            </button>
-          </>
-        ) : (
-          <button className="ghost" disabled={!answers.length} onClick={() => setSure(true)}>
-            сбросить прогресс
-          </button>
-        )}
+          )}
+        </div>
       </div>
     </main>
   )

@@ -11,7 +11,17 @@ import { rules, SIZE, tasks } from './session.ts'
 
 const STRONG = 10
 
-export function Theme({ theme, level }: { theme: string; level?: Level }) {
+export function Theme({
+  theme,
+  level,
+  current,
+  onPick,
+}: {
+  theme: string
+  level?: Level
+  current?: string
+  onPick: (t?: string) => void
+}) {
   const t = getBundle().themes[theme]
   if (!t) return <p className="note">Такой темы нет.</p>
   const mine = rules({ theme, level })
@@ -47,10 +57,18 @@ export function Theme({ theme, level }: { theme: string; level?: Level }) {
         лексику из других тем.
       </p>
 
-      <button className="mix" onClick={() => go({ screen: 'drill', theme })}>
+      {/* тема становится текущей: приоритет переживает сессию, и «Заниматься» с главной
+          дальше идёт на её словах. Иначе выбор темы приходится повторять каждый заход */}
+      <button
+        className="mix"
+        onClick={() => {
+          onPick(theme)
+          go({ screen: 'drill', theme })
+        }}
+      >
         <span className="mix-title">Заниматься по теме</span>
         <span className="mix-sub">
-          {tasks(SIZE)} · слова «{t.title}» в приоритете
+          {tasks(SIZE)} · {current === theme ? 'это текущая тема' : 'тема станет текущей'}
         </span>
       </button>
 

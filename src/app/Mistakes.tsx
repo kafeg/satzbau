@@ -129,32 +129,34 @@ export function Mistakes({
         <span>Прогресс</span>
         <span>{plural(answers.length, ['ответ', 'ответа', 'ответов'])}</span>
       </h2>
-      <p className="note small">
-        Перенос между устройствами — файлом: на iOS хранилище приложения может быть
-        вытеснено, если им не пользоваться, так что выгрузка это ещё и страховка.
-      </p>
-      <div className="row-buttons">
-        <button className="primary" disabled={!answers.length} onClick={onExport}>
-          Выгрузить
-        </button>
-        <label className="ghost file">
-          Загрузить
-          <input
-            type="file"
-            accept="application/json,.json"
-            onChange={(e) => {
-              const file = e.target.files?.[0]
-              if (!file) return
-              onImport(file).then(
-                () => setNote('Прогресс загружен'),
-                (err: unknown) => setNote(err instanceof Error ? err.message : String(err)),
-              )
-              e.target.value = ''
-            }}
-          />
-        </label>
+      <div className="panel stack">
+        <p className="note small">
+          Перенос между устройствами — файлом: на iOS хранилище приложения может быть
+          вытеснено, если им не пользоваться, так что выгрузка это ещё и страховка.
+        </p>
+        <div className="row-buttons">
+          <button className="primary" disabled={!answers.length} onClick={onExport}>
+            Выгрузить
+          </button>
+          <label className="ghost file">
+            Загрузить
+            <input
+              type="file"
+              accept="application/json,.json"
+              onChange={(e) => {
+                const file = e.target.files?.[0]
+                if (!file) return
+                onImport(file).then(
+                  () => setNote('Прогресс загружен'),
+                  (err: unknown) => setNote(err instanceof Error ? err.message : String(err)),
+                )
+                e.target.value = ''
+              }}
+            />
+          </label>
+        </div>
+        {note && <p className="note small saved">{note}</p>}
       </div>
-      {note && <p className="note small">{note}</p>}
     </main>
   )
 }

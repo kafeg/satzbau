@@ -1,12 +1,13 @@
-// Главная: тема — вход, грамматика — список ниже. Человек приходит с «в среду врач»,
-// а не с «хочу Dativ», поэтому сетка тем стоит первой.
+// Главная: одно действие сверху, разделы ниже. «Заниматься» собирает очередь сама —
+// повторы по расписанию, одно новое правило, остальное в работе; выбор темы и правила
+// остаётся входом для тех, кто пришёл с целью, но не требуется каждый заход.
 
 import { useState } from 'react'
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { dueCount, type Cards } from './srs.ts'
-import { countFor, GROUPS, plural, rules, SIZE, tasks } from './session.ts'
+import { wordKey, type Cards, type State } from './srs.ts'
+import { GROUPS, nextNew, plural, rules, SIZE, tasks } from './session.ts'
 
 const LEVELS: { key: Level | undefined; label: string }[] = [
   { key: 'A1', label: 'A1' },
@@ -14,16 +15,28 @@ const LEVELS: { key: Level | undefined; label: string }[] = [
   { key: undefined, label: 'всё' },
 ]
 
+// Состояние правила словами. «Не начато» не подписываем: это тридцать строк шума,
+// и так видно по отсутствию метки.
+const STATE: Record<State, string> = {
+  new: '',
+  due: 'пора',
+  learning: 'в работе',
+  solid: 'держится',
+}
+
 export function Home({
   level,
   cards,
+  theme,
   onLevel,
+  onTheme,
 }: {
   level?: Level
   cards: Cards
+  theme?: string
   onLevel: (l?: Level) => void
+  onTheme: (t?: string) => void
 }) {
-  const repeat = dueCount(cards, 'r:')
   const [open, setOpen] = useState<string | null>(null)
   const bundle = getBundle()
   const all = rules({ level, cards })
@@ -31,8 +44,19 @@ export function Home({
     key,
     title: t.title,
     words: t.words.length,
+    seen: t.words.filter((w) => cards.has(wordKey(w.w))).length,
     live: rules({ level, theme: key }).filter((r) => r.count > 0).length,
   }))
+  const current = themes.find((t) => t.key === theme)
+
+  const repeat = all.filter((r) => r.state === 'due' && r.count > 0).length
+  const solid = all.filter((r) => r.state === 'solid').length
+  const fresh = nextNew({ level, cards })
+  const sub = [
+    `${tasks(SIZE)}`,
+    repeat ? `${plural(repeat, ['повтор', 'повтора', 'повторов'])}` : null,
+    fresh ? `новое — ${fresh.name}` : null,
+  ].filter(Boolean)
 
   return (
     <main className="home">
@@ -51,6 +75,35 @@ export function Home({
         </div>
       </div>
 
+      <button className="mix" onClick={() => go({ screen: 'drill' })}>
+        <span className="mix-title">Заниматься</span>
+        <span className="mix-sub">{sub.join(' · ')}</span>
+      </button>
+      {/* строки «тема не выбрана» нет нарочно: пока темы нет, строка была бы подписью
+          к пустоте. Тема появляется с экрана темы, а плитки стоят ниже */}
+      {current && (
+        <p className="now">
+          <span className="nlabel">Тема</span>
+          <button className="nlink" onClick={() => go({ screen: 'theme', theme: current.key })}>
+            {current.title} · {current.seen} из {current.words} слов
+          </button>
+          <button className="ndrop" onClick={() => onTheme(undefined)}>
+            убрать
+          </button>
+        </p>
+      )}
+      <div className="links">
+        <button className="ghost" onClick={() => go({ screen: 'mistakes' })}>
+          мои ошибки
+        </button>
+        <button className="ghost" onClick={() => go({ screen: 'tables' })}>
+          таблицы
+        </button>
+        <button className="ghost" onClick={() => go({ screen: 'settings' })}>
+          настройки
+        </button>
+      </div>
+
       <h2 className="section">
         <span>О чём говорим</span>
         <span>{themes.length} тем</span>
@@ -67,31 +120,10 @@ export function Home({
       </div>
 
       <h2 className="section">
-        <span>Или просто</span>
-      </h2>
-      <button className="mix" onClick={() => go({ screen: 'drill' })}>
-        <span className="mix-title">{repeat ? 'Повторить ошибки' : 'Всё вперемешку'}</span>
-        <span className="mix-sub">
-          {repeat
-            ? `${plural(repeat, ['правило ждёт', 'правила ждут', 'правил ждут'])} повтора`
-            : `${tasks(SIZE)} из ${countFor({ level })}`}
-        </span>
-      </button>
-      <div className="links">
-        <button className="ghost" onClick={() => go({ screen: 'mistakes' })}>
-          мои ошибки
-        </button>
-        <button className="ghost" onClick={() => go({ screen: 'tables' })}>
-          таблицы
-        </button>
-        <button className="ghost" onClick={() => go({ screen: 'settings' })}>
-          настройки
-        </button>
-      </div>
-
-      <h2 className="section">
         <span>Грамматика целиком</span>
-        <span>{all.length} правил</span>
+        <span>
+          {all.length} правил · держится {solid}
+        </span>
       </h2>
       <ul className="groups">
         {GROUPS.map((g) => {
@@ -100,12 +132,21 @@ export function Home({
           const shown = open === g
           return (
             <li key={g} className="group">
-              <button className="ghead" onClick={() => setOpen(shown ? null : g)}>
-                <span className="arrow">{shown ? '▾' : '▸'}</span>
+              <button
+                className={`ghead${shown ? ' open' : ''}`}
+                onClick={() => setOpen(shown ? null : g)}
+              >
                 <span className="gname">{GROUP_TITLE[g] ?? g}</span>
-                <span className="gcount">
-                  {rs.length} · {rs.reduce((n, r) => n + r.count, 0)}
-                </span>
+                {/* сводка по группе: обычно просто сколько правил, а когда что-то
+                    подошло к повтору — метка, потому что это единственное действие */}
+                {rs.some((r) => r.state === 'due') ? (
+                  <span className="rstate due">
+                    {rs.filter((r) => r.state === 'due').length} пора
+                  </span>
+                ) : (
+                  <span className="gcount mono">{rs.length}</span>
+                )}
+                <span className="arrow" aria-hidden="true" />
               </button>
               {shown &&
                 rs.map((r) => (
@@ -117,13 +158,24 @@ export function Home({
                   >
                     <span className="rname">
                       {r.name}
-                      <span className="bar">
-                        <i style={{ width: `${Math.round((100 * r.seen) / Math.max(r.words, 1))}%` }} />
+                      {/* полоса остаётся только у лексического правила: там доля слов и есть
+                          знание. У грамматического она стояла на месте при росте лексикона */}
+                      {r.lex && (
+                        <span className="bar">
+                          <i
+                            style={{ width: `${Math.round((100 * r.seen) / Math.max(r.words, 1))}%` }}
+                          />
+                        </span>
+                      )}
+                    </span>
+                    {r.lex && (
+                      <span className="rn mono">
+                        {r.seen}/{r.words}
                       </span>
-                    </span>
-                    <span className="rn mono">
-                      {r.seen}/{r.words}
-                    </span>
+                    )}
+                    {STATE[r.state] && (
+                      <span className={`rstate ${r.state}`}>{STATE[r.state]}</span>
+                    )}
                     <span className="rlv mono">{r.level}</span>
                   </button>
                 ))}

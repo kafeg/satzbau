@@ -127,7 +127,15 @@ h1 {
   color: var(--text-2);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: var(--s5) 0 var(--s2);
+  /* ⚠ Отбивка СВЕРХУ больше, чем любой отступ внутри блока: иначе подпись читается
+     как часть предыдущей карточки, и экран выглядит слипшимся */
+  margin: var(--s6) 0 var(--s3);
+}
+
+/* первый раздел под заголовком экрана не нуждается в полной отбивке */
+h1 + .section,
+.lead + .section {
+  margin-top: var(--s5);
 }
 
 .section > span:last-child:not(:first-child) {
@@ -176,6 +184,28 @@ h1 {
 
 .panel + .panel {
   margin-top: var(--s2);
+}
+
+/* содержимое раздела одной стопкой на одной поверхности: пояснение и кнопки под ним
+   были двумя разными плоскостями — текст на странице, кнопки ниже, без общей рамки */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  padding: var(--s4);
+}
+
+.stack .note.small,
+.panel.note.small {
+  margin: 0;
+}
+
+.stack .row-buttons {
+  margin: 0;
+}
+
+.stack .saved {
+  color: var(--accent);
 }
 
 /* ---------- кнопки и чипы ---------- */
@@ -413,6 +443,50 @@ h1 {
   min-height: 44px;
 }
 
+/* строка текущей темы под кнопкой: это приоритет очереди, а не навигация,
+   поэтому она строка, а не карточка и не чип */
+.now {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  margin: var(--s2) 0 0;
+  padding: 0 var(--s2);
+  font-size: var(--fs-sub);
+  min-height: 44px;
+}
+
+.now .nlabel {
+  color: var(--text-2);
+}
+
+.now .nlink {
+  flex: 1;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: var(--accent);
+  font-size: var(--fs-sub);
+  align-self: stretch;
+}
+
+.now .nlink.off {
+  color: var(--text-2);
+}
+
+.now .ndrop {
+  background: none;
+  border: 0;
+  padding: 0 var(--s2);
+  color: var(--text-2);
+  font-size: var(--fs-caption);
+  align-self: stretch;
+}
+
+.now .ndrop:active {
+  color: var(--text);
+}
+
 /* ---------- списки строк: группы правил, голоса, ошибки ---------- */
 .groups {
   list-style: none;
@@ -444,10 +518,30 @@ h1 {
   background: var(--press);
 }
 
+/* ⚠ Было «▸/▾» глифом слева: мелко, не попадает в сетку и читается как украшение.
+   Шеврон нарисован рамкой, стоит справа и поворачивается — это указатель состояния. */
 .ghead .arrow {
-  color: var(--text-2);
-  font-size: var(--fs-caption);
-  width: 10px;
+  width: 9px;
+  height: 9px;
+  position: relative;
+  flex: none;
+}
+
+.ghead .arrow::before {
+  content: '';
+  position: absolute;
+  inset: 0 2px 0 0;
+  margin: auto;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--text-2);
+  border-bottom: 1.5px solid var(--text-2);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.ghead.open .arrow::before {
+  transform: rotate(45deg);
 }
 
 .ghead .gname {
@@ -512,6 +606,40 @@ h1 {
 .grule .rlv {
   font-size: var(--fs-caption);
   color: var(--text-2);
+}
+
+.grule .icon {
+  width: 17px;
+  height: 17px;
+  flex: none;
+  fill: currentColor;
+  color: var(--text-2);
+}
+
+.grule .rpick {
+  color: var(--accent);
+  font-size: var(--fs-body);
+}
+
+/* состояние правила: считается из карточки FSRS, а не из доли увиденных слов.
+   «Не начато» метки не получает — иначе метка стоит у тридцати строк из сорока */
+.rstate {
+  font-size: var(--fs-caption);
+  border-radius: var(--r-pill);
+  padding: var(--s1) var(--s2);
+  white-space: nowrap;
+  background: var(--sunk);
+  color: var(--text-2);
+}
+
+.rstate.due {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.rstate.solid {
+  background: var(--blue-bg);
+  color: var(--blue-fg);
 }
 
 .rtheme {
@@ -847,9 +975,11 @@ footer {
   font-size: var(--fs-sub);
 }
 
+/* ⚠ По горизонтали экономим: на 375 px таблица из пяти колонок с отступом s2
+   не влезала в карточку, и последняя колонка обрезалась. */
 .forms th,
 .forms td {
-  padding: var(--s2) var(--s2);
+  padding: var(--s2) var(--s1);
   text-align: left;
 }
 
@@ -901,25 +1031,28 @@ footer {
   color: var(--text);
 }
 
-/* на экране таблиц цветом помечен только падеж: иначе страница заливается тремя
-   пятнами и формы в ней теряются */
+/* ⚠ Первая колонка: цвет падежа был плашкой по ширине слова — четыре прямоугольника
+   разной длины, а Nominativ без плашки вовсе, потому что своего цвета у него нет.
+   Теперь колонка одна и та же у всех строк: метка слева и цвет в тексте.
+   Заливкой целой строки по-прежнему пользуется только разбор, там она значит «вот эта». */
 .tblock .forms tbody th {
-  color: var(--text);
-  border-radius: var(--r-s);
+  color: var(--text-2);
+  border-left: 3px solid var(--line-strong);
+  padding-left: var(--s3);
 }
 
 .tblock .forms tr.akk th {
-  background: var(--blue-bg);
+  border-left-color: var(--accent);
   color: var(--blue-fg);
 }
 
 .tblock .forms tr.dat th {
-  background: var(--orange-bg);
+  border-left-color: var(--orange-fg);
   color: var(--orange-fg);
 }
 
 .tblock .forms tr.gen th {
-  background: var(--violet-bg);
+  border-left-color: var(--violet-fg);
   color: var(--violet-fg);
 }
 
@@ -929,7 +1062,7 @@ footer {
 }
 
 .tblock .section {
-  margin-bottom: var(--s2);
+  margin-bottom: var(--s3);
 }
 
 .tblock .panel {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { getBundle } from '../core/bundle.ts'
 import type { Item, Level } from '../core/types.ts'
 import { Drill } from './Drill.tsx'
 import { Home } from './Home.tsx'
@@ -17,6 +18,7 @@ import { download, upload } from './transfer.ts'
 
 const LEVEL_KEY = 'satzbau.level'
 const START_KEY = 'satzbau.started'
+const THEME_KEY = 'satzbau.theme'
 
 // Уровень — удобство, а не прогресс: приватный просмотр его не сохранит, и ладно.
 // Прогресс живёт в IndexedDB и выгружается файлом.
@@ -42,6 +44,8 @@ export function App() {
   const [ready, setReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [level, setLevel] = useState<Level | undefined>(() => read(LEVEL_KEY) as Level | undefined)
+  // текущая тема — постоянный приоритет очереди, а не выбор на каждый заход (docs/ia.md)
+  const [theme, setTheme] = useState<string | undefined>(() => read(THEME_KEY))
   const [answers, setAnswers] = useState<Answer[]>([])
   const [cards, setCards] = useState<Cards>(new Map())
   const [items, setItems] = useState<Item[]>([])
@@ -59,6 +63,8 @@ export function App() {
         const saved = await allAnswers().catch(() => [] as Answer[])
         setAnswers(saved)
         setCards(replay(saved))
+        // тему могли переименовать между версиями: сохранённый ключ проверяем по бандлу
+        setTheme((t) => (t && getBundle().themes[t] ? t : undefined))
         setReady(true)
       })
       .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
@@ -69,16 +75,23 @@ export function App() {
       if (route.screen === 'home' || route.screen === 'theme') setOnly(undefined)
       return
     }
-    setItems(newSession({ rule: route.rule, theme: route.theme, level, cards, only }))
+    // ⚠ Тема очереди: из маршрута, а иначе текущая. Поэтому «Заниматься» с главной идёт
+    // на словах текущей темы, а назад возвращается на главную, а не на экран темы.
+    setItems(newSession({ rule: route.rule, theme: route.theme ?? theme, level, cards, only }))
     setAt(0)
     setLog([])
     // cards нарочно не в зависимостях: иначе ответ пересобирал бы текущую сессию
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready, route.screen, route.rule, route.theme, level, only, nonce])
+  }, [ready, route.screen, route.rule, route.theme, level, theme, only, nonce])
 
   const pickLevel = (l?: Level) => {
     setLevel(l)
     write(LEVEL_KEY, l)
+  }
+
+  const pickTheme = (t?: string) => {
+    setTheme(t)
+    write(THEME_KEY, t)
   }
 
   /** Ответ: в журнал, затем состояние пересчитывается из него целиком. */
@@ -113,8 +126,24 @@ export function App() {
       />
     )
   if (route.screen === 'home')
-    return <Home level={level} cards={cards} onLevel={pickLevel} />
-  if (route.screen === 'theme') return <Theme theme={route.theme as string} level={level} />
+    return (
+      <Home
+        level={level}
+        cards={cards}
+        theme={theme}
+        onLevel={pickLevel}
+        onTheme={pickTheme}
+      />
+    )
+  if (route.screen === 'theme')
+    return (
+      <Theme
+        theme={route.theme as string}
+        level={level}
+        current={theme}
+        onPick={pickTheme}
+      />
+    )
   if (route.screen === 'words')
     return (
       <Words

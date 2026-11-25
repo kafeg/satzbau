@@ -2,7 +2,7 @@
 // На Э5 сюда придут повторы по FSRS, и смешанная очередь станет «повторением ошибок».
 
 import { getBundle, getWords } from '../core/bundle.ts'
-import { due, dueAt, ruleKey, wordKey, type Cards } from './srs.ts'
+import { ruleKey, stateOf, wordKey, type Cards, type State } from './srs.ts'
 import { fillingFor, itemsFor } from '../core/generate.ts'
 import type { Bundle, Item, Level } from '../core/types.ts'
 
@@ -46,6 +46,10 @@ export interface RuleInfo {
   seen: number
   /** всего слов, на которых правило собирается */
   words: number
+  /** лексическое правило: расписание держат карточки слов, а не карточка правила */
+  lex: boolean
+  /** не начато, пора, в работе, держится — из карточки FSRS, а не из доли слов */
+  state: State
 }
 
 /** Порядок блоков на главной. Внутри блока — порядок написания шаблонов. */
@@ -103,7 +107,8 @@ function depthOf(rule: string, explain: Bundle['explain'], seen = new Set<string
  */
 export function rules(p: Pick = {}): RuleInfo[] {
   const bundle = getBundle()
-  const out = new Map<string, RuleInfo & { at: number; set: Set<string> }>()
+  type Acc = Omit<RuleInfo, 'state'> & { at: number; set: Set<string> }
+  const out = new Map<string, Acc>()
   const words = wordsOf(p)
   templatesOf({ level: p.level }).forEach((t, at) => {
     const got = out.get(t.rule)
@@ -121,18 +126,55 @@ export function rules(p: Pick = {}): RuleInfo[] {
       count: (got?.count ?? 0) + fill.length,
       words: set.size,
       seen: p.cards ? [...set].filter((w) => p.cards?.has(wordKey(w))).length : 0,
+      lex: e?.lex === true,
       at: got?.at ?? at,
       set,
     })
   })
   const depth = new Map([...out.keys()].map((r) => [r, depthOf(r, bundle.explain)]))
-  return [...out.values()].sort(
-    (a, b) =>
-      LEVELS[a.level] - LEVELS[b.level] ||
-      (depth.get(a.rule) ?? 0) - (depth.get(b.rule) ?? 0) ||
-      a.at - b.at,
-  )
+  return [...out.values()]
+    .sort(
+      (a, b) =>
+        LEVELS[a.level] - LEVELS[b.level] ||
+        (depth.get(a.rule) ?? 0) - (depth.get(b.rule) ?? 0) ||
+        a.at - b.at,
+    )
+    .map(({ at: _at, set, ...r }) => ({ ...r, state: ruleState(r, set, p.cards) }))
 }
+
+/**
+ * Состояние правила. У обычного его держит карточка правила. У лексического (`lex`
+ * в explain.yaml) — карточки СЛОВ: «der, die или das» не выучивается как правило,
+ * род либо знаешь у слова, либо нет, и правил таких одно на весь лексикон.
+ * Карточка правила у него значит только «встречалось».
+ */
+function ruleState(r: { rule: string; lex: boolean }, set: Set<string>, cards?: Cards): State {
+  if (!cards) return 'new'
+  const met = stateOf(cards, ruleKey(r.rule))
+  if (!r.lex || met === 'new') return met
+  const words = [...set].map((w) => stateOf(cards, wordKey(w)))
+  if (words.includes('due')) return 'due'
+  return words.every((x) => x === 'solid') ? 'solid' : 'learning'
+}
+
+/**
+ * Какое новое правило разумно дать следующим: первое по графу предпосылок, у которого
+ * все предпосылки уже встречались. Нужно двум местам — подписи кнопки «Заниматься»
+ * и самой очереди, поэтому считается здесь, а не в экране.
+ * ⚠ Тема на выбор не влияет: порядок обучения важнее, чем совпадение с лексикой темы,
+ * а слова другой темы очередь всё равно доберёт.
+ */
+export function nextNew(p: Pick = {}): RuleInfo | null {
+  const explain = getBundle().explain
+  const fresh = rules({ level: p.level, cards: p.cards }).filter(
+    (r) => r.count > 0 && r.state === 'new',
+  )
+  const met = (r: string) => p.cards?.has(ruleKey(r)) === true
+  return fresh.find((r) => (explain[r.rule]?.after ?? []).every(met)) ?? fresh[0] ?? null
+}
+
+/** Порядок разбора: сперва то, чему пора, потом новое, потом в работе, последним выученное. */
+const RANK: Record<State, number> = { due: 0, new: 1, learning: 2, solid: 3 }
 
 export function newSession(p: Pick = {}): Item[] {
   const next = rng(p.seed ?? Date.now())
@@ -150,28 +192,44 @@ export function newSession(p: Pick = {}): Item[] {
   // ⚠ Порядок стопок перемешивается, а не берётся из файла. Обход идёт по кругу и
   // забирает по одному заданию, поэтому сессия из двенадцати заданий состояла из ПЕРВЫХ
   // двенадцати шаблонов всегда: восемь правил из сорока двух, остальное недостижимо.
+
+  // ⚠ Одно новое правило за сессию. Иначе «Заниматься» с пустым журналом даёт двенадцать
+  // заданий на двенадцать незнакомых правил, а дальше подмешивает незнакомое к каждому
+  // повтору. «Новое» — это НЕТ КАРТОЧКИ ПРАВИЛА, то есть правило не встречалось ни разу;
+  // у лексического правила расписание идёт по словам, но «встречалось» — по нему же.
+  // Без карточек (тесты, CLI) ограничения нет: новое от знакомого там не отличить.
+  const limit = Boolean(p.cards) && !p.rule && !p.only
+  const fresh = limit ? nextNew({ level: p.level, cards: p.cards })?.rule : undefined
+  const allowed = (rule: string) =>
+    !limit || rule === fresh || p.cards?.has(ruleKey(rule)) === true
+
   const buckets = shuffle(
-    templatesOf(p).map((t) => {
-      const all = itemsFor(t, words)
-      return {
-        mine: shuffle(p.theme ? all.filter((i) => i.theme === p.theme) : all),
-        rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
-      }
-    }),
+    templatesOf(p)
+      .filter((t) => allowed(t.rule))
+      .map((t) => {
+        const all = itemsFor(t, words)
+        return {
+          mine: shuffle(p.theme ? all.filter((i) => i.theme === p.theme) : all),
+          rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
+        }
+      }),
   )
 
   // Порядок внутри стопки: сперва то, чему пора повторяться, потом новое, потом
   // выученное. Правило важнее слова — расписание строится по нему (docs/architecture.md).
-  // ⚠ «Карточки нет» и «пора повторить» — РАЗНЫЕ состояния. Пока due() считал «пора»
-  // и то, и другое, новое правило и подошедшее по расписанию в очереди не различались,
+  // ⚠ «Карточки нет» и «пора повторить» — РАЗНЫЕ состояния. Пока очередь считала «пора»
+  // и то, и другое, новое правило и подошедшее по расписанию в ней не различались,
   // и «Повторить ошибки» повторяла не то, что ждёт повтора.
-  const state = (key: string) => {
-    if (!p.cards) return 0
-    const at = dueAt(p.cards, key)
-    if (at === null) return 1
-    return at <= Date.now() ? 0 : 2
+  const lex = new Set(
+    Object.entries(getBundle().explain)
+      .filter(([, e]) => e.lex)
+      .map(([r]) => r),
+  )
+  const state = (key: string) => (p.cards ? RANK[stateOf(p.cards, key)] : 0)
+  const rank = (i: Item) => {
+    const word = state(wordKey(i.word))
+    return (lex.has(i.rule) ? word : state(ruleKey(i.rule))) * 4 + word
   }
-  const rank = (i: Item) => state(ruleKey(i.rule)) * 3 + state(wordKey(i.word))
   for (const b of buckets) {
     // сортируем по убыванию: берём с хвоста
     b.mine.sort((x, y) => rank(y) - rank(x))

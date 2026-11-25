@@ -88,3 +88,19 @@ export function revive(card: Card): Card {
     lastReviewAt: card.lastReviewAt ? new Date(card.lastReviewAt) : null,
   } as Card
 }
+
+/**
+ * Состояние единицы обучения — считается из карточки, нигде не хранится.
+ * «Нет карточки» и «пора» — разные состояния: первое значит «не встречалось».
+ */
+export type State = 'new' | 'due' | 'learning' | 'solid'
+
+/** Порог «держится». ⚠ Начальное число: поправлять по журналу, а не по ощущению. */
+export const SOLID_DAYS = 21
+
+export function stateOf(cards: Cards, key: string, now = Date.now()): State {
+  const c = cards.get(key)
+  if (!c) return 'new'
+  if (new Date(c.dueAt).getTime() <= now) return 'due'
+  return c.stability >= SOLID_DAYS ? 'solid' : 'learning'
+}
