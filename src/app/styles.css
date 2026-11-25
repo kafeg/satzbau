@@ -184,7 +184,6 @@ h1 + .section,
 }
 
 /* ---------- поверхности ---------- */
-.tile,
 .group,
 .wcard,
 .panel,
@@ -501,10 +500,8 @@ body:has(.tabs) #root {
   color: var(--text-2);
 }
 
-/* текущая тема в разделе «Темы» */
-.tile.on {
-  border-color: var(--accent);
-  box-shadow: inset 0 0 0 1px var(--accent);
+.stat.learning .sn {
+  color: var(--text);
 }
 
 .home .top {
@@ -517,52 +514,6 @@ body:has(.tabs) #root {
 
 .home .top h1 {
   margin: 0;
-}
-
-.tiles {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s2);
-}
-
-.tile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--s1);
-  text-align: left;
-  color: var(--text);
-  padding: var(--s3) var(--s3);
-  min-height: 76px;
-}
-
-/* тем станет больше: с одиннадцатой сетка переходит в компактный режим,
-   иначе плитки съедают весь первый экран и карточка-призыв уходит за сгиб */
-.tiles:has(> :nth-child(11)) .tile {
-  min-height: 58px;
-  padding: var(--s2) var(--s3);
-}
-
-/* нечётное число тем: последняя плитка занимает строку целиком, а не висит одна */
-.tiles > .tile:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  min-height: 60px;
-}
-
-.tile:active {
-  background: var(--press);
-}
-
-.tname {
-  display: block;
-  font-size: var(--fs-card);
-  line-height: 1.25;
-}
-
-.tsub {
-  display: block;
-  font-size: var(--fs-caption);
-  color: var(--text-2);
 }
 
 /* тёмная карточка-призыв */
@@ -595,21 +546,6 @@ body:has(.tabs) #root {
   margin-top: var(--s1);
 }
 
-/* три текстовые ссылки под карточкой — не навигация, а дополнительные входы */
-.links {
-  display: flex;
-  justify-content: center;
-  gap: var(--s4);
-  flex-wrap: wrap;
-  margin-top: var(--s2);
-}
-
-.links .ghost {
-  margin: 0;
-  font-size: var(--fs-sub);
-  min-height: 44px;
-}
-
 /* строка текущей темы под кнопкой: это приоритет очереди, а не навигация,
    поэтому она строка, а не карточка и не чип */
 .now {
@@ -635,23 +571,6 @@ body:has(.tabs) #root {
   color: var(--accent);
   font-size: var(--fs-sub);
   align-self: stretch;
-}
-
-.now .nlink.off {
-  color: var(--text-2);
-}
-
-.now .ndrop {
-  background: none;
-  border: 0;
-  padding: 0 var(--s2);
-  color: var(--text-2);
-  font-size: var(--fs-caption);
-  align-self: stretch;
-}
-
-.now .ndrop:active {
-  color: var(--text);
 }
 
 /* ---------- списки строк: группы правил, голоса, ошибки ---------- */

@@ -9,7 +9,7 @@
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { rules } from './session.ts'
+import { rules, wordsOf } from './session.ts'
 import { wordKey, type Cards } from './srs.ts'
 
 export function Themes({
@@ -21,14 +21,21 @@ export function Themes({
   cards: Cards
   current?: string
 }) {
-  const list = Object.entries(getBundle().themes).map(([key, t]) => ({
-    key,
-    title: t.title,
-    words: t.words.length,
-    seen: t.words.filter((w) => cards.has(wordKey(w.w))).length,
-    live: rules({ level, theme: key }).filter((r) => r.count > 0).length,
-  }))
-  const started = list.filter((t) => t.seen > 0).sort((a, b) => b.seen / b.words - a.seen / a.words)
+  // ⚠ Слова считаются в пределах уровня, тем же `wordsOf`, что отбирает их для занятия:
+  // иначе строка обещает сотню слов, из которых на A1 доступны сорок.
+  const list = Object.entries(getBundle().themes).map(([key, t]) => {
+    const mine = wordsOf({ theme: key, level })
+    return {
+      key,
+      title: t.title,
+      words: mine.length,
+      seen: mine.filter((w) => cards.has(wordKey(w.w))).length,
+      live: rules({ level, theme: key }).filter((r) => r.count > 0).length,
+    }
+  })
+  const started = list
+    .filter((t) => t.seen > 0)
+    .sort((a, b) => b.seen / (b.words || 1) - a.seen / (a.words || 1))
   const rest = list.filter((t) => t.seen === 0)
 
   const rows = (group: typeof list) => (

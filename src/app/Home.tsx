@@ -6,7 +6,7 @@ import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
 import { wordKey, type Cards, type State } from './srs.ts'
-import { nextNew, plural, rules, SIZE, tasks } from './session.ts'
+import { nextNew, plural, rules, SIZE, tasks, wordsOf } from './session.ts'
 
 function Gear() {
   return (
@@ -34,6 +34,8 @@ export function Home({ level, cards, theme }: { level?: Level; cards: Cards; the
   const bundle = getBundle()
   const all = rules({ level, cards })
   const t = theme ? bundle.themes[theme] : undefined
+  // слова темы В ПРЕДЕЛАХ уровня: показываем ту же выборку, по которой идёт занятие
+  const mine = theme ? wordsOf({ theme, level }) : []
 
   const due = all.filter((r) => r.state === 'due' && r.count > 0)
   const repeat = due.length
@@ -64,8 +66,8 @@ export function Home({ level, cards, theme }: { level?: Level; cards: Cards; the
         <span className="nlabel">Тема</span>
         {t && theme ? (
           <button className="nlink" onClick={() => go({ screen: 'theme', theme })}>
-            {t.title} · {t.words.filter((w) => cards.has(wordKey(w.w))).length} из{' '}
-            {t.words.length} слов
+            {t.title} · {mine.filter((w) => cards.has(wordKey(w.w))).length} из {mine.length}{' '}
+            слов
           </button>
         ) : (
           <button className="nlink" onClick={() => go({ screen: 'themes' })}>
