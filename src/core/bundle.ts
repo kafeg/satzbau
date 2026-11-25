@@ -32,11 +32,3 @@ export function getBundle(): Bundle {
 export function getWords(): Word[] {
   return currentWords
 }
-
-export function entry(lemma: string): Entry | undefined {
-  return byLemma.get(lemma)
-}
-
-export function isPos<T extends Entry>(w: Word, pos: Pos): w is Word & { entry: T } {
-  return w.pos === pos
-}

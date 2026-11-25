@@ -80,15 +80,6 @@ export function dueCount(cards: Cards, prefix: 'r:' | 'w:', now = Date.now()): n
   return n
 }
 
-/** ⚠ После JSON даты приезжают строками, а планировщик требует настоящие Date. */
-export function revive(card: Card): Card {
-  return {
-    ...card,
-    dueAt: new Date(card.dueAt),
-    lastReviewAt: card.lastReviewAt ? new Date(card.lastReviewAt) : null,
-  } as Card
-}
-
 /**
  * Состояние единицы обучения — считается из карточки, нигде не хранится.
  * «Нет карточки» и «пора» — разные состояния: первое значит «не встречалось».

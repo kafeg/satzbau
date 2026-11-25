@@ -1,7 +1,7 @@
 // Разбор ошибки: шаги правила, таблица по родам и строка «чем был твой вариант».
 // Текст приходит из данных, таблица считается по парадигме — в данных её нет.
 
-import { getBundle } from '../core/bundle.ts'
+import { getBundle, getWords } from '../core/bundle.ts'
 import { explainItem } from '../core/explain.ts'
 import {
   adjEnding,
@@ -13,7 +13,7 @@ import {
   possessive,
   type FormMatch,
 } from '../core/paradigms.ts'
-import type { Case, Gender, Item, Num, Template } from '../core/types.ts'
+import type { Case, Gender, Item, Num, Template, Verb } from '../core/types.ts'
 
 const CASES: Case[] = ['nom', 'akk', 'dat', 'gen']
 const COLS: (Gender | 'pl')[] = ['m', 'f', 'n', 'pl']
@@ -86,6 +86,13 @@ function readable(ms: FormMatch[]): string {
     .join(', ')
 }
 
+/** Примечание про второй вспомогательный глагол — только там, где его и тренируют. */
+function auxNote(item: Item): string | undefined {
+  if (item.rule !== 'perfekt-aux') return undefined
+  const v = getWords().find((w) => w.w === item.word)?.entry as Verb | undefined
+  return v?.auxn
+}
+
 export function Explain({ item, given }: { item: Item; given?: string }) {
   const e = explainItem(item)
   const t = getBundle().templates.find((x) => x.id === item.templateId)
@@ -142,6 +149,10 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
 
       <p className="contrast">{e.ru_contrast}</p>
       {e.more && <p className="more">{e.more}</p>}
+      {/* ⚠ Второе значение глагола: «ist gefahren — поехал; hat gefahren — вёл машину».
+          Поле auxn собиралось в бандл с самого начала, а показать его забыли —
+          и fixes.yaml, и src/CLAUDE.md всё это время обещали, что оно видно в разборе. */}
+      {auxNote(item) && <p className="more">{auxNote(item)}</p>}
     </section>
   )
 }

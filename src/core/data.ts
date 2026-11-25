@@ -23,5 +23,4 @@ setBundle({
 
 export const bundle = getBundle()
 export const words = getWords()
-export { entry, isPos } from './bundle.ts'
 export type { Word } from './bundle.ts'

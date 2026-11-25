@@ -155,7 +155,6 @@ export interface Item {
   word: string
   /** второе слово, если шаблон его просит */
   word2?: string
-  pos: Pos
   theme: string
   ru?: string
   why: string
