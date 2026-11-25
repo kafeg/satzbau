@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { getBundle } from '../core/bundle.ts'
 import type { Item, Level } from '../core/types.ts'
 import { Drill } from './Drill.tsx'
+import { Grammar } from './Grammar.tsx'
 import { Home } from './Home.tsx'
 import { loadBundle } from './load.ts'
-import { Mistakes } from './Mistakes.tsx'
+import { Progress } from './Progress.tsx'
 import { go, useRoute } from './route.ts'
 import { newSession } from './session.ts'
 import { init as initSrs, replay, type Cards } from './srs.ts'
@@ -12,7 +13,9 @@ import { Settings } from './Settings.tsx'
 import { Start } from './Start.tsx'
 import { addAnswer, allAnswers, clearAnswers, persist, type Answer } from './store.ts'
 import { Tables } from './Tables.tsx'
+import { Tabs } from './Tabs.tsx'
 import { Theme } from './Theme.tsx'
+import { Themes } from './Themes.tsx'
 import { Words } from './Words.tsx'
 import { download, upload } from './transfer.ts'
 
@@ -72,7 +75,7 @@ export function App() {
 
   useEffect(() => {
     if (!ready || route.screen !== 'drill') {
-      if (route.screen === 'home' || route.screen === 'theme') setOnly(undefined)
+      if (route.screen !== 'words') setOnly(undefined)
       return
     }
     // ⚠ Тема очереди: из маршрута, а иначе текущая. Поэтому «Заниматься» с главной идёт
@@ -115,6 +118,14 @@ export function App() {
   if (error) return <p className="note">Данные не загрузились: {error}</p>
   if (!ready) return <p className="note">Загрузка…</p>
 
+  // панель разделов есть везде, кроме дрилла и онбординга: там экран занят одним делом
+  const shell = (body: ReactNode) => (
+    <>
+      {body}
+      <Tabs screen={route.screen} />
+    </>
+  )
+
   if (!started && !answers.length)
     return (
       <Start
@@ -126,26 +137,16 @@ export function App() {
       />
     )
   if (route.screen === 'home')
-    return (
-      <Home
-        level={level}
-        cards={cards}
-        theme={theme}
-        onLevel={pickLevel}
-        onTheme={pickTheme}
-      />
-    )
+    return shell(<Home level={level} cards={cards} theme={theme} />)
+  if (route.screen === 'themes')
+    return shell(<Themes level={level} cards={cards} current={theme} />)
+  if (route.screen === 'grammar') return shell(<Grammar level={level} cards={cards} />)
   if (route.screen === 'theme')
-    return (
-      <Theme
-        theme={route.theme as string}
-        level={level}
-        current={theme}
-        onPick={pickTheme}
-      />
+    return shell(
+      <Theme theme={route.theme as string} level={level} current={theme} onPick={pickTheme} />,
     )
   if (route.screen === 'words')
-    return (
+    return shell(
       <Words
         theme={route.theme as string}
         level={level}
@@ -154,32 +155,35 @@ export function App() {
           setOnly(ws)
           go({ screen: 'drill', theme: route.theme })
         }}
-      />
+      />,
     )
-  if (route.screen === 'tables') return <Tables />
+  if (route.screen === 'tables') return shell(<Tables />)
   if (route.screen === 'settings')
-    return (
+    return shell(
       <Settings
         answers={answers}
+        level={level}
+        onLevel={pickLevel}
         onReset={async () => {
           await clearAnswers()
           setAnswers([])
           setCards(new Map())
         }}
-      />
+      />,
     )
-  if (route.screen === 'mistakes')
-    return (
-      <Mistakes
+  if (route.screen === 'progress')
+    return shell(
+      <Progress
         answers={answers}
         cards={cards}
+        level={level}
         onExport={() => download(answers)}
         onImport={async (file) => {
           const next = await upload(file)
           setAnswers(next)
           setCards(replay(next))
         }}
-      />
+      />,
     )
 
   const item = items[at]

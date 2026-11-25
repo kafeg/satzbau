@@ -92,8 +92,8 @@ export function Tables() {
   const [decl, setDecl] = useState<Decl>('weak')
   return (
     <main className="home">
-      <button className="back wide-back" onClick={() => go({ screen: 'home' })}>
-        ← главная
+      <button className="back wide-back" onClick={() => go({ screen: 'grammar' })}>
+        ← грамматика
       </button>
       <h1>Таблицы</h1>
       <p className="lead">Всё считается по парадигмам: эти же таблицы подсвечиваются в разборе.</p>

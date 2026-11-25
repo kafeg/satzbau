@@ -48,7 +48,7 @@ export function Theme({
 
   return (
     <main className="home">
-      <button className="back wide-back" onClick={() => go({ screen: 'home' })}>
+      <button className="back wide-back" onClick={() => go({ screen: 'themes' })}>
         ← темы
       </button>
       <h1>{t.title}</h1>

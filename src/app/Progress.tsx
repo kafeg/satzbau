@@ -1,14 +1,16 @@
-// Мои ошибки: что хромает и когда вернётся. Строка собирается из журнала, а текст
-// причины — из задания, пересобранного по паре «шаблон + слово»: в журнале подстановок
-// нет, и это ровно та причина, по которой пара в нём хранится.
+// Раздел «Прогресс»: где я по правилам, что хромает и когда вернётся, перенос файлом.
+// Строка ошибки собирается из журнала, а текст причины — из задания, пересобранного
+// по паре «шаблон + слово»: в журнале подстановок нет, и это ровно та причина,
+// по которой пара в нём хранится.
 
 import { useState } from 'react'
 import { getBundle, getWords } from '../core/bundle.ts'
 import { explainItem } from '../core/explain.ts'
 import { generate } from '../core/generate.ts'
+import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { plural } from './session.ts'
-import { dueAt, ruleKey, wordKey, type Cards } from './srs.ts'
+import { plural, rules } from './session.ts'
+import { dueAt, ruleKey, wordKey, type Cards, type State } from './srs.ts'
 import type { Answer } from './store.ts'
 
 type By = 'rule' | 'word' | 'theme'
@@ -35,18 +37,30 @@ function reason(a: Answer): string {
   }
 }
 
-export function Mistakes({
+const SUMMARY: [State, string][] = [
+  ['due', 'пора'],
+  ['learning', 'в работе'],
+  ['solid', 'держится'],
+  ['new', 'не начато'],
+]
+
+export function Progress({
   answers,
   cards,
+  level,
   onExport,
   onImport,
 }: {
   answers: Answer[]
   cards: Cards
+  level?: Level
   onExport: () => void
   onImport: (file: File) => Promise<void>
 }) {
   const [by, setBy] = useState<By>('rule')
+  // выбранное состояние: пока не выбрали руками — первое непустое, иначе экран
+  // открывается пустым списком «пора» у того, кому ещё нечего повторять
+  const [picked, setPicked] = useState<State | null>(null)
   const [note, setNote] = useState<string | null>(null)
   const bundle = getBundle()
   const themeOf = (word: string) => getWords().find((w) => w.w === word)?.theme
@@ -79,14 +93,55 @@ export function Mistakes({
     })
   }
   const rows = [...groups.entries()].sort((a, b) => b[1].n - a[1].n)
+  const all = rules({ level, cards })
+  const state =
+    picked ?? (SUMMARY.map(([k]) => k).find((k) => all.some((r) => r.state === k)) as State)
+  const shown = all.filter((r) => r.state === state)
 
   return (
     <main className="home">
-      <button className="back wide-back" onClick={() => go({ screen: 'home' })}>
-        ← главная
-      </button>
-      <h1>Мои ошибки</h1>
+      <h1>Прогресс</h1>
 
+      {/* четыре числа и есть навигация: за каждым список правил в этом состоянии */}
+      <ul className="counts">
+        {SUMMARY.map(([key, label]) => (
+          <li key={key} className={`count ${key}`}>
+            <button className={`cbtn${state === key ? ' on' : ''}`} onClick={() => setPicked(key)}>
+              <span className="cn mono">{all.filter((r) => r.state === key).length}</span>
+              <span className="clabel">{label}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      <h2 className="section">
+        <span>Правила: {SUMMARY.find(([k]) => k === state)?.[1]}</span>
+        <span>{shown.length}</span>
+      </h2>
+      {shown.length === 0 ? (
+        <p className="panel note small">Здесь пока пусто.</p>
+      ) : (
+        <ul className="group">
+          {shown.map((r) => (
+            <li key={r.rule}>
+              <button
+                className="grule"
+                disabled={r.count === 0}
+                onClick={() => go({ screen: 'drill', rule: r.rule })}
+              >
+                <span className="rname">{r.name}</span>
+                <span className="rlv mono">{r.level}</span>
+                <span className="arrow" aria-hidden="true" />
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <h2 className="section">
+        <span>Ошибки</span>
+        <span>{plural(wrong.length, ['ошибка', 'ошибки', 'ошибок'])}</span>
+      </h2>
       {wrong.length === 0 ? (
         <p className="lead">
           Пока ни одной. Они появятся здесь после первых занятий — вместе с тем, когда
@@ -126,7 +181,7 @@ export function Mistakes({
       )}
 
       <h2 className="section">
-        <span>Прогресс</span>
+        <span>Перенос</span>
         <span>{plural(answers.length, ['ответ', 'ответа', 'ответов'])}</span>
       </h2>
       <div className="panel stack">

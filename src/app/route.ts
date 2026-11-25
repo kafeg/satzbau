@@ -1,6 +1,8 @@
 // Маршрут в хэше: Pages не умеет отдавать index.html на произвольный путь.
-//   #/                      главная
-//   #/mistakes              мои ошибки
+//   #/                      главная: «Заниматься» и текущая тема
+//   #/themes                раздел: темы
+//   #/grammar               раздел: грамматика и таблицы
+//   #/progress              раздел: прогресс, ошибки, перенос
 //   #/t/<тема>              экран темы
 //   #/w/<тема>              новые слова темы
 //   #/drill                 всё вперемешку
@@ -11,7 +13,16 @@
 import { useEffect, useState } from 'react'
 
 export interface Route {
-  screen: 'home' | 'theme' | 'words' | 'drill' | 'mistakes' | 'tables' | 'settings'
+  screen:
+    | 'home'
+    | 'themes'
+    | 'grammar'
+    | 'progress'
+    | 'theme'
+    | 'words'
+    | 'drill'
+    | 'tables'
+    | 'settings'
   rule?: string
   theme?: string
 }
@@ -23,7 +34,10 @@ export function parse(hash: string): Route {
   if (head === 'drill') return { screen: 'drill', rule: part(a), theme: part(b) }
   if (head === 't' && a) return { screen: 'theme', theme: decodeURIComponent(a) }
   if (head === 'w' && a) return { screen: 'words', theme: decodeURIComponent(a) }
-  if (head === 'mistakes') return { screen: 'mistakes' }
+  // #/mistakes — прежний адрес раздела: установленная PWA могла запомнить его в хэше
+  if (head === 'progress' || head === 'mistakes') return { screen: 'progress' }
+  if (head === 'themes') return { screen: 'themes' }
+  if (head === 'grammar') return { screen: 'grammar' }
   if (head === 'tables') return { screen: 'tables' }
   if (head === 'settings') return { screen: 'settings' }
   return { screen: 'home' }
@@ -31,7 +45,9 @@ export function parse(hash: string): Route {
 
 export function href(route: Route): string {
   if (route.screen === 'home') return '#/'
-  if (route.screen === 'mistakes') return '#/mistakes'
+  if (route.screen === 'progress') return '#/progress'
+  if (route.screen === 'themes') return '#/themes'
+  if (route.screen === 'grammar') return '#/grammar'
   if (route.screen === 'tables') return '#/tables'
   if (route.screen === 'settings') return '#/settings'
   if (route.screen === 'words') return `#/w/${encodeURIComponent(route.theme as string)}`

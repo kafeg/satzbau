@@ -28,7 +28,9 @@ export function Start({ onPick }: { onPick: (l?: Level) => void }) {
           </button>
         ))}
       </div>
-      <p className="note small">Уровень можно поменять в любой момент — чипом на главной.</p>
+      <p className="note small">
+        Уровень можно поменять в любой момент — в настройках, шестерёнкой на главной.
+      </p>
     </main>
   )
 }

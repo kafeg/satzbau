@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { getBundle } from '../core/bundle.ts'
-import { go } from './route.ts'
+import type { Level } from '../core/types.ts'
 import { plural } from './session.ts'
 import { germanVoice, germanVoices, onVoices, pickVoice, speak } from './speech.ts'
 import type { Answer } from './store.ts'
@@ -18,11 +18,23 @@ function Speaker() {
   )
 }
 
+// Уровень — потолок профиля: он меняется раз в месяцы, а чипами занимал первую строку
+// главной каждый день. Поэтому он здесь, а не там.
+const LEVELS: [Level | undefined, string, string][] = [
+  ['A1', 'A1', 'артикли, предлоги, Perfekt'],
+  ['A2', 'A1 и A2', 'плюс Wechselpräpositionen, слияния, прилагательные'],
+  [undefined, 'всё подряд', 'ещё и B1: Genitiv, редкие слова'],
+]
+
 export function Settings({
   answers,
+  level,
+  onLevel,
   onReset,
 }: {
   answers: Answer[]
+  level?: Level
+  onLevel: (l?: Level) => void
   onReset: () => Promise<void>
 }) {
   const [, bump] = useState(0)
@@ -35,10 +47,25 @@ export function Settings({
 
   return (
     <main className="home">
-      <button className="back wide-back" onClick={() => go({ screen: 'home' })}>
-        ← главная
-      </button>
       <h1>Настройки</h1>
+
+      <h2 className="section">
+        <span>Уровень</span>
+        <span>потолок слов и правил</span>
+      </h2>
+      <ul className="group">
+        {LEVELS.map(([key, title, note]) => (
+          <li key={title}>
+            <button className="grule" onClick={() => onLevel(key)}>
+              <span className="rname">
+                {title}
+                <span className="rtheme">{note}</span>
+              </span>
+              {level === key && <span className="rpick">✓</span>}
+            </button>
+          </li>
+        ))}
+      </ul>
 
       <h2 className="section">
         <span>Озвучка</span>
