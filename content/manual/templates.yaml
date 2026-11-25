@@ -108,7 +108,8 @@
   kind: input
   frame: "Wir wohnen in einer klein{slot} {w}."
   need: {pos: n, theme: home, tags: [place, room], g: [f], not: [pl_only]}
-  slot: {paradigm: adj_ending, decl: mixed, case: dat, num: sg, gender: from_word}
+  # prep нужен РАЗБОРУ: им объясняется, почему здесь Dativ. adj_ending его не читает
+  slot: {paradigm: adj_ending, decl: mixed, case: dat, num: sg, gender: from_word, prep: in}
   why: adj-dat-en
 
 # Два шаблона на одно правило, и это не дубль. Глагол в задании виден (он стоит в {pp}),
@@ -295,7 +296,7 @@
   kind: input
   frame: "Ich fahre mit {art} neu{slot} {w}."
   need: {pos: n, tags: [vehicle], not: [pl_only]}
-  slot: {paradigm: adj_ending, decl: weak, case: dat, num: sg, gender: from_word}
+  slot: {paradigm: adj_ending, decl: weak, case: dat, num: sg, gender: from_word, prep: mit}
   why: adj-dat-en
 
 # --- Второе слово в рамке -----------------------------------------------------
@@ -774,7 +775,7 @@
   kind: choice
   frame: "Ich spreche mit {slot} {w}."
   need: {pos: n, tags: [person], not: [pl_only, plu]}
-  slot: {paradigm: possessive, case: dat, gender: from_word}
+  slot: {paradigm: possessive, case: dat, gender: from_word, prep: mit}
   options: {paradigm: possessive, count: 4}
   why: possessiv-dativ
 
@@ -1152,7 +1153,7 @@
   kind: choice
   frame: "Ich wohne bei {slot} {w}."
   need: {pos: n, tags: [person], not: [pl_only, plu]}
-  slot: {paradigm: possessive, case: dat, gender: from_word}
+  slot: {paradigm: possessive, case: dat, gender: from_word, prep: bei}
   options: {paradigm: possessive, count: 4}
   why: possessiv-dativ
 

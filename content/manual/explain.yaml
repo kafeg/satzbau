@@ -117,8 +117,8 @@ adj-dat-en:
     не «маленький». Разница в том, что в немецком окончание зависит не только от падежа
     и рода, но ещё и от артикля, который стоит перед прилагательным.
   steps:
-    - "предлог in и вопрос wo? → Dativ"
-    - "{article} — неопределённый артикль, значит смешанное склонение"
+    - "{dativ_why}"
+    - "{decl_why}"
     - "в Dativ при таком артикле окончание -en, в любом роде"
   more: >-
     Это редкий подарок: мужской einem kleinen, женский einer kleinen, средний einem kleinen,
@@ -150,7 +150,7 @@ akkusativ-objekt:
   group: падеж
   after: [nominativ-subjekt]
   title: Прямой объект стоит в Akkusativ
-  short: brauchen + Akkusativ
+  short: прямой объект → Akkusativ
   ru_contrast: >-
     Здесь русский помогает, а не мешает: прямой объект и у нас винительный падеж.
     «Я ищу ключ» — «Ich suche den Schlüssel». Разница одна: в немецком падеж виден
@@ -158,7 +158,7 @@ akkusativ-objekt:
     и это всё изменение.
   steps:
     - "{w} — {gender_ru} род: {nom_article} {w}"
-    - "brauchen требует прямого объекта, значит падеж Akkusativ"
+    - "глагол требует прямого объекта, значит падеж Akkusativ"
     - "в Akkusativ это {answer}"
   more: >-
     В Akkusativ меняется только мужской род: der → den, ein → einen. Женский, средний
@@ -197,7 +197,7 @@ possessiv-nominativ:
   steps:
     - "{w} — {gender_ru} род"
     - "в Nominativ у ein-слов: мужской и средний без окончания, женский -e"
-    - "{answer} {w}"
+    - "{answer} {wform}"
   more: >-
     По той же таблице склоняются ein, kein, dein, sein, ihr, unser — вся группа разом.
     Выучив kein, вы уже знаете mein. Во множественном числе всегда meine: meine Augen.
@@ -215,7 +215,7 @@ negation-kein:
   steps:
     - "отрицается существительное → kein, не nicht"
     - "kein склоняется как ein: {w} — {gender_ru} род, падеж {case_ru}"
-    - "{answer} {w}"
+    - "{answer} {wform}"
   more: >-
     Разница с ein только во множественном: у ein его нет, а keine Tabletten — обычная фраза.
     И ещё одно: если перед существительным уже стоит der/die/das или притяжательное,
@@ -232,7 +232,7 @@ plural-form:
     пять разных окончаний (-e, -en, -er, -s и никакого) плюс возможная перегласовка,
     и по самому слову выбрать нельзя: der Apfel — die Äpfel, но der Löffel — die Löffel.
   steps:
-    - "{nom_article} {w} — {gender_ru} род"
+    - "{lemma_article} {w} — {gender_ru} род"
     - "множественное: {answer}"
     - "во множественном артикль всегда die, род больше не важен"
   more: >-
@@ -369,7 +369,7 @@ possessiv-akkusativ:
   steps:
     - "{w} — {gender_ru} род"
     - "Akkusativ: мужской получает -en, остальные остаются как были"
-    - "{answer} {w}"
+    - "{answer} {wform}"
   more: >-
     Это общее правило всей группы ein-слов: ein → einen, kein → keinen, mein → meinen,
     и только в мужском роде. Выучив его один раз, вы закрыли и артикль, и отрицание,
@@ -387,7 +387,7 @@ komparativ:
     interessanter, а не «mehr interessant». Это одна из частых ошибок именно у русских.
   steps:
     - "{w}, {degree_ru} степень"
-    - "короткие слова с a, o, u часто получают умлаут: alt → älter"
+    - "короткие слова с a, o, u часто получают умлаут: {degree_example}"
     - "{answer}"
   more: >-
     Превосходная: am …-sten, после t, d, s, ß, z и sch вставляется -e-: am ältesten.
@@ -419,7 +419,7 @@ genitiv-besitz:
   group: падеж
   after: [dativ-objekt]
   title: Чей — это Genitiv, и он стоит после
-  short: "чей? → {answer} {w}"
+  short: "чей? → {answer} {wform}"
   ru_contrast: >-
     По-русски «машина отца» — родительный, и порядок тот же: сначала машина, потом отец.
     В немецком так же, но добавляется окончание у самого слова: des Vaters, не «des Vater».
@@ -427,7 +427,7 @@ genitiv-besitz:
   steps:
     - "вопрос «чей» → Genitiv"
     - "{w} — {gender_ru} род"
-    - "{nom_article} → {answer}, и у слова появляется окончание"
+    - "{nom_article} → {answer}, {gen_ending_why}"
   more: >-
     В разговоре Genitiv часто заменяют на von + Dativ: das Auto von meinem Vater.
     В письменном языке так лучше не делать, но услышите вы именно это.
@@ -476,8 +476,8 @@ modalverben:
   name: Модальные глаголы
   group: глагол
   after: [praesens-3sg]
-  title: У модальных в единственном числе нет -t
-  short: "{answer}, не «{answer}t»"
+  title: Модальный спрягается по-своему, смысловой уходит в конец
+  short: "{modal_hint}"
   ru_contrast: >-
     По-русски «могу, можешь, может» — окончания меняются у всех лиц одинаково привычно.
     В немецком модальные ведут себя особо: в единственном числе первое и третье лицо
@@ -652,7 +652,7 @@ pronomen-dativ:
     хотя по-русски там винительный или вовсе без предлога.
   steps:
     - "{w} — {gender_ru} род, в именительном {nom_article}"
-    - "helfen требует Dativ, а не Akkusativ"
+    - "глагол требует Dativ, а не Akkusativ"
     - "{gender_ru} род в Dativ даёт {answer}"
   more: >-
     Таблица короткая: er → ihm, sie → ihr, es → ihm, sie (мн.) → ihnen. Женский род
@@ -665,7 +665,7 @@ possessiv-dativ:
   group: артикль
   after: [possessiv-akkusativ, prep-dativ]
   title: Мой, моя, моё после предлога с Dativ
-  short: "mit {answer} {w}"
+  short: "{answer} {wform}"
   ru_contrast: >-
     По-русски «с моим братом» и «с моей сестрой» — окончание меняется по роду, и это
     знакомо. В немецком то же, но окончаний больше и они совпадают с окончаниями ein:
@@ -673,7 +673,7 @@ possessiv-dativ:
     ни был, — это не «куда» и не «где», это свойство предлога.
   steps:
     - "{w} — {gender_ru} род, в именительном {nom_article}"
-    - "после mit всегда Dativ"
+    - "{dativ_why}"
     - "{gender_ru} род в Dativ даёт {answer}"
   more: >-
     mein склоняется как ein, и это общее правило для dein, sein, ihr, unser и kein.
@@ -815,7 +815,7 @@ es-gibt:
   group: падеж
   after: [akkusativ-objekt]
   title: После es gibt всегда Akkusativ
-  short: "es gibt {answer} {w}"
+  short: "es gibt {answer} {wform}"
   ru_contrast: >-
     По-русски «здесь есть парк» — подлежащее, именительный падеж. В немецком то же
     самое говорят оборотом es gibt, и после него стоит ПРЯМОЙ ОБЪЕКТ, то есть
@@ -836,7 +836,7 @@ prep-genitiv:
   group: падеж
   after: [genitiv-besitz]
   title: wegen и während требуют Genitiv
-  short: "wegen {answer} {w}"
+  short: "{answer} {wform}"
   ru_contrast: >-
     По-русски «из-за забастовки» — родительный падеж, и это совпадает: немецкие wegen,
     während и trotz тоже берут Genitiv. Совпадение редкое и приятное, но есть ловушка:

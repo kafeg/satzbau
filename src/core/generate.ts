@@ -32,6 +32,7 @@ import type { Word } from './bundle.ts'
 import type {
   Adj,
   Case,
+  Decl,
   Gender,
   Item,
   Need,
@@ -113,6 +114,42 @@ function partizipWhy(v: Verb): string {
   if (!pp.startsWith('ge')) return 'неотделяемая приставка: ge- не ставится'
   if (pp.endsWith('en')) return 'сильный глагол: окончание -en, а не -t'
   return 'обычный глагол: ge- + основа + -t'
+}
+
+/** Предлоги с двумя падежами: у них падеж задаёт вопрос, а не сам предлог. */
+const WECHSEL = ['in', 'an', 'auf', 'über', 'unter', 'vor', 'hinter', 'neben', 'zwischen']
+
+/**
+ * ⚠ Почему в задании Dativ — зависит от предлога РАМКИ, а не от правила: у `in` падеж
+ * задаёт вопрос wo?, у `mit` — сам предлог, всегда. Текст стоял один на оба, и на рамке
+ * «Ich fahre mit dem neuen Auto» разбор говорил про предлог in, которого в задании нет.
+ */
+function dativWhy(prep: string): string {
+  if (!prep) return 'Dativ здесь требует глагол, а не предлог'
+  return WECHSEL.includes(prep)
+    ? `предлог ${prep} с вопросом wo? → Dativ`
+    : `предлог ${prep} всегда требует Dativ`
+}
+
+/**
+ * ⚠ Склонение выводится из артикля, который стоит в рамке, а не из имени правила:
+ * на `adj-dat-en-neu` текст звал определённый `dem` неопределённым и объявлял
+ * слабое склонение смешанным.
+ */
+function declWhy(decl: Decl | undefined, article: string): string {
+  if (decl === 'mixed') return `${article} — неопределённый артикль, значит смешанное склонение`
+  if (decl === 'strong') return 'артикля перед прилагательным нет, значит сильное склонение'
+  return `${article} — определённый артикль, значит слабое склонение`
+}
+
+/**
+ * ⚠ «Нет -t» верно только в единственном числе: во множественном модальный спрягается
+ * как все, и подсказка «können, не „könnent“» выдумывала несуществующее слово.
+ */
+function modalHint(person: Person, answer: string): string {
+  if (person === '1sg' || person === '3sg') return `${answer}, не «${answer}t»`
+  if (person === '2sg') return `${answer} — окончание -st, как у обычных глаголов`
+  return `во множественном модальный обычный: ${answer}`
 }
 
 /**
@@ -509,6 +546,18 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       pp_why: vb ? partizipWhy(vb) : '',
       person_ru: PERSON_RU[person],
       degree_ru: slot.paradigm === 'adj_superlative' ? 'превосходная' : 'сравнительная',
+      // пример к шагу про умлаут обязан стоять в ТОЙ ЖЕ степени, что и задание
+      degree_example: slot.paradigm === 'adj_superlative' ? 'alt → am ältesten' : 'alt → älter',
+      dativ_why: dativWhy(slot.prep ?? ''),
+      // ⚠ Артикль к СЛОВАРНОЙ форме: в рамке множественного `nom_article` это «die»,
+      // и шаг «die Automat — мужской род» называл слово чужим артиклем
+      lemma_article: g ? defArticle('nom', g, 'sg') : nomArticle,
+      decl_why: declWhy(slot.decl, article),
+      modal_hint: modalHint(person, answer),
+      // ⚠ У женского рода и во множественном родительный окончания НЕ даёт:
+      // «das Auto der Mutter». Сравниваем форму из рамки со словарной.
+      gen_ending_why:
+        word === w.w ? 'а само слово не меняется' : 'и у слова появляется окончание',
       article,
       ru: (w.entry as Noun).ru ?? '',
     },
