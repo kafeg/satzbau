@@ -200,6 +200,11 @@ h1 + .section,
   margin: 0;
 }
 
+/* ⚠ .note.small гасит padding панели: специфичность выше, и текст лежал на рамке */
+.panel.note.small {
+  padding: var(--s4);
+}
+
 .stack .row-buttons {
   margin: 0;
 }
