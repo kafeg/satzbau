@@ -199,6 +199,28 @@ def main():
             errors.append(f'объяснение {r}: группа {e["group"]!r} вне списка {sorted(groups)}')
         if len((e.get('name') or '').split()) > 4:
             warns.append(f'объяснение {r}: имя из {len(e["name"].split())} слов — в списке не поместится')
+    # --- ⚠ Текст объяснения не называет предлог буквально, если у правила их несколько.
+    # На `merge-prep-article` шаг «in + dem = im» стоял буквально, а рамка бывает и на `zu`:
+    # «Ich gehe zum Weg» разбирался через предлог, которого в задании нет. Поля `short`,
+    # `title` и `steps` человек видит ПОД СВОИМ заданием, поэтому пример в них обязан быть
+    # из него же — подстановкой. В `ru_contrast` буквальный пример допустим: это общая
+    # мысль про язык, а не разбор этой фразы.
+    PREPS = {'in', 'an', 'auf', 'über', 'unter', 'vor', 'hinter', 'neben', 'zwischen', 'zu',
+             'mit', 'bei', 'von', 'nach', 'seit', 'aus', 'für', 'um', 'durch', 'ohne', 'gegen'}
+    preps_of = {}
+    for t in templates:
+        preps_of.setdefault(t['why'], set()).add(
+            (t['slot'].get('prep') or (t.get('options') or {}).get('prep') or ''))
+    for r, e in sorted(explain.items()):
+        if len(preps_of.get(r, set())) < 2:
+            continue
+        text = ' '.join([e.get('short', ''), e.get('title', ''), *(e.get('steps') or [])])
+        named = {w for w in re.findall(r'[a-zäöüß]+', text.lower()) if w in PREPS}
+        if named:
+            errors.append(f'объяснение {r}: называет предлог {sorted(named)} буквально, '
+                          f'а рамки бывают на {sorted(p for p in preps_of[r] if p)} — '
+                          'нужна подстановка')
+
     # --- граф предпосылок: он задаёт порядок обучения, и врать ему нельзя
     lvl_of = {}
     for t in templates:

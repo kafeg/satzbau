@@ -218,6 +218,21 @@ const WECHSEL = ['in', 'an', 'auf', 'über', 'unter', 'vor', 'hinter', 'neben', 
  * задаёт вопрос wo?, у `mit` — сам предлог, всегда. Текст стоял один на оба, и на рамке
  * «Ich fahre mit dem neuen Auto» разбор говорил про предлог in, которого в задании нет.
  */
+/**
+ * Почему в задании ЭТОТ падеж. У предлога с двумя падежами его выбирает вопрос
+ * (wohin? → Akkusativ, wo? → Dativ), у остальных — сам предлог, и вопрос тут ни при чём.
+ *
+ * ⚠ Рамка слияния бывает и на `zu`, и на `in`, а шаг объяснения стоял один: «вопрос:
+ * wohin? → падеж дательный». На «Ich gehe zum Weg» это учило применять к `zu` проверку,
+ * которая к нему не относится, — да ещё и с вопросом про движение при дательном падеже.
+ */
+function prepWhy(prep: string, caseRu: string, question: string): string {
+  if (!prep) return `падеж здесь требует глагол, а не предлог: ${caseRu}`
+  return WECHSEL.includes(prep)
+    ? `предлог ${prep} с вопросом ${question} → ${caseRu}`
+    : `предлог ${prep} всегда требует ${caseRu}`
+}
+
 function dativWhy(prep: string): string {
   if (!prep) return 'Dativ здесь требует глагол, а не предлог'
   return WECHSEL.includes(prep)
@@ -688,6 +703,11 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       // у управления падеж задаёт не шаблон, а сама связка: «warten auf» это всегда Akkusativ
       case_ru: CASE_RU[govCase ?? slot.case ?? 'nom'],
       question: slot.case === 'akk' ? 'wohin?' : 'wo?',
+      prep_why: prepWhy(
+        slot.prep ?? t.options?.prep ?? '',
+        CASE_RU[govCase ?? slot.case ?? 'nom'],
+        slot.case === 'akk' ? 'wohin?' : 'wo?',
+      ),
       gender_ru: g ? GENDER_RU[g] : '',
       nom_article: nomArticle,
       // ⚠ Бейдж рода у слова в дрилле — подсказка, но когда ответ и ЕСТЬ артикль

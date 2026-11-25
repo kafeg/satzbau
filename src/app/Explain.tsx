@@ -10,10 +10,13 @@ import {
   indefArticle,
   keinArticle,
   merged,
+  personMatches,
   possessive,
   type FormMatch,
 } from '../core/paradigms.ts'
-import type { Case, Gender, Item, Num, Template, Verb } from '../core/types.ts'
+import { imperativeForms, present } from '../core/morph.ts'
+import type { Modal } from '../core/paradigms.ts'
+import type { Case, Gender, Item, Num, Person, Template, Verb } from '../core/types.ts'
 
 const CASES: Case[] = ['nom', 'akk', 'dat', 'gen']
 const COLS: (Gender | 'pl')[] = ['m', 'f', 'n', 'pl']
@@ -73,17 +76,86 @@ function columnOf(item: Item, t: Template): Gender | 'pl' | null {
   return a === 'der' ? 'm' : a === 'die' ? 'f' : a === 'das' ? 'n' : null
 }
 
-/** «Nominativ или Akkusativ женского рода»: одинаковые роды сливаем, иначе читается как список. */
+const SHORT: Record<Gender | 'pl', string> = {
+  m: 'мужского',
+  f: 'женского',
+  n: 'среднего',
+  pl: 'множественного числа',
+}
+
+/** «мужского или среднего рода», но «женского рода или множественного числа». */
+function genderList(gs: (Gender | 'pl')[]): string {
+  if (gs.length === 1) return OF[gs[0] as Gender | 'pl']
+  // множественное — не род, и общее слово «рода» на него не натягивается
+  if (gs.includes('pl')) return gs.map((g) => OF[g]).join(' или ')
+  return `${gs.map((g) => SHORT[g]).join(' или ')} рода`
+}
+
+/**
+ * «Dativ мужского или среднего рода»: группируем по ПАДЕЖУ, он здесь главная ось.
+ * ⚠ С группировкой по роду выходило «Dativ мужского рода, Dativ среднего рода» —
+ * одно и то же сказано дважды.
+ */
 function readable(ms: FormMatch[]): string {
-  const byGender = new Map<Gender | 'pl', Case[]>()
+  const byCase = new Map<Case, (Gender | 'pl')[]>()
   for (const m of ms.slice(0, 4)) {
-    const got = byGender.get(m.gender)
-    if (got) got.push(m.case)
-    else byGender.set(m.gender, [m.case])
+    const got = byCase.get(m.case)
+    if (got) got.push(m.gender)
+    else byCase.set(m.case, [m.gender])
   }
-  return [...byGender]
-    .map(([g, cs]) => `${cs.map((c) => CASE_NAME[c]).join(' или ')} ${OF[g]}`)
-    .join(', ')
+  return [...byCase].map(([c, gs]) => `${CASE_NAME[c]} ${genderList(gs)}`).join(', ')
+}
+
+const PERSON_RU: Record<Person, string> = {
+  '1sg': 'я',
+  '2sg': 'ты',
+  '3sg': 'он, она, оно',
+  '1pl': 'мы',
+  '2pl': 'вы',
+  '3pl': 'они',
+}
+
+const PERSONS: Person[] = ['1sg', '2sg', '3sg', '1pl', '2pl', '3pl']
+
+/**
+ * Лица, в которых стоит введённая форма. Закрытые таблицы знает `personMatches`,
+ * а спряжение обычного глагола считается по слову задания.
+ *
+ * ⚠ Строка «чем был твой вариант» молчала везде, где нет склонения по родам:
+ * человек писал «müssen» вместо «muss» или инфинитив вместо третьего лица
+ * и получал минус без единого слова о том, что он написал.
+ */
+function personsOf(item: Item, t: Template, given: string): Person[] {
+  return personMatches(t.slot.paradigm, given, { modal: t.slot.modal as Modal | undefined })
+}
+
+/**
+ * Как называется та форма слова, которую человек ввёл. Только для глагольных парадигм:
+ * там пропуск — это форма целиком, и ошибка почти всегда не мусор, а соседняя форма
+ * того же глагола — инфинитив вместо третьего лица, настоящее вместо Präteritum.
+ */
+function verbFormName(item: Item, t: Template, given: string): string | null {
+  if (!VERB_SLOT.has(t.slot.paradigm)) return null
+  const v = getWords().find((w) => w.w === item.word)?.entry as Verb | undefined
+  if (!v || given === item.answer) return null
+  const head = (x: string) => x.split(' ')[0] as string
+  const ps = PERSONS.filter((x) => head(present(v, x)) === given)
+  // ⚠ Инфинитив называем инфинитивом, хотя формально он же — «мы» и «они». Человек,
+  // написавший словарную форму, сделал именно эту ошибку, и «это мы или они» её прячет.
+  const inf = given === v.w || given === head(v.w) || given === head(v.w.replace(/^sich /, ''))
+  if (inf) return ps.length ? 'инфинитив, он же форма для «мы» и «они»' : 'инфинитив'
+  if (ps.length) return `настоящее время, ${readablePersons(ps)}`
+  if (given === head(v.pp)) return 'причастие — форма для Perfekt'
+  if (given === head(v.pt)) return 'Präteritum — прошедшее время'
+  if (imperativeForms(v).some((f) => head(f) === given)) return 'повелительное наклонение'
+  return null
+}
+
+const VERB_SLOT = new Set(['verb_present', 'verb_stem', 'verb_past', 'participle', 'imperative'])
+
+/** «это ты» / «это мы или они»: лица одной строкой. */
+function readablePersons(ps: Person[]): string {
+  return ps.map((x) => PERSON_RU[x]).join(' или ')
 }
 
 /** Примечание про второй вспомогательный глагол — только там, где его и тренируют. */
@@ -112,6 +184,23 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
     !item.answer.includes(' ') &&
     matches.some((m) => m.case === (t.slot.case ?? 'nom'))
   const row = t?.slot.case ?? 'nom'
+  // лица считаем только там, где по родам ничего не нашлось: иначе две строки об одном
+  const persons = wrong && t && !matches.length && given ? personsOf(item, t, given) : []
+  const verbForm =
+    wrong && t && !matches.length && !persons.length && given
+      ? verbFormName(item, t, given)
+      : null
+  // ⚠ Предикатив — единственная парадигма, где ошибка это ЛИШНЕЕ окончание, а не чужая
+  // форма: «das Auto ist kleines». Сказать про него нечего кроме того, что его не нужно.
+  // ⚠ Обратная сторона «nicht или kein»: в задании на kein человек пишет nicht.
+  // По таблице это не разбирается — отрицания две разные вещи, и сказать надо именно это.
+  const nichtInstead = t?.slot.paradigm === 'kein_article' && given === 'nicht'
+  const extraEnding =
+    t?.slot.paradigm === 'adj_predicative' &&
+    !matches.length &&
+    !!given &&
+    given.length > item.answer.length &&
+    given.startsWith(item.answer.replace(/e$/, ''))
 
   return (
     <section className="explain">
@@ -132,13 +221,34 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
           <span className="mono">{given}</span> — падеж верный, и так тоже говорят. Но с этим
           предлогом артикль обычно склеивают: <span className="mono">{item.answer}</span>.
         </p>
+      ) : wrong && matches.length > 0 ? (
+        <p className="yours">
+          <span className="mono">{ending ? `-${given}` : given}</span> — это {readable(matches)}
+        </p>
       ) : (
         wrong &&
-        matches.length > 0 && (
+        (persons.length > 0 ? (
           <p className="yours">
-            <span className="mono">{ending ? `-${given}` : given}</span> — это {readable(matches)}
+            <span className="mono">{given}</span> — это {readablePersons(persons)}
           </p>
-        )
+        ) : nichtInstead ? (
+          <p className="yours">
+            <span className="mono">nicht</span> отрицает глагол или прилагательное,
+            а здесь отрицается существительное: нужен{' '}
+            <span className="mono">{item.answer}</span>
+          </p>
+        ) : verbForm ? (
+          <p className="yours">
+            <span className="mono">{given}</span> — это {verbForm}
+          </p>
+        ) : (
+          extraEnding && (
+            <p className="yours">
+              <span className="mono">{given}</span> — прилагательное с окончанием, а после
+              ist оно стоит без него: {item.answer}
+            </p>
+          )
+        ))
       )}
 
       {t && TABLE.has(t.slot.paradigm) && (

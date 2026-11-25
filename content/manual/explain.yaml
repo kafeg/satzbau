@@ -92,13 +92,16 @@ merge-prep-article:
   group: артикль
   after: [prep-dativ, prep-akkusativ]
   title: Предлог и артикль сливаются, и падеж пропадает из вида
-  short: "in + dem = im"
+  # ⚠ Пример берётся из задания: рамки есть и на in, и на zu, а текст «in + dem = im»
+  # стоял буквально — на «Ich gehe zum Weg» он говорил про предлог, которого там нет
+  short: "{prep} + {plain_article} = {answer}"
   ru_contrast: >-
     В русском предлог и слово никогда не сливаются: «в доме» — два слова.
     В немецком in + dem даёт im, in + das даёт ins. Форма короче, но падеж в ней
     больше не виден — его надо держать в голове.
   steps:
-    - "вопрос: {question} → падеж {case_ru}"
+    # у zu падеж задаёт сам предлог, а не вопрос: {prep_why} разводит эти два случая
+    - "{prep_why}"
     - "{w} — {gender_ru} род, значит артикль {plain_article}"
     - "{prep} + {plain_article} сливаются в {answer}"
   more: >-

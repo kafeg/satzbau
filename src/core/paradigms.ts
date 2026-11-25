@@ -297,6 +297,36 @@ export function inventory(
   }
 }
 
+/**
+ * Лица, в которых стоит такая форма: «musst» — это ты, «werden» — мы или они.
+ *
+ * ⚠ Нужно разбору ошибки: строка «чем был твой вариант» молчала на всём, что
+ * не склоняется по родам и падежам, — а человек вводит именно формы, а не мусор.
+ * Молчание в ответ на «müssen» вместо «muss» не говорит ему ничего.
+ */
+export function personMatches(
+  paradigm: string,
+  form: string,
+  p: { modal?: Modal } = {},
+): Person[] {
+  switch (paradigm) {
+    case 'werden_present':
+      return PERSONS.filter((x) => WERDEN[x] === form)
+    case 'wuerde':
+      return PERSONS.filter((x) => WUERDE[x] === form)
+    case 'reflexive_pronoun':
+      return PERSONS.filter((x) => REFLEXIVE[x] === form)
+    case 'aux_present':
+      return PERSONS.filter((x) => AUX_PRESENT[x].haben === form || AUX_PRESENT[x].sein === form)
+    case 'modal_present': {
+      const row = p.modal ? MODALS[p.modal] : null
+      return row ? PERSONS.filter((x, i) => row[i] === form) : []
+    }
+    default:
+      return []
+  }
+}
+
 /** Обратный разбор окончания прилагательного: где такое окончание возможно. */
 export function adjEndingMatches(ending: string): { decl: Decl; case: Case; gender: Gender | 'pl' }[] {
   const out: { decl: Decl; case: Case; gender: Gender | 'pl' }[] = []
@@ -354,6 +384,17 @@ export function formMatches(
             out.push({ case: c, gender: g })
       return out
     }
+    // ⚠ «nicht или kein» — один инвентарь на два шаблона, и ошибка здесь это форма kein.
+    // Разбирается она по таблице kein, хотя парадигма слота называется иначе.
+    case 'nicht':
+    case 'negation':
+      return form === 'nicht' ? [] : formMatches('kein_article', form)
+    // местоимение стоит в той же сетке «падеж × род», что и артикль: «ihm» это Dativ
+    // мужского или среднего. Разбор молчал на нём, хотя таблица рядом
+    case 'pronoun':
+      for (const c of ['akk', 'dat'] as const)
+        for (const g of genders) if (PRONOUN[c][g] === form) out.push({ case: c, gender: g })
+      return out
     case 'adj_ending':
       return adjEndingMatches(form).filter((m) => !o.decl || m.decl === o.decl)
     default:
