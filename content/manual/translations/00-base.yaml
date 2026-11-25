@@ -1,0 +1,1130 @@
+# 5. Переводы. Здесь две разные вещи, и вторая оказалась больше первой.
+#
+#    а) перевода нет вообще — причастие в роли прилагательного словари держат при глаголе,
+#       составные существительные часто не описаны. На срезе таких 5 из 198;
+#    б) ⚠ перевод есть, но словарь даёт ПЕРВОЕ значение, а теме нужно другое:
+#       Boden — «земля», а в квартире это «пол»; Ampel — «висячая лампа», а на улице
+#       «светофор»; streichen — «бродить», а в ремонте «красить». Таких на срезе 33 из 198,
+#       то есть каждое шестое слово. Это не брак источника: значение выбирает тема, а темы
+#       словарь не знает. Автоматом не лечится — только руками, по одной строке на слово.
+translations:
+  # нет в источниках
+  besetzt:        занято, несвободно
+  möbliert:       с мебелью, меблированный
+  renoviert:      после ремонта, отремонтированный
+  Betriebskosten: эксплуатационные расходы
+  Nachzahlung:    доплата, доначисление
+  # словарь даёт не то значение, которое нужно теме
+  Boden:          пол
+  Stock:          этаж
+  Strom:          электричество, ток
+  Miete:          аренда, квартплата
+  Flur:           коридор, прихожая
+  Schalter:       касса, окно обслуживания
+  Herd:           плита
+  Regal:          полка, стеллаж
+  Ampel:          светофор
+  Kreuzung:       перекрёсток
+  Gleis:          путь, платформа
+  Anmeldung:      регистрация по месту жительства
+  Mülltonne:      мусорный бак
+  Umleitung:      объезд
+  Ermäßigung:     скидка
+  Erstattung:     возврат денег
+  Kaution:        залог за квартиру
+  Fahrt:          поездка
+  Hausmeister:    комендант дома
+  Vermieter:      арендодатель, хозяин квартиры
+  Nebenkosten:    коммунальные расходы
+  Verbindung:     рейс, стыковка
+  Durchsage:      объявление по громкой связи
+  Anschluss:      стыковка, подключение
+  fahren:         ехать, ездить
+  laufen:         идти пешком, бежать
+  erreichen:      успеть на, достигать
+  streichen:      красить
+  buchen:         бронировать
+  abbiegen:       поворачивать
+  anmelden:       регистрировать, прописывать
+  renovieren:     делать ремонт
+  entfallen:      отменяться
+  entwerten:      компостировать билет
+  sanieren:       капитально ремонтировать
+  überweisen:     переводить деньги
+  parken:         парковаться
+  tanken:         заправляться
+  kündigen:       расторгать договор
+  setzen:         ставить, sich setzen — садиться
+  ruhig:          тихий, спокойный
+  günstig:        выгодный, недорогой
+  billig:         дешёвый, недорогой
+  barrierefrei:   без ступеней, доступный
+  hellhörig:      с тонкими стенами, слышно соседей
+  # седьмая тема: то, что ru.wiktionary даёт не тем значением или слишком длинно
+  geschlossen:    закрытый
+  offen:          открытый
+  eng:            узкий, тесный
+  breit:          широкий
+  bequem:         удобный
+  fremd:          чужой, незнакомый
+  bekannt:        известный, знакомый
+  öffentlich:     общественный, государственный
+  sicher:         безопасный; уверенный
+  vollständig:    полный, заполненный целиком
+  Bürgeramt:      городской отдел для жителей
+  Amt:            ведомство, учреждение
+  Bank:           банк
+  Post:           почта
+  Geschäft:       магазин; дело, сделка
+  Kirche:         церковь
+  Zentrum:        центр
+  Viertel:        квартал, район; четверть
+  Stadtteil:      район города
+  Schwimmbad:     бассейн
+  Bürger:         горожанин, житель
+  Schlange:       очередь; змея
+  Eintritt:       вход; плата за вход
+  Gebühr:         пошлина, сбор
+  Formular:       бланк, анкета
+  Antrag:         заявление, ходатайство
+  Bescheid:       официальное решение, уведомление
+  Nachweis:       справка, подтверждение
+  Beglaubigung:   заверение документа
+  Vollmacht:      доверенность
+  Stempel:        печать, штамп
+  Paket:          посылка
+  Postleitzahl:   почтовый индекс
+  Finanzamt:      налоговая
+  Arbeitsamt:     служба занятости
+  Standesamt:     загс
+  Jugendamt:      ведомство по делам детей и молодёжи
+  Sachbearbeiter: сотрудник, который ведёт дело
+  Sachbearbeiterin: сотрудница, которая ведёт дело
+  Fahrerin:       водительница
+  Staatsangehörigkeit: гражданство
+  anrufen:        звонить по телефону
+  brauchen:       нуждаться, быть нужным
+  besorgen:       доставать, покупать
+  holen:          приносить, забирать
+  kopieren:       копировать
+  verlängern:     продлевать
+  vorlegen:       предъявлять, подавать
+  ausdrucken:     распечатывать
+  ausfüllen:      заполнять бланк
+  ummelden:       перерегистрировать по новому адресу
+  abheben:        снимать деньги
+  eröffnen:       открывать счёт, открывать заведение
+
+  # Еда
+  Essen:          еда
+  Butter:         сливочное масло
+  Gemüse:         овощи
+  Eis:            мороженое
+  Glas:           стакан
+  Wasser:         вода
+  Rechnung:       счёт
+  Hunger:         голод
+  Durst:          жажда
+  Brötchen:       булочка
+  Salz:           соль
+  Suppe:          суп
+  Flasche:        бутылка
+  Tüte:           пакет
+  Metzgerei:      мясная лавка
+  Scheibe:        ломтик
+  Topf:           кастрюля
+  Angebot:        акция, выгодное предложение
+  Pfand:          залог за тару
+  Lebensmittel:   продукты
+  Beilage:        гарнир
+  Bedienung:      официант, обслуживание
+  Spezialität:    фирменное блюдо
+  Haltbarkeit:    срок годности
+  Reservierung:   бронь
+  bestellen:      заказывать
+  schmecken:      быть вкусным, нравиться на вкус
+  einkaufen:      делать покупки
+  verzichten:     отказываться
+  frisch:         свежий
+  hausgemacht:    домашний, своего приготовления
+  regional:       местный, из этого региона
+  laktosefrei:    без лактозы
+  # Работа
+  Stelle:         рабочее место, вакансия
+  Büro:           офис
+  Kollege:        коллега
+  Besprechung:    совещание
+  Termin:         запись, назначенная встреча
+  Drucker:        принтер
+  Tastatur:       клавиатура
+  Bewerbung:      заявка на работу
+  Lebenslauf:     резюме
+  Zeugnis:        справка с оценками, свидетельство
+  Kündigung:      расторжение договора, увольнение
+  Gehalt:         зарплата
+  Versicherung:   страховка
+  Praktikum:      стажировка
+  Ausbildung:     профобучение
+  Abmahnung:      письменное предупреждение
+  Betriebsrat:    совет трудового коллектива
+  Arbeitnehmer:   наёмный работник
+  Elternzeit:     родительский отпуск
+  Krankmeldung:   больничный лист
+  verdienen:      зарабатывать
+  telefonieren:   звонить по телефону
+  drucken:        печатать
+  fragen:         спрашивать
+  lernen:         учиться
+  bewerben:       подавать заявку на работу
+  einstellen:     принимать на работу
+  vereinbaren:    договариваться, назначать
+  verschieben:    переносить на другое время
+  erledigen:      сделать, разобраться
+  besprechen:     обсуждать
+  entlassen:      увольнять
+  beantragen:     подавать заявление
+  einreichen:     подавать документы
+  vertreten:      замещать, представлять
+  nett:           милый, приятный
+  schwer:         тяжёлый, трудный
+  leicht:         лёгкий, нетрудный
+  zuständig:      ответственный за это
+  befristet:      на ограниченный срок
+  # Врач
+  Praxis:         врачебный кабинет
+  Wartezimmer:    зал ожидания у врача
+  Zahnarzt:       стоматолог
+  Arm:            рука
+  Hals:           шея, горло
+  Rücken:         спина
+  Bauch:          живот
+  Fuß:            ступня, нога
+  Ohr:            ухо
+  Finger:         палец
+  Fieber:         температура, жар
+  Überweisung:    направление к специалисту
+  Pflaster:       пластырь
+  Untersuchung:   осмотр, обследование
+  Behandlung:     лечение
+  Krankenwagen:   скорая помощь
+  Hausarzt:       семейный врач
+  Befund:         заключение обследования
+  Attest:         справка от врача
+  Dosierung:      дозировка
+  Vorsorge:       профилактический осмотр
+  Krankschreibung: больничный
+  Beschwerde:     жалоба, симптом
+  untersuchen:    осматривать
+  behandeln:      лечить
+  verschreiben:   выписывать лекарство
+  einnehmen:      принимать лекарство
+  impfen:         делать прививку
+  verletzen:      травмировать, ранить
+  einweisen:      направлять в больницу
+  vertragen:      переносить без вреда
+  leiden:         страдать
+  verletzt:       травмированный
+  rezeptfrei:     без рецепта
+  nüchtern:       натощак
+  schwindelig:    кружится голова
+  # Дети и Kita
+  Spielplatz:     детская площадка
+  Kita:           детский сад
+  Schule:         школа
+  Bild:           картинка, рисунок
+  Ball:           мяч
+  Brotdose:       коробочка для еды в садик
+  Betreuung:      присмотр за ребёнком
+  Kitaplatz:      место в детском саду
+  Eingewöhnung:   привыкание к садику
+  Elternabend:    родительское собрание
+  Impfpass:       прививочный сертификат
+  Ausflug:        вылазка, экскурсия
+  Geschenk:       подарок
+  Streit:         ссора
+  Förderung:      поддержка, развивающие занятия
+  Elterngeld:     пособие по уходу за ребёнком
+  Kindergeld:     детское пособие
+  Einschulung:    поступление в первый класс
+  Trotzphase:     кризис трёх лет
+  Vorschule:      подготовительная группа
+  Grenze:         граница, рамки
+  malen:          рисовать
+  basteln:        делать поделки
+  füttern:        кормить
+  wickeln:        менять подгузник
+  wachsen:        расти
+  betreuen:       присматривать за ребёнком
+  aufpassen:      присматривать, следить
+  teilen:         делиться, делить
+  fördern:        поддерживать, развивать
+  durchsetzen:    добиваться своего
+  brav:           послушный
+  schüchtern:     стеснительный
+  zweisprachig:   двуязычный
+  altersgerecht:  по возрасту
+  # погода и время: словарь даёт либо другое значение (stürmen — «штурмовать»),
+  # либо список синонимов там, где теме нужно одно слово
+  Minute:         минута
+  Sonne:          солнце
+  Abend:          вечер
+  Nachmittag:     вторая половина дня
+  Wochenende:     выходные
+  Uhrzeit:        время на часах
+  Zeitpunkt:      момент времени
+  Zeitraum:       промежуток времени
+  Zeitumstellung: перевод часов
+  Frist:          срок
+  Feiertag:       праздничный день
+  Verzögerung:    задержка
+  Niederschlag:   осадки
+  Glatteis:       гололёд
+  Regenschirm:    зонт
+  regnen:         о дожде — идти
+  schneien:       о снеге — идти
+  hageln:         о граде — идти
+  stürmen:        о буре — бушевать
+  verspäten:      опаздывать
+  einplanen:      планировать заранее
+  aufwachen:      просыпаться
+  nass:           мокрый
+  feucht:         влажный
+  kühl:           прохладный
+  mild:           мягкий, тёплый
+  bewölkt:        пасмурный
+  frostig:        морозный
+  langfristig:    долгосрочный
+  monatlich:      ежемесячный
+  # люди и знакомство
+  Mensch:         человек
+  Person:         лицо, человек
+  Körper:         тело
+  Haar:           волосы
+  Stimme:         голос
+  Gast:           гость
+  Cousin:         двоюродный брат
+  Ehepaar:        супружеская пара
+  Schwiegermutter: тёща, свекровь
+  Schwiegervater: тесть, свёкор
+  Zwilling:       близнец
+  Vorname:        личное имя
+  Beziehung:      отношения
+  Eindruck:       впечатление
+  Trennung:       расставание
+  Gewohnheit:     привычка
+  Jugend:         молодость
+  vorstellen:     представлять, знакомить
+  kennenlernen:   знакомиться
+  verabschieden:  прощаться
+  heiraten:       жениться, выходить замуж
+  ledig:          холостой, незамужняя
+  treu:           верный, преданный
+  # одежда и покупки
+  Kleidung:       одежда
+  Hemd:           рубашка
+  Anzug:          костюм
+  Pullover:       свитер
+  Schuh:          ботинок, туфля
+  Socke:          носок
+  Mütze:          шапка
+  Gürtel:         ремень, пояс
+  Kette:          цепочка
+  Kragen:         воротник
+  Tasche:         сумка, карман
+  Wäsche:         бельё, стирка
+  Baumwolle:      хлопок
+  Größe:          размер
+  Marke:          марка, бренд
+  Rabatt:         скидка
+  Ring:           кольцо
+  Turnschuh:      кроссовок
+  Geldbeutel:     кошелёк
+  Verkäufer:      продавец
+  anziehen:       надевать
+  ausziehen:      снимать одежду
+  waschen:        стирать, мыть
+  bügeln:         гладить
+  reinigen:       чистить
+  umtauschen:     обменять покупку
+  aussuchen:      выбирать
+  blau:           синий, голубой
+  rot:            красный
+  braun:          коричневый
+  grau:           серый
+  schick:         элегантный
+  locker:         свободный, не тесный
+  praktisch:      практичный
+  # свободное время
+  Spaß:           удовольствие, веселье
+  Film:           фильм
+  Party:          вечеринка
+  Kamera:         фотоаппарат
+  Zoo:            зоопарк
+  Schach:         шахматы
+  Verein:         клуб, общество
+  Mitglied:       член клуба
+  Bühne:          сцена
+  Veranstaltung:  мероприятие
+  Unterhaltung:   развлечение, беседа
+  Abwechslung:    разнообразие
+  Sammlung:       коллекция
+  Würfel:         игральный кубик
+  Wanderung:      поход
+  Hörbuch:        аудиокнига
+  Theaterstück:   пьеса
+  Flohmarkt:      блошиный рынок
+  Krimi:          детектив
+  Leidenschaft:   страсть
+  Ehrenamt:       общественная работа
+  Künstler:       художник, артист
+  Tanzkurs:       курсы танцев
+  hören:          слушать, слышать
+  treffen:        встречать
+  tanzen:         танцевать
+  wandern:        ходить в поход
+  einladen:       приглашать
+  Einladung:      приглашение
+  entspannen:     расслабляться
+  genießen:       наслаждаться
+  ausgehen:       выходить в свет
+  zuschauen:      смотреть со стороны
+  üben:           тренироваться, упражняться
+  beliebt:        популярный
+  gemeinsam:      совместный
+  unterhaltsam:   занимательный
+  aufregend:      волнующий, захватывающий
+  # учёба и язык
+  Seite:          страница
+  Wort:           слово
+  Punkt:          балл, точка
+  Test:           тест
+  Kurs:           курс занятий
+  Unterricht:     урок, занятия
+  Prüfung:        экзамен
+  Abschluss:      окончание учёбы, диплом
+  Stift:          ручка, карандаш
+  Studium:        учёба в вузе
+  Fortschritt:    прогресс, успехи
+  Kenntnis:       знание
+  Anfänger:       начинающий
+  Bildung:        образование
+  Stipendium:     стипендия
+  Fach:           учебный предмет
+  Note:           оценка
+  Notiz:          заметка
+  Nachhilfe:      репетиторство
+  Aussprache:     произношение
+  Dozent:         преподаватель вуза
+  Wortschatz:     словарный запас
+  Diktat:         диктант
+  Zertifikat:     сертификат
+  Hörsaal:        лекционная аудитория
+  Vokabel:        слово из словаря
+  Arbeitsblatt:   рабочий лист
+  Sprachkurs:     языковые курсы
+  Schüler:        ученик
+  Regel:          правило
+  merken:         запоминать
+  bestehen:       сдать экзамен
+  studieren:      учиться в вузе
+  übersetzen:     переводить
+  korrigieren:    исправлять
+  buchstabieren:  произносить по буквам
+  abschreiben:    списывать
+  falsch:         неправильный
+  schwierig:      трудный
+  deutlich:       чёткий
+  fließend:       беглый, свободный
+  mühsam:         трудоёмкий
+  # путешествие, спорт, деньги, техника
+  entspannt:      расслабленный
+  Pauschalreise:  путёвка «всё включено»
+  Halbpension:    полупансион
+  Reisegruppe:    туристическая группа
+  Fitnessstudio:  фитнес-клуб
+  Trikot:         спортивная футболка
+  Foul:           нарушение правил
+  trainiert:      тренированный
+  fit:            в хорошей форме
+  Dauerauftrag:   постоянное поручение банку
+  Schulden:       долги
+  Zins:           процент по вкладу
+  Berater:        консультант
+  Haushaltsbuch:  книга расходов
+  online:         в сети, онлайн
+  Update:         обновление
+  # путешествие
+  Welt:           мир
+  Land:           страна
+  Schiff:         корабль
+  Dorf:           деревня
+  Schloss:        замок
+  Strand:         пляж
+  Erinnerung:     воспоминание
+  Hütte:          хижина, горный приют
+  Küste:          побережье
+  Welle:          волна
+  Zoll:           таможня
+  Unterkunft:     жильё, ночлег
+  Landschaft:     пейзаж
+  Abflug:         вылет
+  Rezeption:      стойка регистрации
+  Heimweh:        тоска по дому
+  Wohnmobil:      дом на колёсах
+  Badeanzug:      купальник
+  Verpflegung:    питание
+  Rückflug:       обратный рейс
+  Reisebüro:      турагентство
+  Einzelzimmer:   одноместный номер
+  Ferienwohnung:  квартира на время отпуска
+  Wanderweg:      туристическая тропа
+  Rundreise:      круговая поездка
+  packen:         упаковывать
+  einpacken:      упаковывать, складывать
+  auspacken:      распаковывать
+  erkunden:       исследовать, разведывать
+  weltweit:       всемирный
+  abgelegen:      отдалённый
+  erholsam:       располагающий к отдыху
+  einheimisch:    местный
+  # спорт
+  Training:       тренировка
+  Tor:            ворота, гол
+  Fan:            болельщик
+  Leistung:       результат, достижение
+  Pfeife:         свисток
+  Niederlage:     поражение
+  Wettkampf:      соревнование
+  Schiedsrichter: судья, арбитр
+  Spielfeld:      игровое поле
+  Pokal:          кубок
+  Matte:          спортивный мат
+  Ausdauer:       выносливость
+  Halbzeit:       тайм
+  Kondition:      физическая форма
+  Schlittschuh:   конёк
+  Handball:       гандбол
+  Hantel:         гантель
+  Mitspieler:     партнёр по команде
+  Trainerin:      тренер — женщина
+  Spielerin:      игрок — женщина
+  Sportlerin:     спортсменка
+  verlieren:      проигрывать, терять
+  aufgeben:       сдаваться
+  trainieren:     тренироваться
+  segeln:         ходить под парусом
+  anfeuern:       болеть, подбадривать
+  dehnen:         растягивать
+  schießen:       бить по воротам, стрелять
+  klettern:       лазать, карабкаться
+  # деньги и банк
+  arm:            бедный
+  knapp:          скудный, в обрез
+  Vermögen:       состояние, имущество
+  Rente:          пенсия
+  Anlage:         вклад, инвестиция
+  Schein:         купюра
+  Ausgabe:        расход
+  Kredit:         кредит
+  Haushalt:       домашнее хозяйство, бюджет семьи
+  Gutschein:      подарочный сертификат
+  Einnahme:       доход
+  Girokonto:      расчётный счёт
+  Kontoauszug:    выписка со счёта
+  Lastschrift:    списание со счёта
+  Rücklage:       накопления
+  Altersvorsorge: пенсионные накопления
+  Mahnung:        напоминание об оплате
+  Filiale:        отделение банка
+  kostbar:        драгоценный
+  wechseln:       менять, разменивать
+  anlegen:        вкладывать деньги
+  ausgeben:       тратить
+  tilgen:         погашать долг
+  einzahlen:      вносить на счёт
+  verschulden:    влезать в долги
+  abrechnen:      рассчитываться
+  kostenpflichtig: платный
+  bezahlbar:      доступный по цене
+  # телефон и интернет
+  Nachricht:      сообщение
+  Anruf:          телефонный звонок
+  Einstellung:    настройка
+  Werbung:        реклама
+  Netzwerk:       сеть
+  Speicher:       память устройства
+  Ordner:         папка
+  Anwendung:      приложение
+  Sicherung:      резервная копия
+  Fehlermeldung:  сообщение об ошибке
+  Entwickler:     разработчик
+  Datenschutz:    защита данных
+  Benutzer:       пользователь
+  Suchmaschine:   поисковик
+  Virus:          вирус
+  löschen:        удалять
+  sichern:        сохранять, делать копию
+  bedienen:       пользоваться, обслуживать
+  einschalten:    включать
+  klicken:        щёлкать мышью
+  surfen:         сидеть в интернете
+  aufladen:       заряжать
+  eingeben:       вводить
+  speichern:      сохранять
+  abstürzen:      зависать, падать
+  abmelden:       выходить из аккаунта
+  chatten:        переписываться в чате
+  aktuell:        свежий, актуальный
+  tragbar:        портативный
+  # чувства, природа, праздники, медиа
+  aufgeregt:      взволнованный
+  erleichtert:    с облегчением
+  gereizt:        раздражённый
+  Ressource:      ресурс
+  bedroht:        под угрозой исчезновения
+  Muttertag:      День матери
+  Grußkarte:      поздравительная открытка
+  Konfetti:       конфетти
+  Gästeliste:     список гостей
+  Gastgeberin:    хозяйка дома
+  Meldung:        новость, сообщение
+  Trailer:        трейлер
+  Einschaltquote: рейтинг передачи
+  Werbepause:     рекламная пауза
+  # чувства
+  Pech:           неудача
+  Sorge:          забота, тревога
+  Hoffnung:       надежда
+  Mut:            смелость
+  Geduld:         терпение
+  Interesse:      интерес
+  Scham:          стыд
+  Sehnsucht:      тоска, страстное желание
+  Abneigung:      неприязнь
+  Zuneigung:      симпатия
+  Zufriedenheit:  удовлетворённость
+  Freude:         радость
+  vermissen:      скучать по кому-то
+  beneiden:       завидовать
+  wundern:        удивлять
+  wütend:         злой, разъярённый
+  überrascht:     удивлённый
+  gelassen:       невозмутимый
+  erschöpft:      вымотанный
+  # природа
+  Erde:           земля, почва
+  Mond:           луна
+  Art:            биологический вид
+  Müll:           мусор
+  Kuh:            корова
+  Umwelt:         окружающая среда
+  Abfall:         отходы
+  Ast:            ветка
+  Quelle:         источник, родник
+  Fell:           шерсть, мех
+  Lebensraum:     среда обитания
+  Bauernhof:      ферма
+  gießen:         поливать
+  trennen:        разделять, сортировать
+  recyceln:       перерабатывать
+  verschmutzen:   загрязнять
+  nachhaltig:     экологичный, бережный
+  umweltfreundlich: экологичный
+  # праздники
+  Fest:           праздник
+  Weihnachten:    Рождество
+  Ostern:         Пасха
+  Pfingsten:      Троица
+  Silvester:      новогодняя ночь
+  Nikolaus:       День святого Николая
+  Plätzchen:      печенье
+  Tracht:         национальный костюм
+  Luftballon:     воздушный шарик
+  Festtag:        праздничный день
+  Festessen:      праздничный ужин
+  Geschenkpapier: подарочная упаковка
+  Brauchtum:      обычаи, традиции
+  Taufe:          крестины
+  Advent:         предрождественское время
+  begehen:        отмечать праздник
+  anstoßen:       чокаться
+  gedenken:       чтить память
+  verkleiden:     наряжаться в костюм
+  schenken:       дарить
+  ausgelassen:    весёлый, разгульный
+  weltlich:       светский
+  # кино, книги, новости
+  Rolle:          роль
+  Untertitel:     субтитры
+  Presse:         пресса
+  Sendung:        передача
+  Titel:          название, заголовок
+  Staffel:        сезон сериала
+  Hauptrolle:     главная роль
+  Zensur:         цензура
+  Rundfunk:       радиовещание
+  Folge:          серия, выпуск
+  Dokumentation:  документальный фильм
+  Veröffentlichung: публикация
+  Bericht:        репортаж, отчёт
+  Geschichte:     история, рассказ
+  Falschmeldung:  фейковая новость
+  drehen:         снимать фильм
+  senden:         транслировать
+  übertragen:     транслировать
+  streamen:       смотреть онлайн
+  recherchieren:  искать материал
+  glaubwürdig:    достоверный
+  # переезд и статус
+  Integrationskurs: интеграционный курс
+  Sprachtest:     языковой тест
+  Behördengang:   поход в ведомство
+  Zweitsprache:   второй язык
+  Aufenthaltsdauer: срок пребывания
+  Doppelstaatler: человек с двойным гражданством
+  Behördensprache: канцелярский язык ведомств
+  integriert:     освоившийся в стране
+  anerkannt:      признанный
+  # жалоба и спор
+  Schlichtung:    примирительная процедура
+  Anwaltskosten:  расходы на адвоката
+  # страны и языки
+  Grenzkontrolle: пограничный контроль
+  Südpol:         Южный полюс
+  # числа, меры, вес
+  Handvoll:       горсть
+  Stückpreis:     цена за штуку
+  Mindestalter:   минимальный возраст
+  Zehntel:        десятая часть
+  Tiefstwert:     наименьшее значение
+  Spanne:         разброс, диапазон
+  Richtwert:      ориентировочное значение
+  # ⚠ словарь дал не то значение, которое нужно теме
+  # переезд и статус
+  Übersetzung:    перевод текста
+  Anpassung:      приспособление, адаптация
+  Verlängerung:   продление
+  Zusage:         согласие, положительный ответ
+  Bearbeitung:    рассмотрение заявления
+  Rückmeldung:    ответ ведомства
+  Duldung:        отсрочка выдворения
+  Niederlassung:  обустройство на постоянное жительство
+  Eingliederung:  включение в общество
+  Zuwanderer:     приезжий, иммигрант
+  Zuwanderung:    иммиграция
+  integrieren:    интегрировать, включать
+  anerkennen:     признавать документ
+  abschieben:     выдворять из страны
+  einbürgern:     принимать в гражданство
+  dolmetschen:    переводить устно
+  stammen:        быть родом откуда-то
+  Heimat:         родина
+  Asyl:           убежище
+  Dolmetscher:    устный переводчик
+  Dolmetscherin:  устная переводчица
+  Bescheinigung:  справка, свидетельство
+  Beratungsstelle: консультационный пункт
+  auswandern:     эмигрировать
+  Auswanderung:   эмиграция
+  einwandern:     иммигрировать
+  ausreisen:      выезжать из страны
+  mehrsprachig:   многоязычный
+  fremdsprachig:  иноязычный
+  vorläufig:      временный, предварительный
+  # жалоба и спор
+  Schuld:         вина
+  Klage:          иск, жалоба в суд
+  Beweisstück:    вещественное доказательство
+  nachgeben:      уступать
+  haften:         нести ответственность
+  Ärgernis:       досада, неприятность
+  schlichten:     урегулировать спор
+  einräumen:      признавать правоту
+  einigen:        договариваться
+  Nachlass:       скидка
+  Zuständigkeit:  компетенция, кто отвечает
+  Auseinandersetzung: спор, стычка
+  Gutschrift:     возврат суммы на счёт
+  Kulanz:         уступка по доброй воле
+  bemängeln:      предъявлять претензию
+  beanstanden:    заявлять о недостатке
+  Zugeständnis:   уступка
+  Vergleich:      мировое соглашение
+  Beleg:          чек, подтверждающий документ
+  beschweren:     жаловаться
+  bedauern:       сожалеть
+  unberechtigt:   необоснованный
+  mangelhaft:     с дефектом, неудовлетворительный
+  sachlich:       по существу, без эмоций
+  Rückerstattung: возврат денег
+  Unmut:          недовольство
+  Umtausch:       обмен товара
+  Garantiefall:   гарантийный случай
+  Schadensersatz: возмещение ущерба
+  Widerspruch:    возражение, протест
+  # страны и языки
+  Balkan:         Балканы
+  Ostsee:         Балтийское море
+  Westen:         запад
+  Bevölkerung:    население
+  Gegend:         местность, округа
+  Grenzübergang:  пограничный переход
+  Landsmann:      соотечественник, земляк
+  Heimatland:     родная страна
+  Festland:       материк, суша
+  Landstrich:     край, полоса земли
+  Binnenland:     страна без выхода к морю
+  # числа, меры, вес
+  genau:          точный
+  hoch:           высокий
+  Menge:          количество
+  schätzen:       оценивать приблизительно
+  Einheit:        единица измерения
+  Höhe:           высота
+  abnehmen:       убавляться, худеть
+  Durchschnitt:   среднее значение
+  Bruch:          дробь
+  Fläche:         площадь
+  Maßstab:        масштаб
+  Abschlag:       скидка, частичный платёж
+  Mehrwert:       добавленная стоимость
+  Mittelwert:     среднее значение
+  Höchstwert:     максимальное значение
+  Umfang:         обхват, периметр
+  zunehmen:       прибавляться, расти
+  runden:         округлять
+  halbieren:      делить пополам
+  rechnen:        считать, вычислять
+  halb:           половинный
+  Faustregel:     правило на глазок
+  # уход за собой
+  Wimperntusche:  тушь для ресниц
+  Nagellack:      лак для ногтей
+  Nagelschere:    маникюрные ножницы
+  Nagelfeile:     пилочка для ногтей
+  Wattestäbchen:  ватная палочка
+  Haarbürste:     щётка для волос
+  gepflegt:       опрятный, ухоженный
+  Fußpflege:      уход за ногами, педикюр
+  Hauttyp:        тип кожи
+  Hautarzt:       дерматолог
+  Mundgeruch:     запах изо рта
+  Peeling:        пилинг, скраб
+  Gesichtscreme:  крем для лица
+  Handcreme:      крем для рук
+  Haarspray:      лак для волос
+  Pflegemittel:   средство для ухода
+  Spülung:        бальзам для волос
+  Schminke:       косметика для макияжа
+  Strähne:        прядь
+  Achsel:         подмышка
+  Rasur:          бритьё
+  Schaum:         пена
+  zupfen:         выщипывать
+  glätten:        разглаживать, выпрямлять
+  auftragen:      наносить крем
+  abschminken:    смывать макияж
+  lockig:         вьющийся
+  fettig:         жирный
+  sanft:          мягкий, нежный
+  ungepflegt:     неопрятный, запущенный
+  # машина и мастерская
+  Hupe:           гудок, клаксон
+  Rückspiegel:    зеркало заднего вида
+  Ölwechsel:      замена масла
+  Parkschein:     парковочный талон
+  Tempolimit:     ограничение скорости
+  gebraucht:      подержанный
+  Werkstattrechnung: счёт из мастерской
+  Verkehrskontrolle: проверка на дороге
+  Garagentor:     гаражные ворота
+  ölen:           смазывать маслом
+  fahrbereit:     готовый к поездке
+  verkehrssicher: пригодный для дорог
+  Wagenheber:     домкрат
+  Handbremse:     ручной тормоз
+  # ремонт и инструменты
+  Handwerkerin:   мастерица, рабочая
+  Montage:        сборка, установка
+  Unterlegscheibe: шайба
+  Bauhelm:        строительная каска
+  Bohrfutter:     патрон дрели
+  # экстренный случай
+  Notruf:         экстренный вызов
+  Alarmanlage:    сигнализация
+  Notbremse:      стоп-кран
+  Verbandskasten: аптечка
+  Notdienst:      дежурная служба
+  Ersthelfer:     тот, кто оказывает первую помощь
+  # ⚠ не то значение: уход за собой
+  glatt:          гладкий
+  riechen:        пахнуть, нюхать
+  Badewanne:      ванна
+  Parfüm:         духи
+  Pickel:         прыщ
+  Creme:          крем
+  Kamm:           расчёска
+  Rasierer:       бритва
+  bürsten:        чистить щёткой
+  schminken:      красить лицо
+  rasieren:       бриться
+  Pflege:         уход
+  föhnen:         сушить феном
+  Föhn:           фен
+  Hausschuh:      тапок
+  Friseurin:      парикмахерша
+  Deodorant:      дезодорант
+  Falte:          морщина
+  Fingernagel:    ноготь
+  wasserfest:     водостойкий
+  hygienisch:     гигиеничный
+  Sauna:          сауна
+  # ⚠ не то значение: машина и мастерская
+  Gang:           передача в коробке
+  Reifen:         шина, покрышка
+  starten:        запускать двигатель
+  Öl:             масло
+  hupen:          сигналить
+  Anhänger:       прицеп
+  Kennzeichen:    номерной знак
+  abstellen:      ставить машину
+  defekt:         неисправный
+  Nummernschild:  номерной знак
+  Zulassung:      регистрация автомобиля
+  Panne:          поломка в пути
+  Lenkrad:        руль
+  Inspektion:     плановый техосмотр
+  Kühler:         радиатор
+  Blinker:        указатель поворота
+  blinken:        мигать поворотником
+  Probefahrt:     пробная поездка
+  Autohaus:       автосалон
+  Diesel:         дизельное топливо
+  Wartung:        техобслуживание
+  abschleppen:    буксировать
+  anlassen:       заводить двигатель
+  Abschleppwagen: эвакуатор
+  Mietauto:       машина в аренду
+  Winterreifen:   зимняя шина
+  Sommerreifen:   летняя шина
+  Reifenwechsel:  замена шин
+  Kundendienst:   сервисная служба
+  Rücksitz:       заднее сиденье
+  Hebebühne:      подъёмник
+  Felge:          диск колеса
+  Verschleiß:     износ
+  Keilriemen:     ремень привода
+  Zündkerze:      свеча зажигания
+  Delle:          вмятина
+  schalten:       переключать передачу
+  prüfen:         проверять
+  lenken:         рулить
+  Mechanikerin:   женщина-механик
+  Leihwagen:      машина напрокат
+  Motorhaube:     капот
+  # ⚠ не то значение: ремонт и инструменты
+  Leitung:        проводка, трубопровод
+  verlegen:       укладывать плитку, кабель
+  Platte:         плита, панель
+  Nagel:          гвоздь
+  Kleber:         клей
+  Dichtung:       прокладка, уплотнитель
+  Hammer:         молоток
+  Leiter:         стремянка
+  Handwerker:     мастер, рабочий
+  spitz:          острый на конце
+  schleifen:      шлифовать
+  fegen:          подметать
+  Zange:          щипцы, кусачки
+  Bohrer:         сверло
+  Schleifpapier:  наждачная бумага
+  Fliese:         плитка
+  Gerüst:         строительные леса
+  Kelle:          мастерок
+  Mörtel:         строительный раствор
+  Bügelsäge:      ручная пила по металлу
+  Stichsäge:      электролобзик
+  Akkuschrauber:  аккумуляторный шуруповёрт
+  provisorisch:   временный
+  Zollstock:      складной метр
+  Wasserwaage:    строительный уровень
+  befestigen:     закреплять
+  Latte:          рейка
+  Riss:           трещина
+  Anleitung:      инструкция
+  austauschen:    заменять
+  schrauben:      прикручивать
+  Baumarkt:       строительный магазин
+  demontieren:    разбирать
+  undicht:        негерметичный, протекает
+  haltbar:        прочный
+  Werkzeugkasten: ящик с инструментами
+  wackelig:       шаткий
+  # ⚠ не то значение: экстренный случай
+  rufen:          звать, вызывать
+  brennen:        гореть
+  Rettungswagen:  машина скорой помощи
+  Sirene:         сирена
+  Blaulicht:      синий проблесковый маячок
+  Unglück:        несчастный случай
+  Anzeige:        заявление в полицию
+  anzeigen:       подавать заявление в полицию
+  bergen:         извлекать пострадавших
+  Täter:          преступник
+  Notausgang:     запасной выход
+  Fluchtweg:      путь эвакуации
+  Polizeiwache:   полицейский участок
+  Polizistin:     женщина-полицейский
+  Evakuierung:    эвакуация
+  Stromausfall:   отключение света
+  verletzlich:    уязвимый
+  Bereitschaft:   дежурство
+  Schutzhelm:     каска
+  Brandmelder:    пожарный извещатель
+  Herzinfarkt:    инфаркт
+  Schlaganfall:   инсульт
+  Warnblinker:    аварийная сигнализация
+  lebensgefährlich: опасный для жизни
+  retten:         спасать
+  bewusstlos:     без сознания
+  einbrechen:     вламываться
+  flüchten:       спасаться бегством
+  Hilferuf:       крик о помощи
+  Notfall:        экстренный случай
+  Überfall:       нападение
+  Rettung:        спасение
+  explodieren:    взрываться
+  Notarzt:        врач скорой помощи
+  alarmieren:     вызывать по тревоге
+  Wiederbelebung: реанимация
+  brennbar:       горючий
+  dringend:       срочный
+  # мнение и аргумент
+  Kritikpunkt:    спорный пункт
+  überzeugt:      убеждённый
+  Bedenken:       сомнения, возражения
+  # государство и общество
+  Politikerin:    женщина-политик
+  # почта и доставка
+  Zustellerin:    почтальонша
+  Abholung:       получение на месте
+  Packstation:    автоматический пункт выдачи
+  Paketshop:      пункт выдачи посылок
+  Paketbote:      курьер с посылками
+  Lieferdienst:   служба доставки
+  Lieferschein:   накладная
+  Retoure:        возврат товара
+  Wertsendung:    отправление с объявленной ценностью
+  Abholfach:      ячейка для получения
+  Klebestreifen:  клейкая лента
+  sperrig:        громоздкий
+  Sendungsverfolgung: отслеживание отправления
+  Postgebühr:     почтовый тариф
+  Nachporto:      доплата за недостающий тариф
+  Empfangsbestätigung: подтверждение получения
+  Postweg:        путь по почте
+  Frankiermaschine: машина для франкировки
+  Postsack:       мешок для почты
+  Briefkastenschlüssel: ключ от почтового ящика
+  Zollamt:        таможня
+  Postgeheimnis:  тайна переписки
+  # ⚠ не то значение: мнение и аргумент
+  Grund:          причина, основание
+  Vorschlag:      предложение
+  zugeben:        признавать
+  meinen:         считать, иметь в виду
+  Vorteil:        преимущество
+  Nachteil:       недостаток
+  Haltung:        позиция, отношение
+  Auffassung:     понимание, трактовка
+  Einigung:       договорённость
+  Unsicherheit:   неуверенность
+  begründen:      обосновывать
+  abwägen:        взвешивать за и против
+  nachvollziehbar: понятный, объяснимый
+  Fazit:          итог
+  Darstellung:    изложение
+  Stellungnahme:  официальное высказывание
+  Standpunkt:     точка зрения
+  Rücksicht:      внимание к другому
+  Beweislage:     что есть из доказательств
+  Bauchgefühl:    интуиция
+  Wortmeldung:    просьба дать слово
+  Ansicht:        мнение
+  Argument:       аргумент, довод
+  ablehnen:       отклонять, отказываться
+  Begründung:     обоснование
+  eindeutig:      однозначный
+  logisch:        логичный
+  Abwägung:       взвешивание доводов
+  bezweifeln:     подвергать сомнению
+  widerlegen:     опровергать
+  Schlussfolgerung: вывод
+  Debatte:        дебаты
+  einverstanden:  согласен
+  # ⚠ не то значение: государство и общество
+  Freiheit:       свобода
+  Urteil:         приговор
+  regieren:       править страной
+  verstoßen:      нарушать правило
+  einhalten:      соблюдать
+  Vorschrift:     предписание, правило
+  Bürgermeisterin: женщина-мэр
+  bestrafen:      наказывать
+  Bundesland:     федеральная земля
+  Kanzlerin:      канцлер, женщина
+  Grundgesetz:    основной закон ФРГ
+  Legislaturperiode: срок полномочий парламента
+  Amtszeit:       срок в должности
+  kandidieren:    выдвигаться кандидатом
+  Wahllokal:      избирательный участок
+  Wahlurne:       урна для голосования
+  Volksabstimmung: референдум
+  Landtag:        парламент земли
+  Justiz:         правосудие
+  Wahl:           выборы
+  Gemeinde:       община, муниципалитет
+  demonstrieren:  выходить на демонстрацию
+  Bürgermeister:  мэр города
+  Verbot:         запрет
+  Koalition:      коалиция
+  Abstimmung:     голосование
+  Erlaubnis:      разрешение
+  Strafe:         наказание
+  wählen:         голосовать, выбирать
+  # ⚠ не то значение: почта и доставка
+  Päckchen:       маленькая посылка
+  Karton:         коробка
+  Inhalt:         содержимое
+  liefern:        доставлять
+  einwerfen:      опускать в ящик
+  Einwurf:        щель почтового ящика
+  Porto:          почтовый сбор
+  zustellen:      доставлять по адресу
+  Zusteller:      почтальон-доставщик
+  Postfiliale:    отделение почты
+  Postschalter:   окно на почте
+  Postfach:       абонентский ящик
+  Auslieferung:   доставка получателю
+  Laufzeit:       срок доставки
+  Eilsendung:     срочное отправление
+  Freimachung:    оплата почтового сбора
+  verzollen:      платить пошлину
+  frankieren:     наклеивать марки
+  Frachtbrief:    транспортная накладная
+  Rücksendung:    отправка обратно
+  Schnur:         верёвка
+  zerbrechlich:   хрупкий
+  verschicken:    отправлять
+  benachrichtigen: извещать
+  Benachrichtigung: извещение
+  Zustellung:     доставка
+  Versand:        отправка
+  abschicken:     отправлять
+  Kurier:         курьер
+  Schalterhalle:  операционный зал
+
+# 6. Глаголы, у которых источник даёт и haben, и sein.
+#    `use` — вспомогательный для того значения, которое тренируем (de-DE);
+#    без `use` глагол остаётся спорным и в задания на выбор haben/sein не попадает.
+#    `note` показывается в разборе: второе значение существует, и человек его встретит.

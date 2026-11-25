@@ -463,6 +463,29 @@ def read_imperatives(path, lemmas):
     return {k: sorted(v) for k, v in out.items()}
 
 
+def load_translations(fx):
+    """Переводы руками: `content/manual/translations/*.yaml`, по файлу на тему.
+
+    ⚠ Раньше они лежали одним блоком в `fixes.yaml` и занимали там 1130 строк из 1645.
+    Пока их правит один человек, это неважно; как только тем стало тридцать одна и над
+    ними работают параллельно, один файл стал местом, где правки сталкиваются. Ключ
+    у слова один на весь проект, поэтому файлы просто сливаются, а повтор — ошибка:
+    два разных перевода одного слова значат, что кто-то из двоих не знал о другом.
+    """
+    out = dict(fx.get('translations') or {})
+    d = os.path.join(MANUAL, 'translations')
+    for name in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if not name.endswith('.yaml'):
+            continue
+        with open(os.path.join(d, name), encoding='utf-8') as fh:
+            block = (yaml.safe_load(fh) or {}).get('translations') or {}
+        for w, ru in block.items():
+            if w in out and out[w] != ru:
+                sys.exit(f'перевод {w!r} задан дважды и по-разному: {out[w]!r} и {ru!r} ({name})')
+            out[w] = ru
+    return out
+
+
 def read_degrees(path, lemmas):
     """лемма → принятые формы сравнительной и превосходной степени
 
@@ -591,7 +614,7 @@ def main():
                  no_plural=set(fx.get('no_plural') or []),
                  mass=set(fx.get('mass') or []),
                  adj_decl_extra=set(fx.get('adj_declined_extra') or []),
-                 translations=fx.get('translations') or {},
+                 translations=load_translations(fx),
                  aux_ambiguous=fx.get('aux_ambiguous') or {},
                  reflexive=set(fx.get('reflexive') or []))
 
