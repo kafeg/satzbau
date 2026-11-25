@@ -10,6 +10,25 @@ import { germanVoice, onVoices, speak } from './speech.ts'
 
 const GENDER_CLASS: Record<string, string> = { der: 'g-m', die: 'g-f', das: 'g-n' }
 
+/** Чего ждёт поле ввода. Окончание просят только шаблоны `adj_ending`, их восемь из
+ *  тридцати одного; остальным нужна форма целиком, и подпись «окончание» толкала
+ *  написать «st» вместо «fährst». */
+const FIELD: Record<string, string> = {
+  adj_ending: 'окончание',
+  noun_plural: 'множественное',
+  noun_case: 'форма слова',
+  participle: 'Partizip II',
+  verb_present: 'форма глагола',
+  verb_stem: 'форма глагола',
+  verb_past: 'Präteritum',
+  imperative: 'повелительная форма',
+  adj_comparative: 'сравнительная',
+  adj_superlative: 'превосходная',
+}
+
+const slotParadigm = (item: Item): string =>
+  getBundle().templates.find((t) => t.id === item.templateId)?.slot.paradigm ?? ''
+
 export function Drill({
   item,
   n,
@@ -29,7 +48,12 @@ export function Drill({
 }) {
   const [given, setGiven] = useState<string | null>(null)
   const [typed, setTyped] = useState('')
+  // ⚠ Два разных флага, а не один. «Не знаю» до ответа — это признание, что правило
+  // неизвестно, и оно идёт в журнал. «Почему так» после ВЕРНОГО ответа — любопытство,
+  // и в журнал оно попадать не должно: с одним флагом разбор после верного ответа
+  // ставил правилу Again и возвращал его в «пора».
   const [hint, setHint] = useState(false)
+  const [why, setWhy] = useState(false)
   const [voice, setVoice] = useState(() => !!germanVoice())
 
   useEffect(() => onVoices(() => setVoice(!!germanVoice())), [])
@@ -143,7 +167,7 @@ export function Drill({
               className={`mono${answered && !correct ? ' bad' : ''}`}
               value={answered ? (given ?? '') : typed}
               onChange={(e) => setTyped(e.target.value)}
-              placeholder="окончание"
+              placeholder={FIELD[slotParadigm(item)] ?? 'форма'}
               autoCapitalize="off"
               autoCorrect="off"
               spellCheck={false}
@@ -159,9 +183,11 @@ export function Drill({
           </button>
         )}
 
-        {(hint || (answered && !correct)) && <Explain item={item} given={given ?? undefined} />}
-        {answered && correct && !hint && (
-          <button className="ghost" onClick={() => setHint(true)}>
+        {(hint || why || (answered && !correct)) && (
+          <Explain item={item} given={given ?? undefined} />
+        )}
+        {answered && correct && !hint && !why && (
+          <button className="ghost" onClick={() => setWhy(true)}>
             почему так
           </button>
         )}

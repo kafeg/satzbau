@@ -60,7 +60,10 @@ export function App() {
   const [cards, setCards] = useState<Cards>(new Map())
   const [items, setItems] = useState<Item[]>([])
   const [at, setAt] = useState(0)
-  const [log, setLog] = useState<Answer[]>([])
+  // ⚠ `right` — верный ответ задания. В журнале его нет и не будет (там пара
+  // «шаблон + слово», из которой задание пересобирается), но итогу сессии он нужен:
+  // без него строка «den → Koffer» показывала лемму вместо ответа.
+  const [log, setLog] = useState<(Answer & { right: string })[]>([])
   const [nonce, setNonce] = useState(0)
   const [asked, setAsked] = useState(false)
   // какие слова тренировать: приходит с карточек новых слов, живёт до ухода с дрилла
@@ -196,7 +199,8 @@ export function App() {
             .filter((a) => !a.ok)
             .map((a) => (
               <li key={a.tpl + a.word}>
-                <span className="mono bad">{a.given}</span> → <span className="mono ok">{a.word}</span>
+                <span className="mono bad">{a.given}</span> →{' '}
+                <span className="mono ok">{a.right}</span>
               </li>
             ))}
         </ul>
@@ -233,7 +237,7 @@ export function App() {
           given,
           ...(hinted ? { hint: 1 as const } : {}),
         }
-        setLog((l) => [...l, a])
+        setLog((l) => [...l, { ...a, right: item.answer }])
         void remember(a)
         setAt((i) => i + 1)
       }}
