@@ -68,6 +68,8 @@ const FLAGS: Record<string, (e: Noun & Verb & Adj) => boolean> = {
   reflexive: (e) => !!e.refl,
   adjdecl: (e) => !!e.adjdecl,
   mass: (e) => !!e.mass,
+  // два принятых рода: в «der, die или das» верный выбор получал бы минус
+  g2: (e) => !!e.g2,
   aux_hs: (e) => e.aux === 'hs',
   // два предлога у одного глагола: какой из них нужен, выбирает смысл, а не глагол
   govex2: (e) => (e.govex?.length ?? 0) >= 2,

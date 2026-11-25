@@ -137,6 +137,10 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         g = fix['g']
     elif g_alt:
         rep.append((lemma, f'род спорный {g}/{"/".join(g_alt)} — решение в fixes.yaml:gender'))
+    if lemma in fixes['gender_also']:
+        n_g2 = fixes['gender_also'][lemma]
+        if n_g2 == g:
+            rep.append((lemma, f'fixes.yaml:gender_also повторяет основной род {g}'))
     pl_only = bool((e or {}).get('pl_only')) or lemma in fixes['pl_only_extra']
     if not g and not pl_only:
         if ke:
@@ -149,6 +153,9 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     n = {'w': lemma, 'lv': w['lv']}
     if not pl_only:
         n['g'] = g
+        # два принятых рода: задание «der, die или das» такое слово не берёт
+        if lemma in fixes['gender_also']:
+            n['g2'] = fixes['gender_also'][lemma]
     else:
         n['pl_only'] = 1
     # no_plural главнее источника: у Polizei и Post форма в словаре есть, но это
@@ -551,6 +558,7 @@ def main():
                  plural_in_use=set(fx.get('plural_in_use') or []),
                  plural=fx.get('plural') or {},
                  plural_also=fx.get('plural_also') or {},
+                 gender_also=fx.get('gender_also') or {},
                  participle_also=fx.get('participle_also') or {},
                  n_declension=fx.get('n_declension') or {},
                  pl_only_extra=set(fx.get('pl_only_extra') or []),

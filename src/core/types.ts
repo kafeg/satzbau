@@ -12,6 +12,8 @@ export interface Noun {
   w: string
   lv: Level
   g?: Gender
+  /** второй принятый род: «der Laptop» и «das Laptop». Задание про род такое слово не берёт */
+  g2?: Gender
   pl?: string
   /** второе принятое множественное: Parfüms и Parfüme. Руками, см. fixes.yaml */
   pla?: string[]

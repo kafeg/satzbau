@@ -20,7 +20,7 @@ LEVELS = {'A1': 1, 'A2': 2, 'B1': 3}
 NEED_KEYS = {'pos', 'theme', 'tags', 'g', 'lv_max', 'has', 'not'}
 # Флаги для `not`: имя в шаблоне → когда оно поднято у записи лексикона
 FLAGS = {name: (lambda n: lambda r: bool(r.get(n)))(name)
-         for name in ('pl_only', 'plu', 'npl', 'mass', 'nd', 'adjdecl')}
+         for name in ('pl_only', 'plu', 'npl', 'mass', 'nd', 'adjdecl', 'g2')}
 FLAGS['aux_hs'] = lambda r: r.get('aux') == 'hs'
 FLAGS['sep'] = lambda r: ' ' in (r.get('p3') or '')
 FLAGS['aux_s'] = lambda r: r.get('aux') == 's'
