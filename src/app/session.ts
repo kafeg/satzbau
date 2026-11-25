@@ -1,10 +1,10 @@
 // Очередь заданий. Выбор ЧТО тренировать — здесь: правило и тема.
 // На Э5 сюда придут повторы по FSRS, и смешанная очередь станет «повторением ошибок».
 
-import { getBundle, getWords } from '../core/bundle.ts'
+import { getBundle, getWords, type Word } from '../core/bundle.ts'
 import { ruleKey, stateOf, wordKey, type Cards, type State } from './srs.ts'
-import { fillingFor, itemsFor } from '../core/generate.ts'
-import type { Bundle, Item, Level } from '../core/types.ts'
+import { fillingFor, generate } from '../core/generate.ts'
+import type { Bundle, Item, Level, Template } from '../core/types.ts'
 
 export const SIZE = 12
 
@@ -118,6 +118,30 @@ function depthOf(rule: string, explain: Bundle['explain'], seen = new Set<string
 const CACHE = new WeakMap<object, Map<string, RuleInfo[]>>()
 
 /**
+ * Наполнение шаблона — самое дорогое, что делает приложение: `fits` плюс `second`
+ * плюс проверка формы на каждое слово, и так по всем шаблонам. Зависит оно только
+ * от бандла и от набора слов, то есть от уровня, темы и `only`, а от карточек — нет.
+ * Поэтому живёт ОТДЕЛЬНО от кэша `rules()`, который сбрасывается после каждого ответа:
+ * иначе каждый ответ заново стоил четверти секунды на ноутбуке и около секунды
+ * на телефоне.
+ *
+ * ⚠ `only` не кэшируем: такие наборы одноразовые (карточки новых слов), и ключи
+ * от них копились бы без счёта.
+ */
+const FILLS = new WeakMap<object, Map<string, Word[]>>()
+
+function fillsOf(t: Template, p: Pick, words: Word[]): Word[] {
+  if (p.only) return fillingFor(t, words)
+  const bundle = getBundle()
+  let box = FILLS.get(bundle)
+  if (!box) FILLS.set(bundle, (box = new Map()))
+  const key = `${p.level ?? ''}|${p.theme ?? ''}|${t.id}`
+  let fill = box.get(key)
+  if (!fill) box.set(key, (fill = fillingFor(t, words)))
+  return fill
+}
+
+/**
  * Правила для главной: заголовок из объяснения, уровень — самый ранний из шаблонов.
  * Порядок: уровень, затем глубина в графе предпосылок (`after` в explain.yaml),
  * и только потом порядок появления в templates.yaml.
@@ -136,7 +160,7 @@ export function rules(p: Pick = {}): RuleInfo[] {
     const got = out.get(t.rule)
     const level = got && LEVELS[got.level] < LEVELS[t.level] ? got.level : t.level
     const e = bundle.explain[t.rule]
-    const fill = fillingFor(t, words)
+    const fill = fillsOf(t, p, words)
     const set = got?.set ?? new Set<string>()
     for (const w of fill) set.add(w.w)
     out.set(t.rule, {
@@ -232,14 +256,20 @@ export function newSession(p: Pick = {}): Item[] {
   const allowed = (rule: string) =>
     !limit || rule === fresh || p.cards?.has(ruleKey(rule)) === true
 
+  // ⚠ В стопках лежат СЛОВА, а не собранные задания. Раньше здесь собирались все
+  // двадцать пять тысяч заданий, чтобы выбрать из них двенадцать: четверть секунды
+  // на ноутбуке и около секунды на телефоне — ровно по нажатию «Заниматься».
+  // Для порядка в очереди хватает пары (шаблон, слово): и тема, и состояние карточек
+  // берутся из них же. Собираем только те двенадцать, что поедут человеку.
   const buckets = shuffle(
     templatesOf(p)
       .filter((t) => allowed(t.rule))
       .map((t) => {
-        const all = itemsFor(t, words)
+        const fill = fillsOf(t, { level: p.level, only: p.only }, words)
         return {
-          mine: shuffle(p.theme ? all.filter((i) => i.theme === p.theme) : all),
-          rest: shuffle(p.theme ? all.filter((i) => i.theme !== p.theme) : []),
+          t,
+          mine: shuffle(p.theme ? fill.filter((w) => w.theme === p.theme) : fill),
+          rest: shuffle(p.theme ? fill.filter((w) => w.theme !== p.theme) : []),
         }
       }),
   )
@@ -255,11 +285,12 @@ export function newSession(p: Pick = {}): Item[] {
       .map(([r]) => r),
   )
   const state = (key: string) => (p.cards ? RANK[stateOf(p.cards, key, p.now)] : 0)
-  const rank = (i: Item) => {
-    const word = state(wordKey(i.word))
-    return (lex.has(i.rule) ? word : state(ruleKey(i.rule))) * 4 + word
-  }
   for (const b of buckets) {
+    const rule = lex.has(b.t.rule) ? null : state(ruleKey(b.t.rule))
+    const rank = (w: Word) => {
+      const word = state(wordKey(w.w))
+      return (rule ?? word) * 4 + word
+    }
     // сортируем по убыванию: берём с хвоста
     b.mine.sort((x, y) => rank(y) - rank(x))
     b.rest.sort((x, y) => rank(y) - rank(x))
@@ -274,16 +305,16 @@ export function newSession(p: Pick = {}): Item[] {
     let pos = 0
     let empty = 0
     while (out.length < size && empty < buckets.length) {
-      const b = buckets[pos++ % buckets.length] as { mine: Item[]; rest: Item[] }
-      const i = b[key].pop()
-      if (!i) {
+      const b = buckets[pos++ % buckets.length] as (typeof buckets)[number]
+      const w = b[key].pop()
+      if (!w) {
         empty++
         continue
       }
       empty = 0
-      if (seen.has(i.word)) continue
-      seen.add(i.word)
-      out.push(i)
+      if (seen.has(w.w)) continue
+      seen.add(w.w)
+      out.push(generate(b.t, w, words))
     }
   }
   return out
