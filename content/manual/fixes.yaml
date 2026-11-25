@@ -135,6 +135,7 @@ gender:
   Gastfamilie: {g: f}
   Virus:   {g: m, note: "der Virus в быту и в технике; das Virus — в биологии"}
   Trikot:  {g: n, note: "das Trikot"}
+  Silvester: {g: n, note: "das Silvester — новогодняя ночь"}
   Trotzphase:  {g: f}
 
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
@@ -178,6 +179,27 @@ no_plural:
   - Internet
   - Datenschutz
   - Technik
+  - Glück
+  - Wut
+  - Ärger
+  - Ruhe
+  - Geduld
+  - Mut
+  - Trauer
+  - Neid
+  - Zufriedenheit
+  - Scham
+  - Stolz
+  - Mitleid
+  - Nervosität
+  - Gelassenheit
+  - Müll
+  - Umweltschutz
+  - Tierschutz
+  - Neujahr
+  - Fernsehen
+  - Rundfunk
+  - Konfetti
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -819,6 +841,105 @@ translations:
   chatten:        переписываться в чате
   aktuell:        свежий, актуальный
   tragbar:        портативный
+  # чувства, природа, праздники, медиа
+  aufgeregt:      взволнованный
+  erleichtert:    с облегчением
+  gereizt:        раздражённый
+  Ressource:      ресурс
+  bedroht:        под угрозой исчезновения
+  Muttertag:      День матери
+  Grußkarte:      поздравительная открытка
+  Konfetti:       конфетти
+  Gästeliste:     список гостей
+  Gastgeberin:    хозяйка дома
+  Meldung:        новость, сообщение
+  Trailer:        трейлер
+  Einschaltquote: рейтинг передачи
+  Werbepause:     рекламная пауза
+  # чувства
+  Pech:           неудача
+  Sorge:          забота, тревога
+  Hoffnung:       надежда
+  Mut:            смелость
+  Geduld:         терпение
+  Interesse:      интерес
+  Scham:          стыд
+  Sehnsucht:      тоска, страстное желание
+  Abneigung:      неприязнь
+  Zuneigung:      симпатия
+  Zufriedenheit:  удовлетворённость
+  Freude:         радость
+  vermissen:      скучать по кому-то
+  beneiden:       завидовать
+  wundern:        удивлять
+  wütend:         злой, разъярённый
+  überrascht:     удивлённый
+  gelassen:       невозмутимый
+  erschöpft:      вымотанный
+  # природа
+  Erde:           земля, почва
+  Mond:           луна
+  Art:            биологический вид
+  Müll:           мусор
+  Kuh:            корова
+  Umwelt:         окружающая среда
+  Abfall:         отходы
+  Ast:            ветка
+  Quelle:         источник, родник
+  Fell:           шерсть, мех
+  Lebensraum:     среда обитания
+  Bauernhof:      ферма
+  gießen:         поливать
+  trennen:        разделять, сортировать
+  recyceln:       перерабатывать
+  verschmutzen:   загрязнять
+  nachhaltig:     экологичный, бережный
+  umweltfreundlich: экологичный
+  # праздники
+  Fest:           праздник
+  Weihnachten:    Рождество
+  Ostern:         Пасха
+  Pfingsten:      Троица
+  Silvester:      новогодняя ночь
+  Nikolaus:       День святого Николая
+  Plätzchen:      печенье
+  Tracht:         национальный костюм
+  Luftballon:     воздушный шарик
+  Festtag:        праздничный день
+  Festessen:      праздничный ужин
+  Geschenkpapier: подарочная упаковка
+  Brauchtum:      обычаи, традиции
+  Taufe:          крестины
+  Advent:         предрождественское время
+  begehen:        отмечать праздник
+  anstoßen:       чокаться
+  gedenken:       чтить память
+  verkleiden:     наряжаться в костюм
+  schenken:       дарить
+  ausgelassen:    весёлый, разгульный
+  weltlich:       светский
+  # кино, книги, новости
+  Rolle:          роль
+  Untertitel:     субтитры
+  Presse:         пресса
+  Sendung:        передача
+  Titel:          название, заголовок
+  Staffel:        сезон сериала
+  Hauptrolle:     главная роль
+  Zensur:         цензура
+  Rundfunk:       радиовещание
+  Folge:          серия, выпуск
+  Dokumentation:  документальный фильм
+  Veröffentlichung: публикация
+  Bericht:        репортаж, отчёт
+  Geschichte:     история, рассказ
+  Falschmeldung:  фейковая новость
+  drehen:         снимать фильм
+  senden:         транслировать
+  übertragen:     транслировать
+  streamen:       смотреть онлайн
+  recherchieren:  искать материал
+  glaubwürdig:    достоверный
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);

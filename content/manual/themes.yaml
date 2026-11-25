@@ -1561,3 +1561,324 @@ tech:
     - {w: benutzerfreundlich, pos: a, lv: B1, tags: [quality, thing_only]}
     - {w: veraltet,      pos: a, lv: B1, tags: [quality, thing_only, absolute]}
     - {w: tragbar,       pos: a, lv: B1, tags: [quality, thing_only, absolute]}
+
+feelings:
+  title: Чувства и настроение
+  words:
+    # A1 — что чувствуешь прямо сейчас
+    - {w: Gefühl,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Freude,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Angst,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Glück,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Wut,           pos: n, lv: A1, tags: [abstract]}
+    - {w: Ärger,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Sorge,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Hoffnung,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Stimmung,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Laune,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Ruhe,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Spannung,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Erwartung,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Interesse,     pos: n, lv: A2, tags: [abstract]}
+    - {w: hoffen,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: ärgern,        pos: v, lv: A1, tags: [state, obj, obj_person]}
+    - {w: glücklich,     pos: a, lv: A1, tags: [quality, person]}
+    - {w: unglücklich,   pos: a, lv: A1, tags: [quality, person]}
+    - {w: zufrieden,     pos: a, lv: A1, tags: [quality, person]}
+    - {w: wütend,        pos: a, lv: A1, tags: [quality, person]}
+    - {w: nervös,        pos: a, lv: A1, tags: [quality, person]}
+    - {w: stolz,         pos: a, lv: A1, tags: [quality, person]}
+    # A2 — что с тобой случилось и как ты это назвал
+    - {w: Überraschung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Enttäuschung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Stress,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Geduld,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Mut,           pos: n, lv: A2, tags: [abstract]}
+    - {w: Zweifel,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Trauer,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Pech,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Neid,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Einsamkeit,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Zufriedenheit, pos: n, lv: A2, tags: [abstract]}
+    - {w: Aufregung,     pos: n, lv: A2, tags: [abstract]}
+    - {w: aufregen,      pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: überraschen,   pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: enttäuschen,   pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: erschrecken,   pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: vermissen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: genügen,       pos: v, lv: A2, tags: [state]}
+    - {w: verzeihen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: wundern,       pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: aufgeregt,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: enttäuscht,    pos: a, lv: A2, tags: [quality, person]}
+    - {w: überrascht,    pos: a, lv: A2, tags: [quality, person]}
+    - {w: ängstlich,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: mutig,         pos: a, lv: A2, tags: [quality, person]}
+    - {w: dankbar,       pos: a, lv: A2, tags: [quality, person]}
+    - {w: eifersüchtig,  pos: a, lv: A2, tags: [quality, person]}
+    - {w: verärgert,     pos: a, lv: A2, tags: [quality, person]}
+    - {w: besorgt,       pos: a, lv: A2, tags: [quality, person]}
+    - {w: erschöpft,     pos: a, lv: A2, tags: [quality, person]}
+    # B1 — то, что трудно назвать одним словом
+    - {w: Scham,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Stolz,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Mitleid,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Erleichterung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Nervosität,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Sehnsucht,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Verzweiflung,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Begeisterung,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Gelassenheit,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Dankbarkeit,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Abneigung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Zuneigung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: schämen,       pos: v, lv: B1, tags: [state]}
+    - {w: beneiden,      pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: bereuen,       pos: v, lv: B1, tags: [state, obj]}
+    - {w: erleichtert,   pos: a, lv: B1, tags: [quality, person]}
+    - {w: gelassen,      pos: a, lv: B1, tags: [quality, person]}
+    - {w: gereizt,       pos: a, lv: B1, tags: [quality, person]}
+    - {w: verzweifelt,   pos: a, lv: B1, tags: [quality, person]}
+    - {w: neidisch,      pos: a, lv: B1, tags: [quality, person]}
+    - {w: begeistert,    pos: a, lv: B1, tags: [quality, person]}
+    - {w: gleichgültig,  pos: a, lv: B1, tags: [quality, person]}
+    - {w: empfindlich,   pos: a, lv: B1, tags: [quality, person]}
+    - {w: zuversichtlich, pos: a, lv: B1, tags: [quality, person]}
+
+nature:
+  title: Природа и животные
+  words:
+    # A1 — что растёт и кто бегает
+    - {w: Natur,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Baum,          pos: n, lv: A1, tags: [thing]}
+    - {w: Blume,         pos: n, lv: A1, tags: [thing]}
+    - {w: Gras,          pos: n, lv: A1, tags: [thing]}
+    - {w: Blatt,         pos: n, lv: A1, tags: [thing]}
+    - {w: Stein,         pos: n, lv: A1, tags: [thing]}
+    - {w: Erde,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Wald,          pos: n, lv: A1, tags: [place]}
+    - {w: Fluss,         pos: n, lv: A1, tags: [place]}
+    - {w: Wiese,         pos: n, lv: A1, tags: [place]}
+    - {w: Feld,          pos: n, lv: A1, tags: [place]}
+    - {w: Tier,          pos: n, lv: A1, tags: [thing]}
+    - {w: Hund,          pos: n, lv: A1, tags: [thing]}
+    - {w: Katze,         pos: n, lv: A1, tags: [thing]}
+    - {w: Vogel,         pos: n, lv: A1, tags: [thing]}
+    - {w: Pferd,         pos: n, lv: A1, tags: [thing]}
+    - {w: Kuh,           pos: n, lv: A1, tags: [thing]}
+    - {w: Schwein,       pos: n, lv: A1, tags: [thing]}
+    - {w: Mond,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Stern,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Himmelsrichtung, pos: n, lv: A2, tags: [abstract]}
+    - {w: Insekt,        pos: n, lv: A2, tags: [thing]}
+    - {w: Ziege,         pos: n, lv: A2, tags: [thing]}
+    - {w: pflanzen,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: gießen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: wild,          pos: a, lv: A1, tags: [quality]}
+    - {w: natürlich,     pos: a, lv: A1, tags: [quality, absolute]}
+    # A2 — лес, поле и то, что в них водится
+    - {w: Pflanze,       pos: n, lv: A2, tags: [thing]}
+    - {w: Wurzel,        pos: n, lv: A2, tags: [thing]}
+    - {w: Ast,           pos: n, lv: A2, tags: [thing]}
+    - {w: Pilz,          pos: n, lv: A2, tags: [food]}
+    - {w: Beere,         pos: n, lv: A2, tags: [food]}
+    - {w: Schaf,         pos: n, lv: A2, tags: [thing]}
+    - {w: Huhn,          pos: n, lv: A2, tags: [thing]}
+    - {w: Ente,          pos: n, lv: A2, tags: [thing]}
+    - {w: Biene,         pos: n, lv: A2, tags: [thing]}
+    - {w: Mücke,         pos: n, lv: A2, tags: [thing]}
+    - {w: Spinne,        pos: n, lv: A2, tags: [thing]}
+    - {w: Hase,          pos: n, lv: A2, tags: [thing]}
+    - {w: Fuchs,         pos: n, lv: A2, tags: [thing]}
+    - {w: Bär,           pos: n, lv: A2, tags: [thing]}
+    - {w: Wolf,          pos: n, lv: A2, tags: [thing]}
+    - {w: Umwelt,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Müll,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Klima,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Tierheim,      pos: n, lv: A2, tags: [place]}
+    - {w: Bauernhof,     pos: n, lv: A2, tags: [place]}
+    - {w: Teich,         pos: n, lv: A2, tags: [place]}
+    - {w: Höhle,         pos: n, lv: A2, tags: [place]}
+    - {w: Nest,          pos: n, lv: A2, tags: [thing]}
+    - {w: Feder,         pos: n, lv: A2, tags: [thing]}
+    - {w: Fell,          pos: n, lv: A2, tags: [thing]}
+    - {w: Schwanz,       pos: n, lv: A2, tags: [thing]}
+    - {w: Flügel,        pos: n, lv: A2, tags: [thing]}
+    - {w: schützen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: bellen,        pos: v, lv: A2, tags: [state, solo]}
+    - {w: jagen,         pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: trennen,       pos: v, lv: A2, tags: [state, obj]}
+    - {w: giftig,        pos: a, lv: A2, tags: [quality]}
+    - {w: lebendig,      pos: a, lv: A2, tags: [quality]}
+    - {w: zahm,          pos: a, lv: A2, tags: [quality]}
+    - {w: züchten,       pos: v, lv: A2, tags: [state, obj]}
+    # B1 — что с этим делают люди
+    - {w: Umweltschutz,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Verschmutzung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Abfall,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Energie,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Art,           pos: n, lv: B1, tags: [abstract]}
+    - {w: Lebensraum,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Nationalpark,  pos: n, lv: B1, tags: [place]}
+    - {w: Quelle,        pos: n, lv: B1, tags: [place]}
+    - {w: Wüste,         pos: n, lv: B1, tags: [place]}
+    - {w: Tierschutz,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Klimawandel,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Erderwärmung,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Ressource,     pos: n, lv: B1, tags: [abstract]}
+    - {w: verschmutzen,  pos: v, lv: B1, tags: [state, obj]}
+    - {w: recyceln,      pos: v, lv: B1, tags: [state, obj]}
+    - {w: aussterben,    pos: v, lv: B1, tags: [state, solo]}
+    - {w: umweltfreundlich, pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: nachhaltig,    pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: selten,        pos: a, lv: B1, tags: [quality]}
+    - {w: bedroht,       pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: biologisch,    pos: a, lv: B1, tags: [quality, absolute]}
+
+holidays:
+  title: Праздники и традиции
+  words:
+    # A1 — что празднуют и чем
+    - {w: Fest,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Feier,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Weihnachten,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Ostern,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Silvester,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Neujahr,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Tradition,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Kerze,         pos: n, lv: A1, tags: [thing]}
+    - {w: Torte,         pos: n, lv: A1, tags: [food]}
+    - {w: Blumenstrauß,  pos: n, lv: A1, tags: [thing]}
+    - {w: Glückwunsch,   pos: n, lv: A1, tags: [abstract]}
+    - {w: schenken,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: gratulieren,   pos: v, lv: A1, tags: [state, solo]}
+    - {w: schmücken,     pos: v, lv: A1, tags: [state, obj, housework]}
+    - {w: wünschen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: festlich,      pos: a, lv: A1, tags: [quality]}
+    # A2 — ёлка, фейерверк, костюм
+    - {w: Weihnachtsbaum, pos: n, lv: A2, tags: [thing]}
+    - {w: Feuerwerk,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Dekoration,    pos: n, lv: A2, tags: [thing]}
+    - {w: Kostüm,        pos: n, lv: A2, tags: [thing]}
+    - {w: Maske,         pos: n, lv: A2, tags: [thing]}
+    - {w: Karneval,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Advent,        pos: n, lv: A2, tags: [time]}
+    - {w: Osterei,       pos: n, lv: A2, tags: [thing]}
+    - {w: Brauch,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Sekt,          pos: n, lv: A2, tags: [drink]}
+    - {w: Geschenkpapier, pos: n, lv: A2, tags: [thing]}
+    - {w: Gottesdienst,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Umarmung,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Jubiläum,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Nikolaus,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Muttertag,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Valentinstag,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Weihnachtsmarkt, pos: n, lv: A2, tags: [place]}
+    - {w: Mitternacht,   pos: n, lv: A2, tags: [time]}
+    - {w: Plätzchen,     pos: n, lv: A2, tags: [food]}
+    - {w: Glühwein,      pos: n, lv: A2, tags: [drink]}
+    - {w: Luftballon,    pos: n, lv: A2, tags: [thing]}
+    - {w: Grußkarte,     pos: n, lv: A2, tags: [document]}
+    - {w: verkleiden,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: anstoßen,      pos: v, lv: A2, tags: [state, solo]}
+    - {w: umarmen,       pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: traditionell,  pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: religiös,      pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: feierlich,     pos: a, lv: A2, tags: [quality]}
+    # B1 — обычай, обряд, выходной
+    - {w: Zeremonie,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Festtag,       pos: n, lv: B1, tags: [time]}
+    - {w: Brauchtum,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Volksfest,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Taufe,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Beerdigung,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Rede,          pos: n, lv: B1, tags: [abstract]}
+    - {w: Gastgeschenk,  pos: n, lv: B1, tags: [thing]}
+    - {w: Adventskranz,  pos: n, lv: B1, tags: [thing]}
+    - {w: Lebkuchen,     pos: n, lv: B1, tags: [food]}
+    - {w: Konfetti,      pos: n, lv: B1, tags: [thing]}
+    - {w: Tracht,        pos: n, lv: B1, tags: [thing]}
+    - {w: Pfingsten,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Fastenzeit,    pos: n, lv: B1, tags: [time]}
+    - {w: Gästeliste,    pos: n, lv: B1, tags: [document]}
+    - {w: Gastgeberin,   pos: n, lv: B1, tags: [person]}
+    - {w: Festessen,     pos: n, lv: B1, tags: [food, meal]}
+    - {w: begehen,       pos: v, lv: B1, tags: [state, obj]}
+    - {w: ehren,         pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: gedenken,      pos: v, lv: B1, tags: [state]}
+    - {w: weltlich,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: ausgelassen,   pos: a, lv: B1, tags: [quality, person]}
+    - {w: heilig,        pos: a, lv: B1, tags: [quality, absolute]}
+
+media:
+  title: Кино, книги, новости
+  words:
+    # A1 — что смотрят и читают
+    - {w: Fernsehen,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Sendung,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Serie,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Szene,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Rolle,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Titel,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Geschichte,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Schauspieler,  pos: n, lv: A1, tags: [person]}
+    - {w: Schauspielerin, pos: n, lv: A1, tags: [person]}
+    - {w: Leser,         pos: n, lv: A1, tags: [person]}
+    - {w: Autor,         pos: n, lv: A1, tags: [person]}
+    - {w: fernsehen,     pos: v, lv: A1, tags: [state, solo]}
+    - {w: schauen,       pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: berühmt,       pos: a, lv: A1, tags: [quality, person]}
+    # A2 — новости, статья, подписка
+    - {w: Meldung,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Artikel,       pos: n, lv: A2, tags: [thing]}
+    - {w: Bericht,       pos: n, lv: A2, tags: [document]}
+    - {w: Interview,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Journalist,    pos: n, lv: A2, tags: [person]}
+    - {w: Regisseur,     pos: n, lv: A2, tags: [person]}
+    - {w: Kapitel,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Untertitel,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Meinung,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Kritik,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Verlag,        pos: n, lv: A2, tags: [place]}
+    - {w: Trailer,       pos: n, lv: A2, tags: [thing]}
+    - {w: Popcorn,       pos: n, lv: A2, tags: [food]}
+    - {w: Hörer,         pos: n, lv: A2, tags: [person]}
+    - {w: Podcast,       pos: n, lv: A2, tags: [thing]}
+    - {w: Dokumentation, pos: n, lv: A2, tags: [abstract]}
+    - {w: Komödie,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Spielfilm,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Folge,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Buchhandlung,  pos: n, lv: A2, tags: [place]}
+    - {w: senden,        pos: v, lv: A2, tags: [state, obj]}
+    - {w: berichten,     pos: v, lv: A2, tags: [state, solo]}
+    - {w: drehen,        pos: v, lv: A2, tags: [state, obj]}
+    - {w: abonnieren,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: erscheinen,    pos: v, lv: A2, tags: [state, solo]}
+    - {w: streamen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: kritisch,      pos: a, lv: A2, tags: [quality, person]}
+    # B1 — источник, редакция, достоверность
+    - {w: Redaktion,     pos: n, lv: B1, tags: [place]}
+    - {w: Schlagzeile,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Erzählung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Gedicht,       pos: n, lv: B1, tags: [thing]}
+    - {w: Drehbuch,      pos: n, lv: B1, tags: [document]}
+    - {w: Einschaltquote, pos: n, lv: B1, tags: [abstract]}
+    - {w: Veröffentlichung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Moderator,     pos: n, lv: B1, tags: [person]}
+    - {w: Staffel,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Hauptrolle,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Drehort,       pos: n, lv: B1, tags: [place]}
+    - {w: Bestseller,    pos: n, lv: B1, tags: [thing]}
+    - {w: Umfrage,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Werbepause,    pos: n, lv: B1, tags: [time]}
+    - {w: Rundfunk,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Presse,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Zensur,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Falschmeldung, pos: n, lv: B1, tags: [abstract]}
+    - {w: veröffentlichen, pos: v, lv: B1, tags: [state, obj]}
+    - {w: recherchieren, pos: v, lv: B1, tags: [state, obj, solo]}
+    - {w: übertragen,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: informieren,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: objektiv,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: glaubwürdig,   pos: a, lv: B1, tags: [quality]}
+    - {w: anspruchsvoll, pos: a, lv: B1, tags: [quality]}
