@@ -17,7 +17,7 @@
   gen_sg: [Tablets]
   ru: планшет
   en: tablet
-  freq: 34000
+  freq: 33000
   level: A1
   themes: []
   decided: {}
@@ -236,7 +236,7 @@
   gen_sg: [Tastatur]
   ru: клавиатура
   en: keyboard
-  freq: 24000
+  freq: 23000
   level: A1
   themes: []
   decided: {}
@@ -284,7 +284,7 @@
   gen_sg: [Taufe]
   ru: крестины
   en: baptism, christening
-  freq: 12000
+  freq: 11000
   level: B1
   themes: []
   decided: {}
@@ -394,7 +394,7 @@
   gen_sg: [Teilnehmers]
   ru: участник
   en: participant
-  freq: 12000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -406,7 +406,7 @@
   gen_sg: [Teilzeit]
   ru: неполный рабочий день
   en: part-time
-  freq: 23000
+  freq: 22000
   level: A2
   themes: []
   decided: {}
@@ -454,7 +454,7 @@
   gen_sg: [Tempolimits]
   ru: null
   en: speed limit
-  freq: 37000
+  freq: 36000
   level: A2
   themes: []
   decided: {}
@@ -478,7 +478,7 @@
   gen_sg: [Tennisplatzes]
   ru: теннисная площадка, теннисный корт
   en: tennis court
-  freq: 22000
+  freq: 21000
   level: A1
   themes: []
   decided: {}
@@ -658,7 +658,7 @@
   gen_sg: [Tierschutzes]
   ru: защита животных
   en: animal welfare, animal protection
-  freq: 38000
+  freq: 37000
   level: B1
   themes: []
   decided: {}
@@ -730,7 +730,7 @@
   gen_sg: [Tochter]
   ru: дочь
   en: daughter, girl
-  freq: 400
+  freq: 500
   level: A1
   themes: []
   decided: {}
@@ -779,7 +779,7 @@
   gen_sg: [Tors, Tores]
   ru: ворота, гол
   en: gate, gateway
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -792,7 +792,7 @@
   gen_sg: [Toren]
   ru: безумец, глупец
   en: fool
-  freq: 3000
+  freq: 2000
   level: null
   themes: []
   decided: {}
@@ -804,7 +804,7 @@
   gen_sg: [Torte]
   ru: торт
   en: layer cake
-  freq: 8000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -816,7 +816,7 @@
   gen_sg: [Torwarts, Torwartes]
   ru: вратарь
   en: goalkeeper, goal keeper
-  freq: 30000
+  freq: 21000
   level: B1
   themes: []
   decided: {}
@@ -852,7 +852,7 @@
   gen_sg: [Touristin]
   ru: туристка
   en: tourist
-  freq: 17000
+  freq: 25000
   level: A1
   themes: []
   decided: {}
@@ -864,7 +864,7 @@
   gen_sg: [Tracht]
   ru: ноша, груз
   en: costume, garb
-  freq: 22000
+  freq: 21000
   level: B1
   themes: []
   decided: {}
@@ -900,7 +900,7 @@
   gen_sg: [Trainers]
   ru: тренер, инструктор
   en: coach
-  freq: 7000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -912,7 +912,7 @@
   gen_sg: [Trainerin]
   ru: тренер
   en: coach
-  freq: 7000
+  freq: 24000
   level: A1
   themes: []
   decided: {}
@@ -936,7 +936,7 @@
   gen_sg: [Trainingsanzugs, Trainingsanzuges]
   ru: тренировочный  костюм
   en: tracksuit, sweat suit
-  freq: 31000
+  freq: 30000
   level: A1
   themes: []
   decided: {}
@@ -949,7 +949,7 @@
   gen_sg: [Tram, Trams]
   ru: трамвай
   en: tram, tramway
-  freq: 43000
+  freq: 42000
   level: A1
   themes: []
   decided: {}
@@ -962,7 +962,7 @@
   gen_sg: [Trams, Trames]
   ru: регион. трамвай
   en: beam
-  freq: 43000
+  freq: 42000
   level: null
   themes: []
   decided: {}
@@ -1010,7 +1010,7 @@
   gen_sg: [Tribüne]
   ru: трибуна
   en: stand
-  freq: 18000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
@@ -1106,7 +1106,7 @@
   gen_sg: [Täters]
   ru: преступник
   en: perpetrator, criminal
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}

@@ -47,7 +47,11 @@ def pass_dewikt(lemmas):
         for f in r.get('forms', []):
             x = (f.get('form') or '').strip()
             # вспомогательный глагол в таблице спряжения — не форма самого глагола
-            if x and ' ' not in x and x not in srcs.ARTICLES and not set(f.get('tags') or []) & SKIP_TAGS:
+            t = set(f.get('tags') or [])
+            # у существительного «feminine»/«diminutive» — это другое слово (Ärztin, Bänkchen)
+            if pos == 'noun' and t & {'feminine', 'masculine', 'neuter', 'diminutive', 'augmentative'}:
+                continue
+            if x and ' ' not in x and x not in srcs.ARTICLES and not t & SKIP_TAGS:
                 forms[x].add((w, pos))
         # страны и моря у dewikt — имена собственные (pos name), но род у них есть
         if pos in ('noun', 'name') and w in lemmas:

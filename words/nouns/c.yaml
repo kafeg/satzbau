@@ -65,7 +65,7 @@
   gen_sg: [Chefin]
   ru: начальница
   en: boss, manager
-  freq: 2000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -89,7 +89,7 @@
   gen_sg: [Clowns]
   ru: клоун
   en: clown
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -138,7 +138,7 @@
   gen_sg: [Cousins]
   ru: двоюродный брат
   en: cousin
-  freq: 3000
+  freq: 2000
   level: A2
   themes: []
   decided: {}

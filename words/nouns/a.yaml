@@ -101,7 +101,7 @@
   gen_sg: [Abmahnung]
   ru: предупреждение
   en: warning
-  freq: 45000
+  freq: 44000
   level: B1
   themes: []
   decided: {}
@@ -149,7 +149,7 @@
   gen_sg: [Abschlags, Abschlages]
   ru: обрубание, срубание
   en: discount, disagio
-  freq: 27000
+  freq: 26000
   level: B1
   themes: []
   decided: {}
@@ -161,7 +161,7 @@
   gen_sg: [Abschleppdiensts, Abschleppdienstes]
   ru: буксировочная служба
   en: breakdown service, towing service
-  freq: 34000
+  freq: 33000
   level: B1
   themes: []
   decided: {}
@@ -197,7 +197,7 @@
   gen_sg: [Absenders]
   ru: отправитель
   en: sender
-  freq: 21000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -477,7 +477,7 @@
   gen_sg: [Algebra]
   ru: алгебра
   en: algebra
-  freq: 23000
+  freq: 22000
   level: A1
   themes: []
   decided: {}
@@ -662,7 +662,7 @@
   gen_sg: [Anfängers]
   ru: начинающий
   en: beginner, newbie
-  freq: 10000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -698,7 +698,7 @@
   gen_sg: [Anhängers]
   ru: прицеп
   en: trailer
-  freq: 8000
+  freq: 6000
   level: B1
   themes: []
   decided: {}
@@ -782,7 +782,7 @@
   gen_sg: [Anrede]
   ru: обращение
   en: salutation, form of address
-  freq: 30000
+  freq: 29000
   level: A1
   themes: []
   decided: {}
@@ -854,7 +854,7 @@
   gen_sg: [Antragstellers]
   ru: заявитель, податель заявления
   en: applicant, petitioner
-  freq: 33000
+  freq: 30000
   level: A1
   themes: []
   decided: {}
@@ -975,7 +975,7 @@
   gen_sg: [Apothekers]
   ru: аптекарь, фармацевт
   en: apothecary, druggist
-  freq: 17000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -1023,7 +1023,7 @@
   gen_sg: [Arbeitgebers]
   ru: работодатель
   en: employer
-  freq: 13000
+  freq: 11000
   level: B1
   themes: []
   decided: {}
@@ -1035,7 +1035,7 @@
   gen_sg: [Arbeitnehmers]
   ru: служащий
   en: employee
-  freq: null
+  freq: 39000
   level: B1
   themes: []
   decided: {}
@@ -1047,7 +1047,7 @@
   gen_sg: [Arbeitsamtes, Arbeitsamts]
   ru: служба занятости
   en: employment agency, employment office
-  freq: 23000
+  freq: 22000
   level: A2
   themes: []
   decided: {}
@@ -1095,7 +1095,7 @@
   gen_sg: [Architekten]
   ru: архитектор
   en: architect, building designer
-  freq: 9000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1167,7 +1167,7 @@
   gen_sg: [Arztes]
   ru: врач, доктор
   en: doctor, physician
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -1239,7 +1239,7 @@
   gen_sg: [Aufenthaltserlaubnis]
   ru: разрешение на пребывание, вид на жительство
   en: residence permit
-  freq: 49000
+  freq: 48000
   level: A2
   themes: []
   decided: {}
@@ -1371,7 +1371,7 @@
   gen_sg: [Ausdauer]
   ru: выносливость
   en: perseverance, persistence
-  freq: 14000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -1467,7 +1467,7 @@
   gen_sg: [Ausländers]
   ru: иностранец
   en: foreigner, alien
-  freq: 10000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -1685,7 +1685,7 @@
   gen_sg: [Automechanikers]
   ru: автомеханик
   en: automotive mechanic, car mechanic
-  freq: 44000
+  freq: 31000
   level: A1
   themes: []
   decided: {}
@@ -1697,7 +1697,7 @@
   gen_sg: [Autors]
   ru: автор
   en: author literator
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -1793,7 +1793,7 @@
   gen_sg: [Ärztin]
   ru: женщина-врач
   en: doctor, physican
-  freq: 2000
+  freq: 4000
   level: A1
   themes: []
   decided: {}

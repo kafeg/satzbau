@@ -29,7 +29,7 @@
   gen_sg: [Zahnarztes]
   ru: стоматолог
   en: dentist
-  freq: 8000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -65,7 +65,7 @@
   gen_sg: [Zahnseide]
   ru: зубная нить
   en: dental floss
-  freq: 19000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -127,7 +127,7 @@
   gen_sg: [Zebrastreifens]
   ru: зебра
   en: zebra stripes
-  freq: 49000
+  freq: 48000
   level: A1
   themes: []
   decided: {}
@@ -346,7 +346,7 @@
   gen_sg: [Zertifikats, Zertifikates]
   ru: сертификат
   en: certificate
-  freq: 28000
+  freq: 27000
   level: A2
   themes: []
   decided: {}
@@ -370,7 +370,7 @@
   gen_sg: [Zeugin]
   ru: свидетельница
   en: witness
-  freq: 5000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -660,7 +660,7 @@
   gen_sg: [Zuschauers]
   ru: зритель
   en: spectator, viewer
-  freq: 6000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -708,7 +708,7 @@
   gen_sg: [Zustellung]
   ru: доставка
   en: delivery, notification
-  freq: 49000
+  freq: 48000
   level: A2
   themes: []
   decided: {}
@@ -792,7 +792,7 @@
   gen_sg: [Zweifelsfalls, Zweifelsfalles]
   ru: сомнительный случай
   en: case of doubt
-  freq: 34000
+  freq: 33000
   level: B1
   themes: []
   decided: {}
@@ -852,7 +852,7 @@
   gen_sg: [Zwischenrufes, Zwischenrufs]
   ru: реплика
   en: null
-  freq: 49000
+  freq: 48000
   level: B1
   themes: []
   decided: {}

@@ -103,7 +103,7 @@
   gen_sg: [Kanzlerin]
   ru: канцлер
   en: Chancellor
-  freq: 15000
+  freq: null
   level: A2
   themes: []
   decided: {}
@@ -200,7 +200,7 @@
   gen_sg: [Katers]
   ru: кот
   en: tomcat, tom
-  freq: 4000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -213,7 +213,7 @@
   gen_sg: [Katers]
   ru: похмелье
   en: hangover
-  freq: 4000
+  freq: 6000
   level: null
   themes: []
   decided: {}
@@ -237,7 +237,7 @@
   gen_sg: [Kaufhauses]
   ru: универмаг, универсальный магазин
   en: department store
-  freq: 11000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -249,7 +249,7 @@
   gen_sg: [Kaufmannes, Kaufmanns]
   ru: торговец, коммерсант
   en: merchant, businessman
-  freq: 13000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -273,7 +273,7 @@
   gen_sg: [Keilriemens]
   ru: клиновой ремень
   en: vee belt
-  freq: 30000
+  freq: 29000
   level: B1
   themes: []
   decided: {}
@@ -361,7 +361,7 @@
   gen_sg: [Kellners]
   ru: официант
   en: waiter
-  freq: 7000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -590,7 +590,7 @@
   gen_sg: [Kiste]
   ru: ящик
   en: box, coffer
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -603,7 +603,7 @@
   gen_sg: [Kisten]
   ru: ящик, сундук
   en: chest, box
-  freq: 3000
+  freq: 2000
   level: null
   themes: []
   decided: {}
@@ -713,7 +713,7 @@
   gen_sg: [Klebers]
   ru: глютен, клейковина
   en: glue, adhesive
-  freq: 25000
+  freq: 17000
   level: A2
   themes: []
   decided: {}
@@ -761,7 +761,7 @@
   gen_sg: [Klimas]
   ru: климат
   en: climate
-  freq: 11000
+  freq: 10000
   level: A2
   themes: []
   decided: {}
@@ -809,7 +809,7 @@
   gen_sg: [Knopfes, Knopfs]
   ru: пуговица
   en: button
-  freq: 3000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -907,7 +907,7 @@
   gen_sg: [Kollegin]
   ru: коллега
   en: colleague
-  freq: 5000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -919,7 +919,7 @@
   gen_sg: [Komponisten]
   ru: композитор
   en: composer
-  freq: 16000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -1003,7 +1003,7 @@
   gen_sg: [Kontinents, Kontinentes]
   ru: континент, часть света
   en: continent
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -1099,7 +1099,7 @@
   gen_sg: [Kosmetikerin]
   ru: косметолог
   en: beautician, beauty specialist
-  freq: 43000
+  freq: 32000
   level: A2
   themes: []
   decided: {}
@@ -1293,7 +1293,7 @@
   gen_sg: [Kreide]
   ru: мел
   en: chalk
-  freq: 21000
+  freq: 20000
   level: A1
   themes: []
   decided: {}
@@ -1413,7 +1413,7 @@
   gen_sg: [Kuh]
   ru: корова
   en: cow
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1501,7 +1501,7 @@
   gen_sg: [Kundendiensts, Kundendienstes]
   ru: обслуживание покупателей
   en: customer service
-  freq: 34000
+  freq: 33000
   level: A2
   themes: []
   decided: {}
@@ -1513,7 +1513,7 @@
   gen_sg: [Kundin]
   ru: клиентка
   en: customer, client
-  freq: 7000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -1537,7 +1537,7 @@
   gen_sg: [Kuriers]
   ru: курьер
   en: courier
-  freq: 13000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -1597,7 +1597,7 @@
   gen_sg: [Kätzchens]
   ru: котёнок
   en: kitten, kitty
-  freq: 9000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -1621,7 +1621,7 @@
   gen_sg: [Körperpflege]
   ru: гигиена тела, личная гигиена
   en: body care, personal hygiene
-  freq: 41000
+  freq: 40000
   level: B1
   themes: []
   decided: {}
@@ -1705,7 +1705,7 @@
   gen_sg: [Künstlers]
   ru: художник, артист
   en: artist
-  freq: 4000
+  freq: 3000
   level: B1
   themes: []
   decided: {}

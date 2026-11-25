@@ -5,7 +5,7 @@
   gen_sg: [S-Bahn]
   ru: городская электричка
   en: commuter railway, suburban railway
-  freq: 44000
+  freq: 43000
   level: A1
   themes: []
   decided: {}
@@ -17,7 +17,7 @@
   gen_sg: [Sachbearbeiters]
   ru: исполнитель, консультант
   en: case worker, official in charge
-  freq: 40000
+  freq: 31000
   level: B1
   themes: []
   decided: {}
@@ -29,7 +29,7 @@
   gen_sg: [Sachbearbeiterin]
   ru: null
   en: null
-  freq: 41000
+  freq: null
   level: B1
   themes: []
   decided: {}
@@ -53,7 +53,7 @@
   gen_sg: [Sachlage]
   ru: положение вещей, положение дела, ситуация
   en: situation, circumstance
-  freq: 34000
+  freq: 33000
   level: B1
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Sanitäters]
   ru: мед. санитар
   en: paramedic
-  freq: 8000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -269,7 +269,7 @@
   gen_sg: [Schaffners]
   ru: кондуктор
   en: conductor, guard
-  freq: 25000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
@@ -389,7 +389,7 @@
   gen_sg: [Scheibenwischers]
   ru: стеклоочиститель
   en: windscreen wiper, windshield wiper
-  freq: 30000
+  freq: 29000
   level: A2
   themes: []
   decided: {}
@@ -437,7 +437,7 @@
   gen_sg: [Schiedsrichters]
   ru: судья, арбитр
   en: referee, umpire
-  freq: 17000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -559,7 +559,7 @@
   gen_sg: [Schlagzeugs, Schlagzeuges]
   ru: ударная установка
   en: drum kit, drum set
-  freq: 15000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -571,7 +571,7 @@
   gen_sg: [Schlagzeugers]
   ru: барабанщик, ударник
   en: drummer
-  freq: 33000
+  freq: 23000
   level: A1
   themes: []
   decided: {}
@@ -607,7 +607,7 @@
   gen_sg: [Schlichtung]
   ru: null
   en: mediation, arbitration
-  freq: 49000
+  freq: 48000
   level: B1
   themes: []
   decided: {}
@@ -643,7 +643,7 @@
   gen_sg: [Schlossers]
   ru: слесарь
   en: fitter, locksmith
-  freq: 43000
+  freq: 35000
   level: A1
   themes: []
   decided: {}
@@ -691,7 +691,7 @@
   gen_sg: [Schminke]
   ru: макияж
   en: make-up, makeup
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -715,7 +715,7 @@
   gen_sg: [Schnittstelle]
   ru: информ. интерфейс
   en: interface
-  freq: 30000
+  freq: 29000
   level: B1
   themes: []
   decided: {}
@@ -815,7 +815,7 @@
   gen_sg: [Schranks, Schrankes]
   ru: шкаф
   en: cabinet, cupboard
-  freq: 4000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -839,7 +839,7 @@
   gen_sg: [Schraubendrehers]
   ru: отвёртка
   en: screwdriver
-  freq: 45000
+  freq: 44000
   level: A2
   themes: []
   decided: {}
@@ -911,7 +911,7 @@
   gen_sg: [Schriftstellers]
   ru: писатель
   en: writer, author
-  freq: 9000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -1007,7 +1007,7 @@
   gen_sg: [Schutzbrille]
   ru: защитные очки
   en: goggles
-  freq: 28000
+  freq: 27000
   level: A2
   themes: []
   decided: {}
@@ -1031,7 +1031,7 @@
   gen_sg: [Schutzraumes, Schutzraums]
   ru: убежище
   en: shelter
-  freq: 21000
+  freq: 20000
   level: B1
   themes: []
   decided: {}
@@ -1091,7 +1091,7 @@
   gen_sg: [Schwester]
   ru: сестра
   en: sister, sis
-  freq: 600
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -1103,7 +1103,7 @@
   gen_sg: [Schwiegermutter]
   ru: тёща, свекровь
   en: mother-in-law
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -1151,7 +1151,7 @@
   gen_sg: [Schülerin]
   ru: ученица
   en: schoolgirl, pupil
-  freq: 4000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1237,7 +1237,7 @@
   gen_sg: [Sekretärs]
   ru: секретарь
   en: secretary
-  freq: 6000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -1670,7 +1670,7 @@
   gen_sg: [Sozialhilfe]
   ru: социальное пособие
   en: income support, social assistance
-  freq: 20000
+  freq: 19000
   level: B1
   themes: []
   decided: {}
@@ -1886,7 +1886,7 @@
   gen_sg: [Spielerin]
   ru: игрок
   en: player
-  freq: 6000
+  freq: 28000
   level: A1
   themes: []
   decided: {}
@@ -1910,7 +1910,7 @@
   gen_sg: [Spielfilms, Spielfilmes]
   ru: художественный фильм, игровой фильм
   en: feature film
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -1982,7 +1982,7 @@
   gen_sg: [Sports, Sportes]
   ru: спорт
   en: sport, sports
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -2018,7 +2018,7 @@
   gen_sg: [Sportlers]
   ru: спортсмен
   en: athlete, sportsman
-  freq: 14000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -2030,7 +2030,7 @@
   gen_sg: [Sportlerin]
   ru: спортсменка
   en: athlete
-  freq: 15000
+  freq: 43000
   level: A1
   themes: []
   decided: {}
@@ -2174,7 +2174,7 @@
   gen_sg: [Staatsanwaltes, Staatsanwalts]
   ru: прокурор
   en: public prosecutor, district attorney
-  freq: 4000
+  freq: 3000
   level: B1
   themes: []
   decided: {}
@@ -2186,7 +2186,7 @@
   gen_sg: [Staatsbürgers]
   ru: гражданин
   en: citizen, national
-  freq: 19000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -2356,7 +2356,7 @@
   gen_sg: [Standesamts, Standesamtes]
   ru: загс
   en: civil registry office
-  freq: 21000
+  freq: 20000
   level: B1
   themes: []
   decided: {}
@@ -2392,7 +2392,7 @@
   gen_sg: [Staus, Staues]
   ru: пробка
   en: congestion
-  freq: 14000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -2552,7 +2552,7 @@
   gen_sg: [Steuerzahlers]
   ru: налогоплательщик
   en: taxpayer, tax payer
-  freq: 22000
+  freq: 16000
   level: B1
   themes: []
   decided: {}
@@ -2904,7 +2904,7 @@
   gen_sg: [Strähne]
   ru: прядь
   en: strand
-  freq: 20000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -2916,7 +2916,7 @@
   gen_sg: [Studenten]
   ru: студент
   en: student
-  freq: 4000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -2928,7 +2928,7 @@
   gen_sg: [Studentin]
   ru: студентка
   en: student
-  freq: 7000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -3060,7 +3060,7 @@
   gen_sg: [Suppe]
   ru: суп
   en: soup
-  freq: 5000
+  freq: 6000
   level: A1
   themes: []
   decided: {}

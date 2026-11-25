@@ -89,7 +89,7 @@
   gen_sg: [Wahllokales, Wahllokals]
   ru: избирательный пункт, помещение
   en: polling station, voting station
-  freq: 32000
+  freq: 31000
   level: A2
   themes: []
   decided: {}
@@ -125,7 +125,7 @@
   gen_sg: [Wahrheit]
   ru: правда, истина
   en: truth
-  freq: 500
+  freq: 600
   level: A1
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Wanderweges, Wanderwegs]
   ru: маршрут туристского похода
   en: hiking trail
-  freq: 41000
+  freq: 40000
   level: B1
   themes: []
   decided: {}
@@ -245,7 +245,7 @@
   gen_sg: [Wartezimmers]
   ru: зал ожидания
   en: waiting room
-  freq: 16000
+  freq: 15000
   level: A1
   themes: []
   decided: {}
@@ -775,7 +775,7 @@
   gen_sg: [Windschutzscheibe]
   ru: ветровое стекло
   en: windscreen, windshield
-  freq: 16000
+  freq: 15000
   level: A2
   themes: []
   decided: {}
@@ -859,7 +859,7 @@
   gen_sg: [Wohngebiets, Wohngebietes]
   ru: жилой район
   en: residential area
-  freq: 34000
+  freq: 33000
   level: A1
   themes: []
   decided: {}
@@ -931,7 +931,7 @@
   gen_sg: [Wolfs, Wolfes]
   ru: волк
   en: wolf
-  freq: 3000
+  freq: 2000
   level: A2
   themes: []
   decided: {}
@@ -1005,7 +1005,7 @@
   gen_sg: [Wortschatzes]
   ru: словарный запас
   en: vocabulary, wordstock
-  freq: 26000
+  freq: 25000
   level: B1
   themes: []
   decided: {}
@@ -1017,7 +1017,7 @@
   gen_sg: [Wurst]
   ru: колбаса
   en: sausage, wors
-  freq: 6000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -1053,7 +1053,7 @@
   gen_sg: [Wählers]
   ru: избиратель
   en: voter
-  freq: 14000
+  freq: 10000
   level: A1
   themes: []
   decided: {}

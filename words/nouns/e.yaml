@@ -379,7 +379,7 @@
   gen_sg: [Einwanderers]
   ru: иммигрант, переселенец
   en: immigrant
-  freq: 17000
+  freq: 12000
   level: A1
   themes: []
   decided: {}
@@ -415,7 +415,7 @@
   gen_sg: [Einwohners]
   ru: житель
   en: inhabitant
-  freq: 10000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -439,7 +439,7 @@
   gen_sg: [Einwurfes, Einwurfs]
   ru: вбрасывание
   en: throw-in, throw in
-  freq: 45000
+  freq: 44000
   level: A2
   themes: []
   decided: {}
@@ -574,7 +574,7 @@
   gen_sg: [Empfängers]
   ru: получатель
   en: addressee, receiver
-  freq: 15000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -586,7 +586,7 @@
   gen_sg: [Empfängerin]
   ru: получательница
   en: null
-  freq: 17000
+  freq: null
   level: A1
   themes: []
   decided: {}
@@ -611,7 +611,7 @@
   gen_sg: [Enkels]
   ru: внук
   en: grandchild, grandson
-  freq: 5000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -624,7 +624,7 @@
   gen_sg: [Enkels]
   ru: внук
   en: ankle
-  freq: 5000
+  freq: 4000
   level: null
   themes: []
   decided: {}
@@ -636,7 +636,7 @@
   gen_sg: [Enkelin]
   ru: внучка
   en: granddaughter
-  freq: 5000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -660,7 +660,7 @@
   gen_sg: [Ente]
   ru: утка
   en: duck, drake (
-  freq: 6000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -732,7 +732,7 @@
   gen_sg: [Entwicklers]
   ru: разработчик
   en: developer
-  freq: null
+  freq: 38000
   level: B1
   themes: []
   decided: {}
@@ -792,7 +792,7 @@
   gen_sg: [Erderwärmung]
   ru: глобальное потепление
   en: global warming
-  freq: 35000
+  freq: 34000
   level: B1
   themes: []
   decided: {}
@@ -828,7 +828,7 @@
   gen_sg: [Ergebnisses]
   ru: результат
   en: result, outcome
-  freq: 3000
+  freq: 2000
   level: A2
   themes: []
   decided: {}
@@ -924,7 +924,7 @@
   gen_sg: [Ersthelfers]
   ru: null
   en: first-aider
-  freq: null
+  freq: 45000
   level: A2
   themes: []
   decided: {}
@@ -960,7 +960,7 @@
   gen_sg: [Erziehers]
   ru: воспитатель
   en: educator
-  freq: 31000
+  freq: 28000
   level: A1
   themes: []
   decided: {}
@@ -972,7 +972,7 @@
   gen_sg: [Erzieherin]
   ru: воспитательница
   en: educator
-  freq: 30000
+  freq: 33000
   level: A1
   themes: []
   decided: {}
@@ -1108,7 +1108,7 @@
   gen_sg: [Europäers]
   ru: европеец
   en: European
-  freq: 22000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -1120,7 +1120,7 @@
   gen_sg: [Europäerin]
   ru: европейка
   en: European
-  freq: 23000
+  freq: null
   level: A1
   themes: []
   decided: {}
@@ -1132,7 +1132,7 @@
   gen_sg: [Evakuierung]
   ru: эвакуация
   en: evacuation
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}

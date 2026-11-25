@@ -17,7 +17,7 @@
   gen_sg: [Haarbürste]
   ru: null
   en: hairbrush
-  freq: 34000
+  freq: 33000
   level: A2
   themes: []
   decided: {}
@@ -321,7 +321,7 @@
   gen_sg: [Handwerkers]
   ru: ремесленник
   en: craftsman, workman
-  freq: 10000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -333,7 +333,7 @@
   gen_sg: [Handwerkerin]
   ru: null
   en: craftswoman
-  freq: 16000
+  freq: null
   level: A1
   themes: []
   decided: {}
@@ -441,7 +441,7 @@
   gen_sg: [Hausarztes]
   ru: семейный врач
   en: family doctor, family physician
-  freq: 29000
+  freq: 21000
   level: A2
   themes: []
   decided: {}
@@ -501,7 +501,7 @@
   gen_sg: [Hausmeisters]
   ru: управдом
   en: janitor, caretaker
-  freq: 9000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -585,7 +585,7 @@
   gen_sg: [Hautarztes]
   ru: null
   en: dermatologist
-  freq: null
+  freq: 50000
   level: B1
   themes: []
   decided: {}
@@ -659,7 +659,7 @@
   gen_sg: [Heimatlands, Heimatlandes]
   ru: родная страна
   en: homeland, native country
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -767,7 +767,7 @@
   gen_sg: [Herrn, Herren]
   ru: господин
   en: gentleman
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -827,7 +827,7 @@
   gen_sg: [Himbeere]
   ru: малина
   en: raspberry
-  freq: 22000
+  freq: 21000
   level: A1
   themes: []
   decided: {}
@@ -863,7 +863,7 @@
   gen_sg: [Hinterrades, Hinterrads]
   ru: заднее колесо
   en: back wheel
-  freq: 41000
+  freq: 40000
   level: A1
   themes: []
   decided: {}
@@ -887,7 +887,7 @@
   gen_sg: [Historikers]
   ru: историк
   en: historian
-  freq: 22000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -935,7 +935,7 @@
   gen_sg: [Hochwassers]
   ru: наводнение
   en: high water, flood
-  freq: 32000
+  freq: 31000
   level: B1
   themes: []
   decided: {}
@@ -1083,7 +1083,7 @@
   gen_sg: [Hunds, Hundes]
   ru: собака, пёс
   en: dog, hound
-  freq: 800
+  freq: 600
   level: A1
   themes: []
   decided: {}
@@ -1257,7 +1257,7 @@
   gen_sg: [Hörbuches, Hörbuchs]
   ru: аудиокнига
   en: audiobook, audio book
-  freq: 40000
+  freq: 39000
   level: B1
   themes: []
   decided: {}
@@ -1269,7 +1269,7 @@
   gen_sg: [Hörers]
   ru: null
   en: listener
-  freq: 13000
+  freq: 9000
   level: A2
   themes: []
   decided: {}

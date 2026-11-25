@@ -349,7 +349,7 @@
   gen_sg: [Bauchgefühls, Bauchgefühles]
   ru: интуиция
   en: gut feeling, gut instinct
-  freq: 16000
+  freq: 15000
   level: B1
   themes: []
   decided: {}
@@ -445,7 +445,7 @@
   gen_sg: [Bearbeitung]
   ru: обработка, разработка
   en: edit, adaptation
-  freq: 27000
+  freq: 26000
   level: A2
   themes: []
   decided: {}
@@ -553,7 +553,7 @@
   gen_sg: [Begründung]
   ru: обоснование
   en: establishment, foundation
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -709,7 +709,7 @@
   gen_sg: [Benutzers]
   ru: пользователь
   en: user
-  freq: 38000
+  freq: 33000
   level: A2
   themes: []
   decided: {}
@@ -733,7 +733,7 @@
   gen_sg: [Beraters]
   ru: советник, советчик
   en: consultant, adviser
-  freq: 7000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -853,7 +853,7 @@
   gen_sg: [Besichtigung]
   ru: осмотр, освидетельствование
   en: inspection, viewing
-  freq: 18000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
@@ -938,7 +938,7 @@
   gen_sg: [Betriebsrates, Betriebsrats]
   ru: производственный совет
   en: works council
-  freq: null
+  freq: 37000
   level: B1
   themes: []
   decided: {}
@@ -1106,7 +1106,7 @@
   gen_sg: [Bilds, Bildes]
   ru: картина
   en: picture, painting
-  freq: 900
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -1348,7 +1348,7 @@
   gen_sg: [Bohrers]
   ru: сверло
   en: drill
-  freq: 20000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -1372,7 +1372,7 @@
   gen_sg: [Bohrmaschine]
   ru: дрель, перфоратор
   en: drill
-  freq: 31000
+  freq: 30000
   level: A1
   themes: []
   decided: {}
@@ -1616,7 +1616,7 @@
   gen_sg: [Briefpapieres, Briefpapiers]
   ru: почтовая бумага
   en: letter paper
-  freq: 28000
+  freq: 27000
   level: A2
   themes: []
   decided: {}
@@ -1628,7 +1628,7 @@
   gen_sg: [Briefträgers]
   ru: почтальон
   en: postman, mailman
-  freq: 22000
+  freq: 15000
   level: A1
   themes: []
   decided: {}
@@ -1714,7 +1714,7 @@
   gen_sg: [Bruders]
   ru: брат
   en: brother
-  freq: 500
+  freq: 400
   level: A1
   themes: []
   decided: {}
@@ -1798,7 +1798,7 @@
   gen_sg: [Bundeskanzlers]
   ru: федеральный канцлер
   en: Federal Chancellor
-  freq: 15000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -1922,7 +1922,7 @@
   gen_sg: [Busfahrers]
   ru: водитель автобуса
   en: bus driver
-  freq: 23000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -1946,7 +1946,7 @@
   gen_sg: [Buslinie]
   ru: автобусный маршрут
   en: bus route, bus line
-  freq: 49000
+  freq: 48000
   level: A1
   themes: []
   decided: {}
@@ -2008,7 +2008,7 @@
   gen_sg: [Bäckers]
   ru: пекарь
   en: baker
-  freq: 17000
+  freq: 12000
   level: A1
   themes: []
   decided: {}
@@ -2033,7 +2033,7 @@
   gen_sg: [Bären]
   ru: медведь
   en: bear
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -2046,7 +2046,7 @@
   gen_sg: [Bärs]
   ru: зоол. медведь, вульг. вульва
   en: mechanical ram
-  freq: 4000
+  freq: 3000
   level: null
   themes: []
   decided: {}
@@ -2094,7 +2094,7 @@
   gen_sg: [Bürgers]
   ru: гражданин, горожанин
   en: inhabitant, citizen
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -2106,7 +2106,7 @@
   gen_sg: [Bürgerinitiative]
   ru: гражданская инициатива
   en: citizens' action committee, citizens' action group
-  freq: 29000
+  freq: 28000
   level: B1
   themes: []
   decided: {}
@@ -2118,7 +2118,7 @@
   gen_sg: [Bürgermeisters]
   ru: бургомистр, мэр
   en: mayor, provost
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -2130,7 +2130,7 @@
   gen_sg: [Bürgermeisterin]
   ru: жена бургомистра
   en: mayor
-  freq: 4000
+  freq: 12000
   level: A1
   themes: []
   decided: {}

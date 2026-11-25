@@ -189,7 +189,7 @@
   gen_sg: [Gastgebers]
   ru: хозяин дома
   en: host
-  freq: 11000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -201,7 +201,7 @@
   gen_sg: [Gastgeberin]
   ru: null
   en: hostess
-  freq: 11000
+  freq: 16000
   level: B1
   themes: []
   decided: {}
@@ -273,7 +273,7 @@
   gen_sg: [Geburtsortes, Geburtsorts]
   ru: место рождения
   en: birthplace
-  freq: 19000
+  freq: 18000
   level: A1
   themes: []
   decided: {}
@@ -297,7 +297,7 @@
   gen_sg: [Gebühr]
   ru: пошлина, сбор
   en: fee
-  freq: 17000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -405,7 +405,7 @@
   gen_sg: [Gegners]
   ru: противник, оппонент
   en: adversary, opponent
-  freq: 5000
+  freq: 3000
   level: B1
   themes: []
   decided: {}
@@ -443,7 +443,7 @@
   gen_sg: [Gehaltserhöhung]
   ru: повышение оклада
   en: pay rise, salary increase
-  freq: 12000
+  freq: 11000
   level: B1
   themes: []
   decided: {}
@@ -793,7 +793,7 @@
   gen_sg: [Geschwisters]
   ru: брат и сестра
   en: siblings, brother and sister
-  freq: 9000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -853,7 +853,7 @@
   gen_sg: [Gesetzgebung]
   ru: законодательство
   en: legislation
-  freq: 31000
+  freq: 30000
   level: B1
   themes: []
   decided: {}
@@ -1033,7 +1033,7 @@
   gen_sg: [Girokontos]
   ru: текущий счёт, жиросчёт
   en: checking account, giro account
-  freq: 38000
+  freq: 37000
   level: A2
   themes: []
   decided: {}
@@ -1057,7 +1057,7 @@
   gen_sg: [Gitarristen]
   ru: гитарист
   en: guitarist
-  freq: 24000
+  freq: 20000
   level: A1
   themes: []
   decided: {}
@@ -1095,7 +1095,7 @@
   gen_sg: [Glatteises]
   ru: гололёд
   en: black ice
-  freq: 42000
+  freq: 41000
   level: B1
   themes: []
   decided: {}
@@ -1352,7 +1352,7 @@
   gen_sg: [Großmutter]
   ru: бабушка
   en: grandmother
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1376,7 +1376,7 @@
   gen_sg: [Großvaters]
   ru: дедушка, дед
   en: grandfather, grandsire
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1412,7 +1412,7 @@
   gen_sg: [Grundrechts, Grundrechtes]
   ru: основное право
   en: basic right
-  freq: 30000
+  freq: 29000
   level: B1
   themes: []
   decided: {}
@@ -1448,7 +1448,7 @@
   gen_sg: [Grußkarte]
   ru: null
   en: greeting card
-  freq: 36000
+  freq: 35000
   level: A2
   themes: []
   decided: {}
@@ -1484,7 +1484,7 @@
   gen_sg: [Gurke]
   ru: огурец
   en: cucumber, gherkin
-  freq: 13000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -1520,7 +1520,7 @@
   gen_sg: [Gymnastik]
   ru: гимнастика
   en: gymnastics
-  freq: 23000
+  freq: 22000
   level: B1
   themes: []
   decided: {}
@@ -1532,7 +1532,7 @@
   gen_sg: [Gärtners]
   ru: садовник
   en: gardener
-  freq: 13000
+  freq: 11000
   level: A1
   themes: []
   decided: {}

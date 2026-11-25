@@ -209,7 +209,7 @@
   gen_sg: [Rechtsanwaltes, Rechtsanwalts]
   ru: адвокат, защитник
   en: lawyer, barrister
-  freq: 7000
+  freq: 6000
   level: B1
   themes: []
   decided: {}
@@ -221,7 +221,7 @@
   gen_sg: [Rechtschreibung]
   ru: правописание
   en: orthography, spelling
-  freq: 25000
+  freq: 24000
   level: B1
   themes: []
   decided: {}
@@ -233,7 +233,7 @@
   gen_sg: [Rechtsstaats, Rechtsstaates]
   ru: правовое государство
   en: constitutional state, rule of law
-  freq: 49000
+  freq: 48000
   level: B1
   themes: []
   decided: {}
@@ -257,7 +257,7 @@
   gen_sg: [Rede]
   ru: речь
   en: speech, address
-  freq: 300
+  freq: 400
   level: B1
   themes: []
   decided: {}
@@ -365,7 +365,7 @@
   gen_sg: [Regisseurs]
   ru: режиссёр
   en: director, producer
-  freq: 6000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -463,7 +463,7 @@
   gen_sg: [Reiseführers]
   ru: путеводитель
   en: guide
-  freq: 30000
+  freq: 21000
   level: A2
   themes: []
   decided: {}
@@ -667,7 +667,7 @@
   gen_sg: [Rettungsdienstes, Rettungsdiensts]
   ru: спасательная служба
   en: emergency medical services, rescue service
-  freq: 26000
+  freq: 25000
   level: A2
   themes: []
   decided: {}
@@ -679,7 +679,7 @@
   gen_sg: [Rettungswagens]
   ru: аварийная машина
   en: ambulance vehicle
-  freq: 14000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -715,7 +715,7 @@
   gen_sg: [Richters]
   ru: судья
   en: judge
-  freq: 3000
+  freq: 2000
   level: A2
   themes: []
   decided: {}
@@ -789,7 +789,7 @@
   gen_sg: [Roboters]
   ru: робот
   en: robot
-  freq: 5000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -1085,7 +1085,7 @@
   gen_sg: [Rückgabe]
   ru: возврат, отдача
   en: return
-  freq: 24000
+  freq: 23000
   level: A1
   themes: []
   decided: {}
@@ -1121,7 +1121,7 @@
   gen_sg: [Rückmeldung]
   ru: обратный контроль, обратная информация
   en: feedback
-  freq: 28000
+  freq: 27000
   level: A2
   themes: []
   decided: {}

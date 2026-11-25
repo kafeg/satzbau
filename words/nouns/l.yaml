@@ -127,7 +127,7 @@
   gen_sg: [Landkarte]
   ru: географическая карта
   en: map
-  freq: 14000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -151,7 +151,7 @@
   gen_sg: [Landsmannes]
   ru: соотечественник, земляк
   en: compatriot
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -199,7 +199,7 @@
   gen_sg: [Lappens]
   ru: тряпка
   en: rag, cloth
-  freq: 15000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -236,7 +236,7 @@
   gen_sg: [Latte]
   ru: рейка
   en: lath, 4-cornered bar
-  freq: 14000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -249,7 +249,7 @@
   gen_sg: [Latte]
   ru: латте
   en: null
-  freq: 14000
+  freq: 13000
   level: null
   themes: []
   decided: {}
@@ -309,7 +309,7 @@
   gen_sg: [Lebenslaufs, Lebenslaufes]
   ru: резюме
   en: curriculum vitae
-  freq: 8000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -393,7 +393,7 @@
   gen_sg: [Lehrers]
   ru: учитель
   en: teacher, instructor
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -405,7 +405,7 @@
   gen_sg: [Lehrerin]
   ru: учительница
   en: female ) teacher, instructor
-  freq: 3000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -454,7 +454,7 @@
   gen_sg: [Leiters]
   ru: руководитель, директор
   en: head, director
-  freq: 5000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -467,7 +467,7 @@
   gen_sg: [Leiter]
   ru: лестница, лестница-стремянка
   en: ladder
-  freq: 5000
+  freq: 3000
   level: null
   themes: []
   decided: {}
@@ -480,7 +480,7 @@
   gen_sg: [Leiter]
   ru: лестница
   en: ladder
-  freq: 5000
+  freq: 3000
   level: null
   themes: []
   decided: {}
@@ -504,7 +504,7 @@
   gen_sg: [Lenkrades, Lenkrads]
   ru: руль
   en: steering wheel
-  freq: 11000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -516,7 +516,7 @@
   gen_sg: [Lesers]
   ru: читатель
   en: reader
-  freq: 13000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -553,7 +553,7 @@
   gen_sg: [Lieblingsband]
   ru: null
   en: favorite band, favourite band
-  freq: 39000
+  freq: 38000
   level: A1
   themes: []
   decided: {}
@@ -881,7 +881,7 @@
   gen_sg: [Längengrads, Längengrades]
   ru: долгота
   en: longitude, meridian
-  freq: 35000
+  freq: 34000
   level: B1
   themes: []
   decided: {}

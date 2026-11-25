@@ -30,7 +30,7 @@
   gen_sg: [Dame]
   ru: дама, госпожа
   en: lady
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -43,7 +43,7 @@
   gen_sg: []
   ru: шашки
   en: draughts, checkers
-  freq: 900
+  freq: 800
   level: null
   themes: []
   decided: {}
@@ -211,7 +211,7 @@
   gen_sg: [Deodorants]
   ru: дезодорант
   en: deodorant
-  freq: 31000
+  freq: 30000
   level: A2
   themes: []
   decided: {}
@@ -259,7 +259,7 @@
   gen_sg: [Dialekts, Dialektes]
   ru: диалект, наречие, говор
   en: dialect
-  freq: 20000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -391,7 +391,7 @@
   gen_sg: [Dirigenten]
   ru: дирижёр
   en: conductor
-  freq: 21000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -439,7 +439,7 @@
   gen_sg: [Dolmetschers]
   ru: устный переводчик
   en: interpreter
-  freq: 19000
+  freq: 15000
   level: A1
   themes: []
   decided: {}
@@ -451,7 +451,7 @@
   gen_sg: [Dolmetscherin]
   ru: переводчица
   en: interpreter
-  freq: 19000
+  freq: 30000
   level: A1
   themes: []
   decided: {}
@@ -535,7 +535,7 @@
   gen_sg: [Dozenten]
   ru: доцент
   en: lecturer, university lecturer
-  freq: 22000
+  freq: 19000
   level: A2
   themes: []
   decided: {}
@@ -583,7 +583,7 @@
   gen_sg: [Druckers]
   ru: принтер
   en: printer
-  freq: 13000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -619,7 +619,7 @@
   gen_sg: [Durchsage]
   ru: сообщение
   en: announcement
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}

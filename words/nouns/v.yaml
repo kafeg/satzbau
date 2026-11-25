@@ -29,7 +29,7 @@
   gen_sg: [Vatis]
   ru: разг. папа
   en: daddy
-  freq: 600
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -197,7 +197,7 @@
   gen_sg: [Verhandlung]
   ru: переговоры
   en: trial
-  freq: 3000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -221,7 +221,7 @@
   gen_sg: [Verkehrskontrolle]
   ru: null
   en: traffic stop
-  freq: 35000
+  freq: 34000
   level: B1
   themes: []
   decided: {}
@@ -233,7 +233,7 @@
   gen_sg: [Verkäufers]
   ru: продавец
   en: seller, vendor
-  freq: 9000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -245,7 +245,7 @@
   gen_sg: [Verkäuferin]
   ru: продавщица
   en: seller
-  freq: 9000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -293,7 +293,7 @@
   gen_sg: [Vermieters]
   ru: наймодатель, арендодатель
   en: landlord
-  freq: 12000
+  freq: 10000
   level: A2
   themes: []
   decided: {}
@@ -305,7 +305,7 @@
   gen_sg: [Vermieterin]
   ru: наймодательница, арендодательница
   en: landlady
-  freq: 13000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -317,7 +317,7 @@
   gen_sg: [Vermittlers]
   ru: посредник
   en: mediator, arbitrator
-  freq: 21000
+  freq: 15000
   level: A2
   themes: []
   decided: {}
@@ -365,7 +365,7 @@
   gen_sg: [Verordnung]
   ru: распоряжение
   en: regulation, statutory instrument
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -595,7 +595,7 @@
   gen_sg: [Visums]
   ru: виза
   en: visa
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -619,7 +619,7 @@
   gen_sg: [Vokabels, Vokabel]
   ru: вокабула
   en: word, vocabulary
-  freq: 41000
+  freq: 40000
   level: A2
   themes: []
   decided: {}
@@ -655,7 +655,7 @@
   gen_sg: [Volksfestes, Volksfests]
   ru: народный праздник
   en: fair, folk festival
-  freq: 38000
+  freq: 37000
   level: B1
   themes: []
   decided: {}
@@ -727,7 +727,7 @@
   gen_sg: [Vorderrades, Vorderrads]
   ru: переднее колесо
   en: front wheel
-  freq: 45000
+  freq: 44000
   level: A1
   themes: []
   decided: {}

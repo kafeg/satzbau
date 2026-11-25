@@ -353,7 +353,7 @@
   gen_sg: [Urenkels]
   ru: правнук
   en: great-grandson
-  freq: 42000
+  freq: 32000
   level: A1
   themes: []
   decided: {}
@@ -365,7 +365,7 @@
   gen_sg: [Urenkelin]
   ru: правнучка
   en: great-granddaughter
-  freq: 44000
+  freq: null
   level: A1
   themes: []
   decided: {}
@@ -426,7 +426,7 @@
   gen_sg: [Übergabe]
   ru: передача
   en: transfer, handover
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}

@@ -41,7 +41,7 @@
   gen_sg: [Paketes, Pakets]
   ru: посылка
   en: packet
-  freq: 3000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -225,7 +225,7 @@
   gen_sg: [Parkscheines, Parkscheins]
   ru: null
   en: parking ticket
-  freq: 35000
+  freq: 34000
   level: A2
   themes: []
   decided: {}
@@ -261,7 +261,7 @@
   gen_sg: [Partnerin]
   ru: партнёрша
   en: null
-  freq: 2000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -599,7 +599,7 @@
   gen_sg: [Pianisten]
   ru: пианист
   en: pianist
-  freq: 19000
+  freq: 17000
   level: A1
   themes: []
   decided: {}
@@ -686,7 +686,7 @@
   gen_sg: [Pinzette]
   ru: пинцет
   en: tweezers
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -722,7 +722,7 @@
   gen_sg: [Platzes]
   ru: площадь
   en: circus, square
-  freq: 900
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -734,7 +734,7 @@
   gen_sg: [Plätzchens]
   ru: печенье
   en: cookie, biscuit
-  freq: 14000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -746,7 +746,7 @@
   gen_sg: [Podcasts]
   ru: подкаст
   en: podcast
-  freq: 40000
+  freq: 39000
   level: A2
   themes: []
   decided: {}
@@ -794,7 +794,7 @@
   gen_sg: [Politikers]
   ru: политик, политический деятель
   en: politician
-  freq: 7000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -806,7 +806,7 @@
   gen_sg: [Politikerin]
   ru: null
   en: female politician
-  freq: 8000
+  freq: 37000
   level: A1
   themes: []
   decided: {}
@@ -866,7 +866,7 @@
   gen_sg: [Polizistin]
   ru: женщина-полицейский
   en: policewoman, bobby
-  freq: 3000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -964,7 +964,7 @@
   gen_sg: [Postboten]
   ru: почтальон
   en: postman, mailman
-  freq: 15000
+  freq: 12000
   level: A1
   themes: []
   decided: {}
@@ -1372,7 +1372,7 @@
   gen_sg: [Päckchens]
   ru: небольшая розничная упаковка, почт. малогабаритная посылка
   en: small packet, parcel
-  freq: 10000
+  freq: 7000
   level: A1
   themes: []
   decided: {}

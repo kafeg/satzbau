@@ -127,7 +127,7 @@
   gen_sg: [Jugendherberge]
   ru: молодёжная турбаза, хостел
   en: youth hostel
-  freq: 36000
+  freq: 35000
   level: A2
   themes: []
   decided: {}
@@ -139,7 +139,7 @@
   gen_sg: [Jungen]
   ru: мальчик
   en: boy
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -151,7 +151,7 @@
   gen_sg: [Juristen]
   ru: юрист
   en: jurist, lawyer
-  freq: 22000
+  freq: 19000
   level: A1
   themes: []
   decided: {}

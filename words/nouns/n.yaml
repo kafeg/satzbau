@@ -17,7 +17,7 @@
   gen_sg: [Nachbarin]
   ru: соседка
   en: neighbour
-  freq: 5000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Nachtisches, Nachtischs]
   ru: десерт, сладкое
   en: dessert, pudding
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -478,7 +478,7 @@
   gen_sg: [Netzwerks, Netzwerkes]
   ru: сеть
   en: network
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -538,7 +538,7 @@
   gen_sg: [Niederlassung]
   ru: спуск, опускание
   en: establishment
-  freq: 34000
+  freq: 33000
   level: B1
   themes: []
   decided: {}
@@ -550,7 +550,7 @@
   gen_sg: [Niederschlages, Niederschlags]
   ru: осадки
   en: precipitation
-  freq: 27000
+  freq: 26000
   level: B1
   themes: []
   decided: {}
@@ -646,7 +646,7 @@
   gen_sg: [Notarztes]
   ru: врач скорой помощи
   en: emergency physician
-  freq: 13000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -670,7 +670,7 @@
   gen_sg: [Notausganges, Notausgangs]
   ru: аварийный выход
   en: emergency exit, fire escape
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -694,7 +694,7 @@
   gen_sg: [Notdienstes, Notdiensts]
   ru: null
   en: emergency service
-  freq: 30000
+  freq: 29000
   level: A2
   themes: []
   decided: {}

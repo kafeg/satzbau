@@ -17,7 +17,7 @@
   gen_sg: [Maklers]
   ru: маклер
   en: broker
-  freq: 13000
+  freq: 11000
   level: B1
   themes: []
   decided: {}
@@ -29,7 +29,7 @@
   gen_sg: [Malers]
   ru: художник, маляр
   en: painter artist
-  freq: 12000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -41,7 +41,7 @@
   gen_sg: [Mama]
   ru: мама, мамочка
   en: Mom
-  freq: 300
+  freq: 500
   level: A1
   themes: []
   decided: {}
@@ -117,7 +117,7 @@
   gen_sg: [Maniküre]
   ru: маникюр
   en: manicure
-  freq: 22000
+  freq: 21000
   level: A2
   themes: []
   decided: {}
@@ -433,7 +433,7 @@
   gen_sg: [Mechanikers]
   ru: механик
   en: mechanic
-  freq: 11000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -445,7 +445,7 @@
   gen_sg: [Mechanikerin]
   ru: механик
   en: mechanic
-  freq: 12000
+  freq: 38000
   level: A1
   themes: []
   decided: {}
@@ -737,7 +737,7 @@
   gen_sg: [Mietautos]
   ru: наёмный автомобиль, такси
   en: null
-  freq: 44000
+  freq: 43000
   level: A2
   themes: []
   decided: {}
@@ -908,7 +908,7 @@
   gen_sg: [Ministers]
   ru: министр
   en: minister, secretary
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -956,7 +956,7 @@
   gen_sg: [Mitarbeiters]
   ru: сотрудник
   en: employee, coworker
-  freq: 5000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -968,7 +968,7 @@
   gen_sg: [Mitarbeiterin]
   ru: сотрудница
   en: assistant
-  freq: 5000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -1004,7 +1004,7 @@
   gen_sg: [Mitspielers]
   ru: партнёр по игре
   en: teammate
-  freq: 32000
+  freq: 22000
   level: A2
   themes: []
   decided: {}
@@ -1054,7 +1054,7 @@
   gen_sg: [Mittagsschlafes, Mittagsschlafs]
   ru: послеобеденный сон, тихий час
   en: afternoon nap, siesta
-  freq: 20000
+  freq: 22000
   level: B1
   themes: []
   decided: {}
@@ -1128,7 +1128,7 @@
   gen_sg: [Moderators]
   ru: ведущий
   en: moderator, host
-  freq: 17000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -1348,7 +1348,7 @@
   gen_sg: [Musikers]
   ru: музыкант
   en: musician
-  freq: 8000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -1360,7 +1360,7 @@
   gen_sg: [Musikinstrumentes, Musikinstruments]
   ru: музыкальный инструмент
   en: musical instrument, instrument
-  freq: 36000
+  freq: 35000
   level: A1
   themes: []
   decided: {}
@@ -1422,7 +1422,7 @@
   gen_sg: [Muttersprache]
   ru: родной язык
   en: mother tongue, native language
-  freq: 27000
+  freq: 26000
   level: A2
   themes: []
   decided: {}
@@ -1458,7 +1458,7 @@
   gen_sg: [Mutti]
   ru: мама
   en: mummy, mommy
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}

@@ -17,7 +17,7 @@
   gen_sg: [Facharztes]
   ru: врач-специалист
   en: specialist
-  freq: 40000
+  freq: 31000
   level: A2
   themes: []
   decided: {}
@@ -41,7 +41,7 @@
   gen_sg: [Fahrers]
   ru: водитель
   en: driver
-  freq: 4000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -53,7 +53,7 @@
   gen_sg: [Fahrerin]
   ru: null
   en: driver
-  freq: 4000
+  freq: 21000
   level: A1
   themes: []
   decided: {}
@@ -113,7 +113,7 @@
   gen_sg: [Fahrlehrers]
   ru: инструктор по вождению
   en: driving instructor
-  freq: null
+  freq: 36000
   level: B1
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Fahrschule]
   ru: автошкола
   en: driving school
-  freq: 35000
+  freq: 34000
   level: B1
   themes: []
   decided: {}
@@ -221,7 +221,7 @@
   gen_sg: [Falschmeldung]
   ru: ложное сообщение
   en: false report
-  freq: 41000
+  freq: 40000
   level: B1
   themes: []
   decided: {}
@@ -269,7 +269,7 @@
   gen_sg: [Fans]
   ru: любитель, поклонник
   en: fan, enthusiast
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -439,7 +439,7 @@
   gen_sg: [Felge]
   ru: обод
   en: rim
-  freq: 27000
+  freq: 26000
   level: B1
   themes: []
   decided: {}
@@ -511,7 +511,7 @@
   gen_sg: [Fernsehgerätes, Fernsehgeräts]
   ru: телевизор
   en: television set, television
-  freq: 41000
+  freq: 40000
   level: A1
   themes: []
   decided: {}
@@ -571,7 +571,7 @@
   gen_sg: [Festtages, Festtags]
   ru: праздничный день
   en: festive day
-  freq: 24000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -957,7 +957,7 @@
   gen_sg: [Flüchtlings]
   ru: беженец
   en: refugee
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -1067,7 +1067,7 @@
   gen_sg: [Fotoalbums]
   ru: фотоальбом
   en: photo album
-  freq: 22000
+  freq: 21000
   level: A2
   themes: []
   decided: {}
@@ -1079,7 +1079,7 @@
   gen_sg: [Fotografen]
   ru: фотограф
   en: photographer
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1249,7 +1249,7 @@
   gen_sg: [Freunds, Freundes]
   ru: друг
   en: friend
-  freq: 300
+  freq: 200
   level: A1
   themes: []
   decided: {}
@@ -1261,7 +1261,7 @@
   gen_sg: [Freundin]
   ru: подруга
   en: friend
-  freq: 400
+  freq: 500
   level: A1
   themes: []
   decided: {}
@@ -1285,7 +1285,7 @@
   gen_sg: [Friseurs]
   ru: парикмахер
   en: barber, hairdresser
-  freq: 12000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -1297,7 +1297,7 @@
   gen_sg: [Friseurin]
   ru: парикмахерша
   en: hairdresser
-  freq: 16000
+  freq: 40000
   level: A1
   themes: []
   decided: {}
