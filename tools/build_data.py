@@ -161,6 +161,9 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     # no_plural главнее источника: у Polizei и Post форма в словаре есть, но это
     # либо другое слово (Posten), либо форма, которой в речи не бывает
     # ⚠ Ручной род ЗАБРАКОВАЛ строку источника целиком: она про другое слово. Значит
+    # и всё, что из неё взято, — чужое: множественное и родительный.
+    foreign_row = bool(fix and src_g and fix['g'] != src_g)
+    # ⚠ Ручной род ЗАБРАКОВАЛ строку источника целиком: она про другое слово. Значит
     # и множественное в ней чужое — у Bank это «Bänke» от скамьи, у Leiter «Leiter»
     # от руководителя, у Steuer «Steuer» от руля. Ошибка тихая: форма есть, она просто
     # не от этого слова. Поэтому там, где ручной род НЕ совпал с родом источника,
@@ -170,7 +173,10 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
             and lemma not in fixes['mass']):
         rep.append((lemma, f'ручной род {fix["g"]} против {src_g} у источника: его множественное '
                            'от другого слова — нужна строка в fixes.yaml:plural'))
-    pl = fixes['plural'].get(lemma) or (e or {}).get('pl') or (ke and kform(ke, 'plural'))
+    # у забракованной строки множественное не берём даже как запасное: у die Butter
+    # оттуда приезжало «Butters», у der Reis — «Reise» (это die Reise, поездка)
+    pl = fixes['plural'].get(lemma) or (
+        None if foreign_row else ((e or {}).get('pl') or (ke and kform(ke, 'plural'))))
     if lemma in fixes['no_plural']:
         n['npl'] = 1                      # множественного нет и не должно быть: Hunger, Obst
     elif pl:
@@ -181,7 +187,8 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
             n['pla'] = [f for f in also if f != pl]
     elif not pl_only:
         rep.append((lemma, 'нет множественного'))
-    gen = (e or {}).get('gen') or (ke and kform(ke, 'genitive'))
+    # родительный оттуда же и так же чужой: у die Leiter было «Leiters» от руководителя
+    gen = None if foreign_row else ((e or {}).get('gen') or (ke and kform(ke, 'genitive')))
     akk = (e or {}).get('akk') or lemma
     manual_nd = fixes['n_declension'].get(lemma)
     if manual_nd:

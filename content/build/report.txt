@@ -1,10 +1,11 @@
-сборка 2026-11-25, версия данных d1a7d28f92f2
+сборка 2026-11-25, версия данных 7bc4df7203d1
 
 слов в themes.yaml: 2675; собрано: 2675; потеряно: 0
 
-замечания (79):
+замечания (80):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
   Boot                   род спорный n/m — решение в fixes.yaml:gender
+  Butter                 нет множественного
   Drittel                род спорный n/m — решение в fixes.yaml:gender
   Eimer                  род спорный m/f — решение в fixes.yaml:gender
   Ersatzteil             fixes.yaml:gender_also повторяет основной род m
@@ -140,12 +141,12 @@
 размеры:
   adjs.json         n=355        23.0 КиБ   gzip     5.9 КиБ
   explain.json      n=44         54.5 КиБ   gzip    14.2 КиБ
-  nouns.json        n=1836      156.7 КиБ   gzip    36.1 КиБ
+  nouns.json        n=1836      156.6 КиБ   gzip    36.1 КиБ
   sentences.json    n=6197      679.0 КиБ   gzip   202.0 КиБ
   templates.json    n=119        35.8 КиБ   gzip     4.1 КиБ
   themes.json       n=31        154.4 КиБ   gzip    19.6 КиБ
   verbs.json        n=484        75.6 КиБ   gzip    17.3 КиБ
-  ИТОГО                      1179.0 КиБ   gzip   299.1 КиБ
+  ИТОГО                      1178.9 КиБ   gzip   299.1 КиБ
 
 предложения Tatoeba, отбраковка:
   незнакомая словоформа      105285
