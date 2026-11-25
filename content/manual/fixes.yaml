@@ -126,6 +126,9 @@ gender:
   Teller:  {g: m, note: "der Teller"}
   Zwiebel: {g: f, note: "die Zwiebel"}
   Husten:  {g: m, note: "der Husten"}
+  Mensch:  {g: m, note: "der Mensch — человек; das Mensch — бранное, устаревшее"}
+  Foto:    {g: n, note: "das Foto"}
+  Stift:   {g: m, note: "der Stift — ручка, карандаш; das Stift — монастырь, богадельня"}
   Mund:    {g: m, note: "der Mund"}
   # б) составных слов нет в nouns.csv — без этого в сборку не попадут
   Fortbildung: {g: f}
@@ -152,6 +155,13 @@ no_plural:
   - Glatteis
   - Luft
   - Hitze
+  - Aussehen
+  - Jugend
+  - Vertrauen
+  - Respekt
+  - Kindheit
+  - Langeweile
+  - Mathematik
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -512,6 +522,147 @@ translations:
   frostig:        морозный
   langfristig:    долгосрочный
   monatlich:      ежемесячный
+  # люди и знакомство
+  Mensch:         человек
+  Person:         лицо, человек
+  Körper:         тело
+  Haar:           волосы
+  Stimme:         голос
+  Gast:           гость
+  Cousin:         двоюродный брат
+  Ehepaar:        супружеская пара
+  Schwiegermutter: тёща, свекровь
+  Schwiegervater: тесть, свёкор
+  Zwilling:       близнец
+  Vorname:        личное имя
+  Beziehung:      отношения
+  Eindruck:       впечатление
+  Trennung:       расставание
+  Gewohnheit:     привычка
+  Jugend:         молодость
+  vorstellen:     представлять, знакомить
+  kennenlernen:   знакомиться
+  verabschieden:  прощаться
+  heiraten:       жениться, выходить замуж
+  ledig:          холостой, незамужняя
+  treu:           верный, преданный
+  # одежда и покупки
+  Kleidung:       одежда
+  Hemd:           рубашка
+  Anzug:          костюм
+  Pullover:       свитер
+  Schuh:          ботинок, туфля
+  Socke:          носок
+  Mütze:          шапка
+  Gürtel:         ремень, пояс
+  Kette:          цепочка
+  Kragen:         воротник
+  Tasche:         сумка, карман
+  Wäsche:         бельё, стирка
+  Baumwolle:      хлопок
+  Größe:          размер
+  Marke:          марка, бренд
+  Rabatt:         скидка
+  Ring:           кольцо
+  Turnschuh:      кроссовок
+  Geldbeutel:     кошелёк
+  Verkäufer:      продавец
+  anziehen:       надевать
+  ausziehen:      снимать одежду
+  waschen:        стирать, мыть
+  bügeln:         гладить
+  reinigen:       чистить
+  umtauschen:     обменять покупку
+  aussuchen:      выбирать
+  blau:           синий, голубой
+  rot:            красный
+  braun:          коричневый
+  grau:           серый
+  schick:         элегантный
+  locker:         свободный, не тесный
+  praktisch:      практичный
+  # свободное время
+  Spaß:           удовольствие, веселье
+  Film:           фильм
+  Party:          вечеринка
+  Kamera:         фотоаппарат
+  Zoo:            зоопарк
+  Schach:         шахматы
+  Verein:         клуб, общество
+  Mitglied:       член клуба
+  Bühne:          сцена
+  Veranstaltung:  мероприятие
+  Unterhaltung:   развлечение, беседа
+  Abwechslung:    разнообразие
+  Sammlung:       коллекция
+  Würfel:         игральный кубик
+  Wanderung:      поход
+  Hörbuch:        аудиокнига
+  Theaterstück:   пьеса
+  Flohmarkt:      блошиный рынок
+  Krimi:          детектив
+  Leidenschaft:   страсть
+  Ehrenamt:       общественная работа
+  Künstler:       художник, артист
+  Tanzkurs:       курсы танцев
+  hören:          слушать, слышать
+  treffen:        встречать
+  tanzen:         танцевать
+  wandern:        ходить в поход
+  einladen:       приглашать
+  Einladung:      приглашение
+  entspannen:     расслабляться
+  genießen:       наслаждаться
+  ausgehen:       выходить в свет
+  zuschauen:      смотреть со стороны
+  üben:           тренироваться, упражняться
+  beliebt:        популярный
+  gemeinsam:      совместный
+  unterhaltsam:   занимательный
+  aufregend:      волнующий, захватывающий
+  # учёба и язык
+  Seite:          страница
+  Wort:           слово
+  Punkt:          балл, точка
+  Test:           тест
+  Kurs:           курс занятий
+  Unterricht:     урок, занятия
+  Prüfung:        экзамен
+  Abschluss:      окончание учёбы, диплом
+  Stift:          ручка, карандаш
+  Studium:        учёба в вузе
+  Fortschritt:    прогресс, успехи
+  Kenntnis:       знание
+  Anfänger:       начинающий
+  Bildung:        образование
+  Stipendium:     стипендия
+  Fach:           учебный предмет
+  Note:           оценка
+  Notiz:          заметка
+  Nachhilfe:      репетиторство
+  Aussprache:     произношение
+  Dozent:         преподаватель вуза
+  Wortschatz:     словарный запас
+  Diktat:         диктант
+  Zertifikat:     сертификат
+  Hörsaal:        лекционная аудитория
+  Vokabel:        слово из словаря
+  Arbeitsblatt:   рабочий лист
+  Sprachkurs:     языковые курсы
+  Schüler:        ученик
+  Regel:          правило
+  merken:         запоминать
+  bestehen:       сдать экзамен
+  studieren:      учиться в вузе
+  übersetzen:     переводить
+  korrigieren:    исправлять
+  buchstabieren:  произносить по буквам
+  abschreiben:    списывать
+  falsch:         неправильный
+  schwierig:      трудный
+  deutlich:       чёткий
+  fließend:       беглый, свободный
+  mühsam:         трудоёмкий
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);

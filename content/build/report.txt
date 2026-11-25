@@ -1,57 +1,76 @@
-сборка 2026-11-25, версия данных deaf2143bf40
+сборка 2026-11-25, версия данных aec466fb461c
 
-слов в themes.yaml: 785; собрано: 785; потеряно: 0
+слов в themes.yaml: 1134; собрано: 1134; потеряно: 0
 
-замечания (16):
+замечания (26):
+  Alter                  род спорный n/m — решение в fixes.yaml:gender
   Grad                   род спорный m/n — решение в fixes.yaml:gender
+  Haar                   род спорный n/f — решение в fixes.yaml:gender
+  Hut                    род спорный m/f — решение в fixes.yaml:gender
   Laden                  род спорный m/n — решение в fixes.yaml:gender
   Luft                   род спорный f/m — решение в fixes.yaml:gender
   Mittag                 род спорный m/n — решение в fixes.yaml:gender
+  Mode                   род спорный f/m — решение в fixes.yaml:gender
   Monat                  род спорный m/n — решение в fixes.yaml:gender
   Morgen                 род спорный m/n — решение в fixes.yaml:gender
   Nebel                  род спорный m/f — решение в fixes.yaml:gender
+  Neffe                  род спорный m/f — решение в fixes.yaml:gender
   Post                   род спорный f/m — решение в fixes.yaml:gender
+  Radio                  род спорный n/m — решение в fixes.yaml:gender
   Tag                    род спорный m/n — решение в fixes.yaml:gender
+  Vokabel                род спорный f/n — решение в fixes.yaml:gender
   Wetter                 род спорный n/m — решение в fixes.yaml:gender
   altersgerecht          нет в kaikki — степени сравнения выводятся правилом
+  anziehen               aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   aufstehen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  ausziehen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   frieren                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   qualifiziert           нет в kaikki — степени сравнения выводятся правилом
   schneien               aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   stürmen                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  tanzen                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (14) — проверить и внести
+управление, предложено источниками (23) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   anfangen               von D
   ankommen               auf A
   beginnen               mit D
+  bestehen               aus D, auf D
   bewerben               für A
+  einladen               zu D
+  erzählen               von D
   freuen                 über A, auf A, für A
   leben                  von D
+  passen                 für A, zu D
   schlafen               über A
   setzen                 auf A
   streiten               über A
   suchen                 nach D
+  verabschieden          von D
   verdienen              für A
+  vertiefen              in A
+  vorbereiten            auf A
   zahlen                 an A
   zeigen                 auf A
+  üben                   in D
+  übersetzen             in A, aus D
 
 размеры:
-  adjs.json         n=121         7.8 КиБ   gzip     2.2 КиБ
+  adjs.json         n=189        11.8 КиБ   gzip     3.1 КиБ
   explain.json      n=44         54.6 КиБ   gzip    14.2 КиБ
-  nouns.json        n=487        40.4 КиБ   gzip     9.8 КиБ
-  sentences.json    n=2366      240.0 КиБ   gzip    67.2 КиБ
+  nouns.json        n=711        57.8 КиБ   gzip    13.7 КиБ
+  sentences.json    n=3621      374.4 КиБ   gzip   107.9 КиБ
   templates.json    n=80         23.6 КиБ   gzip     3.1 КиБ
-  themes.json       n=8          45.0 КиБ   gzip     5.9 КиБ
-  verbs.json        n=177        28.3 КиБ   gzip     6.9 КиБ
-  ИТОГО                       439.7 КиБ   gzip   109.3 КиБ
+  themes.json       n=12         65.2 КиБ   gzip     8.4 КиБ
+  verbs.json        n=234        36.8 КиБ   gzip     8.8 КиБ
+  ИТОГО                       624.2 КиБ   gzip   159.1 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      130606
+  незнакомая словоформа      119843
   длина не 3–8               30998
-  имя исчерпало квоту        879
+  имя исчерпало квоту        2311
   нет точки в конце          822
-  примеров на имя: Tom 2000, Maria 388, Deutschland 57, Oktober 36, Berlin 32
-  слов без примеров: 206 из 785
-    Abfahrt, Abmahnung, Abteil, Abteilung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brotdose, Bürger, Bürgeramt, Café, Dosierung, Durchsage, Dürre, Eingewöhnung, Einschulung …
+  примеров на имя: Tom 2000, Maria 580, Deutschland 67, Oktober 40, Berlin 36
+  слов без примеров: 246 из 1134
+    Abfahrt, Abmahnung, Abschluss, Abteil, Abteilung, Abwechslung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brettspiel, Brotdose, Bürger, Bürgeramt, Café, Dosierung …

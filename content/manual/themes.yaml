@@ -852,3 +852,380 @@ weather:
     - {w: vorübergehend, pos: a, lv: B1, tags: [quality, absolute]}
     - {w: langfristig,   pos: a, lv: B1, tags: [quality, absolute]}
     - {w: kurzfristig,   pos: a, lv: B1, tags: [quality, absolute]}
+
+people:
+  title: Люди и знакомство
+  words:
+    # A1 — как зовут, кто кому кем приходится
+    - {w: Mann,          pos: n, lv: A1, tags: [person]}
+    - {w: Frau,          pos: n, lv: A1, tags: [person]}
+    - {w: Mensch,        pos: n, lv: A1, tags: [person]}
+    - {w: Leute,         pos: n, lv: A1, tags: [person]}
+    - {w: Herr,          pos: n, lv: A1, tags: [person]}
+    - {w: Dame,          pos: n, lv: A1, tags: [person]}
+    - {w: Gast,          pos: n, lv: A1, tags: [person]}
+    - {w: Sohn,          pos: n, lv: A1, tags: [person]}
+    - {w: Tochter,       pos: n, lv: A1, tags: [person]}
+    - {w: Onkel,         pos: n, lv: A1, tags: [person]}
+    - {w: Tante,         pos: n, lv: A1, tags: [person]}
+    - {w: Freundin,      pos: n, lv: A1, tags: [person]}
+    - {w: Name,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Vorname,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Nachname,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Alter,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Gesicht,       pos: n, lv: A1, tags: [body]}
+    - {w: Haar,          pos: n, lv: A1, tags: [body]}
+    - {w: Bart,          pos: n, lv: A1, tags: [body]}
+    - {w: Brille,        pos: n, lv: A1, tags: [thing]}
+    - {w: Person,        pos: n, lv: A1, tags: [person]}
+    - {w: Körper,        pos: n, lv: A1, tags: [body]}
+    - {w: kennen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: erzählen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: grüßen,        pos: v, lv: A1, tags: [state, obj, obj_person]}
+    - {w: lieben,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: sprechen,      pos: v, lv: A1, tags: [state, solo]}
+    - {w: jung,          pos: a, lv: A1, tags: [quality, person]}
+    - {w: hübsch,        pos: a, lv: A1, tags: [quality, person]}
+    - {w: lustig,        pos: a, lv: A1, tags: [quality, person]}
+    # A2 — отношения и характер
+    - {w: Partner,       pos: n, lv: A2, tags: [person]}
+    - {w: Partnerin,     pos: n, lv: A2, tags: [person]}
+    - {w: Ehepaar,       pos: n, lv: A2, tags: [person]}
+    - {w: Enkel,         pos: n, lv: A2, tags: [person]}
+    - {w: Cousin,        pos: n, lv: A2, tags: [person]}
+    - {w: Hochzeit,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Liebe,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Beziehung,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Charakter,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Aussehen,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Stimme,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Jugend,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Figur,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Lächeln,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Nichte,        pos: n, lv: A2, tags: [person]}
+    - {w: Neffe,         pos: n, lv: A2, tags: [person]}
+    - {w: begrüßen,      pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: vorstellen,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: heiraten,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: kennenlernen,  pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: ehrlich,       pos: a, lv: A2, tags: [quality, person]}
+    - {w: höflich,       pos: a, lv: A2, tags: [quality, person]}
+    - {w: klug,          pos: a, lv: A2, tags: [quality, person]}
+    - {w: ernst,         pos: a, lv: A2, tags: [quality, person]}
+    - {w: sympathisch,   pos: a, lv: A2, tags: [quality, person]}
+    - {w: ledig,         pos: a, lv: A2, tags: [quality, person, absolute]}
+    - {w: verheiratet,   pos: a, lv: A2, tags: [quality, person, absolute]}
+    - {w: erwachsen,     pos: a, lv: A2, tags: [quality, person, absolute]}
+    - {w: schlank,       pos: a, lv: A2, tags: [quality, person]}
+    - {w: dick,          pos: a, lv: A2, tags: [quality, person]}
+    - {w: dünn,          pos: a, lv: A2, tags: [quality, person]}
+    - {w: blond,         pos: a, lv: A2, tags: [quality, person, absolute]}
+    # B1 — то, что говорят о человеке за глаза
+    - {w: Eindruck,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Vertrauen,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Vorurteil,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Respekt,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Gewohnheit,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Freundschaft,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Trennung,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Blick,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Kindheit,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Schwiegermutter, pos: n, lv: B1, tags: [person]}
+    - {w: Schwiegervater, pos: n, lv: B1, tags: [person]}
+    - {w: Zwilling,      pos: n, lv: B1, tags: [person]}
+    - {w: verabschieden, pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: duzen,         pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: siezen,        pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: streng,        pos: a, lv: B1, tags: [quality, person]}
+    - {w: verliebt,      pos: a, lv: B1, tags: [quality, person, absolute]}
+    - {w: geschieden,    pos: a, lv: B1, tags: [quality, person, absolute]}
+    - {w: treu,          pos: a, lv: B1, tags: [quality, person]}
+    - {w: egoistisch,    pos: a, lv: B1, tags: [quality, person]}
+    - {w: großzügig,     pos: a, lv: B1, tags: [quality, person]}
+    - {w: einsam,        pos: a, lv: B1, tags: [quality, person]}
+
+clothes:
+  title: Одежда и покупки
+  words:
+    # A1 — что надевают и какого оно цвета
+    - {w: Kleidung,      pos: n, lv: A1, tags: [thing]}
+    - {w: Hemd,          pos: n, lv: A1, tags: [thing]}
+    - {w: Hose,          pos: n, lv: A1, tags: [thing]}
+    - {w: Rock,          pos: n, lv: A1, tags: [thing]}
+    - {w: Kleid,         pos: n, lv: A1, tags: [thing]}
+    - {w: Jacke,         pos: n, lv: A1, tags: [thing]}
+    - {w: Mantel,        pos: n, lv: A1, tags: [thing]}
+    - {w: Pullover,      pos: n, lv: A1, tags: [thing]}
+    - {w: Schuh,         pos: n, lv: A1, tags: [thing]}
+    - {w: Socke,         pos: n, lv: A1, tags: [thing]}
+    - {w: Mütze,         pos: n, lv: A1, tags: [thing]}
+    - {w: Schal,         pos: n, lv: A1, tags: [thing]}
+    - {w: Handschuh,     pos: n, lv: A1, tags: [thing]}
+    - {w: Tasche,        pos: n, lv: A1, tags: [thing]}
+    - {w: Gürtel,        pos: n, lv: A1, tags: [thing]}
+    - {w: Hut,           pos: n, lv: A1, tags: [thing]}
+    - {w: Ring,          pos: n, lv: A1, tags: [thing]}
+    - {w: Nummer,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Verkäufer,     pos: n, lv: A1, tags: [person]}
+    - {w: Verkäuferin,   pos: n, lv: A1, tags: [person]}
+    - {w: Größe,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Farbe,         pos: n, lv: A1, tags: [abstract]}
+    - {w: anziehen,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: ausziehen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: tragen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: passen,        pos: v, lv: A1, tags: [state]}
+    - {w: waschen,       pos: v, lv: A1, tags: [state, obj, housework, solo]}
+    - {w: rot,           pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: blau,          pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: grün,          pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: gelb,          pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: schwarz,       pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: weiß,          pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: braun,         pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: grau,          pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: kurz,          pos: a, lv: A1, tags: [quality]}
+    - {w: lang,          pos: a, lv: A1, tags: [quality]}
+    - {w: schmutzig,     pos: a, lv: A1, tags: [quality]}
+    # A2 — примерочная, касса, обмен
+    - {w: Anzug,         pos: n, lv: A2, tags: [thing]}
+    - {w: Bluse,         pos: n, lv: A2, tags: [thing]}
+    - {w: Jeans,         pos: n, lv: A2, tags: [thing]}
+    - {w: Unterwäsche,   pos: n, lv: A2, tags: [thing]}
+    - {w: Stiefel,       pos: n, lv: A2, tags: [thing]}
+    - {w: Knopf,         pos: n, lv: A2, tags: [thing]}
+    - {w: Reißverschluss, pos: n, lv: A2, tags: [thing]}
+    - {w: Umkleidekabine, pos: n, lv: A2, tags: [place]}
+    - {w: Rabatt,        pos: n, lv: A2, tags: [money]}
+    - {w: Quittung,      pos: n, lv: A2, tags: [document]}
+    - {w: Auswahl,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Mode,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Ärmel,         pos: n, lv: A2, tags: [thing]}
+    - {w: Sandale,       pos: n, lv: A2, tags: [thing]}
+    - {w: Turnschuh,     pos: n, lv: A2, tags: [thing]}
+    - {w: Krawatte,      pos: n, lv: A2, tags: [thing]}
+    - {w: Kette,         pos: n, lv: A2, tags: [thing]}
+    - {w: Schlafanzug,   pos: n, lv: A2, tags: [thing]}
+    - {w: Wäsche,        pos: n, lv: A2, tags: [thing]}
+    - {w: Geldbeutel,    pos: n, lv: A2, tags: [thing]}
+    - {w: Schaufenster,  pos: n, lv: A2, tags: [place]}
+    - {w: Einkaufszentrum, pos: n, lv: A2, tags: [place]}
+    - {w: anprobieren,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: umtauschen,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: aussuchen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: gefallen,      pos: v, lv: A2, tags: [state]}
+    - {w: bügeln,        pos: v, lv: A2, tags: [state, obj, housework, solo]}
+    - {w: bunt,          pos: a, lv: A2, tags: [quality, thing_only, absolute]}
+    - {w: modisch,       pos: a, lv: A2, tags: [quality]}
+    - {w: schick,        pos: a, lv: A2, tags: [quality]}
+    - {w: sportlich,     pos: a, lv: A2, tags: [quality]}
+    - {w: eigen,         pos: a, lv: A2, tags: [quality, thing_only, absolute]}
+    - {w: weich,         pos: a, lv: A2, tags: [quality, thing_only]}
+    - {w: hart,          pos: a, lv: A2, tags: [quality, thing_only]}
+    - {w: praktisch,     pos: a, lv: A2, tags: [quality]}
+    # B1 — из чего сшито и что с этим не так
+    - {w: Baumwolle,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Wolle,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Leder,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Stoff,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Marke,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Fleck,         pos: n, lv: B1, tags: [thing]}
+    - {w: Kragen,        pos: n, lv: B1, tags: [thing]}
+    - {w: Garantie,      pos: n, lv: B1, tags: [document]}
+    - {w: nähen,         pos: v, lv: B1, tags: [state, obj, solo]}
+    - {w: reinigen,      pos: v, lv: B1, tags: [state, obj, housework, solo]}
+    - {w: locker,        pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: hochwertig,    pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: altmodisch,    pos: a, lv: B1, tags: [quality]}
+    - {w: gestreift,     pos: a, lv: B1, tags: [quality, thing_only, absolute]}
+    - {w: kariert,       pos: a, lv: B1, tags: [quality, thing_only, absolute]}
+
+leisure:
+  title: Свободное время
+  words:
+    # A1 — чем заняты вечером и в выходные
+    - {w: Freizeit,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Hobby,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Musik,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Spaß,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Lust,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Tanz,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Spaziergang,   pos: n, lv: A1, tags: [abstract]}
+    - {w: Konzert,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Party,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Film,          pos: n, lv: A1, tags: [thing]}
+    - {w: Spiel,         pos: n, lv: A1, tags: [thing]}
+    - {w: Foto,          pos: n, lv: A1, tags: [thing]}
+    - {w: Gitarre,       pos: n, lv: A1, tags: [thing]}
+    - {w: Klavier,       pos: n, lv: A1, tags: [thing]}
+    - {w: Zeitung,       pos: n, lv: A1, tags: [thing]}
+    - {w: Radio,         pos: n, lv: A1, tags: [appliance]}
+    - {w: Zoo,           pos: n, lv: A1, tags: [place]}
+    - {w: tanzen,        pos: v, lv: A1, tags: [state, solo]}
+    - {w: fotografieren, pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: wandern,       pos: v, lv: A1, tags: [motion, solo]}
+    - {w: sammeln,       pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: zeichnen,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: hören,         pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: treffen,       pos: v, lv: A1, tags: [state, obj, obj_person]}
+    - {w: interessant,   pos: a, lv: A1, tags: [quality]}
+    - {w: langweilig,    pos: a, lv: A1, tags: [quality]}
+    # A2 — кружок, сцена, билет
+    - {w: Verein,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Mitglied,      pos: n, lv: A2, tags: [person]}
+    - {w: Musiker,       pos: n, lv: A2, tags: [person]}
+    - {w: Sänger,        pos: n, lv: A2, tags: [person]}
+    - {w: Publikum,      pos: n, lv: A2, tags: [person]}
+    - {w: Ausstellung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Veranstaltung, pos: n, lv: A2, tags: [abstract]}
+    - {w: Unterhaltung,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Wanderung,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Picknick,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Schach,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Bühne,         pos: n, lv: A2, tags: [place]}
+    - {w: Freizeitpark,  pos: n, lv: A2, tags: [place]}
+    - {w: Kamera,        pos: n, lv: A2, tags: [appliance]}
+    - {w: Instrument,    pos: n, lv: A2, tags: [thing]}
+    - {w: Zeitschrift,   pos: n, lv: A2, tags: [thing]}
+    - {w: Puzzle,        pos: n, lv: A2, tags: [thing]}
+    - {w: Brettspiel,    pos: n, lv: A2, tags: [thing]}
+    - {w: Kartenspiel,   pos: n, lv: A2, tags: [thing]}
+    - {w: Eintrittskarte, pos: n, lv: A2, tags: [document]}
+    - {w: Einladung,     pos: n, lv: A2, tags: [document]}
+    - {w: Tanzkurs,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Spielregel,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Fotoalbum,     pos: n, lv: A2, tags: [thing]}
+    - {w: Rätsel,        pos: n, lv: A2, tags: [thing]}
+    - {w: Würfel,        pos: n, lv: A2, tags: [thing]}
+    - {w: feiern,        pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: üben,          pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: angeln,        pos: v, lv: A2, tags: [state, solo]}
+    - {w: ausgehen,      pos: v, lv: A2, tags: [motion, solo]}
+    - {w: mitmachen,     pos: v, lv: A2, tags: [state, solo]}
+    - {w: einladen,      pos: v, lv: A2, tags: [state, obj, obj_person]}
+    - {w: spannend,      pos: a, lv: A2, tags: [quality]}
+    - {w: beliebt,       pos: a, lv: A2, tags: [quality]}
+    - {w: aktiv,         pos: a, lv: A2, tags: [quality, person]}
+    - {w: witzig,        pos: a, lv: A2, tags: [quality]}
+    - {w: gemeinsam,     pos: a, lv: A2, tags: [quality, absolute]}
+    # B1 — чем это занятие на самом деле хорошо
+    - {w: Roman,         pos: n, lv: B1, tags: [thing]}
+    - {w: Krimi,         pos: n, lv: B1, tags: [thing]}
+    - {w: Hörbuch,       pos: n, lv: B1, tags: [thing]}
+    - {w: Künstler,      pos: n, lv: B1, tags: [person]}
+    - {w: Leidenschaft,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Abwechslung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Langeweile,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Abenteuer,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Vergnügen,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Ehrenamt,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Flohmarkt,     pos: n, lv: B1, tags: [place]}
+    - {w: Theaterstück,  pos: n, lv: B1, tags: [thing]}
+    - {w: Sammlung,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Gastgeber,     pos: n, lv: B1, tags: [person]}
+    - {w: entspannen,    pos: v, lv: B1, tags: [state, solo]}
+    - {w: genießen,      pos: v, lv: B1, tags: [state, obj]}
+    - {w: veranstalten,  pos: v, lv: B1, tags: [state, obj]}
+    - {w: verbringen,    pos: v, lv: B1, tags: [state, obj]}
+    - {w: zuschauen,     pos: v, lv: B1, tags: [state, solo]}
+    - {w: stricken,      pos: v, lv: B1, tags: [state, obj, solo]}
+    - {w: erleben,       pos: v, lv: B1, tags: [state, obj]}
+    - {w: kreativ,       pos: a, lv: B1, tags: [quality, person]}
+    - {w: unterhaltsam,  pos: a, lv: B1, tags: [quality]}
+    - {w: vielfältig,    pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: aufregend,     pos: a, lv: B1, tags: [quality]}
+
+study:
+  title: Учёба и язык
+  words:
+    # A1 — урок, тетрадь, ошибка
+    - {w: Sprache,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Wort,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Satz,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Frage,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Antwort,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Regel,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Beispiel,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Fehler,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Übung,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Note,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Klasse,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Unterricht,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Kurs,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Prüfung,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Test,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Fach,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Mathematik,    pos: n, lv: A1, tags: [abstract]}
+    - {w: Heft,          pos: n, lv: A1, tags: [thing]}
+    - {w: Stift,         pos: n, lv: A1, tags: [thing]}
+    - {w: Tafel,         pos: n, lv: A1, tags: [thing]}
+    - {w: Text,          pos: n, lv: A1, tags: [thing]}
+    - {w: Seite,         pos: n, lv: A1, tags: [thing]}
+    - {w: Schüler,       pos: n, lv: A1, tags: [person]}
+    - {w: Schülerin,     pos: n, lv: A1, tags: [person]}
+    - {w: Student,       pos: n, lv: A1, tags: [person]}
+    - {w: Studentin,     pos: n, lv: A1, tags: [person]}
+    - {w: Universität,   pos: n, lv: A1, tags: [place]}
+    - {w: erklären,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: verstehen,     pos: v, lv: A1, tags: [state, obj]}
+    - {w: richtig,       pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: falsch,        pos: a, lv: A1, tags: [quality, absolute]}
+    - {w: einfach,       pos: a, lv: A1, tags: [quality]}
+    # A2 — словарь, тема, результат
+    - {w: Vokabel,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Grammatik,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Thema,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Lösung,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Ergebnis,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Kenntnis,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Niveau,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Studium,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Wörterbuch,    pos: n, lv: A2, tags: [thing]}
+    - {w: Kugelschreiber, pos: n, lv: A2, tags: [thing]}
+    - {w: Lineal,        pos: n, lv: A2, tags: [thing]}
+    - {w: Schere,        pos: n, lv: A2, tags: [thing]}
+    - {w: Mappe,         pos: n, lv: A2, tags: [thing]}
+    - {w: Notiz,         pos: n, lv: A2, tags: [document]}
+    - {w: Zertifikat,    pos: n, lv: A2, tags: [document]}
+    - {w: Teilnehmer,    pos: n, lv: A2, tags: [person]}
+    - {w: Dozent,        pos: n, lv: A2, tags: [person]}
+    - {w: Vortrag,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Diktat,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Punkt,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Sprachkurs,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Muttersprache, pos: n, lv: A2, tags: [abstract]}
+    - {w: Fremdsprache,  pos: n, lv: A2, tags: [abstract]}
+    - {w: Lehrbuch,      pos: n, lv: A2, tags: [thing]}
+    - {w: Arbeitsblatt,  pos: n, lv: A2, tags: [thing]}
+    - {w: Anfänger,      pos: n, lv: A2, tags: [person]}
+    - {w: Referat,       pos: n, lv: A2, tags: [abstract]}
+    - {w: wiederholen,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: übersetzen,    pos: v, lv: A2, tags: [state, obj]}
+    - {w: buchstabieren, pos: v, lv: A2, tags: [state, obj]}
+    - {w: studieren,     pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: korrigieren,   pos: v, lv: A2, tags: [state, obj]}
+    - {w: schwierig,     pos: a, lv: A2, tags: [quality]}
+    - {w: mündlich,      pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: schriftlich,   pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: aufmerksam,    pos: a, lv: A2, tags: [quality, person]}
+    # B1 — то, что пишут в сертификате
+    - {w: Aussprache,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Wortschatz,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Rechtschreibung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Fortschritt,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Abschluss,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Bildung,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Nachhilfe,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Stipendium,    pos: n, lv: B1, tags: [money]}
+    - {w: Vorlesung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Seminar,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Hörsaal,       pos: n, lv: B1, tags: [place]}
+    - {w: bestehen,      pos: v, lv: B1, tags: [state, obj]}
+    - {w: merken,        pos: v, lv: B1, tags: [state, obj]}
+    - {w: unterrichten,  pos: v, lv: B1, tags: [state, obj, solo]}
+    - {w: vertiefen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: abschreiben,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: vorbereiten,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: deutlich,      pos: a, lv: B1, tags: [quality]}
+    - {w: fließend,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: mühsam,        pos: a, lv: B1, tags: [quality]}
+    - {w: begabt,        pos: a, lv: B1, tags: [quality, person]}
