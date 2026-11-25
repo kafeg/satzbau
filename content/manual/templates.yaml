@@ -381,17 +381,19 @@
   options: {paradigm: def_article, count: 4}
   why: wechsel-wohin
 
-# Отделяемые глаголы: до сих пор они были исключены из всех глагольных рамок,
-# потому что приставка уезжает в конец и ломает фразу. Здесь она уезжает нарочно:
-# пропуск — спрягаемая часть, приставка стоит в конце как {particle}.
+# Отделяемые глаголы. ⚠ Пропуск — САМА ПРИСТАВКА, а не спрягаемая часть: пока спрашивали
+# спрягаемую, приставка стояла в конце фразы на виду, и задание решалось без знания правила —
+# возьми лемму, отбрось видимую приставку, проспрягай. Так было во всех 119 заданиях правила.
+# Теперь спрашивается то, что человек и путает: anmelden или abmelden, и куда уходит приставка.
 # Условие «solo И отделяемый» выражено через has: [sep] — tags это «любой из».
 - id: trennbar-heute
   rule: praesens-trennbar
   level: A1
-  kind: input
-  frame: "Ich {slot} heute {particle}."
+  kind: choice
+  frame: "Ich {v1} heute {slot}."
   need: {pos: v, tags: [solo], has: [sep], not: [reflexive]}
-  slot: {paradigm: verb_stem, person: 1sg}
+  slot: {paradigm: verb_particle}
+  options: {paradigm: verb_particle, count: 4}
   why: praesens-trennbar
 
 - id: possessiv-akk-suchen
@@ -605,20 +607,22 @@
 - id: trennbar-obj
   rule: praesens-trennbar
   level: A2
-  kind: input
-  frame: "Ich {slot} das heute {particle}."
+  kind: choice
+  frame: "Ich {v1} das heute {slot}."
   need: {pos: v, tags: [obj], has: [sep], not: [obj_person, reflexive]}
-  slot: {paradigm: verb_stem, person: 1sg}
+  slot: {paradigm: verb_particle}
+  options: {paradigm: verb_particle, count: 4}
   why: praesens-trennbar
 
 # То же, но объект — человек: «Ich rufe das an» не фраза, нужно местоимение-лицо
 - id: trennbar-person
   rule: praesens-trennbar
   level: A2
-  kind: input
-  frame: "Ich {slot} ihn heute {particle}."
+  kind: choice
+  frame: "Ich {v1} ihn heute {slot}."
   need: {pos: v, tags: [obj_person], has: [sep], not: [reflexive]}
-  slot: {paradigm: verb_stem, person: 1sg}
+  slot: {paradigm: verb_particle}
+  options: {paradigm: verb_particle, count: 4}
   why: praesens-trennbar
 
 # Глаголы перемещения: в рамках Wechselpräposition они стоят в рамке как слово
@@ -928,7 +932,9 @@
   rule: genus
   level: A1
   kind: choice
-  frame: "Das ist {slot} {w}."
+  # ⚠ Было «Das ist {slot} {w}»: у среднего рода ответ стоял первым словом фразы,
+  # и 349 заданий из 1792 решались копированием. Поймано на живом занятии.
+  frame: "Hier ist {slot} {w}."
   need: {pos: n, not: [pl_only, plu, noart, g2]}
   slot: {paradigm: def_article, case: nom, num: sg, gender: from_word}
   options: {paradigm: genus, count: 3}

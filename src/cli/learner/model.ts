@@ -52,6 +52,8 @@ export const WORD_SKILLS: Record<string, ('gender' | 'form' | 'irregular')[]> = 
   verb_past: ['form'],
   aux_present: ['form'],
   verb_prep: ['form'],
+  // какая приставка даёт это значение — знание самого слова, а не правила
+  verb_particle: ['form'],
   verb_present: ['irregular'],
   imperative: ['irregular'],
   noun_case: ['irregular'],
