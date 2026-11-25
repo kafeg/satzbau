@@ -39,13 +39,13 @@ describe('очередь заданий', () => {
     expect(items.filter((i) => i.theme === 'health').length).toBe(items.length)
   })
 
-  // ⚠ Тема — приоритет, а не фильтр: у n-склонения нет ни одного слова Еды, но правило
-  // не должно гаснуть — очередь добирает лексику из других тем.
+  // ⚠ Тема — приоритет, а не фильтр: у окончания в Nominativ нет ни одного слова Еды,
+  // но правило не должно гаснуть — очередь добирает лексику из других тем.
   it('правило без слов темы всё равно собирается', () => {
-    expect(countFor({ rule: 'n-deklination', theme: 'food' })).toBe(0)
-    const items = newSession({ rule: 'n-deklination', theme: 'food', seed: 6 })
+    expect(countFor({ rule: 'adj-nom-e', theme: 'food' })).toBe(0)
+    const items = newSession({ rule: 'adj-nom-e', theme: 'food', seed: 6 })
     expect(items.length).toBeGreaterThan(0)
-    expect(items.every((i) => i.rule === 'n-deklination')).toBe(true)
+    expect(items.every((i) => i.rule === 'adj-nom-e')).toBe(true)
   })
 
   // ⚠ Обход стопок идёт по кругу и берёт по одному заданию, поэтому при порядке

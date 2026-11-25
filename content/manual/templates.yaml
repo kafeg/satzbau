@@ -36,22 +36,26 @@
 
 # Было записано как prep-akkusativ, но предлога во фразе нет: падеж здесь требует
 # глагол, а не предлог. Это отдельное правило, и объяснение у него своё.
+# ⚠ Только мужской род: у женского и среднего Akkusativ совпадает с Nominativ, и задание
+# проверяло бы не падеж. Остальные рамки правила берут все роды — женский и средний там контроль.
 - id: akk-objekt-brauchen
   rule: akkusativ-objekt
   level: A1
   kind: choice
   frame: "Ich brauche {slot} {w}."
-  need: {pos: n, tags: [document, thing], not: [pl_only, plu, mass]}
+  need: {pos: n, g: [m], tags: [document, thing], not: [pl_only, plu, mass]}
   slot: {paradigm: indef_article, case: akk, num: sg}
   options: {paradigm: indef_article, count: 4}
   why: akkusativ-objekt
 
+# ⚠ Только мужской род: у женского и среднего Akkusativ совпадает с Nominativ, и задание
+# проверяло бы не падеж. Остальные рамки правила берут все роды — женский и средний там контроль.
 - id: prep-akk-fuer
   rule: prep-akkusativ
   level: A1
   kind: choice
   frame: "Das Geschenk ist für {slot} {w}."
-  need: {pos: n, tags: [person], not: [pl_only, plu]}
+  need: {pos: n, g: [m], tags: [person], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: akk, num: sg, prep: für}
   options: {paradigm: def_article, count: 4}
   why: prep-akkusativ
@@ -63,7 +67,7 @@
   frame: "Wir sind {slot} {w}."
   need: {pos: n, tags: [room], g: [m, n], not: [pl_only]}
   slot: {paradigm: merged_prep_article, prep: in, case: dat, num: sg}
-  options: {paradigm: merged_prep_article, prep: in, count: 4}
+  options: {paradigm: merged_prep_article, prep: in, count: 3}
   why: merge-prep-article
 
 # Второй шаблон на то же правило, и снова не для красоты: с одним шаблоном ответ
@@ -76,7 +80,7 @@
   frame: "Wir gehen {slot} {w}."
   need: {pos: n, tags: [room], g: [n], not: [pl_only]}
   slot: {paradigm: merged_prep_article, prep: in, case: akk, num: sg}
-  options: {paradigm: merged_prep_article, prep: in, count: 4}
+  options: {paradigm: merged_prep_article, prep: in, count: 3}
   why: merge-prep-article
 
 - id: akk-objekt-essen
@@ -248,6 +252,8 @@
 # Предлоги на то же правило: у wo?/wohin? было по одному предлогу и 11 заданий.
 # neben и unter с артиклем не сливаются, поэтому на них тренируется чистый падеж.
 
+# ⚠ Только мужской род: у женского и среднего Akkusativ совпадает с Nominativ, и задание
+# проверяло бы не падеж. Остальные рамки правила берут все роды — женский и средний там контроль.
 - id: possessiv-akk-suchen
   rule: possessiv-akkusativ
   level: A1
@@ -255,7 +261,7 @@
   # только документы: тег thing включает и Ampel с Boden, а «Ich suche meine Ampel»
   # никто не скажет. Своего слова для «предмет, который бывает личным» у нас нет.
   frame: "Ich suche {slot} {w}."
-  need: {pos: n, tags: [document], not: [pl_only, plu, mass]}
+  need: {pos: n, g: [m], tags: [document], not: [pl_only, plu, mass]}
   slot: {paradigm: possessive, case: akk, num: sg}
   options: {paradigm: possessive, count: 4}
   why: possessiv-akkusativ
@@ -482,13 +488,15 @@
   why: adj-praedikativ
 
 # ── Императив. Пропуск — сама форма, поэтому ввод: вариантов у неё нет.
+# ⚠ В рамке обращение по имени: без него «___ das bitte!» верны и erstatte (du), и erstattet
+# (ihr), и erstatten Sie, а засчитывалась одна. «Anna» — один человек на «ты», значит du.
 # Перегласовка в императив не идёт (du fährst, но fahr!), а смена e→i идёт (gib!),
 # и это ровно то, на чём ошибаются. Вывод проверяется против UniMorph.
 - id: imperativ-du
   rule: imperativ
   level: A1
   kind: input
-  frame: "{Slot} das bitte!"
+  frame: "Anna, {slot} das bitte!"
   need: {pos: v, tags: [obj], not: [sep, reflexive, obj_person, placement]}
   slot: {paradigm: imperative}
   why: imperativ
@@ -497,7 +505,7 @@
   rule: imperativ
   level: A1
   kind: input
-  frame: "{Slot} bitte!"
+  frame: "Anna, {slot} bitte!"
   need: {pos: v, tags: [solo], not: [sep, reflexive]}
   slot: {paradigm: imperative}
   why: imperativ
@@ -522,6 +530,29 @@
   frame: "Ich finde {art} {w} {slot}."
   need: {pos: n, tags: [thing, document, food, drink, furniture, appliance, vehicle], not: [pl_only, plu, mass]}
   slot: {paradigm: nicht, case: akk, gender: from_word}
+  options: {paradigm: negation, count: 4}
+  why: negation-nicht-kein
+
+# ⚠ У пары выше выбор виден по месту пропуска: перед словом — kein, в конце — nicht. Ученик учит
+# позицию, а не правило. Здесь пропуск стоит на ОДНОМ месте, и решает только то, что идёт после:
+# голое слово — kein, слово с артиклем — nicht. «Das ist kein Weg» и «Das ist nicht der Weg».
+- id: nicht-kein-ist
+  rule: negation-nicht-kein
+  level: A2
+  kind: choice
+  frame: "Das ist {slot} {w}."
+  need: {pos: n, tags: [thing, document, food, drink, furniture, appliance, vehicle, place], not: [pl_only, plu, mass, noart]}
+  slot: {paradigm: kein_article, case: nom, gender: from_word}
+  options: {paradigm: negation, count: 4}
+  why: negation-nicht-kein
+
+- id: nicht-kein-ist-art
+  rule: negation-nicht-kein
+  level: A2
+  kind: choice
+  frame: "Das ist {slot} {art} {w}."
+  need: {pos: n, tags: [thing, document, food, drink, furniture, appliance, vehicle, place], not: [pl_only, plu, mass, noart]}
+  slot: {paradigm: nicht, case: nom, gender: from_word}
   options: {paradigm: negation, count: 4}
   why: negation-nicht-kein
 
@@ -567,6 +598,28 @@
   slot: {paradigm: noun_case, case: dat, gender: from_word}
   why: n-deklination
 
+# ⚠ Противопоставление. Пока в рамки шли только слабые существительные, ответ был всегда
+# «слово + (e)n», и задание проверяло, видит ли ученик пропуск, а не знает ли правило.
+# Правило и есть различие: den Jungen, но den Lehrer. Здесь те же рамки на обычных
+# мужского рода — окончание не нужно, и ответ совпадает со словарной формой нарочно.
+- id: n-dekl-akk-stark
+  rule: n-deklination
+  level: A2
+  kind: input
+  frame: "Ich sehe {art} {slot}."
+  need: {pos: n, g: [m], tags: [person], not: [nd, pl_only, plu, adjdecl]}
+  slot: {paradigm: noun_case, case: akk, gender: from_word}
+  why: n-deklination
+
+- id: n-dekl-dat-stark
+  rule: n-deklination
+  level: A2
+  kind: input
+  frame: "Ich helfe {art} {slot}."
+  need: {pos: n, g: [m], tags: [person], not: [nd, pl_only, plu, adjdecl]}
+  slot: {paradigm: noun_case, case: dat, gender: from_word}
+  why: n-deklination
+
 # ── man: безличное подлежащее, которого в русском нет. Пропуск — форма глагола,
 # а не само man: четыре местоимения в этой рамке все были бы верны.
 - id: man-3sg
@@ -580,12 +633,14 @@
 
 # ── es gibt + Akkusativ. Рамка нужна именно из-за падежа: по смыслу тут «есть»,
 # и рука ставит именительный.
+# ⚠ Только мужской род: у женского и среднего Akkusativ совпадает с Nominativ, и задание
+# проверяло бы не падеж. Остальные рамки правила берут все роды — женский и средний там контроль.
 - id: es-gibt-akk
   rule: es-gibt
   level: A1
   kind: choice
   frame: "Hier gibt es {slot} {w}."
-  need: {pos: n, tags: [place, thing, document, food, drink, furniture, appliance], not: [pl_only, plu, mass]}
+  need: {pos: n, g: [m], tags: [place, thing, document, food, drink, furniture, appliance], not: [pl_only, plu, mass]}
   slot: {paradigm: indef_article, case: akk, gender: from_word}
   options: {paradigm: indef_article, count: 4}
   why: es-gibt
@@ -597,7 +652,10 @@
   level: B1
   kind: choice
   frame: "Wegen {slot} {w} bleibe ich zu Hause."
-  need: {pos: n, tags: [illness, abstract], not: [pl_only, plu, mass]}
+  # ⚠ Только мужской и средний род и настоящие причины. У женского der — и Genitiv, и Dativ,
+  # правило не проверялось; а abstract давал «Wegen der Linie bleibe ich zu Hause».
+  # Здесь ответ des, а среди вариантов dem — разговорная ошибка, ради которой правило и есть.
+  need: {pos: n, g: [m, n], tags: [illness, weather], not: [pl_only, plu]}
   slot: {paradigm: def_article, case: gen, gender: from_word}
   options: {paradigm: def_article, count: 4}
   why: prep-genitiv
@@ -680,7 +738,7 @@
   frame: "Ich gehe {slot} {w}."
   need: {pos: n, tags: [place, room], not: [pl_only, plu, noart]}
   slot: {paradigm: merged_prep_article, prep: zu, case: dat, num: sg}
-  options: {paradigm: merged_prep_article, count: 4}
+  options: {paradigm: merged_prep_article, count: 3}
   why: merge-prep-article
 
 # ⚠ Рамки против вырожденного правила. «Слабое склонение в именительном» — это
@@ -747,12 +805,14 @@
   options: {paradigm: kein_article, count: 4}
   why: negation-kein
 
+# ⚠ Только мужской род: у женского и среднего Akkusativ совпадает с Nominativ, и задание
+# проверяло бы не падеж. Остальные рамки правила берут все роды — женский и средний там контроль.
 - id: negation-kein-sehen
   rule: negation-kein
   level: A1
   kind: choice
   frame: "Ich sehe {slot} {w}."
-  need: {pos: n, tags: [thing, vehicle, furniture], not: [pl_only, plu, mass]}
+  need: {pos: n, g: [m], tags: [thing, vehicle, furniture], not: [pl_only, plu, mass]}
   slot: {paradigm: kein_article, case: akk, num: sg}
   options: {paradigm: kein_article, count: 4}
   why: negation-kein

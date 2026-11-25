@@ -514,12 +514,17 @@ function buildOptions(t: Template, w: Word, answer: string, slot: Fixed, w2?: Wo
   // ⚠ Остаток инвентаря перемешивается, а не берётся по порядку: у парадигм с большим
   // инвентарём (тринадцать предлогов управления) первые три формы иначе становятся
   // дистракторами ВСЕГДА, и задание угадывается, не читая фразу. Порядок детерминирован.
+  // ⚠ «in dem» рядом с «im» — не ошибка: слияние не обязательно, когда предмет конкретный
+  // (Нюблинг 2005), и такой вариант давал минус за верную фразу. Несклеенный двойник ответа
+  // в варианты не идёт. Несклеенные формы другого падежа или рода остаются: они неверны без спора.
+  const mg = slot.paradigm === 'merged_prep_article' ? genderOf(slot, w) : null
+  const twin = mg && slot.prep ? `${slot.prep} ${defArticle(kase, mg, slot.num ?? 'sg')}` : null
   const rest = shuffle(
-    all.filter((f) => f !== answer && f !== alsoRight && !near.includes(f)),
+    all.filter((f) => f !== answer && f !== alsoRight && f !== twin && !near.includes(f)),
     `${t.id}${w.w}rest`,
   )
   const picked = [answer, ...new Set([...near, ...rest])]
-    .filter((f) => f === answer || f !== alsoRight)
+    .filter((f) => f === answer || (f !== alsoRight && f !== twin))
     .slice(0, count)
   return shuffle(picked, t.id + w.w)
 }

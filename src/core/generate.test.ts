@@ -2,8 +2,11 @@ import { describe, expect, it } from 'vitest'
 import { bundle, words } from './data.ts'
 import { explainItem } from './explain.ts'
 import { fillingFor, generate, genusSuffix, itemsFor, second } from './generate.ts'
+import type { Gender, Noun } from './types.ts'
 import {
   adjEndingMatches,
+  defArticle,
+  einWord,
   formMatches,
   govexParts,
   govOf,
@@ -116,6 +119,15 @@ describe('ответ зависит от слова', () => {
     'adj-plural-ohne': 'без артикля во множественном всегда -e — контраст к -en',
     'adj-stark-plural-akk': 'сильное во множественном винительном всегда -e — контраст к -en дательного',
     'adj-stark-plural-dat': 'сильное во множественном дательном всегда -en — контраст к -e винительного',
+    // мужской род нарочно: у женского и среднего Akkusativ совпадает с Nominativ и падеж
+    // не проверяется. Остальные рамки этих правил дают все роды, так что правило не постоянно
+    'akk-objekt-brauchen': 'только мужской род — у него Akkusativ отличается от Nominativ',
+    'prep-akk-fuer': 'то же',
+    'possessiv-akk-suchen': 'то же',
+    'es-gibt-akk': 'то же',
+    'negation-kein-sehen': 'то же',
+    'nicht-kein-ist-art': 'перед словом с артиклем всегда nicht — пара к nicht-kein-ist, где kein',
+    'prep-gen-wegen': 'только мужской и средний род: des против разговорного dem; während даёт der',
   }
   const share = (t: (typeof bundle.templates)[number]) => {
     const its = itemsFor(t, words)
@@ -343,3 +355,42 @@ describe('разбор про само слово', () => {
     expect(why('imperativ-du', 'essen', 'imp_why')).toContain('смена гласной остаётся')
   })
 })
+
+// ⚠ У женского, среднего рода и во множественном Akkusativ совпадает с Nominativ: задание
+// на них проверяет внимательность, а не падеж. Было 37–58 % проверяющих показов на правило
+// (исследование рынка 2026-11-25). Мужской род один нельзя: ответ станет всегда «einen»,
+// и правило научит ставить -en везде. Поэтому мерим две вещи сразу. Мера — по показам:
+// очередь берёт рамки по очереди, и вес рамки не зависит от того, сколько в ней слов.
+describe('задания на Akkusativ проверяют падеж', () => {
+  const STEM: Record<string, string> = { indef_article: 'ein', possessive: 'mein', kein_article: 'kein' }
+  const RULES = ['akkusativ-objekt', 'prep-akkusativ', 'negation-kein', 'possessiv-akkusativ', 'es-gibt']
+  for (const rule of RULES)
+    it(rule, () => {
+      const shares: number[] = []
+      const answers = new Set<string>()
+      for (const t of bundle.templates.filter((x) => x.rule === rule)) {
+        const items = itemsFor(t, words)
+        if (!items.length) continue
+        let testing = 0
+        for (const i of items) {
+          answers.add(i.answer)
+          const akk = t.slot.case === 'akk' && (t.slot.paradigm in STEM || t.slot.paradigm === 'def_article')
+          if (!akk) {
+            testing++
+            continue
+          }
+          const g = (words.find((w) => w.w === i.word)?.entry as Noun).g as Gender
+          const nom =
+            t.slot.paradigm === 'def_article'
+              ? defArticle('nom', g, 'sg')
+              : einWord(STEM[t.slot.paradigm] as string, 'nom', g, 'sg')
+          if (nom !== i.answer) testing++
+        }
+        shares.push(testing / items.length)
+      }
+      const exposure = shares.reduce((a, b) => a + b, 0) / shares.length
+      expect(exposure).toBeGreaterThanOrEqual(0.55)
+      expect(answers.size).toBeGreaterThan(1)
+    })
+})
+
