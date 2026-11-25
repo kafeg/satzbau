@@ -1291,7 +1291,11 @@
   level: A2
   kind: choice
   frame: "{Subj} {slot} das nie {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
+  # ⚠ В рамке есть прямое дополнение «das», значит и глагол нужен переходный: с тегом
+  # solo собиралось «Sie werden das nie gehen» — 104 задания из 179. placement исключены
+  # по той же причине, что у praesens-er-obj: «das stellen» без «куда» не фраза.
+  # sep исключать не надо: {w} это инфинитив, и приставка уезжает в конец вместе с ним.
+  need: {pos: v, tags: [obj], not: [reflexive, obj_person, placement]}
   slot: {paradigm: werden_present, person: from_word}
   options: {paradigm: werden_present, count: 4}
   why: futur
@@ -1345,3 +1349,26 @@
   slot: {paradigm: reflexive_pronoun, person: from_word}
   options: {paradigm: reflexive_pronoun, count: 4}
   why: reflexiv
+
+# ⚠ Сильное склонение голодало: без артикля стоят только неисчисляемые, а их
+# в лексиконе три десятка на 1836 слов — 58 заданий против полутора тысяч
+# у соседних типов. Во множественном неисчисляемость не нужна: «gute Bücher»,
+# «mit guten Freunden» — артикля нет, а слов сотни. Окончания там свои,
+# -e и -en, и путают их ровно так же.
+- id: adj-stark-plural-akk
+  rule: adj-ohne-artikel
+  level: A2
+  kind: input
+  frame: "Hier gibt es gut{slot} {w}."
+  need: {pos: n, tags: [thing, food, furniture, vehicle, place, document], has: [pl], not: [npl, pl_only, mass, plu, abstract]}
+  slot: {paradigm: adj_ending, decl: strong, case: akk, num: pl, gender: from_word}
+  why: adj-ohne-artikel
+
+- id: adj-stark-plural-dat
+  rule: adj-ohne-artikel
+  level: B1
+  kind: input
+  frame: "Mit gut{slot} {w} ist alles einfacher."
+  need: {pos: n, tags: [thing, furniture, appliance, document], has: [pl], not: [npl, pl_only, mass, plu, abstract]}
+  slot: {paradigm: adj_ending, decl: strong, case: dat, num: pl, gender: from_word}
+  why: adj-ohne-artikel

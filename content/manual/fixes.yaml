@@ -306,6 +306,16 @@ mass:
   - Diesel
   - Bauschaum
   - Schleifpapier
+  # вещества и материалы: «ein Holz», «ein Leder» не говорят, а сильное склонение
+  # в единственном живёт только на неисчисляемых — это его единственное наполнение
+  - Holz
+  - Metall
+  - Gras
+  - Öl
+  - Leder
+  - Wolle
+  - Baumwolle
+  - Stoff
   # уход за собой: «eine Watte» и «eine Schminke» так не говорят
   - Watte
   - Schminke

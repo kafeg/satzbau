@@ -1023,10 +1023,10 @@ clothes:
     - {w: hart,          pos: a, lv: A2, tags: [quality, thing_only]}
     - {w: praktisch,     pos: a, lv: A2, tags: [quality]}
     # B1 — из чего сшито и что с этим не так
-    - {w: Baumwolle,     pos: n, lv: B1, tags: [abstract]}
-    - {w: Wolle,         pos: n, lv: B1, tags: [abstract]}
-    - {w: Leder,         pos: n, lv: B1, tags: [abstract]}
-    - {w: Stoff,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Baumwolle,     pos: n, lv: B1, tags: [thing]}
+    - {w: Wolle,         pos: n, lv: B1, tags: [thing]}
+    - {w: Leder,         pos: n, lv: B1, tags: [thing]}
+    - {w: Stoff,         pos: n, lv: B1, tags: [thing]}
     - {w: Marke,         pos: n, lv: B1, tags: [abstract]}
     - {w: Fleck,         pos: n, lv: B1, tags: [thing]}
     - {w: Kragen,        pos: n, lv: B1, tags: [thing]}

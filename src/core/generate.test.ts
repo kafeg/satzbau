@@ -121,6 +121,8 @@ describe('ответ зависит от слова', () => {
     'adj-nom-plural': 'во множественном после артикля всегда -en — это и есть контраст к -e',
     'adj-plural-ohne': 'без артикля во множественном всегда -e — контраст к -en',
     'passiv-plural': 'подлежащее во множественном, отсюда всегда werden — контраст к wird',
+    'adj-stark-plural-akk': 'сильное во множественном винительном всегда -e — контраст к -en дательного',
+    'adj-stark-plural-dat': 'сильное во множественном дательном всегда -en — контраст к -e винительного',
   }
   const share = (t: (typeof bundle.templates)[number]) => {
     const its = itemsFor(t, words)
