@@ -118,15 +118,8 @@ export function Drill({
             {article && <span className={`tag ${GENDER_CLASS[article] ?? ''}`}>{article}</span>}
           </span>
           <span className="wtext">
-            {/* ⚠ Словарная форма прячется, когда ответ написан в ней самой: у «aussteigen»
-                это приставка «aus». После ответа показываем — там она и нужна. */}
-            {(!item.ctx.hide_lemma || answered) && <span className="lemma">{item.word}</span>}
-            {item.ru && (
-              <span className="ru">
-                {!item.ctx.hide_lemma || answered ? ' — ' : ''}
-                {item.ru}
-              </span>
-            )}
+            <span className="lemma">{item.word}</span>
+            {item.ru && <span className="ru"> — {item.ru}</span>}
           </span>
           <span className="wspeak">
             {/* ⚠ До ответа озвучивается СЛОВО, а не фраза: `item.full` — это фраза

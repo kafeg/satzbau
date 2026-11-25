@@ -65,24 +65,12 @@ export const MISCONCEPTIONS: Misconception[] = [
     id: 'akk-as-nom',
     what: 'винительный как именительный',
     form: (item, t, w, all) =>
-      t.slot.case === 'akk' && t.rule !== 'wechsel-wohin' ? regen(t, w, all, { case: 'nom' }) : null,
-  },
-  {
-    id: 'wechsel-dat',
-    what: 'после двухсторонних предлогов всегда Dativ',
-    form: (item, t, w, all) =>
-      t.rule === 'wechsel-wohin' && t.slot.case === 'akk' ? regen(t, w, all, { case: 'dat' }) : null,
+      t.slot.case === 'akk' ? regen(t, w, all, { case: 'nom' }) : null,
   },
   {
     id: 'gen-des',
     what: 'в родительном всегда des, как у мужского рода',
     form: (item, t) => (t.slot.case === 'gen' && t.slot.paradigm === 'def_article' ? 'des' : null),
-  },
-  {
-    id: 'perfekt-haben',
-    what: 'в Perfekt всегда haben',
-    form: (item, t, w, all) =>
-      t.slot.paradigm === 'aux_present' ? regen(t, w, all, undefined, { aux: 'h' } as Partial<Verb>) : null,
   },
   {
     id: 'plural-en',

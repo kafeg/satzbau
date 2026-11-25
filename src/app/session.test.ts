@@ -39,13 +39,13 @@ describe('очередь заданий', () => {
     expect(items.filter((i) => i.theme === 'health').length).toBe(items.length)
   })
 
-  // ⚠ Тема — приоритет, а не фильтр: у «wo?» нет ни одного слова Еды, но правило
+  // ⚠ Тема — приоритет, а не фильтр: у n-склонения нет ни одного слова Еды, но правило
   // не должно гаснуть — очередь добирает лексику из других тем.
   it('правило без слов темы всё равно собирается', () => {
-    expect(countFor({ rule: 'wechsel-wo', theme: 'food' })).toBe(0)
-    const items = newSession({ rule: 'wechsel-wo', theme: 'food', seed: 6 })
+    expect(countFor({ rule: 'n-deklination', theme: 'food' })).toBe(0)
+    const items = newSession({ rule: 'n-deklination', theme: 'food', seed: 6 })
     expect(items.length).toBeGreaterThan(0)
-    expect(items.every((i) => i.rule === 'wechsel-wo')).toBe(true)
+    expect(items.every((i) => i.rule === 'n-deklination')).toBe(true)
   })
 
   // ⚠ Обход стопок идёт по кругу и берёт по одному заданию, поэтому при порядке
@@ -228,15 +228,15 @@ describe('занятие по слотам', () => {
   })
 
   it('«держится» не ставится на одной форме ответа', () => {
-    const rule = 'perfekt-aux'
+    const rule = 'prep-dativ'
     const gaps = [0, 1, 3, 8, 20, 45, 90, 150]
-    const log = gaps.map((d) => ans(rule, NOW - 200 * DAY + d * DAY, 1, 'habe'))
+    const log = gaps.map((d) => ans(rule, NOW - 200 * DAY + d * DAY, 1, 'dem'))
     const at = NOW - 200 * DAY + 151 * DAY
     const one = replay(log)
     expect(one.get(`r:${rule}`)!.stability).toBeGreaterThanOrEqual(21)
     const state = (c: Cards) => rules({ cards: c, now: at }).find((r) => r.rule === rule)?.state
     expect(state(one)).toBe('learning')
-    const two = replay([...log.slice(0, -1), ans(rule, NOW - 200 * DAY + 150 * DAY, 1, 'bin')])
+    const two = replay([...log.slice(0, -1), ans(rule, NOW - 200 * DAY + 150 * DAY, 1, 'der')])
     expect(state(two)).toBe('solid')
   })
 })

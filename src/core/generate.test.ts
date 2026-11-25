@@ -5,7 +5,6 @@ import { fillingFor, generate, genusSuffix, itemsFor, second } from './generate.
 import {
   adjEndingMatches,
   formMatches,
-  GOV_PREPS,
   govexParts,
   govOf,
   inventory,
@@ -109,18 +108,12 @@ describe('ответ зависит от слова', () => {
     'merge-wo-in': 'пара im/ins и есть правило: человек читает вопрос, а не слово',
     'merge-wohin-in': 'то же',
     'nicht-kein-mit': 'выбор виден только из пары шаблонов: с артиклем всегда nicht',
-    'passiv-das': 'подлежащее «Das» единственного числа, отсюда всегда wird',
     'adj-nom-ding': 'после der окончание -e во всех трёх родах — это и есть правило',
     'adj-plural-die': 'во множественном после артикля всегда -en',
-    'adj-dat-en-neu': 'в Dativ окончание -en во всех родах',
-    'adj-dat-en-klein': 'то же',
-    'perfekt-aux-action': 'работы по дому все переходные, отсюда habe. Перекос лексикона',
-    'verb-prep-ding': 'одно слово в наполнении: hängen',
     // рамки, добавленные НАРОЧНО как вторая половина факта: каждая внутри себя
     // постоянна, а правило целиком благодаря им перестало быть константой
     'adj-nom-plural': 'во множественном после артикля всегда -en — это и есть контраст к -e',
     'adj-plural-ohne': 'без артикля во множественном всегда -e — контраст к -en',
-    'passiv-plural': 'подлежащее во множественном, отсюда всегда werden — контраст к wird',
     'adj-stark-plural-akk': 'сильное во множественном винительном всегда -e — контраст к -en дательного',
     'adj-stark-plural-dat': 'сильное во множественном дательном всегда -en — контраст к -e винительного',
   }
@@ -149,9 +142,7 @@ describe('ответ зависит от слова', () => {
   // с единственным ответом на всё наполнение не тренирует ничего, сколько бы заданий
   // оно ни давало: единица повтора — правило, и именно его человек «знает».
   describe('по правилу', () => {
-    const RULE_KNOWN: Record<string, string> = {
-      'adj-dat-en': 'в Dativ слабое окончание -en во всех родах и числах — факт и есть урок',
-    }
+    const RULE_KNOWN: Record<string, string> = {}
     const byRule = new Map<string, Map<string, number>>()
     for (const t of bundle.templates) {
       const freq = byRule.get(t.rule) ?? new Map<string, number>()
@@ -270,36 +261,17 @@ describe('конкретные задания', () => {
   })
 
   it('окончание прилагательного вводится, а не выбирается', () => {
-    const i = item('adj-dat-en-klein', 'Küche')
-    expect(i.full).toBe('Wir wohnen in einer kleinen Küche.')
-    expect(i.answer).toBe('en')
+    const t = bundle.templates.find((x) => x.slot.paradigm === 'adj_ending')!
+    const i = itemsFor(t, words)[0]!
+    expect(t.kind).toBe('input')
     expect(i.options).toBeUndefined()
+    expect(i.answer).toMatch(/^(e|en|er|es|em)$/)
   })
 
   it('разбор ошибки подставляет род и артикль', () => {
     const e = explainItem(item('prep-dat-mit', 'Bahn'))
     expect(e.steps.join(' ')).toContain('женский')
     expect(e.steps.join(' ')).toContain('die')
-  })
-
-  it('управление: в пропуске предлог, дополнение приходит из записи', () => {
-    const i = item('verb-prep-ich', 'warten')
-    expect(i.full).toBe('Ich warte auf den Zug.')
-    expect(i.answer).toBe('auf')
-    expect(i.options).toHaveLength(4)
-    // дистракторы — предлоги из закрытого списка управления, а не падежи
-    for (const o of i.options!) expect(GOV_PREPS as readonly string[]).toContain(o)
-  })
-
-  // одна рамка на все формы глагола: пустые подстановки склеиваются, поэтому
-  // отделяемый, возвратный и глагол с прямым дополнением обходятся без своих шаблонов
-  it('одна рамка управления собирает приставку, sich и прямое дополнение', () => {
-    expect(item('verb-prep-ich', 'einsteigen').full).toBe('Ich steige in den Zug ein.')
-    expect(item('verb-prep-ich', 'überweisen').full).toBe('Ich überweise das Geld auf das Konto.')
-    expect(item('verb-prep-ich', 'einreichen').full).toBe(
-      'Ich reiche den Antrag bei der Firma ein.',
-    )
-    expect(item('verb-prep-zwei-a', 'bewerben').full).toBe('Ich bewerbe mich bei der Firma.')
   })
 
   // у n-склонения винительный отличается, и подлежащее съезжало в него вслед за слотом
@@ -316,28 +288,6 @@ describe('конкретные задания', () => {
     expect(item('dativ-objekt-helfen', 'Kollege').options).not.toContain('den')
     expect(item('genitiv-besitz', 'Kollege').options).not.toContain('der')
     expect(item('possessiv-dat-mit', 'Nachbar').options).not.toContain('meinen')
-  })
-
-  it('подлежащее-не-человек получает свою рамку', () => {
-    expect(item('verb-prep-ding', 'hängen').full).toBe('Das hängt an der Wand.')
-  })
-
-  // у двух предлогов верный ответ один: его задаёт дополнение из примера
-  it('два предлога — два шаблона, и второй предлог всегда среди вариантов', () => {
-    const a = item('verb-prep-zwei-a', 'fahren')
-    const b = item('verb-prep-zwei-b', 'fahren')
-    expect([a.full, a.answer]).toEqual(['Ich fahre mit dem Bus.', 'mit'])
-    expect([b.full, b.answer]).toEqual(['Ich fahre nach Berlin.', 'nach'])
-    expect(a.options).toContain('nach')
-    expect(b.options).toContain('mit')
-    expect(explainItem(b).steps.join(' ')).toContain('mit и nach')
-  })
-
-  // падеж в связке задаёт управление, а не шаблон: у слота verb_prep падежа нет вовсе,
-  // и без этого разбор говорил бы «именительный» на «warten auf + Akkusativ»
-  it('падеж в разборе берётся из управления, а не из шаблона', () => {
-    expect(explainItem(item('verb-prep-ich', 'warten')).steps.join(' ')).toContain('винительный')
-    expect(explainItem(item('verb-prep-ich', 'arbeiten')).steps.join(' ')).toContain('дательный')
   })
 
   it('пример управления делится по предлогу самого глагола', () => {
@@ -391,6 +341,5 @@ describe('разбор про само слово', () => {
   it('императив: перегласовка, смена гласной и приставка — только у тех, у кого есть', () => {
     expect(why('imperativ-du', 'holen', 'imp_why')).not.toMatch(/e→i|перегласовк/)
     expect(why('imperativ-du', 'essen', 'imp_why')).toContain('смена гласной остаётся')
-    expect(why('imperativ-trennbar', 'anfangen', 'imp_why')).toContain('приставка an')
   })
 })

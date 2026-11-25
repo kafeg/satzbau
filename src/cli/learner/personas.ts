@@ -38,9 +38,7 @@ export interface Persona {
 const ALL = (m: number): Record<string, number> => ({
   'gender-ru': m,
   'akk-as-nom': m,
-  'wechsel-dat': m,
   'gen-des': m,
-  'perfekt-haben': m,
   'plural-en': m,
   'adj-e': m,
   'strong-weak': m,
@@ -82,7 +80,7 @@ export const PERSONAS: Persona[] = [
       levels: ['A1', 'A2'],
       s: 180,
       ago: 120,
-      gaps: ['wechsel-wohin', 'adj-dat-en', 'n-deklination', 'dativ-objekt'],
+      gaps: ['n-deklination', 'dativ-objekt'],
     },
   },
   {

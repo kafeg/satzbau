@@ -49,44 +49,6 @@ prep-akkusativ:
     У женского и среднего рода форма не меняется, поэтому ошибка видна только на мужском:
     für einen Mann.
 
-wechsel-wo:
-  name: wo? → Dativ
-  group: падеж
-  after: [prep-dativ]
-  title: Предлог с двумя падежами, вопрос wo? — значит Dativ
-  short: "{prep} + wo? → Dativ"
-  ru_contrast: >-
-    По-русски «в комнате» — предложный падеж, и это не случайность: предложный и есть
-    падеж места. В немецком один и тот же предлог отвечает на два вопроса, и падеж выбирает
-    не предлог, а вопрос.
-  steps:
-    - "предлог {prep} — из девяти, которые работают на два падежа"
-    - "вопрос: wo? предмет стоит на месте, никуда не двигается"
-    - "wo? → Dativ"
-    - "{w} — {gender_ru} род, {nom_article} → {answer}"
-  more: >-
-    Так же работают an, auf, in, über, unter, vor, hinter, neben, zwischen.
-    Подсказка по глаголу: stehen, liegen, sitzen, hängen, sein — это место, значит Dativ.
-
-wechsel-wohin:
-  name: wohin? → Akkusativ
-  group: падеж
-  after: [wechsel-wo, prep-akkusativ]
-  title: Предлог с двумя падежами, вопрос wohin? — значит Akkusativ
-  short: "{prep} + wohin? → Akkusativ"
-  ru_contrast: >-
-    Здесь немецкий и русский совпадают: «в комнату» — винительный падеж, и в немецком
-    тоже Akkusativ. Редкий случай, когда можно опереться на русское чутьё.
-  steps:
-    - "предлог {prep} — из девяти, которые работают на два падежа"
-    - "вопрос: wohin? есть движение, предмет меняет место"
-    - "wohin? → Akkusativ"
-    - "{w} — {gender_ru} род, {nom_article} → {answer}"
-  more: >-
-    Подсказка по глаголу: stellen, legen, setzen, hängen (кого-то куда-то), gehen, fahren —
-    это движение, значит Akkusativ. У женского рода форма та же, что в именительном,
-    и ошибка не видна — но падеж всё равно другой.
-
 merge-prep-article:
   name: im, ins, zum
   group: артикль
@@ -108,45 +70,6 @@ merge-prep-article:
     Сливаются обязательно: im, ins, am, ans, zum, zur, vom, beim.
     Разговорные aufs, fürs, ums сливать не обязательно.
     Проверка на себе: если видишь im — мысленно разверни в in dem, и падеж вернётся.
-
-adj-dat-en:
-  name: Прилагательное в Dativ
-  group: прилагательное
-  after: [adj-akk-en, prep-dativ]
-  title: Окончание прилагательного в Dativ
-  short: "Dativ → прилагательное на -en"
-  ru_contrast: >-
-    Что окончание меняется — идея знакомая: по-русски «в маленькой квартире» тоже
-    не «маленький». Разница в том, что в немецком окончание зависит не только от падежа
-    и рода, но ещё и от артикля, который стоит перед прилагательным.
-  steps:
-    - "{dativ_why}"
-    - "{decl_why}"
-    - "в Dativ при таком артикле окончание -en, в любом роде"
-  more: >-
-    Это редкий подарок: мужской einem kleinen, женский einer kleinen, средний einem kleinen,
-    множественное keinen kleinen. В Dativ прилагательное всегда на -en, запоминать нужно
-    одно правило вместо таблицы.
-
-perfekt-aux:
-  name: "Perfekt: haben или sein"
-  group: глагол
-  after: [perfekt-partizip]
-  title: "Perfekt: haben или sein"
-  short: "{w} → Perfekt с {answer}"
-  ru_contrast: >-
-    В русском прошедшее время одно слово: «я поехал». В немецком Perfekt собирается
-    из двух частей, и ошибка обычно в первой: взяли haben там, где нужен sein.
-  steps:
-    - "{w} — {aux_why}"
-    - "движение и смена состояния берут sein, всё остальное haben"
-    - "{person_ru}: {answer}"
-    - "вторая часть — Partizip II: {pp}"
-  more: >-
-    sein берут глаголы движения (fahren, gehen, kommen, fliegen, laufen) и смены состояния
-    (einschlafen, aufwachen, werden). Все остальные — haben.
-    ⚠ Есть глаголы, которые умеют оба: fahren с объектом («Ich habe das Auto gefahren») берёт
-    haben. Такие в задания не попадают, пока не размечены вручную.
 
 akkusativ-objekt:
   name: "Akkusativ: прямой объект"
@@ -338,28 +261,6 @@ adj-akk-en:
     die gute Suppe → ich nehme die gute Suppe. Если окончание изменилось,
     значит слово мужского рода.
 
-praesens-trennbar:
-  name: Отделяемая приставка
-  group: глагол
-  after: [praesens-3sg]
-  title: Приставка уезжает в конец предложения
-  short: "{w} → приставка в конец"
-  ru_contrast: >-
-    По-русски приставка приклеена намертво: «приходить», «уходить». В немецком у части
-    глаголов она отрывается и уходит в самый конец: aufräumen → ich räume auf.
-    Поэтому смысл фразы выясняется только в последнем слове, и дослушивать приходится
-    до точки.
-  steps:
-    - "{w} — глагол с отделяемой приставкой"
-    - "спрягается только вторая часть, она и встаёт на второе место"
-    - "{answer} … {particle}"
-  more: >-
-    Отделяемые: ab-, an-, auf-, aus-, ein-, mit-, vor-, zu-, um-, zurück- — на них падает
-    ударение. Неотделяемые безударны: be-, ver-, er-, ent-, ge-, emp-. Сравните:
-    ich melde an, но ich bestelle. В Perfekt у отделяемых ge- встаёт внутрь: aufgeräumt.
-    Дополнение встаёт между глаголом и приставкой, а не после неё: Ich melde das an,
-    не «Ich melde an das». Приставка всегда последняя.
-
 possessiv-akkusativ:
   name: "mein в Akkusativ"
   group: артикль
@@ -440,7 +341,7 @@ genitiv-besitz:
 praeteritum:
   name: Präteritum
   group: глагол
-  after: [perfekt-aux]
+  after: [perfekt-partizip]
   title: Второе прошедшее время — для письма и рассказа
   short: "{w} → {answer}"
   ru_contrast: >-
@@ -555,51 +456,6 @@ pronomen-akkusativ:
     ihm, ihr, ihm, ihnen. Заметьте, что sie и ihr совпадают с другими словами —
     различать их помогает только падеж и место во фразе.
 
-verb-praeposition:
-  name: Предлог при глаголе
-  group: глагол
-  after: [prep-dativ, prep-akkusativ]
-  title: Какой предлог требует глагол — надо помнить вместе с глаголом
-  short: "{w} + {answer}"
-  ru_contrast: >-
-    По-русски «ждать автобус» — без всякого предлога, прямое дополнение. По-немецки
-    warten auf den Zug: предлог появляется из ниоткуда, и угадать его нельзя. То же с
-    «отвечать на письмо» — antworten auf die E-Mail, предлог тот же, но это совпадение:
-    «звонить другу» это telefonieren mit dem Freund, а не «zu». Предлог — часть глагола,
-    и запоминать его надо вместе с ним, как русские запоминают «скучать ПО кому-то».
-  steps:
-    - "{w} требует предлога {answer}"
-    - "падеж задаёт не смысл, а сам предлог в этой связке: {case_ru}"
-    - "{answer} {obj}"
-  more: >-
-    Предлог в управлении падеж не выбирает, а фиксирует: после warten auf всегда
-    Akkusativ, хотя auf бывает и с Dativ. Правило «wo? — Dativ, wohin? — Akkusativ»
-    здесь не работает вообще: вопрос не про место. Поэтому в связке надо помнить три
-    вещи сразу — глагол, предлог и падеж: warten auf + A, arbeiten an + D,
-    telefonieren mit + D.
-
-verb-praeposition-zwei:
-  name: Два предлога у глагола
-  group: глагол
-  after: [verb-praeposition]
-  title: У одного глагола два предлога, и выбирает смысл, а не глагол
-  short: "{w} + {answer}"
-  ru_contrast: >-
-    По-русски «записать В школу» и «записать НА курс» — разные предлоги при одном
-    глаголе, и это привычно. В немецком то же, но пары свои: anmelden bei der Stadt
-    (где записывают) и anmelden für den Kurs (на что). Опасность в другом: первый
-    выученный предлог кажется единственным, и кто запомнил fahren mit, говорит
-    «ich fahre mit Berlin» вместо nach Berlin.
-  steps:
-    - "у {w} предлогов два: {preps}"
-    - "дополнение здесь {obj} — значит {answer}"
-    - "падеж задаёт сам предлог: {case_ru}"
-  more: >-
-    Пары, которые надо помнить целиком: anmelden bei (где) и für (на что), fahren
-    mit (на чём) и nach (куда), streiten mit (с кем) и um (из-за чего), sich bewerben
-    bei (куда) и um (на что). Второй предлог не замена первому: у каждого своё
-    дополнение, и в одной фразе они не взаимозаменяемы.
-
 imperativ:
   name: Повелительное наклонение
   group: глагол
@@ -705,93 +561,6 @@ n-deklination:
     слова на -ant, -ent, -ist, -at (Patient, Automat, Polizist) и отдельные
     вроде Nachbar, Herr, Mensch, Bauer. Женских и средних в этой группе нет.
     Именительный падеж остаётся без -n, и этим группа и опознаётся.
-
-reflexiv:
-  name: Возвратные глаголы
-  group: глагол
-  after: [praesens-3sg, pronomen-akkusativ]
-  title: sich — часть глагола, а не отдельное слово
-  short: "{w} {answer}"
-  ru_contrast: >-
-    По-русски возвратность прирастает к глаголу суффиксом: «торопиться», «радоваться».
-    В немецком она остаётся отдельным словом и меняется по лицу: ich beeile MICH,
-    du beeilst DICH, er beeilt SICH. Запомнить надо и то, что список возвратных
-    в двух языках не совпадает: sich bewerben это «подавать заявку», без всякого «-ся».
-  steps:
-    - "{w} без возвратного местоимения не употребляется"
-    - "местоимение меняется по лицу, а не по роду"
-    - "здесь {answer}"
-  more: >-
-    Таблица: ich — mich, du — dich, er/sie/es — sich, wir — uns, ihr — euch,
-    sie/Sie — sich. Третье лицо и вежливое Sie берут одно и то же sich, и только оно
-    пишется одинаково во всех числах. Место в фразе — сразу после спрягаемого глагола:
-    Ich beeile mich heute, не «Ich beeile heute mich».
-
-futur:
-  name: Будущее время
-  group: глагол
-  after: [praesens-3sg]
-  title: werden + инфинитив, и инфинитив в конец
-  short: "{answer} … {w}"
-  ru_contrast: >-
-    По-русски будущее делается самим глаголом: «сделаю», «буду делать». В немецком
-    будущее собирается из двух слов, и порядок непривычный: спрягается werden, а
-    смысловой глагол уходит в самый конец без всяких изменений. Главное, чего не
-    ждёшь: в разговоре будущее чаще говорят настоящим временем — «Ich arbeite morgen»
-    понятнее и обычнее, чем «Ich werde morgen arbeiten». Futur нужен для обещаний
-    и предположений.
-  steps:
-    - "спрягается werden, а не {w}"
-    - "здесь это {answer}"
-    - "{w} уходит в конец фразы и остаётся инфинитивом"
-  more: >-
-    Таблица короткая и нерегулярная: ich werde, du wirst, er wird, wir werden,
-    ihr werdet, sie werden. Ловушка во втором и третьем лице: wirst и wird, а не
-    «werdest» и «werdet». То же werden потом служит пассиву, и это не совпадение:
-    там оно тоже спрягается, а смысл несёт второе слово.
-
-konjunktiv2:
-  name: Konjunktiv II
-  group: глагол
-  after: [futur]
-  title: Вежливость и «я бы» — würde + инфинитив
-  short: "{answer} … {w}"
-  ru_contrast: >-
-    По-русски сослагательное — это «бы» рядом с прошедшим временем: «я бы сделал».
-    В немецком место «бы» занимает отдельный спрягаемый глагол würde, а смысловой
-    уходит в конец инфинитивом. Это же и форма вежливости: «Ich würde gern bezahlen»
-    звучит так, как по-русски звучит «я бы хотел заплатить», а не как условие.
-  steps:
-    - "würde спрягается по лицу, {w} не меняется"
-    - "здесь это {answer}"
-    - "{w} стоит в конце инфинитивом"
-  more: >-
-    Формы: ich würde, du würdest, er würde, wir würden, ihr würdet, sie würden.
-    Первое и третье лицо совпадают, как у модальных. У трёх глаголов würde не
-    употребляют, а берут их собственную форму: haben → hätte, sein → wäre,
-    können → könnte. «Ich hätte gern einen Kaffee» — это та самая фраза в кафе.
-
-passiv:
-  name: Passiv
-  group: глагол
-  after: [perfekt-partizip, futur]
-  title: Действие есть, а кто делает — не называют
-  short: "{answer} {pp}"
-  ru_contrast: >-
-    По-русски пассив чаще всего делается возвратной формой или безличным множественным:
-    «дом строится», «здесь не курят». В немецком это werden плюс Partizip II —
-    те же два слова, что в Perfekt, но вспомогательный другой: «Das wird gemacht»,
-    а не «Das ist gemacht». Разница важная: с sein получается состояние (уже сделано),
-    с werden — процесс (делается).
-  steps:
-    - "werden спрягается, {pp} не меняется"
-    - "здесь это {answer}"
-    - "кто делает — не называется, в этом весь смысл пассива"
-  more: >-
-    Пассив узнаётся по паре werden + Partizip II. Если нужно всё же назвать
-    действующего, его добавляют с von: «Das wird vom Hausmeister gemacht».
-    Часто встречается в объявлениях и правилах, где исполнитель не важен:
-    «Die Wohnung wird renoviert», «Hier wird nicht geraucht».
 
 man-subjekt:
   name: Безличное man

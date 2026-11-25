@@ -49,9 +49,7 @@ describe('симулятор ученика', () => {
   it('каждое заблуждение даёт свою неверную форму', () => {
     expect(mis('gender-ru', 'nom-subjekt-hier', 'Weg')).toBe('die')
     expect(mis('akk-as-nom', 'adj-akk-ding', 'Weg')).toBe('e')
-    expect(mis('wechsel-dat', 'wechsel-wohin-auf', 'Tisch')).toBe('dem')
     expect(mis('gen-des', 'genitiv-besitz', 'Fahrer')).toBe('des')
-    expect(mis('perfekt-haben', 'perfekt-aux-solo', 'gehen')).toBe('habe')
     expect(mis('plural-en', 'plural-kaufen', 'Koffer')).toBe('Kofferen')
     expect(mis('adj-e', 'adj-akk-ding', 'Weg')).toBe('e')
     expect(mis('strong-weak', 'praesens-du', 'fahren')).toBe('fahrst')
@@ -61,7 +59,7 @@ describe('симулятор ученика', () => {
   })
 
   it('заблуждение молчит там, где оно ни при чём', () => {
-    expect(mis('perfekt-haben', 'praesens-du', 'fahren')).toBeNull()
+    expect(mis('gen-des', 'praesens-du', 'fahren')).toBeNull()
     expect(mis('strong-weak', 'praesens-du', 'wohnen')).toBeNull()
     expect(mis('strong-weak', 'partizip-gestern', 'atmen')).toBeNull()
   })

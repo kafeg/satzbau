@@ -74,14 +74,6 @@ const PRONOUN: Record<'akk' | 'dat', ByGender> = {
  * Предлоги, которые встречаются в управлении глаголов на A1–B1. Закрытый список:
  * из него берутся дистракторы, и «не тот предлог» — это и есть тренируемая ошибка.
  */
-/**
- * Отделяемые приставки, которые встречаются в лексиконе A1–B1. Закрытый список:
- * из него берутся варианты ответа, и «не та приставка» — тренируемая ошибка.
- */
-export const PARTICLES = [
-  'ab', 'an', 'auf', 'aus', 'ein', 'mit', 'nach', 'vor', 'zu', 'um', 'weg', 'zurück',
-] as const
-
 export const GOV_PREPS = [
   'an', 'auf', 'aus', 'bei', 'für', 'gegen', 'in', 'mit', 'nach', 'über', 'um', 'von', 'zu',
 ] as const
@@ -258,11 +250,6 @@ export function inventory(
       return uniq([...Object.values(PRONOUN.akk), ...Object.values(PRONOUN.dat)])
     case 'verb_prep':
       return [...GOV_PREPS]
-    // Отделяемая приставка. ⚠ Дистракторы — приставки, которые в лексиконе ЕСТЬ:
-    // «ab/an/auf/ein» у глагола melden дают четыре настоящих слова (anmelden,
-    // abmelden, ummelden), и выбор между ними — ровно та ошибка, которую ловим.
-    case 'verb_particle':
-      return [...PARTICLES]
     case 'possessive':
       return einInventory('mein', true)
     case 'kein_article':

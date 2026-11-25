@@ -385,9 +385,6 @@ function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | nul
       return superlative(w.entry as Adj)
     case 'verb_present':
       return present(w.entry as Verb, slot.person ?? '3sg')
-    // пропуск — сама отделяемая приставка в конце фразы
-    case 'verb_particle':
-      return particle(w.entry as Verb)
     // спрягаемая часть отделяемого глагола: приставка уезжает в конец фразы
     case 'verb_stem':
       return present(w.entry as Verb, slot.person ?? '3sg').split(' ')[0] ?? null
@@ -719,14 +716,6 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
       // совпал с ответом — не показываем. Разбору тот же артикль нужен всегда
       // (он подсвечивает колонку таблицы), поэтому поля разные.
       badge: nomArticle.toLowerCase() === answer.toLowerCase() ? '' : nomArticle,
-      // ⚠ Та же мысль, что у бейджа рода, но про словарную форму: у «aussteigen»
-      // ответ «aus» написан прямо в ней. Прячем лемму — остаётся перевод, и задание
-      // спрашивает то, ради чего оно есть: какая приставка даёт это значение.
-      // Условие структурное, а не по имени правила: совпало начало — прячем.
-      hide_lemma:
-        answer && w.w.toLowerCase().startsWith(answer.toLowerCase()) && answer.length > 1
-          ? '1'
-          : '',
       plain_article: plain,
       ein,
       aux_why: vb ? auxWhy(vb) : '',

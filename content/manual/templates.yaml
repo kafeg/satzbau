@@ -56,29 +56,6 @@
   options: {paradigm: def_article, count: 4}
   why: prep-akkusativ
 
-# Предлог здесь auf, а не in, и это не вкус: «in dem Zimmer» грамматически верно,
-# но по-немецки так не говорят — обязательно «im». Нельзя тренировать падеж на форме,
-# которую носитель не употребляет. auf с артиклем не сливается, и обе фразы живые.
-- id: wechsel-wo-auf
-  rule: wechsel-wo
-  level: A2
-  kind: choice
-  frame: "Die Lampe steht auf {slot} {w}."
-  need: {pos: n, tags: [surface], not: [pl_only, plu]}
-  slot: {paradigm: def_article, case: dat, num: sg, prep: auf}
-  options: {paradigm: def_article, count: 4}
-  why: wechsel-wo
-
-- id: wechsel-wohin-auf
-  rule: wechsel-wohin
-  level: A2
-  kind: choice
-  frame: "Ich stelle die Lampe auf {slot} {w}."
-  need: {pos: n, tags: [surface], not: [pl_only, plu]}
-  slot: {paradigm: def_article, case: akk, num: sg, prep: auf}
-  options: {paradigm: def_article, count: 4}
-  why: wechsel-wohin
-
 - id: merge-wo-in
   rule: merge-prep-article
   level: A2
@@ -101,46 +78,6 @@
   slot: {paradigm: merged_prep_article, prep: in, case: akk, num: sg}
   options: {paradigm: merged_prep_article, prep: in, count: 4}
   why: merge-prep-article
-
-- id: adj-dat-en-klein
-  rule: adj-dat-en
-  level: A2
-  kind: input
-  frame: "Wir wohnen in einer klein{slot} {w}."
-  need: {pos: n, theme: home, tags: [place, room], g: [f], not: [pl_only]}
-  # prep нужен РАЗБОРУ: им объясняется, почему здесь Dativ. adj_ending его не читает
-  slot: {paradigm: adj_ending, decl: mixed, case: dat, num: sg, gender: from_word, prep: in}
-  why: adj-dat-en
-
-# Два шаблона на одно правило, и это не дубль. Глагол в задании виден (он стоит в {pp}),
-# так что «подсказка по рамке» — не проблема; проблема в наборе ответов внутри ПРАВИЛА.
-# Замерено: глаголов движения с однозначным aux — 13, из них sein 12. На одном шаблоне
-# человек отвечает `bin` не глядя на глагол и прав в 12 случаях из 13. Второй шаблон
-# добавляет 16 глаголов, все на haben: по правилу выходит 12 sein против 17 haben,
-# и ответ без чтения глагола не угадать. Баланс нужен на уровне правила, не шаблона.
-- id: perfekt-aux-solo
-  rule: perfekt-aux
-  level: A1
-  kind: choice
-  frame: "Ich {slot} gestern {pp}."
-  need: {pos: v, tags: [solo], not: [aux_hs, reflexive]}
-  slot: {paradigm: aux_present, person: 1sg, from_word: aux}
-  options: {paradigm: aux_present, count: 2}
-  why: perfekt-aux
-
-- id: perfekt-aux-action
-  rule: perfekt-aux
-  level: A1
-  kind: choice
-  frame: "Ich {slot} die Wohnung {pp}."
-  need: {pos: v, tags: [housework], not: [aux_hs]}
-  slot: {paradigm: aux_present, person: 1sg, from_word: aux}
-  options: {paradigm: aux_present, count: 2}
-  why: perfekt-aux
-
-# --- Э7: шаблоны на остальные темы --------------------------------------------
-# До этого места шаблоны держались на Транспорте и Квартире, и четыре темы из шести
-# не имели своих заданий вовсе.
 
 - id: akk-objekt-essen
   rule: akkusativ-objekt
@@ -287,36 +224,6 @@
   slot: {paradigm: verb_present, person: 2sg}
   why: praesens-2sg
 
-# Второй шаблон на то же правило. Артикль в рамке — подстановка {art}, согласованная
-# с родом слова, поэтому род фиксировать условием не нужно: берутся все. И заодно видно,
-# что в Dativ окончание -en одинаково при определённом артикле и при неопределённом.
-- id: adj-dat-en-neu
-  rule: adj-dat-en
-  level: A2
-  kind: input
-  frame: "Ich fahre mit {art} neu{slot} {w}."
-  need: {pos: n, tags: [vehicle], not: [pl_only]}
-  slot: {paradigm: adj_ending, decl: weak, case: dat, num: sg, gender: from_word, prep: mit}
-  why: adj-dat-en
-
-# --- Второе слово в рамке -----------------------------------------------------
-# Второе слово (fill2) выводится из пары «шаблон + слово», а не выбирается случайно,
-# поэтому задание по-прежнему восстанавливается из журнала.
-#
-# ⚠ Проверено и отвергнуто: глагольные рамки с объектом. «Er kocht {w2}» грамматически
-# верно и бессмысленно — собиралось «Er kocht das Wohnzimmer», «Er würzt das Salz»,
-# «Gestern habe ich die Tür geschlafen». Тег obj говорит «переходный», а не «берёт
-# ИМЕННО такой объект», и никакой набор тегов этого не скажет: немецкий глагол выбирает
-# объект по смыслу. Нужны списки объектов на каждый глагол, а это другая работа.
-#
-# С прилагательным иначе: оно согласуется с существительным грамматически, а не по смыслу.
-# Но и тут пришлось сузить: «die pünktliche Ampel» и «das schnelle Benzin» тоже собирались.
-# Отсюда тег generic — прилагательные, которые подходят к любому предмету.
-#
-# Первым словом стоит СУЩЕСТВИТЕЛЬНОЕ, прилагательное приходит вторым: заданий тогда
-# столько, сколько существительных (59, а не 10), окончание согласуется с первым словом,
-# и повторами отслеживается род существительного — то, что и надо выучить.
-
 - id: adj-nom-ding
   rule: adj-nom-e
   level: A2
@@ -340,61 +247,6 @@
 # --- Э7, продолжение ----------------------------------------------------------
 # Предлоги на то же правило: у wo?/wohin? было по одному предлогу и 11 заданий.
 # neben и unter с артиклем не сливаются, поэтому на них тренируется чистый падеж.
-
-- id: wechsel-wo-neben
-  rule: wechsel-wo
-  level: A2
-  kind: choice
-  frame: "Der Hausmeister steht neben {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only, plu]}
-  slot: {paradigm: def_article, case: dat, num: sg, prep: neben}
-  options: {paradigm: def_article, count: 4}
-  why: wechsel-wo
-
-- id: wechsel-wohin-neben
-  rule: wechsel-wohin
-  level: A2
-  kind: choice
-  frame: "Ich stelle den Koffer neben {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface, thing], not: [pl_only, plu]}
-  slot: {paradigm: def_article, case: akk, num: sg, prep: neben}
-  options: {paradigm: def_article, count: 4}
-  why: wechsel-wohin
-
-- id: wechsel-wo-unter
-  rule: wechsel-wo
-  level: A2
-  kind: choice
-  frame: "Der Schlüssel liegt unter {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only, plu]}
-  slot: {paradigm: def_article, case: dat, num: sg, prep: unter}
-  options: {paradigm: def_article, count: 4}
-  why: wechsel-wo
-
-- id: wechsel-wohin-unter
-  rule: wechsel-wohin
-  level: A2
-  kind: choice
-  frame: "Ich lege den Schlüssel unter {slot} {w}."
-  need: {pos: n, theme: home, tags: [furniture, surface], not: [pl_only, plu]}
-  slot: {paradigm: def_article, case: akk, num: sg, prep: unter}
-  options: {paradigm: def_article, count: 4}
-  why: wechsel-wohin
-
-# Отделяемые глаголы. ⚠ Пропуск — САМА ПРИСТАВКА, а не спрягаемая часть: пока спрашивали
-# спрягаемую, приставка стояла в конце фразы на виду, и задание решалось без знания правила —
-# возьми лемму, отбрось видимую приставку, проспрягай. Так было во всех 119 заданиях правила.
-# Теперь спрашивается то, что человек и путает: anmelden или abmelden, и куда уходит приставка.
-# Условие «solo И отделяемый» выражено через has: [sep] — tags это «любой из».
-- id: trennbar-heute
-  rule: praesens-trennbar
-  level: A1
-  kind: choice
-  frame: "Ich {v1} heute {slot}."
-  need: {pos: v, tags: [solo], has: [sep], not: [reflexive]}
-  slot: {paradigm: verb_particle}
-  options: {paradigm: verb_particle, count: 4}
-  why: praesens-trennbar
 
 - id: possessiv-akk-suchen
   rule: possessiv-akkusativ
@@ -602,29 +454,6 @@
   slot: {paradigm: participle}
   why: perfekt-partizip
 
-# Отделяемый глагол с объектом: приставка уходит за объект, а не сразу за глагол.
-# «Ich melde das an», не «Ich melde an das» — порядок слов и есть урок рамки.
-- id: trennbar-obj
-  rule: praesens-trennbar
-  level: A2
-  kind: choice
-  frame: "Ich {v1} das heute {slot}."
-  need: {pos: v, tags: [obj], has: [sep], not: [obj_person, reflexive]}
-  slot: {paradigm: verb_particle}
-  options: {paradigm: verb_particle, count: 4}
-  why: praesens-trennbar
-
-# То же, но объект — человек: «Ich rufe das an» не фраза, нужно местоимение-лицо
-- id: trennbar-person
-  rule: praesens-trennbar
-  level: A2
-  kind: choice
-  frame: "Ich {v1} ihn heute {slot}."
-  need: {pos: v, tags: [obj_person], has: [sep], not: [reflexive]}
-  slot: {paradigm: verb_particle}
-  options: {paradigm: verb_particle, count: 4}
-  why: praesens-trennbar
-
 # Глаголы перемещения: в рамках Wechselpräposition они стоят в рамке как слово
 # («Ich stelle die Lampe auf …»), а спросить их было нечем. Вопрос «куда» их и ждёт.
 - id: praesens-du-wohin
@@ -652,62 +481,6 @@
   options: {paradigm: adj_predicative, count: 4}
   why: adj-praedikativ
 
-# ─── Управление глаголов. Данные про него лежали в бандле с самого Э3 и не читались
-# ни одним шаблоном: `gov` подтверждён руками у 29 глаголов, а правила не было.
-# Пропуск — САМ ПРЕДЛОГ, и это главная боль русского: «ждать автобус» без предлога,
-# а по-немецки warten AUF den Zug. Дополнение не подбирается из лексикона (так выходило
-# «Er würzt das Salz»), а написано руками по глаголу — fixes.yaml:government_example.
-# Падеж в дополнении уже стоит правильный: его задаёт то же управление.
-# Одна рамка на все формы глагола: пустые подстановки генератор склеивает. {mich} —
-# возвратное у sich bewerben, {pre} — прямое дополнение перед предлогом
-# («das Geld auf das Konto»), {particle} — приставка отделяемого, она всегда последняя.
-- id: verb-prep-ich
-  rule: verb-praeposition
-  level: A2
-  kind: choice
-  frame: "Ich {v1} {mich} {pre} {slot} {obj} {particle}."
-  # position исключён: «Ich hänge an der Wand» — это про себя, у него своя рамка ниже
-  need: {pos: v, has: [govex], not: [govex2, position]}
-  slot: {paradigm: verb_prep}
-  options: {paradigm: verb_prep, count: 4}
-  why: verb-praeposition
-
-# Подлежащее не человек: hängen, stehen. «Das hängt an der Wand» — то же местоимение
-# без смысла, что и в рамках с объектом.
-- id: verb-prep-ding
-  rule: verb-praeposition
-  level: A2
-  kind: choice
-  frame: "Das {v3} {pre} {slot} {obj}."
-  need: {pos: v, has: [govex], tags: [position], not: [govex2]}
-  slot: {paradigm: verb_prep}
-  options: {paradigm: verb_prep, count: 4}
-  why: verb-praeposition
-
-# Два предлога у одного глагола — отдельное правило: сказать «anmelden требует für»
-# было бы неправдой. Пример дополнения решает, какой предлог верный, поэтому ответ
-# по-прежнему один. Два шаблона, а не два задания из одного: журнал хранит пару
-# «шаблон + слово», и задание должно из неё восстанавливаться.
-- id: verb-prep-zwei-a
-  rule: verb-praeposition-zwei
-  level: A2
-  kind: choice
-  frame: "Ich {v1} {mich} {pre} {slot} {obj} {particle}."
-  need: {pos: v, has: [govex2]}
-  slot: {paradigm: verb_prep, nth: 1}
-  options: {paradigm: verb_prep, count: 4}
-  why: verb-praeposition-zwei
-
-- id: verb-prep-zwei-b
-  rule: verb-praeposition-zwei
-  level: A2
-  kind: choice
-  frame: "Ich {v1} {mich} {pre} {slot} {obj} {particle}."
-  need: {pos: v, has: [govex2]}
-  slot: {paradigm: verb_prep, nth: 2}
-  options: {paradigm: verb_prep, count: 4}
-  why: verb-praeposition-zwei
-
 # ── Императив. Пропуск — сама форма, поэтому ввод: вариантов у неё нет.
 # Перегласовка в императив не идёт (du fährst, но fahr!), а смена e→i идёт (gib!),
 # и это ровно то, на чём ошибаются. Вывод проверяется против UniMorph.
@@ -717,15 +490,6 @@
   kind: input
   frame: "{Slot} das bitte!"
   need: {pos: v, tags: [obj], not: [sep, reflexive, obj_person, placement]}
-  slot: {paradigm: imperative}
-  why: imperativ
-
-- id: imperativ-trennbar
-  rule: imperativ
-  level: A1
-  kind: input
-  frame: "{Slot} das bitte {particle}!"
-  need: {pos: v, tags: [obj], has: [sep], not: [obj_person, reflexive]}
   slot: {paradigm: imperative}
   why: imperativ
 
@@ -802,62 +566,6 @@
   need: {pos: n, has: [nd], tags: [person], not: [pl_only, plu]}
   slot: {paradigm: noun_case, case: dat, gender: from_word}
   why: n-deklination
-
-# ── Возвратные глаголы.
-# {vp} — глагол в том же лице, что и подлежащее: лицо выводится из слова
-- id: reflexiv-subj
-  rule: reflexiv
-  level: A2
-  kind: choice
-  frame: "{Subj} {vp} {slot} oft {particle}."
-  need: {pos: v, has: [reflexive]}
-  slot: {paradigm: reflexive_pronoun, person: from_word}
-  options: {paradigm: reflexive_pronoun, count: 4}
-  why: reflexiv
-
-# ── Futur I: werden + инфинитив, и инфинитив уезжает в конец.
-- id: futur-subj
-  rule: futur
-  level: A2
-  kind: choice
-  frame: "{Subj} {slot} morgen {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: werden_present, person: from_word}
-  options: {paradigm: werden_present, count: 4}
-  why: futur
-
-# ── Konjunktiv II: würde + инфинитив.
-- id: konjunktiv-subj
-  rule: konjunktiv2
-  level: B1
-  kind: choice
-  frame: "{Subj} {slot} gern {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: wuerde, person: from_word}
-  options: {paradigm: wuerde, count: 4}
-  why: konjunktiv2
-
-# ── Passiv: werden + Partizip II. Подлежащее — то же местоимение без смысла,
-# что и в рамках с объектом: кто делает, пассив как раз и не называет.
-- id: passiv-das
-  rule: passiv
-  level: B1
-  kind: choice
-  frame: "Das {slot} heute {pp}."
-  need: {pos: v, tags: [obj], not: [reflexive, obj_person, placement]}
-  slot: {paradigm: werden_present, person: 3sg}
-  options: {paradigm: werden_present, count: 4}
-  why: passiv
-
-- id: passiv-person
-  rule: passiv
-  level: B1
-  kind: choice
-  frame: "{Subj} {slot} heute {pp}."
-  need: {pos: v, tags: [obj_person], not: [reflexive]}
-  slot: {paradigm: werden_present, person: from_word}
-  options: {paradigm: werden_present, count: 4}
-  why: passiv
 
 # ── man: безличное подлежащее, которого в русском нет. Пропуск — форма глагола,
 # а не само man: четыре местоимения в этой рамке все были бы верны.
@@ -974,19 +682,6 @@
   slot: {paradigm: merged_prep_article, prep: zu, case: dat, num: sg}
   options: {paradigm: merged_prep_article, count: 4}
   why: merge-prep-article
-
-# ⚠ То же лекарство для пассива: в `passiv-das` подлежащее всегда «Das», то есть
-# единственного числа, и ответ всегда `wird`. Здесь подлежащее во множественном,
-# и форма werden берётся не из памяти, а из подлежащего.
-- id: passiv-plural
-  rule: passiv
-  level: B1
-  kind: choice
-  frame: "Die Sachen {slot} heute {pp}."
-  need: {pos: v, tags: [obj], not: [reflexive, obj_person, placement]}
-  slot: {paradigm: werden_present, person: 3pl}
-  options: {paradigm: werden_present, count: 4}
-  why: passiv
 
 # ⚠ Рамки против вырожденного правила. «Слабое склонение в именительном» — это
 # окончание -e у ВСЕХ трёх родов, то есть у правила один ответ на всё наполнение
@@ -1281,56 +976,6 @@
   options: {paradigm: pronoun, count: 4}
   why: pronomen-dativ
 
-# ⚠ Обстоятельство вынесено вперёд, поэтому глагол стоит ВТОРЫМ, а подлежащее
-# после него. Это единственное место, где порядок слов виден в формате «один пропуск»
-- id: futur-bald
-  rule: futur
-  level: A2
-  kind: choice
-  frame: "Bald {slot} {subj} {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: werden_present, person: from_word}
-  options: {paradigm: werden_present, count: 4}
-  why: futur
-
-- id: futur-nie
-  rule: futur
-  level: A2
-  kind: choice
-  frame: "{Subj} {slot} das nie {w}."
-  # ⚠ В рамке есть прямое дополнение «das», значит и глагол нужен переходный: с тегом
-  # solo собиралось «Sie werden das nie gehen» — 104 задания из 179. placement исключены
-  # по той же причине, что у praesens-er-obj: «das stellen» без «куда» не фраза.
-  # sep исключать не надо: {w} это инфинитив, и приставка уезжает в конец вместе с ним.
-  need: {pos: v, tags: [obj], not: [reflexive, obj_person, placement]}
-  slot: {paradigm: werden_present, person: from_word}
-  options: {paradigm: werden_present, count: 4}
-  why: futur
-
-- id: konjunktiv-lieber
-  rule: konjunktiv2
-  level: B1
-  kind: choice
-  # ⚠ Было «An deiner Stelle …» — а это идиома ПЕРВОГО лица: «на твоём месте я бы…».
-  # С любым другим подлежащим выходит бессмыслица вроде «An deiner Stelle würdest
-  # du warten» — 148 заданий из 179. «Mit mehr Zeit» годится всем лицам и так же
-  # выносит обстоятельство вперёд, оставляя глагол вторым.
-  frame: "Mit mehr Zeit {slot} {subj} {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: wuerde, person: from_word}
-  options: {paradigm: wuerde, count: 4}
-  why: konjunktiv2
-
-- id: konjunktiv-wenn
-  rule: konjunktiv2
-  level: B1
-  kind: choice
-  frame: "{Subj} {slot} heute lieber {w}."
-  need: {pos: v, tags: [solo], not: [reflexive]}
-  slot: {paradigm: wuerde, person: from_word}
-  options: {paradigm: wuerde, count: 4}
-  why: konjunktiv2
-
 - id: man-darf
   rule: man-subjekt
   level: A2
@@ -1348,18 +993,6 @@
   need: {pos: v, tags: [obj], not: [sep, reflexive, obj_person, placement]}
   slot: {paradigm: verb_present, person: 3sg}
   why: man-subjekt
-
-# последнее правило с одной рамкой. Обстоятельство вперёд — и глагол встаёт вторым,
-# а подлежащее уходит за него: «Heute beeile ich mich»
-- id: reflexiv-heute
-  rule: reflexiv
-  level: A2
-  kind: choice
-  frame: "Heute {vp} {subj} {slot} {particle}."
-  need: {pos: v, has: [reflexive]}
-  slot: {paradigm: reflexive_pronoun, person: from_word}
-  options: {paradigm: reflexive_pronoun, count: 4}
-  why: reflexiv
 
 # ⚠ Сильное склонение голодало: без артикля стоят только неисчисляемые, а их
 # в лексиконе три десятка на 1836 слов — 58 заданий против полутора тысяч

@@ -158,13 +158,6 @@ function readablePersons(ps: Person[]): string {
   return ps.map((x) => PERSON_RU[x]).join(' или ')
 }
 
-/** Примечание про второй вспомогательный глагол — только там, где его и тренируют. */
-function auxNote(item: Item): string | undefined {
-  if (item.rule !== 'perfekt-aux') return undefined
-  const v = getWords().find((w) => w.w === item.word)?.entry as Verb | undefined
-  return v?.auxn
-}
-
 export function Explain({ item, given }: { item: Item; given?: string }) {
   const e = explainItem(item)
   const t = getBundle().templates.find((x) => x.id === item.templateId)
@@ -280,10 +273,6 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
 
       <p className="contrast">{e.ru_contrast}</p>
       {e.more && <p className="more">{e.more}</p>}
-      {/* ⚠ Второе значение глагола: «ist gefahren — поехал; hat gefahren — вёл машину».
-          Поле auxn собиралось в бандл с самого начала, а показать его забыли —
-          и fixes.yaml, и src/CLAUDE.md всё это время обещали, что оно видно в разборе. */}
-      {auxNote(item) && <p className="more">{auxNote(item)}</p>}
     </section>
   )
 }
