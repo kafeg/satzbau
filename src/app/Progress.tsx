@@ -69,13 +69,21 @@ export function Progress({
   const themeOf = (word: string) => getWords().find((w) => w.w === word)?.theme
 
   const wrong = answers.filter((a) => !a.ok)
-  const groups = new Map<string, { title: string; sub: string; n: number; due: number | null }>()
+  // ⚠ Подпись у группы «по правилу» — СЛОВА, а не разбор первой ошибки: строка
+  // «der → das» без слова не говорит ничего, а ошибок в группе несколько, и разбор
+  // первой из них описывает только её. У группы по слову наоборот: слово в заголовке,
+  // и полезен разбор.
+  const groups = new Map<
+    string,
+    { title: string; sub: string; words: string[]; n: number; due: number | null }
+  >()
   for (const a of wrong) {
     const key =
       by === 'rule' ? a.rule : by === 'word' ? a.word : (themeOf(a.word) ?? 'без темы')
     const got = groups.get(key)
     if (got) {
       got.n++
+      if (!got.words.includes(a.word)) got.words.push(a.word)
       continue
     }
     groups.set(key, {
@@ -85,7 +93,8 @@ export function Progress({
           : by === 'word'
             ? a.word
             : (bundle.themes[key]?.title ?? key),
-      sub: by === 'theme' ? '' : reason(a),
+      sub: by === 'word' ? reason(a) : '',
+      words: [a.word],
       n: 1,
       due:
         by === 'rule'
@@ -179,7 +188,11 @@ export function Progress({
                 <div className="grule">
                   <span className="rname">
                     {r.title}
-                    {r.sub && <span className="rtheme mono">{r.sub}</span>}
+                    {(r.sub || by === 'rule') && (
+                      <span className="rtheme mono">
+                        {r.sub || r.words.slice(0, 3).join(', ') + (r.words.length > 3 ? '…' : '')}
+                      </span>
+                    )}
                   </span>
                   <span className="rn mono">×{r.n}</span>
                   <span className="rlv">{WHEN(r.due)}</span>
