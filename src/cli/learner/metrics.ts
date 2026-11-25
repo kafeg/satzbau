@@ -45,6 +45,12 @@ export interface Metrics {
     choiceOnly: boolean
   }[]
   misconceptions: { id: string; start: number; end: number; errors: number }[]
+  /** занятий подряд правило было «пора» на старте и не попало в занятие: максимум по правилу */
+  dueWait: { rule: string; sessions: number }[]
+  /** ложное «держится» за ВСЕ дни, а не только контрольные: правило → сколько дней */
+  falseSolidDays: { rule: string; days: number }[]
+  /** встречено правил к концу по уровням: «A1 16/19» */
+  accessByLevel: string
 }
 
 const pct = (a: number, b: number) => (b ? Math.round((a / b) * 1000) / 10 : 0)
@@ -115,7 +121,36 @@ export function metrics(r: Run): Metrics {
     errors: errors.filter((e) => e.mis === id).length,
   }))
 
+  const wait = new Map<string, number>()
+  const run = new Map<string, number>()
+  for (const s of r.sessions) {
+    for (const rule of s.due) {
+      const n = s.shown.includes(rule) ? 0 : (run.get(rule) ?? 0) + 1
+      run.set(rule, n)
+      wait.set(rule, Math.max(wait.get(rule) ?? 0, n))
+    }
+    for (const rule of [...run.keys()]) if (!s.due.includes(rule)) run.delete(rule)
+  }
+  const dueWait = [...wait]
+    .filter(([, n]) => n > 0)
+    .map(([rule, sessions]) => ({ rule, sessions }))
+    .sort((a, b) => b.sessions - a.sessions)
+
+  const fsd = new Map<string, number>()
+  for (const s of r.snaps) for (const rule of s.falseSolid.rules) fsd.set(rule, (fsd.get(rule) ?? 0) + 1)
+  const falseSolidDays = [...fsd].map(([rule, days]) => ({ rule, days })).sort((a, b) => b.days - a.days)
+
+  const byLv = new Map<string, [number, number]>()
+  for (const x of r.levelRules) {
+    const [m, n] = byLv.get(x.level) ?? [0, 0]
+    byLv.set(x.level, [m + (met.has(x.rule) ? 1 : 0), n + 1])
+  }
+  const accessByLevel = [...byLv].map(([lv, [m, n]]) => `${lv} ${m}/${n}`).join(', ')
+
   return {
+    dueWait,
+    falseSolidDays,
+    accessByLevel,
     persona: r.persona.id,
     seed: r.seed,
     days: r.days,
@@ -138,6 +173,9 @@ export function markdown(m: Metrics, r: Run): string {
     '',
     `Ответов ${m.answers}, верных ${m.accuracy}%, из верных не по знанию ${m.lucky}%.`,
     `Откуда ответы (+ засчитан, − нет): ${Object.entries(m.causes).map(([k, v]) => `${k} ${v}`).join(', ')}.`,
+    `Встречено правил к концу: ${m.accessByLevel}.`,
+    `«Пора», но не в занятии, занятий подряд: ${m.dueWait.slice(0, 5).map((x) => `${x.rule} ${x.sessions}`).join(', ') || '—'}.`,
+    `Ложное «держится» за все дни (правило — дней): ${m.falseSolidDays.map((x) => `${x.rule} ${x.days}`).join(', ') || '—'}.`,
     '',
     '## Контрольные дни',
     '',

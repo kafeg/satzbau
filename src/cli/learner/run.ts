@@ -49,6 +49,8 @@ export interface Run {
   /** истинная вспоминаемость навыков на конец контрольных дней */
   truth: Record<number, Record<string, number>>
   learner: Learner
+  /** по занятию: какие правила были «пора» на старте и какие попали в занятие */
+  sessions: { day: number; due: string[]; shown: string[] }[]
 }
 
 const LV: Record<Level, number> = { A1: 1, A2: 2, B1: 3 }
@@ -112,6 +114,7 @@ export function run(persona: Persona, days: number, seed: number): Run {
   const snaps: DaySnap[] = []
   const truth: Run['truth'] = {}
   const met = new Set<string>()
+  const sessions: Run['sessions'] = []
   const levelRules = rules({ level: persona.level }).filter((r) => r.count > 0)
   let skipWeek = false
 
@@ -140,6 +143,13 @@ export function run(persona: Persona, days: number, seed: number): Run {
       let t = morning + s * 10 * 3_600_000 + Math.floor(plan() * 3_600_000)
       const items = newSession({ level: persona.level, theme, cards, seed: seed * 1000 + day * 10 + s, now: t })
       const stop = plan() < persona.quit ? Math.floor(plan() * items.length) : items.length
+      sessions.push({
+        day: day + 1,
+        due: rules({ level: persona.level, cards, now: t })
+          .filter((r) => r.count > 0 && r.state === 'due')
+          .map((r) => r.rule),
+        shown: [...new Set(items.slice(0, stop).map((i) => i.rule))],
+      })
       for (const item of items.slice(0, stop)) {
         const [p0, p1] = persona.pause
         t += Math.round((p0 + plan() * (p1 - p0)) * 1000)
@@ -194,5 +204,5 @@ export function run(persona: Persona, days: number, seed: number): Run {
     }
     snaps.push(snap)
   }
-  return { persona, seed, days, answers, recs, snaps, levelRules, truth, learner: l }
+  return { persona, seed, days, answers, recs, snaps, levelRules, truth, learner: l, sessions }
 }

@@ -5,8 +5,8 @@
 import { getBundle } from '../core/bundle.ts'
 import type { Level } from '../core/types.ts'
 import { go } from './route.ts'
-import { wordKey, type Cards, type State } from './srs.ts'
-import { nextNew, plural, rules, SIZE, tasks, wordsOf } from './session.ts'
+import { dueCount, wordKey, type Cards, type State } from './srs.ts'
+import { plural, rules, sessionPlan, SIZE, tasks, wordsOf } from './session.ts'
 
 function Gear() {
   return (
@@ -39,12 +39,20 @@ export function Home({ level, cards, theme }: { level?: Level; cards: Cards; the
 
   const due = all.filter((r) => r.state === 'due' && r.count > 0)
   const repeat = due.length
-  const fresh = nextNew({ level, cards })
+  // подпись обещает ровно то, что соберёт очередь: при долге нового нет, после чисто
+  // сданного — до трёх (docs/queue.md)
+  const plan = sessionPlan({ level, cards })
+  const fresh = plan.fresh[0]
+  const more = plan.fresh.length - 1
+  // ⚠ Слова «пора» входят в занятие, но правил «пора» может не быть: тогда главная
+  // писала «Повторов на сегодня нет» при сорока словах в очереди
+  const words = dueCount(cards, 'w:')
   const sub = [
     `${tasks(SIZE)}`,
     repeat ? `${plural(repeat, ['повтор', 'повтора', 'повторов'])}` : null,
-    fresh ? `новое — ${fresh.name}` : null,
+    fresh ? `новое — ${fresh.name}${more > 0 ? ` и ещё ${more}` : ''}` : null,
   ].filter(Boolean)
+  const wordsLine = words ? `${plural(words, ['слово', 'слова', 'слов'])} пора повторить — войдут в занятие.` : ''
 
   return (
     <main className="home">
@@ -95,9 +103,11 @@ export function Home({ level, cards, theme }: { level?: Level; cards: Cards; the
       </h2>
       {due.length === 0 ? (
         <p className="panel note small">
-          {fresh
-            ? `Повторов на сегодня нет. «Заниматься» возьмёт новое правило — ${fresh.name} — и то, что в работе.`
-            : 'Повторов на сегодня нет.'}
+          {words
+            ? `Правилам повторять пока рано. ${wordsLine}`
+            : fresh
+              ? `Повторов на сегодня нет. «Заниматься» возьмёт новое правило — ${fresh.name} — и то, что в работе.`
+              : 'Повторов на сегодня нет.'}
         </p>
       ) : (
         <ul className="group">
@@ -112,6 +122,7 @@ export function Home({ level, cards, theme }: { level?: Level; cards: Cards; the
           ))}
         </ul>
       )}
+      {due.length > 0 && words > 0 && <p className="panel note small">И ещё {wordsLine}</p>}
     </main>
   )
 }

@@ -62,7 +62,8 @@ describe('симулятор ученика', () => {
 
   it('заблуждение молчит там, где оно ни при чём', () => {
     expect(mis('perfekt-haben', 'praesens-du', 'fahren')).toBeNull()
-    expect(mis('strong-weak', 'praesens-du', 'wohnen')).toBe('wohnst')
+    expect(mis('strong-weak', 'praesens-du', 'wohnen')).toBeNull()
+    expect(mis('strong-weak', 'partizip-gestern', 'atmen')).toBeNull()
   })
 
   it('прогон детерминирован по seed', () => {

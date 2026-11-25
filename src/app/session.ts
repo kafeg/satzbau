@@ -2,7 +2,7 @@
 // На Э5 сюда придут повторы по FSRS, и смешанная очередь станет «повторением ошибок».
 
 import { getBundle, getWords, type Word } from '../core/bundle.ts'
-import { ruleKey, stateOf, wordKey, type Cards, type State } from './srs.ts'
+import { dueAt, memoOf, ruleKey, ruleMemo, stateOf, wordKey, type Cards, type RuleMemo, type State } from './srs.ts'
 import { fillingFor, generate } from '../core/generate.ts'
 import type { Bundle, Item, Level, Template } from '../core/types.ts'
 
@@ -204,6 +204,11 @@ function ruleState(
 ): State {
   if (!cards) return 'new'
   const met = stateOf(cards, ruleKey(r.rule), now)
+  // ⚠ «Держится» на одной форме ответа — не знание: perfekt-aux «держался» десять дней
+  // на одних haben, и «всегда haben» отвечал верно. Нужны две разные верные формы,
+  // если правило их вообще даёт (docs/queue.md, п. 5)
+  if (!r.lex && met === 'solid' && (ruleMemo(cards, r.rule)?.forms.length ?? 0) < variety(r.rule))
+    return 'learning'
   if (!r.lex || met === 'new') return met
   const words = [...set].map((w) => stateOf(cards, wordKey(w), now))
   if (words.includes('due')) return 'due'
@@ -218,12 +223,92 @@ function ruleState(
  * а слова другой темы очередь всё равно доберёт.
  */
 export function nextNew(p: Pick = {}): RuleInfo | null {
+  return newRules(p, 1)[0] ?? null
+}
+
+/** Несколько новых подряд: каждое следующее считает предыдущие уже встреченными. */
+function newRules(p: Pick, k: number): RuleInfo[] {
   const explain = getBundle().explain
   const fresh = rules({ level: p.level, cards: p.cards, now: p.now }).filter(
     (r) => r.count > 0 && r.state === 'new',
   )
-  const met = (r: string) => p.cards?.has(ruleKey(r)) === true
-  return fresh.find((r) => (explain[r.rule]?.after ?? []).every(met)) ?? fresh[0] ?? null
+  const met = new Set([...(p.cards?.keys() ?? [])].filter((x) => x.startsWith('r:')).map((x) => x.slice(2)))
+  const out: RuleInfo[] = []
+  while (out.length < k) {
+    const left = fresh.filter((r) => !out.includes(r))
+    const pick = left.find((r) => (explain[r.rule]?.after ?? []).every((a) => met.has(a))) ?? left[0]
+    if (!pick) break
+    out.push(pick)
+    met.add(pick.rule)
+  }
+  return out
+}
+
+/** Заданий на новое правило в занятии. */
+export const NEW_ITEMS = 3
+/** Сколько мест должно остаться после «пора», чтобы открыть новое: три задания и запас. */
+export const NEW_ROOM = 4
+/** Новых за занятие, если последнее открытое сдано с первого раза. */
+export const NEW_MAX = 3
+
+/**
+ * Сколько новых правил можно открыть. Одно, пока последнее открытое не сдано чисто —
+ * первые три ответа верны и без подсказки. Сдано — до трёх: знакомое A1 вернувшийся
+ * проходит по три задания на правило, а не по одному правилу в день (docs/queue.md, п. 3).
+ * «Последнее открытое» — всё, что открыто в пределах двенадцати часов от самого свежего.
+ */
+function newAllowed(cards?: Cards): number {
+  if (!cards) return 1
+  const memo = [...memoOf(cards)]
+  if (!memo.length) return 1
+  const last = Math.max(...memo.map(([, m]) => m.firstAt))
+  const recent = memo.filter(([, m]) => last - m.firstAt < 12 * 3_600_000)
+  // ⚠ Три верных подряд на кнопках бывают и наугад, а после первого ответа правило
+  // уже показано. Поэтому «сдано» — ещё и на двух разных формах, если правило их даёт:
+  // угадать der и потом dem труднее, чем трижды der
+  const passed = ([rule, m]: [string, RuleMemo]) =>
+    m.firstN === 3 && m.clean && m.forms.length >= variety(rule)
+  return recent.every(passed) ? NEW_MAX : 1
+}
+
+/**
+ * Что пойдёт в «Заниматься»: правила «пора» и новые. Нужно и очереди, и главной —
+ * подпись кнопки обязана обещать ровно то, что получится.
+ */
+export function sessionPlan(p: Pick = {}): { due: RuleInfo[]; fresh: RuleInfo[] } {
+  const size = p.size ?? SIZE
+  const all = rules({ level: p.level, cards: p.cards, now: p.now }).filter((r) => r.count > 0)
+  const at = (r: RuleInfo) => (p.cards ? (dueAt(p.cards, ruleKey(r.rule)) ?? 0) : 0)
+  const due = all.filter((r) => r.state === 'due').sort((a, b) => at(a) - at(b))
+  const room = size - Math.min(due.length, size)
+  const k = room >= NEW_ROOM ? Math.min(newAllowed(p.cards), Math.floor((room - 1) / NEW_ITEMS)) : 0
+  return { due, fresh: newRules(p, k) }
+}
+
+/**
+ * Сколько разных ответов бывает у правила, до двух. Считается один раз на бандл и только
+ * для правил, дошедших до «держится»: у большинства различие видно на первых заданиях.
+ */
+const VARIETY = new WeakMap<object, Map<string, number>>()
+
+function variety(rule: string): number {
+  const bundle = getBundle()
+  let box = VARIETY.get(bundle)
+  if (!box) VARIETY.set(bundle, (box = new Map()))
+  const hit = box.get(rule)
+  if (hit !== undefined) return hit
+  const words = getWords()
+  const seen = new Set<string>()
+  for (const t of bundle.templates) {
+    if (t.rule !== rule) continue
+    for (const w of fillsOf(t, {}, words)) {
+      seen.add(generate(t, w, words).answer.toLowerCase())
+      if (seen.size >= 2) break
+    }
+    if (seen.size >= 2) break
+  }
+  box.set(rule, seen.size)
+  return seen.size
 }
 
 /** Порядок разбора: сперва то, чему пора, потом новое, потом в работе, последним выученное. */
@@ -246,15 +331,10 @@ export function newSession(p: Pick = {}): Item[] {
   // забирает по одному заданию, поэтому сессия из двенадцати заданий состояла из ПЕРВЫХ
   // двенадцати шаблонов всегда: восемь правил из сорока двух, остальное недостижимо.
 
-  // ⚠ Одно новое правило за сессию. Иначе «Заниматься» с пустым журналом даёт двенадцать
-  // заданий на двенадцать незнакомых правил, а дальше подмешивает незнакомое к каждому
-  // повтору. «Новое» — это НЕТ КАРТОЧКИ ПРАВИЛА, то есть правило не встречалось ни разу;
-  // у лексического правила расписание идёт по словам, но «встречалось» — по нему же.
-  // Без карточек (тесты, CLI) ограничения нет: новое от знакомого там не отличить.
-  const limit = Boolean(p.cards) && !p.rule && !p.only
-  const fresh = limit ? nextNew({ level: p.level, cards: p.cards, now: p.now })?.rule : undefined
-  const allowed = (rule: string) =>
-    !limit || rule === fresh || p.cards?.has(ruleKey(rule)) === true
+  // «Заниматься» с карточками собирается по слотам: пора → новое → в работе.
+  // Дрилл правила, новые слова темы и вызовы без карточек (тесты, CLI) — обходом
+  // стопок ниже: там правило одно или новое от знакомого не отличить.
+  if (p.cards && !p.rule && !p.only) return mainSession(p, next, words)
 
   // ⚠ В стопках лежат СЛОВА, а не собранные задания. Раньше здесь собирались все
   // двадцать пять тысяч заданий, чтобы выбрать из них двенадцать: четверть секунды
@@ -263,7 +343,6 @@ export function newSession(p: Pick = {}): Item[] {
   // берутся из них же. Собираем только те двенадцать, что поедут человеку.
   const buckets = shuffle(
     templatesOf(p)
-      .filter((t) => allowed(t.rule))
       .map((t) => {
         const fill = fillsOf(t, { level: p.level, only: p.only }, words)
         return {
@@ -316,6 +395,72 @@ export function newSession(p: Pick = {}): Item[] {
       seen.add(w.w)
       out.push(generate(b.t, w, words))
     }
+  }
+  return out
+}
+
+/**
+ * «Заниматься»: занятие собирается по слотам — пора, новое, в работе (docs/queue.md, п. 1).
+ *
+ * ⚠ Раньше здесь был обход стопок по кругу: в стопке одно правило, и «пора» влияла только
+ * на порядок слов ВНУТРИ стопки, а не на то, чьи стопки дадут задания. Правило в «пора»
+ * не попадало в занятие семнадцать раз подряд. Теперь правила выбираются явно, а слово
+ * выбирается внутри правила: тема, затем слово в «пора», затем слабое.
+ */
+function mainSession(p: Pick, next: () => number, words: Word[]): Item[] {
+  const cards = p.cards as Cards
+  const size = p.size ?? SIZE
+  const plan = sessionPlan(p)
+  const all = rules({ level: p.level, cards, now: p.now }).filter((r) => r.count > 0)
+  const stab = (r: RuleInfo) => cards.get(ruleKey(r.rule))?.stability ?? 0
+  const by = (st: State) => all.filter((r) => r.state === st).sort((a, b) => stab(a) - stab(b))
+
+  const tpls = new Map<string, Template[]>()
+  const order = templatesOf({ level: p.level })
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(next() * (i + 1))
+    ;[order[i], order[j]] = [order[j] as Template, order[i] as Template]
+  }
+  for (const t of order) {
+    tpls.set(t.rule, [...(tpls.get(t.rule) ?? []), t])
+  }
+  const turn = new Map<string, number>()
+  const seen = new Set<string>()
+  const out: Item[] = []
+  const wordRank = (w: Word) =>
+    (p.theme && w.theme !== p.theme ? 8 : 0) + RANK[stateOf(cards, wordKey(w.w), p.now)] * 2
+
+  // Слово внутри правила: лучшие по рангу, а среди них — то, чей ответ ещё ни разу
+  // не дан верно (п. 5): после трёх haben должен прийти sein.
+  const take = (rule: string): boolean => {
+    const ts = tpls.get(rule) ?? []
+    const forms = ruleMemo(cards, rule)?.forms ?? []
+    for (let i = 0; i < ts.length; i++) {
+      const n = turn.get(rule) ?? 0
+      turn.set(rule, n + 1)
+      const t = ts[n % ts.length] as Template
+      const fill = fillsOf(t, { level: p.level }, words).filter((w) => !seen.has(w.w))
+      if (!fill.length) continue
+      const best = fill
+        .map((w) => ({ w, r: wordRank(w) + next() }))
+        .sort((a, b) => a.r - b.r)
+        .slice(0, 6)
+        .map((x) => generate(t, x.w, words))
+      const item = best.find((x) => !forms.includes(x.answer.toLowerCase())) ?? (best[0] as Item)
+      seen.add(item.word)
+      out.push(item)
+      return true
+    }
+    return false
+  }
+
+  for (const r of plan.due) if (out.length < size) take(r.rule)
+  for (const r of plan.fresh) for (let i = 0; i < NEW_ITEMS && out.length < size; i++) take(r.rule)
+  const rest = [...by('learning'), ...plan.due, ...plan.fresh, ...by('solid')]
+  while (out.length < size) {
+    let any = false
+    for (const r of rest) if (out.length < size && take(r.rule)) any = true
+    if (!any) break
   }
   return out
 }

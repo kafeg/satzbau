@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { applyAnswer, due, dueAt, dueCount, init, replay, ruleKey, wordKey } from './srs.ts'
+import { applyAnswer, due, dueAt, dueCount, init, memoOf, replay, ruleKey, wordKey } from './srs.ts'
 import type { Answer } from './store.ts'
 import { parse } from './transfer.ts'
 
@@ -68,6 +68,27 @@ describe('повторы', () => {
     let cards = replay([])
     for (const x of log) cards = applyAnswer(cards, x)
     expect(JSON.stringify([...cards])).toBe(JSON.stringify([...replay(log)]))
+    expect(JSON.stringify([...memoOf(cards)])).toBe(JSON.stringify([...memoOf(replay(log))]))
+  })
+
+  it('память правила: верные формы без подсказки и чистое начало', () => {
+    const m = memoOf(
+      replay([
+        a({ ok: 1, given: 'dem' }),
+        a({ ok: 1, t: T0 + 1, given: 'Dem' }),
+        a({ ok: 1, t: T0 + 2, given: 'der', hint: 1 }),
+        a({ ok: 0, t: T0 + 3, given: 'den' }),
+      ]),
+    ).get('prep-dativ')
+    expect(m?.forms).toEqual(['dem'])
+    expect(m?.firstN).toBe(3)
+    expect(m?.clean).toBe(false)
+  })
+
+  it('ответ поверх не меняет память у прежних карточек', () => {
+    const before = replay([a({ ok: 1, given: 'dem' })])
+    applyAnswer(before, a({ ok: 1, t: T0 + 1, given: 'der' }))
+    expect(memoOf(before).get('prep-dativ')?.forms).toEqual(['dem'])
   })
 })
 

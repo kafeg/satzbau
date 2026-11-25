@@ -32,13 +32,14 @@ export function ruGender(ru: string | undefined): Gender | null {
   return 'm'
 }
 
-const PREFIX = /^(be|ver|er|ge|zer|ent|emp|miss)/
+const PREFIX = /^(be|ver|er|ge|zer|ent|emp|miss|über|unter|hinter|wider)/
 
 /** Глагол, спрягаемый как слабый: fährt → fahrt, ging → gehte, gegangen → gegeht. */
 export function weakForms(v: Verb): Partial<Verb> | null {
   if (v.p3.includes(' ') || !/e?n$/.test(v.w)) return null
   const stem = v.w.replace(/e?n$/, '')
-  const e = /[dt]$/.test(stem) ? 'e' : ''
+  // беглая -e- как в morph.ts: arbeitet, atmet, öffnet, zeichnet
+  const e = /(t|d|chn|ffn|gn|tm|dm)$/.test(stem) ? 'e' : ''
   return {
     p3: `${stem}${e}t`,
     pt: `${stem}${e}te`,
@@ -100,8 +101,11 @@ export const MISCONCEPTIONS: Misconception[] = [
     form: (item, t, w, all) => {
       if (w.pos !== 'v' || !['verb_present', 'verb_past', 'participle', 'imperative'].includes(t.slot.paradigm))
         return null
-      const weak = weakForms(w.entry as Verb)
-      return weak ? regen(t, w, all, undefined, weak) : null
+      const v = w.entry as Verb
+      const weak = weakForms(v)
+      // у слабого глагола «спрягать как слабый» — не заблуждение, а верный ответ
+      if (!weak || (weak.p3 === v.p3 && weak.pt === v.pt && weak.pp === v.pp)) return null
+      return regen(t, w, all, undefined, weak)
     },
   },
   {

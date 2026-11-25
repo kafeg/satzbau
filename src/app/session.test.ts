@@ -182,3 +182,61 @@ describe('очередь на заданный момент', () => {
     expect(at(t0 + 365 * 86_400_000)).toBe('due')
   })
 })
+
+// docs/queue.md: занятие по слотам — пора, новое, в работе.
+describe('занятие по слотам', () => {
+  const DAY = 86_400_000
+  const NOW = Date.UTC(2026, 5, 1, 9)
+  const ruleIds = rules({ level: 'A1' })
+    .filter((r) => r.count > 0 && !r.lex)
+    .map((r) => r.rule)
+  const tplOf = (rule: string) => bundle.templates.find((t) => t.rule === rule)!.id
+  const ans = (rule: string, t: number, ok: 0 | 1 = 1, given = '-'): Answer => ({
+    t,
+    tpl: tplOf(rule),
+    word: 'Zug',
+    rule,
+    ok,
+    given,
+  })
+  const unknown = (items: { rule: string }[], cards: Cards) =>
+    [...new Set(items.map((i) => i.rule))].filter((r) => !cards.has(`r:${r}`))
+
+  it('каждое правило «пора» попадает в занятие', () => {
+    const due = ruleIds.slice(0, 8)
+    const cards = replay(due.map((r, i) => ans(r, NOW - 90 * DAY + i)))
+    const items = newSession({ level: 'A1', cards, seed: 3, now: NOW })
+    const got = new Set(items.map((i) => i.rule))
+    expect(due.filter((r) => !got.has(r))).toEqual([])
+  })
+
+  it('при долге больше восьми правил новое не открывается', () => {
+    const cards = replay(ruleIds.slice(0, 10).map((r, i) => ans(r, NOW - 90 * DAY + i)))
+    const items = newSession({ level: 'A1', cards, seed: 4, now: NOW })
+    expect(unknown(items, cards)).toEqual([])
+  })
+
+  it('новое сдано чисто — следующее занятие открывает до трёх новых, нет — одно', () => {
+    const r = ruleIds[0] as string
+    // три верных на ДВУХ разных формах: трижды одна форма бывает и наугад
+    const clean = replay([0, 1, 2].map((i) => ans(r, NOW - 3600_000 + i, 1, ['der', 'dem', 'den'][i])))
+    const dirty = replay([0, 1, 2].map((i) => ans(r, NOW - 3600_000 + i, i === 1 ? 0 : 1)))
+    const a = newSession({ level: 'A1', cards: clean, seed: 5, now: NOW })
+    const b = newSession({ level: 'A1', cards: dirty, seed: 5, now: NOW })
+    expect(unknown(a, clean).length).toBe(3)
+    expect(unknown(b, dirty).length).toBe(1)
+  })
+
+  it('«держится» не ставится на одной форме ответа', () => {
+    const rule = 'perfekt-aux'
+    const gaps = [0, 1, 3, 8, 20, 45, 90, 150]
+    const log = gaps.map((d) => ans(rule, NOW - 200 * DAY + d * DAY, 1, 'habe'))
+    const at = NOW - 200 * DAY + 151 * DAY
+    const one = replay(log)
+    expect(one.get(`r:${rule}`)!.stability).toBeGreaterThanOrEqual(21)
+    const state = (c: Cards) => rules({ cards: c, now: at }).find((r) => r.rule === rule)?.state
+    expect(state(one)).toBe('learning')
+    const two = replay([...log.slice(0, -1), ans(rule, NOW - 200 * DAY + 150 * DAY, 1, 'bin')])
+    expect(state(two)).toBe('solid')
+  })
+})

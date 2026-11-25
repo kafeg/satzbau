@@ -40,8 +40,49 @@ function grades(a: Answer): { rule: Grade; word: Grade } {
 
 export type Cards = Map<string, Card>
 
+/**
+ * Что журнал говорит о правиле сверх карточки FSRS. Считается тем же `apply`, что
+ * и карточки, — значит полный проигрыш и ответ поверх дают одно и то же.
+ */
+export interface RuleMemo {
+  /** различные формы, данные ВЕРНО без подсказки: «держится» на одной форме — не знание */
+  forms: string[]
+  /** время первого ответа: какое правило открыто последним */
+  firstAt: number
+  /** сколько первых ответов учтено, до трёх */
+  firstN: number
+  /** первые ответы все верны и без подсказки: правило знакомо, можно открывать следующее */
+  clean: boolean
+}
+export type Memo = Map<string, RuleMemo>
+
+// ⚠ Сбоку от карточек, а не внутри Map: тип Cards читают все экраны. Объекты памяти
+// не меняются на месте, только заменяются: applyAnswer копирует Map, и старое состояние
+// у того, кто его ещё держит, остаться должно прежним.
+const MEMO = new WeakMap<Cards, Memo>()
+
+export function memoOf(cards: Cards): Memo {
+  let m = MEMO.get(cards)
+  if (!m) MEMO.set(cards, (m = new Map()))
+  return m
+}
+
+export function ruleMemo(cards: Cards, rule: string): RuleMemo | undefined {
+  return MEMO.get(cards)?.get(rule)
+}
+
 /** Один ответ поверх уже проигранных карточек. Меняет переданный Map на месте. */
 function apply(cards: Cards, a: Answer): void {
+  const memo = memoOf(cards)
+  const was = memo.get(a.rule) ?? { forms: [], firstAt: a.t, firstN: 0, clean: true }
+  const form = a.given.trim().toLowerCase()
+  const known = a.ok === 1 && !a.hint
+  memo.set(a.rule, {
+    forms: known && !was.forms.includes(form) ? [...was.forms, form] : was.forms,
+    firstAt: was.firstAt,
+    firstN: Math.min(3, was.firstN + 1),
+    clean: was.firstN < 3 ? was.clean && known : was.clean,
+  })
   const s = engine()
   const now = new Date(a.t)
   const g = grades(a)
@@ -74,6 +115,7 @@ export function replay(answers: Answer[]): Cards {
  */
 export function applyAnswer(cards: Cards, a: Answer): Cards {
   const next: Cards = new Map(cards)
+  MEMO.set(next, new Map(memoOf(cards)))
   apply(next, a)
   return next
 }
