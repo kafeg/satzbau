@@ -25,11 +25,17 @@ export function download(answers: Answer[]): void {
   const url = URL.createObjectURL(
     new Blob([JSON.stringify(dump)], { type: 'application/json' }),
   )
+  // ⚠ Якорь должен быть в документе, а blob-URL нельзя отзывать синхронно: Firefox
+  // не обрабатывает клик по неприсоединённому якорю, Safari отменяет скачивание
+  // по уже отозванному URL. А это тот самый путь, который страхует от вытеснения
+  // хранилища на iOS, — молчаливый отказ здесь дороже всего.
   const a = document.createElement('a')
   a.href = url
   a.download = `satzbau-${new Date().toISOString().slice(0, 10)}.json`
+  document.body.append(a)
   a.click()
-  URL.revokeObjectURL(url)
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 0)
 }
 
 /** Разбор файла. Бросает с человеческим текстом: это видно в интерфейсе. */
@@ -47,8 +53,20 @@ export function parse(text: string): Answer[] {
   if (d.format !== FORMAT) {
     throw new Error(`формат файла ${d.format}, приложение понимает ${FORMAT}`)
   }
+  // ⚠ Проверяются ВСЕ поля, от которых зависит пересчёт. Без проверки `rule` запись
+  // с чужим или правленым форматом заводила карточку `r:undefined`, а без `ok` любой
+  // ответ считался ошибкой: журнал тихо превращался в мусор, который не отличить
+  // от настоящего.
   const ok = d.answers.filter(
-    (a) => a && typeof a.t === 'number' && typeof a.tpl === 'string' && typeof a.word === 'string',
+    (a): a is Answer =>
+      !!a &&
+      typeof a.t === 'number' &&
+      Number.isFinite(a.t) &&
+      typeof a.tpl === 'string' &&
+      typeof a.word === 'string' &&
+      typeof a.rule === 'string' &&
+      (a.ok === 0 || a.ok === 1) &&
+      typeof a.given === 'string',
   )
   if (!ok.length) throw new Error('в файле нет ответов')
   return ok.sort((a, b) => a.t - b.t)

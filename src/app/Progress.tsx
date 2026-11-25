@@ -48,12 +48,15 @@ export function Progress({
   answers,
   cards,
   level,
+  lost,
   onExport,
   onImport,
 }: {
   answers: Answer[]
   cards: Cards
   level?: Level
+  /** запись в журнал не прошла: приватный просмотр или переполненное хранилище */
+  lost?: boolean
   onExport: () => void
   onImport: (file: File) => Promise<void>
 }) {
@@ -101,6 +104,13 @@ export function Progress({
   return (
     <main className="home">
       <h1>Прогресс</h1>
+
+      {lost && (
+        <p className="panel note small warn">
+          ⚠ Ответы не сохраняются на этом устройстве: приватный просмотр или переполненное
+          хранилище. Выгрузите журнал файлом, пока вкладка открыта.
+        </p>
+      )}
 
       {/* четыре числа и есть навигация: за каждым список правил в этом состоянии */}
       <ul className="stats">

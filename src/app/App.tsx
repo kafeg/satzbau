@@ -66,6 +66,9 @@ export function App() {
   const [log, setLog] = useState<(Answer & { right: string })[]>([])
   const [nonce, setNonce] = useState(0)
   const [asked, setAsked] = useState(false)
+  // ⚠ Запись в журнал может не пройти (приватный просмотр, переполненное хранилище).
+  // Молча это терять нельзя: человек занимается час и обнаруживает пустой прогресс.
+  const [lost, setLost] = useState(false)
   // какие слова тренировать: приходит с карточек новых слов, живёт до ухода с дрилла
   const [only, setOnly] = useState<string[] | undefined>(undefined)
 
@@ -114,8 +117,9 @@ export function App() {
     try {
       await addAnswer(a)
     } catch {
-      // приватный просмотр или переполненное хранилище: сессия продолжается,
-      // но прогресс не сохранится — об этом честно сказано на экране ошибок
+      // сессия продолжается: ответы живут в памяти и работают до перезагрузки,
+      // но на диск не лягут — об этом сказано на экране итога и в «Прогрессе»
+      setLost(true)
     }
     // просим постоянное хранилище после первого ответа, а не на старте
     if (!asked) {
@@ -176,6 +180,7 @@ export function App() {
         answers={answers}
         cards={cards}
         level={level}
+        lost={lost}
         onExport={() => download(answers)}
         onImport={async (file) => {
           const next = await upload(file)
@@ -194,6 +199,13 @@ export function App() {
         <p className="score mono">
           {right} / {log.length}
         </p>
+        {lost && (
+          <p className="panel note small warn">
+            ⚠ Ответы не сохраняются на этом устройстве: приватный просмотр или
+            переполненное хранилище. Пока вкладка открыта, занятие идёт, но после
+            перезагрузки прогресс пропадёт.
+          </p>
+        )}
         <ul className="recap">
           {log
             .filter((a) => !a.ok)

@@ -64,10 +64,32 @@ export function clearAnswers(): Promise<unknown> {
   return tx('readwrite', (s) => s.clear())
 }
 
-/** Импорт: журнал заменяется целиком, иначе пришлось бы решать, что делать с пересечениями. */
-export async function replaceAnswers(xs: Answer[]): Promise<void> {
-  await clearAnswers()
-  for (const a of xs) await addAnswer(a)
+/**
+ * Импорт: журнал заменяется целиком, иначе пришлось бы решать, что делать с пересечениями.
+ *
+ * ⚠ Очистка и запись — ОДНА транзакция, и успехом считается её `oncomplete`. Раньше это
+ * были clear() плюс транзакция на каждый ответ: сбой на середине (квота, выгрузка вкладки)
+ * оставлял человека без старого журнала и с половиной нового, восстанавливать нечем.
+ *
+ * `id` проставляет само хранилище, поэтому из импортируемых записей он снимается: в файле
+ * он бессмысленный номер с чужой машины, а при слиянии файлов — источник коллизий.
+ */
+export function replaceAnswers(xs: Answer[]): Promise<void> {
+  return open().then(
+    (d) =>
+      new Promise<void>((ok, fail) => {
+        const t = d.transaction(STORE, 'readwrite')
+        t.oncomplete = () => ok()
+        t.onerror = () => fail(t.error ?? new Error('импорт не записался'))
+        t.onabort = () => fail(t.error ?? new Error('импорт прерван'))
+        const s = t.objectStore(STORE)
+        s.clear()
+        for (const a of xs) {
+          const { id: _id, ...rest } = a as Answer & { id?: number }
+          s.add(rest)
+        }
+      }),
+  )
 }
 
 /**
