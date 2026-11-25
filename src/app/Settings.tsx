@@ -22,8 +22,8 @@ function Speaker() {
 // главной каждый день. Поэтому он здесь, а не там.
 const LEVELS: [Level | undefined, string, string][] = [
   ['A1', 'A1', 'артикли, предлоги, Perfekt'],
-  ['A2', 'A1 и A2', 'плюс Wechselpräpositionen, слияния, прилагательные'],
-  [undefined, 'всё подряд', 'ещё и B1: Genitiv, редкие слова'],
+  ['A2', 'A1 и A2', 'плюс слияния, окончания прилагательных, Dativ'],
+  [undefined, 'всё подряд', 'ещё и B1: Genitiv, Präteritum, редкие слова'],
 ]
 
 export function Settings({
