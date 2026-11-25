@@ -40,24 +40,42 @@ function grades(a: Answer): { rule: Grade; word: Grade } {
 
 export type Cards = Map<string, Card>
 
-/** Проигрывает журнал с начала. Дёшево: один ответ — это два review. */
-export function replay(answers: Answer[]): Cards {
+/** Один ответ поверх уже проигранных карточек. Меняет переданный Map на месте. */
+function apply(cards: Cards, a: Answer): void {
   const s = engine()
-  const cards: Cards = new Map()
-  for (const a of answers) {
-    const now = new Date(a.t)
-    const g = grades(a)
-    for (const [key, grade] of [
-      [ruleKey(a.rule), g.rule],
-      [wordKey(a.word), g.word],
-    ] as [string, Grade][]) {
-      // cardId планировщик генерирует случайным; подменяем своим ключом, иначе два
-      // проигрывания одного журнала дают разные объекты и состояние нечем сравнить
-      const card = cards.get(key) ?? ({ ...s.newCard({ now }), cardId: key } as Card)
-      cards.set(key, s.review({ card, grade, now }).card as Card)
-    }
+  const now = new Date(a.t)
+  const g = grades(a)
+  for (const [key, grade] of [
+    [ruleKey(a.rule), g.rule],
+    [wordKey(a.word), g.word],
+  ] as [string, Grade][]) {
+    // cardId планировщик генерирует случайным; подменяем своим ключом, иначе два
+    // проигрывания одного журнала дают разные объекты и состояние нечем сравнить
+    const card = cards.get(key) ?? ({ ...s.newCard({ now }), cardId: key } as Card)
+    cards.set(key, s.review({ card, grade, now }).card as Card)
   }
+}
+
+/** Проигрывает журнал с начала. Нужен при загрузке и при замене журнала импортом. */
+export function replay(answers: Answer[]): Cards {
+  const cards: Cards = new Map()
+  for (const a of answers) apply(cards, a)
   return cards
+}
+
+/**
+ * Карточки после ОДНОГО нового ответа, без проигрывания журнала заново.
+ *
+ * ⚠ Журнал растёт всю жизнь профиля, а ответ даётся на каждом задании: полный
+ * проигрыш на шеститысячном журнале стоил 115 мс на ноутбуке и около полусекунды
+ * на телефоне — пауза между нажатием и разбором, которая растёт и никогда не падает.
+ * Результат тот же, пока ответ приходит последним по времени, а другого в приложении
+ * не бывает: `t` ставится в момент ответа. Тест сверяет с полным проигрышем.
+ */
+export function applyAnswer(cards: Cards, a: Answer): Cards {
+  const next: Cards = new Map(cards)
+  apply(next, a)
+  return next
 }
 
 export function due(cards: Cards, key: string, now = Date.now()): boolean {

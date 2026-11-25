@@ -8,7 +8,7 @@ import { loadBundle } from './load.ts'
 import { Progress } from './Progress.tsx'
 import { go, useRoute } from './route.ts'
 import { newSession } from './session.ts'
-import { init as initSrs, replay, type Cards } from './srs.ts'
+import { applyAnswer, init as initSrs, replay, type Cards } from './srs.ts'
 import { Settings } from './Settings.tsx'
 import { addAnswer, allAnswers, clearAnswers, persist, type Answer } from './store.ts'
 import { Tables } from './Tables.tsx'
@@ -114,11 +114,11 @@ export function App() {
     write(THEME_KEY, t)
   }
 
-  /** Ответ: в журнал, затем состояние пересчитывается из него целиком. */
+  /** Ответ: в журнал, и карточки — поверх нынешних, без проигрывания журнала заново. */
   const remember = async (a: Answer) => {
     const next = [...answers, a]
     setAnswers(next)
-    setCards(replay(next))
+    setCards((c) => applyAnswer(c, a))
     try {
       await addAnswer(a)
     } catch {

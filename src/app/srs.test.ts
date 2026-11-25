@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { due, dueAt, dueCount, init, replay, ruleKey, wordKey } from './srs.ts'
+import { applyAnswer, due, dueAt, dueCount, init, replay, ruleKey, wordKey } from './srs.ts'
 import type { Answer } from './store.ts'
 import { parse } from './transfer.ts'
 
@@ -52,6 +52,22 @@ describe('повторы', () => {
   it('журнал проигрывается одинаково, сколько ни проигрывай', () => {
     const log = [a({ ok: 0 }), a({ ok: 1, t: T0 + 60_000 }), a({ ok: 1, t: T0 + 120_000 })]
     expect(JSON.stringify([...replay(log)])).toBe(JSON.stringify([...replay(log)]))
+  })
+
+  // ⚠ На этом стоит вся экономия: ответ в дрилле больше не проигрывает журнал заново.
+  // Разойтись с полным проигрышем нельзя — состояние повторов нигде не хранится,
+  // и после перезагрузки человек получил бы другое расписание, чем видел вчера.
+  it('ответ поверх карточек даёт то же, что полный проигрыш', () => {
+    const log = [
+      a({ ok: 0 }),
+      a({ ok: 1, t: T0 + 60_000, word: 'Bus' }),
+      a({ ok: 1, t: T0 + 120_000, hint: 1 }),
+      a({ ok: 0, t: T0 + 200_000, rule: 'genus' }),
+      a({ ok: 1, t: T0 + 300_000, word: 'Bus' }),
+    ]
+    let cards = replay([])
+    for (const x of log) cards = applyAnswer(cards, x)
+    expect(JSON.stringify([...cards])).toBe(JSON.stringify([...replay(log)]))
   })
 })
 
