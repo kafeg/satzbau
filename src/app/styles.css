@@ -167,7 +167,6 @@ h1 + .section,
 
 /* ---------- поверхности ---------- */
 .tile,
-.rule,
 .group,
 .wcard,
 .panel,
@@ -818,36 +817,6 @@ body:has(.tabs) #root {
 .mistakes .rlv {
   font-size: var(--fs-sub);
   white-space: nowrap;
-}
-
-/* ---------- онбординг и крупные строки выбора ---------- */
-.rule {
-  display: block;
-  width: 100%;
-  text-align: left;
-  color: var(--text);
-  padding: var(--s3) var(--s4);
-  min-height: 64px;
-}
-
-.rule:active {
-  background: var(--press);
-}
-
-.rule-title {
-  display: block;
-  font-size: var(--fs-card);
-}
-
-.rule-sub {
-  display: block;
-  font-size: var(--fs-sub);
-  color: var(--text-2);
-  margin-top: var(--s1);
-}
-
-.start {
-  padding-top: var(--s6);
 }
 
 /* ---------- шапка дрилла ---------- */

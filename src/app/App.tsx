@@ -10,7 +10,6 @@ import { go, useRoute } from './route.ts'
 import { newSession } from './session.ts'
 import { init as initSrs, replay, type Cards } from './srs.ts'
 import { Settings } from './Settings.tsx'
-import { Start } from './Start.tsx'
 import { addAnswer, allAnswers, clearAnswers, persist, type Answer } from './store.ts'
 import { Tables } from './Tables.tsx'
 import { Tabs } from './Tabs.tsx'
@@ -20,8 +19,16 @@ import { Words } from './Words.tsx'
 import { download, upload } from './transfer.ts'
 
 const LEVEL_KEY = 'satzbau.level'
-const START_KEY = 'satzbau.started'
 const THEME_KEY = 'satzbau.theme'
+
+// ⚠ «всё подряд» — это отсутствие потолка, то есть undefined, и его приходится хранить
+// словом: иначе стёртый ключ не отличить от невыбранного уровня, и выбор откатывался
+// к A1 при каждой перезагрузке. Новый профиль начинает с A1, а не с B1.
+const ALL = 'all'
+const readLevel = (): Level | undefined => {
+  const v = read(LEVEL_KEY)
+  return v === ALL ? undefined : ((v as Level | undefined) ?? 'A1')
+}
 
 // Уровень — удобство, а не прогресс: приватный просмотр его не сохранит, и ладно.
 // Прогресс живёт в IndexedDB и выгружается файлом.
@@ -46,7 +53,7 @@ export function App() {
   const route = useRoute()
   const [ready, setReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [level, setLevel] = useState<Level | undefined>(() => read(LEVEL_KEY) as Level | undefined)
+  const [level, setLevel] = useState<Level | undefined>(readLevel)
   // текущая тема — постоянный приоритет очереди, а не выбор на каждый заход (docs/ia.md)
   const [theme, setTheme] = useState<string | undefined>(() => read(THEME_KEY))
   const [answers, setAnswers] = useState<Answer[]>([])
@@ -58,7 +65,6 @@ export function App() {
   const [asked, setAsked] = useState(false)
   // какие слова тренировать: приходит с карточек новых слов, живёт до ухода с дрилла
   const [only, setOnly] = useState<string[] | undefined>(undefined)
-  const [started, setStarted] = useState(() => read(START_KEY) === '1')
 
   useEffect(() => {
     Promise.all([loadBundle(), initSrs()])
@@ -89,7 +95,7 @@ export function App() {
 
   const pickLevel = (l?: Level) => {
     setLevel(l)
-    write(LEVEL_KEY, l)
+    write(LEVEL_KEY, l ?? ALL)
   }
 
   const pickTheme = (t?: string) => {
@@ -126,16 +132,6 @@ export function App() {
     </>
   )
 
-  if (!started && !answers.length)
-    return (
-      <Start
-        onPick={(l) => {
-          pickLevel(l)
-          setStarted(true)
-          write(START_KEY, '1')
-        }}
-      />
-    )
   if (route.screen === 'home')
     return shell(<Home level={level} cards={cards} theme={theme} />)
   if (route.screen === 'themes')
