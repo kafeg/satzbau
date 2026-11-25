@@ -155,6 +155,13 @@ gender:
   Polen:     {g: n, note: "das Polen — страна; der Pole — поляк"}
   Trotzphase:  {g: f}
 
+# 2а2. n-склонение руками. Обычно оно распознаётся само — по тому, что аккузатив
+#      в nouns.csv не равен лемме. У некоторых слов источник этого не даёт, и тогда
+#      выходит «des Menschs» вместо «des Menschen».
+n_declension:
+  Mensch: Menschen
+  Bär: Bären
+
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
 #     Иначе сборка каждый раз сообщает «нет множественного» про Hunger и Obst.
 no_plural:
@@ -176,6 +183,9 @@ no_plural:
   - Glatteis
   - Luft
   - Hitze
+  - Milch
+  - Eis
+  - Nachlass
   - Aussehen
   - Jugend
   - Vertrauen
@@ -351,6 +361,12 @@ reflexive:
 #     скамейки. Главнее источника; спорить с no_plural нельзя, это ловит валидатор.
 plural:
   Bank: Banken
+  # ⚠ Источник даёт несуществующие формы. Найдено сверкой склонения с UniMorph:
+  # до неё они жили в заданиях — «Hier sind zwei Menscher», «zwei Gasten».
+  Mensch: Menschen
+  Gast: Gäste
+  Feld: Felder
+  Landsmann: Landsleute
 
 plural_in_use:
   - Möbel

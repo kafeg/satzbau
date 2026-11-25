@@ -161,6 +161,9 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         rep.append((lemma, 'нет множественного'))
     gen = (e or {}).get('gen') or (ke and kform(ke, 'genitive'))
     akk = (e or {}).get('akk') or lemma
+    manual_nd = fixes['n_declension'].get(lemma)
+    if manual_nd:
+        akk, gen = manual_nd, manual_nd
     nd = bool(akk and akk != lemma)
     if nd:
         n['nd'] = 1
@@ -506,6 +509,7 @@ def main():
                  government_example=fx.get('government_example') or {},
                  plural_in_use=set(fx.get('plural_in_use') or []),
                  plural=fx.get('plural') or {},
+                 n_declension=fx.get('n_declension') or {},
                  pl_only_extra=set(fx.get('pl_only_extra') or []),
                  no_plural=set(fx.get('no_plural') or []),
                  mass=set(fx.get('mass') or []),

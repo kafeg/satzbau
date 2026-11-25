@@ -6,19 +6,40 @@ import type { Adj, Case, Decl, Gender, Noun, Num, Person, Verb } from './types.t
 
 const endsAny = (s: string, ends: string[]) => ends.some((e) => s.endsWith(e))
 
-/** Косвенная форма существительного n-Deklination: Automat → Automaten, Junge → Jungen. */
+/**
+ * Косвенная форма n-Deklination: Automat → Automaten, Junge → Jungen.
+ *
+ * ⚠ Родительный почти всегда совпадает с винительным (des Nachbarn — den Nachbarn),
+ * но не у типа Name: des Namens, а den Namen. Поэтому у родительного на -ns конечное -s
+ * снимается, иначе выходит «Ich sehe den Namens». Косвенная форма n-склонения
+ * кончается на -n или -en и на -ns не бывает, так что проверка однозначна.
+ */
 function oblique(n: Noun): string {
-  if (n.gen) return n.gen
+  if (n.gen) return n.gen.endsWith('ns') ? n.gen.slice(0, -1) : n.gen
   return n.w.endsWith('e') ? `${n.w}n` : `${n.w}en`
 }
 
+/** Слогов в слове: гласные группы. Нужно только чтобы отличить книжное -es источника. */
+const syllables = (w: string) => (w.toLowerCase().match(/[aeiouyäöü]+/g) ?? []).length
+
 function genitiveSg(n: Noun): string {
-  if (n.gen) return n.gen
-  if (n.nd) return oblique(n)
-  // ⚠ Женский род в родительном НЕ меняется: der Reise, не «der Reises».
-  // Окончание получают только мужской и средний. Это давало «das Auto der Bedienungs».
+  // ⚠ РОД решает раньше источника. У омонимов значение выбираем мы (`fixes.yaml`:
+  // die Leiter — стремянка, а не der Leiter — руководитель), а поле `gen` приезжает
+  // из той же строки источника, что и чужой род, — отсюда «der Leiters», «der Steuers»,
+  // «der Butters». Женский род в родительном не меняется вовсе.
   if (n.g === 'f') return n.w
-  // -es у основ на s/ß/x/z/sch, иначе -s. Где источник даёт другое, оно лежит в gen
+  // ⚠ Источник часто даёт книжное -es там, где говорят -s: «des Monates», «des Alarmes».
+  // Переспариваем его ТОЛЬКО когда он просто дописал -es к многосложному слову:
+  // настоящие особые формы (Herzens, Busses) так не выглядят и остаются как есть.
+  if (n.gen) {
+    const plainEs = n.gen === `${n.w}es` && !endsAny(n.w, ['s', 'ß', 'x', 'z', 'sch'])
+    return plainEs && syllables(n.w) > 1 ? `${n.w}s` : n.gen
+  }
+  if (n.nd) return oblique(n)
+  // ⚠ Здесь НЕТ правила «односложное → -es», хотя оно просится. Проверено на лексиконе:
+  // оно чинит Monat и Alarm, но ломает заимствования — Team, Fan, Café, Feuer получают
+  // «Teames», «Fanes», «Cafées». Односложность немецкого слова по гласным не считается,
+  // а список заимствований — это данные, а не правило. Пока источник молчит, -s.
   return endsAny(n.w, ['s', 'ß', 'x', 'z', 'sch']) ? `${n.w}es` : `${n.w}s`
 }
 
@@ -79,7 +100,11 @@ export function particle(v: Verb): string | null {
 function p3Stem(v: Verb, istem: string): string {
   const core = v.p3.split(' ')[0] as string
   if (core.endsWith('et')) return core.slice(0, -2)
-  if (endsAny(istem, ['t', 'd'])) return core
+  // ⚠ Слияние бывает только у основ на -t: halten → hält, и это «halt» плюс слившееся
+  // окончание. У основ на -d окончание отдельное: laden → lädt, то есть «läd» плюс -t,
+  // и второе лицо — lädst. Пока здесь стояло ['t', 'd'], выходило «du lädtst»
+  // у laden, einladen, aufladen, hochladen и herunterladen.
+  if (istem.endsWith('t')) return core
   if (core.endsWith('t')) return core.slice(0, -1)
   return core
 }

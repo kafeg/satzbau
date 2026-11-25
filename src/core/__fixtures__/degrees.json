@@ -1,0 +1,2234 @@
+{
+"abgelegen": {
+"cmpr": [
+"abgelegener"
+],
+"sprl": [
+"am abgelegensten"
+]
+},
+"aktiv": {
+"cmpr": [
+"aktiver"
+],
+"sprl": [
+"am aktivsten"
+]
+},
+"aktuell": {
+"cmpr": [
+"aktueller"
+],
+"sprl": [
+"am aktuellsten"
+]
+},
+"akut": {
+"cmpr": [
+"akuter"
+],
+"sprl": [
+"am akutesten"
+]
+},
+"alt": {
+"cmpr": [
+"älter"
+],
+"sprl": [
+"am ältesten"
+]
+},
+"altmodisch": {
+"cmpr": [
+"altmodischer"
+],
+"sprl": [
+"am altmodischsten"
+]
+},
+"angenehm": {
+"cmpr": [
+"angenehmer"
+],
+"sprl": [
+"am angenehmsten"
+]
+},
+"anspruchsvoll": {
+"cmpr": [
+"anspruchsvoller"
+],
+"sprl": [
+"am anspruchsvollsten"
+]
+},
+"ansteckend": {
+"cmpr": [
+"ansteckender"
+],
+"sprl": [
+"am ansteckendsten"
+]
+},
+"anstrengend": {
+"cmpr": [
+"anstrengender"
+],
+"sprl": [
+"am anstrengendsten"
+]
+},
+"arm": {
+"cmpr": [
+"ärmer"
+],
+"sprl": [
+"am ärmsten"
+]
+},
+"aufmerksam": {
+"cmpr": [
+"aufmerksamer"
+],
+"sprl": [
+"am aufmerksamsten"
+]
+},
+"aufregend": {
+"cmpr": [
+"aufregender"
+],
+"sprl": [
+"am aufregendsten"
+]
+},
+"ausgelassen": {
+"cmpr": [
+"ausgelassener",
+"ausgelassner"
+],
+"sprl": [
+"am ausgelassensten"
+]
+},
+"barrierefrei": {
+"cmpr": [
+"barrierefreier"
+],
+"sprl": [
+"am barrierefreisten"
+]
+},
+"begabt": {
+"cmpr": [
+"begabter"
+],
+"sprl": [
+"am begabtesten"
+]
+},
+"begeistert": {
+"cmpr": [
+"begeisterter"
+],
+"sprl": [
+"am begeistertsten"
+]
+},
+"bekannt": {
+"cmpr": [
+"bekannter"
+],
+"sprl": [
+"am bekanntesten"
+]
+},
+"beliebt": {
+"cmpr": [
+"beliebter"
+],
+"sprl": [
+"am beliebtesten"
+]
+},
+"benutzerfreundlich": {
+"cmpr": [
+"benutzerfreundlicher"
+],
+"sprl": [
+"am benutzerfreundlichsten"
+]
+},
+"bequem": {
+"cmpr": [
+"bequemer"
+],
+"sprl": [
+"am bequemsten"
+]
+},
+"berechtigt": {
+"cmpr": [
+"berechtigter"
+],
+"sprl": [
+"am berechtigtsten"
+]
+},
+"berühmt": {
+"cmpr": [
+"berühmter"
+],
+"sprl": [
+"am berühmtesten"
+]
+},
+"besorgt": {
+"cmpr": [
+"besorgter"
+],
+"sprl": [
+"am besorgtesten"
+]
+},
+"billig": {
+"cmpr": [
+"billiger"
+],
+"sprl": [
+"am billigsten"
+]
+},
+"bitter": {
+"cmpr": [
+"bitterer"
+],
+"sprl": [
+"am bittersten"
+]
+},
+"blau": {
+"cmpr": [
+"blauer"
+],
+"sprl": [
+"am blauesten",
+"am blausten"
+]
+},
+"blond": {
+"cmpr": [
+"blonder"
+],
+"sprl": [
+"am blondesten"
+]
+},
+"braun": {
+"cmpr": [
+"brauner",
+"bräuner"
+],
+"sprl": [
+"am braunsten",
+"am bräunsten"
+]
+},
+"brav": {
+"cmpr": [
+"braver"
+],
+"sprl": [
+"am bravsten"
+]
+},
+"breit": {
+"cmpr": [
+"breiter"
+],
+"sprl": [
+"am breitesten"
+]
+},
+"brennbar": {
+"cmpr": [
+"brennbarer"
+],
+"sprl": [
+"am brennbarsten"
+]
+},
+"bunt": {
+"cmpr": [
+"bunter"
+],
+"sprl": [
+"am buntesten"
+]
+},
+"chronisch": {
+"cmpr": [
+"chronischer"
+],
+"sprl": [
+"am chronischsten"
+]
+},
+"dankbar": {
+"cmpr": [
+"dankbarer"
+],
+"sprl": [
+"am dankbarsten"
+]
+},
+"defekt": {
+"cmpr": [
+"defekter"
+],
+"sprl": [
+"am defektesten"
+]
+},
+"demokratisch": {
+"cmpr": [
+"demokratischer"
+],
+"sprl": [
+"am demokratischsten"
+]
+},
+"deutlich": {
+"cmpr": [
+"deutlicher"
+],
+"sprl": [
+"am deutlichsten"
+]
+},
+"deutsch": {
+"cmpr": [
+"deutscher"
+],
+"sprl": [
+"am deutschesten"
+]
+},
+"dick": {
+"cmpr": [
+"dicker"
+],
+"sprl": [
+"am dicksten"
+]
+},
+"direkt": {
+"cmpr": [
+"direkter"
+],
+"sprl": [
+"am direktesten"
+]
+},
+"dringend": {
+"cmpr": [
+"dringender"
+],
+"sprl": [
+"am dringendsten"
+]
+},
+"dunkel": {
+"cmpr": [
+"dunkler"
+],
+"sprl": [
+"am dunkelsten"
+]
+},
+"durchschnittlich": {
+"cmpr": [
+"durchschnittlicher"
+],
+"sprl": [
+"am durchschnittlichsten"
+]
+},
+"dünn": {
+"cmpr": [
+"dünner"
+],
+"sprl": [
+"am dünnsten"
+]
+},
+"egoistisch": {
+"cmpr": [
+"egoistischer"
+],
+"sprl": [
+"am egoistischsten"
+]
+},
+"ehrgeizig": {
+"cmpr": [
+"ehrgeiziger"
+],
+"sprl": [
+"am ehrgeizigsten"
+]
+},
+"ehrlich": {
+"cmpr": [
+"ehrlicher"
+],
+"sprl": [
+"am ehrlichsten"
+]
+},
+"eifersüchtig": {
+"cmpr": [
+"eifersüchtiger"
+],
+"sprl": [
+"am eifersüchtigsten"
+]
+},
+"eigen": {
+"cmpr": [
+"eigener",
+"eigner"
+],
+"sprl": [
+"am eigensten"
+]
+},
+"eindeutig": {
+"cmpr": [
+"eindeutiger"
+],
+"sprl": [
+"am eindeutigsten"
+]
+},
+"einfach": {
+"cmpr": [
+"einfacher"
+],
+"sprl": [
+"am einfachsten"
+]
+},
+"einsam": {
+"cmpr": [
+"einsamer"
+],
+"sprl": [
+"am einsamsten"
+]
+},
+"eisig": {
+"cmpr": [
+"eisiger"
+],
+"sprl": [
+"am eisigsten"
+]
+},
+"empfindlich": {
+"cmpr": [
+"empfindlicher"
+],
+"sprl": [
+"am empfindlichsten"
+]
+},
+"eng": {
+"cmpr": [
+"enger"
+],
+"sprl": [
+"am engsten"
+]
+},
+"englisch": {
+"cmpr": [
+"englischer"
+],
+"sprl": [
+"am englischsten"
+]
+},
+"erfolgreich": {
+"cmpr": [
+"erfolgreicher"
+],
+"sprl": [
+"am erfolgreichsten"
+]
+},
+"erholsam": {
+"cmpr": [
+"erholsamer"
+],
+"sprl": [
+"am erholsamsten"
+]
+},
+"ernst": {
+"cmpr": [
+"ernster"
+],
+"sprl": [
+"am ernstesten"
+]
+},
+"erschöpft": {
+"cmpr": [
+"erschöpfter"
+],
+"sprl": [
+"am erschöpftesten"
+]
+},
+"europäisch": {
+"cmpr": [
+"europäischer"
+],
+"sprl": [
+"am europäischsten"
+]
+},
+"fachgerecht": {
+"cmpr": [
+"fachgerechter"
+],
+"sprl": [
+"am fachgerechtesten"
+]
+},
+"fair": {
+"cmpr": [
+"fairer"
+],
+"sprl": [
+"am fairsten"
+]
+},
+"falsch": {
+"cmpr": [
+"falscher"
+],
+"sprl": [
+"am falschesten"
+]
+},
+"fehlerhaft": {
+"cmpr": [
+"fehlerhafter"
+],
+"sprl": [
+"am fehlerhaftesten"
+]
+},
+"feierlich": {
+"cmpr": [
+"feierlicher"
+],
+"sprl": [
+"am feierlichsten"
+]
+},
+"festlich": {
+"cmpr": [
+"festlicher"
+],
+"sprl": [
+"am festlichsten"
+]
+},
+"fettig": {
+"cmpr": [
+"fettiger"
+],
+"sprl": [
+"am fettigsten"
+]
+},
+"feucht": {
+"cmpr": [
+"feuchter"
+],
+"sprl": [
+"am feuchtesten"
+]
+},
+"fit": {
+"cmpr": [
+"fitter"
+],
+"sprl": [
+"am fittesten"
+]
+},
+"fleißig": {
+"cmpr": [
+"fleißiger"
+],
+"sprl": [
+"am fleißigsten"
+]
+},
+"fließend": {
+"cmpr": [
+"fließender"
+],
+"sprl": [
+"am fließendsten"
+]
+},
+"fraglich": {
+"cmpr": [
+"fraglicher"
+],
+"sprl": [
+"am fraglichsten"
+]
+},
+"fremd": {
+"cmpr": [
+"fremder"
+],
+"sprl": [
+"am fremdesten"
+]
+},
+"freundlich": {
+"cmpr": [
+"freundlicher"
+],
+"sprl": [
+"am freundlichsten"
+]
+},
+"frisch": {
+"cmpr": [
+"frischer"
+],
+"sprl": [
+"am frischesten",
+"am frischsten"
+]
+},
+"frostig": {
+"cmpr": [
+"frostiger"
+],
+"sprl": [
+"am frostigsten"
+]
+},
+"fröhlich": {
+"cmpr": [
+"fröhlicher"
+],
+"sprl": [
+"am fröhlichsten"
+]
+},
+"früh": {
+"cmpr": [
+"früher"
+],
+"sprl": [
+"am frühesten",
+"am frühsten"
+]
+},
+"gebraucht": {
+"cmpr": [
+"gebrauchter"
+],
+"sprl": [
+"am gebrauchtesten"
+]
+},
+"geduldig": {
+"cmpr": [
+"geduldiger"
+],
+"sprl": [
+"am geduldigsten"
+]
+},
+"gefährlich": {
+"cmpr": [
+"gefährlicher"
+],
+"sprl": [
+"am gefährlichsten"
+]
+},
+"gelassen": {
+"cmpr": [
+"gelassener",
+"gelassner"
+],
+"sprl": [
+"am gelassensten"
+]
+},
+"gelb": {
+"cmpr": [
+"gelber"
+],
+"sprl": [
+"am gelbsten"
+]
+},
+"gemütlich": {
+"cmpr": [
+"gemütlicher"
+],
+"sprl": [
+"am gemütlichsten"
+]
+},
+"genau": {
+"cmpr": [
+"genauer"
+],
+"sprl": [
+"am genauesten",
+"am genausten"
+]
+},
+"gepflegt": {
+"cmpr": [
+"gepflegter"
+],
+"sprl": [
+"am gepflegtsten"
+]
+},
+"geräumig": {
+"cmpr": [
+"geräumiger"
+],
+"sprl": [
+"am geräumigsten"
+]
+},
+"geschlossen": {
+"cmpr": [
+"geschlossener"
+],
+"sprl": [
+"am geschlossensten"
+]
+},
+"gesund": {
+"cmpr": [
+"gesünder"
+],
+"sprl": [
+"am gesündesten"
+]
+},
+"giftig": {
+"cmpr": [
+"giftiger"
+],
+"sprl": [
+"am giftigsten"
+]
+},
+"glatt": {
+"cmpr": [
+"glatter"
+],
+"sprl": [
+"am glattesten"
+]
+},
+"glaubwürdig": {
+"cmpr": [
+"glaubwürdiger"
+],
+"sprl": [
+"am glaubwürdigsten"
+]
+},
+"gleich": {
+"cmpr": [
+"gleicher"
+],
+"sprl": [
+"am gleichsten"
+]
+},
+"gleichgültig": {
+"cmpr": [
+"gleichgültiger"
+],
+"sprl": [
+"am gleichgültigsten"
+]
+},
+"glänzend": {
+"cmpr": [
+"glänzender"
+],
+"sprl": [
+"am glänzendsten"
+]
+},
+"glücklich": {
+"cmpr": [
+"glücklicher"
+],
+"sprl": [
+"am glücklichsten"
+]
+},
+"grau": {
+"cmpr": [
+"grauer"
+],
+"sprl": [
+"am grausten"
+]
+},
+"groß": {
+"cmpr": [
+"größer"
+],
+"sprl": [
+"am größten"
+]
+},
+"großzügig": {
+"cmpr": [
+"großzügiger"
+],
+"sprl": [
+"am großzügigsten"
+]
+},
+"grün": {
+"cmpr": [
+"grüner"
+],
+"sprl": [
+"am grünsten"
+]
+},
+"günstig": {
+"cmpr": [
+"günstiger"
+],
+"sprl": [
+"am günstigsten"
+]
+},
+"haltbar": {
+"cmpr": [
+"haltbarer"
+],
+"sprl": [
+"am haltbarsten"
+]
+},
+"hart": {
+"cmpr": [
+"härter"
+],
+"sprl": [
+"am härtesten"
+]
+},
+"heilig": {
+"cmpr": [
+"heiliger"
+],
+"sprl": [
+"am heiligsten"
+]
+},
+"heiß": {
+"cmpr": [
+"heißer"
+],
+"sprl": [
+"am heißesten"
+]
+},
+"hell": {
+"cmpr": [
+"heller"
+],
+"sprl": [
+"am hellsten"
+]
+},
+"hellhörig": {
+"cmpr": [
+"hellhöriger"
+],
+"sprl": [
+"am hellhörigsten"
+]
+},
+"hoch": {
+"cmpr": [
+"höher"
+],
+"sprl": [
+"am höchsten"
+]
+},
+"hochwertig": {
+"cmpr": [
+"hochwertiger"
+],
+"sprl": [
+"am hochwertigsten"
+]
+},
+"hygienisch": {
+"cmpr": [
+"hygienischer"
+],
+"sprl": [
+"am hygienischsten"
+]
+},
+"höflich": {
+"cmpr": [
+"höflicher"
+],
+"sprl": [
+"am höflichsten"
+]
+},
+"hübsch": {
+"cmpr": [
+"hübscher"
+],
+"sprl": [
+"am hübschesten"
+]
+},
+"interessant": {
+"cmpr": [
+"interessanter"
+],
+"sprl": [
+"am interessantesten"
+]
+},
+"jung": {
+"cmpr": [
+"jünger"
+],
+"sprl": [
+"am jüngsten"
+]
+},
+"kalt": {
+"cmpr": [
+"kälter"
+],
+"sprl": [
+"am kältesten"
+]
+},
+"kaputt": {
+"cmpr": [
+"kaputter"
+],
+"sprl": [
+"am kaputtesten"
+]
+},
+"klein": {
+"cmpr": [
+"kleiner"
+],
+"sprl": [
+"am kleinsten"
+]
+},
+"klug": {
+"cmpr": [
+"klüger"
+],
+"sprl": [
+"am klügsten"
+]
+},
+"knapp": {
+"cmpr": [
+"knapper"
+],
+"sprl": [
+"am knappsten"
+]
+},
+"konservativ": {
+"cmpr": [
+"konservativer"
+],
+"sprl": [
+"am konservativsten"
+]
+},
+"kostbar": {
+"cmpr": [
+"kostbarer"
+],
+"sprl": [
+"am kostbarsten"
+]
+},
+"krank": {
+"cmpr": [
+"kranker",
+"kränker"
+],
+"sprl": [
+"am krankesten",
+"am kranksten",
+"am kränkesten",
+"am kränksten"
+]
+},
+"kreativ": {
+"cmpr": [
+"kreativer"
+],
+"sprl": [
+"am kreativsten"
+]
+},
+"kritisch": {
+"cmpr": [
+"kritischer"
+],
+"sprl": [
+"am kritischsten"
+]
+},
+"kurz": {
+"cmpr": [
+"kürzer"
+],
+"sprl": [
+"am kürzesten"
+]
+},
+"kurzfristig": {
+"cmpr": [
+"kurzfristiger"
+],
+"sprl": [
+"am kurzfristigsten"
+]
+},
+"kühl": {
+"cmpr": [
+"kühler"
+],
+"sprl": [
+"am kühlsten"
+]
+},
+"lang": {
+"cmpr": [
+"länger"
+],
+"sprl": [
+"am längsten"
+]
+},
+"langfristig": {
+"cmpr": [
+"langfristiger"
+],
+"sprl": [
+"am langfristigsten"
+]
+},
+"langsam": {
+"cmpr": [
+"langsamer"
+],
+"sprl": [
+"am langsamsten"
+]
+},
+"langweilig": {
+"cmpr": [
+"langweiliger"
+],
+"sprl": [
+"am langweiligsten"
+]
+},
+"laut": {
+"cmpr": [
+"lauter"
+],
+"sprl": [
+"am lautesten"
+]
+},
+"lebendig": {
+"cmpr": [
+"lebendiger"
+],
+"sprl": [
+"am lebendigsten"
+]
+},
+"lecker": {
+"cmpr": [
+"leckerer",
+"leckrer"
+],
+"sprl": [
+"am leckersten"
+]
+},
+"ledig": {
+"cmpr": [
+"lediger"
+],
+"sprl": [
+"am ledigsten"
+]
+},
+"leer": {
+"cmpr": [
+"leerer"
+],
+"sprl": [
+"am leersten"
+]
+},
+"leicht": {
+"cmpr": [
+"leichter"
+],
+"sprl": [
+"am leichtesten"
+]
+},
+"liberal": {
+"cmpr": [
+"liberaler"
+],
+"sprl": [
+"am liberalsten"
+]
+},
+"lieb": {
+"cmpr": [
+"lieber"
+],
+"sprl": [
+"am liebsten"
+]
+},
+"locker": {
+"cmpr": [
+"lockerer"
+],
+"sprl": [
+"am lockersten"
+]
+},
+"lockig": {
+"cmpr": [
+"lockiger"
+],
+"sprl": [
+"am lockigsten"
+]
+},
+"logisch": {
+"cmpr": [
+"logischer"
+],
+"sprl": [
+"am logischsten"
+]
+},
+"lustig": {
+"cmpr": [
+"lustiger"
+],
+"sprl": [
+"am lustigsten"
+]
+},
+"massiv": {
+"cmpr": [
+"massiver"
+],
+"sprl": [
+"am massivsten"
+]
+},
+"mild": {
+"cmpr": [
+"milder"
+],
+"sprl": [
+"am mildesten"
+]
+},
+"modern": {
+"cmpr": [
+"moderner"
+],
+"sprl": [
+"am modernsten"
+]
+},
+"modisch": {
+"cmpr": [
+"modischer"
+],
+"sprl": [
+"am modischsten"
+]
+},
+"mutig": {
+"cmpr": [
+"mutiger"
+],
+"sprl": [
+"am mutigsten"
+]
+},
+"müde": {
+"cmpr": [
+"müder"
+],
+"sprl": [
+"am müdesten"
+]
+},
+"mühsam": {
+"cmpr": [
+"mühsamer"
+],
+"sprl": [
+"am mühsamsten"
+]
+},
+"nachhaltig": {
+"cmpr": [
+"nachhaltiger"
+],
+"sprl": [
+"am nachhaltigsten"
+]
+},
+"nachvollziehbar": {
+"cmpr": [
+"nachvollziehbarer"
+],
+"sprl": [
+"am nachvollziehbarsten"
+]
+},
+"nah": {
+"cmpr": [
+"näher"
+],
+"sprl": [
+"am nächsten"
+]
+},
+"nass": {
+"cmpr": [
+"nasser",
+"nässer"
+],
+"sprl": [
+"am nassesten",
+"am nässesten"
+]
+},
+"natürlich": {
+"cmpr": [
+"natürlicher"
+],
+"sprl": [
+"am natürlichsten"
+]
+},
+"neblig": {
+"cmpr": [
+"nebliger"
+],
+"sprl": [
+"am nebligsten"
+]
+},
+"neidisch": {
+"cmpr": [
+"neidischer"
+],
+"sprl": [
+"am neidischsten"
+]
+},
+"nervös": {
+"cmpr": [
+"nervöser"
+],
+"sprl": [
+"am nervösesten"
+]
+},
+"nett": {
+"cmpr": [
+"netter"
+],
+"sprl": [
+"am nettesten"
+]
+},
+"neu": {
+"cmpr": [
+"neuer"
+],
+"sprl": [
+"am neuesten",
+"am neusten"
+]
+},
+"neugierig": {
+"cmpr": [
+"neugieriger"
+],
+"sprl": [
+"am neugierigsten"
+]
+},
+"nördlich": {
+"cmpr": [
+"nördlicher"
+],
+"sprl": [
+"am nördlichsten"
+]
+},
+"nüchtern": {
+"cmpr": [
+"nüchterner"
+],
+"sprl": [
+"am nüchternsten"
+]
+},
+"offen": {
+"cmpr": [
+"offener"
+],
+"sprl": [
+"am offensten"
+]
+},
+"panisch": {
+"cmpr": [
+"panischer"
+],
+"sprl": [
+"am panischsten"
+]
+},
+"politisch": {
+"cmpr": [
+"politischer"
+],
+"sprl": [
+"am politischsten"
+]
+},
+"polnisch": {
+"cmpr": [
+"polnischer"
+],
+"sprl": [
+"am polnischsten"
+]
+},
+"praktisch": {
+"cmpr": [
+"praktischer"
+],
+"sprl": [
+"am praktischsten"
+]
+},
+"preiswert": {
+"cmpr": [
+"preiswerter"
+],
+"sprl": [
+"am preiswertesten"
+]
+},
+"privat": {
+"cmpr": [
+"privater"
+],
+"sprl": [
+"am privatesten"
+]
+},
+"pünktlich": {
+"cmpr": [
+"pünktlicher"
+],
+"sprl": [
+"am pünktlichsten"
+]
+},
+"regnerisch": {
+"cmpr": [
+"regnerischer"
+],
+"sprl": [
+"am regnerischsten"
+]
+},
+"reich": {
+"cmpr": [
+"reicher"
+],
+"sprl": [
+"am reichsten"
+]
+},
+"religiös": {
+"cmpr": [
+"religiöser"
+],
+"sprl": [
+"am religiösesten"
+]
+},
+"richtig": {
+"cmpr": [
+"richtiger"
+],
+"sprl": [
+"am richtigsten"
+]
+},
+"rostig": {
+"cmpr": [
+"rostiger"
+],
+"sprl": [
+"am rostigsten"
+]
+},
+"rot": {
+"cmpr": [
+"roter",
+"röter"
+],
+"sprl": [
+"am rotesten",
+"am rötesten"
+]
+},
+"ruhig": {
+"cmpr": [
+"ruhiger"
+],
+"sprl": [
+"am ruhigsten"
+]
+},
+"russisch": {
+"cmpr": [
+"russischer"
+],
+"sprl": [
+"am russischsten"
+]
+},
+"salzig": {
+"cmpr": [
+"salziger"
+],
+"sprl": [
+"am salzigsten"
+]
+},
+"sanft": {
+"cmpr": [
+"sanfter"
+],
+"sprl": [
+"am sanftesten"
+]
+},
+"satt": {
+"cmpr": [
+"satter"
+],
+"sprl": [
+"am sattesten"
+]
+},
+"sauber": {
+"cmpr": [
+"sauberer"
+],
+"sprl": [
+"am saubersten"
+]
+},
+"sauer": {
+"cmpr": [
+"saurer"
+],
+"sprl": [
+"am sauersten"
+]
+},
+"scharf": {
+"cmpr": [
+"schärfer"
+],
+"sprl": [
+"am schärfsten"
+]
+},
+"schick": {
+"cmpr": [
+"schicker"
+],
+"sprl": [
+"am schicksten"
+]
+},
+"schlank": {
+"cmpr": [
+"schlanker"
+],
+"sprl": [
+"am schlankesten",
+"am schlanksten"
+]
+},
+"schmal": {
+"cmpr": [
+"schmaler",
+"schmäler"
+],
+"sprl": [
+"am schmalsten",
+"am schmälsten"
+]
+},
+"schmutzig": {
+"cmpr": [
+"schmutziger"
+],
+"sprl": [
+"am schmutzigsten"
+]
+},
+"schnell": {
+"cmpr": [
+"schneller"
+],
+"sprl": [
+"am schnellsten"
+]
+},
+"schwach": {
+"cmpr": [
+"schwächer"
+],
+"sprl": [
+"am schwächsten"
+]
+},
+"schwarz": {
+"cmpr": [
+"schwärzer"
+],
+"sprl": [
+"am schwärzesten"
+]
+},
+"schwer": {
+"cmpr": [
+"schwerer"
+],
+"sprl": [
+"am schwersten"
+]
+},
+"schwierig": {
+"cmpr": [
+"schwieriger"
+],
+"sprl": [
+"am schwierigsten"
+]
+},
+"schwindelig": {
+"cmpr": [
+"schwindeliger"
+],
+"sprl": [
+"am schwindeligsten"
+]
+},
+"schwül": {
+"cmpr": [
+"schwüler"
+],
+"sprl": [
+"am schwülsten"
+]
+},
+"schön": {
+"cmpr": [
+"schöner"
+],
+"sprl": [
+"am schönsten"
+]
+},
+"selbstständig": {
+"cmpr": [
+"selbstständiger"
+],
+"sprl": [
+"am selbstständigsten"
+]
+},
+"selten": {
+"cmpr": [
+"seltener",
+"seltner"
+],
+"sprl": [
+"am seltensten"
+]
+},
+"sicher": {
+"cmpr": [
+"sicherer"
+],
+"sprl": [
+"am sichersten"
+]
+},
+"skeptisch": {
+"cmpr": [
+"skeptischer"
+],
+"sprl": [
+"am skeptischsten"
+]
+},
+"sonnig": {
+"cmpr": [
+"sonniger"
+],
+"sprl": [
+"am sonnigsten"
+]
+},
+"sozial": {
+"cmpr": [
+"sozialer"
+],
+"sprl": [
+"am sozialsten"
+]
+},
+"spanisch": {
+"cmpr": [
+"spanischer"
+],
+"sprl": [
+"am spanischsten"
+]
+},
+"spannend": {
+"cmpr": [
+"spannender"
+],
+"sprl": [
+"am spannendsten"
+]
+},
+"sparsam": {
+"cmpr": [
+"sparsamer"
+],
+"sprl": [
+"am sparsamsten"
+]
+},
+"sperrig": {
+"cmpr": [
+"sperriger"
+],
+"sprl": [
+"am sperrigsten"
+]
+},
+"spitz": {
+"cmpr": [
+"spitzer"
+],
+"sprl": [
+"am spitzesten"
+]
+},
+"sportlich": {
+"cmpr": [
+"sportlicher"
+],
+"sprl": [
+"am sportlichsten"
+]
+},
+"spät": {
+"cmpr": [
+"später"
+],
+"sprl": [
+"am spätesten"
+]
+},
+"stabil": {
+"cmpr": [
+"stabiler"
+],
+"sprl": [
+"am stabilsten"
+]
+},
+"stark": {
+"cmpr": [
+"stärker"
+],
+"sprl": [
+"am stärksten"
+]
+},
+"stolz": {
+"cmpr": [
+"stolzer"
+],
+"sprl": [
+"am stolzesten"
+]
+},
+"streng": {
+"cmpr": [
+"strenger"
+],
+"sprl": [
+"am strengsten"
+]
+},
+"strittig": {
+"cmpr": [
+"strittiger"
+],
+"sprl": [
+"am strittigsten"
+]
+},
+"stürmisch": {
+"cmpr": [
+"stürmischer"
+],
+"sprl": [
+"am stürmischsten"
+]
+},
+"sympathisch": {
+"cmpr": [
+"sympathischer"
+],
+"sprl": [
+"am sympathischsten"
+]
+},
+"südlich": {
+"cmpr": [
+"südlicher"
+],
+"sprl": [
+"am südlichsten"
+]
+},
+"süß": {
+"cmpr": [
+"süßer"
+],
+"sprl": [
+"am süßesten"
+]
+},
+"teuer": {
+"cmpr": [
+"teurer"
+],
+"sprl": [
+"am teuersten"
+]
+},
+"tief": {
+"cmpr": [
+"tiefer"
+],
+"sprl": [
+"am tiefsten"
+]
+},
+"touristisch": {
+"cmpr": [
+"touristischer"
+],
+"sprl": [
+"am touristischsten"
+]
+},
+"traditionell": {
+"cmpr": [
+"traditioneller"
+],
+"sprl": [
+"am traditionellsten"
+]
+},
+"tragbar": {
+"cmpr": [
+"tragbarer"
+],
+"sprl": [
+"am tragbarsten"
+]
+},
+"traurig": {
+"cmpr": [
+"trauriger"
+],
+"sprl": [
+"am traurigsten"
+]
+},
+"treu": {
+"cmpr": [
+"treuer"
+],
+"sprl": [
+"am treuesten",
+"am treusten"
+]
+},
+"trocken": {
+"cmpr": [
+"trockener"
+],
+"sprl": [
+"am trockensten"
+]
+},
+"umstritten": {
+"cmpr": [
+"umstrittener"
+],
+"sprl": [
+"am umstrittensten"
+]
+},
+"umweltfreundlich": {
+"cmpr": [
+"umweltfreundlicher"
+],
+"sprl": [
+"am umweltfreundlichsten"
+]
+},
+"unberechtigt": {
+"cmpr": [
+"unberechtigter"
+],
+"sprl": [
+"am unberechtigtsten"
+]
+},
+"undicht": {
+"cmpr": [
+"undichter"
+],
+"sprl": [
+"am undichtesten"
+]
+},
+"ungepflegt": {
+"cmpr": [
+"ungepflegter"
+],
+"sprl": [
+"am ungepflegtsten"
+]
+},
+"unglücklich": {
+"cmpr": [
+"unglücklicher"
+],
+"sprl": [
+"am unglücklichsten"
+]
+},
+"unhöflich": {
+"cmpr": [
+"unhöflicher"
+],
+"sprl": [
+"am unhöflichsten"
+]
+},
+"unterhaltsam": {
+"cmpr": [
+"unterhaltsamer"
+],
+"sprl": [
+"am unterhaltsamsten"
+]
+},
+"unzufrieden": {
+"cmpr": [
+"unzufriedener"
+],
+"sprl": [
+"am unzufriedensten"
+]
+},
+"vegetarisch": {
+"cmpr": [
+"vegetarischer"
+],
+"sprl": [
+"am vegetarischsten"
+]
+},
+"veraltet": {
+"cmpr": [
+"veralteter"
+],
+"sprl": [
+"am veraltetsten"
+]
+},
+"verkehrssicher": {
+"cmpr": [
+"verkehrssicherer"
+],
+"sprl": [
+"am verkehrssichersten"
+]
+},
+"verletzlich": {
+"cmpr": [
+"verletzlicher"
+],
+"sprl": [
+"am verletzlichsten"
+]
+},
+"vernünftig": {
+"cmpr": [
+"vernünftiger"
+],
+"sprl": [
+"am vernünftigsten"
+]
+},
+"verschwenderisch": {
+"cmpr": [
+"verschwenderischer"
+],
+"sprl": [
+"am verschwenderischsten"
+]
+},
+"verzweifelt": {
+"cmpr": [
+"verzweifelter"
+],
+"sprl": [
+"am verzweifeltsten"
+]
+},
+"verärgert": {
+"cmpr": [
+"verärgerter"
+],
+"sprl": [
+"am verärgertsten"
+]
+},
+"vielfältig": {
+"cmpr": [
+"vielfältiger"
+],
+"sprl": [
+"am vielfältigsten"
+]
+},
+"voll": {
+"cmpr": [
+"voller"
+],
+"sprl": [
+"am vollsten"
+]
+},
+"vollständig": {
+"cmpr": [
+"vollständiger"
+],
+"sprl": [
+"am vollständigsten"
+]
+},
+"wackelig": {
+"cmpr": [
+"wackeliger"
+],
+"sprl": [
+"am wackeligsten"
+]
+},
+"warm": {
+"cmpr": [
+"wärmer"
+],
+"sprl": [
+"am wärmsten"
+]
+},
+"wasserfest": {
+"cmpr": [
+"wasserfester"
+],
+"sprl": [
+"am wasserfestesten"
+]
+},
+"weich": {
+"cmpr": [
+"weicher"
+],
+"sprl": [
+"am weichsten"
+]
+},
+"weit": {
+"cmpr": [
+"weiter"
+],
+"sprl": [
+"am weitesten"
+]
+},
+"weiß": {
+"cmpr": [
+"weißer"
+],
+"sprl": [
+"am weißesten"
+]
+},
+"weltlich": {
+"cmpr": [
+"weltlicher"
+],
+"sprl": [
+"am weltlichsten"
+]
+},
+"wertvoll": {
+"cmpr": [
+"wertvoller"
+],
+"sprl": [
+"am wertvollsten"
+]
+},
+"westlich": {
+"cmpr": [
+"westlicher"
+],
+"sprl": [
+"am westlichsten"
+]
+},
+"wichtig": {
+"cmpr": [
+"wichtiger"
+],
+"sprl": [
+"am wichtigsten"
+]
+},
+"wild": {
+"cmpr": [
+"wilder"
+],
+"sprl": [
+"am wildesten"
+]
+},
+"windig": {
+"cmpr": [
+"windiger"
+],
+"sprl": [
+"am windigsten"
+]
+},
+"witzig": {
+"cmpr": [
+"witziger"
+],
+"sprl": [
+"am witzigsten"
+]
+},
+"wolkig": {
+"cmpr": [
+"wolkiger"
+],
+"sprl": [
+"am wolkigsten"
+]
+},
+"wütend": {
+"cmpr": [
+"wütender"
+],
+"sprl": [
+"am wütendsten"
+]
+},
+"zahlungsfähig": {
+"cmpr": [
+"zahlungsfähiger"
+],
+"sprl": [
+"am zahlungsfähigsten"
+]
+},
+"zahm": {
+"cmpr": [
+"zahmer"
+],
+"sprl": [
+"am zahmsten"
+]
+},
+"zentral": {
+"cmpr": [
+"zentraler"
+],
+"sprl": [
+"am zentralsten"
+]
+},
+"zerbrechlich": {
+"cmpr": [
+"zerbrechlicher"
+],
+"sprl": [
+"am zerbrechlichsten"
+]
+},
+"zufrieden": {
+"cmpr": [
+"zufriedener"
+],
+"sprl": [
+"am zufriedensten"
+]
+},
+"zuverlässig": {
+"cmpr": [
+"zuverlässiger"
+],
+"sprl": [
+"am zuverlässigsten"
+]
+},
+"zuversichtlich": {
+"cmpr": [
+"zuversichtlicher"
+],
+"sprl": [
+"am zuversichtlichsten"
+]
+},
+"ängstlich": {
+"cmpr": [
+"ängstlicher"
+],
+"sprl": [
+"am ängstlichsten"
+]
+},
+"öffentlich": {
+"cmpr": [
+"öffentlicher"
+],
+"sprl": [
+"am öffentlichsten"
+]
+},
+"östlich": {
+"cmpr": [
+"östlicher"
+],
+"sprl": [
+"am östlichsten"
+]
+},
+"überrascht": {
+"cmpr": [
+"überraschter"
+],
+"sprl": [
+"am überraschtesten"
+]
+},
+"überzeugt": {
+"cmpr": [
+"überzeugter"
+],
+"sprl": [
+"am überzeugtesten"
+]
+}
+}

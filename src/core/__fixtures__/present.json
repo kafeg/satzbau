@@ -1,1242 +1,9432 @@
 {
 "abbiegen": {
-"1pl": "biegen ab",
-"1sg": "biege ab",
-"2pl": "biegt ab",
-"2sg": "biegst ab",
-"3pl": "biegen ab",
-"3sg": "biegt ab"
+"1pl": [
+"biegen ab"
+],
+"1sg": [
+"biege ab"
+],
+"2pl": [
+"biegt ab"
+],
+"2sg": [
+"biegst ab"
+],
+"3pl": [
+"biegen ab"
+],
+"3sg": [
+"biegt ab"
+]
+},
+"abbuchen": {
+"1pl": [
+"buchen ab"
+],
+"1sg": [
+"buche ab"
+],
+"2pl": [
+"bucht ab"
+],
+"2sg": [
+"buchst ab"
+],
+"3pl": [
+"buchen ab"
+],
+"3sg": [
+"bucht ab"
+]
+},
+"abdichten": {
+"1pl": [
+"dichten ab"
+],
+"1sg": [
+"dichte ab"
+],
+"2pl": [
+"dichtt ab"
+],
+"2sg": [
+"dichtst ab"
+],
+"3pl": [
+"dichten ab"
+],
+"3sg": [
+"dichtt ab"
+]
 },
 "abfahren": {
-"1pl": "fahren ab",
-"1sg": "fahre ab",
-"2pl": "fahrt ab",
-"2sg": "fährst ab",
-"3pl": "fahren ab",
-"3sg": "fährt ab"
+"1pl": [
+"fahren ab"
+],
+"1sg": [
+"fahre ab"
+],
+"2pl": [
+"fahrt ab"
+],
+"2sg": [
+"fährst ab"
+],
+"3pl": [
+"fahren ab"
+],
+"3sg": [
+"fährt ab"
+]
 },
 "abgeben": {
-"1pl": "geben ab",
-"1sg": "gebe ab",
-"2pl": "gebt ab",
-"2sg": "gibst ab",
-"3pl": "geben ab",
-"3sg": "gibt ab"
+"1pl": [
+"geben ab"
+],
+"1sg": [
+"gebe ab"
+],
+"2pl": [
+"gebt ab"
+],
+"2sg": [
+"gibst ab"
+],
+"3pl": [
+"geben ab"
+],
+"3sg": [
+"gibt ab"
+]
 },
 "abheben": {
-"1pl": "heben ab",
-"1sg": "hebe ab",
-"2pl": "hebt ab",
-"2sg": "hebst ab",
-"3pl": "heben ab",
-"3sg": "hebt ab"
+"1pl": [
+"heben ab"
+],
+"1sg": [
+"hebe ab"
+],
+"2pl": [
+"hebt ab"
+],
+"2sg": [
+"hebst ab"
+],
+"3pl": [
+"heben ab"
+],
+"3sg": [
+"hebt ab"
+]
 },
 "abholen": {
-"1pl": "holen ab",
-"1sg": "hole ab",
-"2pl": "holt ab",
-"2sg": "holst ab",
-"3pl": "holen ab",
-"3sg": "holt ab"
+"1pl": [
+"holen ab"
+],
+"1sg": [
+"hole ab"
+],
+"2pl": [
+"holt ab"
+],
+"2sg": [
+"holst ab"
+],
+"3pl": [
+"holen ab"
+],
+"3sg": [
+"holt ab"
+]
+},
+"ablehnen": {
+"1pl": [
+"lehnen ab"
+],
+"1sg": [
+"lehne ab"
+],
+"2pl": [
+"lehnt ab"
+],
+"2sg": [
+"lehnst ab"
+],
+"3pl": [
+"lehnen ab"
+],
+"3sg": [
+"lehnt ab"
+]
+},
+"abmelden": {
+"1pl": [
+"melden ab"
+],
+"1sg": [
+"melde ab"
+],
+"2pl": [
+"meldet ab"
+],
+"2sg": [
+"meldest ab"
+],
+"3pl": [
+"melden ab"
+],
+"3sg": [
+"meldet ab"
+]
+},
+"abonnieren": {
+"1pl": [
+"abonnieren"
+],
+"1sg": [
+"abonniere"
+],
+"2pl": [
+"abonniert"
+],
+"2sg": [
+"abonnierst"
+],
+"3pl": [
+"abonnieren"
+],
+"3sg": [
+"abonniert"
+]
+},
+"abrechnen": {
+"1pl": [
+"rechnen ab"
+],
+"1sg": [
+"rechne ab"
+],
+"2pl": [
+"rechnet ab"
+],
+"2sg": [
+"rechnest ab"
+],
+"3pl": [
+"rechnen ab"
+],
+"3sg": [
+"rechnet ab"
+]
+},
+"abschieben": {
+"1pl": [
+"schieben ab"
+],
+"1sg": [
+"schiebe ab"
+],
+"2pl": [
+"schiebt ab"
+],
+"2sg": [
+"schiebst ab"
+],
+"3pl": [
+"schieben ab"
+],
+"3sg": [
+"schiebt ab"
+]
+},
+"abschleppen": {
+"1pl": [
+"schleppen ab"
+],
+"1sg": [
+"schleppe ab"
+],
+"2pl": [
+"schleppt ab"
+],
+"2sg": [
+"schleppst ab"
+],
+"3pl": [
+"schleppen ab"
+],
+"3sg": [
+"schleppt ab"
+]
+},
+"abschminken": {
+"1pl": [
+"schminken ab"
+],
+"1sg": [
+"schminke ab"
+],
+"2pl": [
+"schminkt ab"
+],
+"2sg": [
+"schminkst ab"
+],
+"3pl": [
+"schminken ab"
+],
+"3sg": [
+"schminkt ab"
+]
+},
+"abschreiben": {
+"1pl": [
+"schreiben ab"
+],
+"1sg": [
+"schreibe ab"
+],
+"2pl": [
+"schreibt ab"
+],
+"2sg": [
+"schreibst ab"
+],
+"3pl": [
+"schreiben ab"
+],
+"3sg": [
+"schreibt ab"
+]
+},
+"abstellen": {
+"1pl": [
+"stellen ab"
+],
+"1sg": [
+"stelle ab"
+],
+"2pl": [
+"stellt ab"
+],
+"2sg": [
+"stellst ab"
+],
+"3pl": [
+"stellen ab"
+],
+"3sg": [
+"stellt ab"
+]
+},
+"abstimmen": {
+"1pl": [
+"stimmen ab"
+],
+"1sg": [
+"stimme ab"
+],
+"2pl": [
+"stimmt ab"
+],
+"2sg": [
+"stimmst ab"
+],
+"3pl": [
+"stimmen ab"
+],
+"3sg": [
+"stimmt ab"
+]
+},
+"abstürzen": {
+"1pl": [
+"stürzen ab"
+],
+"1sg": [
+"stürze ab"
+],
+"2pl": [
+"stürzt ab"
+],
+"2sg": [
+"stürzt ab"
+],
+"3pl": [
+"stürzen ab"
+],
+"3sg": [
+"stürzt ab"
+]
+},
+"abwägen": {
+"1pl": [
+"wägen ab"
+],
+"1sg": [
+"wäge ab"
+],
+"2pl": [
+"wägt ab"
+],
+"2sg": [
+"wägst ab"
+],
+"3pl": [
+"wägen ab"
+],
+"3sg": [
+"wägt ab"
+]
+},
+"aktualisieren": {
+"1pl": [
+"aktualisieren"
+],
+"1sg": [
+"aktualisiere"
+],
+"2pl": [
+"aktualisiert"
+],
+"2sg": [
+"aktualisierst"
+],
+"3pl": [
+"aktualisieren"
+],
+"3sg": [
+"aktualisiert"
+]
+},
+"alarmieren": {
+"1pl": [
+"alarmieren"
+],
+"1sg": [
+"alarmiere"
+],
+"2pl": [
+"alarmiert"
+],
+"2sg": [
+"alarmierst"
+],
+"3pl": [
+"alarmieren"
+],
+"3sg": [
+"alarmiert"
+]
+},
+"anerkennen": {
+"1pl": [
+"erkennen an"
+],
+"1sg": [
+"erkenne an"
+],
+"2pl": [
+"erkennt an"
+],
+"2sg": [
+"erkennst an"
+],
+"3pl": [
+"erkennen an"
+],
+"3sg": [
+"erkennt an"
+]
 },
 "anfangen": {
-"1pl": "fangen an",
-"1sg": "fange an",
-"2pl": "fangt an",
-"2sg": "fängst an",
-"3pl": "fangen an",
-"3sg": "fängt an"
+"1pl": [
+"fangen an"
+],
+"1sg": [
+"fange an"
+],
+"2pl": [
+"fangt an"
+],
+"2sg": [
+"fängst an"
+],
+"3pl": [
+"fangen an"
+],
+"3sg": [
+"fängt an"
+]
+},
+"anfeuern": {
+"1pl": [
+"feuern an"
+],
+"1sg": [
+"feuer an",
+"feuere an",
+"feure an"
+],
+"2pl": [
+"feuert an"
+],
+"2sg": [
+"feuerst an"
+],
+"3pl": [
+"feuern an"
+],
+"3sg": [
+"feuert an"
+]
+},
+"angeln": {
+"1pl": [
+"angeln"
+],
+"1sg": [
+"angel",
+"angele",
+"angle"
+],
+"2pl": [
+"angelt"
+],
+"2sg": [
+"angelst"
+],
+"3pl": [
+"angeln"
+],
+"3sg": [
+"angelt"
+]
+},
+"anlassen": {
+"1pl": [
+"lassen an"
+],
+"1sg": [
+"lasse an"
+],
+"2pl": [
+"lasst an"
+],
+"2sg": [
+"lässt an"
+],
+"3pl": [
+"lassen an"
+],
+"3sg": [
+"lässt an"
+]
+},
+"anlegen": {
+"1pl": [
+"legen an"
+],
+"1sg": [
+"lege an"
+],
+"2pl": [
+"legt an"
+],
+"2sg": [
+"legst an"
+],
+"3pl": [
+"legen an"
+],
+"3sg": [
+"legt an"
+]
 },
 "anmelden": {
-"1pl": "melden an",
-"1sg": "melde an",
-"2pl": "meldet an",
-"2sg": "meldest an",
-"3pl": "melden an",
-"3sg": "meldet an"
+"1pl": [
+"melden an"
+],
+"1sg": [
+"melde an"
+],
+"2pl": [
+"meldet an"
+],
+"2sg": [
+"meldest an"
+],
+"3pl": [
+"melden an"
+],
+"3sg": [
+"meldet an"
+]
+},
+"anprobieren": {
+"1pl": [
+"probieren an"
+],
+"1sg": [
+"probiere an"
+],
+"2pl": [
+"probiert an"
+],
+"2sg": [
+"probierst an"
+],
+"3pl": [
+"probieren an"
+],
+"3sg": [
+"probiert an"
+]
 },
 "anrufen": {
-"1pl": "rufen an",
-"1sg": "rufe an",
-"2pl": "ruft an",
-"2sg": "rufst an",
-"3pl": "rufen an",
-"3sg": "ruft an"
+"1pl": [
+"rufen an"
+],
+"1sg": [
+"rufe an"
+],
+"2pl": [
+"ruft an"
+],
+"2sg": [
+"rufst an"
+],
+"3pl": [
+"rufen an"
+],
+"3sg": [
+"ruft an"
+]
+},
+"anschließen": {
+"1pl": [
+"schließen an"
+],
+"1sg": [
+"schließe an"
+],
+"2pl": [
+"schließt an"
+],
+"2sg": [
+"schließt an"
+],
+"3pl": [
+"schließen an"
+],
+"3sg": [
+"schließt an"
+]
+},
+"anschnallen": {
+"1pl": [
+"schnallen an"
+],
+"1sg": [
+"schnalle an"
+],
+"2pl": [
+"schnallt an"
+],
+"2sg": [
+"schnallst an"
+],
+"3pl": [
+"schnallen an"
+],
+"3sg": [
+"schnallt an"
+]
+},
+"anstoßen": {
+"1pl": [
+"stoßen an"
+],
+"1sg": [
+"stoße an"
+],
+"2pl": [
+"stoßt an"
+],
+"2sg": [
+"stößt an"
+],
+"3pl": [
+"stoßen an"
+],
+"3sg": [
+"stößt an"
+]
 },
 "antworten": {
-"1pl": "antworten",
-"1sg": "antworte",
-"2pl": "antwortet",
-"2sg": "antwortest",
-"3pl": "antworten",
-"3sg": "antwortet"
+"1pl": [
+"antworten"
+],
+"1sg": [
+"antworte"
+],
+"2pl": [
+"antwortet"
+],
+"2sg": [
+"antwortest"
+],
+"3pl": [
+"antworten"
+],
+"3sg": [
+"antwortet"
+]
+},
+"anzeigen": {
+"1pl": [
+"zeigen an"
+],
+"1sg": [
+"zeige an"
+],
+"2pl": [
+"zeigt an"
+],
+"2sg": [
+"zeigst an"
+],
+"3pl": [
+"zeigen an"
+],
+"3sg": [
+"zeigt an"
+]
+},
+"anziehen": {
+"1pl": [
+"ziehen an"
+],
+"1sg": [
+"ziehe an"
+],
+"2pl": [
+"zieht an"
+],
+"2sg": [
+"ziehst an"
+],
+"3pl": [
+"ziehen an"
+],
+"3sg": [
+"zieht an"
+]
+},
+"argumentieren": {
+"1pl": [
+"argumentieren"
+],
+"1sg": [
+"argumentiere"
+],
+"2pl": [
+"argumentiert"
+],
+"2sg": [
+"argumentierst"
+],
+"3pl": [
+"argumentieren"
+],
+"3sg": [
+"argumentiert"
+]
 },
 "atmen": {
-"1pl": "atmen",
-"1sg": "atme",
-"2pl": "atmet",
-"2sg": "atmest",
-"3pl": "atmen",
-"3sg": "atmet"
+"1pl": [
+"atmen"
+],
+"1sg": [
+"atme"
+],
+"2pl": [
+"atmet"
+],
+"2sg": [
+"atmest"
+],
+"3pl": [
+"atmen"
+],
+"3sg": [
+"atmet"
+]
+},
+"auffüllen": {
+"1pl": [
+"füllen auf"
+],
+"1sg": [
+"fülle auf"
+],
+"2pl": [
+"füllt auf"
+],
+"2sg": [
+"füllst auf"
+],
+"3pl": [
+"füllen auf"
+],
+"3sg": [
+"füllt auf"
+]
+},
+"aufgeben": {
+"1pl": [
+"geben auf"
+],
+"1sg": [
+"gebe auf"
+],
+"2pl": [
+"gebt auf"
+],
+"2sg": [
+"gibst auf"
+],
+"3pl": [
+"geben auf"
+],
+"3sg": [
+"gibt auf"
+]
 },
 "aufhören": {
-"1pl": "hören auf",
-"1sg": "höre auf",
-"2pl": "hört auf",
-"2sg": "hörst auf",
-"3pl": "hören auf",
-"3sg": "hört auf"
+"1pl": [
+"hören auf"
+],
+"1sg": [
+"höre auf"
+],
+"2pl": [
+"hört auf"
+],
+"2sg": [
+"hörst auf"
+],
+"3pl": [
+"hören auf"
+],
+"3sg": [
+"hört auf"
+]
+},
+"aufladen": {
+"1pl": [
+"laden auf"
+],
+"1sg": [
+"lade auf"
+],
+"2pl": [
+"ladet auf"
+],
+"2sg": [
+"lädst auf"
+],
+"3pl": [
+"laden auf"
+],
+"3sg": [
+"lädt auf"
+]
 },
 "aufpassen": {
-"1pl": "passen auf",
-"1sg": "passe auf",
-"2pl": "passt auf",
-"2sg": "passt auf",
-"3pl": "passen auf",
-"3sg": "passt auf"
+"1pl": [
+"passen auf"
+],
+"1sg": [
+"passe auf"
+],
+"2pl": [
+"passt auf"
+],
+"2sg": [
+"passt auf"
+],
+"3pl": [
+"passen auf"
+],
+"3sg": [
+"passt auf"
+]
+},
+"aufpumpen": {
+"1pl": [
+"pumpen auf"
+],
+"1sg": [
+"pumpe auf"
+],
+"2pl": [
+"pumpt auf"
+],
+"2sg": [
+"pumpst auf"
+],
+"3pl": [
+"pumpen auf"
+],
+"3sg": [
+"pumpt auf"
+]
+},
+"aufregen": {
+"1pl": [
+"regen auf"
+],
+"1sg": [
+"rege auf"
+],
+"2pl": [
+"regt auf"
+],
+"2sg": [
+"regst auf"
+],
+"3pl": [
+"regen auf"
+],
+"3sg": [
+"regt auf"
+]
+},
+"aufrunden": {
+"1pl": [
+"runden auf"
+],
+"1sg": [
+"runde auf"
+],
+"2pl": [
+"rundet auf"
+],
+"2sg": [
+"rundest auf"
+],
+"3pl": [
+"runden auf"
+],
+"3sg": [
+"rundet auf"
+]
 },
 "aufräumen": {
-"1pl": "räumen auf",
-"1sg": "räume auf",
-"2pl": "räumt auf",
-"2sg": "räumst auf",
-"3pl": "räumen auf",
-"3sg": "räumt auf"
+"1pl": [
+"räumen auf"
+],
+"1sg": [
+"räume auf"
+],
+"2pl": [
+"räumt auf"
+],
+"2sg": [
+"räumst auf"
+],
+"3pl": [
+"räumen auf"
+],
+"3sg": [
+"räumt auf"
+]
+},
+"aufstehen": {
+"1pl": [
+"stehen auf"
+],
+"1sg": [
+"stehe auf"
+],
+"2pl": [
+"steht auf"
+],
+"2sg": [
+"stehst auf"
+],
+"3pl": [
+"stehen auf"
+],
+"3sg": [
+"steht auf"
+]
+},
+"auftanken": {
+"1pl": [
+"tanken auf"
+],
+"1sg": [
+"tanke auf"
+],
+"2pl": [
+"tankt auf"
+],
+"2sg": [
+"tankst auf"
+],
+"3pl": [
+"tanken auf"
+],
+"3sg": [
+"tankt auf"
+]
+},
+"auftragen": {
+"1pl": [
+"tragen auf"
+],
+"1sg": [
+"trage auf"
+],
+"2pl": [
+"tragt auf"
+],
+"2sg": [
+"trägst auf"
+],
+"3pl": [
+"tragen auf"
+],
+"3sg": [
+"trägt auf"
+]
+},
+"aufwachen": {
+"1pl": [
+"wachen auf"
+],
+"1sg": [
+"wache auf"
+],
+"2pl": [
+"wacht auf"
+],
+"2sg": [
+"wachst auf"
+],
+"3pl": [
+"wachen auf"
+],
+"3sg": [
+"wacht auf"
+]
 },
 "ausdrucken": {
-"1pl": "drucken aus",
-"1sg": "drucke aus",
-"2pl": "druckt aus",
-"2sg": "druckst aus",
-"3pl": "drucken aus",
-"3sg": "druckt aus"
+"1pl": [
+"drucken aus"
+],
+"1sg": [
+"drucke aus"
+],
+"2pl": [
+"druckt aus"
+],
+"2sg": [
+"druckst aus"
+],
+"3pl": [
+"drucken aus"
+],
+"3sg": [
+"druckt aus"
+]
 },
 "ausfüllen": {
-"1pl": "füllen aus",
-"1sg": "fülle aus",
-"2pl": "füllt aus",
-"2sg": "füllst aus",
-"3pl": "füllen aus",
-"3sg": "füllt aus"
+"1pl": [
+"füllen aus"
+],
+"1sg": [
+"fülle aus"
+],
+"2pl": [
+"füllt aus"
+],
+"2sg": [
+"füllst aus"
+],
+"3pl": [
+"füllen aus"
+],
+"3sg": [
+"füllt aus"
+]
+},
+"ausgeben": {
+"1pl": [
+"geben aus"
+],
+"1sg": [
+"gebe aus"
+],
+"2pl": [
+"gebt aus"
+],
+"2sg": [
+"gibst aus"
+],
+"3pl": [
+"geben aus"
+],
+"3sg": [
+"gibt aus"
+]
+},
+"ausgehen": {
+"1pl": [
+"gehen aus"
+],
+"1sg": [
+"gehe aus"
+],
+"2pl": [
+"geht aus"
+],
+"2sg": [
+"gehst aus"
+],
+"3pl": [
+"gehen aus"
+],
+"3sg": [
+"geht aus"
+]
+},
+"auspacken": {
+"1pl": [
+"packen aus"
+],
+"1sg": [
+"packe aus"
+],
+"2pl": [
+"packt aus"
+],
+"2sg": [
+"packst aus"
+],
+"3pl": [
+"packen aus"
+],
+"3sg": [
+"packt aus"
+]
+},
+"ausreisen": {
+"1pl": [
+"reisen aus"
+],
+"1sg": [
+"reise aus"
+],
+"2pl": [
+"reist aus"
+],
+"2sg": [
+"reist aus"
+],
+"3pl": [
+"reisen aus"
+],
+"3sg": [
+"reist aus"
+]
 },
 "ausruhen": {
-"1pl": "ruhen aus",
-"1sg": "ruhe aus",
-"2pl": "ruht aus",
-"2sg": "ruhst aus",
-"3pl": "ruhen aus",
-"3sg": "ruht aus"
+"1pl": [
+"ruhen aus"
+],
+"1sg": [
+"ruhe aus"
+],
+"2pl": [
+"ruht aus"
+],
+"2sg": [
+"ruhst aus"
+],
+"3pl": [
+"ruhen aus"
+],
+"3sg": [
+"ruht aus"
+]
+},
+"ausschalten": {
+"1pl": [
+"schalten aus"
+],
+"1sg": [
+"schalte aus"
+],
+"2pl": [
+"schaltet aus"
+],
+"2sg": [
+"schaltest aus"
+],
+"3pl": [
+"schalten aus"
+],
+"3sg": [
+"schaltet aus"
+]
 },
 "aussteigen": {
-"1pl": "steigen aus",
-"1sg": "steige aus",
-"2pl": "steigt aus",
-"2sg": "steigst aus",
-"3pl": "steigen aus",
-"3sg": "steigt aus"
+"1pl": [
+"steigen aus"
+],
+"1sg": [
+"steige aus"
+],
+"2pl": [
+"steigt aus"
+],
+"2sg": [
+"steigst aus"
+],
+"3pl": [
+"steigen aus"
+],
+"3sg": [
+"steigt aus"
+]
+},
+"aussterben": {
+"1pl": [
+"sterben aus"
+],
+"1sg": [
+"sterbe aus"
+],
+"2pl": [
+"sterbt aus"
+],
+"2sg": [
+"stirbst aus"
+],
+"3pl": [
+"sterben aus"
+],
+"3sg": [
+"stirbt aus"
+]
+},
+"aussuchen": {
+"1pl": [
+"suchen aus"
+],
+"1sg": [
+"suche aus"
+],
+"2pl": [
+"sucht aus"
+],
+"2sg": [
+"suchst aus"
+],
+"3pl": [
+"suchen aus"
+],
+"3sg": [
+"sucht aus"
+]
+},
+"austauschen": {
+"1pl": [
+"tauschen aus"
+],
+"1sg": [
+"tausche aus"
+],
+"2pl": [
+"tauscht aus"
+],
+"2sg": [
+"tauschst aus"
+],
+"3pl": [
+"tauschen aus"
+],
+"3sg": [
+"tauscht aus"
+]
+},
+"auswandern": {
+"1pl": [
+"wandern aus"
+],
+"1sg": [
+"wander aus",
+"wandere aus",
+"wandre aus"
+],
+"2pl": [
+"wandert aus"
+],
+"2sg": [
+"wanderst aus"
+],
+"3pl": [
+"wandern aus"
+],
+"3sg": [
+"wandert aus"
+]
+},
+"ausziehen": {
+"1pl": [
+"ziehen aus"
+],
+"1sg": [
+"ziehe aus"
+],
+"2pl": [
+"zieht aus"
+],
+"2sg": [
+"ziehst aus"
+],
+"3pl": [
+"ziehen aus"
+],
+"3sg": [
+"zieht aus"
+]
 },
 "backen": {
-"1pl": "backen",
-"1sg": "backe",
-"2pl": "backt",
-"2sg": "bäckst",
-"3pl": "backen",
-"3sg": "bäckt"
+"1pl": [
+"backen"
+],
+"1sg": [
+"backe"
+],
+"2pl": [
+"backt"
+],
+"2sg": [
+"backst",
+"bäckst"
+],
+"3pl": [
+"backen"
+],
+"3sg": [
+"backt",
+"bäckt"
+]
+},
+"baden": {
+"1pl": [
+"baden"
+],
+"1sg": [
+"bade"
+],
+"2pl": [
+"badet"
+],
+"2sg": [
+"badest"
+],
+"3pl": [
+"baden"
+],
+"3sg": [
+"badet"
+]
 },
 "basteln": {
-"1pl": "basteln",
-"1sg": "bastel",
-"2pl": "bastelt",
-"2sg": "bastelst",
-"3pl": "basteln",
-"3sg": "bastelt"
+"1pl": [
+"basteln"
+],
+"1sg": [
+"bastel",
+"bastele",
+"bastle"
+],
+"2pl": [
+"bastelt"
+],
+"2sg": [
+"bastelst"
+],
+"3pl": [
+"basteln"
+],
+"3sg": [
+"bastelt"
+]
+},
+"beanstanden": {
+"1pl": [
+"beanstanden"
+],
+"1sg": [
+"beanstande"
+],
+"2pl": [
+"beanstandet"
+],
+"2sg": [
+"beanstandest"
+],
+"3pl": [
+"beanstanden"
+],
+"3sg": [
+"beanstandet"
+]
 },
 "beantragen": {
-"1pl": "beantragen",
-"1sg": "beantrage",
-"2pl": "beantragt",
-"2sg": "beantragst",
-"3pl": "beantragen",
-"3sg": "beantragt"
+"1pl": [
+"beantragen"
+],
+"1sg": [
+"beantrage"
+],
+"2pl": [
+"beantragt"
+],
+"2sg": [
+"beantragst"
+],
+"3pl": [
+"beantragen"
+],
+"3sg": [
+"beantragt"
+]
+},
+"bedauern": {
+"1pl": [
+"bedauern"
+],
+"1sg": [
+"bedauer",
+"bedauere",
+"bedaure"
+],
+"2pl": [
+"bedauert"
+],
+"2sg": [
+"bedauerst"
+],
+"3pl": [
+"bedauern"
+],
+"3sg": [
+"bedauert"
+]
+},
+"bedienen": {
+"1pl": [
+"bedienen"
+],
+"1sg": [
+"bediene"
+],
+"2pl": [
+"bedient"
+],
+"2sg": [
+"bedienst"
+],
+"3pl": [
+"bedienen"
+],
+"3sg": [
+"bedient"
+]
 },
 "beeilen": {
-"1pl": "beeilen",
-"1sg": "beeile",
-"2pl": "beeilt",
-"2sg": "beeilst",
-"3pl": "beeilen",
-"3sg": "beeilt"
+"1pl": [
+"beeilen"
+],
+"1sg": [
+"beeile"
+],
+"2pl": [
+"beeilt"
+],
+"2sg": [
+"beeilst"
+],
+"3pl": [
+"beeilen"
+],
+"3sg": [
+"beeilt"
+]
+},
+"befestigen": {
+"1pl": [
+"befestigen"
+],
+"1sg": [
+"befestige"
+],
+"2pl": [
+"befestigt"
+],
+"2sg": [
+"befestigst"
+],
+"3pl": [
+"befestigen"
+],
+"3sg": [
+"befestigt"
+]
+},
+"begehen": {
+"1pl": [
+"begehen"
+],
+"1sg": [
+"begehe"
+],
+"2pl": [
+"begeht"
+],
+"2sg": [
+"begehst"
+],
+"3pl": [
+"begehen"
+],
+"3sg": [
+"begeht"
+]
+},
+"beginnen": {
+"1pl": [
+"beginnen"
+],
+"1sg": [
+"beginne"
+],
+"2pl": [
+"beginnt"
+],
+"2sg": [
+"beginnst"
+],
+"3pl": [
+"beginnen"
+],
+"3sg": [
+"beginnt"
+]
 },
 "beglaubigen": {
-"1pl": "beglaubigen",
-"1sg": "beglaubige",
-"2pl": "beglaubigt",
-"2sg": "beglaubigst",
-"3pl": "beglaubigen",
-"3sg": "beglaubigt"
+"1pl": [
+"beglaubigen"
+],
+"1sg": [
+"beglaubige"
+],
+"2pl": [
+"beglaubigt"
+],
+"2sg": [
+"beglaubigst"
+],
+"3pl": [
+"beglaubigen"
+],
+"3sg": [
+"beglaubigt"
+]
+},
+"begründen": {
+"1pl": [
+"begründen"
+],
+"1sg": [
+"begründe"
+],
+"2pl": [
+"begründet"
+],
+"2sg": [
+"begründest"
+],
+"3pl": [
+"begründen"
+],
+"3sg": [
+"begründet"
+]
 },
 "behandeln": {
-"1pl": "behandeln",
-"1sg": "behandel",
-"2pl": "behandelt",
-"2sg": "behandelst",
-"3pl": "behandeln",
-"3sg": "behandelt"
+"1pl": [
+"behandeln"
+],
+"1sg": [
+"behandel",
+"behandele",
+"behandle"
+],
+"2pl": [
+"behandelt"
+],
+"2sg": [
+"behandelst"
+],
+"3pl": [
+"behandeln"
+],
+"3sg": [
+"behandelt"
+]
+},
+"behaupten": {
+"1pl": [
+"behaupten"
+],
+"1sg": [
+"behaupte"
+],
+"2pl": [
+"behauptet"
+],
+"2sg": [
+"behauptest"
+],
+"3pl": [
+"behaupten"
+],
+"3sg": [
+"behauptet"
+]
+},
+"bellen": {
+"1pl": [
+"bellen"
+],
+"1sg": [
+"belle"
+],
+"2pl": [
+"bellt"
+],
+"2sg": [
+"bellst"
+],
+"3pl": [
+"bellen"
+],
+"3sg": [
+"bellt"
+]
+},
+"bemängeln": {
+"1pl": [
+"bemängeln"
+],
+"1sg": [
+"bemängel",
+"bemängele",
+"bemängle"
+],
+"2pl": [
+"bemängelt"
+],
+"2sg": [
+"bemängelst"
+],
+"3pl": [
+"bemängeln"
+],
+"3sg": [
+"bemängelt"
+]
+},
+"benachrichtigen": {
+"1pl": [
+"benachrichtigen"
+],
+"1sg": [
+"benachrichtige"
+],
+"2pl": [
+"benachrichtigt"
+],
+"2sg": [
+"benachrichtigst"
+],
+"3pl": [
+"benachrichtigen"
+],
+"3sg": [
+"benachrichtigt"
+]
+},
+"beneiden": {
+"1pl": [
+"beneiden"
+],
+"1sg": [
+"beneide"
+],
+"2pl": [
+"beneidet"
+],
+"2sg": [
+"beneidest"
+],
+"3pl": [
+"beneiden"
+],
+"3sg": [
+"beneidet"
+]
+},
+"bereuen": {
+"1pl": [
+"bereuen"
+],
+"1sg": [
+"bereue"
+],
+"2pl": [
+"bereut"
+],
+"2sg": [
+"bereust"
+],
+"3pl": [
+"bereuen"
+],
+"3sg": [
+"bereut"
+]
+},
+"bergen": {
+"1pl": [
+"bergen"
+],
+"1sg": [
+"berge"
+],
+"2pl": [
+"bergt"
+],
+"2sg": [
+"birgst"
+],
+"3pl": [
+"bergen"
+],
+"3sg": [
+"birgt"
+]
+},
+"berichten": {
+"1pl": [
+"berichten"
+],
+"1sg": [
+"berichte"
+],
+"2pl": [
+"berichtet"
+],
+"2sg": [
+"berichtest"
+],
+"3pl": [
+"berichten"
+],
+"3sg": [
+"berichtet"
+]
 },
 "beruhigen": {
-"1pl": "beruhigen",
-"1sg": "beruhige",
-"2pl": "beruhigt",
-"2sg": "beruhigst",
-"3pl": "beruhigen",
-"3sg": "beruhigt"
+"1pl": [
+"beruhigen"
+],
+"1sg": [
+"beruhige"
+],
+"2pl": [
+"beruhigt"
+],
+"2sg": [
+"beruhigst"
+],
+"3pl": [
+"beruhigen"
+],
+"3sg": [
+"beruhigt"
+]
+},
+"beschließen": {
+"1pl": [
+"beschließen"
+],
+"1sg": [
+"beschließe"
+],
+"2pl": [
+"beschließt"
+],
+"2sg": [
+"beschließt"
+],
+"3pl": [
+"beschließen"
+],
+"3sg": [
+"beschließt"
+]
+},
+"beschweren": {
+"1pl": [
+"beschweren"
+],
+"1sg": [
+"beschwere"
+],
+"2pl": [
+"beschwert"
+],
+"2sg": [
+"beschwerst"
+],
+"3pl": [
+"beschweren"
+],
+"3sg": [
+"beschwert"
+]
 },
 "besichtigen": {
-"1pl": "besichtigen",
-"1sg": "besichtige",
-"2pl": "besichtigt",
-"2sg": "besichtigst",
-"3pl": "besichtigen",
-"3sg": "besichtigt"
+"1pl": [
+"besichtigen"
+],
+"1sg": [
+"besichtige"
+],
+"2pl": [
+"besichtigt"
+],
+"2sg": [
+"besichtigst"
+],
+"3pl": [
+"besichtigen"
+],
+"3sg": [
+"besichtigt"
+]
+},
+"besiegen": {
+"1pl": [
+"besiegen"
+],
+"1sg": [
+"besiege"
+],
+"2pl": [
+"besiegt"
+],
+"2sg": [
+"besiegst"
+],
+"3pl": [
+"besiegen"
+],
+"3sg": [
+"besiegt"
+]
 },
 "besorgen": {
-"1pl": "besorgen",
-"1sg": "besorge",
-"2pl": "besorgt",
-"2sg": "besorgst",
-"3pl": "besorgen",
-"3sg": "besorgt"
+"1pl": [
+"besorgen"
+],
+"1sg": [
+"besorge"
+],
+"2pl": [
+"besorgt"
+],
+"2sg": [
+"besorgst"
+],
+"3pl": [
+"besorgen"
+],
+"3sg": [
+"besorgt"
+]
 },
 "besprechen": {
-"1pl": "besprechen",
-"1sg": "bespreche",
-"2pl": "besprecht",
-"2sg": "besprichst",
-"3pl": "besprechen",
-"3sg": "bespricht"
+"1pl": [
+"besprechen"
+],
+"1sg": [
+"bespreche"
+],
+"2pl": [
+"besprecht"
+],
+"2sg": [
+"besprichst"
+],
+"3pl": [
+"besprechen"
+],
+"3sg": [
+"bespricht"
+]
+},
+"bestehen": {
+"1pl": [
+"bestehen"
+],
+"1sg": [
+"bestehe"
+],
+"2pl": [
+"besteht"
+],
+"2sg": [
+"bestehst"
+],
+"3pl": [
+"bestehen"
+],
+"3sg": [
+"besteht"
+]
 },
 "bestellen": {
-"1pl": "bestellen",
-"1sg": "bestelle",
-"2pl": "bestellt",
-"2sg": "bestellst",
-"3pl": "bestellen",
-"3sg": "bestellt"
+"1pl": [
+"bestellen"
+],
+"1sg": [
+"bestelle"
+],
+"2pl": [
+"bestellt"
+],
+"2sg": [
+"bestellst"
+],
+"3pl": [
+"bestellen"
+],
+"3sg": [
+"bestellt"
+]
+},
+"bestrafen": {
+"1pl": [
+"bestrafen"
+],
+"1sg": [
+"bestrafe"
+],
+"2pl": [
+"bestraft"
+],
+"2sg": [
+"bestrafst"
+],
+"3pl": [
+"bestrafen"
+],
+"3sg": [
+"bestraft"
+]
+},
+"bestreiten": {
+"1pl": [
+"bestreiten"
+],
+"1sg": [
+"bestreite"
+],
+"2pl": [
+"bestreitet"
+],
+"2sg": [
+"bestreitest"
+],
+"3pl": [
+"bestreiten"
+],
+"3sg": [
+"bestreitet"
+]
 },
 "besuchen": {
-"1pl": "besuchen",
-"1sg": "besuche",
-"2pl": "besucht",
-"2sg": "besuchst",
-"3pl": "besuchen",
-"3sg": "besucht"
+"1pl": [
+"besuchen"
+],
+"1sg": [
+"besuche"
+],
+"2pl": [
+"besucht"
+],
+"2sg": [
+"besuchst"
+],
+"3pl": [
+"besuchen"
+],
+"3sg": [
+"besucht"
+]
+},
+"betonen": {
+"1pl": [
+"betonen"
+],
+"1sg": [
+"betone"
+],
+"2pl": [
+"betont"
+],
+"2sg": [
+"betonst"
+],
+"3pl": [
+"betonen"
+],
+"3sg": [
+"betont"
+]
 },
 "betreuen": {
-"1pl": "betreuen",
-"1sg": "betreue",
-"2pl": "betreut",
-"2sg": "betreust",
-"3pl": "betreuen",
-"3sg": "betreut"
+"1pl": [
+"betreuen"
+],
+"1sg": [
+"betreue"
+],
+"2pl": [
+"betreut"
+],
+"2sg": [
+"betreust"
+],
+"3pl": [
+"betreuen"
+],
+"3sg": [
+"betreut"
+]
 },
 "bewerben": {
-"1pl": "bewerben",
-"1sg": "bewerbe",
-"2pl": "bewerbt",
-"2sg": "bewirbst",
-"3pl": "bewerben",
-"3sg": "bewirbt"
+"1pl": [
+"bewerben"
+],
+"1sg": [
+"bewerbe"
+],
+"2pl": [
+"bewerbt"
+],
+"2sg": [
+"bewirbst"
+],
+"3pl": [
+"bewerben"
+],
+"3sg": [
+"bewirbt"
+]
 },
 "bezahlen": {
-"1pl": "bezahlen",
-"1sg": "bezahle",
-"2pl": "bezahlt",
-"2sg": "bezahlst",
-"3pl": "bezahlen",
-"3sg": "bezahlt"
+"1pl": [
+"bezahlen"
+],
+"1sg": [
+"bezahle"
+],
+"2pl": [
+"bezahlt"
+],
+"2sg": [
+"bezahlst"
+],
+"3pl": [
+"bezahlen"
+],
+"3sg": [
+"bezahlt"
+]
+},
+"bezweifeln": {
+"1pl": [
+"bezweifeln"
+],
+"1sg": [
+"bezweifel",
+"bezweifele",
+"bezweifle"
+],
+"2pl": [
+"bezweifelt"
+],
+"2sg": [
+"bezweifelst"
+],
+"3pl": [
+"bezweifeln"
+],
+"3sg": [
+"bezweifelt"
+]
+},
+"bleiben": {
+"1pl": [
+"bleiben"
+],
+"1sg": [
+"bleibe"
+],
+"2pl": [
+"bleibt"
+],
+"2sg": [
+"bleibst"
+],
+"3pl": [
+"bleiben"
+],
+"3sg": [
+"bleibt"
+]
+},
+"blinken": {
+"1pl": [
+"blinken"
+],
+"1sg": [
+"blinke"
+],
+"2pl": [
+"blinkt"
+],
+"2sg": [
+"blinkst"
+],
+"3pl": [
+"blinken"
+],
+"3sg": [
+"blinkt"
+]
 },
 "bluten": {
-"1pl": "bluten",
-"1sg": "blute",
-"2pl": "blutet",
-"2sg": "blutest",
-"3pl": "bluten",
-"3sg": "blutet"
+"1pl": [
+"bluten"
+],
+"1sg": [
+"blute"
+],
+"2pl": [
+"blutet"
+],
+"2sg": [
+"blutest"
+],
+"3pl": [
+"bluten"
+],
+"3sg": [
+"blutet"
+]
+},
+"bohren": {
+"1pl": [
+"bohren"
+],
+"1sg": [
+"bohre"
+],
+"2pl": [
+"bohrt"
+],
+"2sg": [
+"bohrst"
+],
+"3pl": [
+"bohren"
+],
+"3sg": [
+"bohrt"
+]
+},
+"borgen": {
+"1pl": [
+"borgen"
+],
+"1sg": [
+"borge"
+],
+"2pl": [
+"borgt"
+],
+"2sg": [
+"borgst"
+],
+"3pl": [
+"borgen"
+],
+"3sg": [
+"borgt"
+]
+},
+"boxen": {
+"1pl": [
+"boxen"
+],
+"1sg": [
+"boxe"
+],
+"2pl": [
+"boxt"
+],
+"2sg": [
+"boxt"
+],
+"3pl": [
+"boxen"
+],
+"3sg": [
+"boxt"
+]
 },
 "braten": {
-"1pl": "braten",
-"1sg": "brate",
-"2pl": "bratet",
-"2sg": "brätst",
-"3pl": "braten",
-"3sg": "brät"
+"1pl": [
+"braten"
+],
+"1sg": [
+"brate"
+],
+"2pl": [
+"bratet"
+],
+"2sg": [
+"brätst"
+],
+"3pl": [
+"braten"
+],
+"3sg": [
+"brät"
+]
 },
 "brauchen": {
-"1pl": "brauchen",
-"1sg": "brauche",
-"2pl": "braucht",
-"2sg": "brauchst",
-"3pl": "brauchen",
-"3sg": "braucht"
+"1pl": [
+"brauchen"
+],
+"1sg": [
+"brauche"
+],
+"2pl": [
+"braucht"
+],
+"2sg": [
+"brauchst"
+],
+"3pl": [
+"brauchen"
+],
+"3sg": [
+"braucht"
+]
+},
+"bremsen": {
+"1pl": [
+"bremsen"
+],
+"1sg": [
+"bremse"
+],
+"2pl": [
+"bremst"
+],
+"2sg": [
+"bremst"
+],
+"3pl": [
+"bremsen"
+],
+"3sg": [
+"bremst"
+]
+},
+"brennen": {
+"1pl": [
+"brennen"
+],
+"1sg": [
+"brenne"
+],
+"2pl": [
+"brennt"
+],
+"2sg": [
+"brennst"
+],
+"3pl": [
+"brennen"
+],
+"3sg": [
+"brennt"
+]
 },
 "bringen": {
-"1pl": "bringen",
-"1sg": "bringe",
-"2pl": "bringt",
-"2sg": "bringst",
-"3pl": "bringen",
-"3sg": "bringt"
+"1pl": [
+"bringen"
+],
+"1sg": [
+"bringe"
+],
+"2pl": [
+"bringt"
+],
+"2sg": [
+"bringst"
+],
+"3pl": [
+"bringen"
+],
+"3sg": [
+"bringt"
+]
 },
 "buchen": {
-"1pl": "buchen",
-"1sg": "buche",
-"2pl": "bucht",
-"2sg": "buchst",
-"3pl": "buchen",
-"3sg": "bucht"
+"1pl": [
+"buchen"
+],
+"1sg": [
+"buche"
+],
+"2pl": [
+"bucht"
+],
+"2sg": [
+"buchst"
+],
+"3pl": [
+"buchen"
+],
+"3sg": [
+"bucht"
+]
+},
+"buchstabieren": {
+"1pl": [
+"buchstabieren"
+],
+"1sg": [
+"buchstabiere"
+],
+"2pl": [
+"buchstabiert"
+],
+"2sg": [
+"buchstabierst"
+],
+"3pl": [
+"buchstabieren"
+],
+"3sg": [
+"buchstabiert"
+]
+},
+"bügeln": {
+"1pl": [
+"bügeln"
+],
+"1sg": [
+"bügel",
+"bügele",
+"bügle"
+],
+"2pl": [
+"bügelt"
+],
+"2sg": [
+"bügelst"
+],
+"3pl": [
+"bügeln"
+],
+"3sg": [
+"bügelt"
+]
+},
+"bürsten": {
+"1pl": [
+"bürsten"
+],
+"1sg": [
+"bürste"
+],
+"2pl": [
+"bürstet"
+],
+"2sg": [
+"bürstest"
+],
+"3pl": [
+"bürsten"
+],
+"3sg": [
+"bürstet"
+]
+},
+"chatten": {
+"1pl": [
+"chatten"
+],
+"1sg": [
+"chatte"
+],
+"2pl": [
+"chattet"
+],
+"2sg": [
+"chattest"
+],
+"3pl": [
+"chatten"
+],
+"3sg": [
+"chattet"
+]
 },
 "dauern": {
-"1pl": "dauern",
-"1sg": "dauer",
-"2pl": "dauert",
-"2sg": "dauerst",
-"3pl": "dauern",
-"3sg": "dauert"
+"1pl": [
+"dauern"
+],
+"1sg": [
+"dauer",
+"dauere",
+"daure"
+],
+"2pl": [
+"dauert"
+],
+"2sg": [
+"dauerst"
+],
+"3pl": [
+"dauern"
+],
+"3sg": [
+"dauert"
+]
+},
+"dehnen": {
+"1pl": [
+"dehnen"
+],
+"1sg": [
+"dehne"
+],
+"2pl": [
+"dehnt"
+],
+"2sg": [
+"dehnst"
+],
+"3pl": [
+"dehnen"
+],
+"3sg": [
+"dehnt"
+]
+},
+"demonstrieren": {
+"1pl": [
+"demonstrieren"
+],
+"1sg": [
+"demonstriere"
+],
+"2pl": [
+"demonstriert"
+],
+"2sg": [
+"demonstrierst"
+],
+"3pl": [
+"demonstrieren"
+],
+"3sg": [
+"demonstriert"
+]
+},
+"demontieren": {
+"1pl": [
+"demontieren"
+],
+"1sg": [
+"demontiere"
+],
+"2pl": [
+"demontiert"
+],
+"2sg": [
+"demontierst"
+],
+"3pl": [
+"demontieren"
+],
+"3sg": [
+"demontiert"
+]
+},
+"denken": {
+"1pl": [
+"denken"
+],
+"1sg": [
+"denke"
+],
+"2pl": [
+"denkt"
+],
+"2sg": [
+"denkst"
+],
+"3pl": [
+"denken"
+],
+"3sg": [
+"denkt"
+]
+},
+"diskutieren": {
+"1pl": [
+"diskutieren"
+],
+"1sg": [
+"diskutiere"
+],
+"2pl": [
+"diskutiert"
+],
+"2sg": [
+"diskutierst"
+],
+"3pl": [
+"diskutieren"
+],
+"3sg": [
+"diskutiert"
+]
+},
+"dolmetschen": {
+"1pl": [
+"dolmetschen"
+],
+"1sg": [
+"dolmetsche"
+],
+"2pl": [
+"dolmetscht"
+],
+"2sg": [
+"dolmetschst"
+],
+"3pl": [
+"dolmetschen"
+],
+"3sg": [
+"dolmetscht"
+]
+},
+"drehen": {
+"1pl": [
+"drehen"
+],
+"1sg": [
+"drehe"
+],
+"2pl": [
+"dreht"
+],
+"2sg": [
+"drehst"
+],
+"3pl": [
+"drehen"
+],
+"3sg": [
+"dreht"
+]
 },
 "drucken": {
-"1pl": "drucken",
-"1sg": "drucke",
-"2pl": "druckt",
-"2sg": "druckst",
-"3pl": "drucken",
-"3sg": "druckt"
+"1pl": [
+"drucken"
+],
+"1sg": [
+"drucke"
+],
+"2pl": [
+"druckt"
+],
+"2sg": [
+"druckst"
+],
+"3pl": [
+"drucken"
+],
+"3sg": [
+"druckt"
+]
 },
 "durchsetzen": {
-"1pl": "durchsetzen",
-"1sg": "durchsetze",
-"2pl": "durchsetzt",
-"2sg": "durchsetzt",
-"3pl": "durchsetzen",
-"3sg": "durchsetzt"
+"1pl": [
+"durchsetzen",
+"setzen durch"
+],
+"1sg": [
+"durchsetze",
+"setze durch"
+],
+"2pl": [
+"durchsetzt",
+"setzt durch"
+],
+"2sg": [
+"durchsetzt",
+"setzt durch"
+],
+"3pl": [
+"durchsetzen",
+"setzen durch"
+],
+"3sg": [
+"durchsetzt",
+"setzt durch"
+]
 },
 "duschen": {
-"1pl": "duschen",
-"1sg": "dusche",
-"2pl": "duscht",
-"2sg": "duschst",
-"3pl": "duschen",
-"3sg": "duscht"
+"1pl": [
+"duschen"
+],
+"1sg": [
+"dusche"
+],
+"2pl": [
+"duscht"
+],
+"2sg": [
+"duschst"
+],
+"3pl": [
+"duschen"
+],
+"3sg": [
+"duscht"
+]
+},
+"duzen": {
+"1pl": [
+"duzen"
+],
+"1sg": [
+"duze"
+],
+"2pl": [
+"duzt"
+],
+"2sg": [
+"duzt"
+],
+"3pl": [
+"duzen"
+],
+"3sg": [
+"duzt"
+]
+},
+"ehren": {
+"1pl": [
+"ehren"
+],
+"1sg": [
+"ehre"
+],
+"2pl": [
+"ehrt"
+],
+"2sg": [
+"ehrst"
+],
+"3pl": [
+"ehren"
+],
+"3sg": [
+"ehrt"
+]
+},
+"einbrechen": {
+"1pl": [
+"brechen ein"
+],
+"1sg": [
+"breche ein"
+],
+"2pl": [
+"brecht ein"
+],
+"2sg": [
+"brichst ein"
+],
+"3pl": [
+"brechen ein"
+],
+"3sg": [
+"bricht ein"
+]
+},
+"einbürgern": {
+"1pl": [
+"bürgern ein"
+],
+"1sg": [
+"bürger ein",
+"bürgere ein",
+"bürgre ein"
+],
+"2pl": [
+"bürgert ein"
+],
+"2sg": [
+"bürgerst ein"
+],
+"3pl": [
+"bürgern ein"
+],
+"3sg": [
+"bürgert ein"
+]
+},
+"eingeben": {
+"1pl": [
+"geben ein"
+],
+"1sg": [
+"gebe ein"
+],
+"2pl": [
+"gebt ein"
+],
+"2sg": [
+"gibst ein"
+],
+"3pl": [
+"geben ein"
+],
+"3sg": [
+"gibt ein"
+]
+},
+"eingreifen": {
+"1pl": [
+"greifen ein"
+],
+"1sg": [
+"greife ein"
+],
+"2pl": [
+"greift ein"
+],
+"2sg": [
+"greifst ein"
+],
+"3pl": [
+"greifen ein"
+],
+"3sg": [
+"greift ein"
+]
+},
+"einhalten": {
+"1pl": [
+"halten ein"
+],
+"1sg": [
+"halte ein"
+],
+"2pl": [
+"haltet ein"
+],
+"2sg": [
+"hältst ein"
+],
+"3pl": [
+"halten ein"
+],
+"3sg": [
+"hält ein"
+]
+},
+"einigen": {
+"1pl": [
+"einigen"
+],
+"1sg": [
+"einige"
+],
+"2pl": [
+"einigt"
+],
+"2sg": [
+"einigst"
+],
+"3pl": [
+"einigen"
+],
+"3sg": [
+"einigt"
+]
 },
 "einkaufen": {
-"1pl": "kaufen ein",
-"1sg": "kaufe ein",
-"2pl": "kauft ein",
-"2sg": "kaufst ein",
-"3pl": "kaufen ein",
-"3sg": "kauft ein"
+"1pl": [
+"kaufen ein"
+],
+"1sg": [
+"kaufe ein"
+],
+"2pl": [
+"kauft ein"
+],
+"2sg": [
+"kaufst ein"
+],
+"3pl": [
+"kaufen ein"
+],
+"3sg": [
+"kauft ein"
+]
+},
+"einladen": {
+"1pl": [
+"laden ein"
+],
+"1sg": [
+"lade ein"
+],
+"2pl": [
+"ladet ein"
+],
+"2sg": [
+"lädst ein"
+],
+"3pl": [
+"laden ein"
+],
+"3sg": [
+"lädt ein"
+]
 },
 "einnehmen": {
-"1pl": "nehmen ein",
-"1sg": "nehme ein",
-"2pl": "nehmt ein",
-"2sg": "nimmst ein",
-"3pl": "nehmen ein",
-"3sg": "nimmt ein"
+"1pl": [
+"nehmen ein"
+],
+"1sg": [
+"nehme ein"
+],
+"2pl": [
+"nehmt ein"
+],
+"2sg": [
+"nimmst ein"
+],
+"3pl": [
+"nehmen ein"
+],
+"3sg": [
+"nimmt ein"
+]
+},
+"einpacken": {
+"1pl": [
+"packen ein"
+],
+"1sg": [
+"packe ein"
+],
+"2pl": [
+"packt ein"
+],
+"2sg": [
+"packst ein"
+],
+"3pl": [
+"packen ein"
+],
+"3sg": [
+"packt ein"
+]
+},
+"einplanen": {
+"1pl": [
+"planen ein"
+],
+"1sg": [
+"plane ein"
+],
+"2pl": [
+"plant ein"
+],
+"2sg": [
+"planst ein"
+],
+"3pl": [
+"planen ein"
+],
+"3sg": [
+"plant ein"
+]
 },
 "einreichen": {
-"1pl": "reichen ein",
-"1sg": "reiche ein",
-"2pl": "reicht ein",
-"2sg": "reichst ein",
-"3pl": "reichen ein",
-"3sg": "reicht ein"
+"1pl": [
+"reichen ein"
+],
+"1sg": [
+"reiche ein"
+],
+"2pl": [
+"reicht ein"
+],
+"2sg": [
+"reichst ein"
+],
+"3pl": [
+"reichen ein"
+],
+"3sg": [
+"reicht ein"
+]
+},
+"einreisen": {
+"1pl": [
+"reisen ein"
+],
+"1sg": [
+"reise ein"
+],
+"2pl": [
+"reist ein"
+],
+"2sg": [
+"reist ein"
+],
+"3pl": [
+"reisen ein"
+],
+"3sg": [
+"reist ein"
+]
+},
+"einräumen": {
+"1pl": [
+"räumen ein"
+],
+"1sg": [
+"räume ein"
+],
+"2pl": [
+"räumt ein"
+],
+"2sg": [
+"räumst ein"
+],
+"3pl": [
+"räumen ein"
+],
+"3sg": [
+"räumt ein"
+]
+},
+"einschalten": {
+"1pl": [
+"schalten ein"
+],
+"1sg": [
+"schalte ein"
+],
+"2pl": [
+"schaltet ein"
+],
+"2sg": [
+"schaltest ein"
+],
+"3pl": [
+"schalten ein"
+],
+"3sg": [
+"schaltet ein"
+]
+},
+"einschlafen": {
+"1pl": [
+"schlafen ein"
+],
+"1sg": [
+"schlafe ein"
+],
+"2pl": [
+"schlaft ein"
+],
+"2sg": [
+"schläfst ein"
+],
+"3pl": [
+"schlafen ein"
+],
+"3sg": [
+"schläft ein"
+]
+},
+"einschätzen": {
+"1pl": [
+"schätzen ein"
+],
+"1sg": [
+"schätze ein"
+],
+"2pl": [
+"schätzt ein"
+],
+"2sg": [
+"schätzt ein"
+],
+"3pl": [
+"schätzen ein"
+],
+"3sg": [
+"schätzt ein"
+]
 },
 "einsteigen": {
-"1pl": "steigen ein",
-"1sg": "steige ein",
-"2pl": "steigt ein",
-"2sg": "steigst ein",
-"3pl": "steigen ein",
-"3sg": "steigt ein"
+"1pl": [
+"steigen ein"
+],
+"1sg": [
+"steige ein"
+],
+"2pl": [
+"steigt ein"
+],
+"2sg": [
+"steigst ein"
+],
+"3pl": [
+"steigen ein"
+],
+"3sg": [
+"steigt ein"
+]
 },
 "einstellen": {
-"1pl": "stellen ein",
-"1sg": "stelle ein",
-"2pl": "stellt ein",
-"2sg": "stellst ein",
-"3pl": "stellen ein",
-"3sg": "stellt ein"
+"1pl": [
+"stellen ein"
+],
+"1sg": [
+"stelle ein"
+],
+"2pl": [
+"stellt ein"
+],
+"2sg": [
+"stellst ein"
+],
+"3pl": [
+"stellen ein"
+],
+"3sg": [
+"stellt ein"
+]
+},
+"einwandern": {
+"1pl": [
+"wandern ein"
+],
+"1sg": [
+"wander ein",
+"wandere ein",
+"wandre ein"
+],
+"2pl": [
+"wandert ein"
+],
+"2sg": [
+"wanderst ein"
+],
+"3pl": [
+"wandern ein"
+],
+"3sg": [
+"wandert ein"
+]
 },
 "einweisen": {
-"1pl": "weisen ein",
-"1sg": "weise ein",
-"2pl": "weist ein",
-"2sg": "weist ein",
-"3pl": "weisen ein",
-"3sg": "weist ein"
+"1pl": [
+"weisen ein"
+],
+"1sg": [
+"weise ein"
+],
+"2pl": [
+"weist ein"
+],
+"2sg": [
+"weist ein"
+],
+"3pl": [
+"weisen ein"
+],
+"3sg": [
+"weist ein"
+]
+},
+"einwerfen": {
+"1pl": [
+"werfen ein"
+],
+"1sg": [
+"werfe ein"
+],
+"2pl": [
+"werft ein"
+],
+"2sg": [
+"wirfst ein"
+],
+"3pl": [
+"werfen ein"
+],
+"3sg": [
+"wirft ein"
+]
+},
+"einzahlen": {
+"1pl": [
+"zahlen ein"
+],
+"1sg": [
+"zahle ein"
+],
+"2pl": [
+"zahlt ein"
+],
+"2sg": [
+"zahlst ein"
+],
+"3pl": [
+"zahlen ein"
+],
+"3sg": [
+"zahlt ein"
+]
 },
 "empfehlen": {
-"1pl": "empfehlen",
-"1sg": "empfehle",
-"2pl": "empfehlt",
-"2sg": "empfiehlst",
-"3pl": "empfehlen",
-"3sg": "empfiehlt"
+"1pl": [
+"empfehlen"
+],
+"1sg": [
+"empfehle"
+],
+"2pl": [
+"empfehlt"
+],
+"2sg": [
+"empfiehlst"
+],
+"3pl": [
+"empfehlen"
+],
+"3sg": [
+"empfiehlt"
+]
 },
 "entfallen": {
-"1pl": "entfallen",
-"1sg": "entfalle",
-"2pl": "entfallt",
-"2sg": "entfällst",
-"3pl": "entfallen",
-"3sg": "entfällt"
+"1pl": [
+"entfallen"
+],
+"1sg": [
+"entfalle"
+],
+"2pl": [
+"entfallt"
+],
+"2sg": [
+"entfällst"
+],
+"3pl": [
+"entfallen"
+],
+"3sg": [
+"entfällt"
+]
 },
 "entlassen": {
-"1pl": "entlassen",
-"1sg": "entlasse",
-"2pl": "entlasst",
-"2sg": "entlässt",
-"3pl": "entlassen",
-"3sg": "entlässt"
+"1pl": [
+"entlassen"
+],
+"1sg": [
+"entlasse"
+],
+"2pl": [
+"entlasst"
+],
+"2sg": [
+"entlässt"
+],
+"3pl": [
+"entlassen"
+],
+"3sg": [
+"entlässt"
+]
 },
 "entschuldigen": {
-"1pl": "entschuldigen",
-"1sg": "entschuldige",
-"2pl": "entschuldigt",
-"2sg": "entschuldigst",
-"3pl": "entschuldigen",
-"3sg": "entschuldigt"
+"1pl": [
+"entschuldigen"
+],
+"1sg": [
+"entschuldige"
+],
+"2pl": [
+"entschuldigt"
+],
+"2sg": [
+"entschuldigst"
+],
+"3pl": [
+"entschuldigen"
+],
+"3sg": [
+"entschuldigt"
+]
+},
+"entschädigen": {
+"1pl": [
+"entschädigen"
+],
+"1sg": [
+"entschädige"
+],
+"2pl": [
+"entschädigt"
+],
+"2sg": [
+"entschädigst"
+],
+"3pl": [
+"entschädigen"
+],
+"3sg": [
+"entschädigt"
+]
+},
+"entspannen": {
+"1pl": [
+"entspannen"
+],
+"1sg": [
+"entspanne"
+],
+"2pl": [
+"entspannt"
+],
+"2sg": [
+"entspannst"
+],
+"3pl": [
+"entspannen"
+],
+"3sg": [
+"entspannt"
+]
+},
+"enttäuschen": {
+"1pl": [
+"enttäuschen"
+],
+"1sg": [
+"enttäusche"
+],
+"2pl": [
+"enttäuscht"
+],
+"2sg": [
+"enttäuschst"
+],
+"3pl": [
+"enttäuschen"
+],
+"3sg": [
+"enttäuscht"
+]
 },
 "entwickeln": {
-"1pl": "entwickeln",
-"1sg": "entwickel",
-"2pl": "entwickelt",
-"2sg": "entwickelst",
-"3pl": "entwickeln",
-"3sg": "entwickelt"
+"1pl": [
+"entwickeln"
+],
+"1sg": [
+"entwickel",
+"entwickele",
+"entwickle"
+],
+"2pl": [
+"entwickelt"
+],
+"2sg": [
+"entwickelst"
+],
+"3pl": [
+"entwickeln"
+],
+"3sg": [
+"entwickelt"
+]
+},
+"erholen": {
+"1pl": [
+"erholen"
+],
+"1sg": [
+"erhole"
+],
+"2pl": [
+"erholt"
+],
+"2sg": [
+"erholst"
+],
+"3pl": [
+"erholen"
+],
+"3sg": [
+"erholt"
+]
+},
+"erklären": {
+"1pl": [
+"erklären"
+],
+"1sg": [
+"erkläre"
+],
+"2pl": [
+"erklärt"
+],
+"2sg": [
+"erklärst"
+],
+"3pl": [
+"erklären"
+],
+"3sg": [
+"erklärt"
+]
+},
+"erkunden": {
+"1pl": [
+"erkunden"
+],
+"1sg": [
+"erkunde"
+],
+"2pl": [
+"erkundet"
+],
+"2sg": [
+"erkundest"
+],
+"3pl": [
+"erkunden"
+],
+"3sg": [
+"erkundet"
+]
+},
+"erlauben": {
+"1pl": [
+"erlauben"
+],
+"1sg": [
+"erlaube"
+],
+"2pl": [
+"erlaubt"
+],
+"2sg": [
+"erlaubst"
+],
+"3pl": [
+"erlauben"
+],
+"3sg": [
+"erlaubt"
+]
+},
+"erleben": {
+"1pl": [
+"erleben"
+],
+"1sg": [
+"erlebe"
+],
+"2pl": [
+"erlebt"
+],
+"2sg": [
+"erlebst"
+],
+"3pl": [
+"erleben"
+],
+"3sg": [
+"erlebt"
+]
 },
 "erledigen": {
-"1pl": "erledigen",
-"1sg": "erledige",
-"2pl": "erledigt",
-"2sg": "erledigst",
-"3pl": "erledigen",
-"3sg": "erledigt"
+"1pl": [
+"erledigen"
+],
+"1sg": [
+"erledige"
+],
+"2pl": [
+"erledigt"
+],
+"2sg": [
+"erledigst"
+],
+"3pl": [
+"erledigen"
+],
+"3sg": [
+"erledigt"
+]
 },
 "erreichen": {
-"1pl": "erreichen",
-"1sg": "erreiche",
-"2pl": "erreicht",
-"2sg": "erreichst",
-"3pl": "erreichen",
-"3sg": "erreicht"
+"1pl": [
+"erreichen"
+],
+"1sg": [
+"erreiche"
+],
+"2pl": [
+"erreicht"
+],
+"2sg": [
+"erreichst"
+],
+"3pl": [
+"erreichen"
+],
+"3sg": [
+"erreicht"
+]
+},
+"erscheinen": {
+"1pl": [
+"erscheinen"
+],
+"1sg": [
+"erscheine"
+],
+"2pl": [
+"erscheint"
+],
+"2sg": [
+"erscheinst"
+],
+"3pl": [
+"erscheinen"
+],
+"3sg": [
+"erscheint"
+]
 },
 "erstatten": {
-"1pl": "erstatten",
-"1sg": "erstatte",
-"2pl": "erstattet",
-"2sg": "erstattest",
-"3pl": "erstatten",
-"3sg": "erstattet"
+"1pl": [
+"erstatten"
+],
+"1sg": [
+"erstatte"
+],
+"2pl": [
+"erstattet"
+],
+"2sg": [
+"erstattest"
+],
+"3pl": [
+"erstatten"
+],
+"3sg": [
+"erstattet"
+]
 },
 "erziehen": {
-"1pl": "erziehen",
-"1sg": "erziehe",
-"2pl": "erzieht",
-"2sg": "erziehst",
-"3pl": "erziehen",
-"3sg": "erzieht"
+"1pl": [
+"erziehen"
+],
+"1sg": [
+"erziehe"
+],
+"2pl": [
+"erzieht"
+],
+"2sg": [
+"erziehst"
+],
+"3pl": [
+"erziehen"
+],
+"3sg": [
+"erzieht"
+]
+},
+"erzählen": {
+"1pl": [
+"erzählen"
+],
+"1sg": [
+"erzähle"
+],
+"2pl": [
+"erzählt"
+],
+"2sg": [
+"erzählst"
+],
+"3pl": [
+"erzählen"
+],
+"3sg": [
+"erzählt"
+]
 },
 "eröffnen": {
-"1pl": "eröffnen",
-"1sg": "eröffne",
-"2pl": "eröffnet",
-"2sg": "eröffnest",
-"3pl": "eröffnen",
-"3sg": "eröffnet"
+"1pl": [
+"eröffnen"
+],
+"1sg": [
+"eröffne"
+],
+"2pl": [
+"eröffnet"
+],
+"2sg": [
+"eröffnest"
+],
+"3pl": [
+"eröffnen"
+],
+"3sg": [
+"eröffnet"
+]
 },
 "essen": {
-"1pl": "essen",
-"1sg": "esse",
-"2pl": "esst",
-"2sg": "isst",
-"3pl": "essen",
-"3sg": "isst"
+"1pl": [
+"essen"
+],
+"1sg": [
+"esse"
+],
+"2pl": [
+"esst"
+],
+"2sg": [
+"isst"
+],
+"3pl": [
+"essen"
+],
+"3sg": [
+"isst"
+]
+},
+"evakuieren": {
+"1pl": [
+"evakuieren"
+],
+"1sg": [
+"evakuiere"
+],
+"2pl": [
+"evakuiert"
+],
+"2sg": [
+"evakuierst"
+],
+"3pl": [
+"evakuieren"
+],
+"3sg": [
+"evakuiert"
+]
+},
+"explodieren": {
+"1pl": [
+"explodieren"
+],
+"1sg": [
+"explodiere"
+],
+"2pl": [
+"explodiert"
+],
+"2sg": [
+"explodierst"
+],
+"3pl": [
+"explodieren"
+],
+"3sg": [
+"explodiert"
+]
 },
 "fahren": {
-"1pl": "fahren",
-"1sg": "fahre",
-"2pl": "fahrt",
-"2sg": "fährst",
-"3pl": "fahren",
-"3sg": "fährt"
+"1pl": [
+"fahren"
+],
+"1sg": [
+"fahre"
+],
+"2pl": [
+"fahrt"
+],
+"2sg": [
+"fährst"
+],
+"3pl": [
+"fahren"
+],
+"3sg": [
+"fährt"
+]
+},
+"fangen": {
+"1pl": [
+"fangen"
+],
+"1sg": [
+"fange"
+],
+"2pl": [
+"fangt"
+],
+"2sg": [
+"fängst"
+],
+"3pl": [
+"fangen"
+],
+"3sg": [
+"fängt"
+]
+},
+"fegen": {
+"1pl": [
+"fegen"
+],
+"1sg": [
+"fege"
+],
+"2pl": [
+"fegt"
+],
+"2sg": [
+"fegst"
+],
+"3pl": [
+"fegen"
+],
+"3sg": [
+"fegt"
+]
+},
+"feiern": {
+"1pl": [
+"feiern"
+],
+"1sg": [
+"feier",
+"feiere",
+"feire"
+],
+"2pl": [
+"feiert"
+],
+"2sg": [
+"feierst"
+],
+"3pl": [
+"feiern"
+],
+"3sg": [
+"feiert"
+]
+},
+"fernsehen": {
+"1pl": [
+"sehen fern"
+],
+"1sg": [
+"sehe fern"
+],
+"2pl": [
+"seht fern"
+],
+"2sg": [
+"siehst fern"
+],
+"3pl": [
+"sehen fern"
+],
+"3sg": [
+"sieht fern"
+]
 },
 "finden": {
-"1pl": "finden",
-"1sg": "finde",
-"2pl": "findet",
-"2sg": "findest",
-"3pl": "finden",
-"3sg": "findet"
+"1pl": [
+"finden"
+],
+"1sg": [
+"finde"
+],
+"2pl": [
+"findet"
+],
+"2sg": [
+"findest"
+],
+"3pl": [
+"finden"
+],
+"3sg": [
+"findet"
+]
 },
 "fliegen": {
-"1pl": "fliegen",
-"1sg": "fliege",
-"2pl": "fliegt",
-"2sg": "fliegst",
-"3pl": "fliegen",
-"3sg": "fliegt"
+"1pl": [
+"fliegen"
+],
+"1sg": [
+"fliege"
+],
+"2pl": [
+"fliegt"
+],
+"2sg": [
+"fliegst"
+],
+"3pl": [
+"fliegen"
+],
+"3sg": [
+"fliegt"
+]
+},
+"fliehen": {
+"1pl": [
+"fliehen"
+],
+"1sg": [
+"fliehe"
+],
+"2pl": [
+"flieht"
+],
+"2sg": [
+"fliehst"
+],
+"3pl": [
+"fliehen"
+],
+"3sg": [
+"flieht"
+]
+},
+"flüchten": {
+"1pl": [
+"flüchten"
+],
+"1sg": [
+"flüchte"
+],
+"2pl": [
+"flüchtet"
+],
+"2sg": [
+"flüchtest"
+],
+"3pl": [
+"flüchten"
+],
+"3sg": [
+"flüchtet"
+]
+},
+"fotografieren": {
+"1pl": [
+"fotografieren"
+],
+"1sg": [
+"fotografiere"
+],
+"2pl": [
+"fotografiert"
+],
+"2sg": [
+"fotografierst"
+],
+"3pl": [
+"fotografieren"
+],
+"3sg": [
+"fotografiert"
+]
 },
 "fragen": {
-"1pl": "fragen",
-"1sg": "frage",
-"2pl": "fragt",
-"2sg": "frägst",
-"3pl": "fragen",
-"3sg": "frägt"
+"1pl": [
+"fragen"
+],
+"1sg": [
+"frage"
+],
+"2pl": [
+"fragt"
+],
+"2sg": [
+"fragst",
+"frägst"
+],
+"3pl": [
+"fragen"
+],
+"3sg": [
+"fragt",
+"frägt"
+]
+},
+"frankieren": {
+"1pl": [
+"frankieren"
+],
+"1sg": [
+"frankiere"
+],
+"2pl": [
+"frankiert"
+],
+"2sg": [
+"frankierst"
+],
+"3pl": [
+"frankieren"
+],
+"3sg": [
+"frankiert"
+]
+},
+"frieren": {
+"1pl": [
+"frieren"
+],
+"1sg": [
+"friere"
+],
+"2pl": [
+"friert"
+],
+"2sg": [
+"frierst"
+],
+"3pl": [
+"frieren"
+],
+"3sg": [
+"friert"
+]
+},
+"frühstücken": {
+"1pl": [
+"frühstücken"
+],
+"1sg": [
+"frühstücke"
+],
+"2pl": [
+"frühstückt"
+],
+"2sg": [
+"frühstückst"
+],
+"3pl": [
+"frühstücken"
+],
+"3sg": [
+"frühstückt"
+]
+},
+"funktionieren": {
+"1pl": [
+"funktionieren"
+],
+"1sg": [
+"funktioniere"
+],
+"2pl": [
+"funktioniert"
+],
+"2sg": [
+"funktionierst"
+],
+"3pl": [
+"funktionieren"
+],
+"3sg": [
+"funktioniert"
+]
+},
+"föhnen": {
+"1pl": [
+"föhnen"
+],
+"1sg": [
+"föhne"
+],
+"2pl": [
+"föhnt"
+],
+"2sg": [
+"föhnst"
+],
+"3pl": [
+"föhnen"
+],
+"3sg": [
+"föhnt"
+]
 },
 "fördern": {
-"1pl": "fördern",
-"1sg": "förder",
-"2pl": "fördert",
-"2sg": "förderst",
-"3pl": "fördern",
-"3sg": "fördert"
+"1pl": [
+"fördern"
+],
+"1sg": [
+"förder",
+"fördere",
+"fördre"
+],
+"2pl": [
+"fördert"
+],
+"2sg": [
+"förderst"
+],
+"3pl": [
+"fördern"
+],
+"3sg": [
+"fördert"
+]
 },
 "fühlen": {
-"1pl": "fühlen",
-"1sg": "fühle",
-"2pl": "fühlt",
-"2sg": "fühlst",
-"3pl": "fühlen",
-"3sg": "fühlt"
+"1pl": [
+"fühlen"
+],
+"1sg": [
+"fühle"
+],
+"2pl": [
+"fühlt"
+],
+"2sg": [
+"fühlst"
+],
+"3pl": [
+"fühlen"
+],
+"3sg": [
+"fühlt"
+]
 },
 "füttern": {
-"1pl": "füttern",
-"1sg": "fütter",
-"2pl": "füttert",
-"2sg": "fütterst",
-"3pl": "füttern",
-"3sg": "füttert"
+"1pl": [
+"füttern"
+],
+"1sg": [
+"fütter",
+"füttere",
+"füttre"
+],
+"2pl": [
+"füttert"
+],
+"2sg": [
+"fütterst"
+],
+"3pl": [
+"füttern"
+],
+"3sg": [
+"füttert"
+]
+},
+"gedenken": {
+"1pl": [
+"gedenken"
+],
+"1sg": [
+"gedenke"
+],
+"2pl": [
+"gedenkt"
+],
+"2sg": [
+"gedenkst"
+],
+"3pl": [
+"gedenken"
+],
+"3sg": [
+"gedenkt"
+]
+},
+"gefallen": {
+"1pl": [
+"gefallen"
+],
+"1sg": [
+"gefalle"
+],
+"2pl": [
+"gefallt"
+],
+"2sg": [
+"gefällst"
+],
+"3pl": [
+"gefallen"
+],
+"3sg": [
+"gefällt"
+]
 },
 "gehen": {
-"1pl": "gehen",
-"1sg": "gehe",
-"2pl": "geht",
-"2sg": "gehst",
-"3pl": "gehen",
-"3sg": "geht"
+"1pl": [
+"gehen"
+],
+"1sg": [
+"gehe"
+],
+"2pl": [
+"geht"
+],
+"2sg": [
+"gehst"
+],
+"3pl": [
+"gehen"
+],
+"3sg": [
+"geht"
+]
+},
+"genießen": {
+"1pl": [
+"genießen"
+],
+"1sg": [
+"genieße"
+],
+"2pl": [
+"genießt"
+],
+"2sg": [
+"genießt"
+],
+"3pl": [
+"genießen"
+],
+"3sg": [
+"genießt"
+]
+},
+"gewinnen": {
+"1pl": [
+"gewinnen"
+],
+"1sg": [
+"gewinne"
+],
+"2pl": [
+"gewinnt"
+],
+"2sg": [
+"gewinnst"
+],
+"3pl": [
+"gewinnen"
+],
+"3sg": [
+"gewinnt"
+]
+},
+"gießen": {
+"1pl": [
+"gießen"
+],
+"1sg": [
+"gieße"
+],
+"2pl": [
+"gießt"
+],
+"2sg": [
+"gießt"
+],
+"3pl": [
+"gießen"
+],
+"3sg": [
+"gießt"
+]
+},
+"glauben": {
+"1pl": [
+"glauben"
+],
+"1sg": [
+"glaube"
+],
+"2pl": [
+"glaubt"
+],
+"2sg": [
+"glaubst"
+],
+"3pl": [
+"glauben"
+],
+"3sg": [
+"glaubt"
+]
+},
+"glätten": {
+"1pl": [
+"glätten"
+],
+"1sg": [
+"glätte"
+],
+"2pl": [
+"glättet"
+],
+"2sg": [
+"glättest"
+],
+"3pl": [
+"glätten"
+],
+"3sg": [
+"glättet"
+]
+},
+"gratulieren": {
+"1pl": [
+"gratulieren"
+],
+"1sg": [
+"gratuliere"
+],
+"2pl": [
+"gratuliert"
+],
+"2sg": [
+"gratulierst"
+],
+"3pl": [
+"gratulieren"
+],
+"3sg": [
+"gratuliert"
+]
+},
+"haften": {
+"1pl": [
+"haften"
+],
+"1sg": [
+"hafte"
+],
+"2pl": [
+"haftet"
+],
+"2sg": [
+"haftest"
+],
+"3pl": [
+"haften"
+],
+"3sg": [
+"haftet"
+]
+},
+"halbieren": {
+"1pl": [
+"halbieren"
+],
+"1sg": [
+"halbiere"
+],
+"2pl": [
+"halbiert"
+],
+"2sg": [
+"halbierst"
+],
+"3pl": [
+"halbieren"
+],
+"3sg": [
+"halbiert"
+]
 },
 "halten": {
-"1pl": "halten",
-"1sg": "halte",
-"2pl": "haltet",
-"2sg": "hältst",
-"3pl": "halten",
-"3sg": "hält"
+"1pl": [
+"halten"
+],
+"1sg": [
+"halte"
+],
+"2pl": [
+"haltet"
+],
+"2sg": [
+"hältst"
+],
+"3pl": [
+"halten"
+],
+"3sg": [
+"hält"
+]
 },
 "heilen": {
-"1pl": "heilen",
-"1sg": "heile",
-"2pl": "heilt",
-"2sg": "heilst",
-"3pl": "heilen",
-"3sg": "heilt"
+"1pl": [
+"heilen"
+],
+"1sg": [
+"heile"
+],
+"2pl": [
+"heilt"
+],
+"2sg": [
+"heilst"
+],
+"3pl": [
+"heilen"
+],
+"3sg": [
+"heilt"
+]
+},
+"heiraten": {
+"1pl": [
+"heiraten"
+],
+"1sg": [
+"heirate"
+],
+"2pl": [
+"heiratet"
+],
+"2sg": [
+"heiratest"
+],
+"3pl": [
+"heiraten"
+],
+"3sg": [
+"heiratet"
+]
 },
 "heizen": {
-"1pl": "heizen",
-"1sg": "heize",
-"2pl": "heizt",
-"2sg": "heizt",
-"3pl": "heizen",
-"3sg": "heizt"
+"1pl": [
+"heizen"
+],
+"1sg": [
+"heize"
+],
+"2pl": [
+"heizt"
+],
+"2sg": [
+"heizt"
+],
+"3pl": [
+"heizen"
+],
+"3sg": [
+"heizt"
+]
 },
 "helfen": {
-"1pl": "helfen",
-"1sg": "helfe",
-"2pl": "helft",
-"2sg": "hilfst",
-"3pl": "helfen",
-"3sg": "hilft"
+"1pl": [
+"helfen"
+],
+"1sg": [
+"helfe"
+],
+"2pl": [
+"helft"
+],
+"2sg": [
+"hilfst"
+],
+"3pl": [
+"helfen"
+],
+"3sg": [
+"hilft"
+]
+},
+"herrschen": {
+"1pl": [
+"herrschen"
+],
+"1sg": [
+"herrsche"
+],
+"2pl": [
+"herrscht"
+],
+"2sg": [
+"herrschst"
+],
+"3pl": [
+"herrschen"
+],
+"3sg": [
+"herrscht"
+]
+},
+"herunterladen": {
+"1pl": [
+"laden herunter"
+],
+"1sg": [
+"lade herunter"
+],
+"2pl": [
+"ladet herunter"
+],
+"2sg": [
+"lädst herunter"
+],
+"3pl": [
+"laden herunter"
+],
+"3sg": [
+"lädt herunter"
+]
+},
+"hochladen": {
+"1pl": [
+"laden hoch"
+],
+"1sg": [
+"lade hoch"
+],
+"2pl": [
+"ladet hoch"
+],
+"2sg": [
+"lädst hoch"
+],
+"3pl": [
+"laden hoch"
+],
+"3sg": [
+"lädt hoch"
+]
+},
+"hoffen": {
+"1pl": [
+"hoffen"
+],
+"1sg": [
+"hoffe"
+],
+"2pl": [
+"hofft"
+],
+"2sg": [
+"hoffst"
+],
+"3pl": [
+"hoffen"
+],
+"3sg": [
+"hofft"
+]
 },
 "holen": {
-"1pl": "holen",
-"1sg": "hole",
-"2pl": "holt",
-"2sg": "holst",
-"3pl": "holen",
-"3sg": "holt"
+"1pl": [
+"holen"
+],
+"1sg": [
+"hole"
+],
+"2pl": [
+"holt"
+],
+"2sg": [
+"holst"
+],
+"3pl": [
+"holen"
+],
+"3sg": [
+"holt"
+]
+},
+"hupen": {
+"1pl": [
+"hupen"
+],
+"1sg": [
+"hupe"
+],
+"2pl": [
+"hupt"
+],
+"2sg": [
+"hupst"
+],
+"3pl": [
+"hupen"
+],
+"3sg": [
+"hupt"
+]
 },
 "husten": {
-"1pl": "husten",
-"1sg": "huste",
-"2pl": "hustet",
-"2sg": "hustest",
-"3pl": "husten",
-"3sg": "hustet"
+"1pl": [
+"husten"
+],
+"1sg": [
+"huste"
+],
+"2pl": [
+"hustet"
+],
+"2sg": [
+"hustest"
+],
+"3pl": [
+"husten"
+],
+"3sg": [
+"hustet"
+]
+},
+"hämmern": {
+"1pl": [
+"hämmern"
+],
+"1sg": [
+"hämmer",
+"hämmere",
+"hämmre"
+],
+"2pl": [
+"hämmert"
+],
+"2sg": [
+"hämmerst"
+],
+"3pl": [
+"hämmern"
+],
+"3sg": [
+"hämmert"
+]
 },
 "hängen": {
-"1pl": "hängen",
-"1sg": "hänge",
-"2pl": "hängt",
-"2sg": "hängst",
-"3pl": "hängen",
-"3sg": "hängt"
+"1pl": [
+"hängen"
+],
+"1sg": [
+"hänge"
+],
+"2pl": [
+"hängt"
+],
+"2sg": [
+"hängst"
+],
+"3pl": [
+"hängen"
+],
+"3sg": [
+"hängt"
+]
+},
+"hören": {
+"1pl": [
+"hören"
+],
+"1sg": [
+"höre"
+],
+"2pl": [
+"hört"
+],
+"2sg": [
+"hörst"
+],
+"3pl": [
+"hören"
+],
+"3sg": [
+"hört"
+]
 },
 "impfen": {
-"1pl": "impfen",
-"1sg": "impfe",
-"2pl": "impft",
-"2sg": "impfst",
-"3pl": "impfen",
-"3sg": "impft"
+"1pl": [
+"impfen"
+],
+"1sg": [
+"impfe"
+],
+"2pl": [
+"impft"
+],
+"2sg": [
+"impfst"
+],
+"3pl": [
+"impfen"
+],
+"3sg": [
+"impft"
+]
+},
+"informieren": {
+"1pl": [
+"informieren"
+],
+"1sg": [
+"informiere"
+],
+"2pl": [
+"informiert"
+],
+"2sg": [
+"informierst"
+],
+"3pl": [
+"informieren"
+],
+"3sg": [
+"informiert"
+]
+},
+"installieren": {
+"1pl": [
+"installieren"
+],
+"1sg": [
+"installiere"
+],
+"2pl": [
+"installiert"
+],
+"2sg": [
+"installierst"
+],
+"3pl": [
+"installieren"
+],
+"3sg": [
+"installiert"
+]
+},
+"integrieren": {
+"1pl": [
+"integrieren"
+],
+"1sg": [
+"integriere"
+],
+"2pl": [
+"integriert"
+],
+"2sg": [
+"integrierst"
+],
+"3pl": [
+"integrieren"
+],
+"3sg": [
+"integriert"
+]
+},
+"investieren": {
+"1pl": [
+"investieren"
+],
+"1sg": [
+"investiere"
+],
+"2pl": [
+"investiert"
+],
+"2sg": [
+"investierst"
+],
+"3pl": [
+"investieren"
+],
+"3sg": [
+"investiert"
+]
+},
+"jagen": {
+"1pl": [
+"jagen"
+],
+"1sg": [
+"jage"
+],
+"2pl": [
+"jagt"
+],
+"2sg": [
+"jagst"
+],
+"3pl": [
+"jagen"
+],
+"3sg": [
+"jagt"
+]
+},
+"joggen": {
+"1pl": [
+"joggen"
+],
+"1sg": [
+"jogge"
+],
+"2pl": [
+"joggt"
+],
+"2sg": [
+"joggst"
+],
+"3pl": [
+"joggen"
+],
+"3sg": [
+"joggt"
+]
+},
+"kandidieren": {
+"1pl": [
+"kandidieren"
+],
+"1sg": [
+"kandidiere"
+],
+"2pl": [
+"kandidiert"
+],
+"2sg": [
+"kandidierst"
+],
+"3pl": [
+"kandidieren"
+],
+"3sg": [
+"kandidiert"
+]
 },
 "kaufen": {
-"1pl": "kaufen",
-"1sg": "kaufe",
-"2pl": "kauft",
-"2sg": "kaufst",
-"3pl": "kaufen",
-"3sg": "kauft"
+"1pl": [
+"kaufen"
+],
+"1sg": [
+"kaufe"
+],
+"2pl": [
+"kauft"
+],
+"2sg": [
+"kaufst"
+],
+"3pl": [
+"kaufen"
+],
+"3sg": [
+"kauft"
+]
+},
+"kennen": {
+"1pl": [
+"kennen"
+],
+"1sg": [
+"kenne"
+],
+"2pl": [
+"kennt"
+],
+"2sg": [
+"kennst"
+],
+"3pl": [
+"kennen"
+],
+"3sg": [
+"kennt"
+]
+},
+"kennenlernen": {
+"1pl": [
+"lernen kennen"
+],
+"1sg": [
+"lerne kennen"
+],
+"2pl": [
+"lernt kennen"
+],
+"2sg": [
+"lernst kennen"
+],
+"3pl": [
+"lernen kennen"
+],
+"3sg": [
+"lernt kennen"
+]
+},
+"kleben": {
+"1pl": [
+"kleben"
+],
+"1sg": [
+"klebe"
+],
+"2pl": [
+"klebt"
+],
+"2sg": [
+"klebst"
+],
+"3pl": [
+"kleben"
+],
+"3sg": [
+"klebt"
+]
+},
+"klettern": {
+"1pl": [
+"klettern"
+],
+"1sg": [
+"kletter",
+"klettere",
+"klettre"
+],
+"2pl": [
+"klettert"
+],
+"2sg": [
+"kletterst"
+],
+"3pl": [
+"klettern"
+],
+"3sg": [
+"klettert"
+]
+},
+"klicken": {
+"1pl": [
+"klicken"
+],
+"1sg": [
+"klicke"
+],
+"2pl": [
+"klickt"
+],
+"2sg": [
+"klickst"
+],
+"3pl": [
+"klicken"
+],
+"3sg": [
+"klickt"
+]
+},
+"klären": {
+"1pl": [
+"klären"
+],
+"1sg": [
+"kläre"
+],
+"2pl": [
+"klärt"
+],
+"2sg": [
+"klärst"
+],
+"3pl": [
+"klären"
+],
+"3sg": [
+"klärt"
+]
 },
 "kochen": {
-"1pl": "kochen",
-"1sg": "koche",
-"2pl": "kocht",
-"2sg": "kochst",
-"3pl": "kochen",
-"3sg": "kocht"
+"1pl": [
+"kochen"
+],
+"1sg": [
+"koche"
+],
+"2pl": [
+"kocht"
+],
+"2sg": [
+"kochst"
+],
+"3pl": [
+"kochen"
+],
+"3sg": [
+"kocht"
+]
 },
 "kommen": {
-"1pl": "kommen",
-"1sg": "komme",
-"2pl": "kommt",
-"2sg": "kommst",
-"3pl": "kommen",
-"3sg": "kommt"
+"1pl": [
+"kommen"
+],
+"1sg": [
+"komme"
+],
+"2pl": [
+"kommt"
+],
+"2sg": [
+"kommst"
+],
+"3pl": [
+"kommen"
+],
+"3sg": [
+"kommt"
+]
 },
 "kontrollieren": {
-"1pl": "kontrollieren",
-"1sg": "kontrolliere",
-"2pl": "kontrolliert",
-"2sg": "kontrollierst",
-"3pl": "kontrollieren",
-"3sg": "kontrolliert"
+"1pl": [
+"kontrollieren"
+],
+"1sg": [
+"kontrolliere"
+],
+"2pl": [
+"kontrolliert"
+],
+"2sg": [
+"kontrollierst"
+],
+"3pl": [
+"kontrollieren"
+],
+"3sg": [
+"kontrolliert"
+]
 },
 "kopieren": {
-"1pl": "kopieren",
-"1sg": "kopiere",
-"2pl": "kopiert",
-"2sg": "kopierst",
-"3pl": "kopieren",
-"3sg": "kopiert"
+"1pl": [
+"kopieren"
+],
+"1sg": [
+"kopiere"
+],
+"2pl": [
+"kopiert"
+],
+"2sg": [
+"kopierst"
+],
+"3pl": [
+"kopieren"
+],
+"3sg": [
+"kopiert"
+]
+},
+"korrigieren": {
+"1pl": [
+"korrigieren"
+],
+"1sg": [
+"korrigiere"
+],
+"2pl": [
+"korrigiert"
+],
+"2sg": [
+"korrigierst"
+],
+"3pl": [
+"korrigieren"
+],
+"3sg": [
+"korrigiert"
+]
 },
 "kosten": {
-"1pl": "kosten",
-"1sg": "koste",
-"2pl": "kostet",
-"2sg": "kostest",
-"3pl": "kosten",
-"3sg": "kostet"
+"1pl": [
+"kosten"
+],
+"1sg": [
+"koste"
+],
+"2pl": [
+"kostet"
+],
+"2sg": [
+"kostest"
+],
+"3pl": [
+"kosten"
+],
+"3sg": [
+"kostet"
+]
+},
+"kämmen": {
+"1pl": [
+"kämmen"
+],
+"1sg": [
+"kämme"
+],
+"2pl": [
+"kämmt"
+],
+"2sg": [
+"kämmst"
+],
+"3pl": [
+"kämmen"
+],
+"3sg": [
+"kämmt"
+]
 },
 "kündigen": {
-"1pl": "kündigen",
-"1sg": "kündige",
-"2pl": "kündigt",
-"2sg": "kündigst",
-"3pl": "kündigen",
-"3sg": "kündigt"
+"1pl": [
+"kündigen"
+],
+"1sg": [
+"kündige"
+],
+"2pl": [
+"kündigt"
+],
+"2sg": [
+"kündigst"
+],
+"3pl": [
+"kündigen"
+],
+"3sg": [
+"kündigt"
+]
 },
 "lachen": {
-"1pl": "lachen",
-"1sg": "lache",
-"2pl": "lacht",
-"2sg": "lachst",
-"3pl": "lachen",
-"3sg": "lacht"
+"1pl": [
+"lachen"
+],
+"1sg": [
+"lache"
+],
+"2pl": [
+"lacht"
+],
+"2sg": [
+"lachst"
+],
+"3pl": [
+"lachen"
+],
+"3sg": [
+"lacht"
+]
 },
 "laufen": {
-"1pl": "laufen",
-"1sg": "laufe",
-"2pl": "lauft",
-"2sg": "läufst",
-"3pl": "laufen",
-"3sg": "läuft"
+"1pl": [
+"laufen"
+],
+"1sg": [
+"laufe"
+],
+"2pl": [
+"lauft"
+],
+"2sg": [
+"läufst"
+],
+"3pl": [
+"laufen"
+],
+"3sg": [
+"läuft"
+]
 },
 "leben": {
-"1pl": "leben",
-"1sg": "lebe",
-"2pl": "lebt",
-"2sg": "lebst",
-"3pl": "leben",
-"3sg": "lebt"
+"1pl": [
+"leben"
+],
+"1sg": [
+"lebe"
+],
+"2pl": [
+"lebt"
+],
+"2sg": [
+"lebst"
+],
+"3pl": [
+"leben"
+],
+"3sg": [
+"lebt"
+]
 },
 "legen": {
-"1pl": "legen",
-"1sg": "lege",
-"2pl": "legt",
-"2sg": "legst",
-"3pl": "legen",
-"3sg": "legt"
+"1pl": [
+"legen"
+],
+"1sg": [
+"lege"
+],
+"2pl": [
+"legt"
+],
+"2sg": [
+"legst"
+],
+"3pl": [
+"legen"
+],
+"3sg": [
+"legt"
+]
 },
 "leiden": {
-"1pl": "leiden",
-"1sg": "leide",
-"2pl": "leidet",
-"2sg": "leidest",
-"3pl": "leiden",
-"3sg": "leidet"
+"1pl": [
+"leiden"
+],
+"1sg": [
+"leide"
+],
+"2pl": [
+"leidet"
+],
+"2sg": [
+"leidest"
+],
+"3pl": [
+"leiden"
+],
+"3sg": [
+"leidet"
+]
+},
+"leihen": {
+"1pl": [
+"leihen"
+],
+"1sg": [
+"leihe"
+],
+"2pl": [
+"leiht"
+],
+"2sg": [
+"leihst"
+],
+"3pl": [
+"leihen"
+],
+"3sg": [
+"leiht"
+]
+},
+"lenken": {
+"1pl": [
+"lenken"
+],
+"1sg": [
+"lenke"
+],
+"2pl": [
+"lenkt"
+],
+"2sg": [
+"lenkst"
+],
+"3pl": [
+"lenken"
+],
+"3sg": [
+"lenkt"
+]
 },
 "lernen": {
-"1pl": "lernen",
-"1sg": "lerne",
-"2pl": "lernt",
-"2sg": "lernst",
-"3pl": "lernen",
-"3sg": "lernt"
+"1pl": [
+"lernen"
+],
+"1sg": [
+"lerne"
+],
+"2pl": [
+"lernt"
+],
+"2sg": [
+"lernst"
+],
+"3pl": [
+"lernen"
+],
+"3sg": [
+"lernt"
+]
 },
 "lesen": {
-"1pl": "lesen",
-"1sg": "lese",
-"2pl": "lest",
-"2sg": "liest",
-"3pl": "lesen",
-"3sg": "liest"
+"1pl": [
+"lesen"
+],
+"1sg": [
+"lese"
+],
+"2pl": [
+"lest"
+],
+"2sg": [
+"liest"
+],
+"3pl": [
+"lesen"
+],
+"3sg": [
+"liest"
+]
+},
+"lieben": {
+"1pl": [
+"lieben"
+],
+"1sg": [
+"liebe"
+],
+"2pl": [
+"liebt"
+],
+"2sg": [
+"liebst"
+],
+"3pl": [
+"lieben"
+],
+"3sg": [
+"liebt"
+]
+},
+"liefern": {
+"1pl": [
+"liefern"
+],
+"1sg": [
+"liefer",
+"liefere",
+"liefre"
+],
+"2pl": [
+"liefert"
+],
+"2sg": [
+"lieferst"
+],
+"3pl": [
+"liefern"
+],
+"3sg": [
+"liefert"
+]
 },
 "liegen": {
-"1pl": "liegen",
-"1sg": "liege",
-"2pl": "liegt",
-"2sg": "liegst",
-"3pl": "liegen",
-"3sg": "liegt"
+"1pl": [
+"liegen"
+],
+"1sg": [
+"liege"
+],
+"2pl": [
+"liegt"
+],
+"2sg": [
+"liegst"
+],
+"3pl": [
+"liegen"
+],
+"3sg": [
+"liegt"
+]
 },
 "loben": {
-"1pl": "loben",
-"1sg": "lobe",
-"2pl": "lobt",
-"2sg": "lobst",
-"3pl": "loben",
-"3sg": "lobt"
+"1pl": [
+"loben"
+],
+"1sg": [
+"lobe"
+],
+"2pl": [
+"lobt"
+],
+"2sg": [
+"lobst"
+],
+"3pl": [
+"loben"
+],
+"3sg": [
+"lobt"
+]
+},
+"löschen": {
+"1pl": [
+"löschen"
+],
+"1sg": [
+"lösche"
+],
+"2pl": [
+"löscht"
+],
+"2sg": [
+"löschst"
+],
+"3pl": [
+"löschen"
+],
+"3sg": [
+"löscht"
+]
 },
 "lüften": {
-"1pl": "lüften",
-"1sg": "lüfte",
-"2pl": "lüftet",
-"2sg": "lüftest",
-"3pl": "lüften",
-"3sg": "lüftet"
+"1pl": [
+"lüften"
+],
+"1sg": [
+"lüfte"
+],
+"2pl": [
+"lüftet"
+],
+"2sg": [
+"lüftest"
+],
+"3pl": [
+"lüften"
+],
+"3sg": [
+"lüftet"
+]
 },
 "malen": {
-"1pl": "malen",
-"1sg": "male",
-"2pl": "malt",
-"2sg": "malst",
-"3pl": "malen",
-"3sg": "malt"
+"1pl": [
+"malen"
+],
+"1sg": [
+"male"
+],
+"2pl": [
+"malt"
+],
+"2sg": [
+"malst"
+],
+"3pl": [
+"malen"
+],
+"3sg": [
+"malt"
+]
+},
+"massieren": {
+"1pl": [
+"massieren"
+],
+"1sg": [
+"massiere"
+],
+"2pl": [
+"massiert"
+],
+"2sg": [
+"massierst"
+],
+"3pl": [
+"massieren"
+],
+"3sg": [
+"massiert"
+]
+},
+"meinen": {
+"1pl": [
+"meinen"
+],
+"1sg": [
+"meine"
+],
+"2pl": [
+"meint"
+],
+"2sg": [
+"meinst"
+],
+"3pl": [
+"meinen"
+],
+"3sg": [
+"meint"
+]
+},
+"melden": {
+"1pl": [
+"melden"
+],
+"1sg": [
+"melde"
+],
+"2pl": [
+"meldet"
+],
+"2sg": [
+"meldest"
+],
+"3pl": [
+"melden"
+],
+"3sg": [
+"meldet"
+]
+},
+"merken": {
+"1pl": [
+"merken"
+],
+"1sg": [
+"merke"
+],
+"2pl": [
+"merkt"
+],
+"2sg": [
+"merkst"
+],
+"3pl": [
+"merken"
+],
+"3sg": [
+"merkt"
+]
 },
 "messen": {
-"1pl": "messen",
-"1sg": "messe",
-"2pl": "messt",
-"2sg": "misst",
-"3pl": "messen",
-"3sg": "misst"
+"1pl": [
+"messen"
+],
+"1sg": [
+"messe"
+],
+"2pl": [
+"messt"
+],
+"2sg": [
+"misst"
+],
+"3pl": [
+"messen"
+],
+"3sg": [
+"misst"
+]
 },
 "mieten": {
-"1pl": "mieten",
-"1sg": "miete",
-"2pl": "mietet",
-"2sg": "mietest",
-"3pl": "mieten",
-"3sg": "mietet"
+"1pl": [
+"mieten"
+],
+"1sg": [
+"miete"
+],
+"2pl": [
+"mietet"
+],
+"2sg": [
+"mietest"
+],
+"3pl": [
+"mieten"
+],
+"3sg": [
+"mietet"
+]
 },
 "mitbringen": {
-"1pl": "bringen mit",
-"1sg": "bringe mit",
-"2pl": "bringt mit",
-"2sg": "bringst mit",
-"3pl": "bringen mit",
-"3sg": "bringt mit"
+"1pl": [
+"bringen mit"
+],
+"1sg": [
+"bringe mit"
+],
+"2pl": [
+"bringt mit"
+],
+"2sg": [
+"bringst mit"
+],
+"3pl": [
+"bringen mit"
+],
+"3sg": [
+"bringt mit"
+]
+},
+"mitmachen": {
+"1pl": [
+"machen mit"
+],
+"1sg": [
+"mache mit"
+],
+"2pl": [
+"macht mit"
+],
+"2sg": [
+"machst mit"
+],
+"3pl": [
+"machen mit"
+],
+"3sg": [
+"macht mit"
+]
 },
 "mitnehmen": {
-"1pl": "nehmen mit",
-"1sg": "nehme mit",
-"2pl": "nehmt mit",
-"2sg": "nimmst mit",
-"3pl": "nehmen mit",
-"3sg": "nimmt mit"
+"1pl": [
+"nehmen mit"
+],
+"1sg": [
+"nehme mit"
+],
+"2pl": [
+"nehmt mit"
+],
+"2sg": [
+"nimmst mit"
+],
+"3pl": [
+"nehmen mit"
+],
+"3sg": [
+"nimmt mit"
+]
+},
+"montieren": {
+"1pl": [
+"montieren"
+],
+"1sg": [
+"montiere"
+],
+"2pl": [
+"montiert"
+],
+"2sg": [
+"montierst"
+],
+"3pl": [
+"montieren"
+],
+"3sg": [
+"montiert"
+]
+},
+"nachgeben": {
+"1pl": [
+"geben nach"
+],
+"1sg": [
+"gebe nach"
+],
+"2pl": [
+"gebt nach"
+],
+"2sg": [
+"gibst nach"
+],
+"3pl": [
+"geben nach"
+],
+"3sg": [
+"gibt nach"
+]
 },
 "nachweisen": {
-"1pl": "weisen nach",
-"1sg": "weise nach",
-"2pl": "weist nach",
-"2sg": "weist nach",
-"3pl": "weisen nach",
-"3sg": "weist nach"
+"1pl": [
+"weisen nach"
+],
+"1sg": [
+"weise nach"
+],
+"2pl": [
+"weist nach"
+],
+"2sg": [
+"weist nach"
+],
+"3pl": [
+"weisen nach"
+],
+"3sg": [
+"weist nach"
+]
+},
+"nähen": {
+"1pl": [
+"nähen"
+],
+"1sg": [
+"nähe"
+],
+"2pl": [
+"näht"
+],
+"2sg": [
+"nähst"
+],
+"3pl": [
+"nähen"
+],
+"3sg": [
+"näht"
+]
 },
 "operieren": {
-"1pl": "operieren",
-"1sg": "operiere",
-"2pl": "operiert",
-"2sg": "operierst",
-"3pl": "operieren",
-"3sg": "operiert"
+"1pl": [
+"operieren"
+],
+"1sg": [
+"operiere"
+],
+"2pl": [
+"operiert"
+],
+"2sg": [
+"operierst"
+],
+"3pl": [
+"operieren"
+],
+"3sg": [
+"operiert"
+]
+},
+"packen": {
+"1pl": [
+"packen"
+],
+"1sg": [
+"packe"
+],
+"2pl": [
+"packt"
+],
+"2sg": [
+"packst"
+],
+"3pl": [
+"packen"
+],
+"3sg": [
+"packt"
+]
 },
 "parken": {
-"1pl": "parken",
-"1sg": "parke",
-"2pl": "parkt",
-"2sg": "parkst",
-"3pl": "parken",
-"3sg": "parkt"
+"1pl": [
+"parken"
+],
+"1sg": [
+"parke"
+],
+"2pl": [
+"parkt"
+],
+"2sg": [
+"parkst"
+],
+"3pl": [
+"parken"
+],
+"3sg": [
+"parkt"
+]
+},
+"passen": {
+"1pl": [
+"passen"
+],
+"1sg": [
+"passe"
+],
+"2pl": [
+"passt"
+],
+"2sg": [
+"passt"
+],
+"3pl": [
+"passen"
+],
+"3sg": [
+"passt"
+]
+},
+"pflanzen": {
+"1pl": [
+"pflanzen"
+],
+"1sg": [
+"pflanze"
+],
+"2pl": [
+"pflanzt"
+],
+"2sg": [
+"pflanzt"
+],
+"3pl": [
+"pflanzen"
+],
+"3sg": [
+"pflanzt"
+]
+},
+"pflegen": {
+"1pl": [
+"pflegen"
+],
+"1sg": [
+"pflege"
+],
+"2pl": [
+"pflegt"
+],
+"2sg": [
+"pflegst"
+],
+"3pl": [
+"pflegen"
+],
+"3sg": [
+"pflegt"
+]
 },
 "probieren": {
-"1pl": "probieren",
-"1sg": "probiere",
-"2pl": "probiert",
-"2sg": "probierst",
-"3pl": "probieren",
-"3sg": "probiert"
+"1pl": [
+"probieren"
+],
+"1sg": [
+"probiere"
+],
+"2pl": [
+"probiert"
+],
+"2sg": [
+"probierst"
+],
+"3pl": [
+"probieren"
+],
+"3sg": [
+"probiert"
+]
+},
+"protestieren": {
+"1pl": [
+"protestieren"
+],
+"1sg": [
+"protestiere"
+],
+"2pl": [
+"protestiert"
+],
+"2sg": [
+"protestierst"
+],
+"3pl": [
+"protestieren"
+],
+"3sg": [
+"protestiert"
+]
+},
+"prüfen": {
+"1pl": [
+"prüfen"
+],
+"1sg": [
+"prüfe"
+],
+"2pl": [
+"prüft"
+],
+"2sg": [
+"prüfst"
+],
+"3pl": [
+"prüfen"
+],
+"3sg": [
+"prüft"
+]
+},
+"pudern": {
+"1pl": [
+"pudern"
+],
+"1sg": [
+"puder",
+"pudere",
+"pudre"
+],
+"2pl": [
+"pudert"
+],
+"2sg": [
+"puderst"
+],
+"3pl": [
+"pudern"
+],
+"3sg": [
+"pudert"
+]
 },
 "putzen": {
-"1pl": "putzen",
-"1sg": "putze",
-"2pl": "putzt",
-"2sg": "putzt",
-"3pl": "putzen",
-"3sg": "putzt"
+"1pl": [
+"putzen"
+],
+"1sg": [
+"putze"
+],
+"2pl": [
+"putzt"
+],
+"2sg": [
+"putzt"
+],
+"3pl": [
+"putzen"
+],
+"3sg": [
+"putzt"
+]
+},
+"rasieren": {
+"1pl": [
+"rasieren"
+],
+"1sg": [
+"rasiere"
+],
+"2pl": [
+"rasiert"
+],
+"2sg": [
+"rasierst"
+],
+"3pl": [
+"rasieren"
+],
+"3sg": [
+"rasiert"
+]
+},
+"recherchieren": {
+"1pl": [
+"recherchieren"
+],
+"1sg": [
+"recherchiere"
+],
+"2pl": [
+"recherchiert"
+],
+"2sg": [
+"recherchierst"
+],
+"3pl": [
+"recherchieren"
+],
+"3sg": [
+"recherchiert"
+]
+},
+"rechnen": {
+"1pl": [
+"rechnen"
+],
+"1sg": [
+"rechne"
+],
+"2pl": [
+"rechnet"
+],
+"2sg": [
+"rechnest"
+],
+"3pl": [
+"rechnen"
+],
+"3sg": [
+"rechnet"
+]
+},
+"recyceln": {
+"1pl": [
+"recyceln"
+],
+"1sg": [
+"recycel",
+"recycele",
+"recycle"
+],
+"2pl": [
+"recycelt"
+],
+"2sg": [
+"recycelst"
+],
+"3pl": [
+"recyceln"
+],
+"3sg": [
+"recycelt"
+]
+},
+"regieren": {
+"1pl": [
+"regieren"
+],
+"1sg": [
+"regiere"
+],
+"2pl": [
+"regiert"
+],
+"2sg": [
+"regierst"
+],
+"3pl": [
+"regieren"
+],
+"3sg": [
+"regiert"
+]
+},
+"regnen": {
+"1pl": [
+"regnen"
+],
+"1sg": [
+"regne"
+],
+"2pl": [
+"regnet"
+],
+"2sg": [
+"regnest"
+],
+"3pl": [
+"regnen"
+],
+"3sg": [
+"regnet"
+]
+},
+"reinigen": {
+"1pl": [
+"reinigen"
+],
+"1sg": [
+"reinige"
+],
+"2pl": [
+"reinigt"
+],
+"2sg": [
+"reinigst"
+],
+"3pl": [
+"reinigen"
+],
+"3sg": [
+"reinigt"
+]
+},
+"reisen": {
+"1pl": [
+"reisen"
+],
+"1sg": [
+"reise"
+],
+"2pl": [
+"reist"
+],
+"2sg": [
+"reist"
+],
+"3pl": [
+"reisen"
+],
+"3sg": [
+"reist"
+]
+},
+"reiten": {
+"1pl": [
+"reiten"
+],
+"1sg": [
+"reite"
+],
+"2pl": [
+"reitet"
+],
+"2sg": [
+"reitest"
+],
+"3pl": [
+"reiten"
+],
+"3sg": [
+"reitet"
+]
+},
+"reklamieren": {
+"1pl": [
+"reklamieren"
+],
+"1sg": [
+"reklamiere"
+],
+"2pl": [
+"reklamiert"
+],
+"2sg": [
+"reklamierst"
+],
+"3pl": [
+"reklamieren"
+],
+"3sg": [
+"reklamiert"
+]
+},
+"rennen": {
+"1pl": [
+"rennen"
+],
+"1sg": [
+"renne"
+],
+"2pl": [
+"rennt"
+],
+"2sg": [
+"rennst"
+],
+"3pl": [
+"rennen"
+],
+"3sg": [
+"rennt"
+]
 },
 "renovieren": {
-"1pl": "renovieren",
-"1sg": "renoviere",
-"2pl": "renoviert",
-"2sg": "renovierst",
-"3pl": "renovieren",
-"3sg": "renoviert"
+"1pl": [
+"renovieren"
+],
+"1sg": [
+"renoviere"
+],
+"2pl": [
+"renoviert"
+],
+"2sg": [
+"renovierst"
+],
+"3pl": [
+"renovieren"
+],
+"3sg": [
+"renoviert"
+]
 },
 "reparieren": {
-"1pl": "reparieren",
-"1sg": "repariere",
-"2pl": "repariert",
-"2sg": "reparierst",
-"3pl": "reparieren",
-"3sg": "repariert"
+"1pl": [
+"reparieren"
+],
+"1sg": [
+"repariere"
+],
+"2pl": [
+"repariert"
+],
+"2sg": [
+"reparierst"
+],
+"3pl": [
+"reparieren"
+],
+"3sg": [
+"repariert"
+]
 },
 "reservieren": {
-"1pl": "reservieren",
-"1sg": "reserviere",
-"2pl": "reserviert",
-"2sg": "reservierst",
-"3pl": "reservieren",
-"3sg": "reserviert"
+"1pl": [
+"reservieren"
+],
+"1sg": [
+"reserviere"
+],
+"2pl": [
+"reserviert"
+],
+"2sg": [
+"reservierst"
+],
+"3pl": [
+"reservieren"
+],
+"3sg": [
+"reserviert"
+]
+},
+"retten": {
+"1pl": [
+"retten"
+],
+"1sg": [
+"rette"
+],
+"2pl": [
+"rettet"
+],
+"2sg": [
+"rettest"
+],
+"3pl": [
+"retten"
+],
+"3sg": [
+"rettet"
+]
+},
+"riechen": {
+"1pl": [
+"riechen"
+],
+"1sg": [
+"rieche"
+],
+"2pl": [
+"riecht"
+],
+"2sg": [
+"riechst"
+],
+"3pl": [
+"riechen"
+],
+"3sg": [
+"riecht"
+]
+},
+"rufen": {
+"1pl": [
+"rufen"
+],
+"1sg": [
+"rufe"
+],
+"2pl": [
+"ruft"
+],
+"2sg": [
+"rufst"
+],
+"3pl": [
+"rufen"
+],
+"3sg": [
+"ruft"
+]
+},
+"runden": {
+"1pl": [
+"runden"
+],
+"1sg": [
+"runde"
+],
+"2pl": [
+"rundet"
+],
+"2sg": [
+"rundest"
+],
+"3pl": [
+"runden"
+],
+"3sg": [
+"rundet"
+]
+},
+"sammeln": {
+"1pl": [
+"sammeln"
+],
+"1sg": [
+"sammel",
+"sammele",
+"sammle"
+],
+"2pl": [
+"sammelt"
+],
+"2sg": [
+"sammelst"
+],
+"3pl": [
+"sammeln"
+],
+"3sg": [
+"sammelt"
+]
 },
 "sanieren": {
-"1pl": "sanieren",
-"1sg": "saniere",
-"2pl": "saniert",
-"2sg": "sanierst",
-"3pl": "sanieren",
-"3sg": "saniert"
+"1pl": [
+"sanieren"
+],
+"1sg": [
+"saniere"
+],
+"2pl": [
+"saniert"
+],
+"2sg": [
+"sanierst"
+],
+"3pl": [
+"sanieren"
+],
+"3sg": [
+"saniert"
+]
+},
+"scannen": {
+"1pl": [
+"scannen"
+],
+"1sg": [
+"scanne"
+],
+"2pl": [
+"scannt"
+],
+"2sg": [
+"scannst"
+],
+"3pl": [
+"scannen"
+],
+"3sg": [
+"scannt"
+]
+},
+"schalten": {
+"1pl": [
+"schalten"
+],
+"1sg": [
+"schalte"
+],
+"2pl": [
+"schaltet"
+],
+"2sg": [
+"schaltest"
+],
+"3pl": [
+"schalten"
+],
+"3sg": [
+"schaltet"
+]
+},
+"schauen": {
+"1pl": [
+"schauen"
+],
+"1sg": [
+"schaue"
+],
+"2pl": [
+"schaut"
+],
+"2sg": [
+"schaust"
+],
+"3pl": [
+"schauen"
+],
+"3sg": [
+"schaut"
+]
+},
+"schenken": {
+"1pl": [
+"schenken"
+],
+"1sg": [
+"schenke"
+],
+"2pl": [
+"schenkt"
+],
+"2sg": [
+"schenkst"
+],
+"3pl": [
+"schenken"
+],
+"3sg": [
+"schenkt"
+]
 },
 "schicken": {
-"1pl": "schicken",
-"1sg": "schicke",
-"2pl": "schickt",
-"2sg": "schickst",
-"3pl": "schicken",
-"3sg": "schickt"
+"1pl": [
+"schicken"
+],
+"1sg": [
+"schicke"
+],
+"2pl": [
+"schickt"
+],
+"2sg": [
+"schickst"
+],
+"3pl": [
+"schicken"
+],
+"3sg": [
+"schickt"
+]
+},
+"schießen": {
+"1pl": [
+"schießen"
+],
+"1sg": [
+"schieße"
+],
+"2pl": [
+"schießt"
+],
+"2sg": [
+"schießt"
+],
+"3pl": [
+"schießen"
+],
+"3sg": [
+"schießt"
+]
 },
 "schlafen": {
-"1pl": "schlafen",
-"1sg": "schlafe",
-"2pl": "schlaft",
-"2sg": "schläfst",
-"3pl": "schlafen",
-"3sg": "schläft"
+"1pl": [
+"schlafen"
+],
+"1sg": [
+"schlafe"
+],
+"2pl": [
+"schlaft"
+],
+"2sg": [
+"schläfst"
+],
+"3pl": [
+"schlafen"
+],
+"3sg": [
+"schläft"
+]
+},
+"schleifen": {
+"1pl": [
+"schleifen"
+],
+"1sg": [
+"schleife"
+],
+"2pl": [
+"schleift"
+],
+"2sg": [
+"schleifst"
+],
+"3pl": [
+"schleifen"
+],
+"3sg": [
+"schleift"
+]
+},
+"schlichten": {
+"1pl": [
+"schlichten"
+],
+"1sg": [
+"schlichte"
+],
+"2pl": [
+"schlichtet"
+],
+"2sg": [
+"schlichtest"
+],
+"3pl": [
+"schlichten"
+],
+"3sg": [
+"schlichtet"
+]
 },
 "schließen": {
-"1pl": "schließen",
-"1sg": "schließe",
-"2pl": "schließt",
-"2sg": "schließt",
-"3pl": "schließen",
-"3sg": "schließt"
+"1pl": [
+"schließen"
+],
+"1sg": [
+"schließe"
+],
+"2pl": [
+"schließt"
+],
+"2sg": [
+"schließt"
+],
+"3pl": [
+"schließen"
+],
+"3sg": [
+"schließt"
+]
 },
 "schlucken": {
-"1pl": "schlucken",
-"1sg": "schlucke",
-"2pl": "schluckt",
-"2sg": "schluckst",
-"3pl": "schlucken",
-"3sg": "schluckt"
+"1pl": [
+"schlucken"
+],
+"1sg": [
+"schlucke"
+],
+"2pl": [
+"schluckt"
+],
+"2sg": [
+"schluckst"
+],
+"3pl": [
+"schlucken"
+],
+"3sg": [
+"schluckt"
+]
 },
 "schmecken": {
-"1pl": "schmecken",
-"1sg": "schmecke",
-"2pl": "schmeckt",
-"2sg": "schmeckst",
-"3pl": "schmecken",
-"3sg": "schmeckt"
+"1pl": [
+"schmecken"
+],
+"1sg": [
+"schmecke"
+],
+"2pl": [
+"schmeckt"
+],
+"2sg": [
+"schmeckst"
+],
+"3pl": [
+"schmecken"
+],
+"3sg": [
+"schmeckt"
+]
+},
+"schminken": {
+"1pl": [
+"schminken"
+],
+"1sg": [
+"schminke"
+],
+"2pl": [
+"schminkt"
+],
+"2sg": [
+"schminkst"
+],
+"3pl": [
+"schminken"
+],
+"3sg": [
+"schminkt"
+]
+},
+"schmücken": {
+"1pl": [
+"schmücken"
+],
+"1sg": [
+"schmücke"
+],
+"2pl": [
+"schmückt"
+],
+"2sg": [
+"schmückst"
+],
+"3pl": [
+"schmücken"
+],
+"3sg": [
+"schmückt"
+]
 },
 "schneiden": {
-"1pl": "schneiden",
-"1sg": "schneide",
-"2pl": "schneidet",
-"2sg": "schneidest",
-"3pl": "schneiden",
-"3sg": "schneidet"
+"1pl": [
+"schneiden"
+],
+"1sg": [
+"schneide"
+],
+"2pl": [
+"schneidet"
+],
+"2sg": [
+"schneidest"
+],
+"3pl": [
+"schneiden"
+],
+"3sg": [
+"schneidet"
+]
+},
+"schneien": {
+"1pl": [
+"schneien"
+],
+"1sg": [
+"schneie"
+],
+"2pl": [
+"schneit"
+],
+"2sg": [
+"schneist"
+],
+"3pl": [
+"schneien"
+],
+"3sg": [
+"schneit"
+]
+},
+"schrauben": {
+"1pl": [
+"schrauben"
+],
+"1sg": [
+"schraube"
+],
+"2pl": [
+"schraubt"
+],
+"2sg": [
+"schraubst"
+],
+"3pl": [
+"schrauben"
+],
+"3sg": [
+"schraubt"
+]
 },
 "schreiben": {
-"1pl": "schreiben",
-"1sg": "schreibe",
-"2pl": "schreibt",
-"2sg": "schreibst",
-"3pl": "schreiben",
-"3sg": "schreibt"
+"1pl": [
+"schreiben"
+],
+"1sg": [
+"schreibe"
+],
+"2pl": [
+"schreibt"
+],
+"2sg": [
+"schreibst"
+],
+"3pl": [
+"schreiben"
+],
+"3sg": [
+"schreibt"
+]
+},
+"schulden": {
+"1pl": [
+"schulden"
+],
+"1sg": [
+"schulde"
+],
+"2pl": [
+"schuldet"
+],
+"2sg": [
+"schuldest"
+],
+"3pl": [
+"schulden"
+],
+"3sg": [
+"schuldet"
+]
+},
+"schwimmen": {
+"1pl": [
+"schwimmen"
+],
+"1sg": [
+"schwimme"
+],
+"2pl": [
+"schwimmt"
+],
+"2sg": [
+"schwimmst"
+],
+"3pl": [
+"schwimmen"
+],
+"3sg": [
+"schwimmt"
+]
+},
+"schwitzen": {
+"1pl": [
+"schwitzen"
+],
+"1sg": [
+"schwitze"
+],
+"2pl": [
+"schwitzt"
+],
+"2sg": [
+"schwitzt"
+],
+"3pl": [
+"schwitzen"
+],
+"3sg": [
+"schwitzt"
+]
+},
+"schämen": {
+"1pl": [
+"schämen"
+],
+"1sg": [
+"schäme"
+],
+"2pl": [
+"schämt"
+],
+"2sg": [
+"schämst"
+],
+"3pl": [
+"schämen"
+],
+"3sg": [
+"schämt"
+]
+},
+"schätzen": {
+"1pl": [
+"schätzen"
+],
+"1sg": [
+"schätze"
+],
+"2pl": [
+"schätzt"
+],
+"2sg": [
+"schätzt"
+],
+"3pl": [
+"schätzen"
+],
+"3sg": [
+"schätzt"
+]
+},
+"schützen": {
+"1pl": [
+"schützen"
+],
+"1sg": [
+"schütze"
+],
+"2pl": [
+"schützt"
+],
+"2sg": [
+"schützt"
+],
+"3pl": [
+"schützen"
+],
+"3sg": [
+"schützt"
+]
+},
+"segeln": {
+"1pl": [
+"segeln"
+],
+"1sg": [
+"segel",
+"segele",
+"segle"
+],
+"2pl": [
+"segelt"
+],
+"2sg": [
+"segelst"
+],
+"3pl": [
+"segeln"
+],
+"3sg": [
+"segelt"
+]
+},
+"senden": {
+"1pl": [
+"senden"
+],
+"1sg": [
+"sende"
+],
+"2pl": [
+"sendet"
+],
+"2sg": [
+"sendest"
+],
+"3pl": [
+"senden"
+],
+"3sg": [
+"sendet"
+]
 },
 "setzen": {
-"1pl": "setzen",
-"1sg": "setze",
-"2pl": "setzt",
-"2sg": "setzt",
-"3pl": "setzen",
-"3sg": "setzt"
+"1pl": [
+"setzen"
+],
+"1sg": [
+"setze"
+],
+"2pl": [
+"setzt"
+],
+"2sg": [
+"setzt"
+],
+"3pl": [
+"setzen"
+],
+"3sg": [
+"setzt"
+]
+},
+"sichern": {
+"1pl": [
+"sichern"
+],
+"1sg": [
+"sicher",
+"sichere",
+"sichre"
+],
+"2pl": [
+"sichert"
+],
+"2sg": [
+"sicherst"
+],
+"3pl": [
+"sichern"
+],
+"3sg": [
+"sichert"
+]
+},
+"siezen": {
+"1pl": [
+"siezen"
+],
+"1sg": [
+"sieze"
+],
+"2pl": [
+"siezt"
+],
+"2sg": [
+"siezt"
+],
+"3pl": [
+"siezen"
+],
+"3sg": [
+"siezt"
+]
 },
 "singen": {
-"1pl": "singen",
-"1sg": "singe",
-"2pl": "singt",
-"2sg": "singst",
-"3pl": "singen",
-"3sg": "singt"
+"1pl": [
+"singen"
+],
+"1sg": [
+"singe"
+],
+"2pl": [
+"singt"
+],
+"2sg": [
+"singst"
+],
+"3pl": [
+"singen"
+],
+"3sg": [
+"singt"
+]
 },
 "sitzen": {
-"1pl": "sitzen",
-"1sg": "sitze",
-"2pl": "sitzt",
-"2sg": "sitzt",
-"3pl": "sitzen",
-"3sg": "sitzt"
+"1pl": [
+"sitzen"
+],
+"1sg": [
+"sitze"
+],
+"2pl": [
+"sitzt"
+],
+"2sg": [
+"sitzt"
+],
+"3pl": [
+"sitzen"
+],
+"3sg": [
+"sitzt"
+]
 },
 "sparen": {
-"1pl": "sparen",
-"1sg": "spare",
-"2pl": "spart",
-"2sg": "sparst",
-"3pl": "sparen",
-"3sg": "spart"
+"1pl": [
+"sparen"
+],
+"1sg": [
+"spare"
+],
+"2pl": [
+"spart"
+],
+"2sg": [
+"sparst"
+],
+"3pl": [
+"sparen"
+],
+"3sg": [
+"spart"
+]
+},
+"speichern": {
+"1pl": [
+"speichern"
+],
+"1sg": [
+"speicher",
+"speichere",
+"speichre"
+],
+"2pl": [
+"speichert"
+],
+"2sg": [
+"speicherst"
+],
+"3pl": [
+"speichern"
+],
+"3sg": [
+"speichert"
+]
 },
 "spielen": {
-"1pl": "spielen",
-"1sg": "spiele",
-"2pl": "spielt",
-"2sg": "spielst",
-"3pl": "spielen",
-"3sg": "spielt"
+"1pl": [
+"spielen"
+],
+"1sg": [
+"spiele"
+],
+"2pl": [
+"spielt"
+],
+"2sg": [
+"spielst"
+],
+"3pl": [
+"spielen"
+],
+"3sg": [
+"spielt"
+]
+},
+"sprechen": {
+"1pl": [
+"sprechen"
+],
+"1sg": [
+"spreche"
+],
+"2pl": [
+"sprecht"
+],
+"2sg": [
+"sprichst"
+],
+"3pl": [
+"sprechen"
+],
+"3sg": [
+"spricht"
+]
+},
+"springen": {
+"1pl": [
+"springen"
+],
+"1sg": [
+"springe"
+],
+"2pl": [
+"springt"
+],
+"2sg": [
+"springst"
+],
+"3pl": [
+"springen"
+],
+"3sg": [
+"springt"
+]
+},
+"stammen": {
+"1pl": [
+"stammen"
+],
+"1sg": [
+"stamme"
+],
+"2pl": [
+"stammt"
+],
+"2sg": [
+"stammst"
+],
+"3pl": [
+"stammen"
+],
+"3sg": [
+"stammt"
+]
+},
+"starten": {
+"1pl": [
+"starten"
+],
+"1sg": [
+"starte"
+],
+"2pl": [
+"startet"
+],
+"2sg": [
+"startest"
+],
+"3pl": [
+"starten"
+],
+"3sg": [
+"startet"
+]
 },
 "stehen": {
-"1pl": "stehen",
-"1sg": "stehe",
-"2pl": "steht",
-"2sg": "stehst",
-"3pl": "stehen",
-"3sg": "steht"
+"1pl": [
+"stehen"
+],
+"1sg": [
+"stehe"
+],
+"2pl": [
+"steht"
+],
+"2sg": [
+"stehst"
+],
+"3pl": [
+"stehen"
+],
+"3sg": [
+"steht"
+]
 },
 "stellen": {
-"1pl": "stellen",
-"1sg": "stelle",
-"2pl": "stellt",
-"2sg": "stellst",
-"3pl": "stellen",
-"3sg": "stellt"
+"1pl": [
+"stellen"
+],
+"1sg": [
+"stelle"
+],
+"2pl": [
+"stellt"
+],
+"2sg": [
+"stellst"
+],
+"3pl": [
+"stellen"
+],
+"3sg": [
+"stellt"
+]
+},
+"streamen": {
+"1pl": [
+"streamen"
+],
+"1sg": [
+"streame"
+],
+"2pl": [
+"streamt"
+],
+"2sg": [
+"streamst"
+],
+"3pl": [
+"streamen"
+],
+"3sg": [
+"streamt"
+]
 },
 "streichen": {
-"1pl": "streichen",
-"1sg": "streiche",
-"2pl": "streicht",
-"2sg": "streichst",
-"3pl": "streichen",
-"3sg": "streicht"
+"1pl": [
+"streichen"
+],
+"1sg": [
+"streiche"
+],
+"2pl": [
+"streicht"
+],
+"2sg": [
+"streichst"
+],
+"3pl": [
+"streichen"
+],
+"3sg": [
+"streicht"
+]
 },
 "streiten": {
-"1pl": "streiten",
-"1sg": "streite",
-"2pl": "streitet",
-"2sg": "streitest",
-"3pl": "streiten",
-"3sg": "streitet"
+"1pl": [
+"streiten"
+],
+"1sg": [
+"streite"
+],
+"2pl": [
+"streitet"
+],
+"2sg": [
+"streitest"
+],
+"3pl": [
+"streiten"
+],
+"3sg": [
+"streitet"
+]
+},
+"stricken": {
+"1pl": [
+"stricken"
+],
+"1sg": [
+"stricke"
+],
+"2pl": [
+"strickt"
+],
+"2sg": [
+"strickst"
+],
+"3pl": [
+"stricken"
+],
+"3sg": [
+"strickt"
+]
+},
+"studieren": {
+"1pl": [
+"studieren"
+],
+"1sg": [
+"studiere"
+],
+"2pl": [
+"studiert"
+],
+"2sg": [
+"studierst"
+],
+"3pl": [
+"studieren"
+],
+"3sg": [
+"studiert"
+]
+},
+"stürmen": {
+"1pl": [
+"stürmen"
+],
+"1sg": [
+"stürme"
+],
+"2pl": [
+"stürmt"
+],
+"2sg": [
+"stürmst"
+],
+"3pl": [
+"stürmen"
+],
+"3sg": [
+"stürmt"
+]
+},
+"stürzen": {
+"1pl": [
+"stürzen"
+],
+"1sg": [
+"stürze"
+],
+"2pl": [
+"stürzt"
+],
+"2sg": [
+"stürzt"
+],
+"3pl": [
+"stürzen"
+],
+"3sg": [
+"stürzt"
+]
 },
 "suchen": {
-"1pl": "suchen",
-"1sg": "suche",
-"2pl": "sucht",
-"2sg": "suchst",
-"3pl": "suchen",
-"3sg": "sucht"
+"1pl": [
+"suchen"
+],
+"1sg": [
+"suche"
+],
+"2pl": [
+"sucht"
+],
+"2sg": [
+"suchst"
+],
+"3pl": [
+"suchen"
+],
+"3sg": [
+"sucht"
+]
+},
+"surfen": {
+"1pl": [
+"surfen"
+],
+"1sg": [
+"surfe"
+],
+"2pl": [
+"surft"
+],
+"2sg": [
+"surfst"
+],
+"3pl": [
+"surfen"
+],
+"3sg": [
+"surft"
+]
+},
+"sägen": {
+"1pl": [
+"sägen"
+],
+"1sg": [
+"säge"
+],
+"2pl": [
+"sägt"
+],
+"2sg": [
+"sägst"
+],
+"3pl": [
+"sägen"
+],
+"3sg": [
+"sägt"
+]
 },
 "tanken": {
-"1pl": "tanken",
-"1sg": "tanke",
-"2pl": "tankt",
-"2sg": "tankst",
-"3pl": "tanken",
-"3sg": "tankt"
+"1pl": [
+"tanken"
+],
+"1sg": [
+"tanke"
+],
+"2pl": [
+"tankt"
+],
+"2sg": [
+"tankst"
+],
+"3pl": [
+"tanken"
+],
+"3sg": [
+"tankt"
+]
+},
+"tanzen": {
+"1pl": [
+"tanzen"
+],
+"1sg": [
+"tanze"
+],
+"2pl": [
+"tanzt"
+],
+"2sg": [
+"tanzt"
+],
+"3pl": [
+"tanzen"
+],
+"3sg": [
+"tanzt"
+]
+},
+"tapezieren": {
+"1pl": [
+"tapezieren"
+],
+"1sg": [
+"tapeziere"
+],
+"2pl": [
+"tapeziert"
+],
+"2sg": [
+"tapezierst"
+],
+"3pl": [
+"tapezieren"
+],
+"3sg": [
+"tapeziert"
+]
+},
+"tauchen": {
+"1pl": [
+"tauchen"
+],
+"1sg": [
+"tauche"
+],
+"2pl": [
+"taucht"
+],
+"2sg": [
+"tauchst"
+],
+"3pl": [
+"tauchen"
+],
+"3sg": [
+"taucht"
+]
 },
 "teilen": {
-"1pl": "teilen",
-"1sg": "teile",
-"2pl": "teilt",
-"2sg": "teilst",
-"3pl": "teilen",
-"3sg": "teilt"
+"1pl": [
+"teilen"
+],
+"1sg": [
+"teile"
+],
+"2pl": [
+"teilt"
+],
+"2sg": [
+"teilst"
+],
+"3pl": [
+"teilen"
+],
+"3sg": [
+"teilt"
+]
 },
 "telefonieren": {
-"1pl": "telefonieren",
-"1sg": "telefoniere",
-"2pl": "telefoniert",
-"2sg": "telefonierst",
-"3pl": "telefonieren",
-"3sg": "telefoniert"
+"1pl": [
+"telefonieren"
+],
+"1sg": [
+"telefoniere"
+],
+"2pl": [
+"telefoniert"
+],
+"2sg": [
+"telefonierst"
+],
+"3pl": [
+"telefonieren"
+],
+"3sg": [
+"telefoniert"
+]
+},
+"tilgen": {
+"1pl": [
+"tilgen"
+],
+"1sg": [
+"tilge"
+],
+"2pl": [
+"tilgt"
+],
+"2sg": [
+"tilgst"
+],
+"3pl": [
+"tilgen"
+],
+"3sg": [
+"tilgt"
+]
+},
+"tippen": {
+"1pl": [
+"tippen"
+],
+"1sg": [
+"tippe"
+],
+"2pl": [
+"tippt"
+],
+"2sg": [
+"tippst"
+],
+"3pl": [
+"tippen"
+],
+"3sg": [
+"tippt"
+]
+},
+"tragen": {
+"1pl": [
+"tragen"
+],
+"1sg": [
+"trage"
+],
+"2pl": [
+"tragt"
+],
+"2sg": [
+"trägst"
+],
+"3pl": [
+"tragen"
+],
+"3sg": [
+"trägt"
+]
+},
+"trainieren": {
+"1pl": [
+"trainieren"
+],
+"1sg": [
+"trainiere"
+],
+"2pl": [
+"trainiert"
+],
+"2sg": [
+"trainierst"
+],
+"3pl": [
+"trainieren"
+],
+"3sg": [
+"trainiert"
+]
+},
+"treffen": {
+"1pl": [
+"treffen"
+],
+"1sg": [
+"treffe"
+],
+"2pl": [
+"trefft"
+],
+"2sg": [
+"triffst"
+],
+"3pl": [
+"treffen"
+],
+"3sg": [
+"trifft"
+]
+},
+"trennen": {
+"1pl": [
+"trennen"
+],
+"1sg": [
+"trenne"
+],
+"2pl": [
+"trennt"
+],
+"2sg": [
+"trennst"
+],
+"3pl": [
+"trennen"
+],
+"3sg": [
+"trennt"
+]
 },
 "trinken": {
-"1pl": "trinken",
-"1sg": "trinke",
-"2pl": "trinkt",
-"2sg": "trinkst",
-"3pl": "trinken",
-"3sg": "trinkt"
+"1pl": [
+"trinken"
+],
+"1sg": [
+"trinke"
+],
+"2pl": [
+"trinkt"
+],
+"2sg": [
+"trinkst"
+],
+"3pl": [
+"trinken"
+],
+"3sg": [
+"trinkt"
+]
 },
 "trösten": {
-"1pl": "trösten",
-"1sg": "tröste",
-"2pl": "tröstet",
-"2sg": "tröstest",
-"3pl": "trösten",
-"3sg": "tröstet"
+"1pl": [
+"trösten"
+],
+"1sg": [
+"tröste"
+],
+"2pl": [
+"tröstet"
+],
+"2sg": [
+"tröstest"
+],
+"3pl": [
+"trösten"
+],
+"3sg": [
+"tröstet"
+]
+},
+"umarmen": {
+"1pl": [
+"umarmen"
+],
+"1sg": [
+"umarme"
+],
+"2pl": [
+"umarmt"
+],
+"2sg": [
+"umarmst"
+],
+"3pl": [
+"umarmen"
+],
+"3sg": [
+"umarmt"
+]
 },
 "umsteigen": {
-"1pl": "steigen um",
-"1sg": "steige um",
-"2pl": "steigt um",
-"2sg": "steigst um",
-"3pl": "steigen um",
-"3sg": "steigt um"
+"1pl": [
+"steigen um"
+],
+"1sg": [
+"steige um"
+],
+"2pl": [
+"steigt um"
+],
+"2sg": [
+"steigst um"
+],
+"3pl": [
+"steigen um"
+],
+"3sg": [
+"steigt um"
+]
+},
+"umtauschen": {
+"1pl": [
+"tauschen um"
+],
+"1sg": [
+"tausche um"
+],
+"2pl": [
+"tauscht um"
+],
+"2sg": [
+"tauschst um"
+],
+"3pl": [
+"tauschen um"
+],
+"3sg": [
+"tauscht um"
+]
 },
 "umziehen": {
-"1pl": "ziehen um",
-"1sg": "ziehe um",
-"2pl": "zieht um",
-"2sg": "ziehst um",
-"3pl": "ziehen um",
-"3sg": "zieht um"
+"1pl": [
+"ziehen um"
+],
+"1sg": [
+"ziehe um"
+],
+"2pl": [
+"zieht um"
+],
+"2sg": [
+"ziehst um"
+],
+"3pl": [
+"ziehen um"
+],
+"3sg": [
+"zieht um"
+]
+},
+"unterrichten": {
+"1pl": [
+"unterrichten"
+],
+"1sg": [
+"unterrichte"
+],
+"2pl": [
+"unterrichtet"
+],
+"2sg": [
+"unterrichtest"
+],
+"3pl": [
+"unterrichten"
+],
+"3sg": [
+"unterrichtet"
+]
 },
 "unterschreiben": {
-"1pl": "schreiben unter",
-"1sg": "schreibe unter",
-"2pl": "schreibt unter",
-"2sg": "schreibst unter",
-"3pl": "schreiben unter",
-"3sg": "schreibt unter"
+"1pl": [
+"schreiben unter",
+"unterschreiben"
+],
+"1sg": [
+"schreibe unter",
+"unterschreibe"
+],
+"2pl": [
+"schreibt unter",
+"unterschreibt"
+],
+"2sg": [
+"schreibst unter",
+"unterschreibst"
+],
+"3pl": [
+"schreiben unter",
+"unterschreiben"
+],
+"3sg": [
+"schreibt unter",
+"unterschreibt"
+]
 },
 "untersuchen": {
-"1pl": "untersuchen",
-"1sg": "untersuche",
-"2pl": "untersucht",
-"2sg": "untersuchst",
-"3pl": "untersuchen",
-"3sg": "untersucht"
+"1pl": [
+"untersuchen"
+],
+"1sg": [
+"untersuche"
+],
+"2pl": [
+"untersucht"
+],
+"2sg": [
+"untersuchst"
+],
+"3pl": [
+"untersuchen"
+],
+"3sg": [
+"untersucht"
+]
+},
+"verabschieden": {
+"1pl": [
+"verabschieden"
+],
+"1sg": [
+"verabschiede"
+],
+"2pl": [
+"verabschiedet"
+],
+"2sg": [
+"verabschiedest"
+],
+"3pl": [
+"verabschieden"
+],
+"3sg": [
+"verabschiedet"
+]
+},
+"veranstalten": {
+"1pl": [
+"veranstalten"
+],
+"1sg": [
+"veranstalte"
+],
+"2pl": [
+"veranstaltet"
+],
+"2sg": [
+"veranstaltest"
+],
+"3pl": [
+"veranstalten"
+],
+"3sg": [
+"veranstaltet"
+]
+},
+"verbieten": {
+"1pl": [
+"verbieten"
+],
+"1sg": [
+"verbiete"
+],
+"2pl": [
+"verbietet"
+],
+"2sg": [
+"verbietest"
+],
+"3pl": [
+"verbieten"
+],
+"3sg": [
+"verbietet"
+]
+},
+"verbinden": {
+"1pl": [
+"verbinden"
+],
+"1sg": [
+"verbinde"
+],
+"2pl": [
+"verbindet"
+],
+"2sg": [
+"verbindest"
+],
+"3pl": [
+"verbinden"
+],
+"3sg": [
+"verbindet"
+]
+},
+"verbringen": {
+"1pl": [
+"verbringen"
+],
+"1sg": [
+"verbringe"
+],
+"2pl": [
+"verbringt"
+],
+"2sg": [
+"verbringst"
+],
+"3pl": [
+"verbringen"
+],
+"3sg": [
+"verbringt"
+]
 },
 "verdienen": {
-"1pl": "verdienen",
-"1sg": "verdiene",
-"2pl": "verdient",
-"2sg": "verdienst",
-"3pl": "verdienen",
-"3sg": "verdient"
+"1pl": [
+"verdienen"
+],
+"1sg": [
+"verdiene"
+],
+"2pl": [
+"verdient"
+],
+"2sg": [
+"verdienst"
+],
+"3pl": [
+"verdienen"
+],
+"3sg": [
+"verdient"
+]
+},
+"verdoppeln": {
+"1pl": [
+"verdoppeln"
+],
+"1sg": [
+"verdoppel",
+"verdoppele",
+"verdopple"
+],
+"2pl": [
+"verdoppelt"
+],
+"2sg": [
+"verdoppelst"
+],
+"3pl": [
+"verdoppeln"
+],
+"3sg": [
+"verdoppelt"
+]
 },
 "vereinbaren": {
-"1pl": "vereinbaren",
-"1sg": "vereinbare",
-"2pl": "vereinbart",
-"2sg": "vereinbarst",
-"3pl": "vereinbaren",
-"3sg": "vereinbart"
+"1pl": [
+"vereinbaren"
+],
+"1sg": [
+"vereinbare"
+],
+"2pl": [
+"vereinbart"
+],
+"2sg": [
+"vereinbarst"
+],
+"3pl": [
+"vereinbaren"
+],
+"3sg": [
+"vereinbart"
+]
+},
+"vergessen": {
+"1pl": [
+"vergessen"
+],
+"1sg": [
+"vergesse"
+],
+"2pl": [
+"vergesst"
+],
+"2sg": [
+"vergisst"
+],
+"3pl": [
+"vergessen"
+],
+"3sg": [
+"vergisst"
+]
+},
+"vergleichen": {
+"1pl": [
+"vergleichen"
+],
+"1sg": [
+"vergleiche"
+],
+"2pl": [
+"vergleicht"
+],
+"2sg": [
+"vergleichst"
+],
+"3pl": [
+"vergleichen"
+],
+"3sg": [
+"vergleicht"
+]
 },
 "verhandeln": {
-"1pl": "verhandeln",
-"1sg": "verhandel",
-"2pl": "verhandelt",
-"2sg": "verhandelst",
-"3pl": "verhandeln",
-"3sg": "verhandelt"
+"1pl": [
+"verhandeln"
+],
+"1sg": [
+"verhandel",
+"verhandele",
+"verhandle"
+],
+"2pl": [
+"verhandelt"
+],
+"2sg": [
+"verhandelst"
+],
+"3pl": [
+"verhandeln"
+],
+"3sg": [
+"verhandelt"
+]
+},
+"verkleiden": {
+"1pl": [
+"verkleiden"
+],
+"1sg": [
+"verkleide"
+],
+"2pl": [
+"verkleidet"
+],
+"2sg": [
+"verkleidest"
+],
+"3pl": [
+"verkleiden"
+],
+"3sg": [
+"verkleidet"
+]
+},
+"verlegen": {
+"1pl": [
+"verlegen"
+],
+"1sg": [
+"verlege"
+],
+"2pl": [
+"verlegt"
+],
+"2sg": [
+"verlegst"
+],
+"3pl": [
+"verlegen"
+],
+"3sg": [
+"verlegt"
+]
 },
 "verletzen": {
-"1pl": "verletzen",
-"1sg": "verletze",
-"2pl": "verletzt",
-"2sg": "verletzt",
-"3pl": "verletzen",
-"3sg": "verletzt"
+"1pl": [
+"verletzen"
+],
+"1sg": [
+"verletze"
+],
+"2pl": [
+"verletzt"
+],
+"2sg": [
+"verletzt"
+],
+"3pl": [
+"verletzen"
+],
+"3sg": [
+"verletzt"
+]
+},
+"verlieren": {
+"1pl": [
+"verlieren"
+],
+"1sg": [
+"verliere"
+],
+"2pl": [
+"verliert"
+],
+"2sg": [
+"verlierst"
+],
+"3pl": [
+"verlieren"
+],
+"3sg": [
+"verliert"
+]
 },
 "verlängern": {
-"1pl": "verlängern",
-"1sg": "verlänger",
-"2pl": "verlängert",
-"2sg": "verlängerst",
-"3pl": "verlängern",
-"3sg": "verlängert"
+"1pl": [
+"verlängern"
+],
+"1sg": [
+"verlänger",
+"verlängere",
+"verlängre"
+],
+"2pl": [
+"verlängert"
+],
+"2sg": [
+"verlängerst"
+],
+"3pl": [
+"verlängern"
+],
+"3sg": [
+"verlängert"
+]
+},
+"vermissen": {
+"1pl": [
+"vermissen"
+],
+"1sg": [
+"vermisse"
+],
+"2pl": [
+"vermisst"
+],
+"2sg": [
+"vermisst"
+],
+"3pl": [
+"vermissen"
+],
+"3sg": [
+"vermisst"
+]
+},
+"vermitteln": {
+"1pl": [
+"vermitteln"
+],
+"1sg": [
+"vermittel",
+"vermittele",
+"vermittle"
+],
+"2pl": [
+"vermittelt"
+],
+"2sg": [
+"vermittelst"
+],
+"3pl": [
+"vermitteln"
+],
+"3sg": [
+"vermittelt"
+]
+},
+"vermuten": {
+"1pl": [
+"vermuten"
+],
+"1sg": [
+"vermute"
+],
+"2pl": [
+"vermutet"
+],
+"2sg": [
+"vermutest"
+],
+"3pl": [
+"vermuten"
+],
+"3sg": [
+"vermutet"
+]
+},
+"verpacken": {
+"1pl": [
+"verpacken"
+],
+"1sg": [
+"verpacke"
+],
+"2pl": [
+"verpackt"
+],
+"2sg": [
+"verpackst"
+],
+"3pl": [
+"verpacken"
+],
+"3sg": [
+"verpackt"
+]
 },
 "verpassen": {
-"1pl": "verpassen",
-"1sg": "verpasse",
-"2pl": "verpasst",
-"2sg": "verpasst",
-"3pl": "verpassen",
-"3sg": "verpasst"
+"1pl": [
+"verpassen"
+],
+"1sg": [
+"verpasse"
+],
+"2pl": [
+"verpasst"
+],
+"2sg": [
+"verpasst"
+],
+"3pl": [
+"verpassen"
+],
+"3sg": [
+"verpasst"
+]
+},
+"verreisen": {
+"1pl": [
+"verreisen"
+],
+"1sg": [
+"verreise"
+],
+"2pl": [
+"verreist"
+],
+"2sg": [
+"verreist"
+],
+"3pl": [
+"verreisen"
+],
+"3sg": [
+"verreist"
+]
+},
+"verschicken": {
+"1pl": [
+"verschicken"
+],
+"1sg": [
+"verschicke"
+],
+"2pl": [
+"verschickt"
+],
+"2sg": [
+"verschickst"
+],
+"3pl": [
+"verschicken"
+],
+"3sg": [
+"verschickt"
+]
 },
 "verschieben": {
-"1pl": "verschieben",
-"1sg": "verschiebe",
-"2pl": "verschiebt",
-"2sg": "verschiebst",
-"3pl": "verschieben",
-"3sg": "verschiebt"
+"1pl": [
+"verschieben"
+],
+"1sg": [
+"verschiebe"
+],
+"2pl": [
+"verschiebt"
+],
+"2sg": [
+"verschiebst"
+],
+"3pl": [
+"verschieben"
+],
+"3sg": [
+"verschiebt"
+]
+},
+"verschmutzen": {
+"1pl": [
+"verschmutzen"
+],
+"1sg": [
+"verschmutze"
+],
+"2pl": [
+"verschmutzt"
+],
+"2sg": [
+"verschmutzt"
+],
+"3pl": [
+"verschmutzen"
+],
+"3sg": [
+"verschmutzt"
+]
 },
 "verschreiben": {
-"1pl": "verschreiben",
-"1sg": "verschreibe",
-"2pl": "verschreibt",
-"2sg": "verschreibst",
-"3pl": "verschreiben",
-"3sg": "verschreibt"
+"1pl": [
+"verschreiben"
+],
+"1sg": [
+"verschreibe"
+],
+"2pl": [
+"verschreibt"
+],
+"2sg": [
+"verschreibst"
+],
+"3pl": [
+"verschreiben"
+],
+"3sg": [
+"verschreibt"
+]
+},
+"verschulden": {
+"1pl": [
+"verschulden"
+],
+"1sg": [
+"verschulde"
+],
+"2pl": [
+"verschuldet"
+],
+"2sg": [
+"verschuldest"
+],
+"3pl": [
+"verschulden"
+],
+"3sg": [
+"verschuldet"
+]
+},
+"versenden": {
+"1pl": [
+"versenden"
+],
+"1sg": [
+"versende"
+],
+"2pl": [
+"versendet"
+],
+"2sg": [
+"versendest"
+],
+"3pl": [
+"versenden"
+],
+"3sg": [
+"versendet"
+]
+},
+"verspäten": {
+"1pl": [
+"verspäten"
+],
+"1sg": [
+"verspäte"
+],
+"2pl": [
+"verspätet"
+],
+"2sg": [
+"verspätest"
+],
+"3pl": [
+"verspäten"
+],
+"3sg": [
+"verspätet"
+]
+},
+"verstehen": {
+"1pl": [
+"verstehen"
+],
+"1sg": [
+"verstehe"
+],
+"2pl": [
+"versteht"
+],
+"2sg": [
+"verstehst"
+],
+"3pl": [
+"verstehen"
+],
+"3sg": [
+"versteht"
+]
+},
+"verstoßen": {
+"1pl": [
+"verstoßen"
+],
+"1sg": [
+"verstoße"
+],
+"2pl": [
+"verstoßt"
+],
+"2sg": [
+"verstößt"
+],
+"3pl": [
+"verstoßen"
+],
+"3sg": [
+"verstößt"
+]
+},
+"vertiefen": {
+"1pl": [
+"vertiefen"
+],
+"1sg": [
+"vertiefe"
+],
+"2pl": [
+"vertieft"
+],
+"2sg": [
+"vertiefst"
+],
+"3pl": [
+"vertiefen"
+],
+"3sg": [
+"vertieft"
+]
 },
 "vertragen": {
-"1pl": "vertragen",
-"1sg": "vertrage",
-"2pl": "vertragt",
-"2sg": "verträgst",
-"3pl": "vertragen",
-"3sg": "verträgt"
+"1pl": [
+"vertragen"
+],
+"1sg": [
+"vertrage"
+],
+"2pl": [
+"vertragt"
+],
+"2sg": [
+"verträgst"
+],
+"3pl": [
+"vertragen"
+],
+"3sg": [
+"verträgt"
+]
 },
 "vertreten": {
-"1pl": "vertreten",
-"1sg": "vertrete",
-"2pl": "vertretet",
-"2sg": "vertrittst",
-"3pl": "vertreten",
-"3sg": "vertritt"
+"1pl": [
+"vertreten"
+],
+"1sg": [
+"vertrete"
+],
+"2pl": [
+"vertretet"
+],
+"2sg": [
+"vertrittst"
+],
+"3pl": [
+"vertreten"
+],
+"3sg": [
+"vertritt"
+]
+},
+"verurteilen": {
+"1pl": [
+"verurteilen"
+],
+"1sg": [
+"verurteile"
+],
+"2pl": [
+"verurteilt"
+],
+"2sg": [
+"verurteilst"
+],
+"3pl": [
+"verurteilen"
+],
+"3sg": [
+"verurteilt"
+]
+},
+"verzeihen": {
+"1pl": [
+"verzeihen"
+],
+"1sg": [
+"verzeihe"
+],
+"2pl": [
+"verzeiht"
+],
+"2sg": [
+"verzeihst"
+],
+"3pl": [
+"verzeihen"
+],
+"3sg": [
+"verzeiht"
+]
 },
 "verzichten": {
-"1pl": "verzichten",
-"1sg": "verzichte",
-"2pl": "verzichtet",
-"2sg": "verzichtest",
-"3pl": "verzichten",
-"3sg": "verzichtet"
+"1pl": [
+"verzichten"
+],
+"1sg": [
+"verzichte"
+],
+"2pl": [
+"verzichtet"
+],
+"2sg": [
+"verzichtest"
+],
+"3pl": [
+"verzichten"
+],
+"3sg": [
+"verzichtet"
+]
+},
+"veröffentlichen": {
+"1pl": [
+"veröffentlichen"
+],
+"1sg": [
+"veröffentliche"
+],
+"2pl": [
+"veröffentlicht"
+],
+"2sg": [
+"veröffentlichst"
+],
+"3pl": [
+"veröffentlichen"
+],
+"3sg": [
+"veröffentlicht"
+]
+},
+"vorbereiten": {
+"1pl": [
+"bereiten vor"
+],
+"1sg": [
+"bereite vor"
+],
+"2pl": [
+"bereitet vor"
+],
+"2sg": [
+"bereitest vor"
+],
+"3pl": [
+"bereiten vor"
+],
+"3sg": [
+"bereitet vor"
+]
+},
+"vorhersagen": {
+"1pl": [
+"sagen vorher"
+],
+"1sg": [
+"sage vorher"
+],
+"2pl": [
+"sagt vorher"
+],
+"2sg": [
+"sagst vorher"
+],
+"3pl": [
+"sagen vorher"
+],
+"3sg": [
+"sagt vorher"
+]
 },
 "vorlegen": {
-"1pl": "legen vor",
-"1sg": "lege vor",
-"2pl": "legt vor",
-"2sg": "legst vor",
-"3pl": "legen vor",
-"3sg": "legt vor"
+"1pl": [
+"legen vor"
+],
+"1sg": [
+"lege vor"
+],
+"2pl": [
+"legt vor"
+],
+"2sg": [
+"legst vor"
+],
+"3pl": [
+"legen vor"
+],
+"3sg": [
+"legt vor"
+]
 },
 "vorlesen": {
-"1pl": "lesen vor",
-"1sg": "lese vor",
-"2pl": "lest vor",
-"2sg": "liest vor",
-"3pl": "lesen vor",
-"3sg": "liest vor"
+"1pl": [
+"lesen vor"
+],
+"1sg": [
+"lese vor"
+],
+"2pl": [
+"lest vor"
+],
+"2sg": [
+"liest vor"
+],
+"3pl": [
+"lesen vor"
+],
+"3sg": [
+"liest vor"
+]
+},
+"vorschlagen": {
+"1pl": [
+"schlagen vor"
+],
+"1sg": [
+"schlage vor"
+],
+"2pl": [
+"schlagt vor"
+],
+"2sg": [
+"schlägst vor"
+],
+"3pl": [
+"schlagen vor"
+],
+"3sg": [
+"schlägt vor"
+]
+},
+"vorstellen": {
+"1pl": [
+"stellen vor"
+],
+"1sg": [
+"stelle vor"
+],
+"2pl": [
+"stellt vor"
+],
+"2sg": [
+"stellst vor"
+],
+"3pl": [
+"stellen vor"
+],
+"3sg": [
+"stellt vor"
+]
 },
 "wachsen": {
-"1pl": "wachsen",
-"1sg": "wachse",
-"2pl": "wachst",
-"2sg": "wachst",
-"3pl": "wachsen",
-"3sg": "wachst"
+"1pl": [
+"wachsen"
+],
+"1sg": [
+"wachse"
+],
+"2pl": [
+"wachst"
+],
+"2sg": [
+"wachst",
+"wächst"
+],
+"3pl": [
+"wachsen"
+],
+"3sg": [
+"wachst",
+"wächst"
+]
+},
+"wandern": {
+"1pl": [
+"wandern"
+],
+"1sg": [
+"wander",
+"wandere",
+"wandre"
+],
+"2pl": [
+"wandert"
+],
+"2sg": [
+"wanderst"
+],
+"3pl": [
+"wandern"
+],
+"3sg": [
+"wandert"
+]
+},
+"warnen": {
+"1pl": [
+"warnen"
+],
+"1sg": [
+"warne"
+],
+"2pl": [
+"warnt"
+],
+"2sg": [
+"warnst"
+],
+"3pl": [
+"warnen"
+],
+"3sg": [
+"warnt"
+]
 },
 "warten": {
-"1pl": "warten",
-"1sg": "warte",
-"2pl": "wartet",
-"2sg": "wartest",
-"3pl": "warten",
-"3sg": "wartet"
+"1pl": [
+"warten"
+],
+"1sg": [
+"warte"
+],
+"2pl": [
+"wartet"
+],
+"2sg": [
+"wartest"
+],
+"3pl": [
+"warten"
+],
+"3sg": [
+"wartet"
+]
+},
+"waschen": {
+"1pl": [
+"waschen"
+],
+"1sg": [
+"wasche"
+],
+"2pl": [
+"wascht"
+],
+"2sg": [
+"wäschst"
+],
+"3pl": [
+"waschen"
+],
+"3sg": [
+"wäscht"
+]
+},
+"wechseln": {
+"1pl": [
+"wechseln"
+],
+"1sg": [
+"wechsel",
+"wechsele",
+"wechsle"
+],
+"2pl": [
+"wechselt"
+],
+"2sg": [
+"wechselst"
+],
+"3pl": [
+"wechseln"
+],
+"3sg": [
+"wechselt"
+]
+},
+"wegfahren": {
+"1pl": [
+"fahren weg"
+],
+"1sg": [
+"fahre weg"
+],
+"2pl": [
+"fahrt weg"
+],
+"2sg": [
+"fährst weg"
+],
+"3pl": [
+"fahren weg"
+],
+"3sg": [
+"fährt weg"
+]
 },
 "weinen": {
-"1pl": "weinen",
-"1sg": "weine",
-"2pl": "weint",
-"2sg": "weinst",
-"3pl": "weinen",
-"3sg": "weint"
+"1pl": [
+"weinen"
+],
+"1sg": [
+"weine"
+],
+"2pl": [
+"weint"
+],
+"2sg": [
+"weinst"
+],
+"3pl": [
+"weinen"
+],
+"3sg": [
+"weint"
+]
+},
+"werfen": {
+"1pl": [
+"werfen"
+],
+"1sg": [
+"werfe"
+],
+"2pl": [
+"werft"
+],
+"2sg": [
+"wirfst"
+],
+"3pl": [
+"werfen"
+],
+"3sg": [
+"wirft"
+]
 },
 "wickeln": {
-"1pl": "wickeln",
-"1sg": "wickel",
-"2pl": "wickelt",
-"2sg": "wickelst",
-"3pl": "wickeln",
-"3sg": "wickelt"
+"1pl": [
+"wickeln"
+],
+"1sg": [
+"wickel",
+"wickele",
+"wickle"
+],
+"2pl": [
+"wickelt"
+],
+"2sg": [
+"wickelst"
+],
+"3pl": [
+"wickeln"
+],
+"3sg": [
+"wickelt"
+]
+},
+"widerlegen": {
+"1pl": [
+"widerlegen"
+],
+"1sg": [
+"widerlege"
+],
+"2pl": [
+"widerlegt"
+],
+"2sg": [
+"widerlegst"
+],
+"3pl": [
+"widerlegen"
+],
+"3sg": [
+"widerlegt"
+]
+},
+"widersprechen": {
+"1pl": [
+"widersprechen"
+],
+"1sg": [
+"widerspreche"
+],
+"2pl": [
+"widersprecht"
+],
+"2sg": [
+"widersprichst"
+],
+"3pl": [
+"widersprechen"
+],
+"3sg": [
+"widerspricht"
+]
+},
+"wiederholen": {
+"1pl": [
+"wiederholen"
+],
+"1sg": [
+"wiederhole"
+],
+"2pl": [
+"wiederholt"
+],
+"2sg": [
+"wiederholst"
+],
+"3pl": [
+"wiederholen"
+],
+"3sg": [
+"wiederholt"
+]
+},
+"wiegen": {
+"1pl": [
+"wiegen"
+],
+"1sg": [
+"wiege"
+],
+"2pl": [
+"wiegt"
+],
+"2sg": [
+"wiegst"
+],
+"3pl": [
+"wiegen"
+],
+"3sg": [
+"wiegt"
+]
 },
 "wohnen": {
-"1pl": "wohnen",
-"1sg": "wohne",
-"2pl": "wohnt",
-"2sg": "wohnst",
-"3pl": "wohnen",
-"3sg": "wohnt"
+"1pl": [
+"wohnen"
+],
+"1sg": [
+"wohne"
+],
+"2pl": [
+"wohnt"
+],
+"2sg": [
+"wohnst"
+],
+"3pl": [
+"wohnen"
+],
+"3sg": [
+"wohnt"
+]
+},
+"wählen": {
+"1pl": [
+"wählen"
+],
+"1sg": [
+"wähle"
+],
+"2pl": [
+"wählt"
+],
+"2sg": [
+"wählst"
+],
+"3pl": [
+"wählen"
+],
+"3sg": [
+"wählt"
+]
+},
+"wünschen": {
+"1pl": [
+"wünschen"
+],
+"1sg": [
+"wünsche"
+],
+"2pl": [
+"wünscht"
+],
+"2sg": [
+"wünschst"
+],
+"3pl": [
+"wünschen"
+],
+"3sg": [
+"wünscht"
+]
 },
 "würzen": {
-"1pl": "würzen",
-"1sg": "würze",
-"2pl": "würzt",
-"2sg": "würzt",
-"3pl": "würzen",
-"3sg": "würzt"
+"1pl": [
+"würzen"
+],
+"1sg": [
+"würze"
+],
+"2pl": [
+"würzt"
+],
+"2sg": [
+"würzt"
+],
+"3pl": [
+"würzen"
+],
+"3sg": [
+"würzt"
+]
 },
 "zahlen": {
-"1pl": "zahlen",
-"1sg": "zahle",
-"2pl": "zahlt",
-"2sg": "zahlst",
-"3pl": "zahlen",
-"3sg": "zahlt"
+"1pl": [
+"zahlen"
+],
+"1sg": [
+"zahle"
+],
+"2pl": [
+"zahlt"
+],
+"2sg": [
+"zahlst"
+],
+"3pl": [
+"zahlen"
+],
+"3sg": [
+"zahlt"
+]
+},
+"zeichnen": {
+"1pl": [
+"zeichnen"
+],
+"1sg": [
+"zeichne"
+],
+"2pl": [
+"zeichnet"
+],
+"2sg": [
+"zeichnest"
+],
+"3pl": [
+"zeichnen"
+],
+"3sg": [
+"zeichnet"
+]
 },
 "zeigen": {
-"1pl": "zeigen",
-"1sg": "zeige",
-"2pl": "zeigt",
-"2sg": "zeigst",
-"3pl": "zeigen",
-"3sg": "zeigt"
+"1pl": [
+"zeigen"
+],
+"1sg": [
+"zeige"
+],
+"2pl": [
+"zeigt"
+],
+"2sg": [
+"zeigst"
+],
+"3pl": [
+"zeigen"
+],
+"3sg": [
+"zeigt"
+]
+},
+"zelten": {
+"1pl": [
+"zelten"
+],
+"1sg": [
+"zelte"
+],
+"2pl": [
+"zeltet"
+],
+"2sg": [
+"zeltest"
+],
+"3pl": [
+"zelten"
+],
+"3sg": [
+"zeltet"
+]
 },
 "zubereiten": {
-"1pl": "bereiten zu",
-"1sg": "bereite zu",
-"2pl": "bereitet zu",
-"2sg": "bereitest zu",
-"3pl": "bereiten zu",
-"3sg": "bereitet zu"
+"1pl": [
+"bereiten zu"
+],
+"1sg": [
+"bereite zu"
+],
+"2pl": [
+"bereitet zu"
+],
+"2sg": [
+"bereitest zu"
+],
+"3pl": [
+"bereiten zu"
+],
+"3sg": [
+"bereitet zu"
+]
+},
+"zugeben": {
+"1pl": [
+"geben zu"
+],
+"1sg": [
+"gebe zu"
+],
+"2pl": [
+"gebt zu"
+],
+"2sg": [
+"gibst zu"
+],
+"3pl": [
+"geben zu"
+],
+"3sg": [
+"gibt zu"
+]
+},
+"zunehmen": {
+"1pl": [
+"nehmen zu"
+],
+"1sg": [
+"nehme zu"
+],
+"2pl": [
+"nehmt zu"
+],
+"2sg": [
+"nimmst zu"
+],
+"3pl": [
+"nehmen zu"
+],
+"3sg": [
+"nimmt zu"
+]
+},
+"zupfen": {
+"1pl": [
+"zupfen"
+],
+"1sg": [
+"zupfe"
+],
+"2pl": [
+"zupft"
+],
+"2sg": [
+"zupfst"
+],
+"3pl": [
+"zupfen"
+],
+"3sg": [
+"zupft"
+]
+},
+"zurückgeben": {
+"1pl": [
+"geben zurück"
+],
+"1sg": [
+"gebe zurück"
+],
+"2pl": [
+"gebt zurück"
+],
+"2sg": [
+"gibst zurück"
+],
+"3pl": [
+"geben zurück"
+],
+"3sg": [
+"gibt zurück"
+]
+},
+"zurückkehren": {
+"1pl": [
+"kehren zurück"
+],
+"1sg": [
+"kehre zurück"
+],
+"2pl": [
+"kehrt zurück"
+],
+"2sg": [
+"kehrst zurück"
+],
+"3pl": [
+"kehren zurück"
+],
+"3sg": [
+"kehrt zurück"
+]
+},
+"zurückkommen": {
+"1pl": [
+"kommen zurück"
+],
+"1sg": [
+"komme zurück"
+],
+"2pl": [
+"kommt zurück"
+],
+"2sg": [
+"kommst zurück"
+],
+"3pl": [
+"kommen zurück"
+],
+"3sg": [
+"kommt zurück"
+]
+},
+"zurückzahlen": {
+"1pl": [
+"zahlen zurück"
+],
+"1sg": [
+"zahle zurück"
+],
+"2pl": [
+"zahlt zurück"
+],
+"2sg": [
+"zahlst zurück"
+],
+"3pl": [
+"zahlen zurück"
+],
+"3sg": [
+"zahlt zurück"
+]
+},
+"zuschauen": {
+"1pl": [
+"schauen zu"
+],
+"1sg": [
+"schaue zu"
+],
+"2pl": [
+"schaut zu"
+],
+"2sg": [
+"schaust zu"
+],
+"3pl": [
+"schauen zu"
+],
+"3sg": [
+"schaut zu"
+]
+},
+"zustellen": {
+"1pl": [
+"stellen zu"
+],
+"1sg": [
+"stelle zu"
+],
+"2pl": [
+"stellt zu"
+],
+"2sg": [
+"stellst zu"
+],
+"3pl": [
+"stellen zu"
+],
+"3sg": [
+"stellt zu"
+]
+},
+"zustimmen": {
+"1pl": [
+"stimmen zu"
+],
+"1sg": [
+"stimme zu"
+],
+"2pl": [
+"stimmt zu"
+],
+"2sg": [
+"stimmst zu"
+],
+"3pl": [
+"stimmen zu"
+],
+"3sg": [
+"stimmt zu"
+]
+},
+"züchten": {
+"1pl": [
+"züchten"
+],
+"1sg": [
+"züchte"
+],
+"2pl": [
+"züchtet"
+],
+"2sg": [
+"züchtest"
+],
+"3pl": [
+"züchten"
+],
+"3sg": [
+"züchtet"
+]
+},
+"ärgern": {
+"1pl": [
+"ärgern"
+],
+"1sg": [
+"ärger",
+"ärgere",
+"ärgre"
+],
+"2pl": [
+"ärgert"
+],
+"2sg": [
+"ärgerst"
+],
+"3pl": [
+"ärgern"
+],
+"3sg": [
+"ärgert"
+]
 },
 "öffnen": {
-"1pl": "öffnen",
-"1sg": "öffne",
-"2pl": "öffnet",
-"2sg": "öffnest",
-"3pl": "öffnen",
-"3sg": "öffnet"
+"1pl": [
+"öffnen"
+],
+"1sg": [
+"öffne"
+],
+"2pl": [
+"öffnet"
+],
+"2sg": [
+"öffnest"
+],
+"3pl": [
+"öffnen"
+],
+"3sg": [
+"öffnet"
+]
+},
+"ölen": {
+"1pl": [
+"ölen"
+],
+"1sg": [
+"öle"
+],
+"2pl": [
+"ölt"
+],
+"2sg": [
+"ölst"
+],
+"3pl": [
+"ölen"
+],
+"3sg": [
+"ölt"
+]
+},
+"üben": {
+"1pl": [
+"üben"
+],
+"1sg": [
+"übe"
+],
+"2pl": [
+"übt"
+],
+"2sg": [
+"übst"
+],
+"3pl": [
+"üben"
+],
+"3sg": [
+"übt"
+]
+},
+"überholen": {
+"1pl": [
+"überholen"
+],
+"1sg": [
+"überhole"
+],
+"2pl": [
+"überholt"
+],
+"2sg": [
+"überholst"
+],
+"3pl": [
+"überholen"
+],
+"3sg": [
+"überholt"
+]
+},
+"übernachten": {
+"1pl": [
+"übernachten"
+],
+"1sg": [
+"übernachte"
+],
+"2pl": [
+"übernachtet"
+],
+"2sg": [
+"übernachtest"
+],
+"3pl": [
+"übernachten"
+],
+"3sg": [
+"übernachtet"
+]
+},
+"überraschen": {
+"1pl": [
+"überraschen"
+],
+"1sg": [
+"überrasche"
+],
+"2pl": [
+"überrascht"
+],
+"2sg": [
+"überraschst"
+],
+"3pl": [
+"überraschen"
+],
+"3sg": [
+"überrascht"
+]
+},
+"übersetzen": {
+"1pl": [
+"setzen über",
+"übersetzen"
+],
+"1sg": [
+"setze über",
+"übersetze"
+],
+"2pl": [
+"setzt über",
+"übersetzt"
+],
+"2sg": [
+"setzt über",
+"übersetzt"
+],
+"3pl": [
+"setzen über",
+"übersetzen"
+],
+"3sg": [
+"setzt über",
+"übersetzt"
+]
+},
+"übertragen": {
+"1pl": [
+"übertragen"
+],
+"1sg": [
+"übertrage"
+],
+"2pl": [
+"übertragt"
+],
+"2sg": [
+"überträgst"
+],
+"3pl": [
+"übertragen"
+],
+"3sg": [
+"überträgt"
+]
 },
 "überweisen": {
-"1pl": "überweisen",
-"1sg": "überweise",
-"2pl": "überweist",
-"2sg": "überweist",
-"3pl": "überweisen",
-"3sg": "überweist"
+"1pl": [
+"überweisen"
+],
+"1sg": [
+"überweise"
+],
+"2pl": [
+"überweist"
+],
+"2sg": [
+"überweist"
+],
+"3pl": [
+"überweisen"
+],
+"3sg": [
+"überweist"
+]
+},
+"überzeugen": {
+"1pl": [
+"überzeugen"
+],
+"1sg": [
+"überzeuge"
+],
+"2pl": [
+"überzeugt"
+],
+"2sg": [
+"überzeugst"
+],
+"3pl": [
+"überzeugen"
+],
+"3sg": [
+"überzeugt"
+]
 }
 }
