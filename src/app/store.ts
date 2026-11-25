@@ -23,17 +23,32 @@ const DB = 'satzbau'
 const STORE = 'answers'
 let db: Promise<IDBDatabase> | null = null
 
+/**
+ * ⚠ Запрос к IndexedDB может не ответить ВООБЩЕ: ни success, ни error, ни blocked.
+ * Так бывает, когда базу держит другая вкладка или хранилище вытеснено. Журнал
+ * читается до первого кадра, поэтому приложение висело на «Загрузка…» навсегда —
+ * без объяснения и без выхода. Поэтому здесь есть срок: не ответили — считаем
+ * хранилище недоступным и работаем в памяти, сказав об этом человеку.
+ */
+const OPEN_TIMEOUT = 4000
+
 function open(): Promise<IDBDatabase> {
   db ??= new Promise((ok, fail) => {
     const req = indexedDB.open(DB, 1)
+    const timer = setTimeout(() => fail(new Error('IndexedDB не отвечает')), OPEN_TIMEOUT)
+    const done = <T>(f: (x: T) => void) => (x: T) => {
+      clearTimeout(timer)
+      f(x)
+    }
     req.onupgradeneeded = () => {
       const d = req.result
       if (!d.objectStoreNames.contains(STORE)) {
         d.createObjectStore(STORE, { keyPath: 'id', autoIncrement: true })
       }
     }
-    req.onsuccess = () => ok(req.result)
-    req.onerror = () => fail(req.error ?? new Error('IndexedDB недоступна'))
+    req.onsuccess = done(() => ok(req.result))
+    req.onerror = done(() => fail(req.error ?? new Error('IndexedDB недоступна')))
+    req.onblocked = done(() => fail(new Error('IndexedDB занята другой вкладкой')))
   })
   return db
 }

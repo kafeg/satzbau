@@ -75,7 +75,12 @@ export function App() {
   useEffect(() => {
     Promise.all([loadBundle(), initSrs()])
       .then(async () => {
-        const saved = await allAnswers().catch(() => [] as Answer[])
+        // ⚠ Журнал не обязателен для старта: не прочитался — начинаем с пустого
+        // и говорим об этом, а не висим на «Загрузка…»
+        const saved = await allAnswers().catch(() => {
+          setLost(true)
+          return [] as Answer[]
+        })
         setAnswers(saved)
         setCards(replay(saved))
         // тему могли переименовать между версиями: сохранённый ключ проверяем по бандлу
@@ -191,6 +196,30 @@ export function App() {
     )
 
   const item = items[at]
+
+  // ⚠ Пустая очередь — это не «готово». Так бывает, когда у правила нет заданий
+  // на нынешнем уровне: все рамки слияния, например, A2, а новый профиль идёт по A1.
+  // Экран «Готово 0 / 0» в этом случае врал, что человек что-то прошёл, и выхода не давал.
+  if (!item && log.length === 0)
+    return shell(
+      <main className="home">
+        <h1>Пока нечего тренировать</h1>
+        <p className="lead">
+          {route.rule
+            ? 'У этого правила нет заданий на вашем уровне. Поднимите потолок в настройках или выберите другое правило.'
+            : 'Заданий под этот выбор не нашлось. Попробуйте другую тему или поднимите уровень в настройках.'}
+        </p>
+        <div className="row-buttons">
+          <button className="primary" onClick={() => go({ screen: 'settings' })}>
+            Настройки
+          </button>
+          <button className="ghost" onClick={() => go({ screen: 'grammar' })}>
+            к правилам
+          </button>
+        </div>
+      </main>,
+    )
+
   if (!item) {
     const right = log.filter((a) => a.ok).length
     return (

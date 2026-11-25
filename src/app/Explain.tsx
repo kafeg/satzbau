@@ -102,6 +102,15 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
     : []
   const col = t ? columnOf(item, t) : null
   const ending = t?.slot.paradigm === 'adj_ending'
+  // ⚠ Несклеенная форма отличается от склеенной пробелом: «in dem» против «im». Но сказать
+  // «падеж верный» можно только когда он ДЕЙСТВИТЕЛЬНО тот же: в «Wir gehen ins Wohnzimmer»
+  // выбравший «in dem» ошибся именно в падеже — дательный вместо винительного, — и утешать
+  // его нельзя. Падеж выбранной формы даёт formMatches, он же считает строку ниже.
+  const unmerged =
+    t?.slot.paradigm === 'merged_prep_article' &&
+    !!given?.includes(' ') &&
+    !item.answer.includes(' ') &&
+    matches.some((m) => m.case === (t.slot.case ?? 'nom'))
   const row = t?.slot.case ?? 'nom'
 
   return (
@@ -114,10 +123,22 @@ export function Explain({ item, given }: { item: Item; given?: string }) {
         ))}
       </ol>
 
-      {wrong && matches.length > 0 && (
-        <p className="yours">
-          <span className="mono">{ending ? `-${given}` : given}</span> — это {readable(matches)}
+      {/* ⚠ «in dem Bad» и «zu dem Bahnhof» — ВЕРНЫЙ немецкий, просто не то, что тренирует
+          задание: тренируется слияние. Несклеенные формы лежат среди вариантов нарочно
+          («ошибка не склеил» и есть предмет правила), но человек, выбравший их, получал
+          минус и не понимал, в чём ошибся. Падеж он назвал правильно, и это надо сказать. */}
+      {wrong && unmerged ? (
+        <p className="yours fair">
+          <span className="mono">{given}</span> — падеж верный, и так тоже говорят. Но с этим
+          предлогом артикль обычно склеивают: <span className="mono">{item.answer}</span>.
         </p>
+      ) : (
+        wrong &&
+        matches.length > 0 && (
+          <p className="yours">
+            <span className="mono">{ending ? `-${given}` : given}</span> — это {readable(matches)}
+          </p>
+        )
       )}
 
       {t && TABLE.has(t.slot.paradigm) && (

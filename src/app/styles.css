@@ -1245,3 +1245,10 @@ footer {
   border-color: var(--err-line);
   color: var(--err-fg);
 }
+
+/* ответ был верным немецким, просто не тем, что тренирует задание: оранжевый цвет
+   ошибки здесь противоречил бы тексту */
+.yours.fair {
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+}
