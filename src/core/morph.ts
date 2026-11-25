@@ -116,7 +116,7 @@ function p3Stem(v: Verb, istem: string): string {
  * er fährt — но ich fahre, ihr fahrt), поэтому `ich`, `wir`, `ihr` считаются от инфинитива,
  * а `du` — от основы p3. Иначе выходило бы «ich fähre».
  */
-export function present(v: Verb, person: Person): string {
+export function presentForms(v: Verb, person: Person): string[] {
   const part = particle(v)
   const w = v.w.startsWith('sich ') ? v.w.slice(5) : v.w
   const inf = part ? w.slice(part.length) : w        // abholen → holen
@@ -126,16 +126,37 @@ export function present(v: Verb, person: Person): string {
   // -e- во втором лице появляется только там, где основа не менялась: du wartest,
   // но du hältst и du brätst. Перегласовка сильного глагола съедает беглую e.
   const duE = du === istem ? e : ''
-  const forms: Record<Person, string> = {
-    '1sg': `${istem}e`,
+  const forms: Record<Person, string[]> = {
+    '1sg': firstSg(inf, istem),
     // после s/ß/z/x второе лицо получает только -t: du isst, du heißt
-    '2sg': `${du}${endsAny(du, ['s', 'ß', 'z', 'x']) ? 't' : `${duE}st`}`,
-    '3sg': v.p3.split(' ')[0] as string,
-    '1pl': inf,
-    '2pl': `${istem}${e}t`,
-    '3pl': inf,
+    '2sg': [`${du}${endsAny(du, ['s', 'ß', 'z', 'x']) ? 't' : `${duE}st`}`],
+    '3sg': [v.p3.split(' ')[0] as string],
+    '1pl': [inf],
+    '2pl': [`${istem}${e}t`],
+    '3pl': [inf],
   }
-  return part ? `${forms[person]} ${part}` : forms[person]
+  const fs = forms[person]
+  return part ? fs.map((f) => `${f} ${part}`) : fs
+}
+
+/**
+ * Первое лицо единственного. Форм бывает три, и все три в UniMorph:
+ * «ich sammle», «ich sammele», «ich sammel».
+ *
+ * ⚠ У основ на -el/-er беглая -e выпадает, и словарная форма у -eln именно стянутая
+ * (sammle), а у -ern полная (wandere) — так же, как в императиве. Засчитывать одну
+ * значило бы считать ошибкой верный ответ: человек пишет то, что слышал.
+ * Проверять окончание ОСНОВЫ нельзя — у spielen она тоже на -el, а «spile» не форма.
+ */
+function firstSg(inf: string, istem: string): string[] {
+  const short = `${istem.slice(0, -2)}${istem.slice(-1)}e`   // sammel → sammle
+  if (inf.endsWith('eln')) return [short, `${istem}e`, istem]
+  if (inf.endsWith('ern')) return [`${istem}e`, short, istem]
+  return [`${istem}e`]
+}
+
+export function present(v: Verb, person: Person): string {
+  return presentForms(v, person)[0] as string
 }
 
 const UMLAUT: Record<string, string> = { ä: 'a', ö: 'o', ü: 'u' }

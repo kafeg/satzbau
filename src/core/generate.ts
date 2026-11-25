@@ -26,6 +26,7 @@ import {
   nounForm,
   particle,
   present,
+  presentForms,
   superlative,
 } from './morph.ts'
 import type { Word } from './bundle.ts'
@@ -294,6 +295,27 @@ function slotForm(slot: Fixed, w: Word, c: Case, w2?: Word | null): string | nul
   }
 }
 
+/**
+ * Все формы, которые ввод обязан засчитать. Касается только `input`: у выбора вариант
+ * один по построению.
+ *
+ * ⚠ «Hol das!» и «Hole das!» верны обе, «ich sammle» и «ich sammele» тоже. Засчитывать
+ * одну значило бы считать ошибкой верный ответ — человек пишет то, что слышал.
+ * Какие формы приняты, решает UniMorph, а не наше чувство языка: у императива они
+ * приезжают полем `imp`, у Präsens считаются правилом и проверены против источника.
+ */
+function otherForms(t: Template, slot: Fixed, w: Word): string[] | null {
+  if (t.kind !== 'input') return null
+  const p = slot.paradigm
+  const person = slot.person ?? '3sg'
+  if (p === 'imperative') return imperativeForms(w.entry as Verb)
+  if (p === 'verb_present') return presentForms(w.entry as Verb, person)
+  // спрягаемая часть отделяемого: приставка уехала в конец фразы, в пропуске её нет
+  if (p === 'verb_stem')
+    return presentForms(w.entry as Verb, person).map((f) => f.split(' ')[0] as string)
+  return null
+}
+
 /** Детерминированный порядок вариантов: одно и то же задание всегда выглядит одинаково. */
 function shuffle<T>(xs: T[], seed: string): T[] {
   let h = 2166136261
@@ -503,11 +525,10 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
     full: fill(t.frame, answer),
     answer,
     options: t.kind === 'choice' ? buildOptions(t, w, answer, slot, w2) : undefined,
-    // ⚠ Принятых форм бывает несколько: «Hol das!» и «Hole das!» верны обе,
-    // и засчитывать одну значило бы считать ошибкой правильный ответ
-    ...(slot.paradigm === 'imperative' && t.kind === 'input'
-      ? { answers: imperativeForms(w.entry as Verb) }
-      : {}),
+    ...(() => {
+      const fs = otherForms(t, slot, w)
+      return fs && fs.length > 1 ? { answers: fs } : {}
+    })(),
     word: w.w,
     ...(w2 ? { word2: w2.w } : {}),
     theme: w.theme,

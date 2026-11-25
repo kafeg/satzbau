@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { getBundle } from '../core/bundle.ts'
+import { accepts } from '../core/check.ts'
 import type { Item } from '../core/types.ts'
 import { Explain } from './Explain.tsx'
 import { go, type Route } from './route.ts'
@@ -59,10 +60,8 @@ export function Drill({
   useEffect(() => onVoices(() => setVoice(!!germanVoice())), [])
 
   const answered = given !== null
-  // ⚠ Сравнение нечувствительно к регистру и принимает все верные формы: пропуск
-  // в начале фразы человек пишет с заглавной, а у императива форм бывает две.
-  const accepted = [item.answer, ...(item.answers ?? [])].map((a) => a.toLowerCase())
-  const correct = given !== null && accepted.includes(given.toLowerCase())
+  // что считается верным вводом, решает ядро: по тому же правилу считает симулятор
+  const correct = given !== null && accepts(item, given)
   // бейдж рода, а не nom_article: в задании про род он называл бы ответ
   const article = item.ctx.badge
   // в шапке короткое имя правила (поле name), а в сессии вперемешку — тема и уровень:

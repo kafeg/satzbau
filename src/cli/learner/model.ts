@@ -3,6 +3,7 @@
 // планировщик, приложение по построению выглядит идеальным.
 
 import type { Word } from '../../core/bundle.ts'
+import { accepts } from '../../core/check.ts'
 import type { Adj, Item, Noun, Template, Verb } from '../../core/types.ts'
 import { MISCONCEPTIONS, weakForms } from './misconceptions.ts'
 import type { Persona } from './personas.ts'
@@ -139,9 +140,8 @@ export function answer(l: Learner, item: Item, keys: string[], look: Lookup, all
   let k = keys.reduce((x, key) => x * rec(key), 1)
   const hint = k < p.hint.below && l.rnd() < p.hint.p
   if (hint) k = keys.filter((x) => !x.startsWith('rule:')).reduce((x, key) => x * rec(key), 1)
-  const accepted = [item.answer, ...(item.answers ?? [])].map((a) => a.toLowerCase())
   const done = (given: string, cause: Outcome['cause'], mis?: string): Outcome => {
-    const ok = accepted.includes(given.toLowerCase()) ? 1 : 0
+    const ok = accepts(item, given) ? 1 : 0
     return { ok, given, hint, cause, mis, lucky: ok === 1 && cause !== 'know', k }
   }
   if (l.rnd() < k) return done(item.answer, 'know')

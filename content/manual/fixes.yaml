@@ -165,6 +165,7 @@ n_declension:
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
 #     Иначе сборка каждый раз сообщает «нет множественного» про Hunger и Obst.
 no_plural:
+  - Silvester   # праздник раз в год: «die Silvester» не говорят
   - Bargeld
   - Polizei
   - Post
@@ -360,13 +361,28 @@ reflexive:
 #     омонима: die Bank — банк даёт Banken, а скамья Bänke, и в заданиях появлялись
 #     скамейки. Главнее источника; спорить с no_plural нельзя, это ловит валидатор.
 plural:
-  Bank: Banken
+  # ⚠ Омонимы: род мы выбрали руками, а множественное в той же строке источника —
+  # от ДРУГОГО слова. Сборка теперь сама требует здесь строку, когда ручной род
+  # не совпал с родом источника (`report.txt`).
+  Bank: Banken          # банк, не скамья (Bänke)
+  Leiter: Leitern       # стремянка, не руководитель (Leiter)
+  Steuer: Steuern       # налог, не руль (Steuer)
+  Gehalt: Gehälter      # зарплата, не содержание чего-либо (Gehalte)
   # ⚠ Источник даёт несуществующие формы. Найдено сверкой склонения с UniMorph:
   # до неё они жили в заданиях — «Hier sind zwei Menscher», «zwei Gasten».
   Mensch: Menschen
   Gast: Gäste
   Feld: Felder
   Landsmann: Landsleute
+  # множественного у этих нет, но строка нужна, чтобы сборка не ругалась на омоним
+  Achtel: Achtel
+  Hundertstel: Hundertstel
+  Viertel: Viertel
+  Virus: Viren
+  Foto: Fotos
+  Trikot: Trikots
+  Stift: Stifte         # ручка-карандаш; «Stifter» это основатель
+  Bruch: Brüche
 
 plural_in_use:
   - Möbel

@@ -132,6 +132,7 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
     g = (e or {}).get('g') or ''
     g_alt = (e or {}).get('g_alt') or []
     fix = fixes['gender'].get(lemma)
+    src_g = g
     if fix:
         g = fix['g']
     elif g_alt:
@@ -152,6 +153,16 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         n['pl_only'] = 1
     # no_plural главнее источника: у Polizei и Post форма в словаре есть, но это
     # либо другое слово (Posten), либо форма, которой в речи не бывает
+    # ⚠ Ручной род ЗАБРАКОВАЛ строку источника целиком: она про другое слово. Значит
+    # и множественное в ней чужое — у Bank это «Bänke» от скамьи, у Leiter «Leiter»
+    # от руководителя, у Steuer «Steuer» от руля. Ошибка тихая: форма есть, она просто
+    # не от этого слова. Поэтому там, где ручной род НЕ совпал с родом источника,
+    # множественное требуется руками (или слово объявлено неисчисляемым).
+    if (fix and src_g and fix['g'] != src_g and not pl_only
+            and lemma not in fixes['plural'] and lemma not in fixes['no_plural']
+            and lemma not in fixes['mass']):
+        rep.append((lemma, f'ручной род {fix["g"]} против {src_g} у источника: его множественное '
+                           'от другого слова — нужна строка в fixes.yaml:plural'))
     pl = fixes['plural'].get(lemma) or (e or {}).get('pl') or (ke and kform(ke, 'plural'))
     if lemma in fixes['no_plural']:
         n['npl'] = 1                      # множественного нет и не должно быть: Hunger, Obst
