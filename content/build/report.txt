@@ -1,14 +1,20 @@
-сборка 2026-11-25, версия данных aec466fb461c
+сборка 2026-11-25, версия данных 1ece074a4db5
 
-слов в themes.yaml: 1134; собрано: 1134; потеряно: 0
+слов в themes.yaml: 1438; собрано: 1438; потеряно: 0
 
-замечания (26):
+замечания (48):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
+  Boot                   род спорный n/m — решение в fixes.yaml:gender
+  Euro                   род спорный m/f — решение в fixes.yaml:gender
   Grad                   род спорный m/n — решение в fixes.yaml:gender
   Haar                   род спорный n/f — решение в fixes.yaml:gender
+  Hantel                 род спорный f/n — решение в fixes.yaml:gender
   Hut                    род спорный m/f — решение в fixes.yaml:gender
+  Kredit                 род спорный m/n — решение в fixes.yaml:gender
   Laden                  род спорный m/n — решение в fixes.yaml:gender
+  Laptop                 род спорный m/n — решение в fixes.yaml:gender
   Luft                   род спорный f/m — решение в fixes.yaml:gender
+  Matte                  род спорный f/n — решение в fixes.yaml:gender
   Mittag                 род спорный m/n — решение в fixes.yaml:gender
   Mode                   род спорный f/m — решение в fixes.yaml:gender
   Monat                  род спорный m/n — решение в fixes.yaml:gender
@@ -17,28 +23,46 @@
   Neffe                  род спорный m/f — решение в fixes.yaml:gender
   Post                   род спорный f/m — решение в fixes.yaml:gender
   Radio                  род спорный n/m — решение в fixes.yaml:gender
+  See                    род спорный m/f — решение в fixes.yaml:gender
+  Sieg                   род спорный m/f — решение в fixes.yaml:gender
+  Spam                   род спорный n/m/f — решение в fixes.yaml:gender
   Tag                    род спорный m/n — решение в fixes.yaml:gender
+  Tor                    род спорный n/m — решение в fixes.yaml:gender
   Vokabel                род спорный f/n — решение в fixes.yaml:gender
   Wetter                 род спорный n/m — решение в fixes.yaml:gender
+  Yoga                   род спорный m/n — решение в fixes.yaml:gender
+  Zelt                   род спорный n/m — решение в fixes.yaml:gender
+  Zoll                   род спорный m/n — решение в fixes.yaml:gender
   altersgerecht          нет в kaikki — степени сравнения выводятся правилом
   anziehen               aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   aufstehen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   ausziehen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   frieren                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  joggen                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   qualifiziert           нет в kaikki — степени сравнения выводятся правилом
+  reiten                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  rennen                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  schießen               aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   schneien               aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  schwimmen              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   stürmen                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  surfen                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
   tanzen                 aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  tauchen                aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
+  trainiert              нет в kaikki — степени сравнения выводятся правилом
+  wegfahren              aux спорный (haben и sein), нет записи в fixes.yaml:aux_ambiguous
 
-управление, предложено источниками (23) — проверить и внести
+управление, предложено источниками (25) — проверить и внести
 в fixes.yaml:government, иначе в бандл не попадёт:
   abgeben                bei D
   anfangen               von D
   ankommen               auf A
+  ausgeben               für A
   beginnen               mit D
   bestehen               aus D, auf D
   bewerben               für A
   einladen               zu D
+  erholen                von D
   erzählen               von D
   freuen                 über A, auf A, für A
   leben                  von D
@@ -57,20 +81,20 @@
   übersetzen             in A, aus D
 
 размеры:
-  adjs.json         n=189        11.8 КиБ   gzip     3.1 КиБ
+  adjs.json         n=221        13.9 КиБ   gzip     3.7 КиБ
   explain.json      n=44         54.6 КиБ   gzip    14.2 КиБ
-  nouns.json        n=711        57.8 КиБ   gzip    13.7 КиБ
-  sentences.json    n=3621      374.4 КиБ   gzip   107.9 КиБ
+  nouns.json        n=918        74.8 КиБ   gzip    17.6 КиБ
+  sentences.json    n=4191      438.8 КиБ   gzip   127.5 КиБ
   templates.json    n=80         23.6 КиБ   gzip     3.1 КиБ
-  themes.json       n=12         65.2 КиБ   gzip     8.4 КиБ
-  verbs.json        n=234        36.8 КиБ   gzip     8.8 КиБ
-  ИТОГО                       624.2 КиБ   gzip   159.1 КиБ
+  themes.json       n=16         82.8 КиБ   gzip    10.6 КиБ
+  verbs.json        n=299        46.7 КиБ   gzip    10.9 КиБ
+  ИТОГО                       735.2 КиБ   gzip   187.5 КиБ
 
 предложения Tatoeba, отбраковка:
-  незнакомая словоформа      119843
+  незнакомая словоформа      117421
   длина не 3–8               30998
-  имя исчерпало квоту        2311
+  имя исчерпало квоту        2640
   нет точки в конце          822
-  примеров на имя: Tom 2000, Maria 580, Deutschland 67, Oktober 40, Berlin 36
-  слов без примеров: 246 из 1134
-    Abfahrt, Abmahnung, Abschluss, Abteil, Abteilung, Abwechslung, Amt, Anschluss, Antrag, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Attest, Ausbildung, Ausflug, Auskunft, Ausländerbehörde, Autobahn, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beschwerde, Besichtigung, Bestätigung, Betreuung, Betriebskosten, Betriebsrat, Bewerbung, Bildschirm, Brettspiel, Brotdose, Bürger, Bürgeramt, Café, Dosierung …
+  примеров на имя: Tom 2000, Maria 598, Deutschland 74, Oktober 40, Berlin 37
+  слов без примеров: 373 из 1438
+    Abflug, Abmahnung, Abschluss, Abteil, Abteilung, Abwechslung, Altersvorsorge, Amt, Anlage, Anschluss, Antrag, Anwendung, Arbeitgeber, Arbeitnehmer, Arbeitsamt, Arbeitsblatt, Attest, Ausbildung, Ausdauer, Ausgabe, Auskunft, Ausländerbehörde, Autobahn, Bahnsteig, Baustelle, Bedienung, Befund, Beglaubigung, Behandlung, Beilage, Beitrag, Benutzer, Berater, Beschwerde, Besichtigung, Bestätigung, Betrag, Betreuung, Betriebskosten, Betriebsrat …

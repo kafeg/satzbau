@@ -1229,3 +1229,335 @@ study:
     - {w: fließend,      pos: a, lv: B1, tags: [quality, absolute]}
     - {w: mühsam,        pos: a, lv: B1, tags: [quality]}
     - {w: begabt,        pos: a, lv: B1, tags: [quality, person]}
+
+travel:
+  title: Путешествие и отпуск
+  words:
+    # A1 — куда едут и что берут с собой
+    - {w: Strand,        pos: n, lv: A1, tags: [place]}
+    - {w: Meer,          pos: n, lv: A1, tags: [place]}
+    - {w: See,           pos: n, lv: A1, tags: [place]}
+    - {w: Berg,          pos: n, lv: A1, tags: [place]}
+    - {w: Insel,         pos: n, lv: A1, tags: [place]}
+    - {w: Dorf,          pos: n, lv: A1, tags: [place]}
+    - {w: Land,          pos: n, lv: A1, tags: [place]}
+    - {w: Welt,          pos: n, lv: A1, tags: [abstract]}
+    - {w: Zelt,          pos: n, lv: A1, tags: [thing]}
+    - {w: Rucksack,      pos: n, lv: A1, tags: [thing]}
+    - {w: Handtuch,      pos: n, lv: A1, tags: [thing]}
+    - {w: Sonnenbrille,  pos: n, lv: A1, tags: [thing]}
+    - {w: Postkarte,     pos: n, lv: A1, tags: [document]}
+    - {w: Tourist,       pos: n, lv: A1, tags: [person]}
+    - {w: Touristin,     pos: n, lv: A1, tags: [person]}
+    - {w: Boot,          pos: n, lv: A1, tags: [vehicle]}
+    - {w: Schiff,        pos: n, lv: A1, tags: [vehicle]}
+    - {w: reisen,        pos: v, lv: A1, tags: [motion, solo]}
+    - {w: packen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    # A2 — отель, рейс, достопримечательности
+    - {w: Flug,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Abflug,        pos: n, lv: A2, tags: [time]}
+    - {w: Rückflug,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Reiseziel,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Ausland,       pos: n, lv: A2, tags: [place]}
+    - {w: Küste,         pos: n, lv: A2, tags: [place]}
+    - {w: Hafen,         pos: n, lv: A2, tags: [place]}
+    - {w: Schloss,       pos: n, lv: A2, tags: [place]}
+    - {w: Sehenswürdigkeit, pos: n, lv: A2, tags: [place]}
+    - {w: Reisebüro,     pos: n, lv: A2, tags: [place]}
+    - {w: Ferienwohnung, pos: n, lv: A2, tags: [place]}
+    - {w: Jugendherberge, pos: n, lv: A2, tags: [place]}
+    - {w: Rezeption,     pos: n, lv: A2, tags: [place]}
+    - {w: Doppelzimmer,  pos: n, lv: A2, tags: [room]}
+    - {w: Einzelzimmer,  pos: n, lv: A2, tags: [room]}
+    - {w: Gepäck,        pos: n, lv: A2, tags: [thing]}
+    - {w: Reiseführer,   pos: n, lv: A2, tags: [document]}
+    - {w: Souvenir,      pos: n, lv: A2, tags: [thing]}
+    - {w: Badeanzug,     pos: n, lv: A2, tags: [thing]}
+    - {w: Sonnencreme,   pos: n, lv: A2, tags: [thing]}
+    - {w: Welle,         pos: n, lv: A2, tags: [thing]}
+    - {w: Sand,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Landschaft,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Fähre,         pos: n, lv: A2, tags: [vehicle]}
+    - {w: übernachten,   pos: v, lv: A2, tags: [state, solo]}
+    - {w: zelten,        pos: v, lv: A2, tags: [state, solo]}
+    - {w: einpacken,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: auspacken,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: wegfahren,     pos: v, lv: A2, tags: [motion, solo]}
+    - {w: zurückkommen,  pos: v, lv: A2, tags: [motion, solo]}
+    - {w: erholen,       pos: v, lv: A2, tags: [state]}
+    - {w: international, pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: preiswert,     pos: a, lv: A2, tags: [quality]}
+    - {w: entspannt,     pos: a, lv: A2, tags: [quality, person]}
+    # B1 — что написано в договоре на тур
+    - {w: Unterkunft,    pos: n, lv: B1, tags: [place]}
+    - {w: Wanderweg,     pos: n, lv: B1, tags: [place]}
+    - {w: Gipfel,        pos: n, lv: B1, tags: [place]}
+    - {w: Hütte,         pos: n, lv: B1, tags: [place]}
+    - {w: Zoll,          pos: n, lv: B1, tags: [place]}
+    - {w: Visum,         pos: n, lv: B1, tags: [document]}
+    - {w: Pauschalreise, pos: n, lv: B1, tags: [abstract]}
+    - {w: Halbpension,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Verpflegung,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Rundreise,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Stadtführung,  pos: n, lv: B1, tags: [abstract]}
+    - {w: Aussicht,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Heimweh,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Erinnerung,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Reisegruppe,   pos: n, lv: B1, tags: [person]}
+    - {w: Gastfamilie,   pos: n, lv: B1, tags: [person]}
+    - {w: Wohnmobil,     pos: n, lv: B1, tags: [vehicle]}
+    - {w: verreisen,     pos: v, lv: B1, tags: [motion, solo]}
+    - {w: erkunden,      pos: v, lv: B1, tags: [state, obj]}
+    - {w: touristisch,   pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: erholsam,      pos: a, lv: B1, tags: [quality]}
+    - {w: abgelegen,     pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: weltweit,      pos: a, lv: B1, tags: [quality, absolute]}
+    - {w: einheimisch,   pos: a, lv: B1, tags: [quality, absolute]}
+
+sport:
+  title: Спорт
+  words:
+    # A1 — во что играют и где
+    - {w: Sport,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Fußball,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Tennis,        pos: n, lv: A1, tags: [abstract]}
+    - {w: Training,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Mannschaft,    pos: n, lv: A1, tags: [person]}
+    - {w: Spieler,       pos: n, lv: A1, tags: [person]}
+    - {w: Spielerin,     pos: n, lv: A1, tags: [person]}
+    - {w: Trainer,       pos: n, lv: A1, tags: [person]}
+    - {w: Trainerin,     pos: n, lv: A1, tags: [person]}
+    - {w: Tor,           pos: n, lv: A1, tags: [thing]}
+    - {w: Sportplatz,    pos: n, lv: A1, tags: [place]}
+    - {w: Sporthalle,    pos: n, lv: A1, tags: [place]}
+    - {w: Sportler,      pos: n, lv: A1, tags: [person]}
+    - {w: Sportlerin,    pos: n, lv: A1, tags: [person]}
+    - {w: trainieren,    pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: schwimmen,     pos: v, lv: A1, tags: [motion, solo]}
+    - {w: springen,      pos: v, lv: A1, tags: [motion, solo]}
+    - {w: werfen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: gewinnen,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: verlieren,     pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: joggen,        pos: v, lv: A1, tags: [motion, solo]}
+    - {w: klettern,      pos: v, lv: A1, tags: [motion, solo]}
+    # A2 — тренировка, матч, счёт
+    - {w: Sportart,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Bewegung,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Kraft,         pos: n, lv: A2, tags: [abstract]}
+    - {w: Sieg,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Halbzeit,      pos: n, lv: A2, tags: [time]}
+    - {w: Wettbewerb,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Basketball,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Volleyball,    pos: n, lv: A2, tags: [abstract]}
+    - {w: Handball,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Yoga,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Fitnessstudio, pos: n, lv: A2, tags: [place]}
+    - {w: Muskel,        pos: n, lv: A2, tags: [body]}
+    - {w: Medaille,      pos: n, lv: A2, tags: [thing]}
+    - {w: Ski,           pos: n, lv: A2, tags: [thing]}
+    - {w: Schlittschuh,  pos: n, lv: A2, tags: [thing]}
+    - {w: Schiedsrichter, pos: n, lv: A2, tags: [person]}
+    - {w: Zuschauer,     pos: n, lv: A2, tags: [person]}
+    - {w: Mitspieler,    pos: n, lv: A2, tags: [person]}
+    - {w: Fan,           pos: n, lv: A2, tags: [person]}
+    - {w: Spielfeld,     pos: n, lv: A2, tags: [place]}
+    - {w: Matte,         pos: n, lv: A2, tags: [thing]}
+    - {w: fangen,        pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: schießen,      pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: rennen,        pos: v, lv: A2, tags: [motion, solo]}
+    - {w: boxen,         pos: v, lv: A2, tags: [state, solo]}
+    - {w: reiten,        pos: v, lv: A2, tags: [motion, solo]}
+    - {w: tauchen,       pos: v, lv: A2, tags: [motion, solo]}
+    - {w: fit,           pos: a, lv: A2, tags: [quality, person, absolute]}
+    - {w: erfolgreich,   pos: a, lv: A2, tags: [quality, person]}
+    - {w: fair,          pos: a, lv: A2, tags: [quality, person]}
+    # B1 — турнир, форма, травма
+    - {w: Niederlage,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Meisterschaft, pos: n, lv: B1, tags: [abstract]}
+    - {w: Turnier,       pos: n, lv: B1, tags: [abstract]}
+    - {w: Leistung,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Ausdauer,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Kondition,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Verletzung,    pos: n, lv: B1, tags: [illness]}
+    - {w: Pokal,         pos: n, lv: B1, tags: [thing]}
+    - {w: Trikot,        pos: n, lv: B1, tags: [thing]}
+    - {w: Stadion,       pos: n, lv: B1, tags: [place]}
+    - {w: Tribüne,       pos: n, lv: B1, tags: [place]}
+    - {w: Gegner,        pos: n, lv: B1, tags: [person]}
+    - {w: Torwart,       pos: n, lv: B1, tags: [person]}
+    - {w: Gymnastik,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Wettkampf,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Foul,          pos: n, lv: B1, tags: [abstract]}
+    - {w: Elfmeter,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Rekord,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Spielstand,    pos: n, lv: B1, tags: [abstract]}
+    - {w: Hantel,        pos: n, lv: B1, tags: [thing]}
+    - {w: Pfeife,        pos: n, lv: B1, tags: [thing]}
+    - {w: besiegen,      pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: aufgeben,      pos: v, lv: B1, tags: [state, obj, solo]}
+    - {w: dehnen,        pos: v, lv: B1, tags: [state, obj]}
+    - {w: segeln,        pos: v, lv: B1, tags: [motion, solo]}
+    - {w: anfeuern,      pos: v, lv: B1, tags: [state, obj, obj_person]}
+    - {w: ehrgeizig,     pos: a, lv: B1, tags: [quality, person]}
+    - {w: trainiert,     pos: a, lv: B1, tags: [quality, person, absolute]}
+
+money:
+  title: Деньги и банк
+  words:
+    # A1 — чем платят и где это лежит
+    - {w: Euro,          pos: n, lv: A1, tags: [money]}
+    - {w: Cent,          pos: n, lv: A1, tags: [money]}
+    - {w: Münze,         pos: n, lv: A1, tags: [thing]}
+    - {w: Schein,        pos: n, lv: A1, tags: [thing]}
+    - {w: Kreditkarte,   pos: n, lv: A1, tags: [document]}
+    - {w: Summe,         pos: n, lv: A1, tags: [money]}
+    - {w: Ausgabe,       pos: n, lv: A1, tags: [money]}
+    - {w: Einnahme,      pos: n, lv: A1, tags: [money]}
+    - {w: Taschengeld,   pos: n, lv: A1, tags: [money]}
+    - {w: Betrag,        pos: n, lv: A1, tags: [money]}
+    - {w: ausgeben,      pos: v, lv: A1, tags: [state, obj]}
+    - {w: leihen,        pos: v, lv: A1, tags: [state, obj]}
+    - {w: wechseln,      pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: reich,         pos: a, lv: A1, tags: [quality, person]}
+    - {w: arm,           pos: a, lv: A1, tags: [quality, person]}
+    # A2 — счёт, карта, перевод
+    - {w: Girokonto,     pos: n, lv: A2, tags: [abstract]}
+    - {w: Kontoauszug,   pos: n, lv: A2, tags: [document]}
+    - {w: Lastschrift,   pos: n, lv: A2, tags: [document]}
+    - {w: Dauerauftrag,  pos: n, lv: A2, tags: [document]}
+    - {w: Kredit,        pos: n, lv: A2, tags: [money]}
+    - {w: Schulden,      pos: n, lv: A2, tags: [money]}
+    - {w: Zins,          pos: n, lv: A2, tags: [money]}
+    - {w: Budget,        pos: n, lv: A2, tags: [money]}
+    - {w: Sparbuch,      pos: n, lv: A2, tags: [document]}
+    - {w: Filiale,       pos: n, lv: A2, tags: [place]}
+    - {w: Berater,       pos: n, lv: A2, tags: [person]}
+    - {w: Währung,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Wechselkurs,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Mahnung,       pos: n, lv: A2, tags: [document]}
+    - {w: Ratenzahlung,  pos: n, lv: A2, tags: [money]}
+    - {w: Lohn,          pos: n, lv: A2, tags: [money]}
+    - {w: Rente,         pos: n, lv: A2, tags: [money]}
+    - {w: Gutschein,     pos: n, lv: A2, tags: [document]}
+    - {w: Einkauf,       pos: n, lv: A2, tags: [abstract]}
+    - {w: Haushalt,      pos: n, lv: A2, tags: [abstract]}
+    - {w: borgen,        pos: v, lv: A2, tags: [state, obj]}
+    - {w: schulden,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: investieren,   pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: abbuchen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: einzahlen,     pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: zurückzahlen,  pos: v, lv: A2, tags: [state, obj]}
+    - {w: finanziell,    pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: kostenpflichtig, pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: knapp,         pos: a, lv: A2, tags: [quality]}
+    - {w: wertvoll,      pos: a, lv: A2, tags: [quality, thing_only]}
+    # B1 — то, о чём говорят с консультантом
+    - {w: Vermögen,      pos: n, lv: B1, tags: [money]}
+    - {w: Anlage,        pos: n, lv: B1, tags: [money]}
+    - {w: Aktie,         pos: n, lv: B1, tags: [money]}
+    - {w: Zinssatz,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Inflation,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Armut,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Reichtum,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Rücklage,      pos: n, lv: B1, tags: [money]}
+    - {w: Altersvorsorge, pos: n, lv: B1, tags: [abstract]}
+    - {w: Haushaltsbuch, pos: n, lv: B1, tags: [document]}
+    - {w: Gläubiger,     pos: n, lv: B1, tags: [person]}
+    - {w: Spende,        pos: n, lv: B1, tags: [money]}
+    - {w: Beitrag,       pos: n, lv: B1, tags: [money]}
+    - {w: Steuererklärung, pos: n, lv: B1, tags: [document]}
+    - {w: anlegen,       pos: v, lv: B1, tags: [state, obj]}
+    - {w: tilgen,        pos: v, lv: B1, tags: [state, obj]}
+    - {w: aufrunden,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: verschulden,   pos: v, lv: B1, tags: [state, obj]}
+    - {w: abrechnen,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: sparsam,       pos: a, lv: B1, tags: [quality, person]}
+    - {w: verschwenderisch, pos: a, lv: B1, tags: [quality, person]}
+    - {w: zahlungsfähig, pos: a, lv: B1, tags: [quality, person, absolute]}
+    - {w: kostbar,       pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: bezahlbar,     pos: a, lv: B1, tags: [quality, thing_only, absolute]}
+
+tech:
+  title: Телефон и интернет
+  words:
+    # A1 — телефон, почта, пароль
+    - {w: Handy,         pos: n, lv: A1, tags: [appliance]}
+    - {w: Smartphone,    pos: n, lv: A1, tags: [appliance]}
+    - {w: Internet,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Nachricht,     pos: n, lv: A1, tags: [abstract]}
+    - {w: Passwort,      pos: n, lv: A1, tags: [abstract]}
+    - {w: Anruf,         pos: n, lv: A1, tags: [abstract]}
+    - {w: Video,         pos: n, lv: A1, tags: [thing]}
+    - {w: Maus,          pos: n, lv: A1, tags: [appliance]}
+    - {w: Kabel,         pos: n, lv: A1, tags: [thing]}
+    - {w: Akku,          pos: n, lv: A1, tags: [thing]}
+    - {w: Technik,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Gerät,         pos: n, lv: A1, tags: [appliance]}
+    - {w: Laptop,        pos: n, lv: A1, tags: [appliance]}
+    - {w: Tablet,        pos: n, lv: A1, tags: [appliance]}
+    - {w: Link,          pos: n, lv: A1, tags: [thing]}
+    - {w: einschalten,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: ausschalten,   pos: v, lv: A1, tags: [state, obj]}
+    - {w: speichern,     pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: löschen,       pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: tippen,        pos: v, lv: A1, tags: [state, obj, solo]}
+    - {w: klicken,       pos: v, lv: A1, tags: [state, solo]}
+    - {w: kaputt,        pos: a, lv: A1, tags: [quality, thing_only, absolute]}
+    - {w: digital,       pos: a, lv: A1, tags: [quality, absolute]}
+    # A2 — файлы, сеть, зарядка
+    - {w: Datei,         pos: n, lv: A2, tags: [thing]}
+    - {w: Ordner,        pos: n, lv: A2, tags: [thing]}
+    - {w: Webseite,      pos: n, lv: A2, tags: [thing]}
+    - {w: Suchmaschine,  pos: n, lv: A2, tags: [thing]}
+    - {w: Programm,      pos: n, lv: A2, tags: [thing]}
+    - {w: Software,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Netz,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Ladegerät,     pos: n, lv: A2, tags: [thing]}
+    - {w: Stecker,       pos: n, lv: A2, tags: [thing]}
+    - {w: Steckdose,     pos: n, lv: A2, tags: [thing]}
+    - {w: Lautsprecher,  pos: n, lv: A2, tags: [appliance]}
+    - {w: Kopfhörer,     pos: n, lv: A2, tags: [appliance]}
+    - {w: Festplatte,    pos: n, lv: A2, tags: [thing]}
+    - {w: Speicher,      pos: n, lv: A2, tags: [abstract]}
+    - {w: Profil,        pos: n, lv: A2, tags: [abstract]}
+    - {w: Chat,          pos: n, lv: A2, tags: [abstract]}
+    - {w: Benutzer,      pos: n, lv: A2, tags: [person]}
+    - {w: Scanner,       pos: n, lv: A2, tags: [appliance]}
+    - {w: Taste,         pos: n, lv: A2, tags: [thing]}
+    - {w: Einstellung,   pos: n, lv: A2, tags: [abstract]}
+    - {w: Werbung,       pos: n, lv: A2, tags: [abstract]}
+    - {w: herunterladen, pos: v, lv: A2, tags: [state, obj]}
+    - {w: hochladen,     pos: v, lv: A2, tags: [state, obj]}
+    - {w: installieren,  pos: v, lv: A2, tags: [state, obj]}
+    - {w: aufladen,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: surfen,        pos: v, lv: A2, tags: [state, solo]}
+    - {w: chatten,       pos: v, lv: A2, tags: [state, solo]}
+    - {w: funktionieren, pos: v, lv: A2, tags: [state, solo]}
+    - {w: scannen,       pos: v, lv: A2, tags: [state, obj, solo]}
+    - {w: eingeben,      pos: v, lv: A2, tags: [state, obj]}
+    - {w: abmelden,      pos: v, lv: A2, tags: [state, solo]}
+    - {w: online,        pos: a, lv: A2, tags: [quality, absolute]}
+    - {w: kabellos,      pos: a, lv: A2, tags: [quality, thing_only, absolute]}
+    - {w: aktuell,       pos: a, lv: A2, tags: [quality]}
+    # B1 — обновление, сбой, данные
+    - {w: Update,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Virus,         pos: n, lv: B1, tags: [abstract]}
+    - {w: Datenschutz,   pos: n, lv: B1, tags: [abstract]}
+    - {w: Fehlermeldung, pos: n, lv: B1, tags: [abstract]}
+    - {w: Zugang,        pos: n, lv: B1, tags: [abstract]}
+    - {w: Sicherung,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Schnittstelle, pos: n, lv: B1, tags: [abstract]}
+    - {w: Anwendung,     pos: n, lv: B1, tags: [thing]}
+    - {w: Entwickler,    pos: n, lv: B1, tags: [person]}
+    - {w: Netzwerk,      pos: n, lv: B1, tags: [abstract]}
+    - {w: Server,        pos: n, lv: B1, tags: [appliance]}
+    - {w: Spam,          pos: n, lv: B1, tags: [abstract]}
+    - {w: Symbol,        pos: n, lv: B1, tags: [thing]}
+    - {w: abstürzen,     pos: v, lv: B1, tags: [state, solo]}
+    - {w: verbinden,     pos: v, lv: B1, tags: [state, obj]}
+    - {w: aktualisieren, pos: v, lv: B1, tags: [state, obj]}
+    - {w: sichern,       pos: v, lv: B1, tags: [state, obj]}
+    - {w: bedienen,      pos: v, lv: B1, tags: [state, obj]}
+    - {w: benutzerfreundlich, pos: a, lv: B1, tags: [quality, thing_only]}
+    - {w: veraltet,      pos: a, lv: B1, tags: [quality, thing_only, absolute]}
+    - {w: tragbar,       pos: a, lv: B1, tags: [quality, thing_only, absolute]}

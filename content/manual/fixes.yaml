@@ -132,6 +132,9 @@ gender:
   Mund:    {g: m, note: "der Mund"}
   # б) составных слов нет в nouns.csv — без этого в сборку не попадут
   Fortbildung: {g: f}
+  Gastfamilie: {g: f}
+  Virus:   {g: m, note: "der Virus в быту и в технике; das Virus — в биологии"}
+  Trikot:  {g: n, note: "das Trikot"}
   Trotzphase:  {g: f}
 
 # 2б. Существительные без множественного числа — это решение, а не пропуск в данных.
@@ -162,6 +165,19 @@ no_plural:
   - Kindheit
   - Langeweile
   - Mathematik
+  - Ausland
+  - Gepäck
+  - Heimweh
+  - Halbpension
+  - Tennis
+  - Yoga
+  - Ausdauer
+  - Gymnastik
+  - Armut
+  - Reichtum
+  - Internet
+  - Datenschutz
+  - Technik
 
 # 2в. Неисчисляемые: с неопределённым артиклем не употребляются. Без этого решения
 #      шаблон «Ich brauche …» выдаёт «ein Benzin» и «einen Schimmel».
@@ -663,6 +679,146 @@ translations:
   deutlich:       чёткий
   fließend:       беглый, свободный
   mühsam:         трудоёмкий
+  # путешествие, спорт, деньги, техника
+  entspannt:      расслабленный
+  Pauschalreise:  путёвка «всё включено»
+  Halbpension:    полупансион
+  Reisegruppe:    туристическая группа
+  Fitnessstudio:  фитнес-клуб
+  Trikot:         спортивная футболка
+  Foul:           нарушение правил
+  trainiert:      тренированный
+  fit:            в хорошей форме
+  Dauerauftrag:   постоянное поручение банку
+  Schulden:       долги
+  Zins:           процент по вкладу
+  Berater:        консультант
+  Haushaltsbuch:  книга расходов
+  online:         в сети, онлайн
+  Update:         обновление
+  # путешествие
+  Welt:           мир
+  Land:           страна
+  Schiff:         корабль
+  Dorf:           деревня
+  Schloss:        замок
+  Strand:         пляж
+  Erinnerung:     воспоминание
+  Hütte:          хижина, горный приют
+  Küste:          побережье
+  Welle:          волна
+  Zoll:           таможня
+  Unterkunft:     жильё, ночлег
+  Landschaft:     пейзаж
+  Abflug:         вылет
+  Rezeption:      стойка регистрации
+  Heimweh:        тоска по дому
+  Wohnmobil:      дом на колёсах
+  Badeanzug:      купальник
+  Verpflegung:    питание
+  Rückflug:       обратный рейс
+  Reisebüro:      турагентство
+  Einzelzimmer:   одноместный номер
+  Ferienwohnung:  квартира на время отпуска
+  Wanderweg:      туристическая тропа
+  Rundreise:      круговая поездка
+  packen:         упаковывать
+  einpacken:      упаковывать, складывать
+  auspacken:      распаковывать
+  erkunden:       исследовать, разведывать
+  weltweit:       всемирный
+  abgelegen:      отдалённый
+  erholsam:       располагающий к отдыху
+  einheimisch:    местный
+  # спорт
+  Training:       тренировка
+  Tor:            ворота, гол
+  Fan:            болельщик
+  Leistung:       результат, достижение
+  Pfeife:         свисток
+  Niederlage:     поражение
+  Wettkampf:      соревнование
+  Schiedsrichter: судья, арбитр
+  Spielfeld:      игровое поле
+  Pokal:          кубок
+  Matte:          спортивный мат
+  Ausdauer:       выносливость
+  Halbzeit:       тайм
+  Kondition:      физическая форма
+  Schlittschuh:   конёк
+  Handball:       гандбол
+  Hantel:         гантель
+  Mitspieler:     партнёр по команде
+  Trainerin:      тренер — женщина
+  Spielerin:      игрок — женщина
+  Sportlerin:     спортсменка
+  verlieren:      проигрывать, терять
+  aufgeben:       сдаваться
+  trainieren:     тренироваться
+  segeln:         ходить под парусом
+  anfeuern:       болеть, подбадривать
+  dehnen:         растягивать
+  schießen:       бить по воротам, стрелять
+  klettern:       лазать, карабкаться
+  # деньги и банк
+  arm:            бедный
+  knapp:          скудный, в обрез
+  Vermögen:       состояние, имущество
+  Rente:          пенсия
+  Anlage:         вклад, инвестиция
+  Schein:         купюра
+  Ausgabe:        расход
+  Kredit:         кредит
+  Haushalt:       домашнее хозяйство, бюджет семьи
+  Gutschein:      подарочный сертификат
+  Einnahme:       доход
+  Girokonto:      расчётный счёт
+  Kontoauszug:    выписка со счёта
+  Lastschrift:    списание со счёта
+  Rücklage:       накопления
+  Altersvorsorge: пенсионные накопления
+  Mahnung:        напоминание об оплате
+  Filiale:        отделение банка
+  kostbar:        драгоценный
+  wechseln:       менять, разменивать
+  anlegen:        вкладывать деньги
+  ausgeben:       тратить
+  tilgen:         погашать долг
+  einzahlen:      вносить на счёт
+  verschulden:    влезать в долги
+  abrechnen:      рассчитываться
+  kostenpflichtig: платный
+  bezahlbar:      доступный по цене
+  # телефон и интернет
+  Nachricht:      сообщение
+  Anruf:          телефонный звонок
+  Einstellung:    настройка
+  Werbung:        реклама
+  Netzwerk:       сеть
+  Speicher:       память устройства
+  Ordner:         папка
+  Anwendung:      приложение
+  Sicherung:      резервная копия
+  Fehlermeldung:  сообщение об ошибке
+  Entwickler:     разработчик
+  Datenschutz:    защита данных
+  Benutzer:       пользователь
+  Suchmaschine:   поисковик
+  Virus:          вирус
+  löschen:        удалять
+  sichern:        сохранять, делать копию
+  bedienen:       пользоваться, обслуживать
+  einschalten:    включать
+  klicken:        щёлкать мышью
+  surfen:         сидеть в интернете
+  aufladen:       заряжать
+  eingeben:       вводить
+  speichern:      сохранять
+  abstürzen:      зависать, падать
+  abmelden:       выходить из аккаунта
+  chatten:        переписываться в чате
+  aktuell:        свежий, актуальный
+  tragbar:        портативный
 
 # 6. Глаголы, у которых источник даёт и haben, и sein.
 #    `use` — вспомогательный для того значения, которое тренируем (de-DE);
