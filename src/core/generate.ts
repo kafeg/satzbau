@@ -478,7 +478,14 @@ export function generate(t: Template, w: Word, all: Word[] = []): Item {
     why: t.why,
     ctx: {
       w: w.w,
+      // ⚠ Форма слова, какой она стоит В РАМКЕ, отдельно от леммы. Шаги разбора
+      // делают две разные вещи: «{w} — средний род» требует словарную форму,
+      // а «die guten {wform}» — ту, что человек видит во фразе. С одним {w}
+      // разбор строил «die guten Auto» при задании «die guten Autos»;
+      // {w2} в объяснении давал «teuere» там, где в рамке стоит «teure».
+      wform: word,
       w2: w2?.w ?? '',
+      w2form: word2,
       particle: part,
       answer,
       pp,

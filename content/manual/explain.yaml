@@ -310,7 +310,7 @@ adj-nom-e:
   steps:
     - "{w} — {gender_ru} род, {nom_article}"
     - "артикль уже показал род, значит склонение слабое"
-    - "в Nominativ при нём окончание -e: {article} {w2}{answer} {w}"
+    - "в Nominativ при нём окончание -e: {article} {w2form}{answer} {wform}"
   more: >-
     Во множественном числе -en: die neuen Wohnungen. И только в Nominativ с Akkusativ
     бывает -e; в Dativ и Genitiv всегда -en, там тоже думать не о чем.
@@ -328,7 +328,7 @@ adj-akk-en:
   steps:
     - "{w} — {gender_ru} род, {nom_article}"
     - "Akkusativ: у мужского артикль den и окончание -en, у остальных всё как было"
-    - "{article} {w2}{answer} {w}"
+    - "{article} {w2form}{answer} {wform}"
   more: >-
     Проверка на одном слове: der gute Wein → ich nehme den guten Wein, но
     die gute Suppe → ich nehme die gute Suppe. Если окончание изменилось,
@@ -465,7 +465,7 @@ adj-ohne-artikel:
   steps:
     - "{w} — {gender_ru} род, артикля перед ним нет"
     - "значит окончание показывает род само: как у артикля, но у прилагательного"
-    - "gut{answer} {w}"
+    - "gut{answer} {wform}"
   more: >-
     Сравните три случая с одним словом: der frische Fisch (артикль есть — прилагательное
     отдыхает, -e), ein frischer Fisch (артикль рода не показывает — прилагательное
@@ -506,7 +506,7 @@ adj-plural:
   steps:
     - "множественное число, перед прилагательным артикль die"
     - "род во множественном не различается"
-    - "окончание -en: die gut{answer} {w}"
+    - "окончание -en: die gut{answer} {wform}"
   more: >-
     Без артикля во множественном окончание -e: gute Freunde. А в Dativ множественного
     -en в любом случае: mit den guten Freunden, mit guten Freunden.
@@ -857,7 +857,7 @@ adj-gemischt:
   group: прилагательное
   after: [adj-nom-e]
   title: После ein окончание показывает род, после der — нет
-  short: "{ein} {w2}{answer} {w}"
+  short: "{ein} {w2form}{answer} {wform}"
   ru_contrast: >-
     По-русски окончание прилагательного работает всегда одинаково: «новый дом», «новая
     квартира», «новое окно» — род виден в любом случае. В немецком это зависит от того,

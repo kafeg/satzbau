@@ -22,11 +22,20 @@ function genitiveSg(n: Noun): string {
   return endsAny(n.w, ['s', 'ß', 'x', 'z', 'sch']) ? `${n.w}es` : `${n.w}s`
 }
 
-/** Дательный множественного всегда на -n, кроме множественного на -s. */
+/**
+ * Дательный множественного на -n, кроме уже готовых форм.
+ *
+ * ⚠ Не берут -n не только множественные на -n и -s, но и заимствованные на гласную:
+ * «den Visa», «den Praktika», «den Ski», «den Kilo». Правило «-n всему, что не на n/s»
+ * давало «Mit guten Visan» и «Mit guten Skin» — ошибка жила латентно, пока не появился
+ * первый шаблон на дательный множественного, и тогда уехала прямо в приложение.
+ * Немецкие множественные на гласную кончаются только на -e, а она -n как раз берёт
+ * («die Tage» → «den Tagen»), поэтому исключение безопасно.
+ */
 function dativePl(n: Noun): string | null {
   if (n.dpl) return n.dpl
   if (!n.pl) return null
-  return endsAny(n.pl, ['n', 's']) ? n.pl : `${n.pl}n`
+  return endsAny(n.pl, ['n', 's', 'a', 'i', 'o', 'u']) ? n.pl : `${n.pl}n`
 }
 
 export function nounForm(n: Noun, c: Case, num: Num = 'sg'): string | null {

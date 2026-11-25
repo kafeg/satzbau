@@ -168,6 +168,23 @@ describe('родительный против UniMorph', () => {
     expect(nounForm(noun('Kind'), 'gen')).toBe('Kindes')
     expect(nounForm(noun('Fahrer'), 'gen')).toBe('Fahrers')
   })
+
+  /**
+   * ⚠ Находка жила латентно: шаблонов на дательный множественного не было, и правило
+   * «-n всему, что не на n/s» никого не трогало. Как только рамка появилась, в приложение
+   * уехали «Mit guten Visan» и «Mit guten Skin». Тест стоит, чтобы латентной она больше
+   * не была: заимствованные множественные на гласную -n не берут, немецкие на -e берут.
+   */
+  it('дательный множественного: заимствованные на гласную не получают -n', () => {
+    const noun = (w: string) => bundle.nouns.find((n) => n.w === w)!
+    for (const w of ['Visum', 'Ski', 'Kilo', 'Praktikum']) {
+      expect(nounForm(noun(w), 'dat', 'pl')).toBe(noun(w).pl)
+    }
+    expect(nounForm(noun('Tag'), 'dat', 'pl')).toBe('Tagen')
+    expect(nounForm(noun('Kind'), 'dat', 'pl')).toBe('Kindern')
+    expect(nounForm(noun('Auto'), 'dat', 'pl')).toBe('Autos')
+    expect(nounForm(noun('Frau'), 'dat', 'pl')).toBe('Frauen')
+  })
 })
 
 describe('трудные слова', () => {
