@@ -1738,10 +1738,10 @@ holidays:
     # A1 — что празднуют и чем
     - {w: Fest,          pos: n, lv: A1, tags: [abstract]}
     - {w: Feier,         pos: n, lv: A1, tags: [abstract]}
-    - {w: Weihnachten,   pos: n, lv: A1, tags: [abstract]}
-    - {w: Ostern,        pos: n, lv: A1, tags: [abstract]}
-    - {w: Silvester,     pos: n, lv: A1, tags: [abstract]}
-    - {w: Neujahr,       pos: n, lv: A1, tags: [abstract]}
+    - {w: Weihnachten,   pos: n, lv: A1, tags: [date, noart]}
+    - {w: Ostern,        pos: n, lv: A1, tags: [date, noart]}
+    - {w: Silvester,     pos: n, lv: A1, tags: [date, noart]}
+    - {w: Neujahr,       pos: n, lv: A1, tags: [date, noart]}
     - {w: Tradition,     pos: n, lv: A1, tags: [abstract]}
     - {w: Kerze,         pos: n, lv: A1, tags: [thing]}
     - {w: Torte,         pos: n, lv: A1, tags: [food]}
@@ -1795,7 +1795,7 @@ holidays:
     - {w: Lebkuchen,     pos: n, lv: B1, tags: [food]}
     - {w: Konfetti,      pos: n, lv: B1, tags: [thing]}
     - {w: Tracht,        pos: n, lv: B1, tags: [thing]}
-    - {w: Pfingsten,     pos: n, lv: B1, tags: [abstract]}
+    - {w: Pfingsten,     pos: n, lv: B1, tags: [date, noart]}
     - {w: Fastenzeit,    pos: n, lv: B1, tags: [time]}
     - {w: Gästeliste,    pos: n, lv: B1, tags: [document]}
     - {w: Gastgeberin,   pos: n, lv: B1, tags: [person]}
