@@ -136,7 +136,7 @@ h1 {
    блока. Блок без собственного margin прилипал к соседу вплотную, и каждый такой
    случай ловился глазами по одному: чипы срезов на списке ошибок, строка темы на
    своде, карточки слов на кнопке. Селектор с `main` нарочно: он перебивает
-   `margin: 0` у списков (.groups, .mistakes, .counts), которым этот ноль нужен
+   `margin: 0` у списков (.groups, .mistakes, .stats), которым этот ноль нужен
    против браузерных отступов, а не как решение о вёрстке.
    На дрилле и экране итога правила нет: там отступы выверены по месту. */
 main.home > * + * {
@@ -428,8 +428,10 @@ body:has(.tabs) #root {
   background: var(--press);
 }
 
-/* ---------- свод прогресса ---------- */
-.counts {
+/* ---------- свод прогресса ----------
+   ⚠ Класс называется .stat, а не .count: .count уже занят счётчиком заданий
+   в шапке дрилла, и плитка со своей рамкой и тенью доставалась ему тоже. */
+.stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--s2);
@@ -438,8 +440,8 @@ body:has(.tabs) #root {
   padding: 0;
 }
 
-.count,
-.cbtn {
+.stat,
+.sbtn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -448,7 +450,7 @@ body:has(.tabs) #root {
   padding: var(--s3) var(--s1);
 }
 
-.count {
+.stat {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--r-m);
@@ -457,45 +459,45 @@ body:has(.tabs) #root {
 }
 
 /* в разделе «Прогресс» число — ещё и выбор списка под ним: кнопка занимает всю плитку */
-.count:has(.cbtn) {
+.stat:has(.sbtn) {
   padding: 0;
 }
 
-.cbtn {
+.sbtn {
   width: 100%;
   background: none;
   border: 0;
   color: inherit;
 }
 
-.cbtn.on {
+.sbtn.on {
   background: var(--accent-soft);
 }
 
-.cbtn:active {
+.sbtn:active {
   background: var(--press);
 }
 
-.count .cn {
+.stat .sn {
   font-size: var(--fs-mono-l);
   line-height: 1;
 }
 
-.count .clabel {
+.stat .slabel {
   font-size: var(--fs-caption);
   color: var(--text-2);
   text-align: center;
 }
 
-.count.due .cn {
+.stat.due .sn {
   color: var(--orange-fg);
 }
 
-.count.solid .cn {
+.stat.solid .sn {
   color: var(--blue-fg);
 }
 
-.count.new .cn {
+.stat.new .sn {
   color: var(--text-2);
 }
 
@@ -857,27 +859,33 @@ body:has(.tabs) #root {
 
 header .row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: var(--s2);
-  margin-top: var(--s2);
+  min-height: 44px;
 }
 
-/* имя правила — короткое (поле name), поэтому и помещается в чип */
-header .row .chip {
+/* ⚠ Имя правила — ПОДПИСЬ, а не элемент управления. Чип во всю ширину был белой
+   плашкой с рамкой: по весу он спорил с самой фразой задания, а нажать его нельзя. */
+header .rule-name {
   flex: 1;
   min-width: 0;
-  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 32px;
-  padding: 0 var(--s3);
-}
-
-.count {
   font-size: var(--fs-sub);
   color: var(--text-2);
+}
+
+header .count {
+  font-size: var(--fs-sub);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
+/* полоса под строкой, а не над ней: так она читается как прогресс этой сессии,
+   а не как отдельная деталь, висящая у края экрана */
+header .bar {
+  margin-top: var(--s2);
 }
 
 /* ---------- задание ---------- */

@@ -58,19 +58,19 @@ export function Drill({
   return (
     <>
       <header>
-        <div className="bar">
-          <div className="fill" style={{ width: `${(n / total) * 100}%` }} />
-        </div>
         <div className="row">
           <button className="back" onClick={() => go(back)} aria-label="назад">
             ←
           </button>
-          <span className="chip">
+          <span className="rule-name">
             {rule ? getBundle().explain[rule]?.name : `${theme} · ${item.level}`}
           </span>
           <span className="count mono">
             {n} / {total}
           </span>
+        </div>
+        <div className="bar">
+          <div className="fill" style={{ width: `${(n / total) * 100}%` }} />
         </div>
       </header>
 

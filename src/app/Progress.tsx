@@ -103,12 +103,12 @@ export function Progress({
       <h1>Прогресс</h1>
 
       {/* четыре числа и есть навигация: за каждым список правил в этом состоянии */}
-      <ul className="counts">
+      <ul className="stats">
         {SUMMARY.map(([key, label]) => (
-          <li key={key} className={`count ${key}`}>
-            <button className={`cbtn${state === key ? ' on' : ''}`} onClick={() => setPicked(key)}>
-              <span className="cn mono">{all.filter((r) => r.state === key).length}</span>
-              <span className="clabel">{label}</span>
+          <li key={key} className={`stat ${key}`}>
+            <button className={`sbtn${state === key ? ' on' : ''}`} onClick={() => setPicked(key)}>
+              <span className="sn mono">{all.filter((r) => r.state === key).length}</span>
+              <span className="slabel">{label}</span>
             </button>
           </li>
         ))}

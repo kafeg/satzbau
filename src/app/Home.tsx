@@ -76,11 +76,11 @@ export function Home({ level, cards, theme }: { level?: Level; cards: Cards; the
 
       {/* где я одной строкой: четыре числа не растут вместе с числом правил,
           а списки за ними лежат в разделе «Прогресс» */}
-      <ul className="counts">
+      <ul className="stats">
         {SUMMARY.map(([key, label]) => (
-          <li key={key} className={`count ${key}`}>
-            <span className="cn mono">{all.filter((r) => r.state === key).length}</span>
-            <span className="clabel">{label}</span>
+          <li key={key} className={`stat ${key}`}>
+            <span className="sn mono">{all.filter((r) => r.state === key).length}</span>
+            <span className="slabel">{label}</span>
           </li>
         ))}
       </ul>
