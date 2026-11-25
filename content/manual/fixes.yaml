@@ -118,6 +118,12 @@ gender:
   Teil:    {g: n, note: "das Teil — деталь; der Teil — часть целого"}
   Band:    {g: n, note: "das Band — лента; die Band — группа; der Band — том книги"}
   Kunde:   {g: m, note: "der Kunde — клиент; die Kunde — весть"}
+  Gang:    {g: m, note: "der Gang — передача, коридор; die Gang — банда"}
+  Hut:     {g: m, note: "der Hut — шляпа; die Hut — попечение"}
+  Mangel:  {g: m, note: "der Mangel — нехватка; die Mangel — каток для белья"}
+  See:     {g: m, note: "der See — озеро; die See — море"}
+  Tor:     {g: n, note: "das Tor — ворота, гол; der Tor — глупец"}
+  Post:    {g: f, note: "die Post — почта; der Post — должность, запись"}
   Messer:  {g: n, note: "das Messer — нож; der Messer — тот, кто измеряет"}
   Reis:    {g: m, note: "der Reis — рис; das Reis — побег, ветка"}
   Pfand:   {g: n, note: "das Pfand — залог за тару"}
@@ -393,18 +399,66 @@ plural:
 # ⚠ Поле `g_alt` источника для этого не годится: там же рядом стоят диалектные
 # и чужие значения (Eimer m/f, Hase m/f, Kiste f/m), а спорных там 57 вместо этих.
 gender_also:
-  Laptop:     n     # der Laptop (осн.) и das Laptop
-  Podcast:    n
-  Meter:      n
-  Liter:      n
-  Kilometer:  n
-  Millimeter: n
-  Hektar:     m
-  Kilo:       m
-  Haarspray:  n
-  Ersatzteil: m
-  Kredit:     n     # das Kredit — австрийский стандарт
-  Drittel:    m
+  Laptop:       n     # der Laptop (осн.) и das Laptop
+  Podcast:      n
+  Haarspray:    n
+  Ersatzteil:   m
+  Spam:         m
+  Yoga:         n
+  Radio:        m     # das в Германии, der в Австрии и Швейцарии
+  Kredit:       n     # das Kredit — австрийский стандарт
+  Drittel:      m
+  # ⚠ Меры спорят всей семьёй, по одному их брать нельзя: Zentimeter, Quadratmeter
+  # и Kubikmeter остались снаружи, когда список писался по памяти, а не по лексикону
+  Meter:        n
+  Zentimeter:   n
+  Millimeter:   n
+  Kilometer:    n
+  Quadratmeter: n
+  Kubikmeter:   n
+  Liter:        n
+  Hektar:       m
+  Kilo:         m
+  Zehntel:      m     # та же семья долей, что Drittel и Achtel: das (осн.), der в Швейцарии
+  Puder:        n     # der Puder (осн.), das Puder
+  Spachtel:     f     # der Spachtel (инструмент), die Spachtel
+  Vokabel:      n     # die Vokabel (осн.), das Vokabel в Австрии
+
+# Источник спорит о роде, а род один: редкое значение, диалект или чужая часть речи
+# в той же строке. Проверено по одному; список нужен, чтобы сборка не спрашивала о них
+# заново и чтобы было видно, что их СМОТРЕЛИ, а не пропустили.
+gender_single:
+  - Alter        # das Alter — возраст; «der Alte» это другое слово
+  - Boot
+  - Eimer
+  - Euro
+  - Grad
+  - Haar
+  - Hantel
+  - Hase
+  - Kiste
+  - Kompromiss
+  - Laden
+  - Latte
+  - Loch
+  - Luft
+  - Matte
+  - Mittag
+  - Mode
+  - Monat
+  - Morgen       # der Morgen — утро; «das Morgen» это книжное «завтра»
+  - Nebel
+  - Neffe
+  - Quadrat
+  - Rohr
+  - Rolle
+  - Sieg
+  - Staffel
+  - Tag
+  - Wetter
+  - Wolf
+  - Zelt
+  - Zoll         # der Zoll и о пошлине, и о дюйме
 
 # Второе принятое множественное. Показываем одно, засчитываем оба: заимствования
 # на -on/-üm/-a держат и немецкое, и исходное окончание, и обе формы в словаре.

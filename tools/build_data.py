@@ -137,6 +137,15 @@ def build_noun(w, lemma, GN, K, ru, fixes, rep):
         g = fix['g']
     elif g_alt:
         rep.append((lemma, f'род спорный {g}/{"/".join(g_alt)} — решение в fixes.yaml:gender'))
+    # ⚠ Источник спорит о роде и там, где решение уже принято: `gender` выбирает значение
+    # омонима, а `gender_also` говорит «у этого слова приняты ОБА рода», и тогда задание
+    # «der, die или das» слово не берёт. Список писался руками и оказался неполон на целую
+    # семью: Meter был, Zentimeter и Quadratmeter — нет. Поэтому спрашиваем про каждое.
+    # Решение «это омоним, значение выбрано» уже записано в `gender` — такие не трогаем.
+    if (g_alt and lemma not in fixes['gender_also'] and lemma not in fixes['gender']
+            and lemma not in fixes['gender_single']):
+        rep.append((lemma, f'источник допускает и {"/".join(g_alt)}: если оба рода приняты — '
+                           'строка в fixes.yaml:gender_also, иначе решение в gender'))
     if lemma in fixes['gender_also']:
         n_g2 = fixes['gender_also'][lemma]
         if n_g2 == g:
@@ -566,6 +575,7 @@ def main():
                  plural=fx.get('plural') or {},
                  plural_also=fx.get('plural_also') or {},
                  gender_also=fx.get('gender_also') or {},
+                 gender_single=set(fx.get('gender_single') or []),
                  participle_also=fx.get('participle_also') or {},
                  n_declension=fx.get('n_declension') or {},
                  pl_only_extra=set(fx.get('pl_only_extra') or []),

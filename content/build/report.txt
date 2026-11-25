@@ -1,8 +1,8 @@
-сборка 2026-11-25, версия данных 7bc4df7203d1
+сборка 2026-11-25, версия данных b40e85b8efae
 
 слов в themes.yaml: 2675; собрано: 2675; потеряно: 0
 
-замечания (80):
+замечания (74):
   Alter                  род спорный n/m — решение в fixes.yaml:gender
   Boot                   род спорный n/m — решение в fixes.yaml:gender
   Butter                 нет множественного
@@ -11,14 +11,12 @@
   Ersatzteil             fixes.yaml:gender_also повторяет основной род m
   Ersatzteil             род спорный m/n — решение в fixes.yaml:gender
   Euro                   род спорный m/f — решение в fixes.yaml:gender
-  Gang                   род спорный m/f — решение в fixes.yaml:gender
   Grad                   род спорный m/n — решение в fixes.yaml:gender
   Haar                   род спорный n/f — решение в fixes.yaml:gender
   Haarspray              род спорный m/n — решение в fixes.yaml:gender
   Hantel                 род спорный f/n — решение в fixes.yaml:gender
   Hase                   род спорный m/f — решение в fixes.yaml:gender
   Hektar                 род спорный n/m — решение в fixes.yaml:gender
-  Hut                    род спорный m/f — решение в fixes.yaml:gender
   Kilo                   род спорный n/m — решение в fixes.yaml:gender
   Kilometer              род спорный m/n — решение в fixes.yaml:gender
   Kiste                  род спорный f/m — решение в fixes.yaml:gender
@@ -30,7 +28,6 @@
   Liter                  род спорный m/n — решение в fixes.yaml:gender
   Loch                   род спорный n/m — решение в fixes.yaml:gender
   Luft                   род спорный f/m — решение в fixes.yaml:gender
-  Mangel                 род спорный m/f — решение в fixes.yaml:gender
   Matte                  род спорный f/n — решение в fixes.yaml:gender
   Meter                  род спорный m/n — решение в fixes.yaml:gender
   Millimeter             род спорный m/n — решение в fixes.yaml:gender
@@ -41,19 +38,16 @@
   Nebel                  род спорный m/f — решение в fixes.yaml:gender
   Neffe                  род спорный m/f — решение в fixes.yaml:gender
   Podcast                род спорный m/n — решение в fixes.yaml:gender
-  Post                   род спорный f/m — решение в fixes.yaml:gender
   Puder                  род спорный m/n — решение в fixes.yaml:gender
   Quadrat                род спорный n/m — решение в fixes.yaml:gender
   Radio                  род спорный n/m — решение в fixes.yaml:gender
   Rohr                   род спорный n/f — решение в fixes.yaml:gender
   Rolle                  род спорный f/m/n — решение в fixes.yaml:gender
-  See                    род спорный m/f — решение в fixes.yaml:gender
   Sieg                   род спорный m/f — решение в fixes.yaml:gender
   Spachtel               род спорный m/f — решение в fixes.yaml:gender
   Spam                   род спорный n/m/f — решение в fixes.yaml:gender
   Staffel                род спорный f/m — решение в fixes.yaml:gender
   Tag                    род спорный m/n — решение в fixes.yaml:gender
-  Tor                    род спорный n/m — решение в fixes.yaml:gender
   Vokabel                род спорный f/n — решение в fixes.yaml:gender
   Wetter                 род спорный n/m — решение в fixes.yaml:gender
   Wolf                   род спорный m/f — решение в fixes.yaml:gender
@@ -141,12 +135,12 @@
 размеры:
   adjs.json         n=355        23.0 КиБ   gzip     5.9 КиБ
   explain.json      n=44         54.5 КиБ   gzip    14.2 КиБ
-  nouns.json        n=1836      156.6 КиБ   gzip    36.1 КиБ
+  nouns.json        n=1836      156.7 КиБ   gzip    36.1 КиБ
   sentences.json    n=6197      679.0 КиБ   gzip   202.0 КиБ
   templates.json    n=119        35.8 КиБ   gzip     4.1 КиБ
   themes.json       n=31        154.4 КиБ   gzip    19.6 КиБ
   verbs.json        n=484        75.6 КиБ   gzip    17.3 КиБ
-  ИТОГО                      1178.9 КиБ   gzip   299.1 КиБ
+  ИТОГО                      1179.0 КиБ   gzip   299.1 КиБ
 
 предложения Tatoeba, отбраковка:
   незнакомая словоформа      105285
