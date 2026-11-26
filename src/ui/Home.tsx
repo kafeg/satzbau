@@ -45,9 +45,8 @@ export function Home({ level, theme, ov, each, onPick, onProgress, onStart, onUp
           <Brand />
         </h1>
         <button className="flt" onClick={onPick} aria-label={`Что учим: ${level}, ${theme}`}>
-          <span>
-            <b>{level}</b> · {theme}
-          </span>
+          <span className="lv">{level}</span>
+          <span className="t">{theme}</span>
         </button>
         <button className="ico wide" onClick={onProgress} aria-label="Прогресс">
           <ProgressIcon />

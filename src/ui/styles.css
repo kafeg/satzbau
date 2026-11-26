@@ -173,31 +173,36 @@ main.home > * + * {
 .flt {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--s2);
   min-width: 0;
-  max-width: 60%;
-  min-height: 40px;
-  padding: 0 12px 0 14px;
+  max-width: 64%;
+  min-height: 44px;
+  padding: 4px var(--s4) 4px 4px;
   border-radius: var(--r-pill);
   border: 1px solid var(--line-strong);
   background: var(--surface);
   font-weight: 600;
 }
 
-.flt span {
+.flt:active {
+  background: var(--press);
+}
+
+/* уровень плашкой, тема рядом; стрелки нет — пилюля с рамкой и так кнопка */
+.flt .lv {
+  flex: none;
+  padding: 5px 10px;
+  border-radius: var(--r-pill);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: var(--fs-body);
+}
+
+.flt .t {
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.flt b {
-  color: var(--accent);
-}
-
-.flt::after {
-  content: '▾';
-  font-size: 11px;
-  color: var(--text-2);
 }
 
 .ico {
@@ -205,8 +210,8 @@ main.home > * + * {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
   background: var(--surface);
