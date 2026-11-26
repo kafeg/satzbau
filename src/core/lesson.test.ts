@@ -64,15 +64,16 @@ test('лимит новых — общий на все упражнения', ()
 const all = () => true
 const none = () => false
 
-test('подачи: новые — основной; повтор — по кругу по числу ответов, phrase — только если есть фраза', () => {
-  // W00 отвечен раз, W01 — дважды: у первого подача по кругу вторая, у второго — снова основная
-  const m = replay([a(0, 0), a(1, 0), a(1, 0, T0 + DAY)])
-  const cards = build(overview(words.slice(0, 3), [gender], m, T0 + 3 * DAY), keep)
+test('подачи: новые — основной; повтор — основной каждый третий, иначе во фразе, если есть фраза', () => {
+  // W00 отвечен раз, W01 — дважды, W02 — трижды, W03 — новое
+  const m = replay([a(0, 0), a(1, 0), a(1, 0, T0 + DAY), a(2, 0), a(2, 0, T0 + DAY), a(2, 0, T0 + 2 * DAY)])
+  const cards = build(overview(words.slice(0, 4), [gender], m, T0 + 4 * DAY), keep)
   const how = (ss: ReturnType<typeof steps>, l: string) => ss.find((s) => s.cards[0]!.word.lemma === l)!.how
   const ss = steps(cards, m, all)
   expect(how(ss, 'W00')).toBe('phrase')
-  expect(how(ss, 'W01')).toBe('word')
+  expect(how(ss, 'W01')).toBe('phrase')
   expect(how(ss, 'W02')).toBe('word')
+  expect(how(ss, 'W03')).toBe('word')
   expect(how(steps(cards, m, none), 'W00')).toBe('word')
 })
 

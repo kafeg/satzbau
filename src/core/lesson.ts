@@ -76,8 +76,8 @@ export function build(o: Overview, rnd: () => number = Math.random, extra = 0, s
 }
 
 // Подачи урока (docs/app.md, «Подача»): новые — основной; SORT и больше повторов упражнения с sort —
-// SORT из них одной раскладкой; остальные повторы — по кругу по числу ответов среди подач, доступных
-// карточке. can — есть ли для неё данные (фраза для phrase); основная доступна всегда.
+// SORT из них одной раскладкой; у остальных повторов основная — каждый третий, в другие разы — другие
+// подачи, доступные карточке, по кругу. can — есть ли для неё данные (фраза для phrase).
 export function steps(cards: Card[], m: Memory, can: (how: How, c: Card) => boolean): Step[] {
   const sorts = new Map<AnyExercise, Step>()
   for (const ex of new Set(cards.map((c) => c.ex))) {
@@ -92,8 +92,9 @@ export function steps(cards: Card[], m: Memory, can: (how: How, c: Card) => bool
       continue
     }
     const [main] = c.ex.hows
-    const hows = c.fresh ? [main!] : c.ex.hows.filter((h) => h === main || (h !== 'sort' && can(h, c)))
-    out.push({ how: hows[reps(m, c.ex.id, c.word.id) % hows.length]!, cards: [c], retry: false })
+    const others = c.fresh ? [] : c.ex.hows.filter((h) => h !== main && h !== 'sort' && can(h, c))
+    const r = reps(m, c.ex.id, c.word.id)
+    out.push({ how: others.length === 0 || r % 3 === 0 ? main! : others[r % others.length]!, cards: [c], retry: false })
   }
   return out
 }
