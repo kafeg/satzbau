@@ -1038,7 +1038,7 @@
   ru: образование
   en: formation, creation
   freq: 7000
-  level: B1
+  level: null
   decided: {}
   skip: {}
 - id: n:Bildung:2
@@ -1050,7 +1050,7 @@
   ru: образование
   en: education, cultivation
   freq: 7000
-  level: null
+  level: B1
   decided: {}
   skip: {}
 - id: n:Binnenland

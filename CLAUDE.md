@@ -28,7 +28,7 @@ v2 строится с модели данных; v1 заморожена в в�
 | скачать источники | `.venv/bin/python -I tools/fetch.py` — в `data/raw/`, по `sources.lock`; большие — в 8 соединений |
 | импорт существительных | `.venv/bin/python -I tools/import_nouns.py` — ⚠ перезаписывает `words/nouns` и стирает решения `decided`: **сейчас не запускать** |
 | темы | `.venv/bin/python -I tools/import_themes.py` — ⚠ перезаписывает `themes/`: после ручных правок не запускать |
-| фразы | `.venv/bin/python -I tools/import_sentences.py` (`--no-nlp` — только отбор, без разметки) |
+| фразы | `.venv/bin/python -I tools/import_sentences.py` (`--no-nlp` — только отбор, без разметки; `--relink` — заново привязать токены к словам по готовой разметке, без spaCy: после правок слов и правила привязки) |
 | проверка | `.venv/bin/python -I tools/verify.py` (`-v` — все ошибки) |
 | база приложения | `npm run data` → `build/satzbau.sqlite` и `.gz` (нужен только PyYAML: системный `python3` без него — `.venv/bin/python -I tools/build.py`) |
 | приложение | `npm ci`, `npm run dev` (http://localhost:5173/satzbau/); `npm run check` — типы и тесты, тесты базы требуют `npm run data` |

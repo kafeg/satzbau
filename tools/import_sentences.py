@@ -9,6 +9,8 @@
 
   python3 -I tools/import_sentences.py            всё
   python3 -I tools/import_sentences.py --no-nlp   без разметки: только отбор (для замеров)
+  python3 -I tools/import_sentences.py --relink   только заново привязать токены к записям слов
+                                                  по готовой разметке в sentences/tatoeba (без spaCy)
 """
 import bz2, collections, glob, gzip, json, os, re, sys, tarfile
 
@@ -96,32 +98,69 @@ def stem(x):
     return srcs.norm(x)[:max(3, len(x) - 2)]
 
 
-def in_translation(w, tr):
-    """Есть ли в человеческом переводе фразы перевод этой записи (по основе: «матери» ~ «мать»)."""
+def in_translation(w, tr, lang):
+    """Есть ли в человеческом переводе фразы на lang перевод этой записи (по основе: «матери» ~ «мать»)."""
     words = set(re.findall(r'\w+', tr.lower().replace('ё', 'е')))
-    return any(any(t.startswith(stem(x)) for t in words)
-               for lang in ('ru', 'en') for x in srcs.ru_items(w.get(lang) or '') if ' ' not in x)
+    return any(any(t.startswith(stem(x)) for t in words) for x in srcs.ru_items(w.get(lang) or '') if ' ' not in x)
 
 
 def link(cands, text, morph, tr):
-    """Запись слова для токена: на неё указывают род, форма множественного, перевод фразы; иначе '?'."""
+    """Запись слова для токена: на неё указывают род, форма множественного, перевод фразы; иначе '?'.
+
+    tr — человеческие переводы фразы {язык: текст}. Языки проверяются по очереди, русский первым:
+    английская глосса склеивает омонимы (Bus «автобус» и Bus «магистраль» — оба bus), русская — нет.
+    """
     if len(cands) < 2:
         return cands[0]['id'] if cands else None
     g = GENDER.get(morph.get('Gender')[0]) if morph.get('Gender') else None
     xs = [w for w in cands if g in w.get('gender', [])] if g else cands
     if 'Plur' in morph.get('Number') and len(xs) > 1:
         xs = [w for w in xs if text in w.get('plural', [])] or xs
-    if len(xs) > 1:
-        xs = [w for w in xs if in_translation(w, tr)] or xs
+    for lang in ('ru', 'en'):
+        if len(xs) > 1 and tr.get(lang):
+            xs = [w for w in xs if in_translation(w, tr[lang], lang)] or xs
     return xs[0]['id'] if len(xs) == 1 else '?'
 
 
-def candidates(t, p, words, forms):
-    hit = words.get((t.lemma_, p)) or words.get((t.text, p))
+def candidates(text, lemma, p, words, forms):
+    hit = words.get((lemma, p)) or words.get((text, p))
     if hit:
         return hit
     pos = {'n': 'noun', 'v': 'verb', 'a': 'adj'}[p]
-    return [w for l, lp in forms.get(t.text, []) if lp == pos for w in words.get((l, p), [])]
+    return [w for l, lp in forms.get(text, []) if lp == pos for w in words.get((l, p), [])]
+
+
+class Morph(dict):
+    """Морфология из строки разметки «Case=Nom|Number=Sing» с тем же get, что у spaCy."""
+    def __init__(self, s):
+        super().__init__(kv.split('=', 1) for kv in s.split('|') if '=' in kv)
+
+    def get(self, k):
+        v = dict.get(self, k)
+        return v.split(',') if v else []
+
+
+def relink(words, forms):
+    """Новые ссылки токенов по готовой разметке: меняется только последнее поле токена."""
+    changed = collections.Counter()
+    for p in sorted(glob.glob(os.path.join(ROOT, 'sentences', 'tatoeba', '*.jsonl'))):
+        out = []
+        for line in open(p, encoding='utf-8'):
+            s = json.loads(line)
+            human = {lang: s[lang] for lang in ('ru', 'en') if str(s.get(f'{lang}_by', '')).startswith('tatoeba:')}
+            for t in s['tok']:
+                text, lemma, upos, morph, ref = t
+                q = UPOS.get(upos)
+                new = link(candidates(text, lemma, q, words, forms), text, Morph(morph), human) if q else None
+                if new != ref:
+                    changed[(ref == '?', new == '?')] += 1
+                    t[4] = new
+            out.append(s)
+        with open(p, 'w', encoding='utf-8') as f:
+            for s in out:
+                f.write(json.dumps(s, ensure_ascii=False, separators=(',', ':')) + '\n')
+    print(f'ссылок изменено: {sum(changed.values())}; ? → запись: {changed[(True, False)]}, '
+          f'запись → ?: {changed[(False, True)]}, запись → другая: {changed[(False, False)]}')
 
 
 def annotate(de, ids, words, forms, human):
@@ -135,7 +174,7 @@ def annotate(de, ids, words, forms, human):
             if t.is_space:
                 continue
             p = UPOS.get(t.pos_)
-            ref = link(candidates(t, p, words, forms), t.text, t.morph, human(sid)) if p else None
+            ref = link(candidates(t.text, t.lemma_, p, words, forms), t.text, t.morph, human(sid)) if p else None
             toks.append([t.text, t.lemma_, t.pos_, str(t.morph), ref])
         out[sid] = toks
         if n % 2000 == 0:
@@ -150,6 +189,8 @@ def main():
     with gzip.open(os.path.join(srcs.WORK, 'ranks.json.gz'), 'rt', encoding='utf-8') as f:
         ranks = json.load(f)
     words = load_words()
+    if '--relink' in sys.argv:
+        return relink(words, forms)
     de, ru, en = sentences('deu_sentences.tsv.bz2'), sentences('rus_sentences.tsv.bz2'), sentences('eng_sentences.tsv.bz2')
     print(f'Tatoeba: de {len(de)}, ru {len(ru)}, en {len(en)}', flush=True)
     tr = links(de, ru, en)
@@ -160,7 +201,7 @@ def main():
     if not nlp:
         return
     def human(sid):
-        return ' '.join(pool[tr[lang][sid]] for lang, pool in (('ru', ru), ('en', en)) if sid in tr[lang])
+        return {lang: pool[tr[lang][sid]] for lang, pool in (('ru', ru), ('en', en)) if sid in tr[lang]}
     tok = annotate(de, chosen, words, forms, human)
     llm = {}
     for p in glob.glob(os.path.join(ROOT, 'sentences', 'llm', '*.jsonl')):
