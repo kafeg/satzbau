@@ -12,12 +12,12 @@ export type Parse = Pl & { at: number; tail: number }
 
 const UML: Record<string, string> = { a: 'ä', o: 'ö', u: 'ü', A: 'Ä', O: 'Ö', U: 'Ü' }
 
-// варианты основы с одним умлаутом; au → äu
+// варианты основы с одним умлаутом; au → äu, а u в eu и äu не умлаутируется (Freund → Freunde)
 function umlauted(lemma: string): [string, number][] {
   const out: [string, number][] = []
   for (let i = 0; i < lemma.length; i++) {
     const u = UML[lemma[i]!]
-    if (!u || (lemma[i - 1] === 'a' && lemma[i] === 'u')) continue
+    if (!u || (lemma[i] === 'u' && /[aeä]/i.test(lemma[i - 1] ?? ''))) continue
     out.push([lemma.slice(0, i) + u + lemma.slice(i + 1), i])
   }
   return out

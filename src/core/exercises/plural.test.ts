@@ -45,6 +45,8 @@ test('умлаут возможен только при a, o, u в основе'
   expect(canUmlaut('Tisch')).toBe(false)
   expect(canUmlaut('Haus')).toBe(true)
   expect(canUmlaut('Ärztin')).toBe(false)
+  expect(canUmlaut('Freund')).toBe(false)
+  expect(canUmlaut('Eule')).toBe(false)
 })
 
 test('варианты: восемь типов, умлаутные — только если в слове есть a, o, u', () => {
