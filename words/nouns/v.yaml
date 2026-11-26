@@ -7,7 +7,6 @@
   en: Valentine's Day, Saint Valentine's Day
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vater
@@ -19,7 +18,6 @@
   en: father, daddy
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vati
@@ -31,7 +29,6 @@
   en: daddy
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verabredung
@@ -43,7 +40,6 @@
   en: appointment, date
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Veranstaltung
@@ -55,7 +51,6 @@
   en: organizing
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verantwortung
@@ -67,7 +62,6 @@
   en: responsibility
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verband
@@ -79,7 +73,6 @@
   en: association
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verbandskasten
@@ -91,7 +84,6 @@
   en: first aid kit
   freq: 37000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Verbindung
@@ -103,7 +95,6 @@
   en: connection, bond
   freq: 1000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verbot
@@ -115,7 +106,6 @@
   en: prohibition, restriction
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verdacht
@@ -127,7 +117,6 @@
   en: suspicion
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verdopplung
@@ -139,7 +128,6 @@
   en: doubling
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verein
@@ -151,7 +139,6 @@
   en: association, club
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verfassung
@@ -163,7 +150,6 @@
   en: constitution, state
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vergleich
@@ -175,7 +161,6 @@
   en: comparison
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vergnügen
@@ -187,7 +172,6 @@
   en: pleasure, fun
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verhandlung
@@ -199,7 +183,6 @@
   en: trial
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verhältnis
@@ -211,7 +194,6 @@
   en: relation
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verkehrskontrolle
@@ -223,7 +205,6 @@
   en: traffic stop
   freq: 34000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Verkäufer
@@ -235,7 +216,6 @@
   en: seller, vendor
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verkäuferin
@@ -247,7 +227,6 @@
   en: seller
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verlag
@@ -259,7 +238,6 @@
   en: publishing company
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verletzung
@@ -271,7 +249,6 @@
   en: injury, wound
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verlängerung
@@ -283,7 +260,6 @@
   en: lengthening, prolongation
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vermieter
@@ -295,7 +271,6 @@
   en: landlord
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vermieterin
@@ -307,7 +282,6 @@
   en: landlady
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vermittler
@@ -319,7 +293,6 @@
   en: mediator, arbitrator
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vermutung
@@ -331,7 +304,6 @@
   en: guess, supposition
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vermögen
@@ -343,7 +315,6 @@
   en: capability
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vernunft
@@ -355,7 +326,6 @@
   en: reason, good sense
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verordnung
@@ -367,7 +337,6 @@
   en: regulation, statutory instrument
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verpflegung
@@ -379,7 +348,6 @@
   en: catering
   freq: 15000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Versand
@@ -391,7 +359,6 @@
   en: dispatch, consignation
   freq: 41000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Versandkosten
@@ -403,7 +370,6 @@
   en: shipping costs, forwarding charges
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verschleiß
@@ -415,7 +381,6 @@
   en: wearout
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verschmutzung
@@ -427,7 +392,6 @@
   en: pollution
   freq: 27000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Versicherung
@@ -439,7 +403,6 @@
   en: insurance
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verspätung
@@ -451,7 +414,6 @@
   en: delay
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vertrag
@@ -463,7 +425,6 @@
   en: agreement, contract
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vertrauen
@@ -475,7 +436,6 @@
   en: trust, confidence
   freq: 500
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verwaltung
@@ -487,7 +447,6 @@
   en: administration
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verzug
@@ -499,7 +458,6 @@
   en: delay
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verzweiflung
@@ -511,7 +469,6 @@
   en: despair
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Verzögerung
@@ -523,7 +480,6 @@
   en: delay
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Veröffentlichung
@@ -535,7 +491,6 @@
   en: publication, release
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Video
@@ -547,7 +502,6 @@
   en: video
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Viertel
@@ -560,7 +514,6 @@
   en: quarter
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Viertel:2
@@ -572,7 +525,6 @@
   en: null
   freq: 5000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Virus
@@ -584,7 +536,6 @@
   en: virus
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Visum
@@ -596,7 +547,6 @@
   en: visa
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vogel
@@ -608,7 +558,6 @@
   en: bird, fowl
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vokabel
@@ -620,7 +569,6 @@
   en: word, vocabulary
   freq: 40000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Volk
@@ -632,7 +580,6 @@
   en: people, folk
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Volksabstimmung
@@ -644,7 +591,6 @@
   en: referendum
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Volksfest
@@ -656,7 +602,6 @@
   en: fair, folk festival
   freq: 37000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Volleyball
@@ -668,7 +613,6 @@
   en: volleyball
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vollmacht
@@ -680,7 +624,6 @@
   en: power of attorney, proxy
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vollzeit
@@ -692,7 +635,6 @@
   en: full time
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Volumen
@@ -704,7 +646,6 @@
   en: volume
   freq: 35000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorbehalt
@@ -716,7 +657,6 @@
   en: caveat, reservation
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorderrad
@@ -728,7 +668,6 @@
   en: front wheel
   freq: 44000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorfall
@@ -740,7 +679,6 @@
   en: incident
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorhersage
@@ -752,7 +690,6 @@
   en: prediction
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorlesung
@@ -764,7 +701,6 @@
   en: lecture
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorname
@@ -776,7 +712,6 @@
   en: given name, first name
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorort
@@ -788,7 +723,6 @@
   en: suburb, outskirts
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorschlag
@@ -800,7 +734,6 @@
   en: proposal, suggestion
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorschrift
@@ -812,7 +745,6 @@
   en: rule, regulation
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorschule
@@ -824,7 +756,6 @@
   en: preschool, infant school
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorsorge
@@ -836,7 +767,6 @@
   en: precaution, foresight
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorspeise
@@ -848,7 +778,6 @@
   en: appetizer, starter
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorstellungsgespräch
@@ -860,7 +789,6 @@
   en: interview, job interview
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorteil
@@ -872,7 +800,6 @@
   en: advantage, benefit
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vortrag
@@ -884,7 +811,6 @@
   en: talk, speech
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorurteil
@@ -896,7 +822,6 @@
   en: prejudice
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Vorwurf
@@ -908,6 +833,5 @@
   en: accusation
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}

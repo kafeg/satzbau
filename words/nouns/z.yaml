@@ -7,7 +7,6 @@
   en: number, figure
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zahn
@@ -19,7 +18,6 @@
   en: tooth
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zahnarzt
@@ -31,7 +29,6 @@
   en: dentist
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zahnbürste
@@ -43,7 +40,6 @@
   en: toothbrush
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zahnpasta
@@ -55,7 +51,6 @@
   en: toothpaste
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zahnseide
@@ -67,7 +62,6 @@
   en: dental floss
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zange
@@ -79,7 +73,6 @@
   en: pliers tongs pincers
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zaun
@@ -91,7 +84,6 @@
   en: fence
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zebra
@@ -104,7 +96,6 @@
   en: zebra
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zebra:2
@@ -116,7 +107,6 @@
   en: null
   freq: 10000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zebrastreifen
@@ -128,7 +118,6 @@
   en: zebra stripes
   freq: 48000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zehntel
@@ -140,7 +129,6 @@
   en: tenth
   freq: 28000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zehntel:2
@@ -152,7 +140,6 @@
   en: null
   freq: 28000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeit
@@ -164,7 +151,6 @@
   en: time
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeitpunkt
@@ -176,7 +162,6 @@
   en: moment
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeitraum
@@ -188,7 +173,6 @@
   en: period, space
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeitschrift
@@ -200,7 +184,6 @@
   en: magazine, journal
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeitumstellung
@@ -212,7 +195,6 @@
   en: time change
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeitung
@@ -224,7 +206,6 @@
   en: newspaper, paper
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeitzone
@@ -236,7 +217,6 @@
   en: time zone
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zelt
@@ -249,7 +229,6 @@
   en: tent
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zelt:2
@@ -261,7 +240,6 @@
   en: null
   freq: 8000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zelt:3
@@ -273,7 +251,6 @@
   en: null
   freq: 8000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zement
@@ -285,7 +262,6 @@
   en: cement
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zensur
@@ -297,7 +273,6 @@
   en: mark, grade
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zentimeter
@@ -309,7 +284,6 @@
   en: centimetre, centimeter
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zentrum
@@ -321,7 +295,6 @@
   en: centre, center
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeremonie
@@ -333,7 +306,6 @@
   en: ceremony
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zertifikat
@@ -345,7 +317,6 @@
   en: certificate
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeuge
@@ -357,7 +328,6 @@
   en: witness
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeugin
@@ -369,7 +339,6 @@
   en: witness
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zeugnis
@@ -381,7 +350,6 @@
   en: testimony
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ziege
@@ -393,7 +361,6 @@
   en: goat
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ziffer
@@ -405,7 +372,6 @@
   en: digit, numeral
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zimmer
@@ -417,7 +383,6 @@
   en: room, chamber
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zinnsoldat
@@ -429,7 +394,6 @@
   en: tin soldier
   freq: 49000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zins
@@ -441,7 +405,6 @@
   en: interest
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zinssatz
@@ -453,7 +416,6 @@
   en: interest rate, coupon
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zitrone
@@ -465,7 +427,6 @@
   en: lemon
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zoll
@@ -478,7 +439,6 @@
   en: customs, toll
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zoll:2
@@ -491,7 +451,6 @@
   en: inch
   freq: 10000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zollamt
@@ -503,7 +462,6 @@
   en: customs office, custom office
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zollstock
@@ -515,7 +473,6 @@
   en: folding rule
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zoo
@@ -527,7 +484,6 @@
   en: zoo
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zopf
@@ -539,7 +495,6 @@
   en: plait, braid
   freq: 16000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zucker
@@ -551,7 +506,6 @@
   en: sugar
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zufriedenheit
@@ -563,7 +517,6 @@
   en: satisfaction, content
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zug
@@ -575,7 +528,6 @@
   en: train
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zugang
@@ -587,7 +539,6 @@
   en: access
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zugeständnis
@@ -599,7 +550,6 @@
   en: concession
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zulassung
@@ -611,7 +561,6 @@
   en: admission, approval
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zuneigung
@@ -623,7 +572,6 @@
   en: affection
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zusage
@@ -635,7 +583,6 @@
   en: covenant, commitment
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zusammenhang
@@ -647,7 +594,6 @@
   en: coherence, context
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zuschauer
@@ -659,7 +605,6 @@
   en: spectator, viewer
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zuschlag
@@ -671,7 +616,6 @@
   en: surcharge, supplement
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zusteller
@@ -683,7 +627,6 @@
   en: deliveryman, delivery agent
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zustellerin
@@ -695,7 +638,6 @@
   en: delivery agent, deliveryman
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zustellung
@@ -707,7 +649,6 @@
   en: delivery, notification
   freq: 48000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zustimmung
@@ -719,7 +660,6 @@
   en: agreement, consent
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zuständigkeit
@@ -731,7 +671,6 @@
   en: responsibility, competence
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zutat
@@ -743,7 +682,6 @@
   en: ingredient
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zuwanderer
@@ -755,7 +693,6 @@
   en: newcomer
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zuwanderung
@@ -767,7 +704,6 @@
   en: immigration
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zweifel
@@ -779,7 +715,6 @@
   en: doubt
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zweifelsfall
@@ -791,7 +726,6 @@
   en: case of doubt
   freq: 33000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zweitsprache
@@ -803,7 +737,6 @@
   en: second language
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zwiebel
@@ -815,7 +748,6 @@
   en: onion
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zwilling
@@ -827,7 +759,6 @@
   en: twin
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zwischenlösung
@@ -839,7 +770,6 @@
   en: interim solution, temporary solution
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zwischenruf
@@ -851,7 +781,6 @@
   en: heckle, interjection
   freq: 48000
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zündkerze
@@ -863,7 +792,6 @@
   en: spark plug, sparking plug
   freq: 25000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Zündung
@@ -875,6 +803,5 @@
   en: ignition firing
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}

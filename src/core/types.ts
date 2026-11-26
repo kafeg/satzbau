@@ -16,6 +16,9 @@ export type Noun = {
   skip: Record<string, string>
 }
 
+// Тема: упорядоченный список id слов, порядок = порядок показа новых.
+export type Theme = { id: string; title: string; words: string[] }
+
 export type Example = {
   de: string
   tr: string

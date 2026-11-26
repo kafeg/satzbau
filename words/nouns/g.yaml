@@ -7,7 +7,6 @@
   en: fork
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gang
@@ -20,7 +19,6 @@
   en: gait
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gang:2
@@ -33,7 +31,6 @@
   en: gang
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Garage
@@ -45,7 +42,6 @@
   en: garage
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Garagentor
@@ -57,7 +53,6 @@
   en: garage door
   freq: 37000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Garantie
@@ -69,7 +64,6 @@
   en: guarantee
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Garantiefall
@@ -81,7 +75,6 @@
   en: warranty case
   freq: null
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Garten
@@ -93,7 +86,6 @@
   en: garden
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gasgeruch
@@ -105,7 +97,6 @@
   en: smell of gas
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gasherd
@@ -117,7 +108,6 @@
   en: gas stove, gas cooker
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gasse
@@ -129,7 +119,6 @@
   en: alley, lane
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gast
@@ -142,7 +131,6 @@
   en: guest, sojourner
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gast:2
@@ -154,7 +142,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gastarbeiter
@@ -166,7 +153,6 @@
   en: migrant worker, guest worker
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gastfamilie
@@ -178,7 +164,6 @@
   en: host family
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gastgeber
@@ -190,7 +175,6 @@
   en: host
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gastgeberin
@@ -202,7 +186,6 @@
   en: hostess
   freq: 16000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gastgeschenk
@@ -214,7 +197,6 @@
   en: host gift
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gebirge
@@ -226,7 +208,6 @@
   en: mountain range
   freq: 16000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gebrauchtwagen
@@ -238,7 +219,6 @@
   en: second-hand car
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geburtsdatum
@@ -250,7 +230,6 @@
   en: date of birth
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geburtsland
@@ -262,7 +241,6 @@
   en: country of birth
   freq: null
   level: A1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Geburtsort
@@ -274,7 +252,6 @@
   en: birthplace
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geburtstag
@@ -286,7 +263,6 @@
   en: birthday, day of birth
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gebühr
@@ -298,7 +274,6 @@
   en: fee
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gedicht
@@ -310,7 +285,6 @@
   en: poem
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geduld
@@ -322,7 +296,6 @@
   en: patience
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gefahr
@@ -334,7 +307,6 @@
   en: danger, risk
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gefühl
@@ -346,7 +318,6 @@
   en: feeling, affection
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gegenargument
@@ -358,7 +329,6 @@
   en: counterargument
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gegend
@@ -370,7 +340,6 @@
   en: region
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gegenseite
@@ -382,7 +351,6 @@
   en: opposite side
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gegenvorschlag
@@ -394,7 +362,6 @@
   en: counterproposal, counte-proposal
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gegner
@@ -406,7 +373,6 @@
   en: adversary, opponent
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gehalt
@@ -419,7 +385,6 @@
   en: content
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gehalt:2
@@ -432,7 +397,6 @@
   en: salary
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gehaltserhöhung
@@ -444,7 +408,6 @@
   en: pay rise, salary increase
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gehirn
@@ -456,7 +419,6 @@
   en: brain
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geige
@@ -468,7 +430,6 @@
   en: violin, fiddle
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gelassenheit
@@ -480,7 +441,6 @@
   en: calm, serenity
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geld
@@ -492,7 +452,6 @@
   en: money, dough
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geldautomat
@@ -504,7 +463,6 @@
   en: ATM, automated teller machine
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geldbeutel
@@ -516,7 +474,6 @@
   en: purse, wallet
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geldstrafe
@@ -528,7 +485,6 @@
   en: fine
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gemeinde
@@ -540,7 +496,6 @@
   en: municipality
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gemüse
@@ -552,7 +507,6 @@
   en: vegetable, vegetables
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gemüsegeschäft
@@ -564,7 +518,6 @@
   en: greengrocery, greengrocer’s
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gemüseladen
@@ -576,7 +529,6 @@
   en: greengrocery
   freq: 49000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geometrie
@@ -588,7 +540,6 @@
   en: geometry
   freq: 22000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gepäck
@@ -600,7 +551,6 @@
   en: luggage
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gepäckfach
@@ -612,7 +562,6 @@
   en: luggage compartment, overhead compartment
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gericht
@@ -625,7 +574,6 @@
   en: court
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gericht:2
@@ -638,7 +586,6 @@
   en: dish
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geruch
@@ -650,7 +597,6 @@
   en: smell, odour
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gerät
@@ -662,7 +608,6 @@
   en: device, appliance
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gerüst
@@ -674,7 +619,6 @@
   en: scaffold, scaffolding
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesamtgewicht
@@ -686,7 +630,6 @@
   en: total weight
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gesamtzahl
@@ -698,7 +641,6 @@
   en: total number
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschenk
@@ -710,7 +652,6 @@
   en: gift, present
   freq: 900
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschenkpapier
@@ -722,7 +663,6 @@
   en: gift wrap paper
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschichte
@@ -734,7 +674,6 @@
   en: history
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschirrspüler
@@ -746,7 +685,6 @@
   en: dishwasher
   freq: 26000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschlecht
@@ -758,7 +696,6 @@
   en: gender, sex
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschwindigkeit
@@ -770,7 +707,6 @@
   en: pace, speed
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschwindigkeitsbegrenzung
@@ -782,7 +718,6 @@
   en: speed limit
   freq: 49000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschwister
@@ -794,7 +729,6 @@
   en: siblings, brother and sister
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Geschäft
@@ -806,7 +740,6 @@
   en: business
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesellschaft
@@ -818,7 +751,6 @@
   en: society
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesetz
@@ -830,7 +762,6 @@
   en: law, act
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesetzentwurf
@@ -842,7 +773,6 @@
   en: bill, draft law
   freq: 41000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesetzgebung
@@ -854,7 +784,6 @@
   en: legislation
   freq: 30000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesicht
@@ -866,7 +795,6 @@
   en: face
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesichtscreme
@@ -878,7 +806,6 @@
   en: face cream
   freq: 48000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gespräch
@@ -890,7 +817,6 @@
   en: conversation, talk
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gesuch
@@ -902,7 +828,6 @@
   en: petition, request
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Getriebe
@@ -914,7 +839,6 @@
   en: gear, transmission
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewaltenteilung
@@ -926,7 +850,6 @@
   en: separation of powers, checks and balances
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewerkschaft
@@ -938,7 +861,6 @@
   en: trade union, labor union
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewicht
@@ -950,7 +872,6 @@
   en: weight
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewissheit
@@ -962,7 +883,6 @@
   en: certainty
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewitter
@@ -974,7 +894,6 @@
   en: thunderstorm
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewohnheit
@@ -986,7 +905,6 @@
   en: habit
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gewährleistung
@@ -998,7 +916,6 @@
   en: guarantee, warranty
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gipfel
@@ -1010,7 +927,6 @@
   en: peak, summit
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Giraffe
@@ -1022,7 +938,6 @@
   en: giraffe
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Girokonto
@@ -1034,7 +949,6 @@
   en: checking account, giro account
   freq: 37000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gitarre
@@ -1046,7 +960,6 @@
   en: guitar
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gitarrist
@@ -1058,7 +971,6 @@
   en: guitarist
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glas
@@ -1071,7 +983,6 @@
   en: glass
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glas:2
@@ -1084,7 +995,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glatteis
@@ -1096,7 +1006,6 @@
   en: black ice
   freq: 41000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gleichheit
@@ -1108,7 +1017,6 @@
   en: equality
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gleis
@@ -1120,7 +1028,6 @@
   en: rail track
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gläubiger
@@ -1133,7 +1040,6 @@
   en: creditor
   freq: 15000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gläubiger:2
@@ -1146,7 +1052,6 @@
   en: believer
   freq: 15000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glück
@@ -1158,7 +1063,6 @@
   en: luck, fortune
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glückwunsch
@@ -1170,7 +1074,6 @@
   en: congratulation
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glühbirne
@@ -1182,7 +1085,6 @@
   en: light bulb, bulb
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Glühwein
@@ -1194,7 +1096,6 @@
   en: mulled wine, mulled claret
   freq: 32000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gottesdienst
@@ -1206,7 +1107,6 @@
   en: service
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grad
@@ -1219,7 +1119,6 @@
   en: degree
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grad:2
@@ -1232,7 +1131,6 @@
   en: degree
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gramm
@@ -1244,7 +1142,6 @@
   en: gram, gramme (
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grammatik
@@ -1256,7 +1153,6 @@
   en: grammar
   freq: 21000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gras
@@ -1268,7 +1164,6 @@
   en: grass, herbage
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grenze
@@ -1280,7 +1175,6 @@
   en: border, borderline
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grenzgebiet
@@ -1292,7 +1186,6 @@
   en: border area, borderland
   freq: 44000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grenzkontrolle
@@ -1304,7 +1197,6 @@
   en: border control
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Grenzübergang
@@ -1316,7 +1208,6 @@
   en: checkpoint
   freq: 36000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grippe
@@ -1328,7 +1219,6 @@
   en: influenza, flu
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Großeltern
@@ -1341,7 +1231,6 @@
   en: grandparents
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Großmutter
@@ -1353,7 +1242,6 @@
   en: grandmother
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Großstadt
@@ -1365,7 +1253,6 @@
   en: big city, city
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Großvater
@@ -1377,7 +1264,6 @@
   en: grandfather, grandsire
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grund
@@ -1389,7 +1275,6 @@
   en: reason
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grundgesetz
@@ -1401,7 +1286,6 @@
   en: constitution, German constitution
   freq: 41000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grundrecht
@@ -1413,7 +1297,6 @@
   en: basic right
   freq: 29000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gruppe
@@ -1425,7 +1308,6 @@
   en: group
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gruß
@@ -1437,7 +1319,6 @@
   en: salute, salutation
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Grußkarte
@@ -1449,7 +1330,6 @@
   en: greeting card
   freq: 35000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Größe
@@ -1461,7 +1341,6 @@
   en: size
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Guckloch
@@ -1473,7 +1352,6 @@
   en: peephole
   freq: 43000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gurke
@@ -1485,7 +1363,6 @@
   en: cucumber, gherkin
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gutschein
@@ -1497,7 +1374,6 @@
   en: coupon, voucher
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gutschrift
@@ -1509,7 +1385,6 @@
   en: crediting, credit entry
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gymnastik
@@ -1521,7 +1396,6 @@
   en: gymnastics
   freq: 22000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gärtner
@@ -1533,7 +1407,6 @@
   en: gardener
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gästeliste
@@ -1545,7 +1418,6 @@
   en: guest list
   freq: 12000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gästezimmer
@@ -1557,7 +1429,6 @@
   en: guest room
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Gürtel
@@ -1569,6 +1440,5 @@
   en: belt
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}

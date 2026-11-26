@@ -7,7 +7,6 @@
   en: hair
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haarbürste
@@ -19,7 +18,6 @@
   en: hairbrush
   freq: 33000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Haarfarbe
@@ -31,7 +29,6 @@
   en: hair color, hair colour
   freq: 16000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haarschnitt
@@ -43,7 +40,6 @@
   en: haircut
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haarspray
@@ -55,7 +51,6 @@
   en: hair spray, hairspray
   freq: 26000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Haartrockner
@@ -67,7 +62,6 @@
   en: hairdryer, hairdrier
   freq: 47000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hafen
@@ -79,7 +73,6 @@
   en: port, harbour
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haftung
@@ -91,7 +84,6 @@
   en: liability, guarantee
   freq: 30000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Halbpension
@@ -103,7 +95,6 @@
   en: half board
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Halbzeit
@@ -115,7 +106,6 @@
   en: half-time
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hals
@@ -127,7 +117,6 @@
   en: neck
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haltbarkeit
@@ -139,7 +128,6 @@
   en: durability, long-lastingness
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haltegriff
@@ -151,7 +139,6 @@
   en: handle, grab handle
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Halteknopf
@@ -164,7 +151,6 @@
   en: stop button
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Haltestelle
@@ -176,7 +162,6 @@
   en: stop
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haltung
@@ -188,7 +173,6 @@
   en: posture
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hammer
@@ -201,7 +185,6 @@
   en: hammer
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hammer:2
@@ -213,7 +196,6 @@
   en: Hamm inhabitant
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hamster
@@ -225,7 +207,6 @@
   en: hamster
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hand
@@ -237,7 +218,6 @@
   en: hand
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handball
@@ -250,7 +230,6 @@
   en: handball
   freq: 42000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handball:2
@@ -263,7 +242,6 @@
   en: handball
   freq: 42000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handbremse
@@ -275,7 +253,6 @@
   en: handbrake, parking brake
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handcreme
@@ -287,7 +264,6 @@
   en: hand cream
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Handschuh
@@ -299,7 +275,6 @@
   en: glove
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handtuch
@@ -311,7 +286,6 @@
   en: towel
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handvoll
@@ -323,7 +297,6 @@
   en: handful, fistful
   freq: 16000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Handwerker
@@ -335,7 +308,6 @@
   en: craftsman, workman
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Handwerkerin
@@ -347,7 +319,6 @@
   en: craftswoman
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Handy
@@ -359,7 +330,6 @@
   en: mobile phone, mobile
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hantel
@@ -371,7 +341,6 @@
   en: barbell, dumbbell
   freq: 49000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hase
@@ -383,7 +352,6 @@
   en: hare
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hauptbahnhof
@@ -395,7 +363,6 @@
   en: central station, main station
   freq: 26000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hauptrolle
@@ -407,7 +374,6 @@
   en: main role, lead part
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hauptstadt
@@ -419,7 +385,6 @@
   en: capital, capital city
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hauptuntersuchung
@@ -431,7 +396,6 @@
   en: general inspection, MOT test
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haus
@@ -443,7 +407,6 @@
   en: house
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausarzt
@@ -455,7 +418,6 @@
   en: family doctor, family physician
   freq: 21000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausaufgabe
@@ -467,7 +429,6 @@
   en: homework
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausfrau
@@ -479,7 +440,6 @@
   en: housewife
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haushalt
@@ -491,7 +451,6 @@
   en: budget
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haushaltsbuch
@@ -503,7 +462,6 @@
   en: household account book
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hausmeister
@@ -515,7 +473,6 @@
   en: janitor, caretaker
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausmittel
@@ -527,7 +484,6 @@
   en: home remedy, domestic remedy
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausnummer
@@ -539,7 +495,6 @@
   en: house number
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausordnung
@@ -551,7 +506,6 @@
   en: house rule
   freq: 35000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hausschuh
@@ -563,7 +517,6 @@
   en: slipper
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haustür
@@ -575,7 +528,6 @@
   en: front door
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Haut
@@ -587,7 +539,6 @@
   en: skin
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hautarzt
@@ -599,7 +550,6 @@
   en: dermatologist
   freq: 50000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hauttyp
@@ -611,7 +561,6 @@
   en: skin type
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hebebühne
@@ -623,7 +572,6 @@
   en: lifting platform, lifting ramp
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Heft
@@ -636,7 +584,6 @@
   en: notebook
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Heft:2
@@ -648,7 +595,6 @@
   en: hilt, haft
   freq: 12000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Heimat
@@ -660,7 +606,6 @@
   en: home, homeland
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Heimatland
@@ -672,7 +617,6 @@
   en: homeland, native country
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Heimweh
@@ -684,7 +628,6 @@
   en: homesickness
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Heizung
@@ -696,7 +639,6 @@
   en: heating
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hektar
@@ -708,7 +650,6 @@
   en: hectare
   freq: 20000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hemd
@@ -720,7 +661,6 @@
   en: shirt
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herbst
@@ -732,7 +672,6 @@
   en: autumn, fall
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herd
@@ -744,7 +683,6 @@
   en: hearth, stove
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herkunft
@@ -756,7 +694,6 @@
   en: origin, source
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herkunftsland
@@ -768,7 +705,6 @@
   en: country of origin
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herr
@@ -780,7 +716,6 @@
   en: gentleman
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herz
@@ -792,7 +727,6 @@
   en: heart
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Herzinfarkt
@@ -804,7 +738,6 @@
   en: heart attack, myocardial infarction
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hilfe
@@ -816,7 +749,6 @@
   en: help
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hilferuf
@@ -828,7 +760,6 @@
   en: appeal for help, cry for help
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Himbeere
@@ -840,7 +771,6 @@
   en: raspberry
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Himmel
@@ -852,7 +782,6 @@
   en: sky, firmament
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Himmelsrichtung
@@ -864,7 +793,6 @@
   en: compass point, cardinal direction
   freq: 41000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hinterrad
@@ -876,7 +804,6 @@
   en: back wheel
   freq: 40000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hip-Hop
@@ -888,7 +815,6 @@
   en: hip-hop
   freq: 32000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Historiker
@@ -900,7 +826,6 @@
   en: historian
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hitze
@@ -912,7 +837,6 @@
   en: heat
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hobby
@@ -924,7 +848,6 @@
   en: hobby
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hochland
@@ -936,7 +859,6 @@
   en: highlands
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hochwasser
@@ -948,7 +870,6 @@
   en: high water, flood
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hochzeit
@@ -961,7 +882,6 @@
   en: marriage, wedding
   freq: 1000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hochzeit:2
@@ -974,7 +894,6 @@
   en: golden age
   freq: 1000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hof
@@ -986,7 +905,6 @@
   en: yard, courtyard
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hoffnung
@@ -998,7 +916,6 @@
   en: hope
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hoheitsgebiet
@@ -1010,7 +927,6 @@
   en: territory
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Holz
@@ -1023,7 +939,6 @@
   en: wood, timber
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Holz:2
@@ -1036,7 +951,6 @@
   en: null
   freq: 5000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Honig
@@ -1048,7 +962,6 @@
   en: honey
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hose
@@ -1060,7 +973,6 @@
   en: pantaloon, pants trousers
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hotel
@@ -1072,7 +984,6 @@
   en: hotel
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Huhn
@@ -1084,7 +995,6 @@
   en: chicken, fowl
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hund
@@ -1096,7 +1006,6 @@
   en: dog, hound
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hundertstel
@@ -1109,7 +1018,6 @@
   en: hundredth
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hundertstel:2
@@ -1121,7 +1029,6 @@
   en: null
   freq: null
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hunger
@@ -1133,7 +1040,6 @@
   en: hunger
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hupe
@@ -1145,7 +1051,6 @@
   en: horn, klaxon
   freq: 7000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Husten
@@ -1158,7 +1063,6 @@
   en: cough
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Husten:2
@@ -1170,7 +1074,6 @@
   en: cough, coughing
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hut
@@ -1183,7 +1086,6 @@
   en: hat
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hut:2
@@ -1195,7 +1097,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hygiene
@@ -1207,7 +1108,6 @@
   en: hygiene
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hälfte
@@ -1219,7 +1119,6 @@
   en: half
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Höchstwert
@@ -1231,7 +1130,6 @@
   en: peak
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Höhe
@@ -1243,7 +1141,6 @@
   en: height, elevation
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Höhle
@@ -1255,7 +1152,6 @@
   en: cave, cavern
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hörbuch
@@ -1267,7 +1163,6 @@
   en: audiobook, audio book
   freq: 39000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hörer
@@ -1279,7 +1174,6 @@
   en: listener
   freq: 9000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hörsaal
@@ -1291,7 +1185,6 @@
   en: lecture hall, lecture theatre
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Hütte
@@ -1303,6 +1196,5 @@
   en: hut, cabin
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}

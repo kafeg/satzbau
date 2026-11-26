@@ -7,7 +7,6 @@
   en: subway, metro
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:U-Bahnhof
@@ -19,7 +18,6 @@
   en: subway station, underground station
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Uhr
@@ -31,7 +29,6 @@
   en: clock, watch
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Uhrzeit
@@ -43,7 +40,6 @@
   en: time, time of day
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ukraine
@@ -55,7 +51,6 @@
   en: Ukraine
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umarmung
@@ -67,7 +62,6 @@
   en: hug, embrace
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umfang
@@ -79,7 +73,6 @@
   en: circumference, perimeter
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umfrage
@@ -91,7 +84,6 @@
   en: poll, survey
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umkleidekabine
@@ -103,7 +95,6 @@
   en: cabin, changing room
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umleitung
@@ -115,7 +106,6 @@
   en: detour
   freq: 24000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umschlag
@@ -127,7 +117,6 @@
   en: envelope
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umtausch
@@ -139,7 +128,6 @@
   en: exchange
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umwelt
@@ -151,7 +139,6 @@
   en: environment
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umweltschutz
@@ -163,7 +150,6 @@
   en: environmental protection, ecology protection
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Umzug
@@ -175,7 +161,6 @@
   en: move, relocation
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unfall
@@ -187,7 +172,6 @@
   en: accident, casualty
   freq: 1000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unglück
@@ -199,7 +183,6 @@
   en: misfortune
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Universität
@@ -211,7 +194,6 @@
   en: university
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unmut
@@ -223,7 +205,6 @@
   en: discontent, dissatisfaction
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unsicherheit
@@ -235,7 +216,6 @@
   en: danger
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unterhaltung
@@ -247,7 +227,6 @@
   en: maintenance
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unterkunft
@@ -259,7 +238,6 @@
   en: accommodation, lodging
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unterlegscheibe
@@ -271,7 +249,6 @@
   en: washer, flat washer
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Unterricht
@@ -283,7 +260,6 @@
   en: instruction, classes
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unterschrift
@@ -295,7 +271,6 @@
   en: signature
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Untersuchung
@@ -307,7 +282,6 @@
   en: investigation, examination test study
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Untertitel
@@ -319,7 +293,6 @@
   en: subtitle
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unterwäsche
@@ -331,7 +304,6 @@
   en: underwear, undergarments
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Unwetter
@@ -343,7 +315,6 @@
   en: thunderstorm
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Update
@@ -355,7 +326,6 @@
   en: update
   freq: 16000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Urenkel
@@ -367,7 +337,6 @@
   en: great-grandson
   freq: 32000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Urenkelin
@@ -379,7 +348,6 @@
   en: great-granddaughter
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Urgroßeltern
@@ -392,7 +360,6 @@
   en: great grandparents
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Urlaub
@@ -404,7 +371,6 @@
   en: holiday, vacation
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Urteil
@@ -416,7 +382,6 @@
   en: verdict, judgement
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Überfall
@@ -428,7 +393,6 @@
   en: raid, holdup
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Übergabe
@@ -440,7 +404,6 @@
   en: transfer, handover
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Überraschung
@@ -452,7 +415,6 @@
   en: surprise
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Überschwemmung
@@ -464,7 +426,6 @@
   en: flood, inundation
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Übersetzung
@@ -476,7 +437,6 @@
   en: translation
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Überstunde
@@ -488,7 +448,6 @@
   en: overtime
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Überweisung
@@ -500,7 +459,6 @@
   en: remittance, transaction
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Überzeugung
@@ -512,7 +470,6 @@
   en: conviction, opinion
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Übung
@@ -524,6 +481,5 @@
   en: training, practice
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}

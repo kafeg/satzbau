@@ -7,7 +7,6 @@
   en: compartment
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Facharzt
@@ -19,7 +18,6 @@
   en: specialist
   freq: 30000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahne
@@ -31,7 +29,6 @@
   en: flag
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrer
@@ -43,7 +40,6 @@
   en: driver
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrerin
@@ -55,7 +51,6 @@
   en: driver
   freq: 21000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrersitz
@@ -67,7 +62,6 @@
   en: driver's seat
   freq: 27000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrgast
@@ -79,7 +73,6 @@
   en: passenger
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrkarte
@@ -91,7 +84,6 @@
   en: ticket
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrkartenautomat
@@ -103,7 +95,6 @@
   en: ticket machine
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrlehrer
@@ -115,7 +106,6 @@
   en: driving instructor
   freq: 36000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrplan
@@ -127,7 +117,6 @@
   en: timetable, time table
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrpreis
@@ -139,7 +128,6 @@
   en: fare
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrrad
@@ -151,7 +139,6 @@
   en: bicycle, pedal cycle
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrradmitnahme
@@ -164,7 +151,6 @@
   en: bicycle carriage
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrschein
@@ -176,7 +162,6 @@
   en: ticket
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrschule
@@ -188,7 +173,6 @@
   en: driving school
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrstuhl
@@ -200,7 +184,6 @@
   en: lift, elevator
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrt
@@ -212,7 +195,6 @@
   en: journey, ride
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fahrzeug
@@ -224,7 +206,6 @@
   en: vehicle
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Falschmeldung
@@ -236,7 +217,6 @@
   en: false report
   freq: 40000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Falte
@@ -248,7 +228,6 @@
   en: fold, wrinkle
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Familie
@@ -260,7 +239,6 @@
   en: family
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Familienfoto
@@ -272,7 +250,6 @@
   en: family photo
   freq: 20000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fan
@@ -284,7 +261,6 @@
   en: fan, enthusiast
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Farbe
@@ -296,7 +272,6 @@
   en: colour, color
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fastenzeit
@@ -308,7 +283,6 @@
   en: fasting period
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Faustregel
@@ -320,7 +294,6 @@
   en: rule of thumb
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fax
@@ -332,7 +305,6 @@
   en: fax
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fazit
@@ -344,7 +316,6 @@
   en: conclusion, result
   freq: 22000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feder
@@ -356,7 +327,6 @@
   en: feather, crest
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fehler
@@ -368,7 +338,6 @@
   en: error, mistake
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fehlermeldung
@@ -380,7 +349,6 @@
   en: error message
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feier
@@ -392,7 +360,6 @@
   en: party, ceremony
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feierabend
@@ -404,7 +371,6 @@
   en: quitting time, closing time
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feiertag
@@ -416,7 +382,6 @@
   en: holiday
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feld
@@ -429,7 +394,6 @@
   en: field
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feld:2
@@ -441,7 +405,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Felge
@@ -453,7 +416,6 @@
   en: rim
   freq: 26000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fell
@@ -465,7 +427,6 @@
   en: fur, pelt
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fenster
@@ -477,7 +438,6 @@
   en: window
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ferienwohnung
@@ -489,7 +449,6 @@
   en: holiday home, vacation home
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fernsehen
@@ -501,7 +460,6 @@
   en: television, TV
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fernseher
@@ -513,7 +471,6 @@
   en: a television set, a TV
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fernsehgerät
@@ -525,7 +482,6 @@
   en: television set, television
   freq: 40000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fest
@@ -537,7 +493,6 @@
   en: feast, festival
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Festessen
@@ -549,7 +504,6 @@
   en: banquet
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Festland
@@ -561,7 +515,6 @@
   en: mainland
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Festplatte
@@ -573,7 +526,6 @@
   en: hard disk, hard disk drive
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Festtag
@@ -585,7 +537,6 @@
   en: festive day
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feuer
@@ -597,7 +548,6 @@
   en: fire
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feuerlöscher
@@ -609,7 +559,6 @@
   en: fire extinguisher
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feuerwehr
@@ -621,7 +570,6 @@
   en: fire department, fire brigade
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feuerwehrauto
@@ -633,7 +581,6 @@
   en: fire engine, fire truck
   freq: 33000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Feuerwerk
@@ -645,7 +592,6 @@
   en: fireworks, firework
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fieber
@@ -657,7 +603,6 @@
   en: fever
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Figur
@@ -669,7 +614,6 @@
   en: figure
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Filiale
@@ -681,7 +625,6 @@
   en: branch, office
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Film
@@ -693,7 +636,6 @@
   en: film, movie
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Finanzamt
@@ -705,7 +647,6 @@
   en: revenue office, revenue board
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Finger
@@ -717,7 +658,6 @@
   en: finger
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fingernagel
@@ -729,7 +669,6 @@
   en: fingernail, nail
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Firma
@@ -741,7 +680,6 @@
   en: firm
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fisch
@@ -753,7 +691,6 @@
   en: fish
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fischer
@@ -765,7 +702,6 @@
   en: fisherman, fisher
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fitnessstudio
@@ -777,7 +713,6 @@
   en: health club, fitness club
   freq: 11000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Flagge
@@ -789,7 +724,6 @@
   en: flag, colours
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flasche
@@ -801,7 +735,6 @@
   en: bottle, flask
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fleck
@@ -813,7 +746,6 @@
   en: stain, spot
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fleisch
@@ -825,7 +757,6 @@
   en: flesh
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fliese
@@ -837,7 +768,6 @@
   en: tile
   freq: 28000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flohmarkt
@@ -849,7 +779,6 @@
   en: flea market
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fluchtweg
@@ -861,7 +790,6 @@
   en: escape route
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flug
@@ -873,7 +801,6 @@
   en: flight
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flugdatum
@@ -886,7 +813,6 @@
   en: flight date
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Flughafen
@@ -898,7 +824,6 @@
   en: airport
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flugzeug
@@ -910,7 +835,6 @@
   en: airplane, aeroplane  aircraft
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flur
@@ -923,7 +847,6 @@
   en: corridor, hall
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flur:2
@@ -935,7 +858,6 @@
   en: field, farmland
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fluss
@@ -947,7 +869,6 @@
   en: river
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fläche
@@ -959,7 +880,6 @@
   en: surface, area
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flöte
@@ -971,7 +891,6 @@
   en: flute, whistle
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flüchtling
@@ -983,7 +902,6 @@
   en: refugee
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Flügel
@@ -995,7 +913,6 @@
   en: wing, pinna
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Folge
@@ -1007,7 +924,6 @@
   en: consequence
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Formblatt
@@ -1019,7 +935,6 @@
   en: form
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Formular
@@ -1031,7 +946,6 @@
   en: form
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fortbildung
@@ -1043,7 +957,6 @@
   en: further education
   freq: 41000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fortschritt
@@ -1055,7 +968,6 @@
   en: progress
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Foto
@@ -1068,7 +980,6 @@
   en: photo, photography
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Foto:2
@@ -1080,7 +991,6 @@
   en: null
   freq: 700
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fotoalbum
@@ -1092,7 +1002,6 @@
   en: photo album
   freq: 21000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fotograf
@@ -1104,7 +1013,6 @@
   en: photographer
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Foul
@@ -1116,7 +1024,6 @@
   en: foul
   freq: 19000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Frachtbrief
@@ -1128,7 +1035,6 @@
   en: waybill
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frage
@@ -1140,7 +1046,6 @@
   en: question
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frankiermaschine
@@ -1152,7 +1057,6 @@
   en: franking machine
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Frau
@@ -1164,7 +1068,6 @@
   en: woman
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freiheit
@@ -1176,7 +1079,6 @@
   en: liberty, freedom
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freimachung
@@ -1188,7 +1090,6 @@
   en: emancipation
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freitag
@@ -1201,7 +1102,6 @@
   en: Friday
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freitag:2
@@ -1213,7 +1113,6 @@
   en: day off, day of leave
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freizeit
@@ -1225,7 +1124,6 @@
   en: free time, spare time
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freizeitpark
@@ -1237,7 +1135,6 @@
   en: amusement park, theme park
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fremdsprache
@@ -1249,7 +1146,6 @@
   en: foreign language
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freude
@@ -1261,7 +1157,6 @@
   en: joy, delight
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freund
@@ -1273,7 +1168,6 @@
   en: friend
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freundin
@@ -1285,7 +1179,6 @@
   en: friend
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Freundschaft
@@ -1297,7 +1190,6 @@
   en: friendship
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Friseur
@@ -1309,7 +1201,6 @@
   en: barber, hairdresser
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Friseurin
@@ -1321,7 +1212,6 @@
   en: hairdresser
   freq: 40000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Friseursalon
@@ -1333,7 +1223,6 @@
   en: hairdressing salon
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frist
@@ -1345,7 +1234,6 @@
   en: period, respite
   freq: 16000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fristverlängerung
@@ -1357,7 +1245,6 @@
   en: deadline extension
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frisur
@@ -1369,7 +1256,6 @@
   en: haircut, hairstyle
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frosch
@@ -1381,7 +1267,6 @@
   en: frog
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frost
@@ -1393,7 +1278,6 @@
   en: frost, frostiness
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frühling
@@ -1405,7 +1289,6 @@
   en: spring, springtime
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Frühstück
@@ -1417,7 +1300,6 @@
   en: breakfast
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fuchs
@@ -1429,7 +1311,6 @@
   en: fox
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fuge
@@ -1441,7 +1322,6 @@
   en: joint, gap
   freq: 28000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fuß
@@ -1453,7 +1333,6 @@
   en: foot
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fußball
@@ -1465,7 +1344,6 @@
   en: football, soccer
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fußboden
@@ -1477,7 +1355,6 @@
   en: floor, flooring
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Fußpflege
@@ -1489,7 +1366,6 @@
   en: pedicure, foot care
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fähre
@@ -1501,7 +1377,6 @@
   en: ferry
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Föhn
@@ -1513,7 +1388,6 @@
   en: föhn / foehn
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Förderung
@@ -1525,7 +1399,6 @@
   en: promotion
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Führerschein
@@ -1537,6 +1410,5 @@
   en: driving licence, driver's license
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}

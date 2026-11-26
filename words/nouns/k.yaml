@@ -7,7 +7,6 @@
   en: cable
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kaffee
@@ -20,7 +19,6 @@
   en: coffee
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kaffee:2
@@ -32,7 +30,6 @@
   en: cafe
   freq: 700
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kaffeemaschine
@@ -44,7 +41,6 @@
   en: coffeemaker
   freq: 17000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kalender
@@ -56,7 +52,6 @@
   en: calendar
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kamel
@@ -68,7 +63,6 @@
   en: camel
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kamera
@@ -80,7 +74,6 @@
   en: camera
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kamm
@@ -92,7 +85,6 @@
   en: comb
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kanzlerin
@@ -104,7 +96,6 @@
   en: Chancellor
   freq: 34000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kapitel
@@ -116,7 +107,6 @@
   en: chapter
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Karneval
@@ -128,7 +118,6 @@
   en: carnival, Shrovetide
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kartenspiel
@@ -140,7 +129,6 @@
   en: card game
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kartoffel
@@ -152,7 +140,6 @@
   en: potato
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Karton
@@ -164,7 +151,6 @@
   en: carton
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kasse
@@ -176,7 +162,6 @@
   en: cash register, cash
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Katastrophe
@@ -188,7 +173,6 @@
   en: catastrophe, calamity
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kater
@@ -201,7 +185,6 @@
   en: tomcat, tom
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kater:2
@@ -214,7 +197,6 @@
   en: hangover
   freq: 6000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Katze
@@ -226,7 +208,6 @@
   en: cat
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kaufhaus
@@ -238,7 +219,6 @@
   en: department store
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kaufmann
@@ -250,7 +230,6 @@
   en: merchant, businessman
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kaution
@@ -262,7 +241,6 @@
   en: deposit
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Keilriemen
@@ -274,7 +252,6 @@
   en: vee belt
   freq: 29000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Keks
@@ -287,7 +264,6 @@
   en: biscuit, cookie
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Keks:2
@@ -299,7 +275,6 @@
   en: bonce, loaf
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Keks:3
@@ -311,7 +286,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Keks:4
@@ -323,7 +297,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kelle
@@ -335,7 +308,6 @@
   en: ladle, dipper
   freq: 30000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Keller
@@ -347,7 +319,6 @@
   en: basement, cellar
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kellner
@@ -359,7 +330,6 @@
   en: waiter
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kenntnis
@@ -371,7 +341,6 @@
   en: knowledge, acquaintance
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kennzeichen
@@ -383,7 +352,6 @@
   en: mark
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kerze
@@ -395,7 +363,6 @@
   en: candle
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ketchup
@@ -407,7 +374,6 @@
   en: ketchup, tomato sauce
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kette
@@ -419,7 +385,6 @@
   en: chain
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kilo
@@ -431,7 +396,6 @@
   en: kilo
   freq: 4000
   level: A1
-  themes: []
   decided: {gen_sg: 'dewikt: des Kilos; enwikt даёт несклоняемое des Kilo — верим dewikt'}
   skip: {}
 - id: n:Kilogramm
@@ -443,7 +407,6 @@
   en: kilogram, kilogramme
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kilometer
@@ -455,7 +418,6 @@
   en: kilometer, kilometre
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kind
@@ -467,7 +429,6 @@
   en: child, kid
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kindergarten
@@ -479,7 +440,6 @@
   en: kindergarten, nursery school
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kindergeld
@@ -491,7 +451,6 @@
   en: child benefit
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kinderwagen
@@ -503,7 +462,6 @@
   en: perambulator, pram
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kinderzimmer
@@ -515,7 +473,6 @@
   en: children's room, nursery
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kindheit
@@ -527,7 +484,6 @@
   en: childhood
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kinn
@@ -539,7 +495,6 @@
   en: chin
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kino
@@ -551,7 +506,6 @@
   en: cinema, movie theatre
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kirche
@@ -563,7 +517,6 @@
   en: church
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kirsche
@@ -575,7 +528,6 @@
   en: cherry
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kiste
@@ -588,7 +540,6 @@
   en: box, coffer
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kiste:2
@@ -600,7 +551,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kita
@@ -612,7 +562,6 @@
   en: day care center
   freq: 27000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kitaplatz
@@ -624,7 +573,6 @@
   en: daycare place
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kiwi
@@ -637,7 +585,6 @@
   en: kiwi
   freq: 28000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kiwi:2
@@ -650,7 +597,6 @@
   en: kiwi
   freq: 28000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klage
@@ -662,7 +608,6 @@
   en: lament
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klasse
@@ -674,7 +619,6 @@
   en: class
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klavier
@@ -686,7 +630,6 @@
   en: piano
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klebeband
@@ -698,7 +641,6 @@
   en: tape
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kleber
@@ -710,7 +652,6 @@
   en: glue, adhesive
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klebestreifen
@@ -722,7 +663,6 @@
   en: adhesive tape
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kleid
@@ -734,7 +674,6 @@
   en: dress
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kleidung
@@ -746,7 +685,6 @@
   en: clothing, clothes
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klima
@@ -758,7 +696,6 @@
   en: climate
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Klimawandel
@@ -770,7 +707,6 @@
   en: climate change
   freq: 28000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Knie
@@ -782,7 +718,6 @@
   en: knee
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Knoblauch
@@ -794,7 +729,6 @@
   en: garlic
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Knopf
@@ -806,7 +740,6 @@
   en: button
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Koalition
@@ -818,7 +751,6 @@
   en: coalition
   freq: 24000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Koch
@@ -831,7 +763,6 @@
   en: cook
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Koch:2
@@ -843,7 +774,6 @@
   en: mash
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kochtopf
@@ -855,7 +785,6 @@
   en: cooking pot, pot
   freq: 31000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Koffer
@@ -867,7 +796,6 @@
   en: suitcase
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kofferraum
@@ -879,7 +807,6 @@
   en: trunk, boot
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kollege
@@ -891,7 +818,6 @@
   en: colleague, workmate
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kollegin
@@ -903,7 +829,6 @@
   en: colleague
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Komponist
@@ -915,7 +840,6 @@
   en: composer
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kompromiss
@@ -927,7 +851,6 @@
   en: compromise
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Komödie
@@ -939,7 +862,6 @@
   en: comedy
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kondition
@@ -951,7 +873,6 @@
   en: condition
   freq: 16000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Konferenz
@@ -963,7 +884,6 @@
   en: conference
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Konfetti
@@ -975,7 +895,6 @@
   en: confetti
   freq: 25000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Konflikt
@@ -987,7 +906,6 @@
   en: conflict, clash
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kontinent
@@ -999,7 +917,6 @@
   en: continent
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Konto
@@ -1011,7 +928,6 @@
   en: account
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kontoauszug
@@ -1023,7 +939,6 @@
   en: bank statement, account statement
   freq: 24000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Konzert
@@ -1035,7 +950,6 @@
   en: concert
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kopf
@@ -1047,7 +961,6 @@
   en: head
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kopfhörer
@@ -1059,7 +972,6 @@
   en: headphone
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kopie
@@ -1071,7 +983,6 @@
   en: copy, blueprint
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kosmetik
@@ -1083,7 +994,6 @@
   en: cosmetic
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kosmetikerin
@@ -1095,7 +1005,6 @@
   en: beautician, beauty specialist
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kostüm
@@ -1107,7 +1016,6 @@
   en: suit
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kraft
@@ -1119,7 +1027,6 @@
   en: force
   freq: 900
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kraftstoff
@@ -1131,7 +1038,6 @@
   en: fuel
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kragen
@@ -1143,7 +1049,6 @@
   en: collar
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krankenhaus
@@ -1155,7 +1060,6 @@
   en: hospital, infirmary
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krankenkasse
@@ -1167,7 +1071,6 @@
   en: public health insurance, health maintenance organization
   freq: 40000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krankentransport
@@ -1179,7 +1082,6 @@
   en: patient transport
   freq: null
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Krankenwagen
@@ -1191,7 +1093,6 @@
   en: ambulance
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krankmeldung
@@ -1203,7 +1104,6 @@
   en: notification of illness
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Krankschreibung
@@ -1215,7 +1115,6 @@
   en: sick certificate
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kratzer
@@ -1227,7 +1126,6 @@
   en: scratch
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krawatte
@@ -1239,7 +1137,6 @@
   en: necktie, tie
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kredit
@@ -1252,7 +1149,6 @@
   en: loan, credit
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kredit:2
@@ -1265,7 +1161,6 @@
   en: null
   freq: 5000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kreditkarte
@@ -1277,7 +1172,6 @@
   en: credit card
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kreide
@@ -1289,7 +1183,6 @@
   en: chalk
   freq: 20000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kreuzung
@@ -1301,7 +1194,6 @@
   en: intersection, crossroads
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krimi
@@ -1313,7 +1205,6 @@
   en: crime novel, whodunit
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Krippe
@@ -1325,7 +1216,6 @@
   en: manger, crib
   freq: 28000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kritik
@@ -1337,7 +1227,6 @@
   en: criticism, critique
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kritikpunkt
@@ -1349,7 +1238,6 @@
   en: point of criticism
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Krokodil
@@ -1361,7 +1249,6 @@
   en: crocodile
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kubikmeter
@@ -1373,7 +1260,6 @@
   en: cubic meter, cubic metre
   freq: 36000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kuchen
@@ -1385,7 +1271,6 @@
   en: cake, pie
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kugelschreiber
@@ -1397,7 +1282,6 @@
   en: ballpoint pen
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kuh
@@ -1409,7 +1293,6 @@
   en: cow
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kulanz
@@ -1421,7 +1304,6 @@
   en: obligingness, fair dealing
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kuli
@@ -1434,7 +1316,6 @@
   en: ballpoint pen, biro
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kuli:2
@@ -1447,7 +1328,6 @@
   en: coolie
   freq: 19000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kulturschock
@@ -1459,7 +1339,6 @@
   en: culture shock
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kunde
@@ -1472,7 +1351,6 @@
   en: customer, client
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kunde:2
@@ -1485,7 +1363,6 @@
   en: news, tidings
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kundendienst
@@ -1497,7 +1374,6 @@
   en: customer service
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kundin
@@ -1509,7 +1385,6 @@
   en: customer, client
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kupplung
@@ -1521,7 +1396,6 @@
   en: clutch
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kurier
@@ -1533,7 +1407,6 @@
   en: courier
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kurs
@@ -1545,7 +1418,6 @@
   en: course
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kälte
@@ -1557,7 +1429,6 @@
   en: cold, coldness
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Känguru
@@ -1569,7 +1440,6 @@
   en: kangaroo, macropod
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Käse
@@ -1581,7 +1451,6 @@
   en: cheese
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kätzchen
@@ -1593,7 +1462,6 @@
   en: kitten, kitty
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Körper
@@ -1605,7 +1473,6 @@
   en: body
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Körperpflege
@@ -1617,7 +1484,6 @@
   en: body care, personal hygiene
   freq: 40000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Küche
@@ -1629,7 +1495,6 @@
   en: kitchen
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kühler
@@ -1641,7 +1506,6 @@
   en: cooler
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kühlschrank
@@ -1653,7 +1517,6 @@
   en: refrigerator, fridge
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kühlwasser
@@ -1665,7 +1528,6 @@
   en: cooling water
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kündigung
@@ -1677,7 +1539,6 @@
   en: termination, notice
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Kündigungsfrist
@@ -1689,7 +1550,6 @@
   en: notice period
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Künstler
@@ -1701,7 +1561,6 @@
   en: artist
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Küste
@@ -1713,6 +1572,5 @@
   en: coast, shore
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}

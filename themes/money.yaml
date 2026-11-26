@@ -1,0 +1,48 @@
+id: money
+title: Деньги и банк
+order: 15
+words:
+  - n:Euro
+  - n:Cent
+  - n:Münze
+  - n:Schein
+  - n:Kreditkarte
+  - n:Summe
+  - n:Ausgabe
+  - n:Einnahme
+  - n:Taschengeld
+  - n:Betrag
+  - n:Girokonto
+  - n:Kontoauszug
+  - n:Lastschrift
+  - n:Dauerauftrag
+  - n:Kredit
+  - n:Schulden
+  - n:Zins
+  - n:Budget
+  - n:Sparbuch
+  - n:Filiale
+  - n:Berater
+  - n:Währung
+  - n:Wechselkurs
+  - n:Mahnung
+  - n:Ratenzahlung
+  - n:Lohn
+  - n:Rente
+  - n:Gutschein
+  - n:Einkauf
+  - n:Haushalt
+  - n:Vermögen
+  - n:Anlage
+  - n:Aktie
+  - n:Zinssatz
+  - n:Inflation
+  - n:Armut
+  - n:Reichtum
+  - n:Rücklage
+  - n:Altersvorsorge
+  - n:Haushaltsbuch
+  - n:Gläubiger
+  - n:Spende
+  - n:Beitrag
+  - n:Steuererklärung

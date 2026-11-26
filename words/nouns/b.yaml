@@ -7,7 +7,6 @@
   en: baby, infant
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Backe
@@ -19,7 +18,6 @@
   en: cheek, jowl
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Backofen
@@ -31,7 +29,6 @@
   en: oven
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bad
@@ -43,7 +40,6 @@
   en: bath
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Badeanzug
@@ -55,7 +51,6 @@
   en: bathing suit, swimsuit
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bademantel
@@ -67,7 +62,6 @@
   en: bathrobe
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Badewanne
@@ -79,7 +73,6 @@
   en: bathtub, bath
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Badezimmer
@@ -91,7 +84,6 @@
   en: bathroom, bath
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bahn
@@ -103,7 +95,6 @@
   en: path, way
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bahnhof
@@ -115,7 +106,6 @@
   en: train station, railroad station
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bahnsteig
@@ -127,7 +117,6 @@
   en: platform
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Balkan
@@ -139,7 +128,6 @@
   en: Balkans
   freq: 24000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Balkon
@@ -151,7 +139,6 @@
   en: balcony
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ball
@@ -164,7 +151,6 @@
   en: ball
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ball:2
@@ -177,7 +163,6 @@
   en: ball
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Banane
@@ -189,7 +174,6 @@
   en: banana, plantain
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Band
@@ -202,7 +186,6 @@
   en: band, ribbon
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Band:2
@@ -215,7 +198,6 @@
   en: tome
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Band:3
@@ -228,7 +210,6 @@
   en: band, group
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Band:4
@@ -240,7 +221,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bank
@@ -253,7 +233,6 @@
   en: bench
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bank:2
@@ -266,7 +245,6 @@
   en: bank
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Barcode
@@ -278,7 +256,6 @@
   en: bar code
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bargeld
@@ -290,7 +267,6 @@
   en: cash, currency
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bart
@@ -302,7 +278,6 @@
   en: beard, whiskers
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Basketball
@@ -314,7 +289,6 @@
   en: basketball
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Batterie
@@ -326,7 +300,6 @@
   en: battery
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bauch
@@ -338,7 +311,6 @@
   en: belly, womb
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bauchgefühl
@@ -350,7 +322,6 @@
   en: gut feeling, gut instinct
   freq: 15000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bauernhof
@@ -362,7 +333,6 @@
   en: farm
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bauhelm
@@ -374,7 +344,6 @@
   en: hard hat, construction helmet
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Baum
@@ -386,7 +355,6 @@
   en: tree
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Baumarkt
@@ -398,7 +366,6 @@
   en: DIY shop, ironmonger's
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Baumwolle
@@ -410,7 +377,6 @@
   en: cotton
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bauschaum
@@ -422,7 +388,6 @@
   en: expanding foam
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Baustelle
@@ -434,7 +399,6 @@
   en: building site, construction site
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bearbeitung
@@ -446,7 +410,6 @@
   en: edit, adaptation
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bearbeitungszeit
@@ -458,7 +421,6 @@
   en: processing time
   freq: null
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bedenken
@@ -470,7 +432,6 @@
   en: consideration, reflection
   freq: 3000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bedienung
@@ -482,7 +443,6 @@
   en: service
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beerdigung
@@ -494,7 +454,6 @@
   en: funeral, burial
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beere
@@ -506,7 +465,6 @@
   en: berry
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Befund
@@ -518,7 +476,6 @@
   en: results, finding
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Begeisterung
@@ -530,7 +487,6 @@
   en: enthusiasm, ardor
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beglaubigung
@@ -542,7 +498,6 @@
   en: certification, certificate
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Begründung
@@ -554,7 +509,6 @@
   en: establishment, foundation
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Begrüßung
@@ -566,7 +520,6 @@
   en: greeting, welcoming
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Behandlung
@@ -578,7 +531,6 @@
   en: treatment
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Behauptung
@@ -590,7 +542,6 @@
   en: claim, assertion
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Behörde
@@ -602,7 +553,6 @@
   en: authority, agency
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Behördengang
@@ -614,7 +564,6 @@
   en: visit to a public office
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Behördensprache
@@ -626,7 +575,6 @@
   en: officialese
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Beilage
@@ -638,7 +586,6 @@
   en: side dish, garnishings
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bein
@@ -650,7 +597,6 @@
   en: leg
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beispiel
@@ -662,7 +608,6 @@
   en: example
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beitrag
@@ -674,7 +619,6 @@
   en: dues, contribution
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beleg
@@ -686,7 +630,6 @@
   en: record, evidence
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Benachrichtigung
@@ -698,7 +641,6 @@
   en: notification, advice
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Benutzer
@@ -710,7 +652,6 @@
   en: user
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Benzin
@@ -722,7 +663,6 @@
   en: gasoline, petrol
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Berater
@@ -734,7 +674,6 @@
   en: consultant, adviser
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beratungsstelle
@@ -746,7 +685,6 @@
   en: advice centre, advisory body
   freq: 44000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bereitschaft
@@ -758,7 +696,6 @@
   en: standby
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Berg
@@ -770,7 +707,6 @@
   en: hill, mountain
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bericht
@@ -782,7 +718,6 @@
   en: report
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beruf
@@ -794,7 +729,6 @@
   en: profession, trade
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bescheid
@@ -806,7 +740,6 @@
   en: notification, answer
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bescheinigung
@@ -818,7 +751,6 @@
   en: certificate
   freq: 31000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beschwerde
@@ -830,7 +762,6 @@
   en: complaint, moan
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beschwerdebrief
@@ -842,7 +773,6 @@
   en: complaint letter
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Besichtigung
@@ -854,7 +784,6 @@
   en: inspection, viewing
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Besprechung
@@ -866,7 +795,6 @@
   en: meeting, discussion
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bestseller
@@ -878,7 +806,6 @@
   en: bestseller, best seller
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bestätigung
@@ -890,7 +817,6 @@
   en: acknowledgement, confirmaton
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Betrag
@@ -902,7 +828,6 @@
   en: amount, extent
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Betreuung
@@ -914,7 +839,6 @@
   en: care
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Betriebskosten
@@ -927,7 +851,6 @@
   en: overhead, overheads
   freq: 50000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Betriebsrat
@@ -939,7 +862,6 @@
   en: works council
   freq: 36000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bett
@@ -951,7 +873,6 @@
   en: bed
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bevölkerung
@@ -963,7 +884,6 @@
   en: population
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bewegung
@@ -975,7 +895,6 @@
   en: movement, move
   freq: 1000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beweis
@@ -987,7 +906,6 @@
   en: evidence
   freq: 900
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beweislage
@@ -999,7 +917,6 @@
   en: body of evidence
   freq: 27000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Beweisstück
@@ -1011,7 +928,6 @@
   en: piece of evidence, exhibit
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bewerbung
@@ -1023,7 +939,6 @@
   en: application
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bewusstlosigkeit
@@ -1035,7 +950,6 @@
   en: unconsciousness
   freq: 33000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Beziehung
@@ -1047,7 +961,6 @@
   en: relation, relationship
   freq: 900
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bibliothek
@@ -1059,7 +972,6 @@
   en: library
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bibliothekar
@@ -1071,7 +983,6 @@
   en: librarian
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Biene
@@ -1083,7 +994,6 @@
   en: bee, honeybee
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bier
@@ -1095,7 +1005,6 @@
   en: beer, ale
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bild
@@ -1107,7 +1016,6 @@
   en: picture, painting
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bildschirm
@@ -1119,7 +1027,6 @@
   en: screen
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bildung
@@ -1132,7 +1039,6 @@
   en: formation, creation
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bildung:2
@@ -1145,7 +1051,6 @@
   en: education, cultivation
   freq: 7000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Binnenland
@@ -1157,7 +1062,6 @@
   en: inland
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Biologie
@@ -1169,7 +1073,6 @@
   en: biology
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Birne
@@ -1181,7 +1084,6 @@
   en: pear
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bitte
@@ -1193,7 +1095,6 @@
   en: plea, request
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blatt
@@ -1205,7 +1106,6 @@
   en: leaf
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blaulicht
@@ -1217,7 +1117,6 @@
   en: emergency flashing light, flashing lights
   freq: 29000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bleistift
@@ -1229,7 +1128,6 @@
   en: pencil
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blick
@@ -1241,7 +1139,6 @@
   en: look, glance
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blinker
@@ -1253,7 +1150,6 @@
   en: indicator, blinker
   freq: 28000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blitz
@@ -1265,7 +1161,6 @@
   en: flash, lightning
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blume
@@ -1277,7 +1172,6 @@
   en: flower
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blumenstrauß
@@ -1289,7 +1183,6 @@
   en: bouquet, flower bouquet
   freq: 20000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bluse
@@ -1301,7 +1194,6 @@
   en: blouse
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blut
@@ -1313,7 +1205,6 @@
   en: blood
   freq: 900
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Blutdruck
@@ -1325,7 +1216,6 @@
   en: blood pressure
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Boden
@@ -1337,7 +1227,6 @@
   en: ground, soil
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bohrer
@@ -1349,7 +1238,6 @@
   en: drill
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bohrfutter
@@ -1361,7 +1249,6 @@
   en: chuck
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bohrmaschine
@@ -1373,7 +1260,6 @@
   en: drill
   freq: 30000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Boot
@@ -1386,7 +1272,6 @@
   en: boat
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Boot:2
@@ -1398,7 +1283,6 @@
   en: boot
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Boulevard
@@ -1410,7 +1294,6 @@
   en: boulevard
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brand
@@ -1422,7 +1305,6 @@
   en: fire, blaze
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brandgefahr
@@ -1434,7 +1316,6 @@
   en: fire hazard
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brandmelder
@@ -1446,7 +1327,6 @@
   en: smoke detector, fire alarm
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Brauch
@@ -1458,7 +1338,6 @@
   en: custom, practice
   freq: 500
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brauchtum
@@ -1470,7 +1349,6 @@
   en: traditional customs
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Breite
@@ -1482,7 +1360,6 @@
   en: width, breadth
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Breitengrad
@@ -1494,7 +1371,6 @@
   en: latitude
   freq: 25000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bremse
@@ -1507,7 +1383,6 @@
   en: brake
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bremse:2
@@ -1520,7 +1395,6 @@
   en: gadfly, horsefly
   freq: 7000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bremsflüssigkeit
@@ -1532,7 +1406,6 @@
   en: brake fluid
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brett
@@ -1544,7 +1417,6 @@
   en: plank, board
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brettspiel
@@ -1556,7 +1428,6 @@
   en: board game
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brief
@@ -1568,7 +1439,6 @@
   en: letter
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Briefkasten
@@ -1580,7 +1450,6 @@
   en: mailbox, letterbox
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Briefkastenschlüssel
@@ -1592,7 +1461,6 @@
   en: mailbox key
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Briefmarke
@@ -1604,7 +1472,6 @@
   en: postage stamp, stamp
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Briefpapier
@@ -1616,7 +1483,6 @@
   en: letter paper
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Briefträger
@@ -1628,7 +1494,6 @@
   en: postman, mailman
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Briefumschlag
@@ -1640,7 +1505,6 @@
   en: envelope
   freq: 22000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brille
@@ -1652,7 +1516,6 @@
   en: goggles
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brot
@@ -1664,7 +1527,6 @@
   en: bread
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brotdose
@@ -1676,7 +1538,6 @@
   en: lunchbox
   freq: 39000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bruch
@@ -1689,7 +1550,6 @@
   en: break, rupture
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bruch:2
@@ -1701,7 +1561,6 @@
   en: marsh
   freq: 7000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bruder
@@ -1713,7 +1572,6 @@
   en: brother
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brust
@@ -1725,7 +1583,6 @@
   en: breast, chest
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brötchen
@@ -1737,7 +1594,6 @@
   en: bread roll, roll
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Brücke
@@ -1749,7 +1605,6 @@
   en: bridge
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Buch
@@ -1761,7 +1616,6 @@
   en: book
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Buchhandlung
@@ -1773,7 +1627,6 @@
   en: bookstore, bookshop
   freq: 20000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Budget
@@ -1785,7 +1638,6 @@
   en: budget
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bundeskanzler
@@ -1797,7 +1649,6 @@
   en: Federal Chancellor
   freq: 36000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bundesland
@@ -1809,7 +1660,6 @@
   en: federal state, state
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bundesregierung
@@ -1821,7 +1671,6 @@
   en: federal government
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bundesrepublik
@@ -1833,7 +1682,6 @@
   en: federal republic
   freq: 48000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bundestag
@@ -1845,7 +1693,6 @@
   en: Bundestag, Lower House
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bus
@@ -1858,7 +1705,6 @@
   en: bus, coach
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bus:2
@@ -1870,7 +1716,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bus:3
@@ -1883,7 +1728,6 @@
   en: bus
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bus:4
@@ -1895,7 +1739,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Busbahnhof
@@ -1907,7 +1750,6 @@
   en: bus terminal
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Busfahrer
@@ -1919,7 +1761,6 @@
   en: bus driver
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Busführerschein
@@ -1932,7 +1773,6 @@
   en: bus driving licence
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bushaltestelle
@@ -1944,7 +1784,6 @@
   en: bus stop, bus shelter
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Buslinie
@@ -1956,7 +1795,6 @@
   en: bus route, bus line
   freq: 48000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Busverbindung
@@ -1968,7 +1806,6 @@
   en: bus connection
   freq: null
   level: A1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Butter
@@ -1981,7 +1818,6 @@
   en: butter
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Butter:2
@@ -1993,7 +1829,6 @@
   en: null
   freq: 7000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bußgeld
@@ -2005,7 +1840,6 @@
   en: fine
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bäcker
@@ -2017,7 +1851,6 @@
   en: baker
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bäckerei
@@ -2029,7 +1862,6 @@
   en: bakery, bread shop
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bär
@@ -2042,7 +1874,6 @@
   en: bear
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bär:2
@@ -2054,7 +1885,6 @@
   en: mechanical ram
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bügeleisen
@@ -2066,7 +1896,6 @@
   en: iron, flat iron
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bügelsäge
@@ -2078,7 +1907,6 @@
   en: bow saw
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bühne
@@ -2090,7 +1918,6 @@
   en: stage, theatre
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bürger
@@ -2102,7 +1929,6 @@
   en: inhabitant, citizen
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bürgeramt
@@ -2114,7 +1940,6 @@
   en: citizen's register office
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bürgerinitiative
@@ -2126,7 +1951,6 @@
   en: citizens' action committee, citizens' action group
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bürgermeister
@@ -2138,7 +1962,6 @@
   en: mayor, provost
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bürgermeisterin
@@ -2150,7 +1973,6 @@
   en: mayor
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Büro
@@ -2162,7 +1984,6 @@
   en: office, bureau
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Bürste
@@ -2174,6 +1995,5 @@
   en: brush
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}

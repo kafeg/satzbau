@@ -7,7 +7,6 @@
   en: jacket, coat
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jahr
@@ -19,7 +18,6 @@
   en: year
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jahreszeit
@@ -31,7 +29,6 @@
   en: season
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jeans
@@ -44,7 +41,6 @@
   en: jeans
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jeans:2
@@ -56,7 +52,6 @@
   en: null
   freq: 5000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Joghurt
@@ -68,7 +63,6 @@
   en: yogurt, yoghurt
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Journalist
@@ -80,7 +74,6 @@
   en: journalist, magaziner
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jubiläum
@@ -92,7 +85,6 @@
   en: anniversary, jubilee
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jugend
@@ -104,7 +96,6 @@
   en: youth, adolescence
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jugendamt
@@ -116,7 +107,6 @@
   en: child protective services
   freq: 11000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Jugendherberge
@@ -128,7 +118,6 @@
   en: youth hostel
   freq: 35000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Junge
@@ -140,7 +129,6 @@
   en: boy
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Jurist
@@ -152,7 +140,6 @@
   en: jurist, lawyer
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Justiz
@@ -164,6 +151,5 @@
   en: justice
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}

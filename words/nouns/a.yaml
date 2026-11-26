@@ -7,7 +7,6 @@
   en: evening, eve
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abendessen
@@ -19,7 +18,6 @@
   en: supper, dinner
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abenteuer
@@ -31,7 +29,6 @@
   en: adventure
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abfahrt
@@ -43,7 +40,6 @@
   en: departure, start
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abfall
@@ -55,7 +51,6 @@
   en: rubbish, garbage
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abflug
@@ -67,7 +62,6 @@
   en: departure
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abholfach
@@ -79,7 +73,6 @@
   en: pickup locker
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Abholung
@@ -91,7 +84,6 @@
   en: collection, pickup
   freq: 23000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Ablehnung
@@ -103,7 +95,6 @@
   en: rejection, refusal
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abmahnung
@@ -115,7 +106,6 @@
   en: warning
   freq: 44000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abneigung
@@ -127,7 +117,6 @@
   en: aversion, dislike
   freq: 15000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abschiebung
@@ -139,7 +128,6 @@
   en: deportation
   freq: 37000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abschied
@@ -151,7 +139,6 @@
   en: farewell, parting
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abschlag
@@ -163,7 +150,6 @@
   en: discount, disagio
   freq: 26000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abschleppdienst
@@ -175,7 +161,6 @@
   en: breakdown service, towing service
   freq: 33000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abschleppwagen
@@ -187,7 +172,6 @@
   en: tow truck, breakdown lorry
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abschluss
@@ -199,7 +183,6 @@
   en: exclusion, shutting up
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Absender
@@ -211,7 +194,6 @@
   en: sender
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abstammung
@@ -223,7 +205,6 @@
   en: descent
   freq: 15000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abstellraum
@@ -235,7 +216,6 @@
   en: storeroom, boxroom
   freq: 36000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abstimmung
@@ -247,7 +227,6 @@
   en: vote, ballot
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abteil
@@ -259,7 +238,6 @@
   en: section
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abteilung
@@ -272,7 +250,6 @@
   en: department
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abteilung:2
@@ -284,7 +261,6 @@
   en: division
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abwechslung
@@ -296,7 +272,6 @@
   en: change, variation
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Abwägung
@@ -308,7 +283,6 @@
   en: weighing up, assessment
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Achsel
@@ -320,7 +294,6 @@
   en: shoulder
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Achtel
@@ -333,7 +306,6 @@
   en: eighth
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Achtel:2
@@ -345,7 +317,6 @@
   en: null
   freq: null
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Adresse
@@ -357,7 +328,6 @@
   en: address
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Advent
@@ -369,7 +339,6 @@
   en: Advent
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Adventskranz
@@ -381,7 +350,6 @@
   en: Advent wreath
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Affe
@@ -393,7 +361,6 @@
   en: monkey, ape
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Airbag
@@ -405,7 +372,6 @@
   en: airbag, air cushion
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Akku
@@ -417,7 +383,6 @@
   en: rechargeable battery, accumulator
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Akkuschrauber
@@ -429,7 +394,6 @@
   en: cordless drill, cordless screwdriver
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aktie
@@ -441,7 +405,6 @@
   en: share, stock
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Akzent
@@ -453,7 +416,6 @@
   en: accent
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alarm
@@ -465,7 +427,6 @@
   en: alarm, alert
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alarmanlage
@@ -477,7 +438,6 @@
   en: alarm system, burglar alarm
   freq: 9000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Algebra
@@ -489,7 +449,6 @@
   en: algebra
   freq: 22000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alkohol
@@ -501,7 +460,6 @@
   en: alcohol
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Allergie
@@ -513,7 +471,6 @@
   en: allergy
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alligator
@@ -525,7 +482,6 @@
   en: alligator
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alter
@@ -538,7 +494,6 @@
   en: old man
   freq: 500
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alter:2
@@ -551,7 +506,6 @@
   en: age
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alternative
@@ -564,7 +518,6 @@
   en: alternative, option
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alternative:2
@@ -576,7 +529,6 @@
   en: null
   freq: 9000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Alternative:3
@@ -588,7 +540,6 @@
   en: alternative
   freq: 9000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Altersvorsorge
@@ -600,7 +551,6 @@
   en: retirement provision
   freq: 42000
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Ampel
@@ -612,7 +562,6 @@
   en: hanging lamp
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Amt
@@ -624,7 +573,6 @@
   en: office
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Amtssprache
@@ -636,7 +584,6 @@
   en: official language
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Amtszeit
@@ -648,7 +595,6 @@
   en: term, incumbency
   freq: 17000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Anerkennung
@@ -660,7 +606,6 @@
   en: appreciation, allowance
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anfänger
@@ -672,7 +617,6 @@
   en: beginner, newbie
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Angebot
@@ -684,7 +628,6 @@
   en: offer, offering
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Angst
@@ -696,7 +639,6 @@
   en: anxiety, fear
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anhänger
@@ -708,7 +650,6 @@
   en: trailer
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ankunft
@@ -720,7 +661,6 @@
   en: arrival
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anlage
@@ -732,7 +672,6 @@
   en: disposition
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anleitung
@@ -744,7 +683,6 @@
   en: manual, instruction
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anmeldung
@@ -756,7 +694,6 @@
   en: registration
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anmerkung
@@ -768,7 +705,6 @@
   en: remark, footnote
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anpassung
@@ -780,7 +716,6 @@
   en: accommodation
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anrede
@@ -792,7 +727,6 @@
   en: salutation, form of address
   freq: 29000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anruf
@@ -804,7 +738,6 @@
   en: phone call, call
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anschluss
@@ -816,7 +749,6 @@
   en: connection, connexion
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ansicht
@@ -828,7 +760,6 @@
   en: view, opinion
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anteil
@@ -840,7 +771,6 @@
   en: share, portion
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Antrag
@@ -852,7 +782,6 @@
   en: application, petition
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Antragsteller
@@ -864,7 +793,6 @@
   en: applicant, petitioner
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Antwort
@@ -876,7 +804,6 @@
   en: answer
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anwaltskosten
@@ -889,7 +816,6 @@
   en: attorney's fee, solicitor's fee
   freq: 40000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Anwendung
@@ -901,7 +827,6 @@
   en: application, use
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anzahl
@@ -913,7 +838,6 @@
   en: number
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anzeige
@@ -925,7 +849,6 @@
   en: announcement, advertisement
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Anzug
@@ -937,7 +860,6 @@
   en: approach
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Apartment
@@ -949,7 +871,6 @@
   en: apartment
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Apfel
@@ -961,7 +882,6 @@
   en: apple
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Apotheke
@@ -973,7 +893,6 @@
   en: pharmacy, chemist's
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Apotheker
@@ -985,7 +904,6 @@
   en: apothecary, druggist
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aprikose
@@ -997,7 +915,6 @@
   en: apricot
   freq: 24000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeit
@@ -1009,7 +926,6 @@
   en: work, labour labor
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeiter
@@ -1021,7 +937,6 @@
   en: worker
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeitgeber
@@ -1033,7 +948,6 @@
   en: employer
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeitnehmer
@@ -1045,7 +959,6 @@
   en: employee
   freq: 39000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeitsamt
@@ -1057,7 +970,6 @@
   en: employment agency, employment office
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeitsblatt
@@ -1069,7 +981,6 @@
   en: worksheet
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeitserlaubnis
@@ -1081,7 +992,6 @@
   en: work permit, employment permit
   freq: 36000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arbeitszimmer
@@ -1093,7 +1003,6 @@
   en: study, workroom
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Architekt
@@ -1105,7 +1014,6 @@
   en: architect, building designer
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Argument
@@ -1117,7 +1025,6 @@
   en: argument
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arm
@@ -1129,7 +1036,6 @@
   en: arm
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Armut
@@ -1141,7 +1047,6 @@
   en: poverty
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Art
@@ -1153,7 +1058,6 @@
   en: kind, sort
   freq: 800
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Artikel
@@ -1165,7 +1069,6 @@
   en: article, commodity
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Arzt
@@ -1177,7 +1080,6 @@
   en: doctor, physician
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ast
@@ -1189,7 +1091,6 @@
   en: branch, bough
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Asyl
@@ -1201,7 +1102,6 @@
   en: place of refuge
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Attest
@@ -1213,7 +1113,6 @@
   en: certificate
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufenthalt
@@ -1225,7 +1124,6 @@
   en: stay
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufenthaltsdauer
@@ -1237,7 +1135,6 @@
   en: duration of stay, length of stay
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Aufenthaltserlaubnis
@@ -1249,7 +1146,6 @@
   en: residence permit
   freq: 48000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufenthaltstitel
@@ -1261,7 +1157,6 @@
   en: residence permit
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auffassung
@@ -1273,7 +1168,6 @@
   en: view, concept
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufgabe
@@ -1285,7 +1179,6 @@
   en: task, job
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufkleber
@@ -1297,7 +1190,6 @@
   en: sticker
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufregung
@@ -1309,7 +1201,6 @@
   en: excitement, stir
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aufzug
@@ -1321,7 +1212,6 @@
   en: elevator, lift
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auge
@@ -1333,7 +1223,6 @@
   en: eye
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Augenbraue
@@ -1345,7 +1234,6 @@
   en: eyebrow, brow
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Augenzeuge
@@ -1357,7 +1245,6 @@
   en: eyewitness
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausbildung
@@ -1369,7 +1256,6 @@
   en: education, training
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausdauer
@@ -1381,7 +1267,6 @@
   en: perseverance, persistence
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auseinandersetzung
@@ -1393,7 +1278,6 @@
   en: analysis
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausflug
@@ -1405,7 +1289,6 @@
   en: excursion, outing
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausgabe
@@ -1417,7 +1300,6 @@
   en: issue, expenditure
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausgang
@@ -1429,7 +1311,6 @@
   en: exit
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auskunft
@@ -1441,7 +1322,6 @@
   en: information
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausland
@@ -1453,7 +1333,6 @@
   en: abroad, outland
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auslieferung
@@ -1465,7 +1344,6 @@
   en: delivery, extradition
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausländer
@@ -1477,7 +1355,6 @@
   en: foreigner, alien
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausländerbehörde
@@ -1489,7 +1366,6 @@
   en: foreigners' registration office
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auspuff
@@ -1501,7 +1377,6 @@
   en: exhaust system, exhaust pipe
   freq: 19000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausrede
@@ -1513,7 +1388,6 @@
   en: pretext
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aussage
@@ -1525,7 +1399,6 @@
   en: statement, stated view
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aussehen
@@ -1537,7 +1410,6 @@
   en: look, appearance
   freq: 600
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aussicht
@@ -1549,7 +1421,6 @@
   en: view
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Aussprache
@@ -1561,7 +1432,6 @@
   en: pronunciation
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausstellung
@@ -1573,7 +1443,6 @@
   en: exhibition, exposition
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auswahl
@@ -1585,7 +1454,6 @@
   en: selection, choice
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auswanderung
@@ -1597,7 +1465,6 @@
   en: emigration, external migration
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ausweis
@@ -1609,7 +1476,6 @@
   en: identity card
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auto
@@ -1622,7 +1488,6 @@
   en: car, auto
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Auto:2
@@ -1634,7 +1499,6 @@
   en: order, resolution
   freq: 400
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autobahn
@@ -1646,7 +1510,6 @@
   en: motorway, freeway
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autofahren
@@ -1658,7 +1521,6 @@
   en: driving, motoring
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autohaus
@@ -1670,7 +1532,6 @@
   en: car dealer, car dealership
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Automat
@@ -1682,7 +1543,6 @@
   en: automaton
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Automatiktür
@@ -1695,7 +1555,6 @@
   en: automatic door
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Automechaniker
@@ -1707,7 +1566,6 @@
   en: automotive mechanic, car mechanic
   freq: 30000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autor
@@ -1719,7 +1577,6 @@
   en: author literator
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autoschlüssel
@@ -1731,7 +1588,6 @@
   en: car key
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autovermietung
@@ -1743,7 +1599,6 @@
   en: car hire
   freq: 34000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Autowerkstatt
@@ -1755,7 +1610,6 @@
   en: garage, auto repair shop
   freq: 24000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Äquator
@@ -1767,7 +1621,6 @@
   en: equator
   freq: 26000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ärger
@@ -1779,7 +1632,6 @@
   en: annoyance, anger
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ärgernis
@@ -1791,7 +1643,6 @@
   en: annoyance
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ärmel
@@ -1803,7 +1654,6 @@
   en: sleeve
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ärztin
@@ -1815,6 +1665,5 @@
   en: doctor, physican
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}

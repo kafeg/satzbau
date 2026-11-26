@@ -54,7 +54,7 @@ src/
     transfer.ts       журнал в файл и обратно
   ui/
     App.tsx           экраны и переходы, журнал → повторы
-    Home.tsx Lesson.tsx Result.tsx Example.tsx
+    Home.tsx Themes.tsx Lesson.tsx Result.tsx Example.tsx
     exercises/        index.ts — реестр экранов; Gender.tsx: тело урока одного упражнения
     styles.css
   main.tsx

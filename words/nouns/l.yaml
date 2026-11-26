@@ -7,7 +7,6 @@
   en: laboratory, lab
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lack
@@ -19,7 +18,6 @@
   en: varnish, lacquer
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ladegerät
@@ -31,7 +29,6 @@
   en: charger
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Laden
@@ -44,7 +41,6 @@
   en: shop, store
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Laden:2
@@ -57,7 +53,6 @@
   en: null
   freq: 1000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lampe
@@ -69,7 +64,6 @@
   en: lamp
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Land
@@ -81,7 +75,6 @@
   en: land, earth
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landesgrenze
@@ -93,7 +86,6 @@
   en: state boundary
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landesregierung
@@ -105,7 +97,6 @@
   en: state government
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landessprache
@@ -117,7 +108,6 @@
   en: national language
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landkarte
@@ -129,7 +119,6 @@
   en: map
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landschaft
@@ -141,7 +130,6 @@
   en: landscape
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landsmann
@@ -153,7 +141,6 @@
   en: compatriot
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landstrich
@@ -165,7 +152,6 @@
   en: area, district
   freq: 39000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Landtag
@@ -177,7 +163,6 @@
   en: Landtag, land diet
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Langeweile
@@ -189,7 +174,6 @@
   en: boredom
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lappen
@@ -201,7 +185,6 @@
   en: rag, cloth
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Laptop
@@ -213,7 +196,6 @@
   en: laptop computer, laptop
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lastschrift
@@ -225,7 +207,6 @@
   en: debit entry
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Latte
@@ -238,7 +219,6 @@
   en: lath, 4-cornered bar
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Latte:2
@@ -251,7 +231,6 @@
   en: null
   freq: 9000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Laufzeit
@@ -263,7 +242,6 @@
   en: time
   freq: 50000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Laune
@@ -275,7 +253,6 @@
   en: mood whim
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lautsprecher
@@ -287,7 +264,6 @@
   en: loudspeaker, speaker
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lebensgefahr
@@ -299,7 +275,6 @@
   en: danger to life, mortal danger
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lebenslauf
@@ -311,7 +286,6 @@
   en: curriculum vitae
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lebensmittel
@@ -323,7 +297,6 @@
   en: food, groceries
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lebensraum
@@ -335,7 +308,6 @@
   en: living space
   freq: 18000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lebkuchen
@@ -347,7 +319,6 @@
   en: gingerbread
   freq: 35000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leder
@@ -359,7 +330,6 @@
   en: leather
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Legislaturperiode
@@ -371,7 +341,6 @@
   en: parliamentary term, legislative period
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lehrbuch
@@ -383,7 +352,6 @@
   en: textbook, coursebook
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lehrer
@@ -395,7 +363,6 @@
   en: teacher, instructor
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lehrerin
@@ -407,7 +374,6 @@
   en: female ) teacher, instructor
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leidenschaft
@@ -419,7 +385,6 @@
   en: passion
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leihwagen
@@ -431,7 +396,6 @@
   en: rental car
   freq: 37000
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Leistung
@@ -443,7 +407,6 @@
   en: performance
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leiter
@@ -456,7 +419,6 @@
   en: head, director
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leiter:2
@@ -469,7 +431,6 @@
   en: ladder
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leiter:3
@@ -481,7 +442,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leitung
@@ -493,7 +453,6 @@
   en: management, leadership
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lenkrad
@@ -505,7 +464,6 @@
   en: steering wheel
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leser
@@ -517,7 +475,6 @@
   en: reader
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Leute
@@ -530,7 +487,6 @@
   en: people, persons
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Liebe
@@ -542,7 +498,6 @@
   en: love
   freq: 400
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lieblingsband
@@ -554,7 +509,6 @@
   en: favorite band, favourite band
   freq: 38000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieblingslied
@@ -566,7 +520,6 @@
   en: favorite song, favourite song
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lieblingsmusik
@@ -578,7 +531,6 @@
   en: favourite music
   freq: 48000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieblingssänger
@@ -590,7 +542,6 @@
   en: favourite singer, favorite singer
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lied
@@ -602,7 +553,6 @@
   en: song
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lieferdienst
@@ -614,7 +564,6 @@
   en: delivery service
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieferschein
@@ -626,7 +575,6 @@
   en: delivery note, bordereau
   freq: 47000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieferung
@@ -638,7 +586,6 @@
   en: delivery, shipment
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lineal
@@ -650,7 +597,6 @@
   en: ruler, rule
   freq: 30000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Linie
@@ -662,7 +608,6 @@
   en: line
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Liniennummer
@@ -675,7 +620,6 @@
   en: route number
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Link
@@ -687,7 +631,6 @@
   en: link
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lippe
@@ -699,7 +642,6 @@
   en: lip
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lippenstift
@@ -711,7 +653,6 @@
   en: lipstick
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Liter
@@ -723,7 +664,6 @@
   en: litre, liter
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Literatur
@@ -735,7 +675,6 @@
   en: literature
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Loch
@@ -748,7 +687,6 @@
   en: hole
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Loch:2
@@ -761,7 +699,6 @@
   en: loch, lough
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Locke
@@ -773,7 +710,6 @@
   en: curl, lock
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Logik
@@ -785,7 +721,6 @@
   en: logic
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lohn
@@ -797,7 +732,6 @@
   en: wage
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Luft
@@ -810,7 +744,6 @@
   en: air
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Luft:2
@@ -822,7 +755,6 @@
   en: null
   freq: 700
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Luftballon
@@ -834,7 +766,6 @@
   en: balloon, toy balloon
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Luftpost
@@ -846,7 +777,6 @@
   en: airmail
   freq: 46000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lust
@@ -858,7 +788,6 @@
   en: inclination
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Lächeln
@@ -870,7 +799,6 @@
   en: smile
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Länge
@@ -882,7 +810,6 @@
   en: length
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Längengrad
@@ -894,7 +821,6 @@
   en: longitude, meridian
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Löffel
@@ -906,7 +832,6 @@
   en: spoon
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Löschfahrzeug
@@ -918,7 +843,6 @@
   en: fire engine
   freq: 49000
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lösung
@@ -930,7 +854,6 @@
   en: solution, answer
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Löwe
@@ -942,6 +865,5 @@
   en: lion
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}

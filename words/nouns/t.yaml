@@ -7,7 +7,6 @@
   en: T-shirt
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tablet
@@ -19,7 +18,6 @@
   en: tablet
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tablette
@@ -31,7 +29,6 @@
   en: tablet, pill
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tafel
@@ -43,7 +40,6 @@
   en: tablet
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tag
@@ -56,7 +52,6 @@
   en: day
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tag:2
@@ -68,7 +63,6 @@
   en: tag
   freq: 300
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tag:3
@@ -80,7 +74,6 @@
   en: null
   freq: 300
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tagesmutter
@@ -92,7 +85,6 @@
   en: childminder, nanny
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tank
@@ -104,7 +96,6 @@
   en: tank
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tankstelle
@@ -116,7 +107,6 @@
   en: gas station, petrol station
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tante
@@ -128,7 +118,6 @@
   en: aunt
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tanz
@@ -140,7 +129,6 @@
   en: dance
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tanzkurs
@@ -152,7 +140,6 @@
   en: dancing class
   freq: 38000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Tapete
@@ -164,7 +151,6 @@
   en: wallpaper
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tasche
@@ -176,7 +162,6 @@
   en: pocket
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Taschengeld
@@ -188,7 +173,6 @@
   en: pocket money
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Taschenrechner
@@ -200,7 +184,6 @@
   en: pocket calculator, calculator
   freq: 28000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Taschentuch
@@ -212,7 +195,6 @@
   en: handkerchief, hanky
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tasse
@@ -224,7 +206,6 @@
   en: cup
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tastatur
@@ -236,7 +217,6 @@
   en: keyboard
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Taste
@@ -248,7 +228,6 @@
   en: key
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tatort
@@ -260,7 +239,6 @@
   en: crime scene
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tatsache
@@ -272,7 +250,6 @@
   en: fact
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Taufe
@@ -284,7 +261,6 @@
   en: baptism, christening
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Taxi
@@ -296,7 +272,6 @@
   en: taxi, cab
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Team
@@ -308,7 +283,6 @@
   en: team
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Technik
@@ -320,7 +294,6 @@
   en: technique
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teddybär
@@ -332,7 +305,6 @@
   en: teddy
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tee
@@ -345,7 +317,6 @@
   en: tea
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tee:2
@@ -357,7 +328,6 @@
   en: tee
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teelöffel
@@ -369,7 +339,6 @@
   en: teaspoon
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teich
@@ -381,7 +350,6 @@
   en: pond, pool
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teilnehmer
@@ -393,7 +361,6 @@
   en: participant
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teilzeit
@@ -405,7 +372,6 @@
   en: part-time
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Telefon
@@ -417,7 +383,6 @@
   en: telephone, phone
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teller
@@ -429,7 +394,6 @@
   en: plate
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Temperatur
@@ -441,7 +405,6 @@
   en: temperature
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tempolimit
@@ -453,7 +416,6 @@
   en: speed limit
   freq: 36000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Tennis
@@ -465,7 +427,6 @@
   en: tennis
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tennisplatz
@@ -477,7 +438,6 @@
   en: tennis court
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Teppich
@@ -489,7 +449,6 @@
   en: carpet, rug
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Termin
@@ -501,7 +460,6 @@
   en: date, deadline
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Terrasse
@@ -513,7 +471,6 @@
   en: terrace, patio
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Test
@@ -525,7 +482,6 @@
   en: test, check
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Text
@@ -537,7 +493,6 @@
   en: text
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Theater
@@ -549,7 +504,6 @@
   en: theater, theatre
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Theaterstück
@@ -561,7 +515,6 @@
   en: play, stage play
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Thema
@@ -573,7 +526,6 @@
   en: theme, topic
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Thermometer
@@ -585,7 +537,6 @@
   en: thermometer
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tiefe
@@ -597,7 +548,6 @@
   en: depth
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tiefland
@@ -609,7 +559,6 @@
   en: lowland
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tiefstwert
@@ -621,7 +570,6 @@
   en: minimum
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Tier
@@ -633,7 +581,6 @@
   en: animal, beast
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tierheim
@@ -645,7 +592,6 @@
   en: animal shelter, home for animals
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tierschutz
@@ -657,7 +603,6 @@
   en: animal welfare, animal protection
   freq: 37000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tiger
@@ -669,7 +614,6 @@
   en: tiger
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tisch
@@ -681,7 +625,6 @@
   en: table
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Titel
@@ -693,7 +636,6 @@
   en: title
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Toastbrot
@@ -705,7 +647,6 @@
   en: toast
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Toaster
@@ -717,7 +658,6 @@
   en: toaster
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tochter
@@ -729,7 +669,6 @@
   en: daughter, girl
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Toilette
@@ -741,7 +680,6 @@
   en: toilet
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tomate
@@ -753,7 +691,6 @@
   en: tomato, love apple
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Topf
@@ -765,7 +702,6 @@
   en: pot
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tor
@@ -778,7 +714,6 @@
   en: gate, gateway
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tor:2
@@ -791,7 +726,6 @@
   en: fool
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Torte
@@ -803,7 +737,6 @@
   en: layer cake
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Torwart
@@ -815,7 +748,6 @@
   en: goalkeeper, goal keeper
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tourist
@@ -827,7 +759,6 @@
   en: tourist
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Touristenbus
@@ -839,7 +770,6 @@
   en: tourist bus
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Touristin
@@ -851,7 +781,6 @@
   en: tourist
   freq: 25000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tracht
@@ -863,7 +792,6 @@
   en: costume, garb
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tradition
@@ -875,7 +803,6 @@
   en: tradition
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trailer
@@ -887,7 +814,6 @@
   en: trailer
   freq: 15000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Trainer
@@ -899,7 +825,6 @@
   en: coach
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trainerin
@@ -911,7 +836,6 @@
   en: coach
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Training
@@ -923,7 +847,6 @@
   en: training, practice
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trainingsanzug
@@ -935,7 +858,6 @@
   en: tracksuit, sweat suit
   freq: 30000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tram
@@ -948,7 +870,6 @@
   en: tram, tramway
   freq: 42000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tram:2
@@ -960,7 +881,6 @@
   en: beam
   freq: 42000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trauer
@@ -972,7 +892,6 @@
   en: grief, sorrow
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trennung
@@ -984,7 +903,6 @@
   en: parting, segregation
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Treppe
@@ -996,7 +914,6 @@
   en: staircase, stairway
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tribüne
@@ -1008,7 +925,6 @@
   en: stand
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trikot
@@ -1020,7 +936,6 @@
   en: jersey
   freq: 13000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trikot:2
@@ -1032,7 +947,6 @@
   en: jersey
   freq: 13000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Trinkgeld
@@ -1044,7 +958,6 @@
   en: tip
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trompete
@@ -1056,7 +969,6 @@
   en: trumpet
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Trotzphase
@@ -1068,7 +980,6 @@
   en: terrible twos
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Turnier
@@ -1080,7 +991,6 @@
   en: tournament
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Turnschuh
@@ -1092,7 +1002,6 @@
   en: sneaker
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tänzer
@@ -1104,7 +1013,6 @@
   en: dancer
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Täter
@@ -1116,7 +1024,6 @@
   en: perpetrator, criminal
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tür
@@ -1128,7 +1035,6 @@
   en: door
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Türkei
@@ -1140,7 +1046,6 @@
   en: Turkey, Türkiye
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Türklingel
@@ -1152,7 +1057,6 @@
   en: doorbell
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Tüte
@@ -1164,6 +1068,5 @@
   en: cornet
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}

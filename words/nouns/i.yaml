@@ -7,7 +7,6 @@
   en: hedgehog
   freq: 27000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Impfpass
@@ -19,7 +18,6 @@
   en: vaccination card
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Impfung
@@ -31,7 +29,6 @@
   en: vaccination
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Inflation
@@ -43,7 +40,6 @@
   en: inflation
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Informatik
@@ -55,7 +51,6 @@
   en: information technology, computer science
   freq: 36000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Information
@@ -67,7 +62,6 @@
   en: information
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ingenieur
@@ -79,7 +73,6 @@
   en: engineer
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Inhalt
@@ -91,7 +84,6 @@
   en: content
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Insekt
@@ -103,7 +95,6 @@
   en: insect, bug
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Insel
@@ -115,7 +106,6 @@
   en: island, isle
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Inselstaat
@@ -127,7 +117,6 @@
   en: island state, insular state
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Inspektion
@@ -139,7 +128,6 @@
   en: inspection
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Instrument
@@ -151,7 +139,6 @@
   en: instrument
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Integration
@@ -163,7 +150,6 @@
   en: integration
   freq: 24000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Integrationskurs
@@ -175,7 +161,6 @@
   en: integration course
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Interesse
@@ -187,7 +172,6 @@
   en: interest, pick-up
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Internet
@@ -199,7 +183,6 @@
   en: Internet, Net
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Interview
@@ -211,7 +194,6 @@
   en: interview
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Irrtum
@@ -223,6 +205,5 @@
   en: error, mistake
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}

@@ -7,7 +7,6 @@
   en: e-mail address, electronic mail address
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ecke
@@ -19,7 +18,6 @@
   en: corner, edge
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ehepaar
@@ -31,7 +29,6 @@
   en: married couple
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ehrenamt
@@ -43,7 +40,6 @@
   en: honorary office, honorary post
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ei
@@ -55,7 +51,6 @@
   en: ovum
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eilsendung
@@ -67,7 +62,6 @@
   en: express item, special delivery item
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eimer
@@ -80,7 +74,6 @@
   en: bucket, pail
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eimer:2
@@ -92,7 +85,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einbruch
@@ -104,7 +96,6 @@
   en: burglary, break and entry
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einbürgerung
@@ -116,7 +107,6 @@
   en: naturalization, naturalisation
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eindruck
@@ -128,7 +118,6 @@
   en: impression
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eingang
@@ -140,7 +129,6 @@
   en: entrance, way in
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eingewöhnung
@@ -152,7 +140,6 @@
   en: settling in, adjustment
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Eingliederung
@@ -164,7 +151,6 @@
   en: integration, incorporation
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einheit
@@ -176,7 +162,6 @@
   en: unity, oneness
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einigung
@@ -188,7 +173,6 @@
   en: unification
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einkauf
@@ -200,7 +184,6 @@
   en: purchase, shopping
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einkaufsliste
@@ -212,7 +195,6 @@
   en: shopping list
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einkaufstasche
@@ -224,7 +206,6 @@
   en: shopping bag
   freq: 49000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einkaufszentrum
@@ -236,7 +217,6 @@
   en: shopping center, shopping mall
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einladung
@@ -248,7 +228,6 @@
   en: invitation
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einnahme
@@ -260,7 +239,6 @@
   en: capture, occupation
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einsamkeit
@@ -272,7 +250,6 @@
   en: loneliness
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einschaltquote
@@ -284,7 +261,6 @@
   en: audience rating
   freq: 19000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einschreiben
@@ -296,7 +272,6 @@
   en: registered mail, registered post
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einschulung
@@ -308,7 +283,6 @@
   en: enrolment, enrollment
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Einschätzung
@@ -320,7 +294,6 @@
   en: assessment, estimation
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einstellung
@@ -332,7 +305,6 @@
   en: attitude
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eintritt
@@ -344,7 +316,6 @@
   en: joining
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eintrittskarte
@@ -356,7 +327,6 @@
   en: ticket
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwand
@@ -368,7 +338,6 @@
   en: objection
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwanderer
@@ -380,7 +349,6 @@
   en: immigrant
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwanderung
@@ -392,7 +360,6 @@
   en: immigration
   freq: 29000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwanderungsland
@@ -404,7 +371,6 @@
   en: immigration country
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwohner
@@ -416,7 +382,6 @@
   en: inhabitant
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwohnerzahl
@@ -428,7 +393,6 @@
   en: number of inhabitants, population
   freq: 42000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einwurf
@@ -440,7 +404,6 @@
   en: throw-in, throw in
   freq: 44000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Einzelzimmer
@@ -452,7 +415,6 @@
   en: single room
   freq: 20000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eis
@@ -465,7 +427,6 @@
   en: ice
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eis:2
@@ -477,7 +438,6 @@
   en: E sharp
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Elefant
@@ -489,7 +449,6 @@
   en: elephant
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Elfmeter
@@ -501,7 +460,6 @@
   en: penalty kick
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Eltern
@@ -514,7 +472,6 @@
   en: parents
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Elternabend
@@ -526,7 +483,6 @@
   en: parent-teacher conference
   freq: 22000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Elterngeld
@@ -538,7 +494,6 @@
   en: parental allowance
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Elternzeit
@@ -550,7 +505,6 @@
   en: parental leave
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Empfangsbestätigung
@@ -562,7 +516,6 @@
   en: receipt, notice of receipt
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Empfänger
@@ -574,7 +527,6 @@
   en: addressee, receiver
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Empfängerin
@@ -586,7 +538,6 @@
   en: recipient
   freq: null
   level: A1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Energie
@@ -598,7 +549,6 @@
   en: energy
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Enkel
@@ -611,7 +561,6 @@
   en: grandchild, grandson
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Enkel:2
@@ -623,7 +572,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Enkelin
@@ -635,7 +583,6 @@
   en: granddaughter
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Enkelkind
@@ -647,7 +594,6 @@
   en: grandchild
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ente
@@ -659,7 +605,6 @@
   en: duck, drake (
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Entfernung
@@ -671,7 +616,6 @@
   en: distance
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Entscheidung
@@ -683,7 +627,6 @@
   en: decision
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Entschuldigung
@@ -695,7 +638,6 @@
   en: apology
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Entschädigung
@@ -707,7 +649,6 @@
   en: compensation, indemnification
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Enttäuschung
@@ -719,7 +660,6 @@
   en: disappointment
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Entwickler
@@ -731,7 +671,6 @@
   en: developer
   freq: 38000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Entwicklung
@@ -743,7 +682,6 @@
   en: development
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erdbeben
@@ -755,7 +693,6 @@
   en: earthquake
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erdbeere
@@ -767,7 +704,6 @@
   en: strawberry
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erde
@@ -779,7 +715,6 @@
   en: earth, floor
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erderwärmung
@@ -791,7 +726,6 @@
   en: global warming
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erdgeschoss
@@ -803,7 +737,6 @@
   en: ground floor, first floor
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erdteil
@@ -815,7 +748,6 @@
   en: continent
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ergebnis
@@ -827,7 +759,6 @@
   en: result, outcome
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erinnerung
@@ -839,7 +770,6 @@
   en: memory, remembrance
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erkältung
@@ -851,7 +781,6 @@
   en: cold
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erlaubnis
@@ -863,7 +792,6 @@
   en: permission, allowance
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erleichterung
@@ -875,7 +803,6 @@
   en: reduction
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ermäßigung
@@ -887,7 +814,6 @@
   en: discount
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ersatzteil
@@ -899,7 +825,6 @@
   en: spare part, replacement part
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erstattung
@@ -911,7 +836,6 @@
   en: refund, reimbursement
   freq: 45000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ersthelfer
@@ -923,7 +847,6 @@
   en: first-aider
   freq: 45000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Erstversorgung
@@ -935,7 +858,6 @@
   en: first-aid
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erwartung
@@ -947,7 +869,6 @@
   en: expectation, anticipation
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erzieher
@@ -959,7 +880,6 @@
   en: educator
   freq: 27000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erzieherin
@@ -971,7 +891,6 @@
   en: educator
   freq: 33000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erziehung
@@ -983,7 +902,6 @@
   en: education
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Erzählung
@@ -995,7 +913,6 @@
   en: tale, story
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Essen
@@ -1007,7 +924,6 @@
   en: dish
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Esslöffel
@@ -1019,7 +935,6 @@
   en: tablespoon
   freq: 48000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Esstisch
@@ -1031,7 +946,6 @@
   en: dining-table
   freq: 24000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Esszimmer
@@ -1043,7 +957,6 @@
   en: dining room
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Euro
@@ -1056,7 +969,6 @@
   en: euro
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Euro:2
@@ -1069,7 +981,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Europa
@@ -1082,7 +993,6 @@
   en: Europe
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Europa:2
@@ -1095,7 +1005,6 @@
   en: Europa
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Europäer
@@ -1107,7 +1016,6 @@
   en: European
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Europäerin
@@ -1119,7 +1027,6 @@
   en: European
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Evakuierung
@@ -1131,6 +1038,5 @@
   en: evacuation
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}

@@ -7,7 +7,6 @@
   en: discount
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Radiergummi
@@ -19,7 +18,6 @@
   en: eraser, rubber
   freq: 31000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Radio
@@ -31,7 +29,6 @@
   en: radio
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Radius
@@ -43,7 +40,6 @@
   en: radius
   freq: 14000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Radtour
@@ -55,7 +51,6 @@
   en: bicycle tour, bike ride
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rap
@@ -67,7 +62,6 @@
   en: rap
   freq: 19000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rasierer
@@ -79,7 +73,6 @@
   en: shaver, razor
   freq: 17000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rasur
@@ -91,7 +84,6 @@
   en: shave
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ratenzahlung
@@ -103,7 +95,6 @@
   en: payment by instalments
   freq: 40000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rathaus
@@ -115,7 +106,6 @@
   en: town hall, city hall
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rauch
@@ -127,7 +117,6 @@
   en: smoke, fume
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rauchmelder
@@ -139,7 +128,6 @@
   en: smoke detector, smoke alarm
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rauminhalt
@@ -151,7 +139,6 @@
   en: volume
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rechenaufgabe
@@ -163,7 +150,6 @@
   en: mathematical exercise, arithmetical problem
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rechenbrett
@@ -175,7 +161,6 @@
   en: A calculation slate
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rechnung
@@ -187,7 +172,6 @@
   en: bill
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Recht
@@ -199,7 +183,6 @@
   en: law
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rechtsanwalt
@@ -211,7 +194,6 @@
   en: lawyer, barrister
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rechtschreibung
@@ -223,7 +205,6 @@
   en: orthography, spelling
   freq: 24000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rechtsstaat
@@ -235,7 +216,6 @@
   en: constitutional state, rule of law
   freq: 48000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Redaktion
@@ -247,7 +227,6 @@
   en: editing
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rede
@@ -259,7 +238,6 @@
   en: speech, address
   freq: 300
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Referat
@@ -271,7 +249,6 @@
   en: oral ) report
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regal
@@ -283,7 +260,6 @@
   en: rack, shelf
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regel
@@ -295,7 +271,6 @@
   en: rule
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regen
@@ -307,7 +282,6 @@
   en: rain
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regenbogen
@@ -319,7 +293,6 @@
   en: rainbow
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regenschirm
@@ -331,7 +304,6 @@
   en: umbrella, brolly
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regierung
@@ -343,7 +315,6 @@
   en: government
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Region
@@ -355,7 +326,6 @@
   en: region, area
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Regisseur
@@ -367,7 +337,6 @@
   en: director, producer
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reichtum
@@ -379,7 +348,6 @@
   en: wealth
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reifen
@@ -391,7 +359,6 @@
   en: tyre, tire
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reifenwechsel
@@ -403,7 +370,6 @@
   en: tyre change, tire change
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reis
@@ -416,7 +382,6 @@
   en: rice
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reis:2
@@ -428,7 +393,6 @@
   en: shoot, sprout
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reise
@@ -440,7 +404,6 @@
   en: travel, journey
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reisebüro
@@ -452,7 +415,6 @@
   en: travel agency
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reiseführer
@@ -464,7 +426,6 @@
   en: guide
   freq: 21000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reisegruppe
@@ -476,7 +437,6 @@
   en: tour group
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Reisepass
@@ -488,7 +448,6 @@
   en: passport
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reiseziel
@@ -500,7 +459,6 @@
   en: destination
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reißverschluss
@@ -512,7 +470,6 @@
   en: zipper, zip fastener
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reklamation
@@ -524,7 +481,6 @@
   en: consumer complaint, customer complaint
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rekord
@@ -536,7 +492,6 @@
   en: record
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rente
@@ -548,7 +503,6 @@
   en: pension, retirement
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rentenalter
@@ -560,7 +514,6 @@
   en: retirement age, pension age
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reparatur
@@ -572,7 +525,6 @@
   en: repair
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Reservierung
@@ -584,7 +536,6 @@
   en: reservation
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Respekt
@@ -596,7 +547,6 @@
   en: respect
   freq: 2000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ressource
@@ -608,7 +558,6 @@
   en: resource
   freq: 7000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rest
@@ -620,7 +569,6 @@
   en: remainder, rest
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Restaurant
@@ -632,7 +580,6 @@
   en: restaurant
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Retoure
@@ -644,7 +591,6 @@
   en: return
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rettung
@@ -656,7 +602,6 @@
   en: rescue
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rettungsdienst
@@ -668,7 +613,6 @@
   en: emergency medical services, rescue service
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rettungswagen
@@ -680,7 +624,6 @@
   en: ambulance vehicle
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rezept
@@ -692,7 +635,6 @@
   en: recipe
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rezeption
@@ -704,7 +646,6 @@
   en: reception, reception desk
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Richter
@@ -716,7 +657,6 @@
   en: judge
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Richtung
@@ -728,7 +668,6 @@
   en: direction
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Richtwert
@@ -740,7 +679,6 @@
   en: guidance level, guide level
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Ring
@@ -752,7 +690,6 @@
   en: ring
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Riss
@@ -765,7 +702,6 @@
   en: tear, burst
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Riss:2
@@ -777,7 +713,6 @@
   en: null
   freq: 7000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Roboter
@@ -789,7 +724,6 @@
   en: robot
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rock
@@ -802,7 +736,6 @@
   en: skirt
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rock:2
@@ -815,7 +748,6 @@
   en: rock
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rock:3
@@ -827,7 +759,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rockmusik
@@ -839,7 +770,6 @@
   en: rock music
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rohr
@@ -851,7 +781,6 @@
   en: tube, pipe
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rolle
@@ -864,7 +793,6 @@
   en: roller
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rolle:2
@@ -876,7 +804,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rolle:3
@@ -888,7 +815,6 @@
   en: null
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Roller
@@ -900,7 +826,6 @@
   en: scooter
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rollstuhlzugang
@@ -913,7 +838,6 @@
   en: wheelchair access
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Roman
@@ -925,7 +849,6 @@
   en: novel
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rosine
@@ -937,7 +860,6 @@
   en: raisin, currant
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rost
@@ -950,7 +872,6 @@
   en: rust
   freq: 19000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rost:2
@@ -962,7 +883,6 @@
   en: grill, grid
   freq: 19000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rucksack
@@ -974,7 +894,6 @@
   en: rucksack, knapsack
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ruhe
@@ -986,7 +905,6 @@
   en: calm, quiet
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rundfunk
@@ -998,7 +916,6 @@
   en: radio, broadcast
   freq: 22000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rundreise
@@ -1010,7 +927,6 @@
   en: round trip
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Russland
@@ -1022,7 +938,6 @@
   en: Russia
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rätsel
@@ -1034,7 +949,6 @@
   en: puzzle, riddle
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rücken
@@ -1046,7 +960,6 @@
   en: back
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückerstattung
@@ -1058,7 +971,6 @@
   en: refund, reimbursement
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückfahrt
@@ -1070,7 +982,6 @@
   en: return trip
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückflug
@@ -1082,7 +993,6 @@
   en: inward flight, return flight
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückgabe
@@ -1094,7 +1004,6 @@
   en: return
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückkehr
@@ -1106,7 +1015,6 @@
   en: return
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rücklage
@@ -1118,7 +1026,6 @@
   en: savings
   freq: 42000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückmeldung
@@ -1130,7 +1037,6 @@
   en: feedback
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rücksendung
@@ -1142,7 +1048,6 @@
   en: return shipment
   freq: null
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rücksicht
@@ -1154,7 +1059,6 @@
   en: consideration
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rücksitz
@@ -1166,7 +1070,6 @@
   en: back-seat
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Rückspiegel
@@ -1178,6 +1081,5 @@
   en: rear-view mirror
   freq: 21000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}

@@ -13,7 +13,7 @@ import srcs  # noqa: E402
 
 ROOT = srcs.ROOT
 LEVELS = {'A1', 'A2', 'B1', None}
-NOUN_KEYS = ['id', 'lemma', 'gender', 'plural', 'gen_sg', 'ru', 'en', 'freq', 'level', 'themes', 'decided', 'skip']
+NOUN_KEYS = ['id', 'lemma', 'gender', 'plural', 'gen_sg', 'ru', 'en', 'freq', 'level', 'decided', 'skip']
 NOUN_OPT = {'sense', 'number', 'compound'}
 FORM_SOURCES = ('dewikt', 'enwikt', 'ruwikt')
 
@@ -151,6 +151,38 @@ def check_sentences(ids, errors):
     return n
 
 
+THEME_KEYS = ['id', 'title', 'order', 'words']
+
+
+def check_themes(nouns, errors):
+    """Темы — решения (docs/data-model.md, «Тема»): проверяем только ссылки и полноту."""
+    course = {w['id'] for w in nouns if w.get('level')}
+    seen, orders = set(), collections.Counter()
+    paths = sorted(glob.glob(os.path.join(ROOT, 'themes', '*.yaml')))
+    for p in paths:
+        t = yaml.safe_load(open(p, encoding='utf-8'))
+        name = os.path.basename(p)
+        if list(t) != THEME_KEYS:
+            errors['theme-schema'].append(f'{name}: поля {list(t)}, нужно {THEME_KEYS}')
+            continue
+        if f'{t["id"]}.yaml' != name or not re.fullmatch(r'[a-z]+', t['id']):
+            errors['theme-id'].append(f'{name}: id {t["id"]}')
+        orders[t['order']] += 1
+        dup = [i for i, n in collections.Counter(t['words']).items() if n > 1]
+        if dup:
+            errors['theme-dup'].append(f'{t["id"]}: {", ".join(dup)}')
+        for i in t['words']:
+            if i not in course:
+                errors['theme-ref'].append(f'{t["id"]}: {i} — не запись курса')
+        seen |= set(t['words'])
+    for o, n in orders.items():
+        if n > 1:
+            errors['theme-order'].append(f'order {o}: {n} тем')
+    for i in sorted(course - seen):
+        errors['theme-none'].append(f'{i}: ни в одной теме')
+    return len(paths)
+
+
 def main():
     verbose = '-v' in sys.argv
     errors, warnings = collections.defaultdict(list), collections.defaultdict(list)
@@ -169,8 +201,10 @@ def main():
         soft = w.get('level') is None
         check_noun(w, ev.get(w.get('lemma')), warn if soft else err, warn)
     n = check_sentences(set(ids), errors)
+    themes = check_themes(nouns, errors)
     levels = collections.Counter(w.get('level') for w in nouns)
-    print(f'существительных: {len(nouns)} (A1 {levels["A1"]}, A2 {levels["A2"]}, B1 {levels["B1"]}, вне курса {levels[None]}); фраз: {n}')
+    print(f'существительных: {len(nouns)} (A1 {levels["A1"]}, A2 {levels["A2"]}, B1 {levels["B1"]}, '
+          f'вне курса {levels[None]}); тем: {themes}; фраз: {n}')
     total = sum(map(len, errors.values()))
     for kind, xs in sorted(warnings.items()):
         print(f'предупреждение {kind}: {len(xs)}')

@@ -1,0 +1,53 @@
+id: media
+title: Кино, книги, новости
+order: 20
+words:
+  - n:Fernsehen
+  - n:Sendung
+  - n:Serie
+  - n:Szene
+  - n:Rolle
+  - n:Titel
+  - n:Geschichte
+  - n:Schauspieler
+  - n:Schauspielerin
+  - n:Leser
+  - n:Autor
+  - n:Meldung
+  - n:Artikel
+  - n:Bericht
+  - n:Interview
+  - n:Journalist
+  - n:Regisseur
+  - n:Kapitel
+  - n:Untertitel
+  - n:Meinung
+  - n:Kritik
+  - n:Verlag
+  - n:Trailer
+  - n:Popcorn
+  - n:Hörer
+  - n:Podcast
+  - n:Dokumentation
+  - n:Komödie
+  - n:Spielfilm
+  - n:Folge
+  - n:Buchhandlung
+  - n:Redaktion
+  - n:Schlagzeile
+  - n:Erzählung
+  - n:Gedicht
+  - n:Drehbuch
+  - n:Einschaltquote
+  - n:Veröffentlichung
+  - n:Moderator
+  - n:Staffel
+  - n:Hauptrolle
+  - n:Drehort
+  - n:Bestseller
+  - n:Umfrage
+  - n:Werbepause
+  - n:Rundfunk
+  - n:Presse
+  - n:Zensur
+  - n:Falschmeldung

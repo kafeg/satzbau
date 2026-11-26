@@ -7,7 +7,6 @@
   en: neighbour
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachbarin
@@ -19,7 +18,6 @@
   en: neighbour
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachbarland
@@ -31,7 +29,6 @@
   en: neighbouring country
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachbarschaft
@@ -43,7 +40,6 @@
   en: neighbourhood
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachbarstaat
@@ -55,7 +51,6 @@
   en: neighbouring state
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachhilfe
@@ -67,7 +62,6 @@
   en: private coaching, extra tuition
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachlass
@@ -79,7 +73,6 @@
   en: estate
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachmittag
@@ -91,7 +84,6 @@
   en: afternoon
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachnahme
@@ -103,7 +95,6 @@
   en: collect on delivery
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachname
@@ -115,7 +106,6 @@
   en: last name, surname
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachporto
@@ -127,7 +117,6 @@
   en: excess postage
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nachricht
@@ -139,7 +128,6 @@
   en: news, message
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nacht
@@ -151,7 +139,6 @@
   en: night
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachteil
@@ -163,7 +150,6 @@
   en: disadvantage, drawback
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachtisch
@@ -175,7 +161,6 @@
   en: dessert, pudding
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachweis
@@ -187,7 +172,6 @@
   en: proof, confirmation
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nachzahlung
@@ -199,7 +183,6 @@
   en: back payment, subsequent payment
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nagel
@@ -211,7 +194,6 @@
   en: nail
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nagelfeile
@@ -223,7 +205,6 @@
   en: nail file
   freq: 41000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nagellack
@@ -235,7 +216,6 @@
   en: nail polish
   freq: 18000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nagelschere
@@ -247,7 +227,6 @@
   en: nail scissors
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Name
@@ -259,7 +238,6 @@
   en: name
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Narkose
@@ -271,7 +249,6 @@
   en: general anaesthesia
   freq: 15000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nase
@@ -283,7 +260,6 @@
   en: nose
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nationalfeiertag
@@ -295,7 +271,6 @@
   en: National Day
   freq: 41000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nationalität
@@ -307,7 +282,6 @@
   en: nationality
   freq: 22000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nationalpark
@@ -319,7 +293,6 @@
   en: national park
   freq: 24000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Natur
@@ -331,7 +304,6 @@
   en: nature
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nebel
@@ -343,7 +315,6 @@
   en: fog, haze
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nebenkosten
@@ -356,7 +327,6 @@
   en: additional costs, utilities
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nebenwirkung
@@ -368,7 +338,6 @@
   en: side effect, adverse effect
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neffe
@@ -381,7 +350,6 @@
   en: nephew
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neffe:2
@@ -393,7 +361,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neffe:3
@@ -405,7 +372,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neffe:4
@@ -417,7 +383,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neid
@@ -429,7 +394,6 @@
   en: envy
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nervosität
@@ -441,7 +405,6 @@
   en: nervousness
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nest
@@ -453,7 +416,6 @@
   en: nest
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Netz
@@ -465,7 +427,6 @@
   en: net
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Netzwerk
@@ -477,7 +438,6 @@
   en: network
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neujahr
@@ -489,7 +449,6 @@
   en: New Year, New Year's Day
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Neuwagen
@@ -501,7 +460,6 @@
   en: new car
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nichte
@@ -513,7 +471,6 @@
   en: niece
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Niederlage
@@ -525,7 +482,6 @@
   en: defeat
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Niederlassung
@@ -537,7 +493,6 @@
   en: establishment
   freq: 33000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Niederschlag
@@ -549,7 +504,6 @@
   en: precipitation
   freq: 26000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nikolaus
@@ -561,7 +515,6 @@
   en: Saint Nicholas
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Niveau
@@ -573,7 +526,6 @@
   en: level
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Norden
@@ -585,7 +537,6 @@
   en: north
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nordosten
@@ -597,7 +548,6 @@
   en: northeast, north-east
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nordpol
@@ -609,7 +559,6 @@
   en: North Pole
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nordsee
@@ -621,7 +570,6 @@
   en: North Sea, German Sea
   freq: 26000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nordwesten
@@ -633,7 +581,6 @@
   en: northwest, north-west
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notarzt
@@ -645,7 +592,6 @@
   en: emergency physician
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notaufnahme
@@ -657,7 +603,6 @@
   en: emergency room, emergency department
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notausgang
@@ -669,7 +614,6 @@
   en: emergency exit, fire escape
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notbremse
@@ -681,7 +625,6 @@
   en: emergency brake
   freq: 27000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Notdienst
@@ -693,7 +636,6 @@
   en: emergency service
   freq: 29000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Note
@@ -705,7 +647,6 @@
   en: note
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notfall
@@ -717,7 +658,6 @@
   en: emergency
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notiz
@@ -729,7 +669,6 @@
   en: note
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Notruf
@@ -741,7 +680,6 @@
   en: emergency call
   freq: 5000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nudel
@@ -753,7 +691,6 @@
   en: pasta, noodle
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nummer
@@ -765,7 +702,6 @@
   en: number
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Nummernschild
@@ -777,7 +713,6 @@
   en: license plate, license tag
   freq: 8000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nuss
@@ -789,6 +724,5 @@
   en: nut
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}

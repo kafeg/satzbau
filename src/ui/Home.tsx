@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { type Overview, freshToday } from '../core/lesson.ts'
+import { plural } from '../core/text.ts'
 import { LEVELS, type Level } from '../core/types.ts'
 import type { Data } from '../store/db.ts'
 
@@ -10,6 +11,8 @@ type Props = {
   level: Level
   onLevel: (l: Level) => void
   ov: Overview
+  theme: string
+  onThemes: () => void
   onStart: (extra: number) => void
   stored: boolean
   notice: string | null
@@ -17,13 +20,14 @@ type Props = {
   onImport: (f: File) => void
 }
 
-export function Home({ data, level, onLevel, ov, onStart, stored, notice, onExport, onImport }: Props) {
+export function Home({ data, level, onLevel, ov, theme, onThemes, onStart, stored, notice, onExport, onImport }: Props) {
   const file = useRef<HTMLInputElement>(null)
   const due = ov.due.length
   const fresh = freshToday(ov)
   const { learned, learning, untouched } = ov.words
   const total = learned + learning + untouched || 1
   const more = Math.min(EXTRA, ov.fresh.length)
+  const n = learned + learning + untouched
 
   return (
     <main className="home">
@@ -42,6 +46,18 @@ export function Home({ data, level, onLevel, ov, onStart, stored, notice, onExpo
           ))}
         </div>
       </div>
+
+      <button className="picker" onClick={onThemes}>
+        <span>
+          <span className="caption">Тема</span>
+          <span className="v">
+            {theme} · {n} {plural(n, ['слово', 'слова', 'слов'])}
+          </span>
+        </span>
+        <span className="chev" aria-hidden>
+          ›
+        </span>
+      </button>
 
       <div>
         <div className="section">Сегодня</div>

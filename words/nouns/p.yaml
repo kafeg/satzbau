@@ -7,7 +7,6 @@
   en: couple
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Packstation
@@ -19,7 +18,6 @@
   en: parcel locker
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Packung
@@ -31,7 +29,6 @@
   en: pack, package
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Paket
@@ -43,7 +40,6 @@
   en: packet
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Paketbote
@@ -55,7 +51,6 @@
   en: package deliverer
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Paketkarte
@@ -67,7 +62,6 @@
   en: dispatch form
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Paketshop
@@ -79,7 +73,6 @@
   en: post office
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Panik
@@ -91,7 +84,6 @@
   en: panic
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Panne
@@ -104,7 +96,6 @@
   en: breakdown
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Panne:2
@@ -116,7 +107,6 @@
   en: null
   freq: 10000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Papa
@@ -129,7 +119,6 @@
   en: daddy, dad
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Papa:2
@@ -141,7 +130,6 @@
   en: pope
   freq: 1000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Papagei
@@ -153,7 +141,6 @@
   en: parrot, popinjay
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Papier
@@ -165,7 +152,6 @@
   en: paper
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Parfüm
@@ -177,7 +163,6 @@
   en: perfume
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Park
@@ -189,7 +174,6 @@
   en: park
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Parkhaus
@@ -201,7 +185,6 @@
   en: parking garage
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Parkplatz
@@ -213,7 +196,6 @@
   en: parking lot, car park
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Parkschein
@@ -225,7 +207,6 @@
   en: parking ticket
   freq: 34000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Partei
@@ -237,7 +218,6 @@
   en: party
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Partner
@@ -249,7 +229,6 @@
   en: associate
   freq: 1000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Partnerin
@@ -261,7 +240,6 @@
   en: partner
   freq: 6000
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Party
@@ -273,7 +251,6 @@
   en: party, do
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pass
@@ -285,7 +262,6 @@
   en: passport
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Passwort
@@ -297,7 +273,6 @@
   en: password
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Patient
@@ -309,7 +284,6 @@
   en: patient
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Patientin
@@ -321,7 +295,6 @@
   en: patient
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pauschalreise
@@ -333,7 +306,6 @@
   en: package tour
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Pause
@@ -346,7 +318,6 @@
   en: pause, break
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pause:2
@@ -358,7 +329,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pech
@@ -370,7 +340,6 @@
   en: pitch
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Peeling
@@ -382,7 +351,6 @@
   en: exfoliation
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Person
@@ -394,7 +362,6 @@
   en: person
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfand
@@ -406,7 +373,6 @@
   en: pledge, forfeit
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfanne
@@ -418,7 +384,6 @@
   en: pan
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfeffer
@@ -430,7 +395,6 @@
   en: pepper
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfeife
@@ -442,7 +406,6 @@
   en: whistle, pipe
   freq: 5000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pferd
@@ -454,7 +417,6 @@
   en: horse
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfingsten
@@ -466,7 +428,6 @@
   en: Pentecost, whitsun
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfirsich
@@ -478,7 +439,6 @@
   en: peach
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pflanze
@@ -490,7 +450,6 @@
   en: plant
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pflaster
@@ -502,7 +461,6 @@
   en: plaster, band-aid
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pflege
@@ -514,7 +472,6 @@
   en: care, nursing
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pflegemittel
@@ -526,7 +483,6 @@
   en: care product
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Pflicht
@@ -538,7 +494,6 @@
   en: duty, obligation
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pfund
@@ -550,7 +505,6 @@
   en: pound
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Philosophie
@@ -562,7 +516,6 @@
   en: philosophy
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Physik
@@ -574,7 +527,6 @@
   en: physics
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Physiotherapie
@@ -586,7 +538,6 @@
   en: physiotherapy, physical therapy
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pianist
@@ -598,7 +549,6 @@
   en: pianist
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pickel
@@ -611,7 +561,6 @@
   en: pimple, blain
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pickel:2
@@ -623,7 +572,6 @@
   en: pickaxe, pick-axe
   freq: 12000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pickel:3
@@ -635,7 +583,6 @@
   en: null
   freq: 12000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Picknick
@@ -647,7 +594,6 @@
   en: picnic
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pilz
@@ -659,7 +605,6 @@
   en: fungus
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pinsel
@@ -671,7 +616,6 @@
   en: paintbrush, paint brush
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pinzette
@@ -683,7 +627,6 @@
   en: tweezers
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pkw
@@ -695,7 +638,6 @@
   en: motorcar, automobile
   freq: 46000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Plastiktüte
@@ -707,7 +649,6 @@
   en: plastic bag, polythene bag
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Platte
@@ -719,7 +660,6 @@
   en: plate
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Platz
@@ -731,7 +671,6 @@
   en: circus, square
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Plätzchen
@@ -743,7 +682,6 @@
   en: cookie, biscuit
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Podcast
@@ -755,7 +693,6 @@
   en: podcast
   freq: 39000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pokal
@@ -767,7 +704,6 @@
   en: goblet
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Polen
@@ -779,7 +715,6 @@
   en: Poland
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Politik
@@ -791,7 +726,6 @@
   en: politics
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Politiker
@@ -803,7 +737,6 @@
   en: politician
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Politikerin
@@ -815,7 +748,6 @@
   en: female politician
   freq: 37000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Polizei
@@ -827,7 +759,6 @@
   en: police
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Polizeiauto
@@ -839,7 +770,6 @@
   en: police car
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Polizeiwache
@@ -851,7 +781,6 @@
   en: police station
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Polizist
@@ -863,7 +792,6 @@
   en: police officer, policeman
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Polizistin
@@ -875,7 +803,6 @@
   en: policewoman, bobby
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Popcorn
@@ -887,7 +814,6 @@
   en: popped corn, popping corn
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Popmusik
@@ -899,7 +825,6 @@
   en: pop music, pop
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Portion
@@ -911,7 +836,6 @@
   en: portion
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Porto
@@ -923,7 +847,6 @@
   en: postage
   freq: 28000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Post
@@ -936,7 +859,6 @@
   en: mail, post office
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Post:2
@@ -949,7 +871,6 @@
   en: post
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postamt
@@ -961,7 +882,6 @@
   en: post office
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postbote
@@ -973,7 +893,6 @@
   en: postman, mailman
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postfach
@@ -985,7 +904,6 @@
   en: post office box, PO Box
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postfiliale
@@ -997,7 +915,6 @@
   en: postal branch
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postgebühr
@@ -1009,7 +926,6 @@
   en: postage
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postgeheimnis
@@ -1021,7 +937,6 @@
   en: privacy of correspondence
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postkarte
@@ -1033,7 +948,6 @@
   en: postcard, post card
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postleitzahl
@@ -1045,7 +959,6 @@
   en: postal code, postcode
   freq: 27000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postsack
@@ -1057,7 +970,6 @@
   en: mail sack, mail bag
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postschalter
@@ -1069,7 +981,6 @@
   en: post office counter
   freq: null
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Poststempel
@@ -1081,7 +992,6 @@
   en: postmarking device
   freq: 42000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Postverkehr
@@ -1093,7 +1003,6 @@
   en: postal service
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postweg
@@ -1105,7 +1014,6 @@
   en: postal route, by post
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Praktikum
@@ -1117,7 +1025,6 @@
   en: internship, work experience
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Praxis
@@ -1129,7 +1036,6 @@
   en: practice
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Preis
@@ -1141,7 +1047,6 @@
   en: price
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Presse
@@ -1153,7 +1058,6 @@
   en: press
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pressefreiheit
@@ -1165,7 +1069,6 @@
   en: press freedom
   freq: 32000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Prise
@@ -1177,7 +1080,6 @@
   en: dash, pinch
   freq: 16000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Probefahrt
@@ -1189,7 +1091,6 @@
   en: test drive
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Probezeit
@@ -1201,7 +1102,6 @@
   en: probation, probationary period
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Problem
@@ -1213,7 +1113,6 @@
   en: problem, trouble
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Profil
@@ -1225,7 +1124,6 @@
   en: profile
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Programm
@@ -1237,7 +1135,6 @@
   en: program, cycle
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Projekt
@@ -1249,7 +1146,6 @@
   en: project
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Protest
@@ -1261,7 +1157,6 @@
   en: protest
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Prozent
@@ -1273,7 +1168,6 @@
   en: percent
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Prüfung
@@ -1285,7 +1179,6 @@
   en: check, audit
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Publikum
@@ -1297,7 +1190,6 @@
   en: audience, public
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Puder
@@ -1309,7 +1201,6 @@
   en: powder
   freq: 20000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pullover
@@ -1321,7 +1212,6 @@
   en: sweater, pullover
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Punkt
@@ -1333,7 +1223,6 @@
   en: point
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Puppe
@@ -1345,7 +1234,6 @@
   en: doll
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Puzzle
@@ -1357,7 +1245,6 @@
   en: jigsaw puzzle, puzzle
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Pyjama
@@ -1369,7 +1256,6 @@
   en: pajamas, pyjamas
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Päckchen
@@ -1381,6 +1267,5 @@
   en: small packet, parcel
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}

@@ -7,7 +7,6 @@
   en: commuter railway, suburban railway
   freq: 43000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sachbearbeiter
@@ -19,7 +18,6 @@
   en: case worker, official in charge
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sachbearbeiterin
@@ -31,7 +29,6 @@
   en: clerk, caseworker
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sachbeschädigung
@@ -43,7 +40,6 @@
   en: property damage, vandalism
   freq: 32000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sachlage
@@ -55,7 +51,6 @@
   en: situation, circumstance
   freq: 33000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sachstand
@@ -67,7 +62,6 @@
   en: state of affairs
   freq: null
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Saft
@@ -79,7 +73,6 @@
   en: juice
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Salat
@@ -91,7 +84,6 @@
   en: lettuce
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Salbe
@@ -103,7 +95,6 @@
   en: salve, ointment
   freq: 20000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Salz
@@ -115,7 +106,6 @@
   en: salt
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sammlung
@@ -127,7 +117,6 @@
   en: collection
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Samstag
@@ -139,7 +128,6 @@
   en: Saturday
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sand
@@ -151,7 +139,6 @@
   en: sand
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sandale
@@ -163,7 +150,6 @@
   en: sandal
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sanitäter
@@ -175,7 +161,6 @@
   en: paramedic
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Satz
@@ -187,7 +172,6 @@
   en: sentence, period
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sauna
@@ -199,7 +183,6 @@
   en: sauna
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Scanner
@@ -211,7 +194,6 @@
   en: scanner
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schach
@@ -223,7 +205,6 @@
   en: chess
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schaden
@@ -235,7 +216,6 @@
   en: damage, harm
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schadensersatz
@@ -247,7 +227,6 @@
   en: indemnification, restitution of damage
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schaf
@@ -259,7 +238,6 @@
   en: sheep
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schaffner
@@ -271,7 +249,6 @@
   en: conductor, guard
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schal
@@ -283,7 +260,6 @@
   en: scarf, shawl
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schalter
@@ -295,7 +271,6 @@
   en: switch
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schalterhalle
@@ -307,7 +282,6 @@
   en: counter hall
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Scham
@@ -319,7 +293,6 @@
   en: shame
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schaufenster
@@ -331,7 +304,6 @@
   en: shop window
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schaum
@@ -343,7 +315,6 @@
   en: foam, froth
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schauspieler
@@ -355,7 +326,6 @@
   en: actor
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schauspielerin
@@ -367,7 +337,6 @@
   en: actor, actress
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Scheibe
@@ -379,7 +348,6 @@
   en: disk
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Scheibenwischer
@@ -391,7 +359,6 @@
   en: windscreen wiper, windshield wiper
   freq: 29000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schein
@@ -403,7 +370,6 @@
   en: shine, gleam
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Scheinwerfer
@@ -415,7 +381,6 @@
   en: spotlight
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schere
@@ -427,7 +392,6 @@
   en: scissors
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schiedsrichter
@@ -439,7 +403,6 @@
   en: referee, umpire
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schiff
@@ -451,7 +414,6 @@
   en: ship, boat
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schildkröte
@@ -463,7 +425,6 @@
   en: tortoise turtle
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schimmel
@@ -476,7 +437,6 @@
   en: white horse, gray horse
   freq: 20000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schimmel:2
@@ -489,7 +449,6 @@
   en: mould mold
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schinken
@@ -501,7 +460,6 @@
   en: ham
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlafanzug
@@ -513,7 +471,6 @@
   en: pyjamas, nightgown
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlafzimmer
@@ -525,7 +482,6 @@
   en: bedroom
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlaganfall
@@ -537,7 +493,6 @@
   en: stroke
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlagzeile
@@ -549,7 +504,6 @@
   en: headline
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlagzeug
@@ -561,7 +515,6 @@
   en: drum kit, drum set
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlagzeuger
@@ -573,7 +526,6 @@
   en: drummer
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlange
@@ -585,7 +537,6 @@
   en: snake, serpent
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schleifpapier
@@ -597,7 +548,6 @@
   en: abrasive paper
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlichtung
@@ -609,7 +559,6 @@
   en: mediation, arbitration
   freq: 48000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Schlittschuh
@@ -621,7 +570,6 @@
   en: ice skate
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schloss
@@ -633,7 +581,6 @@
   en: lock, bolt
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlosser
@@ -645,7 +592,6 @@
   en: fitter, locksmith
   freq: 34000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlussfolgerung
@@ -657,7 +603,6 @@
   en: conclusion, implication
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schlüssel
@@ -669,7 +614,6 @@
   en: key
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schmerz
@@ -681,7 +625,6 @@
   en: ache, pain
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schminke
@@ -693,7 +636,6 @@
   en: make-up, makeup
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnee
@@ -705,7 +647,6 @@
   en: snow
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnellbahnplan
@@ -718,7 +659,6 @@
   en: S-Bahn map
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Schnittstelle
@@ -730,7 +670,6 @@
   en: interface
   freq: 29000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnuller
@@ -742,7 +681,6 @@
   en: dummy, pacifier
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnupfen
@@ -755,7 +693,6 @@
   en: null
   freq: 12000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnupfen:2
@@ -768,7 +705,6 @@
   en: coryza, sniffles
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnur
@@ -781,7 +717,6 @@
   en: string, cord
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnur:2
@@ -793,7 +728,6 @@
   en: daughter-in-law
   freq: 10000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schnurrbart
@@ -805,7 +739,6 @@
   en: moustache
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schokolade
@@ -817,7 +750,6 @@
   en: chocolate
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schrank
@@ -829,7 +761,6 @@
   en: cabinet, cupboard
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schraube
@@ -841,7 +772,6 @@
   en: screw, bolt
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schraubendreher
@@ -853,7 +783,6 @@
   en: screwdriver
   freq: 44000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schraubenmutter
@@ -865,7 +794,6 @@
   en: nut, female screw
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schraubenschlüssel
@@ -877,7 +805,6 @@
   en: wrench, spanner
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schraubenzieher
@@ -889,7 +816,6 @@
   en: screwdriver
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schreck
@@ -901,7 +827,6 @@
   en: fright, scare
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schreibtisch
@@ -913,7 +838,6 @@
   en: desk, writing desk
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schriftsteller
@@ -925,7 +849,6 @@
   en: writer, author
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schuh
@@ -937,7 +860,6 @@
   en: shoe
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schulbank
@@ -949,7 +871,6 @@
   en: school desk
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schulbus
@@ -961,7 +882,6 @@
   en: school bus
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schuld
@@ -973,7 +893,6 @@
   en: guilt
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schulden
@@ -985,7 +904,6 @@
   en: debt, debts
   freq: 600
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Schule
@@ -997,7 +915,6 @@
   en: school
   freq: 900
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schulter
@@ -1009,7 +926,6 @@
   en: shoulder
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schutzbrille
@@ -1021,7 +937,6 @@
   en: goggles
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schutzhelm
@@ -1033,7 +948,6 @@
   en: hard hat
   freq: 49000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schutzraum
@@ -1045,7 +959,6 @@
   en: shelter
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schwanz
@@ -1057,7 +970,6 @@
   en: tail, pecker
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schwein
@@ -1069,7 +981,6 @@
   en: pig, swine
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schweiz
@@ -1081,7 +992,6 @@
   en: Switzerland
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schweiß
@@ -1093,7 +1003,6 @@
   en: sweat
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schwester
@@ -1105,7 +1014,6 @@
   en: sister, sis
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schwiegermutter
@@ -1117,7 +1025,6 @@
   en: mother-in-law
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schwiegervater
@@ -1129,7 +1036,6 @@
   en: father-in-law
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schwimmbad
@@ -1141,7 +1047,6 @@
   en: swimming bath, pool
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schüler
@@ -1153,7 +1058,6 @@
   en: pupil, student
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Schülerin
@@ -1165,7 +1069,6 @@
   en: schoolgirl, pupil
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:See
@@ -1178,7 +1081,6 @@
   en: lake
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:See:2
@@ -1191,7 +1093,6 @@
   en: sea
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sehenswürdigkeit
@@ -1203,7 +1104,6 @@
   en: tourist attraction, sight
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sehnsucht
@@ -1215,7 +1115,6 @@
   en: longing, yearning
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Seife
@@ -1227,7 +1126,6 @@
   en: soap
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Seite
@@ -1239,7 +1137,6 @@
   en: side
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sekretär
@@ -1251,7 +1148,6 @@
   en: secretary
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sekt
@@ -1263,7 +1159,6 @@
   en: sparkling wine
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Semester
@@ -1275,7 +1170,6 @@
   en: semester
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Seminar
@@ -1287,7 +1181,6 @@
   en: seminar
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sendung
@@ -1299,7 +1192,6 @@
   en: broadcasting
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sendungsverfolgung
@@ -1311,7 +1203,6 @@
   en: track and trace
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Senf
@@ -1323,7 +1214,6 @@
   en: mustard
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Serie
@@ -1335,7 +1225,6 @@
   en: series
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Server
@@ -1347,7 +1236,6 @@
   en: server
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Shampoo
@@ -1359,7 +1247,6 @@
   en: shampoo
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Shorts
@@ -1372,7 +1259,6 @@
   en: shorts
   freq: 11000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sicherheitsgurt
@@ -1384,7 +1270,6 @@
   en: seat belt, safety belt
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sicherung
@@ -1396,7 +1281,6 @@
   en: fuse
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sichtweise
@@ -1408,7 +1292,6 @@
   en: standpoint
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sieg
@@ -1420,7 +1303,6 @@
   en: victory
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Silikon
@@ -1432,7 +1314,6 @@
   en: silicone
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Silvester
@@ -1444,7 +1325,6 @@
   en: New Year's Eve, Hogmanay
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sirene
@@ -1456,7 +1336,6 @@
   en: siren
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ski
@@ -1468,7 +1347,6 @@
   en: ski
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Smartphone
@@ -1480,7 +1358,6 @@
   en: smartphone, smart phone
   freq: 23000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Socke
@@ -1492,7 +1369,6 @@
   en: sock
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sofa
@@ -1504,7 +1380,6 @@
   en: sofa, couch
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Software
@@ -1516,7 +1391,6 @@
   en: software
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sohn
@@ -1528,7 +1402,6 @@
   en: son
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sommer
@@ -1540,7 +1413,6 @@
   en: summer
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sommerreifen
@@ -1552,7 +1424,6 @@
   en: summer tyre, summer tire
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sommerzeit
@@ -1564,7 +1435,6 @@
   en: summer time
   freq: 39000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sonnabend
@@ -1576,7 +1446,6 @@
   en: Saturday
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sonne
@@ -1588,7 +1457,6 @@
   en: sun, Sun
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sonnenbrille
@@ -1600,7 +1468,6 @@
   en: sunglasses, shades
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sonnencreme
@@ -1612,7 +1479,6 @@
   en: sunblock, sun creme
   freq: 36000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sonnenschutz
@@ -1624,7 +1490,6 @@
   en: sunshade
   freq: 41000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sonntag
@@ -1636,7 +1501,6 @@
   en: Sunday
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sorge
@@ -1648,7 +1512,6 @@
   en: worry, concern
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sorgerecht
@@ -1660,7 +1523,6 @@
   en: custody
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Souvenir
@@ -1672,7 +1534,6 @@
   en: souvenir
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sozialhilfe
@@ -1684,7 +1545,6 @@
   en: income support, social assistance
   freq: 19000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sozialstaat
@@ -1696,7 +1556,6 @@
   en: welfare state
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Soße
@@ -1708,7 +1567,6 @@
   en: sauce
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spachtel
@@ -1720,7 +1578,6 @@
   en: putty knife
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spam
@@ -1732,7 +1589,6 @@
   en: spam
   freq: 30000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spanne
@@ -1744,7 +1600,6 @@
   en: span
   freq: 26000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Spannung
@@ -1756,7 +1611,6 @@
   en: voltage
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sparbuch
@@ -1768,7 +1622,6 @@
   en: bankbook, passbook
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spaziergang
@@ -1780,7 +1633,6 @@
   en: walk, stroll
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spaß
@@ -1792,7 +1644,6 @@
   en: fun, humour
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Speicher
@@ -1804,7 +1655,6 @@
   en: storehouse, warehouse
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Speisekarte
@@ -1816,7 +1666,6 @@
   en: menu
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spende
@@ -1828,7 +1677,6 @@
   en: donation
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spezialität
@@ -1840,7 +1688,6 @@
   en: specialty
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spiegel
@@ -1852,7 +1699,6 @@
   en: mirror, looking glass
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spiegelbild
@@ -1864,7 +1710,6 @@
   en: mirror image, reflection
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spiel
@@ -1876,7 +1721,6 @@
   en: play, game
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spieler
@@ -1888,7 +1732,6 @@
   en: player
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spielerin
@@ -1900,7 +1743,6 @@
   en: player
   freq: 28000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spielfeld
@@ -1912,7 +1754,6 @@
   en: field, playing field
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spielfilm
@@ -1924,7 +1765,6 @@
   en: feature film
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spielplatz
@@ -1936,7 +1776,6 @@
   en: playground
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spielregel
@@ -1948,7 +1787,6 @@
   en: a rule
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spielstand
@@ -1960,7 +1798,6 @@
   en: score
   freq: 36000
   level: B1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Spielzeug
@@ -1972,7 +1809,6 @@
   en: toy
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spinne
@@ -1984,7 +1820,6 @@
   en: spider
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sport
@@ -1996,7 +1831,6 @@
   en: sport, sports
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sportart
@@ -2008,7 +1842,6 @@
   en: sport, kind of sport
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sporthalle
@@ -2020,7 +1853,6 @@
   en: sports hall, gymnasium
   freq: 18000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sportler
@@ -2032,7 +1864,6 @@
   en: athlete, sportsman
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sportlerin
@@ -2044,7 +1875,6 @@
   en: athlete
   freq: 43000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sportplatz
@@ -2056,7 +1886,6 @@
   en: sports field, sports ground
   freq: 27000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sportsaal
@@ -2069,7 +1898,6 @@
   en: gym, sports hall
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sprache
@@ -2081,7 +1909,6 @@
   en: speech, language
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sprachfamilie
@@ -2093,7 +1920,6 @@
   en: language family, family of languages
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sprachkurs
@@ -2105,7 +1931,6 @@
   en: language course
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sprachniveau
@@ -2117,7 +1942,6 @@
   en: language level, register
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sprachtest
@@ -2129,7 +1953,6 @@
   en: language test
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sprechstunde
@@ -2141,7 +1964,6 @@
   en: consultation hours
   freq: 19000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spritze
@@ -2153,7 +1975,6 @@
   en: syringe
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Spülung
@@ -2165,7 +1986,6 @@
   en: flushing
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staat
@@ -2177,7 +1997,6 @@
   en: state
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsangehörigkeit
@@ -2189,7 +2008,6 @@
   en: citizenship, nationality
   freq: 45000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsanwalt
@@ -2201,7 +2019,6 @@
   en: public prosecutor, district attorney
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsbürger
@@ -2213,7 +2030,6 @@
   en: citizen, national
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsbürgerschaft
@@ -2225,7 +2041,6 @@
   en: citizenship
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsform
@@ -2237,7 +2052,6 @@
   en: form of state
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsgebiet
@@ -2249,7 +2063,6 @@
   en: national territory
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatshaushalt
@@ -2261,7 +2074,6 @@
   en: national budget
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staatsoberhaupt
@@ -2273,7 +2085,6 @@
   en: head of State, chief of State
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stadion
@@ -2285,7 +2096,6 @@
   en: stadium
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stadt
@@ -2297,7 +2107,6 @@
   en: city, town
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stadtführung
@@ -2309,7 +2118,6 @@
   en: city tour
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stadtplan
@@ -2321,7 +2129,6 @@
   en: city map
   freq: 28000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stadtstaat
@@ -2333,7 +2140,6 @@
   en: city state
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stadtteil
@@ -2345,7 +2151,6 @@
   en: quarter
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staffel
@@ -2358,7 +2163,6 @@
   en: squadron
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Staffel:2
@@ -2370,7 +2174,6 @@
   en: null
   freq: 7000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Standesamt
@@ -2382,7 +2185,6 @@
   en: civil registry office
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Standpunkt
@@ -2394,7 +2196,6 @@
   en: standpoint
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Station
@@ -2406,7 +2207,6 @@
   en: station
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stau
@@ -2418,7 +2218,6 @@
   en: congestion
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Steckdose
@@ -2430,7 +2229,6 @@
   en: socket, electrical outlet
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stecker
@@ -2442,7 +2240,6 @@
   en: plug, male connector
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Steigerung
@@ -2454,7 +2251,6 @@
   en: increase
   freq: 25000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stein
@@ -2466,7 +2262,6 @@
   en: stone, rock
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stelle
@@ -2478,7 +2273,6 @@
   en: job
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stellungnahme
@@ -2490,7 +2284,6 @@
   en: statement, opinion
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stempel
@@ -2502,7 +2295,6 @@
   en: rubber stamp, stamp
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stern
@@ -2515,7 +2307,6 @@
   en: star
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stern:2
@@ -2527,7 +2318,6 @@
   en: asterisk
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Steuer
@@ -2540,7 +2330,6 @@
   en: steering wheel, controls
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Steuer:2
@@ -2553,7 +2342,6 @@
   en: tax
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Steuererklärung
@@ -2565,7 +2353,6 @@
   en: tax return, tax declaration
   freq: 17000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Steuerzahler
@@ -2577,7 +2364,6 @@
   en: taxpayer, tax payer
   freq: 16000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stichsäge
@@ -2589,7 +2375,6 @@
   en: jigsaw
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stiefel
@@ -2601,7 +2386,6 @@
   en: boot
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stift
@@ -2614,7 +2398,6 @@
   en: pin, pivot
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stift:2
@@ -2626,7 +2409,6 @@
   en: trifle
   freq: 6000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stift:3
@@ -2638,7 +2420,6 @@
   en: foundation
   freq: 6000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stift:4
@@ -2650,7 +2431,6 @@
   en: null
   freq: 6000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stimme
@@ -2662,7 +2442,6 @@
   en: voice
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stimmrecht
@@ -2674,7 +2453,6 @@
   en: right to vote, suffrage
   freq: 36000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stimmung
@@ -2686,7 +2464,6 @@
   en: mood, humour
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stimmzettel
@@ -2698,7 +2475,6 @@
   en: ballot
   freq: 36000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stipendium
@@ -2710,7 +2486,6 @@
   en: scholarship, grant
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stirn
@@ -2722,7 +2497,6 @@
   en: forehead
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stock
@@ -2734,7 +2508,6 @@
   en: stick, walking stick
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stoff
@@ -2746,7 +2519,6 @@
   en: substance, material
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stolz
@@ -2758,7 +2530,6 @@
   en: pride
   freq: 800
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strafe
@@ -2770,7 +2541,6 @@
   en: penalty, punishment
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strafrecht
@@ -2782,7 +2552,6 @@
   en: criminal law
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strand
@@ -2794,7 +2563,6 @@
   en: beach, shore
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Straße
@@ -2806,7 +2574,6 @@
   en: street, road
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Straßenbahn
@@ -2818,7 +2585,6 @@
   en: streetcar, tramway
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strecke
@@ -2830,7 +2596,6 @@
   en: route, way
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Streik
@@ -2842,7 +2607,6 @@
   en: strike
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Streit
@@ -2854,7 +2618,6 @@
   en: argument, dispute
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Streitfall
@@ -2866,7 +2629,6 @@
   en: dispute
   freq: null
   level: A1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Stress
@@ -2878,7 +2640,6 @@
   en: stress, general adaptation syndrome
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strom
@@ -2890,7 +2651,6 @@
   en: current, stream
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stromausfall
@@ -2902,7 +2662,6 @@
   en: blackout, power failure
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strumpf
@@ -2914,7 +2673,6 @@
   en: stocking, sock
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Strähne
@@ -2926,7 +2684,6 @@
   en: strand
   freq: 23000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Student
@@ -2938,7 +2695,6 @@
   en: student
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Studentin
@@ -2950,7 +2706,6 @@
   en: student
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Studium
@@ -2962,7 +2717,6 @@
   en: studies
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stuhl
@@ -2974,7 +2728,6 @@
   en: chair
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stunde
@@ -2986,7 +2739,6 @@
   en: hour
   freq: 600
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sturm
@@ -2998,7 +2750,6 @@
   en: storm
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stück
@@ -3010,7 +2761,6 @@
   en: part
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Stückpreis
@@ -3022,7 +2772,6 @@
   en: unit price
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Stückzahl
@@ -3034,7 +2783,6 @@
   en: number of items
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Suchmaschine
@@ -3046,7 +2794,6 @@
   en: search engine
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Summe
@@ -3058,7 +2805,6 @@
   en: sum
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Supermarkt
@@ -3070,7 +2816,6 @@
   en: supermarket
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Suppe
@@ -3082,7 +2827,6 @@
   en: soup
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Symbol
@@ -3094,7 +2838,6 @@
   en: symbol
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Szene
@@ -3106,7 +2849,6 @@
   en: scene
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Säge
@@ -3118,7 +2860,6 @@
   en: saw
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Sänger
@@ -3130,7 +2871,6 @@
   en: singer, songster
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Süden
@@ -3142,7 +2882,6 @@
   en: south
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Südosten
@@ -3154,7 +2893,6 @@
   en: southeast, south-east
   freq: 25000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Südpol
@@ -3166,7 +2904,6 @@
   en: South Pole, south pole
   freq: 27000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Südwesten
@@ -3178,6 +2915,5 @@
   en: southwest, south-west
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}

@@ -12,24 +12,37 @@ import { download, parse } from '../store/transfer.ts'
 import { Home } from './Home.tsx'
 import { Lesson } from './Lesson.tsx'
 import { Result } from './Result.tsx'
+import { Themes } from './Themes.tsx'
 
-const KEY = 'satzbau.level'
-
-function savedLevel(): Level {
+// выбор пользователя — удобство, а не прогресс: не запомнился — значения по умолчанию
+function saved(key: string): string | null {
   try {
-    const v = localStorage.getItem(KEY)
-    return LEVELS.includes(v as Level) ? (v as Level) : 'A1'
+    return localStorage.getItem(`satzbau.${key}`)
   } catch {
-    return 'A1'
+    return null
   }
 }
 
-type Screen = { k: 'home' } | { k: 'lesson'; lesson: L } | { k: 'result'; lesson: L }
+function save(key: string, v: string) {
+  try {
+    localStorage.setItem(`satzbau.${key}`, v)
+  } catch {
+    // просто не запомнится
+  }
+}
+
+const savedLevel = (): Level => {
+  const v = saved('level')
+  return LEVELS.includes(v as Level) ? (v as Level) : 'A1'
+}
+
+type Screen = { k: 'home' } | { k: 'themes' } | { k: 'lesson'; lesson: L } | { k: 'result'; lesson: L }
 
 export function App() {
   const [data, setData] = useState<Data | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [level, setLevel] = useState<Level>(savedLevel)
+  const [themeId, setThemeId] = useState<string>(() => saved('theme') ?? '')
   const [screen, setScreen] = useState<Screen>({ k: 'home' })
   const [answers, setAnswers] = useState<Answer[]>([])
   const [mem, setMem] = useState<Memory | null>(null)
@@ -49,17 +62,19 @@ export function App() {
     }, (e: unknown) => setError(String(e)))
   }, [])
 
-  const words = useMemo(() => (data ? pool(data.nouns, level) : []), [data, level])
+  const theme = data?.themes.find((t) => t.id === themeId)
+  const words = useMemo(() => (data ? pool(data.nouns, level, theme) : []), [data, level, theme])
+  const hint = useMemo(() => {
+    const of = new Map(data?.themes.flatMap((t) => t.words.map((id) => [id, t.title] as const)))
+    const lv = new Map(data?.nouns.map((w) => [w.id, w.level]))
+    return (id: string) => [of.get(id), lv.get(id)].filter(Boolean).join(' · ')
+  }, [data])
   // screen в зависимостях: «пора» пересчитывается при каждом возврате на главную
   const ov = useMemo(() => overview(words, EXERCISES, mem ?? empty(), Date.now()), [words, mem, screen])
 
   const choose = (l: Level) => {
     setLevel(l)
-    try {
-      localStorage.setItem(KEY, l)
-    } catch {
-      // уровень просто не запомнится
-    }
+    save('level', l)
   }
 
   const begin = (extra: number) => {
@@ -97,12 +112,30 @@ export function App() {
   if (error) return <main className="home"><h1>satzbau</h1><p className="sub">Не удалось открыть базу: {error}</p></main>
   if (!data || !mem) return <main className="home"><h1>satzbau</h1><p className="sub">Загружаю базу…</p></main>
 
+  if (screen.k === 'themes')
+    return (
+      <Themes
+        nouns={data.nouns}
+        themes={data.themes}
+        level={level}
+        mem={mem}
+        theme={theme ? themeId : ''}
+        onPick={(id) => {
+          setThemeId(id)
+          save('theme', id)
+          setScreen({ k: 'home' })
+        }}
+        onBack={() => setScreen({ k: 'home' })}
+      />
+    )
+
   if (screen.k === 'lesson')
     return (
       <Lesson
         key={screen.lesson.steps.map((s) => `${s.card.ex.id} ${s.card.word.id}`).join()}
         data={data}
         lesson={screen.lesson}
+        hint={hint}
         onRecord={record}
         onDone={(l) => setScreen({ k: 'result', lesson: l })}
         onClose={() => setScreen({ k: 'home' })}
@@ -129,6 +162,8 @@ export function App() {
       level={level}
       onLevel={choose}
       ov={ov}
+      theme={theme?.title ?? 'Все темы'}
+      onThemes={() => setScreen({ k: 'themes' })}
       onStart={begin}
       stored={stored}
       notice={notice}

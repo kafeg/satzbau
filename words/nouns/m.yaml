@@ -7,7 +7,6 @@
   en: warning
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Makler
@@ -19,7 +18,6 @@
   en: broker
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maler
@@ -31,7 +29,6 @@
   en: painter artist
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mama
@@ -43,7 +40,6 @@
   en: Mom
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mandarine
@@ -55,7 +51,6 @@
   en: mandarin orange, tangerine
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mandel
@@ -68,7 +63,6 @@
   en: almond
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mandel:2
@@ -80,7 +74,6 @@
   en: shock
   freq: 5000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mangel
@@ -93,7 +86,6 @@
   en: lack, shortage
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mangel:2
@@ -105,7 +97,6 @@
   en: mangle
   freq: 8000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maniküre
@@ -117,7 +108,6 @@
   en: manicure
   freq: 21000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mann
@@ -129,7 +119,6 @@
   en: man
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mannschaft
@@ -141,7 +130,6 @@
   en: team, crew
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mantel
@@ -153,7 +141,6 @@
   en: coat
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mappe
@@ -165,7 +152,6 @@
   en: folder
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Marke
@@ -177,7 +163,6 @@
   en: marking
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Markt
@@ -189,7 +174,6 @@
   en: market
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Marktplatz
@@ -201,7 +185,6 @@
   en: marketplace, market
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maschine
@@ -213,7 +196,6 @@
   en: machine
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maske
@@ -225,7 +207,6 @@
   en: mask
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Massage
@@ -237,7 +218,6 @@
   en: massage
   freq: 8000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mathematik
@@ -249,7 +229,6 @@
   en: mathematics
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Matte
@@ -261,7 +240,6 @@
   en: mat
   freq: 21000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Matte:2
@@ -273,7 +251,6 @@
   en: alpine ) meadow, mountain pasture
   freq: 21000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Matte:3
@@ -285,7 +262,6 @@
   en: curd, fromage frais
   freq: 21000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Matte:4
@@ -297,7 +273,6 @@
   en: null
   freq: 21000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Matte:5
@@ -309,7 +284,6 @@
   en: bread, dosh
   freq: 21000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Matte:6
@@ -321,7 +295,6 @@
   en: null
   freq: 21000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maus
@@ -334,7 +307,6 @@
   en: mouse
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maus:2
@@ -347,7 +319,6 @@
   en: mouse
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maus:3
@@ -359,7 +330,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maus:4
@@ -371,7 +341,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mayonnaise
@@ -383,7 +352,6 @@
   en: mayonnaise
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maßband
@@ -395,7 +363,6 @@
   en: measuring tape, tape measure
   freq: 47000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maßeinheit
@@ -407,7 +374,6 @@
   en: unit of measure, scale unit
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Maßstab
@@ -419,7 +385,6 @@
   en: rule
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mechaniker
@@ -431,7 +396,6 @@
   en: mechanic
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mechanikerin
@@ -443,7 +407,6 @@
   en: mechanic
   freq: 38000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Medaille
@@ -455,7 +418,6 @@
   en: medal
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Medikament
@@ -467,7 +429,6 @@
   en: drug, medicine
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meer
@@ -479,7 +440,6 @@
   en: sea
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mehrheit
@@ -491,7 +451,6 @@
   en: bulk, majority
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mehrsprachigkeit
@@ -503,7 +462,6 @@
   en: multilingualism
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mehrwert
@@ -515,7 +473,6 @@
   en: surplus value
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meinung
@@ -527,7 +484,6 @@
   en: opinion
   freq: 900
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meinungsbildung
@@ -539,7 +495,6 @@
   en: formation of opinion, forming of opinion
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meinungsfreiheit
@@ -551,7 +506,6 @@
   en: freedom of opinion
   freq: 34000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meinungsverschiedenheit
@@ -563,7 +517,6 @@
   en: difference of opinion, disagreement
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meisterschaft
@@ -575,7 +528,6 @@
   en: championship
   freq: 10000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meldung
@@ -587,7 +539,6 @@
   en: message
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Melone
@@ -599,7 +550,6 @@
   en: melon
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Menge
@@ -611,7 +561,6 @@
   en: quantity
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mensa
@@ -623,7 +572,6 @@
   en: cafeteria, canteen
   freq: 36000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mensch
@@ -636,7 +584,6 @@
   en: human being
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mensch:2
@@ -648,7 +595,6 @@
   en: hussy, baggage
   freq: 200
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Messbecher
@@ -660,7 +606,6 @@
   en: measuring cup, measuring jug
   freq: 47000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Messer
@@ -673,7 +618,6 @@
   en: knife
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Messer:2
@@ -686,7 +630,6 @@
   en: gauger, gager
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Metall
@@ -698,7 +641,6 @@
   en: metal
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Meter
@@ -710,7 +652,6 @@
   en: meter, metre
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Metzgerei
@@ -722,7 +663,6 @@
   en: butcher's
   freq: 27000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mietauto
@@ -734,7 +674,6 @@
   en: rental car
   freq: 43000
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Miete
@@ -747,7 +686,6 @@
   en: rent, rentage
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Miete:2
@@ -759,7 +697,6 @@
   en: null
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Miete:3
@@ -771,7 +708,6 @@
   en: clamp
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mietvertrag
@@ -783,7 +719,6 @@
   en: lease
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Migrant
@@ -795,7 +730,6 @@
   en: migrant
   freq: 43000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Migration
@@ -807,7 +741,6 @@
   en: migration
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mikrowelle
@@ -819,7 +752,6 @@
   en: microwave
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Milch
@@ -831,7 +763,6 @@
   en: milk
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Milliarde
@@ -843,7 +774,6 @@
   en: billion, milliard
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Millimeter
@@ -855,7 +785,6 @@
   en: millimetre, millimeter
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Million
@@ -867,7 +796,6 @@
   en: million
   freq: 700
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Minderheit
@@ -879,7 +807,6 @@
   en: minority
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mindestalter
@@ -891,7 +818,6 @@
   en: minimum age
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Minister
@@ -903,7 +829,6 @@
   en: minister, secretary
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ministerium
@@ -915,7 +840,6 @@
   en: ministry, department
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Minute
@@ -927,7 +851,6 @@
   en: minute
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Missverständnis
@@ -939,7 +862,6 @@
   en: misunderstanding
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mitarbeiter
@@ -951,7 +873,6 @@
   en: employee, coworker
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mitarbeiterin
@@ -963,7 +884,6 @@
   en: assistant
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mitglied
@@ -975,7 +895,6 @@
   en: member
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mitleid
@@ -987,7 +906,6 @@
   en: compassion, pity
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mitspieler
@@ -999,7 +917,6 @@
   en: teammate
   freq: 22000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mittag
@@ -1012,7 +929,6 @@
   en: noon, midday
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mittag:2
@@ -1024,7 +940,6 @@
   en: null
   freq: 3000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mittagessen
@@ -1036,7 +951,6 @@
   en: lunch
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mittagsschlaf
@@ -1048,7 +962,6 @@
   en: afternoon nap, siesta
   freq: 21000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mittelwert
@@ -1060,7 +973,6 @@
   en: mean
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mitternacht
@@ -1072,7 +984,6 @@
   en: midnight
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mittwoch
@@ -1084,7 +995,6 @@
   en: Wednesday
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mode
@@ -1097,7 +1007,6 @@
   en: practices
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mode:2
@@ -1109,7 +1018,6 @@
   en: mode
   freq: 6000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Moderator
@@ -1121,7 +1029,6 @@
   en: moderator, host
   freq: 13000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Monat
@@ -1133,7 +1040,6 @@
   en: month
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Monatskarte
@@ -1145,7 +1051,6 @@
   en: monthly ticket
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mond
@@ -1157,7 +1062,6 @@
   en: moon
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Montag
@@ -1169,7 +1073,6 @@
   en: Monday
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Montage
@@ -1181,7 +1084,6 @@
   en: assemblage, assembly
   freq: 30000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Moped
@@ -1193,7 +1095,6 @@
   en: moped
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Morgen
@@ -1206,7 +1107,6 @@
   en: morning
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Morgen:2
@@ -1219,7 +1119,6 @@
   en: morrow, tomorrow
   freq: 200
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Motor
@@ -1231,7 +1130,6 @@
   en: engine, motor
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Motorhaube
@@ -1243,7 +1141,6 @@
   en: bonnet, hood
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Motorrad
@@ -1255,7 +1152,6 @@
   en: bike, motor-cycle
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mund
@@ -1268,7 +1164,6 @@
   en: mouth
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mund:2
@@ -1280,7 +1175,6 @@
   en: mund
   freq: 2000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mundgeruch
@@ -1292,7 +1186,6 @@
   en: halitosis, bad breath
   freq: 17000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Mundwasser
@@ -1304,7 +1197,6 @@
   en: mouthwash
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Museum
@@ -1316,7 +1208,6 @@
   en: museum
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Musik
@@ -1328,7 +1219,6 @@
   en: music
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Musiker
@@ -1340,7 +1230,6 @@
   en: musician
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Musikinstrument
@@ -1352,7 +1241,6 @@
   en: musical instrument, instrument
   freq: 35000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Muskel
@@ -1364,7 +1252,6 @@
   en: muscle
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mut
@@ -1376,7 +1263,6 @@
   en: courage
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mutter
@@ -1389,7 +1275,6 @@
   en: mother
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mutter:2
@@ -1402,7 +1287,6 @@
   en: nut
   freq: 400
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Muttersprache
@@ -1414,7 +1298,6 @@
   en: mother tongue, native language
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Muttersprachler
@@ -1426,7 +1309,6 @@
   en: native speaker
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Muttertag
@@ -1438,7 +1320,6 @@
   en: Mother's Day
   freq: 18000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Mutti
@@ -1450,7 +1331,6 @@
   en: mummy, mommy
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mädchen
@@ -1462,7 +1342,6 @@
   en: girl
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Märchen
@@ -1474,7 +1353,6 @@
   en: fairy tale
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Möbel
@@ -1486,7 +1364,6 @@
   en: furniture
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mörtel
@@ -1498,7 +1375,6 @@
   en: mortar
   freq: 31000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mücke
@@ -1510,7 +1386,6 @@
   en: gnat, mosquito
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Müll
@@ -1522,7 +1397,6 @@
   en: garbage, refuse
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mülltonne
@@ -1534,7 +1408,6 @@
   en: dust bin, garbage bin
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Münze
@@ -1546,7 +1419,6 @@
   en: coin
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Müsli
@@ -1559,7 +1431,6 @@
   en: muesli, cereals granola
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Müsli:2
@@ -1571,7 +1442,6 @@
   en: muesli freak, granola type
   freq: 15000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Müsli:3
@@ -1583,7 +1453,6 @@
   en: null
   freq: 15000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Mütze
@@ -1595,6 +1464,5 @@
   en: cap, beret
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}

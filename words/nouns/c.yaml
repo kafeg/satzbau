@@ -7,7 +7,6 @@
   en: café, cafe
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Cent
@@ -19,7 +18,6 @@
   en: cent
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Charakter
@@ -31,7 +29,6 @@
   en: character
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Chat
@@ -43,7 +40,6 @@
   en: online chat, chat
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Chef
@@ -55,7 +51,6 @@
   en: boss, manager
   freq: 1000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Chefin
@@ -67,7 +62,6 @@
   en: boss, manager
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Chip
@@ -79,7 +73,6 @@
   en: chip
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Clown
@@ -91,7 +84,6 @@
   en: clown
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Computer
@@ -103,7 +95,6 @@
   en: computer
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Computertisch
@@ -115,7 +106,6 @@
   en: computer desk
   freq: null
   level: A1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Cornflakes
@@ -128,7 +118,6 @@
   en: corn flakes
   freq: 16000
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Cousin
@@ -140,7 +129,6 @@
   en: cousin
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Cousine
@@ -152,7 +140,6 @@
   en: cousin
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Creme
@@ -164,6 +151,5 @@
   en: cream
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}

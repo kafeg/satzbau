@@ -2,12 +2,14 @@
 // База только читается: sql.js держит её в памяти, офлайн её хранит кэш service worker.
 import initSqlJs, { type Database, type SqlValue } from 'sql.js'
 import wasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
-import type { Example, Level, Noun } from '../core/types.ts'
+import type { Example, Level, Noun, Theme } from '../core/types.ts'
 
 export type Data = {
   meta: Record<string, string>
   // существительные курса; кому из них какое упражнение подходит, решает упражнение
   nouns: Noun[]
+  // темы по порядку, слова темы — в порядке показа
+  themes: Theme[]
   example(wordId: string): Example | null
 }
 
@@ -44,9 +46,15 @@ export function open(db: Database): Data {
     freq: r.freq as number | null,
     skip: JSON.parse(r.skip as string),
   }))
+  const themes: Theme[] = rows(db, 'SELECT id, title FROM themes ORDER BY n').map((r) => ({
+    id: r.id as string,
+    title: r.title as string,
+    words: rows(db, 'SELECT word_id FROM theme_words WHERE theme = ? ORDER BY i', [r.id as string]).map((x) => x.word_id as string),
+  }))
   return {
     meta,
     nouns,
+    themes,
     example(wordId) {
       const [r] = rows(db, `SELECT s.n, s.de, s.ru, s.ru_by, s.en, s.en_by, t.i, t.text FROM tokens t
         JOIN sentences s ON s.n = t.sentence WHERE t.word_id = ? ORDER BY s.len, s.n LIMIT 1`, [wordId])

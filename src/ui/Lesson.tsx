@@ -12,9 +12,9 @@ function count(l: L): string {
   return l.i < base ? `${l.i + 1} / ${base}` : `повтор ${l.i - base + 1} / ${l.steps.length - base}`
 }
 
-type Props = { data: Data; lesson: L; onRecord: (a: Answer) => void; onDone: (l: L) => void; onClose: () => void }
+type Props = { data: Data; lesson: L; hint: (wordId: string) => string; onRecord: (a: Answer) => void; onDone: (l: L) => void; onClose: () => void }
 
-export function Lesson({ data, lesson: first, onRecord, onDone, onClose }: Props) {
+export function Lesson({ data, lesson: first, hint, onRecord, onDone, onClose }: Props) {
   const [lesson, setLesson] = useState(first)
   const [given, setGiven] = useState<{ a: unknown; ok: boolean } | null>(null)
   const step = current(lesson)
@@ -73,6 +73,7 @@ export function Lesson({ data, lesson: first, onRecord, onDone, onClose }: Props
       </section>
 
       <view.Choices key={`${lesson.i}`} word={word} given={given?.a ?? null} onAnswer={onAnswer} />
+      {!given && <p className="hint">{hint(word.id)}</p>}
 
       {given && (
         <section className="answer" aria-live="polite">

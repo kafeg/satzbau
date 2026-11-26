@@ -1,0 +1,56 @@
+id: opinion
+title: Мнение и аргумент
+order: 29
+words:
+  - n:Ansicht
+  - n:Standpunkt
+  - n:Argument
+  - n:Grund
+  - n:Vorteil
+  - n:Nachteil
+  - n:Vorschlag
+  - n:Zustimmung
+  - n:Ablehnung
+  - n:Gespräch
+  - n:Diskussion
+  - n:Wahrheit
+  - n:Tatsache
+  - n:Entscheidung
+  - n:Auffassung
+  - n:Haltung
+  - n:Sichtweise
+  - n:Behauptung
+  - n:Begründung
+  - n:Vermutung
+  - n:Überzeugung
+  - n:Stellungnahme
+  - n:Debatte
+  - n:Einigung
+  - n:Alternative
+  - n:Gegenargument
+  - n:Gegenvorschlag
+  - n:Kritikpunkt
+  - n:Aussage
+  - n:Einschätzung
+  - n:Anmerkung
+  - n:Rücksicht
+  - n:Zusammenhang
+  - n:Irrtum
+  - n:Meinungsverschiedenheit
+  - n:Wortmeldung
+  - n:Beweislage
+  - n:Schlussfolgerung
+  - n:Fazit
+  - n:Abwägung
+  - n:Gewissheit
+  - n:Unsicherheit
+  - n:Bauchgefühl
+  - n:Logik
+  - n:Vernunft
+  - n:Sachlage
+  - n:Darstellung
+  - n:Deutung
+  - n:Meinungsbildung
+  - n:Zweifelsfall
+  - n:Zwischenruf
+  - n:Bedenken

@@ -215,7 +215,6 @@ def record(i, e, lemma, n_entries, seed_w, taught, other, ruw, enw, fd, rank):
     rec['en'] = pick_en(e, lemma, enw, own)
     rec['freq'] = srcs.bucket(rank)
     rec['level'] = seed_w.get('lv') if taught else None
-    rec['themes'] = []
     rec['decided'] = {}
     rec['skip'] = {}
     return rec

@@ -1,0 +1,55 @@
+id: tech
+title: Телефон и интернет
+order: 16
+words:
+  - n:Handy
+  - n:Smartphone
+  - n:Internet
+  - n:Nachricht
+  - n:Passwort
+  - n:Anruf
+  - n:Video
+  - n:Maus
+  - n:Kabel
+  - n:Akku
+  - n:Technik
+  - n:Gerät
+  - n:Laptop
+  - n:Tablet
+  - n:Link
+  - n:E-Mail-Adresse
+  - n:Fax
+  - n:Datei
+  - n:Ordner
+  - n:Webseite
+  - n:Suchmaschine
+  - n:Programm
+  - n:Software
+  - n:Netz
+  - n:Ladegerät
+  - n:Stecker
+  - n:Steckdose
+  - n:Lautsprecher
+  - n:Kopfhörer
+  - n:Festplatte
+  - n:Speicher
+  - n:Profil
+  - n:Chat
+  - n:Benutzer
+  - n:Scanner
+  - n:Taste
+  - n:Einstellung
+  - n:Werbung
+  - n:Update
+  - n:Virus
+  - n:Datenschutz
+  - n:Fehlermeldung
+  - n:Zugang
+  - n:Sicherung
+  - n:Schnittstelle
+  - n:Anwendung
+  - n:Entwickler
+  - n:Netzwerk
+  - n:Server
+  - n:Spam
+  - n:Symbol

@@ -31,6 +31,17 @@ test('пул уровня вложен в следующий; порядок —
   expect(ranks).toEqual([...ranks].sort((x, y) => x - y))
 })
 
+test('темы: каждое слово курса хотя бы в одной, пул темы — в её порядке', () => {
+  expect(data.themes).toHaveLength(31)
+  const inThemes = new Set(data.themes.flatMap((t) => t.words))
+  expect(data.nouns.filter((w) => !inThemes.has(w.id))).toEqual([])
+  const health = data.themes.find((t) => t.id === 'health')!
+  const a1 = pool(data.nouns, 'A1', health)
+  expect(a1.length).toBeGreaterThan(20)
+  const at = a1.map((w) => health.words.indexOf(w.id))
+  expect(at).toEqual([...at].sort((x, y) => x - y))
+})
+
 test('род: у каждого слова пула род есть, только множественного нет', () => {
   const fit = data.nouns.filter(gender.fits)
   expect(fit.length).toBeGreaterThan(2000)

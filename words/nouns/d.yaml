@@ -7,7 +7,6 @@
   en: roof
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dachboden
@@ -19,7 +18,6 @@
   en: attic, loft
   freq: 8000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dame
@@ -32,7 +30,6 @@
   en: lady
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dame:2
@@ -45,7 +42,6 @@
   en: draughts, checkers
   freq: 700
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dankbarkeit
@@ -57,7 +53,6 @@
   en: gratitude, thankfulness
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Darstellung
@@ -69,7 +64,6 @@
   en: representation
   freq: 11000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Datei
@@ -81,7 +75,6 @@
   en: file
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Datenschutz
@@ -93,7 +86,6 @@
   en: data privacy, data protection
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Datum
@@ -105,7 +97,6 @@
   en: date
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dauerauftrag
@@ -117,7 +108,6 @@
   en: standing order, banker's order
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Debatte
@@ -129,7 +119,6 @@
   en: debate
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Decke
@@ -141,7 +130,6 @@
   en: blanket, layer
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dekoration
@@ -153,7 +141,6 @@
   en: decoration
   freq: 13000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Delle
@@ -165,7 +152,6 @@
   en: dent
   freq: 30000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Demokratie
@@ -177,7 +163,6 @@
   en: democracy
   freq: 7000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Demonstration
@@ -189,7 +174,6 @@
   en: demonstration
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Denkmal
@@ -201,7 +185,6 @@
   en: monument
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Deodorant
@@ -213,7 +196,6 @@
   en: deodorant
   freq: 30000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Deutschland
@@ -225,7 +207,6 @@
   en: Germany
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Deutung
@@ -237,7 +218,6 @@
   en: analysis, interpretation
   freq: 39000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diagnose
@@ -249,7 +229,6 @@
   en: diagnosis
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dialekt
@@ -261,7 +240,6 @@
   en: dialect
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dialog
@@ -273,7 +251,6 @@
   en: dialogue
   freq: 9000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dichtung
@@ -285,7 +262,6 @@
   en: seal, sealing
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diebstahl
@@ -297,7 +273,6 @@
   en: theft
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dienstag
@@ -309,7 +284,6 @@
   en: Tuesday
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dienstreise
@@ -321,7 +295,6 @@
   en: official trip, business trip
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diesel
@@ -333,7 +306,6 @@
   en: diesel
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diktat
@@ -345,7 +317,6 @@
   en: dictation
   freq: 24000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diktatur
@@ -357,7 +328,6 @@
   en: dictatorship
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dinosaurier
@@ -369,7 +339,6 @@
   en: dinosaur, dino
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diplom
@@ -381,7 +350,6 @@
   en: certificate
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dirigent
@@ -393,7 +361,6 @@
   en: conductor
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diskriminierung
@@ -405,7 +372,6 @@
   en: discrimination
   freq: 19000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Diskussion
@@ -417,7 +383,6 @@
   en: discussion
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dokumentation
@@ -429,7 +394,6 @@
   en: documentation
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dolmetscher
@@ -441,7 +405,6 @@
   en: interpreter
   freq: 14000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dolmetscherin
@@ -453,7 +416,6 @@
   en: interpreter
   freq: 29000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Donner
@@ -465,7 +427,6 @@
   en: thunder
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Donnerstag
@@ -477,7 +438,6 @@
   en: Thursday
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Doppelstaatler
@@ -489,7 +449,6 @@
   en: dual citizen
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Doppelzimmer
@@ -501,7 +460,6 @@
   en: double room, double bedroom
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dorf
@@ -513,7 +471,6 @@
   en: village
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dosierung
@@ -525,7 +482,6 @@
   en: dosage, dose
   freq: 23000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Dozent
@@ -537,7 +493,6 @@
   en: lecturer, university lecturer
   freq: 19000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Drehbuch
@@ -549,7 +504,6 @@
   en: script
   freq: 4000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Drehort
@@ -561,7 +515,6 @@
   en: location
   freq: 19000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Drittel
@@ -573,7 +526,6 @@
   en: third
   freq: 12000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Drucker
@@ -585,7 +537,6 @@
   en: printer
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Duldung
@@ -597,7 +548,6 @@
   en: acceptance, toleration
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Durchmesser
@@ -609,7 +559,6 @@
   en: diameter
   freq: 3000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Durchsage
@@ -621,7 +570,6 @@
   en: announcement
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Durchschnitt
@@ -633,7 +581,6 @@
   en: average, mean
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Durst
@@ -645,7 +592,6 @@
   en: thirst
   freq: 7000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dusche
@@ -657,7 +603,6 @@
   en: shower, shower bath
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Duschgel
@@ -669,7 +614,6 @@
   en: shower gel
   freq: null
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dutzend
@@ -681,7 +625,6 @@
   en: dozen
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dübel
@@ -693,7 +636,6 @@
   en: dowel, wall plug
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Dürre
@@ -705,6 +647,5 @@
   en: drought
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}

@@ -7,7 +7,6 @@
   en: scales
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wagen
@@ -19,7 +18,6 @@
   en: cart, wain
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wagenheber
@@ -31,7 +29,6 @@
   en: car jack
   freq: 24000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahl
@@ -43,7 +40,6 @@
   en: choice, selection
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahlbeteiligung
@@ -55,7 +51,6 @@
   en: voter turnout, turnout
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahlergebnis
@@ -67,7 +62,6 @@
   en: election result
   freq: 40000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahlkampf
@@ -79,7 +73,6 @@
   en: election campaign
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahllokal
@@ -91,7 +84,6 @@
   en: polling station, voting station
   freq: 31000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahlrecht
@@ -103,7 +95,6 @@
   en: suffrage
   freq: 26000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahlurne
@@ -115,7 +106,6 @@
   en: ballot box, voting box
   freq: 49000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wahrheit
@@ -127,7 +117,6 @@
   en: truth
   freq: 500
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wald
@@ -139,7 +128,6 @@
   en: forest, wood
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wand
@@ -151,7 +139,6 @@
   en: wall
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wanderung
@@ -163,7 +150,6 @@
   en: hike
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wanderweg
@@ -175,7 +161,6 @@
   en: hiking trail
   freq: 40000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Warnblinker
@@ -187,7 +172,6 @@
   en: hazard lights
   freq: null
   level: A2
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Warndreieck
@@ -199,7 +183,6 @@
   en: breakdown triangle, warning triangle
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Warnung
@@ -211,7 +194,6 @@
   en: warning
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wartehäuschen
@@ -223,7 +205,6 @@
   en: diminutive of Wartehaus
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Wartezeit
@@ -235,7 +216,6 @@
   en: waiting time
   freq: 17000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wartezimmer
@@ -247,7 +227,6 @@
   en: waiting room
   freq: 15000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wartung
@@ -259,7 +238,6 @@
   en: maintenance
   freq: 18000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Waschbecken
@@ -271,7 +249,6 @@
   en: sink, wash-basin
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Waschmaschine
@@ -283,7 +260,6 @@
   en: washing machine
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wasser
@@ -295,7 +271,6 @@
   en: water
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wasserbecken
@@ -307,7 +282,6 @@
   en: tank, water basin
   freq: null
   level: A1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Wassermelone
@@ -319,7 +293,6 @@
   en: watermelon
   freq: 17000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wasserwaage
@@ -331,7 +304,6 @@
   en: spirit level, level
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Watte
@@ -343,7 +315,6 @@
   en: cotton wool, cotton
   freq: 33000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wattestäbchen
@@ -355,7 +326,6 @@
   en: cotton swab, cotton bud
   freq: 45000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Webseite
@@ -367,7 +337,6 @@
   en: web page
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wechselkurs
@@ -379,7 +348,6 @@
   en: exchange rate
   freq: 34000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weg
@@ -391,7 +359,6 @@
   en: track, route
   freq: 200
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weihnachten
@@ -403,7 +370,6 @@
   en: Christmas, Xmas
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weihnachtsbaum
@@ -415,7 +381,6 @@
   en: Christmas tree
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weihnachtsmarkt
@@ -427,7 +392,6 @@
   en: Christmas market, Christmas fair
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wein
@@ -439,7 +403,6 @@
   en: vine
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weintraube
@@ -451,7 +414,6 @@
   en: grape
   freq: 21000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Welle
@@ -463,7 +425,6 @@
   en: wave
   freq: 6000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Welt
@@ -475,7 +436,6 @@
   en: World, world
   freq: 300
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weltbevölkerung
@@ -487,7 +447,6 @@
   en: world population
   freq: 32000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Weltkarte
@@ -499,7 +458,6 @@
   en: world map
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Werbepause
@@ -511,7 +469,6 @@
   en: commercial break
   freq: 36000
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Werbung
@@ -523,7 +480,6 @@
   en: advertising, publicity
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Werkbank
@@ -535,7 +491,6 @@
   en: workbench
   freq: 47000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Werkstatt
@@ -547,7 +502,6 @@
   en: workshop, garage
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Werkstattrechnung
@@ -559,7 +513,6 @@
   en: repair bill
   freq: null
   level: B1
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Werkstoff
@@ -571,7 +524,6 @@
   en: material
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Werkzeug
@@ -583,7 +535,6 @@
   en: tool
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Werkzeugkasten
@@ -595,7 +546,6 @@
   en: toolbox
   freq: 23000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wertsendung
@@ -607,7 +557,6 @@
   en: insured shipment
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Westen
@@ -619,7 +568,6 @@
   en: west
   freq: 5000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wettbewerb
@@ -631,7 +579,6 @@
   en: competition
   freq: 5000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wetter
@@ -644,7 +591,6 @@
   en: weather
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wetter:2
@@ -657,7 +603,6 @@
   en: punter
   freq: 4000
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wettkampf
@@ -669,7 +614,6 @@
   en: contest, competition
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Widerspruch
@@ -681,7 +625,6 @@
   en: contradiction, inconsistency
   freq: 10000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wiederbelebung
@@ -693,7 +636,6 @@
   en: reanimation
   freq: 20000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wiese
@@ -705,7 +647,6 @@
   en: meadow
   freq: 12000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Willkommenskultur
@@ -717,7 +658,6 @@
   en: welcoming culture
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wimper
@@ -729,7 +669,6 @@
   en: eyelash
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wimperntusche
@@ -741,7 +680,6 @@
   en: mascara
   freq: 35000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Wind
@@ -753,7 +691,6 @@
   en: wind
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Windel
@@ -765,7 +702,6 @@
   en: diaper, nappy
   freq: 8000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Windschutzscheibe
@@ -777,7 +713,6 @@
   en: windscreen, windshield
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Winkel
@@ -789,7 +724,6 @@
   en: angle
   freq: 9000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Winter
@@ -801,7 +735,6 @@
   en: winter
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Winterreifen
@@ -813,7 +746,6 @@
   en: winter tire
   freq: null
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Woche
@@ -825,7 +757,6 @@
   en: week
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wochenende
@@ -837,7 +768,6 @@
   en: weekend
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohnfläche
@@ -849,7 +779,6 @@
   en: living space, living area
   freq: null
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohngebiet
@@ -861,7 +790,6 @@
   en: residential area
   freq: 33000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohnmobil
@@ -873,7 +801,6 @@
   en: motor home, camper
   freq: 12000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohnort
@@ -885,7 +812,6 @@
   en: residence
   freq: 24000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohnsitz
@@ -897,7 +823,6 @@
   en: domicile, residence
   freq: 16000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohnung
@@ -909,7 +834,6 @@
   en: flat, apartment
   freq: 800
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wohnzimmer
@@ -921,7 +845,6 @@
   en: living room, parlor / parlour
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wolf
@@ -933,7 +856,6 @@
   en: wolf
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wolke
@@ -945,7 +867,6 @@
   en: cloud
   freq: 4000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wolle
@@ -957,7 +878,6 @@
   en: wool
   freq: 400
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wort
@@ -970,7 +890,6 @@
   en: word, term
   freq: 400
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wort:2
@@ -983,7 +902,6 @@
   en: saying
   freq: 400
   level: null
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wortmeldung
@@ -995,7 +913,6 @@
   en: request to speak
   freq: null
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wortschatz
@@ -1007,7 +924,6 @@
   en: vocabulary, wordstock
   freq: 25000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wurst
@@ -1019,7 +935,6 @@
   en: sausage, wors
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wurzel
@@ -1031,7 +946,6 @@
   en: root
   freq: 9000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wut
@@ -1043,7 +957,6 @@
   en: anger, fury
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wähler
@@ -1055,7 +968,6 @@
   en: voter
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Währung
@@ -1067,7 +979,6 @@
   en: currency
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wärme
@@ -1079,7 +990,6 @@
   en: heat, warmth
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wäsche
@@ -1091,7 +1001,6 @@
   en: laundry
   freq: 4000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wörterbuch
@@ -1103,7 +1012,6 @@
   en: dictionary, wordbook
   freq: 14000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Würfel
@@ -1115,7 +1023,6 @@
   en: cube
   freq: 11000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Wüste
@@ -1127,6 +1034,5 @@
   en: desert
   freq: 7000
   level: B1
-  themes: []
   decided: {}
   skip: {}

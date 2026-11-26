@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""База приложения build/satzbau.sqlite из words/ и sentences/. Пересобирается целиком.
+"""База приложения build/satzbau.sqlite из words/, themes/ и sentences/. Пересобирается целиком.
 
   python3 -I tools/build.py
 
@@ -28,6 +28,9 @@ CREATE TABLE morphs (n INTEGER PRIMARY KEY, upos TEXT NOT NULL, morph TEXT NOT N
 CREATE TABLE tokens (sentence INTEGER NOT NULL, i INTEGER NOT NULL, text TEXT NOT NULL, lemma TEXT,
   morph INTEGER NOT NULL, word_id TEXT, PRIMARY KEY (sentence, i)) WITHOUT ROWID;
 CREATE INDEX tokens_word ON tokens (word_id) WHERE word_id IS NOT NULL;
+CREATE TABLE themes (id TEXT PRIMARY KEY, title TEXT NOT NULL, n INTEGER NOT NULL);
+CREATE TABLE theme_words (theme TEXT NOT NULL, i INTEGER NOT NULL, word_id TEXT NOT NULL, PRIMARY KEY (theme, i));
+CREATE INDEX theme_words_word ON theme_words (word_id);
 '''
 
 
@@ -86,6 +89,13 @@ def main():
             *(json.dumps(w.get(k, []), ensure_ascii=False) for k in LISTS), w.get('number', 'sg'),
             w['ru'], llm(w, 'ru'), w['en'], llm(w, 'en'), w['freq'], w['level'],
             json.dumps(w.get('skip', {}), ensure_ascii=False)))
+    for p in sorted(glob.glob(os.path.join(ROOT, 'themes', '*.yaml'))):
+        t = yaml.safe_load(open(p, encoding='utf-8'))
+        db.execute('INSERT INTO themes VALUES (?,?,?)', (t['id'], t['title'], t['order']))
+        for i, ref in enumerate(t['words']):
+            if ref not in ids:
+                sys.exit(f'тема {t["id"]}: {ref}, такого слова нет (сначала verify.py)')
+            db.execute('INSERT INTO theme_words VALUES (?,?,?)', (t['id'], i, ref))
     n, morphs = 0, {}
     for s in sentences():
         n += 1

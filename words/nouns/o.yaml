@@ -7,7 +7,6 @@
   en: trolley bus
   freq: null
   level: A1
-  themes: []
   decided: {gen_sg: 'dewikt: des Oberleitungsbusses; ruwikt: -buses — верим dewikt'}
   skip: {}
 - id: n:Obst
@@ -19,7 +18,6 @@
   en: fruit
   freq: 11000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Obus
@@ -31,7 +29,6 @@
   en: trolleybus
   freq: null
   level: A1
-  themes: []
   decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', gen_sg: 'dewikt: des Obusses; ruwikt: Obuses — верим dewikt'}
   skip: {}
 - id: n:Ohr
@@ -43,7 +40,6 @@
   en: hearing
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ohrring
@@ -55,7 +51,6 @@
   en: earring
   freq: 6000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Oma
@@ -67,7 +62,6 @@
   en: grandmother
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Onkel
@@ -79,7 +73,6 @@
   en: uncle
   freq: 700
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Opa
@@ -91,7 +84,6 @@
   en: grandpa, grandad
   freq: 2000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Operation
@@ -103,7 +95,6 @@
   en: surgery
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Opfer
@@ -115,7 +106,6 @@
   en: sacrifice
   freq: 2000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Opposition
@@ -127,7 +117,6 @@
   en: opposition
   freq: 16000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ordner
@@ -139,7 +128,6 @@
   en: folder
   freq: 15000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Original
@@ -151,7 +139,6 @@
   en: original
   freq: 3000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Osten
@@ -163,7 +150,6 @@
   en: east
   freq: 3000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Osterei
@@ -175,7 +161,6 @@
   en: Easter egg
   freq: 37000
   level: A2
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ostern
@@ -187,7 +172,6 @@
   en: Easter
   freq: 10000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ostsee
@@ -199,7 +183,6 @@
   en: Baltic Sea
   freq: 25000
   level: B1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Öffnungszeit
@@ -211,7 +194,6 @@
   en: opening hours
   freq: 40000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Öl
@@ -223,7 +205,6 @@
   en: oil
   freq: 6000
   level: A1
-  themes: []
   decided: {}
   skip: {}
 - id: n:Ölwechsel
@@ -235,7 +216,6 @@
   en: oil change
   freq: 27000
   level: A2
-  themes: []
   decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Österreich
@@ -247,6 +227,5 @@
   en: Austria
   freq: 13000
   level: A1
-  themes: []
   decided: {}
   skip: {}
