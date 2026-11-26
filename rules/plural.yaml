@@ -1,0 +1,169 @@
+# Тип множественного существительного: признаки, которые его предсказывают (docs/rules.md).
+# Типы — как в упражнении (docs/ex-plural.md): -e, ¨-e, -er, ¨-er, -(e)n, -s, —, ¨; значение слова —
+# тип его первой формы. Доля и исключения не пишутся руками: их считают tools/import_rules.py и verify.py.
+# Каждое правило — минимум два источника; в каждом источнике — раздел (at) и строка (find).
+
+- id: pl-ung
+  when: {suffix: ung}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "Deverbativa]] auf ''-ung''"}
+    - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: "die auf -heit, -keit, -ion, -ung enden"}
+    - {src: en-wb-nouns, at: Suffixes, find: "'''-ung, -heit, -keit, -schaft, -ion, and -tät'''"}
+
+- id: pl-heit
+  when: {suffix: heit}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "Deadjektiva auf ''-heit''"}
+    - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: "die auf -heit, -keit, -ion, -ung enden"}
+    - {src: en-wb-nouns, at: Suffixes, find: "'''-ung, -heit, -keit, -schaft, -ion, and -tät'''"}
+
+- id: pl-keit
+  when: {suffix: keit}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "''-keit'', ''-igkeit''"}
+    - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: "die auf -heit, -keit, -ion, -ung enden"}
+    - {src: en-wb-nouns, at: Suffixes, find: "'''-ung, -heit, -keit, -schaft, -ion, and -tät'''"}
+
+- id: pl-ion
+  when: {suffix: ion}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "auf ''-ion'' und ''-tät''"}
+    - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: "die auf -heit, -keit, -ion, -ung enden"}
+    - {src: en-wb-nouns, at: Suffixes, find: "'''-ung, -heit, -keit, -schaft, -ion, and -tät'''"}
+
+- id: pl-tät
+  when: {suffix: tät}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "auf ''-ion'' und ''-tät''"}
+    - {src: en-wb-nouns, at: Suffixes, find: "'''-ung, -heit, -keit, -schaft, -ion, and -tät'''"}
+
+- id: pl-schaft
+  when: {suffix: schaft}
+  then: {plural: -(e)n}
+  sources:
+    - {src: en-wb-nouns, at: Suffixes, find: "'''-ung, -heit, -keit, -schaft, -ion, and -tät'''"}
+    - {src: de-wikt-schaft, at: "-schaft ({{Sprache|Deutsch}})", find: "|Nominativ Plural=-schaften"}
+
+- id: pl-in
+  when: {suffix: in, gender: [f]}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "Personenbezeichnungen mit Endung ''-in'' bilden den ''n''-Plural mit Auslautverdoppelung in der Form ''-innen''"}
+    - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: ":-in (veraltet auch -inn), Plural -i<u>nn</u>en"}
+    - {src: en-wb-nouns, at: Plurals, find: "-nen (to feminine suffix ''-in'')"}
+
+- id: pl-nis
+  when: {suffix: nis}
+  then: {plural: -e}
+  sources:
+    - {src: de-wp-plural, at: "Der ''e''-Plural", find: "sämtliche Feminina auf ''-nis'' (Plural mit Auslautverdoppelung: ''-nisse'')"}
+    - {src: de-wikt-nis, at: "-nis ({{Sprache|Deutsch}})", find: ":·nis, {{Pl.}} ·nis·se"}
+
+- id: pl-kunft
+  when: {suffix: kunft}
+  then: {plural: ¨-e}
+  sources:
+    - {src: de-wp-plural, at: "Der ''e''-Plural", find: "''-kunft''"}
+    - {src: en-wb-nouns, at: Suffixes, find: "pluralized by '''changing the stem vowel and adding -e'''"}
+
+- id: pl-chen
+  when: {suffix: chen}
+  then: {plural: —}
+  sources:
+    - {src: en-wb-plural, at: "Penultimate 'e'", find: "Words with the ''-chen'' diminutive suffix:"}
+    - {src: de-wikt-chen, at: "-chen ({{Sprache|Deutsch}})", find: "|Nominativ Plural=-chen"}
+
+- id: pl-lein
+  when: {suffix: lein}
+  then: {plural: —}
+  sources:
+    - {src: de-wikt-lein, at: "-lein ({{Sprache|Deutsch}})", find: "|Nominativ Plural=-lein"}
+    - {src: en-wikt-lein, at: German, find: "The plural remains unchanged."}
+
+- id: pl-e-f
+  when: {suffix: e, gender: [f]}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "Vor allem Feminina bilden im Deutschen einen Plural auf ''-n;'' dabei enden sie im Singular typischerweise auf ''-e''"}
+    - {src: en-wb-plural, at: Feminine nouns, find: "Many of these nouns end with ''-e''"}
+
+- id: pl-e
+  when: {suffix: e}
+  then: {plural: -(e)n}
+  sources:
+    - {src: en-wb-plural, at: Vowel endings, find: "Nouns ending with ''-e'' almost always form plurals by adding ''-n'', regardless of gender."}
+    - {src: de-wp-dekl, at: Zugehörigkeit und Übersicht, find: "Substantive auf unbetontes ''-e'' sowie die meisten Feminina meist nach W1/W2 dekliniert werden"}
+
+- id: pl-el-f
+  when: {suffix: el, gender: [f]}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "Feminina auf ''-er'' oder ''-el'' verhalten sich deshalb anders"}
+    - {src: de-wp-dekl, at: Zugehörigkeit und Übersicht, find: "bzw. nach W2, wenn sie feminin sind"}
+
+- id: pl-er-f
+  when: {suffix: er, gender: [f]}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: "Der ''n''-Plural", find: "Feminina auf ''-er'' oder ''-el'' verhalten sich deshalb anders"}
+    - {src: de-wp-dekl, at: Zugehörigkeit und Übersicht, find: "bzw. nach W2, wenn sie feminin sind"}
+
+- id: pl-f
+  when: {gender: [f]}
+  then: {plural: -(e)n}
+  sources:
+    - {src: de-wp-plural, at: Verhältnis von Genus und Plural, find: "Feminina die Endung ''-(e)n''"}
+    - {src: en-wb-plural, at: Feminine nouns, find: "Feminine nouns almost always use the ''-(e)n''"}
+    - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: "Die meisten Feminina gehören in diese Klasse."}
+
+- id: pl-er-mn
+  when: {suffix: er, gender: [m, n]}
+  then: {plural: —}
+  sources:
+    - {src: de-wp-plural, at: Der Nullplural, find: "Plural bei vielen Maskulina und Neutra auf ''-el'', ''-en'' oder ''-er:''"}
+    - {src: de-wp-dekl, at: "S6: unveränderter Plural", find: "vor allem Maskulina und Neutra auf ''-el, -er''"}
+    - {src: en-wb-plural, at: "Penultimate 'e'", find: "Nouns ending in ''-en'' or ''-er''"}
+
+- id: pl-el-mn
+  when: {suffix: el, gender: [m, n]}
+  then: {plural: —}
+  sources:
+    - {src: de-wp-plural, at: Der Nullplural, find: "Plural bei vielen Maskulina und Neutra auf ''-el'', ''-en'' oder ''-er:''"}
+    - {src: de-wp-dekl, at: "S6: unveränderter Plural", find: "vor allem Maskulina und Neutra auf ''-el, -er''"}
+
+- id: pl-en
+  when: {suffix: en}
+  then: {plural: —}
+  sources:
+    - {src: en-wb-plural, at: "Penultimate 'e'", find: "Nouns ending in ''-en'' or ''-er''"}
+    - {src: de-wp-dekl, at: Zugehörigkeit und Übersicht, find: "Substantive auf unbetontes ''-en'' meist nach S5/S6 dekliniert werden"}
+
+# «на другие гласные, кроме -e» — те, что не бывают второй буквой дифтонга (-i, -u: Partei, Frau)
+- id: pl-a
+  when: {suffix: a}
+  then: {plural: -s}
+  sources: &vowel
+    - {src: en-wb-plural, at: Vowel endings, find: "Nouns ending with vowels other than ''-e'', but including ''-y'', almost always form plurals by adding ''-s''."}
+    - {src: de-wp-plural, at: "Der ''s''-Plural", find: "auf andere Vokale als das abgeschwächte e, so gilt i.&nbsp;d.&nbsp;R. die Pluralform ''-s''"}
+
+- id: pl-o
+  when: {suffix: o}
+  then: {plural: -s}
+  sources: *vowel
+
+- id: pl-y
+  when: {suffix: y}
+  then: {plural: -s}
+  sources: *vowel
+
+- id: pl-compound
+  when: {head: true}
+  then: {plural: head}
+  sources:
+    - {src: en-wb-plural, at: Compounds, find: "the plural of a compound follows the same pattern as the plural of the last part"}
+    - {src: de-wp-plural, at: Plural von Komposita, find: "dass nur das jeweilige Hinterglied einen Plural bildet"}

@@ -9,3 +9,30 @@ de-wp-genus:
 en-wb-gender:
   url: https://en.wikibooks.org/wiki/German/Grammar/Noun_gender
   license: CC BY-SA 4.0
+de-wp-plural:
+  url: https://de.wikipedia.org/wiki/Plural
+  license: CC BY-SA 4.0
+de-wp-dekl:
+  url: https://de.wikipedia.org/wiki/Deutsche_Deklination
+  license: CC BY-SA 4.0
+en-wb-plural:
+  url: https://en.wikibooks.org/wiki/German/Grammar/Noun_plurals
+  license: CC BY-SA 4.0
+en-wb-nouns:
+  url: https://en.wikibooks.org/wiki/German/Grammar/Nouns
+  license: CC BY-SA 4.0
+de-wikt-chen:
+  url: https://de.wiktionary.org/wiki/-chen
+  license: CC BY-SA 4.0
+de-wikt-lein:
+  url: https://de.wiktionary.org/wiki/-lein
+  license: CC BY-SA 4.0
+de-wikt-schaft:
+  url: https://de.wiktionary.org/wiki/-schaft
+  license: CC BY-SA 4.0
+de-wikt-nis:
+  url: https://de.wiktionary.org/wiki/-nis
+  license: CC BY-SA 4.0
+en-wikt-lein:
+  url: https://en.wiktionary.org/wiki/-lein
+  license: CC BY-SA 4.0

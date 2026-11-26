@@ -5,7 +5,7 @@
 
 Нужен только PyYAML: источники из data/raw не читаются, поэтому скрипт работает и в CI.
 """
-import glob, gzip, json, os, shutil, sqlite3, sys
+import glob, gzip, json, os, re, shutil, sqlite3, sys
 
 import yaml
 
@@ -42,6 +42,11 @@ CREATE TABLE rules (id TEXT PRIMARY KEY, field TEXT NOT NULL, value TEXT NOT NUL
 CREATE TABLE hints (word_id TEXT NOT NULL, field TEXT NOT NULL, rule_id TEXT NOT NULL, ok INTEGER NOT NULL,
   head TEXT, PRIMARY KEY (word_id, field)) WITHOUT ROWID;
 '''
+
+
+def section_title(at):
+    """Раздел без вики-разметки: «Der ''n''-Plural» → «Der n-Plural», «-chen ({{Sprache|Deutsch}})» → «-chen»."""
+    return re.sub(r'\s*\(\s*\)', '', re.sub(r"\{\{[^}]*\}\}|''", '', at)).strip()
 
 
 NAMES = {'dewikt': 'немецкий Викисловарь', 'enwikt': 'английский Викисловарь', 'ruwikt': 'русский Викисловарь',
@@ -92,7 +97,7 @@ def main():
     ids = set()
     rules, stats, heads, sources = hints.load()
     for r in rules:
-        src = [{'url': sources[x['src']]['url'], 'at': x['at']} for x in r['sources']]
+        src = [{'url': sources[x['src']]['url'], 'at': section_title(x['at'])} for x in r['sources']]
         f, v = hints.field(r)
         db.execute('INSERT INTO rules VALUES (?,?,?,?,?,?,?)', (r['id'], f, v, hints.text(r),
                    stats[r['id']]['n'], stats[r['id']]['ok'], json.dumps(src, ensure_ascii=False)))

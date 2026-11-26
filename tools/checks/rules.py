@@ -25,10 +25,14 @@ def check_rules(words, errors, warnings):
             errors['rule-id'].append(f'{rid}: повторяется')
         if 'llm' in json.dumps(r, ensure_ascii=False).lower():
             errors['rule-llm'].append(f'{rid}: правило или его источник от LLM')
-        if set(r.get('when', {})) - WHEN or len(r.get('when', {})) != 1:
-            errors['rule-schema'].append(f'{rid}: условие {r.get("when")} — нужно одно из {sorted(WHEN)}')
         then = r.get('then', {})
         f, v = next(iter(then.items()), (None, None))
+        when = r.get('when', {})
+        main, extra = set(when) & WHEN, set(when) - WHEN
+        if extra - {'gender'} or len(main) > 1 or not when or ('gender' in when and ('head' in main or f == 'gender')):
+            errors['rule-schema'].append(f'{rid}: условие {when} — одно из {sorted(WHEN)}; gender — само или с suffix/list, не для рода')
+        elif 'gender' in when and (not isinstance(when['gender'], list) or not when['gender'] or set(when['gender']) - set(hints.ARTICLE)):
+            errors['rule-schema'].append(f'{rid}: gender {when["gender"]} — непустой список из {sorted(hints.ARTICLE)}')
         if len(then) != 1 or f not in hints.FIELDS or v not in hints.FIELDS[f]:
             errors['rule-schema'].append(f'{rid}: then {then} — одно поле из {sorted(hints.FIELDS)} с допустимым значением')
         elif (v == 'head') != ('head' in r.get('when', {})):

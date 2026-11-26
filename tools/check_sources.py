@@ -3,8 +3,8 @@
 
   python3 -I tools/check_sources.py      нужна сеть; в CI не входит, запускать при правке rules/
 
-Берёт вики-текст страницы (action=raw): раздел — от заголовка `at` до следующего заголовка того же
-или более высокого уровня; строка `find` должна быть в нём дословно.
+Берёт вики-текст страницы (action=raw): раздел — от заголовка `at` (с шаблонами {{…}} или без)
+до следующего заголовка того же или более высокого уровня; строка `find` должна быть в нём дословно.
 """
 import glob, os, re, sys, urllib.parse, urllib.request
 
@@ -25,7 +25,7 @@ def raw(url):
 def section(text, at):
     hs = list(HEAD.finditer(text))
     for i, h in enumerate(hs):
-        if re.sub(r'\{\{[^}]*\}\}', '', h.group(2)).strip() == at:
+        if at in (h.group(2), re.sub(r'\{\{[^}]*\}\}', '', h.group(2)).strip()):
             end = next((x.start() for x in hs[i + 1:] if len(x.group(1)) <= len(h.group(1))), len(text))
             return text[h.end():end]
     return None

@@ -77,6 +77,21 @@ class Guard(unittest.TestCase):
             rule(rules, 'suffix-in')['when']['list'] = ['Bein']
         self.assertIn('rule-schema', run(m))
 
+    def test_gender_condition_on_a_gender_rule(self):
+        def m(rules, stats, sources):
+            rule(rules, 'suffix-ung')['when']['gender'] = ['f']
+        self.assertIn('rule-schema', run(m))
+
+    def test_gender_condition_must_be_a_gender(self):
+        def m(rules, stats, sources):
+            rule(rules, 'pl-in')['when']['gender'] = ['x']
+        self.assertIn('rule-schema', run(m))
+
+    def test_unknown_plural_type(self):
+        def m(rules, stats, sources):
+            rule(rules, 'pl-ung')['then'] = {'plural': '-en'}
+        self.assertIn('rule-schema', run(m))
+
 
 class Choice(unittest.TestCase):
     def hint(self, lemma, gender, compound=None):
@@ -104,6 +119,49 @@ class Choice(unittest.TestCase):
         # die Antwort кончается на «Wort», но словари не называют её сложным словом
         h = self.hint('Antwort', 'f')
         self.assertTrue(h is None or h['rule'] != 'compound')
+
+
+class PluralType(unittest.TestCase):
+    def test_types_like_the_exercise(self):
+        pairs = {('Tisch', 'Tische'): '-e', ('Bus', 'Busse'): '-e', ('Ergebnis', 'Ergebnisse'): '-e',
+                 ('Zahn', 'Zähne'): '¨-e', ('Baum', 'Bäume'): '¨-e', ('Kind', 'Kinder'): '-er',
+                 ('Haus', 'Häuser'): '¨-er', ('Lampe', 'Lampen'): '-(e)n', ('Frau', 'Frauen'): '-(e)n',
+                 ('Lehrerin', 'Lehrerinnen'): '-(e)n', ('Auto', 'Autos'): '-s', ('Lehrer', 'Lehrer'): '—',
+                 ('Apfel', 'Äpfel'): '¨', ('Museum', 'Museen'): None, ('Werkstatt', 'Werkstätten'): None}
+        for (lemma, form), t in pairs.items():
+            self.assertEqual(hints.plural_type(lemma, form), t, lemma)
+
+
+class PluralChoice(unittest.TestCase):
+    def hint(self, lemma, gender, plural, compound=None):
+        rules, stats, heads, _ = REAL
+        w = {'lemma': lemma, 'gender': [gender], 'plural': [plural], 'compound': compound}
+        return hints.hint(w, 'plural', rules, stats, heads)
+
+    def test_suffix(self):
+        self.assertEqual(self.hint('Zeitung', 'f', 'Zeitungen'), {'rule': 'pl-ung', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Mädchen', 'n', 'Mädchen'), {'rule': 'pl-chen', 'ok': True, 'head': None})
+
+    def test_gender_and_ending(self):
+        # die Lampe: -e у женского рода надёжнее, чем -e вообще и чем «die → -(e)n»
+        self.assertEqual(self.hint('Lampe', 'f', 'Lampen'), {'rule': 'pl-e-f', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Lehrerin', 'f', 'Lehrerinnen')['rule'], 'pl-in')
+        self.assertEqual(self.hint('Lehrer', 'm', 'Lehrer'), {'rule': 'pl-er-mn', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Kartoffel', 'f', 'Kartoffeln')['rule'], 'pl-el-f')
+
+    def test_compound(self):
+        self.assertEqual(self.hint('Kinderzimmer', 'n', 'Kinderzimmer'), {'rule': 'pl-compound', 'ok': True, 'head': 'Zimmer'})
+
+    def test_exception_is_named(self):
+        self.assertEqual(self.hint('Hand', 'f', 'Hände'), {'rule': 'pl-f', 'ok': False, 'head': None})
+        self.assertEqual(self.hint('Käse', 'm', 'Käse'), {'rule': 'pl-e', 'ok': False, 'head': None})
+        self.assertEqual(self.hint('Garten', 'm', 'Gärten'), {'rule': 'pl-en', 'ok': False, 'head': None})
+
+    def test_no_rule_no_hint(self):
+        self.assertIsNone(self.hint('Tisch', 'm', 'Tische'))
+
+    def test_form_outside_types_has_no_hint(self):
+        self.assertIsNone(self.hint('Museum', 'n', 'Museen'))
 
 
 if __name__ == '__main__':

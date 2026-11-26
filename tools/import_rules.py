@@ -4,8 +4,10 @@
   python3 -I tools/import_rules.py
 
 Пишет:
-  evidence/rules.jsonl — по правилу: сколько существительных `dewikt` оно касается и у скольких род совпал;
-  evidence/heads.jsonl — у слов базы последняя часть сложного слова по `dewikt` и `enwikt` и её род.
+  evidence/rules.jsonl — по правилу: сколько существительных `dewikt` оно касается и у скольких совпало
+                         поле (род, тип множественного);
+  evidence/heads.jsonl — у слов базы последняя часть сложного слова по `dewikt` и `enwikt`, её род и тип
+                         множественного.
 Нужны data/raw (tools/fetch.py). Выписки в git: verify.py и build.py работают по ним без сети.
 """
 import collections, glob, json, os, re, sys
@@ -14,7 +16,7 @@ import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import srcs  # noqa: E402
-from hints import applies  # noqa: E402
+from hints import FIELDS, TRUTH, applies, field, plural_type  # noqa: E402
 
 ROOT = srcs.ROOT
 # «Determinativkompositum aus … und X»: X — последняя часть; служебные слова разбора — не она
@@ -50,31 +52,44 @@ def main():
     for p in glob.glob(os.path.join(ROOT, 'words', 'nouns', '*.yaml')):
         words |= {w['lemma'] for w in yaml.safe_load(open(p, encoding='utf-8')) or []}
     rs = rules()
-    genders, compounds, de_heads = {}, [], {}
+    # значения полей у слов словаря: род — все записи, тип множественного — по первой форме каждой записи
+    values = {'gender': {}, 'plural': {}}
+    plurals, compounds, de_heads = {}, [], {}
     for r in srcs.jsonl(srcs.raw('dewikt.jsonl.gz')):
         if r.get('pos') != 'noun' or 'form-of' in (r.get('tags') or []):
             continue
-        g = srcs.noun_forms(r)['gender']
+        f = srcs.noun_forms(r)
+        g, pl = f['gender'], f['plural']
         if g:
-            genders.setdefault(r['word'], set()).update(g)
+            values['gender'].setdefault(r['word'], set()).update(g)
+        if pl:
+            plurals.setdefault(r['word'], pl)
+            t = plural_type(r['word'], pl[0])
+            if t:
+                values['plural'].setdefault(r['word'], set()).add(t)
         h = de_head(r)
         if h and len(set(g)) == 1:
-            compounds.append((g[0], h))
+            compounds.append(({'lemma': r['word'], 'gender': g[:1], 'plural': pl}, h))
         if r['word'] in words and r['word'] not in de_heads:
             de_heads[r['word']] = h
     en_heads = {}
     for r in srcs.jsonl(srcs.raw('kaikki-de.jsonl'), 'de'):
         if r.get('pos') == 'noun' and r['word'] in words and r['word'] not in en_heads:
             en_heads[r['word']] = en_head(r)
-    single = {w: next(iter(g)) for w, g in genders.items() if len(g) == 1}
+    # слова одного рода; для множественного — с формой множественного (у какой нет — факта нет)
+    single = [{'lemma': w, 'gender': [next(iter(g))], 'plural': plurals.get(w, [])}
+              for w, g in values['gender'].items() if len(g) == 1]
+    facts = {'gender': single, 'plural': [w for w in single if w['plural']]}
     with open(os.path.join(ROOT, 'evidence', 'rules.jsonl'), 'w', encoding='utf-8') as f:
         for rule in rs:
+            name, claim = field(rule)
             if 'head' in rule['when']:
-                known = [(g, genders[h]) for g, h in compounds if h in genders]
-                n, ok = len(known), sum(g in hg for g, hg in known)
+                known = [(TRUTH[name](w), values[name][h]) for w, h in compounds
+                         if h in values[name] and (name != 'plural' or w['plural'])]
+                n, ok = len(known), sum(v in hv for v, hv in known)
             else:
-                hit = [w for w in single if applies(rule, w)]
-                n, ok = len(hit), sum(single[w] == rule['then']['gender'] for w in hit)
+                hit = [w for w in facts[name] if applies(rule, w)]
+                n, ok = len(hit), sum(TRUTH[name](w) == claim for w in hit)
             f.write(json.dumps({'id': rule['id'], 'n': n, 'ok': ok}) + '\n')
             print(f'{rule["id"]:16} {ok:6} из {n:6}  {100 * ok / n if n else 0:5.1f}%')
     heads = 0
@@ -84,8 +99,11 @@ def main():
             if not d and not e:
                 continue
             heads += 1
-            g = {h: sorted(genders[h]) for h in {d, e} - {None} if h in genders}
-            f.write(json.dumps({'lemma': w, 'dewikt': d, 'enwikt': e, 'gender': g}, ensure_ascii=False) + '\n')
+            parts = {d, e} - {None}
+            rec = {'lemma': w, 'dewikt': d, 'enwikt': e}
+            for name in FIELDS:
+                rec[name] = {h: sorted(values[name][h]) for h in parts if h in values[name]}
+            f.write(json.dumps(rec, ensure_ascii=False, sort_keys=False) + '\n')
     print(f'сложных слов в базе по двум источникам: {heads}')
 
 
