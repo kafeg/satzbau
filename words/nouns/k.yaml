@@ -5,7 +5,7 @@
   gen_sg: [Kabels]
   ru: кабель, провод
   en: cable
-  freq: 7000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -25,11 +25,10 @@
   skip: {}
 - id: n:Kaffee:2
   lemma: Kaffee
-  sense: кофе
   gender: [n]
   plural: [Kaffees]
   gen_sg: [Kaffees]
-  ru: кофе, ботан. кофе
+  ru: null
   en: cafe
   freq: 700
   level: null
@@ -91,7 +90,7 @@
   gen_sg: [Kamms, Kammes]
   ru: расчёска
   en: comb
-  freq: 13000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -103,7 +102,7 @@
   gen_sg: [Kanzlerin]
   ru: канцлер
   en: Chancellor
-  freq: null
+  freq: 34000
   level: A2
   themes: []
   decided: {}
@@ -127,7 +126,7 @@
   gen_sg: [Karnevals]
   ru: карнавал
   en: carnival, Shrovetide
-  freq: 13000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -293,11 +292,10 @@
   skip: {}
 - id: n:Keks:2
   lemma: Keks
-  sense: печенье
   gender: [m]
   plural: [Kekse]
   gen_sg: [Kekses, Keks]
-  ru: печенье
+  ru: null
   en: bonce, loaf
   freq: 3000
   level: null
@@ -306,12 +304,11 @@
   skip: {}
 - id: n:Keks:3
   lemma: Keks
-  sense: печенье
   gender: [m]
   plural: [Kekse]
   gen_sg: [Kekses, Keks]
-  ru: печенье
-  en: cookie, biscuit
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -319,12 +316,11 @@
   skip: {}
 - id: n:Keks:4
   lemma: Keks
-  sense: печенье
   gender: [m]
   plural: [Kekse]
   gen_sg: [Kekses, Keks]
-  ru: печенье
-  en: cookie, biscuit
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -337,7 +333,7 @@
   gen_sg: [Kelle]
   ru: мастерок
   en: ladle, dipper
-  freq: 50000
+  freq: 30000
   level: B1
   themes: []
   decided: {}
@@ -433,7 +429,7 @@
   gen_sg: [Kilos]
   ru: кило
   en: kilo
-  freq: 6000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -445,7 +441,7 @@
   gen_sg: [Kilogramms]
   ru: килограмм
   en: kilogram, kilogramme
-  freq: 5000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -553,7 +549,7 @@
   gen_sg: [Kinos]
   ru: кинотеатр, кино
   en: cinema, movie theatre
-  freq: 4000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -597,12 +593,11 @@
   skip: {}
 - id: n:Kiste:2
   lemma: Kiste
-  sense: ящик
   gender: [m]
   plural: [Kisten]
   gen_sg: [Kisten]
-  ru: ящик, сундук
-  en: chest, box
+  ru: null
+  en: null
   freq: 2000
   level: null
   themes: []
@@ -615,7 +610,7 @@
   gen_sg: [Kita]
   ru: детский сад
   en: day care center
-  freq: 41000
+  freq: 27000
   level: A1
   themes: []
   decided: {}
@@ -640,7 +635,7 @@
   gen_sg: [Kiwis]
   ru: киви
   en: kiwi
-  freq: 29000
+  freq: 28000
   level: A1
   themes: []
   decided: {}
@@ -653,7 +648,7 @@
   gen_sg: [Kiwi]
   ru: киви
   en: kiwi
-  freq: 29000
+  freq: 28000
   level: null
   themes: []
   decided: {}
@@ -665,7 +660,7 @@
   gen_sg: [Klage]
   ru: жалоба
   en: lament
-  freq: 6000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -773,7 +768,7 @@
   gen_sg: [Klimawandels]
   ru: изменение климата
   en: climate change
-  freq: 29000
+  freq: 28000
   level: B1
   themes: []
   decided: {}
@@ -809,7 +804,7 @@
   gen_sg: [Knopfes, Knopfs]
   ru: пуговица
   en: button
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -821,7 +816,7 @@
   gen_sg: [Koalition]
   ru: коалиция
   en: coalition
-  freq: 25000
+  freq: 24000
   level: A2
   themes: []
   decided: {}
@@ -841,11 +836,10 @@
   skip: {}
 - id: n:Koch:2
   lemma: Koch
-  sense: каша
   gender: [n]
   plural: []
   gen_sg: [Kochs, Koches]
-  ru: каша, пюре
+  ru: null
   en: mash
   freq: 4000
   level: null
@@ -871,7 +865,7 @@
   gen_sg: [Koffers]
   ru: чемодан
   en: suitcase
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -883,7 +877,7 @@
   gen_sg: [Kofferraums, Kofferraumes]
   ru: багажник
   en: trunk, boot
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -979,7 +973,7 @@
   gen_sg: [Konfettis, Konfetti]
   ru: null
   en: confetti
-  freq: 26000
+  freq: 25000
   level: B1
   themes: []
   decided: {}
@@ -1015,7 +1009,7 @@
   gen_sg: [Kontos]
   ru: счёт, учётная запись
   en: account
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -1051,7 +1045,7 @@
   gen_sg: [Kopfs, Kopfes]
   ru: голова
   en: head
-  freq: 700
+  freq: 600
   level: A1
   themes: []
   decided: {}
@@ -1063,7 +1057,7 @@
   gen_sg: [Kopfhörers]
   ru: наушник
   en: headphone
-  freq: 11000
+  freq: 10000
   level: A2
   themes: []
   decided: {}
@@ -1087,7 +1081,7 @@
   gen_sg: [Kosmetik]
   ru: косметика
   en: cosmetic
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -1099,7 +1093,7 @@
   gen_sg: [Kosmetikerin]
   ru: косметолог
   en: beautician, beauty specialist
-  freq: 32000
+  freq: 31000
   level: A2
   themes: []
   decided: {}
@@ -1123,7 +1117,7 @@
   gen_sg: [Kraft]
   ru: сила, крепость
   en: force
-  freq: 1000
+  freq: 900
   level: A2
   themes: []
   decided: {}
@@ -1135,7 +1129,7 @@
   gen_sg: [Kraftstoffes, Kraftstoffs]
   ru: топливо, горючее
   en: fuel
-  freq: 34000
+  freq: 33000
   level: A2
   themes: []
   decided: {}
@@ -1171,7 +1165,7 @@
   gen_sg: [Krankenkasse]
   ru: больничная касса
   en: public health insurance, health maintenance organization
-  freq: 38000
+  freq: 40000
   level: A2
   themes: []
   decided: {}
@@ -1231,7 +1225,7 @@
   gen_sg: [Kratzers]
   ru: царапина
   en: scratch
-  freq: 6000
+  freq: 5000
   level: B1
   themes: []
   decided: {}
@@ -1305,7 +1299,7 @@
   gen_sg: [Kreuzung]
   ru: перекрёсток
   en: intersection, crossroads
-  freq: 8000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -1317,7 +1311,7 @@
   gen_sg: [Krimis]
   ru: детектив
   en: crime novel, whodunit
-  freq: 15000
+  freq: 14000
   level: B1
   themes: []
   decided: {}
@@ -1329,7 +1323,7 @@
   gen_sg: [Krippe]
   ru: ясли
   en: manger, crib
-  freq: 40000
+  freq: 28000
   level: A2
   themes: []
   decided: {}
@@ -1341,7 +1335,7 @@
   gen_sg: [Kritik]
   ru: критика
   en: criticism, critique
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -1438,7 +1432,7 @@
   gen_sg: [Kulis]
   ru: ручка
   en: ballpoint pen, biro
-  freq: 20000
+  freq: 19000
   level: A1
   themes: []
   decided: {}
@@ -1451,7 +1445,7 @@
   gen_sg: [Kulis]
   ru: поденщик
   en: coolie
-  freq: 20000
+  freq: 19000
   level: null
   themes: []
   decided: {}
@@ -1525,7 +1519,7 @@
   gen_sg: [Kupplung]
   ru: сцепление
   en: clutch
-  freq: 16000
+  freq: 15000
   level: A2
   themes: []
   decided: {}
@@ -1573,7 +1567,7 @@
   gen_sg: [Kängurus]
   ru: кенгуру
   en: kangaroo, macropod
-  freq: 19000
+  freq: 18000
   level: A1
   themes: []
   decided: {}
@@ -1657,7 +1651,7 @@
   gen_sg: [Kühlschranks, Kühlschrankes]
   ru: холодильник
   en: refrigerator, fridge
-  freq: 4000
+  freq: 3000
   level: A1
   themes: []
   decided: {}

@@ -29,7 +29,7 @@
   gen_sg: [Vatis]
   ru: разг. папа
   en: daddy
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -89,7 +89,7 @@
   gen_sg: [Verbandskastens]
   ru: null
   en: first aid kit
-  freq: 38000
+  freq: 37000
   level: A2
   themes: []
   decided: {}
@@ -101,7 +101,7 @@
   gen_sg: [Verbindung]
   ru: связь, соединение
   en: connection, bond
-  freq: 2000
+  freq: 1000
   level: A2
   themes: []
   decided: {}
@@ -149,7 +149,7 @@
   gen_sg: [Vereins, Vereines]
   ru: объединение
   en: association, club
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Vergleichs, Vergleiches]
   ru: сравнение
   en: comparison
-  freq: 5000
+  freq: 4000
   level: B1
   themes: []
   decided: {}
@@ -197,7 +197,7 @@
   gen_sg: [Verhandlung]
   ru: переговоры
   en: trial
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -257,7 +257,7 @@
   gen_sg: [Verlages, Verlags]
   ru: издательство, книгоиздательство
   en: publishing company
-  freq: 12000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -305,7 +305,7 @@
   gen_sg: [Vermieterin]
   ru: наймодательница, арендодательница
   en: landlady
-  freq: 18000
+  freq: 17000
   level: A2
   themes: []
   decided: {}
@@ -377,7 +377,7 @@
   gen_sg: [Verpflegung]
   ru: довольствие, продовольствие
   en: catering
-  freq: 16000
+  freq: 15000
   level: B1
   themes: []
   decided: {}
@@ -389,7 +389,7 @@
   gen_sg: [Versands, Versandes]
   ru: отправка
   en: dispatch, consignation
-  freq: 42000
+  freq: 41000
   level: A2
   themes: []
   decided: {}
@@ -425,7 +425,7 @@
   gen_sg: [Verschmutzung]
   ru: загрязнение
   en: pollution
-  freq: 28000
+  freq: 27000
   level: B1
   themes: []
   decided: {}
@@ -473,7 +473,7 @@
   gen_sg: [Vertrauens]
   ru: доверие
   en: trust, confidence
-  freq: 600
+  freq: 500
   level: B1
   themes: []
   decided: {}
@@ -497,7 +497,7 @@
   gen_sg: [Verzuges, Verzugs]
   ru: промедление, задержка, затяжка
   en: delay
-  freq: 16000
+  freq: 15000
   level: A2
   themes: []
   decided: {}
@@ -533,7 +533,7 @@
   gen_sg: [Veröffentlichung]
   ru: публикация
   en: publication, release
-  freq: 14000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -545,7 +545,7 @@
   gen_sg: [Videos]
   ru: видео
   en: video
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -565,12 +565,11 @@
   skip: {}
 - id: n:Viertel:2
   lemma: Viertel
-  sense: четверть
   gender: [f]
   plural: [Viertel]
   gen_sg: [Viertel]
-  ru: четверть
-  en: quarter, fourth
+  ru: null
+  en: null
   freq: 5000
   level: null
   themes: []
@@ -679,7 +678,7 @@
   gen_sg: [Vollmacht]
   ru: доверенность
   en: power of attorney, proxy
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}
@@ -691,7 +690,7 @@
   gen_sg: [Vollzeit]
   ru: полный рабочий день
   en: full time
-  freq: 28000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -703,7 +702,7 @@
   gen_sg: [Volumens]
   ru: объём
   en: volume
-  freq: 17000
+  freq: 35000
   level: B1
   themes: []
   decided: {}
@@ -715,7 +714,7 @@
   gen_sg: [Vorbehalts, Vorbehaltes]
   ru: оговорка
   en: caveat, reservation
-  freq: 18000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
@@ -799,7 +798,7 @@
   gen_sg: [Vorschlages, Vorschlags]
   ru: предложение
   en: proposal, suggestion
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -823,7 +822,7 @@
   gen_sg: [Vorschule]
   ru: дошкольная подготовка, дошкольное образование
   en: preschool, infant school
-  freq: 18000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
@@ -859,7 +858,7 @@
   gen_sg: [Vorstellungsgespräches, Vorstellungsgesprächs]
   ru: собеседование
   en: interview, job interview
-  freq: 9000
+  freq: 8000
   level: B1
   themes: []
   decided: {}

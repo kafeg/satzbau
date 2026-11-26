@@ -17,7 +17,7 @@
   gen_sg: [Backe]
   ru: щека
   en: cheek, jowl
-  freq: 8000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -137,7 +137,7 @@
   gen_sg: [Balkans, Balkan]
   ru: Балкан, Холм
   en: Balkans
-  freq: 25000
+  freq: 24000
   level: B1
   themes: []
   decided: {}
@@ -199,7 +199,7 @@
   plural: [Bänder, Bande]
   gen_sg: [Bandes, Bands]
   ru: лента
-  en: ribbon, band
+  en: band, ribbon
   freq: 2000
   level: null
   themes: []
@@ -233,12 +233,11 @@
   skip: {}
 - id: n:Band:4
   lemma: Band
-  sense: лента
   gender: [n]
   plural: []
   gen_sg: [Bandes, Bands]
-  ru: лента, бант
-  en: tape, ribbon
+  ru: null
+  en: null
   freq: 2000
   level: null
   themes: []
@@ -361,7 +360,7 @@
   gen_sg: [Bauernhofs, Bauernhofes]
   ru: хозяйство, усадьба
   en: farm
-  freq: 4000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -385,7 +384,7 @@
   gen_sg: [Baums, Baumes]
   ru: дерево
   en: tree
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -397,7 +396,7 @@
   gen_sg: [Baumarktes, Baumarkts]
   ru: строительный рынок
   en: DIY shop, ironmonger's
-  freq: 19000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -637,7 +636,7 @@
   gen_sg: [Beilage]
   ru: гарнир
   en: side dish, garnishings
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -745,7 +744,7 @@
   gen_sg: [Beratungsstelle]
   ru: консультационный пункт
   en: advice centre, advisory body
-  freq: 45000
+  freq: 44000
   level: A2
   themes: []
   decided: {}
@@ -865,7 +864,7 @@
   gen_sg: [Besprechung]
   ru: совещание
   en: meeting, discussion
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -889,7 +888,7 @@
   gen_sg: [Bestätigung]
   ru: подтверждение
   en: acknowledgement, confirmaton
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -926,7 +925,7 @@
   number: pl
   ru: null
   en: overhead, overheads
-  freq: 48000
+  freq: 50000
   level: B1
   themes: []
   decided: {}
@@ -938,7 +937,7 @@
   gen_sg: [Betriebsrates, Betriebsrats]
   ru: производственный совет
   en: works council
-  freq: 37000
+  freq: 36000
   level: B1
   themes: []
   decided: {}
@@ -974,7 +973,7 @@
   gen_sg: [Bewegung]
   ru: движение, шевеление
   en: movement, move
-  freq: 1000
+  freq: 900
   level: A2
   themes: []
   decided: {}
@@ -986,7 +985,7 @@
   gen_sg: [Beweises]
   ru: доказательство, довод
   en: evidence
-  freq: 1000
+  freq: 900
   level: A2
   themes: []
   decided: {}
@@ -1022,7 +1021,7 @@
   gen_sg: [Bewerbung]
   ru: просьба, заявка
   en: application
-  freq: 12000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -1046,7 +1045,7 @@
   gen_sg: [Beziehung]
   ru: отношение
   en: relation, relationship
-  freq: 1000
+  freq: 900
   level: A2
   themes: []
   decided: {}
@@ -1094,7 +1093,7 @@
   gen_sg: [Bieres, Biers]
   ru: пиво
   en: beer, ale
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -1106,7 +1105,7 @@
   gen_sg: [Bilds, Bildes]
   ru: картина
   en: picture, painting
-  freq: 1000
+  freq: 900
   level: A1
   themes: []
   decided: {}
@@ -1118,7 +1117,7 @@
   gen_sg: [Bildschirmes, Bildschirms]
   ru: экран
   en: screen
-  freq: 6000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1131,7 +1130,7 @@
   gen_sg: [Bildung]
   ru: образование
   en: formation, creation
-  freq: 8000
+  freq: 7000
   level: B1
   themes: []
   decided: {}
@@ -1144,7 +1143,7 @@
   gen_sg: [Bildung]
   ru: образование
   en: education, cultivation
-  freq: 8000
+  freq: 7000
   level: null
   themes: []
   decided: {}
@@ -1168,7 +1167,7 @@
   gen_sg: [Biologie]
   ru: биология
   en: biology
-  freq: 9000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -1192,7 +1191,7 @@
   gen_sg: [Bitte]
   ru: просьба
   en: plea, request
-  freq: 300
+  freq: 200
   level: A1
   themes: []
   decided: {}
@@ -1288,7 +1287,7 @@
   gen_sg: [Blumenstraußes]
   ru: букет цветов
   en: bouquet, flower bouquet
-  freq: 21000
+  freq: 20000
   level: A1
   themes: []
   decided: {}
@@ -1312,7 +1311,7 @@
   gen_sg: [Bluts, Blutes]
   ru: кровь
   en: blood
-  freq: 1000
+  freq: 900
   level: A2
   themes: []
   decided: {}
@@ -1336,7 +1335,7 @@
   gen_sg: [Bodens]
   ru: пол
   en: ground, soil
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -1348,7 +1347,7 @@
   gen_sg: [Bohrers]
   ru: сверло
   en: drill
-  freq: 14000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -1392,11 +1391,10 @@
   skip: {}
 - id: n:Boot:2
   lemma: Boot
-  sense: ботинок
   gender: [m]
   plural: [Boots]
   gen_sg: [Boots]
-  ru: ботинок, бот
+  ru: null
   en: boot
   freq: 2000
   level: null
@@ -1410,7 +1408,7 @@
   gen_sg: [Boulevards]
   ru: бульвар
   en: boulevard
-  freq: 10000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -1458,7 +1456,7 @@
   gen_sg: [Brauchs, Brauches]
   ru: обычай
   en: custom, practice
-  freq: 600
+  freq: 500
   level: A2
   themes: []
   decided: {}
@@ -1482,7 +1480,7 @@
   gen_sg: [Breite]
   ru: ширина
   en: width, breadth
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -1494,7 +1492,7 @@
   gen_sg: [Breitengrads, Breitengrades]
   ru: градус широты
   en: latitude
-  freq: 26000
+  freq: 25000
   level: B1
   themes: []
   decided: {}
@@ -1580,7 +1578,7 @@
   gen_sg: [Briefkastens]
   ru: почтовый ящик
   en: mailbox, letterbox
-  freq: 9000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -1640,7 +1638,7 @@
   gen_sg: [Briefumschlages, Briefumschlags]
   ru: конверт
   en: envelope
-  freq: 23000
+  freq: 22000
   level: A1
   themes: []
   decided: {}
@@ -1652,7 +1650,7 @@
   gen_sg: [Brille]
   ru: очки
   en: goggles
-  freq: 5000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -1676,7 +1674,7 @@
   gen_sg: [Brotdose]
   ru: контейнер для бутербродов, тормозок
   en: lunchbox
-  freq: 40000
+  freq: 39000
   level: A1
   themes: []
   decided: {}
@@ -1696,11 +1694,10 @@
   skip: {}
 - id: n:Bruch:2
   lemma: Bruch
-  sense: поломка
   gender: [m, n]
   plural: [Brüche, Brücher]
   gen_sg: [Bruchs, Bruches]
-  ru: поломка, процесс ломания
+  ru: null
   en: marsh
   freq: 7000
   level: null
@@ -1714,7 +1711,7 @@
   gen_sg: [Bruders]
   ru: брат
   en: brother
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -1762,7 +1759,7 @@
   gen_sg: [Buchs, Buches]
   ru: книга
   en: book
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -1798,7 +1795,7 @@
   gen_sg: [Bundeskanzlers]
   ru: федеральный канцлер
   en: Federal Chancellor
-  freq: 11000
+  freq: 36000
   level: A2
   themes: []
   decided: {}
@@ -1822,7 +1819,7 @@
   gen_sg: [Bundesregierung]
   ru: федеральное правительство
   en: federal government
-  freq: 24000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -1834,7 +1831,7 @@
   gen_sg: [Bundesrepublik]
   ru: федеративная республика
   en: federal republic
-  freq: 30000
+  freq: 48000
   level: A2
   themes: []
   decided: {}
@@ -1859,20 +1856,19 @@
   gen_sg: [Busses]
   ru: автобус
   en: bus, coach
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Bus:2
   lemma: Bus
-  sense: автобус
   gender: [m, f]
   plural: [Buses]
   gen_sg: [Buses, Bus]
-  ru: автобус
-  en: bus
-  freq: 3000
+  ru: null
+  en: null
+  freq: 2000
   level: null
   themes: []
   decided: {}
@@ -1885,20 +1881,19 @@
   gen_sg: [Busses]
   ru: магистраль
   en: bus
-  freq: 3000
+  freq: 2000
   level: null
   themes: []
   decided: {}
   skip: {}
 - id: n:Bus:4
   lemma: Bus
-  sense: автобус
   gender: [m]
   plural: []
   gen_sg: [Bus]
-  ru: автобус
-  en: bus
-  freq: 3000
+  ru: null
+  en: null
+  freq: 2000
   level: null
   themes: []
   decided: {}
@@ -1910,7 +1905,7 @@
   gen_sg: [Busbahnhofes, Busbahnhofs]
   ru: автовокзал
   en: bus terminal
-  freq: 200
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -1978,12 +1973,11 @@
   skip: {}
 - id: n:Butter:2
   lemma: Butter
-  sense: масло
   gender: [n]
   plural: [Butters]
   gen_sg: [Butters]
-  ru: масло
-  en: butter
+  ru: null
+  en: null
   freq: 7000
   level: null
   themes: []
@@ -2040,11 +2034,10 @@
   skip: {}
 - id: n:Bär:2
   lemma: Bär
-  sense: зоол. медведь
   gender: [m]
   plural: [Bären, Bäre]
   gen_sg: [Bärs]
-  ru: зоол. медведь, вульг. вульва
+  ru: null
   en: mechanical ram
   freq: 3000
   level: null
@@ -2058,7 +2051,7 @@
   gen_sg: [Bügeleisens]
   ru: утюг
   en: iron, flat iron
-  freq: 24000
+  freq: 23000
   level: A1
   themes: []
   decided: {}
@@ -2106,7 +2099,7 @@
   gen_sg: [Bürgerinitiative]
   ru: гражданская инициатива
   en: citizens' action committee, citizens' action group
-  freq: 28000
+  freq: null
   level: B1
   themes: []
   decided: {}
@@ -2142,7 +2135,7 @@
   gen_sg: [Büros]
   ru: офис
   en: office, bureau
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}

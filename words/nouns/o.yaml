@@ -53,7 +53,7 @@
   gen_sg: [Ohrrings, Ohrringes]
   ru: серьга, серёжка
   en: earring
-  freq: 7000
+  freq: 6000
   level: B1
   themes: []
   decided: {}
@@ -77,7 +77,7 @@
   gen_sg: [Onkels]
   ru: дядя
   en: uncle
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -125,7 +125,7 @@
   gen_sg: [Opposition]
   ru: оппозиция
   en: opposition
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -137,7 +137,7 @@
   gen_sg: [Ordners]
   ru: папка
   en: folder
-  freq: 16000
+  freq: 15000
   level: A2
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Ostereies]
   ru: пасхальное яйцо
   en: Easter egg
-  freq: 38000
+  freq: 37000
   level: A2
   themes: []
   decided: {}
@@ -185,7 +185,7 @@
   gen_sg: [Ostern]
   ru: Пасха
   en: Easter
-  freq: 11000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -197,7 +197,7 @@
   gen_sg: [Ostsee]
   ru: Балтийское море
   en: Baltic Sea
-  freq: 26000
+  freq: 25000
   level: B1
   themes: []
   decided: {}
@@ -221,7 +221,7 @@
   gen_sg: [Öls, Öles]
   ru: масло
   en: oil
-  freq: 8000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -245,7 +245,7 @@
   gen_sg: [Österreichs]
   ru: Австрия
   en: Austria
-  freq: 5000
+  freq: 13000
   level: A1
   themes: []
   decided: {}

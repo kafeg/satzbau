@@ -17,7 +17,7 @@
   gen_sg: [Lackes, Lacks]
   ru: лак
   en: varnish, lacquer
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -42,7 +42,7 @@
   gen_sg: [Ladens]
   ru: магазин
   en: shop, store
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -54,8 +54,8 @@
   plural: []
   gen_sg: [Ladens]
   ru: заряжание
-  en: loading
-  freq: 2000
+  en: null
+  freq: 1000
   level: null
   themes: []
   decided: {}
@@ -79,7 +79,7 @@
   gen_sg: [Lands, Landes]
   ru: страна
   en: land, earth
-  freq: 500
+  freq: 400
   level: A1
   themes: []
   decided: {}
@@ -139,7 +139,7 @@
   gen_sg: [Landschaft]
   ru: пейзаж
   en: landscape
-  freq: 8000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -151,7 +151,7 @@
   gen_sg: [Landsmannes]
   ru: соотечественник, земляк
   en: compatriot
-  freq: 14000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -163,7 +163,7 @@
   gen_sg: [Landstriches, Landstrichs]
   ru: местность, полоса
   en: area, district
-  freq: 40000
+  freq: 39000
   level: B1
   themes: []
   decided: {}
@@ -175,7 +175,7 @@
   gen_sg: [Landtages, Landtags]
   ru: парламент земли
   en: Landtag, land diet
-  freq: 28000
+  freq: null
   level: B1
   themes: []
   decided: {}
@@ -211,7 +211,7 @@
   gen_sg: [Laptops]
   ru: ноутбук
   en: laptop computer, laptop
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -236,7 +236,7 @@
   gen_sg: [Latte]
   ru: рейка
   en: lath, 4-cornered bar
-  freq: 13000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -249,7 +249,7 @@
   gen_sg: [Latte]
   ru: латте
   en: null
-  freq: 13000
+  freq: 9000
   level: null
   themes: []
   decided: {}
@@ -261,7 +261,7 @@
   gen_sg: [Laufzeit]
   ru: срок действия, техн. продолжительность хода
   en: time
-  freq: null
+  freq: 50000
   level: A2
   themes: []
   decided: {}
@@ -333,7 +333,7 @@
   gen_sg: [Lebensraumes, Lebensraums]
   ru: жизненное пространство
   en: living space
-  freq: 19000
+  freq: 18000
   level: B1
   themes: []
   decided: {}
@@ -345,7 +345,7 @@
   gen_sg: [Lebkuchens]
   ru: пряник, коврижка
   en: gingerbread
-  freq: 36000
+  freq: 35000
   level: B1
   themes: []
   decided: {}
@@ -461,11 +461,11 @@
   skip: {}
 - id: n:Leiter:2
   lemma: Leiter
-  sense: лестница
+  sense: лестница-стремянка
   gender: [f]
   plural: [Leitern]
   gen_sg: [Leiter]
-  ru: лестница, лестница-стремянка
+  ru: лестница-стремянка, лестница
   en: ladder
   freq: 3000
   level: null
@@ -474,12 +474,11 @@
   skip: {}
 - id: n:Leiter:3
   lemma: Leiter
-  sense: лестница
   gender: [f]
   plural: [Leitern]
   gen_sg: [Leiter]
-  ru: лестница
-  en: ladder
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -529,7 +528,7 @@
   number: pl
   ru: люди
   en: people, persons
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -541,7 +540,7 @@
   gen_sg: [Liebe]
   ru: любовь
   en: love
-  freq: 500
+  freq: 400
   level: A2
   themes: []
   decided: {}
@@ -565,7 +564,7 @@
   gen_sg: [Lieblingsliedes, Lieblingslieds]
   ru: любимая песня
   en: favorite song, favourite song
-  freq: 16000
+  freq: 15000
   level: A1
   themes: []
   decided: {}
@@ -649,7 +648,7 @@
   gen_sg: [Lineals]
   ru: линейка
   en: ruler, rule
-  freq: 31000
+  freq: 30000
   level: A2
   themes: []
   decided: {}
@@ -721,7 +720,7 @@
   gen_sg: [Literatur]
   ru: литература
   en: literature
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -796,20 +795,19 @@
   gen_sg: [Luft]
   ru: воздух
   en: air
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Luft:2
   lemma: Luft
-  sense: воздух
   gender: [m]
   plural: [Lüfte]
   gen_sg: [Lufts]
-  ru: воздух, ветер
-  en: air, atmosphere
-  freq: 800
+  ru: null
+  en: null
+  freq: 700
   level: null
   themes: []
   decided: {}
@@ -833,7 +831,7 @@
   gen_sg: [Luftpost]
   ru: авиапочта
   en: airmail
-  freq: 34000
+  freq: 46000
   level: A2
   themes: []
   decided: {}
@@ -869,7 +867,7 @@
   gen_sg: [Länge]
   ru: длина
   en: length
-  freq: 9000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -905,7 +903,7 @@
   gen_sg: [Löschfahrzeuges, Löschfahrzeugs]
   ru: пожарный автомобиль
   en: null
-  freq: 50000
+  freq: 49000
   level: B1
   themes: []
   decided: {}
@@ -929,7 +927,7 @@
   gen_sg: [Löwen]
   ru: лев
   en: lion
-  freq: 2000
+  freq: 3000
   level: A1
   themes: []
   decided: {}

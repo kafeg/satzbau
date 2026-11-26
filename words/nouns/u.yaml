@@ -5,7 +5,7 @@
   gen_sg: [U-Bahn]
   ru: метро
   en: subway, metro
-  freq: 9000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -53,7 +53,7 @@
   gen_sg: [Umarmung]
   ru: объятие
   en: hug, embrace
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -65,7 +65,7 @@
   gen_sg: [Umfanges, Umfangs]
   ru: геометр. периметр, длина окружности
   en: circumference, perimeter
-  freq: 22000
+  freq: 21000
   level: B1
   themes: []
   decided: {}
@@ -113,7 +113,7 @@
   gen_sg: [Umschlags, Umschlages]
   ru: конверт
   en: envelope
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -173,7 +173,7 @@
   gen_sg: [Unfalls, Unfalles]
   ru: авария
   en: accident, casualty
-  freq: 2000
+  freq: 1000
   level: A2
   themes: []
   decided: {}
@@ -185,7 +185,7 @@
   gen_sg: [Unglücks, Unglückes]
   ru: неудача
   en: misfortune
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -197,7 +197,7 @@
   gen_sg: [Universität]
   ru: университет
   en: university
-  freq: 3000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -462,7 +462,7 @@
   gen_sg: [Übersetzung]
   ru: перевод
   en: translation
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}

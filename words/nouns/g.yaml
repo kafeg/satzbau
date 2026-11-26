@@ -55,7 +55,7 @@
   gen_sg: [Garagentores, Garagentors]
   ru: null
   en: garage door
-  freq: 38000
+  freq: 37000
   level: B1
   themes: []
   decided: {}
@@ -147,12 +147,11 @@
   skip: {}
 - id: n:Gast:2
   lemma: Gast
-  sense: гость
   gender: [m]
   plural: [Gasten]
   gen_sg: [Gastes, Gasts]
-  ru: гость, гостья
-  en: guest
+  ru: null
+  en: null
   freq: 2000
   level: null
   themes: []
@@ -381,7 +380,7 @@
   gen_sg: [Gegenseite]
   ru: противоположная сторона
   en: opposite side
-  freq: 24000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -467,7 +466,7 @@
   gen_sg: [Geige]
   ru: скрипка
   en: violin, fiddle
-  freq: 12000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -491,7 +490,7 @@
   gen_sg: [Gelds, Geldes]
   ru: деньги
   en: money, dough
-  freq: 300
+  freq: 200
   level: A1
   themes: []
   decided: {}
@@ -575,7 +574,7 @@
   gen_sg: [Gemüseladens]
   ru: овощной магазин
   en: greengrocery
-  freq: 50000
+  freq: 49000
   level: A1
   themes: []
   decided: {}
@@ -649,7 +648,7 @@
   gen_sg: [Geruchs, Geruches]
   ru: запах
   en: smell, odour
-  freq: 4000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -709,7 +708,7 @@
   gen_sg: [Geschenkes, Geschenks]
   ru: подарок
   en: gift, present
-  freq: 1000
+  freq: 900
   level: A2
   themes: []
   decided: {}
@@ -721,7 +720,7 @@
   gen_sg: [Geschenkpapiers, Geschenkpapieres]
   ru: подарочная бумага
   en: gift wrap paper
-  freq: 32000
+  freq: 31000
   level: A2
   themes: []
   decided: {}
@@ -781,7 +780,7 @@
   gen_sg: [Geschwindigkeitsbegrenzung]
   ru: ограничение скорости движения
   en: speed limit
-  freq: 50000
+  freq: 49000
   level: B1
   themes: []
   decided: {}
@@ -829,7 +828,7 @@
   gen_sg: [Gesetzes]
   ru: закон
   en: law, act
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -841,7 +840,7 @@
   gen_sg: [Gesetzentwurfs, Gesetzentwurfes]
   ru: законопроект
   en: bill, draft law
-  freq: 42000
+  freq: 41000
   level: B1
   themes: []
   decided: {}
@@ -865,7 +864,7 @@
   gen_sg: [Gesichts, Gesichtes]
   ru: лицо
   en: face
-  freq: 600
+  freq: 500
   level: A1
   themes: []
   decided: {}
@@ -877,7 +876,7 @@
   gen_sg: [Gesichtscreme]
   ru: null
   en: face cream
-  freq: 49000
+  freq: 48000
   level: B1
   themes: []
   decided: {}
@@ -937,7 +936,7 @@
   gen_sg: [Gewerkschaft]
   ru: профсоюз
   en: trade union, labor union
-  freq: 7000
+  freq: 6000
   level: B1
   themes: []
   decided: {}
@@ -1021,7 +1020,7 @@
   gen_sg: [Giraffe]
   ru: жираф
   en: giraffe
-  freq: 14000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -1045,7 +1044,7 @@
   gen_sg: [Gitarre]
   ru: гитара
   en: guitar
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1057,7 +1056,7 @@
   gen_sg: [Gitarristen]
   ru: гитарист
   en: guitarist
-  freq: 20000
+  freq: 19000
   level: A1
   themes: []
   decided: {}
@@ -1107,7 +1106,7 @@
   gen_sg: [Gleichheit]
   ru: равенство
   en: equality
-  freq: 18000
+  freq: 17000
   level: A2
   themes: []
   decided: {}
@@ -1181,7 +1180,7 @@
   gen_sg: [Glühbirne]
   ru: лампочка
   en: light bulb, bulb
-  freq: 12000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -1218,7 +1217,7 @@
   gen_sg: [Grads, Grades]
   ru: градус
   en: degree
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1231,7 +1230,7 @@
   gen_sg: [Grads, Grades]
   ru: степень
   en: degree
-  freq: 3000
+  freq: 2000
   level: null
   themes: []
   decided: {}
@@ -1243,7 +1242,7 @@
   gen_sg: [Gramms]
   ru: грамм
   en: gram, gramme (
-  freq: 7000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -1291,7 +1290,7 @@
   gen_sg: [Grenzgebietes, Grenzgebiets]
   ru: пограничная область
   en: border area, borderland
-  freq: 45000
+  freq: 44000
   level: B1
   themes: []
   decided: {}
@@ -1315,7 +1314,7 @@
   gen_sg: [Grenzübergangs, Grenzüberganges]
   ru: место, пограничная станция
   en: checkpoint
-  freq: 37000
+  freq: 36000
   level: A2
   themes: []
   decided: {}
@@ -1327,7 +1326,7 @@
   gen_sg: [Grippe]
   ru: грипп
   en: influenza, flu
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1364,7 +1363,7 @@
   gen_sg: [Großstadt]
   ru: большой город
   en: big city, city
-  freq: 13000
+  freq: 12000
   level: A1
   themes: []
   decided: {}
@@ -1400,7 +1399,7 @@
   gen_sg: [Grundgesetzes]
   ru: конституция
   en: constitution, German constitution
-  freq: 31000
+  freq: 41000
   level: B1
   themes: []
   decided: {}
@@ -1472,7 +1471,7 @@
   gen_sg: [Guckloches, Gucklochs]
   ru: разг. глазок
   en: peephole
-  freq: 44000
+  freq: 43000
   level: A1
   themes: []
   decided: {}
@@ -1484,7 +1483,7 @@
   gen_sg: [Gurke]
   ru: огурец
   en: cucumber, gherkin
-  freq: 14000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -1544,7 +1543,7 @@
   gen_sg: [Gästeliste]
   ru: null
   en: guest list
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}
@@ -1556,7 +1555,7 @@
   gen_sg: [Gästezimmers]
   ru: гостиная
   en: guest room
-  freq: 10000
+  freq: 9000
   level: A1
   themes: []
   decided: {}

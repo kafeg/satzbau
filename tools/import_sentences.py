@@ -4,7 +4,8 @@
 Отбор: немецкая фраза с переводом хотя бы на один язык, 3–12 токенов; на каждую лемму базы —
 до 20 самых простых (простота = худший ранг частотности среди слов фразы, потом длина).
 Пишет sentences/tatoeba/<NNN>.jsonl (шард = id // 100 000) и sentences/todo/ — фразы,
-которым не хватает перевода на один из языков (их переводит отдельная сессия).
+которым не хватает перевода на один из языков. Их переводит отдельная сессия в sentences/llm/;
+отсюда переводы подмешиваются, если у Tatoeba нет своего.
 
   python3 -I tools/import_sentences.py            всё
   python3 -I tools/import_sentences.py --no-nlp   без разметки: только отбор (для замеров)
@@ -91,18 +92,39 @@ def select(de, tr, forms, ranks, words):
 GENDER = {'Masc': 'm', 'Fem': 'f', 'Neut': 'n'}
 
 
-def link(cands, morph):
-    """Запись слова для токена: одна запись курса, иначе та, чей род совпал с разметкой; нет — '?'."""
-    if not cands:
-        return None
-    course = [w for w in cands if w.get('level')] or cands
-    if len(course) > 1:
-        g = GENDER.get((morph.get('Gender') or [''])[0])
-        course = [w for w in course if g and g in w.get('gender', [])] or course
-    return course[0]['id'] if len(course) == 1 else '?'
+def stem(x):
+    return srcs.norm(x)[:max(3, len(x) - 2)]
 
 
-def annotate(de, ids, words):
+def in_translation(w, tr):
+    """Есть ли в человеческом переводе фразы перевод этой записи (по основе: «матери» ~ «мать»)."""
+    words = set(re.findall(r'\w+', tr.lower().replace('ё', 'е')))
+    return any(any(t.startswith(stem(x)) for t in words)
+               for lang in ('ru', 'en') for x in srcs.ru_items(w.get(lang) or '') if ' ' not in x)
+
+
+def link(cands, text, morph, tr):
+    """Запись слова для токена: на неё указывают род, форма множественного, перевод фразы; иначе '?'."""
+    if len(cands) < 2:
+        return cands[0]['id'] if cands else None
+    g = GENDER.get(morph.get('Gender')[0]) if morph.get('Gender') else None
+    xs = [w for w in cands if g in w.get('gender', [])] if g else cands
+    if 'Plur' in morph.get('Number') and len(xs) > 1:
+        xs = [w for w in xs if text in w.get('plural', [])] or xs
+    if len(xs) > 1:
+        xs = [w for w in xs if in_translation(w, tr)] or xs
+    return xs[0]['id'] if len(xs) == 1 else '?'
+
+
+def candidates(t, p, words, forms):
+    hit = words.get((t.lemma_, p)) or words.get((t.text, p))
+    if hit:
+        return hit
+    pos = {'n': 'noun', 'v': 'verb', 'a': 'adj'}[p]
+    return [w for l, lp in forms.get(t.text, []) if lp == pos for w in words.get((l, p), [])]
+
+
+def annotate(de, ids, words, forms, human):
     import spacy
     nlp = spacy.load('de_dep_news_trf')
     out = {}
@@ -113,9 +135,7 @@ def annotate(de, ids, words):
             if t.is_space:
                 continue
             p = UPOS.get(t.pos_)
-            ref = None
-            if p:
-                ref = link(words.get((t.lemma_, p)) or words.get((t.text, p)) or [], t.morph)
+            ref = link(candidates(t, p, words, forms), t.text, t.morph, human(sid)) if p else None
             toks.append([t.text, t.lemma_, t.pos_, str(t.morph), ref])
         out[sid] = toks
         if n % 2000 == 0:
@@ -139,7 +159,14 @@ def main():
     print(f'отобрано фраз: {len(chosen)}; лемм базы с фразами: {covered} из {len(words)}', flush=True)
     if not nlp:
         return
-    tok = annotate(de, chosen, words)
+    def human(sid):
+        return ' '.join(pool[tr[lang][sid]] for lang, pool in (('ru', ru), ('en', en)) if sid in tr[lang])
+    tok = annotate(de, chosen, words, forms, human)
+    llm = {}
+    for p in glob.glob(os.path.join(ROOT, 'sentences', 'llm', '*.jsonl')):
+        for line in open(p, encoding='utf-8'):
+            x = json.loads(line)
+            llm[x['id']] = x
     out = collections.defaultdict(list)
     todo = []
     for sid in sorted(chosen):
@@ -147,6 +174,8 @@ def main():
         for lang, pool in (('ru', ru), ('en', en)):
             if sid in tr[lang]:
                 s[lang], s[f'{lang}_by'] = pool[tr[lang][sid]], f'tatoeba:{tr[lang][sid]}'
+            elif lang in llm.get(s['id'], {}):
+                s[lang], s[f'{lang}_by'] = llm[s['id']][lang], llm[s['id']][f'{lang}_by']
         s['tok'] = tok[sid]
         out[f'{sid // 100000:03d}'].append(s)
         if 'ru' not in s or 'en' not in s:

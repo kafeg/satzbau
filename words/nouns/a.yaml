@@ -41,7 +41,7 @@
   gen_sg: [Abfahrt]
   ru: отправление
   en: departure, start
-  freq: 17000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -113,7 +113,7 @@
   gen_sg: [Abneigung]
   ru: неприязнь
   en: aversion, dislike
-  freq: 16000
+  freq: 15000
   level: B1
   themes: []
   decided: {}
@@ -221,7 +221,7 @@
   gen_sg: [Abstellraumes, Abstellraums]
   ru: чулан
   en: storeroom, boxroom
-  freq: 37000
+  freq: 36000
   level: A1
   themes: []
   decided: {}
@@ -265,11 +265,10 @@
   skip: {}
 - id: n:Abteilung:2
   lemma: Abteilung
-  sense: отдел
   gender: [f]
   plural: [Abteilungen]
   gen_sg: [Abteilung]
-  ru: отдел, отделение
+  ru: null
   en: division
   freq: 3000
   level: null
@@ -307,7 +306,7 @@
   gen_sg: [Achsel]
   ru: подмышка
   en: shoulder
-  freq: 22000
+  freq: 21000
   level: B1
   themes: []
   decided: {}
@@ -327,12 +326,11 @@
   skip: {}
 - id: n:Achtel:2
   lemma: Achtel
-  sense: восьмая
   gender: [f]
   plural: [Achtel]
   gen_sg: [Achtel]
-  ru: восьмая
-  en: eighth
+  ru: null
+  en: null
   freq: null
   level: null
   themes: []
@@ -405,7 +403,7 @@
   gen_sg: [Akkus]
   ru: аккумулятор
   en: rechargeable battery, accumulator
-  freq: 16000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -501,7 +499,7 @@
   gen_sg: [Allergie]
   ru: аллергия
   en: allergy
-  freq: 10000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -520,14 +518,14 @@
   skip: {}
 - id: n:Alter
   lemma: Alter
-  sense: возраст
+  sense: старик
   gender: [m]
   plural: [Alte]
   gen_sg: [Alten]
-  ru: возраст
+  ru: старик
   en: old man
-  freq: 600
-  level: A1
+  freq: 500
+  level: null
   themes: []
   decided: {}
   skip: {}
@@ -539,8 +537,8 @@
   gen_sg: [Alters]
   ru: возраст
   en: age
-  freq: 600
-  level: null
+  freq: 500
+  level: A1
   themes: []
   decided: {}
   skip: {}
@@ -559,12 +557,11 @@
   skip: {}
 - id: n:Alternative:2
   lemma: Alternative
-  sense: альтернатива
   gender: [f]
   plural: [Alternative]
   gen_sg: [Alternativer]
-  ru: альтернатива
-  en: alternative
+  ru: null
+  en: null
   freq: 9000
   level: null
   themes: []
@@ -572,11 +569,10 @@
   skip: {}
 - id: n:Alternative:3
   lemma: Alternative
-  sense: альтернатива
   gender: [m]
   plural: []
   gen_sg: []
-  ru: альтернатива
+  ru: null
   en: alternative
   freq: 9000
   level: null
@@ -590,7 +586,7 @@
   gen_sg: [Altersvorsorge]
   ru: пенсионное страхование
   en: null
-  freq: 43000
+  freq: 42000
   level: B1
   themes: []
   decided: {}
@@ -638,7 +634,7 @@
   gen_sg: [Amtszeit]
   ru: null
   en: term, incumbency
-  freq: 18000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
@@ -698,7 +694,7 @@
   gen_sg: [Anhängers]
   ru: прицеп
   en: trailer
-  freq: 6000
+  freq: 5000
   level: B1
   themes: []
   decided: {}
@@ -794,7 +790,7 @@
   gen_sg: [Anrufes, Anrufs]
   ru: телефонный звонок
   en: phone call, call
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -854,7 +850,7 @@
   gen_sg: [Antragstellers]
   ru: заявитель, податель заявления
   en: applicant, petitioner
-  freq: 30000
+  freq: null
   level: A1
   themes: []
   decided: {}
@@ -891,7 +887,7 @@
   gen_sg: [Anwendung]
   ru: применение
   en: application, use
-  freq: 14000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -939,7 +935,7 @@
   gen_sg: [Apartments]
   ru: квартира, жилище
   en: apartment
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -1083,7 +1079,7 @@
   gen_sg: [Arbeitszimmers]
   ru: кабинет
   en: study, workroom
-  freq: 9000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -1119,7 +1115,7 @@
   gen_sg: [Arms, Armes]
   ru: рука
   en: arm
-  freq: 900
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -1143,7 +1139,7 @@
   gen_sg: [Art]
   ru: вид
   en: kind, sort
-  freq: 2000
+  freq: 800
   level: B1
   themes: []
   decided: {}
@@ -1155,7 +1151,7 @@
   gen_sg: [Artikels]
   ru: статья
   en: article, commodity
-  freq: 2000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -1167,7 +1163,7 @@
   gen_sg: [Arztes]
   ru: врач, доктор
   en: doctor, physician
-  freq: 1000
+  freq: 900
   level: A1
   themes: []
   decided: {}
@@ -1179,7 +1175,7 @@
   gen_sg: [Astes, Asts]
   ru: ветка
   en: branch, bough
-  freq: 19000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -1203,7 +1199,7 @@
   gen_sg: [Attestes, Attests]
   ru: удостоверение, свидетельство
   en: certificate
-  freq: 24000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -1299,7 +1295,7 @@
   gen_sg: [Aufregung]
   ru: волнение, возбуждение
   en: excitement, stir
-  freq: 5000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -1347,7 +1343,7 @@
   gen_sg: [Augenzeugen]
   ru: очевидец
   en: eyewitness
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -1383,7 +1379,7 @@
   gen_sg: [Auseinandersetzung]
   ru: критический разбор темы, анализ
   en: analysis
-  freq: 11000
+  freq: 10000
   level: B1
   themes: []
   decided: {}
@@ -1431,7 +1427,7 @@
   gen_sg: [Auskunft]
   ru: информация, справочная
   en: information
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -1491,7 +1487,7 @@
   gen_sg: [Auspuffs, Auspuffes]
   ru: выхлопная труба, глушитель
   en: exhaust system, exhaust pipe
-  freq: 20000
+  freq: 19000
   level: B1
   themes: []
   decided: {}
@@ -1527,7 +1523,7 @@
   gen_sg: [Aussehens]
   ru: вид, внешность
   en: look, appearance
-  freq: 700
+  freq: 600
   level: A2
   themes: []
   decided: {}
@@ -1612,20 +1608,19 @@
   gen_sg: [Autos]
   ru: автомобиль, машина
   en: car, auto
-  freq: 600
+  freq: 400
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Auto:2
   lemma: Auto
-  sense: автомобиль
   gender: [n]
   plural: [Autos]
   gen_sg: [Autos]
-  ru: автомобиль, машина
+  ru: null
   en: order, resolution
-  freq: 600
+  freq: 400
   level: null
   themes: []
   decided: {}
@@ -1637,7 +1632,7 @@
   gen_sg: [Autobahn]
   ru: автомагистраль
   en: motorway, freeway
-  freq: 5000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -1649,7 +1644,7 @@
   gen_sg: [Autofahrens]
   ru: езда на автомобиле
   en: driving, motoring
-  freq: 17000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -1661,7 +1656,7 @@
   gen_sg: [Autohauses]
   ru: автомобильный гараж, автогараж
   en: car dealer, car dealership
-  freq: 26000
+  freq: 25000
   level: A2
   themes: []
   decided: {}
@@ -1685,7 +1680,7 @@
   gen_sg: [Automechanikers]
   ru: автомеханик
   en: automotive mechanic, car mechanic
-  freq: 31000
+  freq: 30000
   level: A1
   themes: []
   decided: {}
@@ -1733,7 +1728,7 @@
   gen_sg: [Autowerkstatt]
   ru: авторемонтная мастерская
   en: garage, auto repair shop
-  freq: 36000
+  freq: 24000
   level: A1
   themes: []
   decided: {}
@@ -1745,7 +1740,7 @@
   gen_sg: [Äquators]
   ru: экватор
   en: equator
-  freq: 27000
+  freq: 26000
   level: B1
   themes: []
   decided: {}

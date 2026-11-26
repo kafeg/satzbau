@@ -41,7 +41,7 @@
   gen_sg: [Wahl]
   ru: выборы
   en: choice, selection
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -65,7 +65,7 @@
   gen_sg: [Wahlergebnisses]
   ru: результат выборов
   en: election result
-  freq: 41000
+  freq: 40000
   level: A2
   themes: []
   decided: {}
@@ -101,7 +101,7 @@
   gen_sg: [Wahlrechtes, Wahlrechts]
   ru: избирательное право
   en: suffrage
-  freq: 25000
+  freq: 26000
   level: A2
   themes: []
   decided: {}
@@ -125,7 +125,7 @@
   gen_sg: [Wahrheit]
   ru: правда, истина
   en: truth
-  freq: 600
+  freq: 500
   level: A1
   themes: []
   decided: {}
@@ -233,7 +233,7 @@
   gen_sg: [Wartezeit]
   ru: время ожидания
   en: waiting time
-  freq: 18000
+  freq: 17000
   level: A2
   themes: []
   decided: {}
@@ -293,7 +293,7 @@
   gen_sg: [Wassers]
   ru: вода
   en: water
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -341,7 +341,7 @@
   gen_sg: [Watte]
   ru: вата
   en: cotton wool, cotton
-  freq: 34000
+  freq: 33000
   level: A2
   themes: []
   decided: {}
@@ -353,7 +353,7 @@
   gen_sg: [Wattestäbchens]
   ru: null
   en: cotton swab, cotton bud
-  freq: 46000
+  freq: 45000
   level: A2
   themes: []
   decided: {}
@@ -401,7 +401,7 @@
   gen_sg: [Weihnachten]
   ru: Рождество
   en: Christmas, Xmas
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -413,7 +413,7 @@
   gen_sg: [Weihnachtsbaums, Weihnachtsbaumes]
   ru: рождественская ёлка
   en: Christmas tree
-  freq: 12000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -449,7 +449,7 @@
   gen_sg: [Weintraube]
   ru: виноград
   en: grape
-  freq: 22000
+  freq: 21000
   level: A1
   themes: []
   decided: {}
@@ -509,7 +509,7 @@
   gen_sg: [Werbepause]
   ru: null
   en: commercial break
-  freq: 37000
+  freq: 36000
   level: B1
   themes: []
   decided: {}
@@ -593,7 +593,7 @@
   gen_sg: [Werkzeugkastens]
   ru: инструментальный ящик
   en: toolbox
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -763,7 +763,7 @@
   gen_sg: [Windel]
   ru: подгузник
   en: diaper, nappy
-  freq: 9000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -871,7 +871,7 @@
   gen_sg: [Wohnmobils]
   ru: кемпер
   en: motor home, camper
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}
@@ -883,7 +883,7 @@
   gen_sg: [Wohnortes, Wohnorts]
   ru: место жительства
   en: residence
-  freq: 25000
+  freq: 24000
   level: A1
   themes: []
   decided: {}
@@ -1065,7 +1065,7 @@
   gen_sg: [Währung]
   ru: валюта
   en: currency
-  freq: 13000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -1077,7 +1077,7 @@
   gen_sg: [Wärme]
   ru: тепло
   en: heat, warmth
-  freq: 12000
+  freq: 10000
   level: A1
   themes: []
   decided: {}

@@ -53,7 +53,7 @@
   gen_sg: [Haarsprays]
   ru: null
   en: hair spray, hairspray
-  freq: 27000
+  freq: 26000
   level: B1
   themes: []
   decided: {}
@@ -77,7 +77,7 @@
   gen_sg: [Hafens]
   ru: порт, гавань
   en: port, harbour
-  freq: 5000
+  freq: 3000
   level: A2
   themes: []
   decided: {}
@@ -89,7 +89,7 @@
   gen_sg: [Haftung]
   ru: юр. материальная ответственность, порука
   en: liability, guarantee
-  freq: 26000
+  freq: 30000
   level: B1
   themes: []
   decided: {}
@@ -193,11 +193,10 @@
   skip: {}
 - id: n:Hammer:2
   lemma: Hammer
-  sense: молот
   gender: [m]
   plural: [Hammer]
   gen_sg: [Hammers]
-  ru: молот, молоток
+  ru: null
   en: Hamm inhabitant
   freq: 3000
   level: null
@@ -236,7 +235,7 @@
   gen_sg: [Handballes, Handballs]
   ru: гандбол
   en: handball
-  freq: 43000
+  freq: 42000
   level: A2
   themes: []
   decided: {}
@@ -249,7 +248,7 @@
   gen_sg: [Handballs]
   ru: гандбол
   en: handball
-  freq: 43000
+  freq: 42000
   level: null
   themes: []
   decided: {}
@@ -345,7 +344,7 @@
   gen_sg: [Handys]
   ru: мобильник, мобильный телефон
   en: mobile phone, mobile
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -357,7 +356,7 @@
   gen_sg: [Hantel, Hantels]
   ru: гантель
   en: barbell, dumbbell
-  freq: 50000
+  freq: 49000
   level: B1
   themes: []
   decided: {}
@@ -381,7 +380,7 @@
   gen_sg: [Hauptbahnhofes, Hauptbahnhofs]
   ru: главный вокзал
   en: central station, main station
-  freq: 25000
+  freq: 26000
   level: A1
   themes: []
   decided: {}
@@ -417,7 +416,7 @@
   gen_sg: [Hauptuntersuchung]
   ru: технический осмотр
   en: general inspection, MOT test
-  freq: 15000
+  freq: null
   level: B1
   themes: []
   decided: {}
@@ -429,7 +428,7 @@
   gen_sg: [Hauses]
   ru: дом
   en: house
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -477,7 +476,7 @@
   gen_sg: [Haushaltes, Haushalts]
   ru: домашнее хозяйство, бюджет
   en: budget
-  freq: 11000
+  freq: 10000
   level: A2
   themes: []
   decided: {}
@@ -537,7 +536,7 @@
   gen_sg: [Hausordnung]
   ru: правила внутреннего распорядка, режим
   en: house rule
-  freq: 9000
+  freq: 35000
   level: B1
   themes: []
   decided: {}
@@ -573,7 +572,7 @@
   gen_sg: [Haut]
   ru: кожа
   en: skin
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -629,11 +628,10 @@
   skip: {}
 - id: n:Heft:2
   lemma: Heft
-  sense: тетрадь
   gender: [n]
   plural: [Hefte]
   gen_sg: [Hefts, Heftes]
-  ru: тетрадь, выпуск
+  ru: null
   en: hilt, haft
   freq: 12000
   level: null
@@ -695,7 +693,7 @@
   gen_sg: [Hektars]
   ru: гектар
   en: hectare
-  freq: 4000
+  freq: 20000
   level: A2
   themes: []
   decided: {}
@@ -779,7 +777,7 @@
   gen_sg: [Herzens, Herzes]
   ru: сердце
   en: heart
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -839,7 +837,7 @@
   gen_sg: [Himmels]
   ru: небо
   en: sky, firmament
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -851,7 +849,7 @@
   gen_sg: [Himmelsrichtung]
   ru: сторона света
   en: compass point, cardinal direction
-  freq: 42000
+  freq: 41000
   level: A2
   themes: []
   decided: {}
@@ -887,7 +885,7 @@
   gen_sg: [Historikers]
   ru: историк
   en: historian
-  freq: 16000
+  freq: 15000
   level: A1
   themes: []
   decided: {}
@@ -948,7 +946,7 @@
   gen_sg: [Hochzeit]
   ru: свадьба, брак
   en: marriage, wedding
-  freq: 2000
+  freq: 1000
   level: A2
   themes: []
   decided: {}
@@ -961,7 +959,7 @@
   gen_sg: [Hochzeit]
   ru: время расцвета
   en: golden age
-  freq: 2000
+  freq: 1000
   level: null
   themes: []
   decided: {}
@@ -973,7 +971,7 @@
   gen_sg: [Hofs, Hofes]
   ru: двор
   en: yard, courtyard
-  freq: 4000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -1022,7 +1020,7 @@
   plural: [Hölzer]
   gen_sg: [Holzes]
   ru: Хольц
-  en: wood
+  en: null
   freq: 5000
   level: null
   themes: []
@@ -1103,12 +1101,11 @@
   skip: {}
 - id: n:Hundertstel:2
   lemma: Hundertstel
-  sense: сотая часть
   gender: [f]
   plural: [Hundertstel]
   gen_sg: [Hundertstel]
-  ru: сотая часть
-  en: hundredth
+  ru: null
+  en: null
   freq: null
   level: null
   themes: []
@@ -1153,11 +1150,10 @@
   skip: {}
 - id: n:Husten:2
   lemma: Husten
-  sense: кашель
   gender: [n]
   plural: []
   gen_sg: [Hustens]
-  ru: кашель
+  ru: null
   en: cough, coughing
   freq: 3000
   level: null
@@ -1179,12 +1175,11 @@
   skip: {}
 - id: n:Hut:2
   lemma: Hut
-  sense: устар. вахта
   gender: [f]
   plural: [Huten]
   gen_sg: [Hut]
-  ru: устар. вахта, пост
-  en: protection, supervision
+  ru: null
+  en: null
   freq: 2000
   level: null
   themes: []
@@ -1281,7 +1276,7 @@
   gen_sg: [Hörsaales, Hörsaals]
   ru: аудитория, лекционный зал
   en: lecture hall, lecture theatre
-  freq: 35000
+  freq: 34000
   level: B1
   themes: []
   decided: {}

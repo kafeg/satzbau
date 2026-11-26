@@ -24,7 +24,7 @@ def seed():
 
 
 WORD_POS = {'noun', 'verb', 'adj', 'adv', 'pron', 'det', 'article', 'num', 'prep', 'conj', 'intj', 'particle'}
-SKIP_TAGS = {'auxiliary', 'table-tags', 'inflection-template', 'class', 'obsolete', 'archaic'}
+SKIP_TAGS = {'auxiliary', 'table-tags', 'inflection-template', 'class', 'obsolete', 'archaic', 'abbreviation'}
 
 
 def pass_dewikt(lemmas):
@@ -129,7 +129,9 @@ def ranked(cands, confirm):
     return sorted(xs, key=lambda x: srcs.norm(x) not in ok)
 
 
-def pick_ru(entry, lemma, v1ru, ruw, fd):
+def pick_ru(entry, lemma, v1ru, ruw, fd, own):
+    if own:
+        return ', '.join(ranked(entry['ru'].get('1') or next(iter(entry['ru'].values()), []), [])[:2]) or None
     pool, al = ru_sources(entry, lemma, ruw, fd)
     known = {srcs.norm(x) for x in pool}
     mine = srcs.ru_items(v1ru or '')
@@ -140,8 +142,10 @@ def pick_ru(entry, lemma, v1ru, ruw, fd):
     return ', '.join(xs[:2]) or None
 
 
-def pick_en(entry, lemma, enw):
+def pick_en(entry, lemma, enw, own):
     first = entry['en'].get('1') or next(iter(entry['en'].values()), [])
+    if own:
+        return ', '.join(ranked(first, [])[:2]) or None
     al = align(entry, enw.get(lemma, []))
     gl = al['en'] if al else []
     xs = ranked(first, gl) or ranked(gl[:1], [])
@@ -149,22 +153,22 @@ def pick_en(entry, lemma, enw):
 
 
 def match_v1(entries, lemma, v1ru, ruw, fd):
-    """Какую запись имел в виду ручной отбор v1: по совпадению его перевода с переводами записи."""
+    """Какую запись имел в виду ручной отбор v1: по совпадению его перевода с переводами самой
+    записи; выровненная запись ruwikt — только при равенстве (она не различает значения)."""
     mine = {srcs.norm(x) for x in srcs.ru_items(v1ru or '')}
-    best, top = 0, -1
-    for i, e in enumerate(entries):
-        pool = [x for v in e['ru'].values() for x in v]
+    def score(e):
+        own = {srcs.norm(x) for v in e['ru'].values() for x in v}
         al = align(e, ruw.get(lemma, []))
-        pool += al['ru'] if al else []
-        s = len(mine & {srcs.norm(x) for x in pool})
-        if s > top:
-            best, top = i, s
-    return best
+        return len(mine & own), len(mine & {srcs.norm(x) for x in (al['ru'] if al else [])})
+    return max(range(len(entries)), key=lambda i: (score(entries[i]), -i))
 
 
 def record(i, e, lemma, n_entries, seed_w, taught, other, ruw, enw, fd, rank):
     rid = f'n:{lemma}' + (f':{i + 1}' if i else '')
-    ru = pick_ru(e, lemma, seed_w.get('ru') if taught else None, ruw, fd)
+    # ruwikt, FreeDict и глоссы enwikt не говорят, какое из значений dewikt переводят:
+    # они доказывают только изучаемую запись, у остальных — лишь таблица перевода самой записи
+    own = n_entries > 1 and not taught
+    ru = pick_ru(e, lemma, seed_w.get('ru') if taught else None, ruw, fd, own)
     rec = {'id': rid, 'lemma': lemma}
     if n_entries > 1 and ru:
         rec['sense'] = srcs.ru_items(ru)[0]
@@ -174,7 +178,7 @@ def record(i, e, lemma, n_entries, seed_w, taught, other, ruw, enw, fd, rank):
     if e['number'] == 'pl':
         rec['number'] = 'pl'
     rec['ru'] = ru
-    rec['en'] = pick_en(e, lemma, enw)
+    rec['en'] = pick_en(e, lemma, enw, own)
     rec['freq'] = srcs.bucket(rank)
     rec['level'] = seed_w.get('lv') if taught else None
     rec['themes'] = []

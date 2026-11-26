@@ -78,20 +78,19 @@
   gen_sg: [Eimers]
   ru: ведро
   en: bucket, pail
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Eimer:2
   lemma: Eimer
-  sense: ведро
   gender: [f]
   plural: [Eimeren]
   gen_sg: [Eimer]
-  ru: ведро, разг.
-  en: bucket, pail
-  freq: 5000
+  ru: null
+  en: null
+  freq: 4000
   level: null
   themes: []
   decided: {}
@@ -223,7 +222,7 @@
   gen_sg: [Einkaufstasche]
   ru: сумка для покупок
   en: shopping bag
-  freq: 50000
+  freq: 49000
   level: A1
   themes: []
   decided: {}
@@ -451,7 +450,7 @@
   gen_sg: [Einzelzimmers]
   ru: одноместный номер
   en: single room
-  freq: 18000
+  freq: 20000
   level: A2
   themes: []
   decided: {}
@@ -464,20 +463,19 @@
   gen_sg: [Eises]
   ru: мороженое
   en: ice
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Eis:2
   lemma: Eis
-  sense: лёд
   gender: [n]
   plural: [Eis]
   gen_sg: [Eis]
-  ru: лёд, мороженое
+  ru: null
   en: E sharp
-  freq: 5000
+  freq: 4000
   level: null
   themes: []
   decided: {}
@@ -514,7 +512,7 @@
   number: pl
   ru: родители
   en: parents
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -574,7 +572,7 @@
   gen_sg: [Empfängers]
   ru: получатель
   en: addressee, receiver
-  freq: 11000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -598,7 +596,7 @@
   gen_sg: [Energie]
   ru: энергия
   en: energy
-  freq: 3000
+  freq: 2000
   level: B1
   themes: []
   decided: {}
@@ -618,12 +616,11 @@
   skip: {}
 - id: n:Enkel:2
   lemma: Enkel
-  sense: внук
   gender: [m]
   plural: [Enkel]
   gen_sg: [Enkels]
-  ru: внук
-  en: ankle
+  ru: null
+  en: null
   freq: 4000
   level: null
   themes: []
@@ -684,7 +681,7 @@
   gen_sg: [Entscheidung]
   ru: решение
   en: decision
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -708,7 +705,7 @@
   gen_sg: [Entschädigung]
   ru: возмещение, компенсация
   en: compensation, indemnification
-  freq: 10000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -804,7 +801,7 @@
   gen_sg: [Erdgeschosses]
   ru: первый этаж
   en: ground floor, first floor
-  freq: 13000
+  freq: 19000
   level: A2
   themes: []
   decided: {}
@@ -900,7 +897,7 @@
   gen_sg: [Ersatzteils, Ersatzteiles]
   ru: запасная  часть
   en: spare part, replacement part
-  freq: 9000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -912,7 +909,7 @@
   gen_sg: [Erstattung]
   ru: возвращение, возмещение
   en: refund, reimbursement
-  freq: 46000
+  freq: 45000
   level: B1
   themes: []
   decided: {}
@@ -960,7 +957,7 @@
   gen_sg: [Erziehers]
   ru: воспитатель
   en: educator
-  freq: 28000
+  freq: 27000
   level: A1
   themes: []
   decided: {}
@@ -1008,7 +1005,7 @@
   gen_sg: [Essens]
   ru: еда
   en: dish
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -1020,7 +1017,7 @@
   gen_sg: [Esslöffels]
   ru: столовая ложка
   en: tablespoon
-  freq: 11000
+  freq: 48000
   level: A2
   themes: []
   decided: {}
@@ -1032,7 +1029,7 @@
   gen_sg: [Esstisches, Esstischs]
   ru: обеденный стол
   en: dining-table
-  freq: 25000
+  freq: 24000
   level: A1
   themes: []
   decided: {}
@@ -1044,7 +1041,7 @@
   gen_sg: [Esszimmers]
   ru: столовая
   en: dining room
-  freq: 12000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -1069,7 +1066,7 @@
   plural: [Euros]
   gen_sg: [Euro]
   ru: Евро
-  en: Euro
+  en: null
   freq: 4000
   level: null
   themes: []

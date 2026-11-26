@@ -30,7 +30,7 @@
   gen_sg: [Dame]
   ru: дама, госпожа
   en: lady
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -43,7 +43,7 @@
   gen_sg: []
   ru: шашки
   en: draughts, checkers
-  freq: 800
+  freq: 700
   level: null
   themes: []
   decided: {}
@@ -151,7 +151,7 @@
   gen_sg: [Dekoration]
   ru: декорация
   en: decoration
-  freq: 12000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -163,7 +163,7 @@
   gen_sg: [Delle]
   ru: вмятина
   en: dent
-  freq: 31000
+  freq: 30000
   level: B1
   themes: []
   decided: {}
@@ -187,7 +187,7 @@
   gen_sg: [Demonstration]
   ru: демонстрация
   en: demonstration
-  freq: 8000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -235,7 +235,7 @@
   gen_sg: [Deutung]
   ru: толкование, объяснение
   en: analysis, interpretation
-  freq: 40000
+  freq: 39000
   level: B1
   themes: []
   decided: {}
@@ -367,7 +367,7 @@
   gen_sg: [Dinosauriers]
   ru: динозавр
   en: dinosaur, dino
-  freq: 9000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -403,7 +403,7 @@
   gen_sg: [Diskriminierung]
   ru: дискриминация
   en: discrimination
-  freq: 20000
+  freq: 19000
   level: B1
   themes: []
   decided: {}
@@ -427,7 +427,7 @@
   gen_sg: [Dokumentation]
   ru: документация
   en: documentation
-  freq: 13000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -439,7 +439,7 @@
   gen_sg: [Dolmetschers]
   ru: устный переводчик
   en: interpreter
-  freq: 15000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -451,7 +451,7 @@
   gen_sg: [Dolmetscherin]
   ru: переводчица
   en: interpreter
-  freq: 30000
+  freq: 29000
   level: A1
   themes: []
   decided: {}
@@ -463,7 +463,7 @@
   gen_sg: [Donners]
   ru: гром
   en: thunder
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -559,7 +559,7 @@
   gen_sg: [Drehortes, Drehorts]
   ru: съёмочная площадка
   en: location
-  freq: 20000
+  freq: 19000
   level: B1
   themes: []
   decided: {}
@@ -583,7 +583,7 @@
   gen_sg: [Druckers]
   ru: принтер
   en: printer
-  freq: 10000
+  freq: 13000
   level: A1
   themes: []
   decided: {}
@@ -607,7 +607,7 @@
   gen_sg: [Durchmessers]
   ru: диаметр, поперечник
   en: diameter
-  freq: 7000
+  freq: 3000
   level: B1
   themes: []
   decided: {}
@@ -631,7 +631,7 @@
   gen_sg: [Durchschnitts, Durchschnittes]
   ru: среднее число
   en: average, mean
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -643,7 +643,7 @@
   gen_sg: [Durstes, Dursts]
   ru: жажда
   en: thirst
-  freq: 6000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -703,7 +703,7 @@
   gen_sg: [Dürre]
   ru: засуха
   en: drought
-  freq: 13000
+  freq: 20000
   level: B1
   themes: []
   decided: {}

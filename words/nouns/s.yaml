@@ -41,7 +41,7 @@
   gen_sg: [Sachbeschädigung]
   ru: повреждение  чужого имущества
   en: property damage, vandalism
-  freq: 33000
+  freq: 32000
   level: B1
   themes: []
   decided: {}
@@ -101,7 +101,7 @@
   gen_sg: [Salbe]
   ru: мазь
   en: salve, ointment
-  freq: 21000
+  freq: 20000
   level: A2
   themes: []
   decided: {}
@@ -149,7 +149,7 @@
   gen_sg: [Sands, Sandes]
   ru: песок
   en: sand
-  freq: 6000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -341,7 +341,7 @@
   gen_sg: [Schaums, Schaumes]
   ru: пена
   en: foam, froth
-  freq: 12000
+  freq: 11000
   level: B1
   themes: []
   decided: {}
@@ -377,7 +377,7 @@
   gen_sg: [Scheibe]
   ru: ломтик
   en: disk
-  freq: 4000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -437,7 +437,7 @@
   gen_sg: [Schiedsrichters]
   ru: судья, арбитр
   en: referee, umpire
-  freq: 14000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -468,14 +468,14 @@
   skip: {}
 - id: n:Schimmel
   lemma: Schimmel
-  sense: плесень
+  sense: белая лошадь
   gender: [m]
   plural: [Schimmel]
   gen_sg: [Schimmels]
-  ru: плесень
+  ru: белая лошадь
   en: white horse, gray horse
-  freq: 5000
-  level: B1
+  freq: 20000
+  level: null
   themes: []
   decided: {}
   skip: {}
@@ -487,8 +487,8 @@
   gen_sg: [Schimmels]
   ru: плесень
   en: mould mold
-  freq: 5000
-  level: null
+  freq: 20000
+  level: B1
   themes: []
   decided: {}
   skip: {}
@@ -511,7 +511,7 @@
   gen_sg: [Schlafanzuges, Schlafanzugs]
   ru: пижама
   en: pyjamas, nightgown
-  freq: 13000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -535,7 +535,7 @@
   gen_sg: [Schlaganfalles, Schlaganfalls]
   ru: мед. инсульт, апоплексия
   en: stroke
-  freq: 3000
+  freq: 7000
   level: B1
   themes: []
   decided: {}
@@ -643,7 +643,7 @@
   gen_sg: [Schlossers]
   ru: слесарь
   en: fitter, locksmith
-  freq: 35000
+  freq: 34000
   level: A1
   themes: []
   decided: {}
@@ -655,7 +655,7 @@
   gen_sg: [Schlussfolgerung]
   ru: вывод
   en: conclusion, implication
-  freq: 11000
+  freq: 10000
   level: B1
   themes: []
   decided: {}
@@ -739,7 +739,7 @@
   plural: []
   gen_sg: [Schnupfens]
   ru: нюханье
-  en: nasal congestion
+  en: null
   freq: 12000
   level: null
   themes: []
@@ -773,11 +773,10 @@
   skip: {}
 - id: n:Schnur:2
   lemma: Schnur
-  sense: верёвка
   gender: [f]
   plural: [Schnuren]
   gen_sg: [Schnur]
-  ru: верёвка, бечёвка
+  ru: null
   en: daughter-in-law
   freq: 10000
   level: null
@@ -791,7 +790,7 @@
   gen_sg: [Schnurrbartes, Schnurrbarts]
   ru: усы
   en: moustache
-  freq: 8000
+  freq: 7000
   level: B1
   themes: []
   decided: {}
@@ -815,7 +814,7 @@
   gen_sg: [Schranks, Schrankes]
   ru: шкаф
   en: cabinet, cupboard
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -827,7 +826,7 @@
   gen_sg: [Schraube]
   ru: винт, болт
   en: screw, bolt
-  freq: 13000
+  freq: 12000
   level: A1
   themes: []
   decided: {}
@@ -959,7 +958,7 @@
   gen_sg: [Schuld]
   ru: вина
   en: guilt
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -971,7 +970,7 @@
   gen_sg: []
   ru: null
   en: debt, debts
-  freq: 700
+  freq: 600
   level: A2
   themes: []
   decided: {}
@@ -1019,7 +1018,7 @@
   gen_sg: [Schutzhelmes, Schutzhelms]
   ru: защитный шлем
   en: hard hat
-  freq: 50000
+  freq: 49000
   level: B1
   themes: []
   decided: {}
@@ -1055,7 +1054,7 @@
   gen_sg: [Schweins, Schweines]
   ru: свинья
   en: pig, swine
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -1067,7 +1066,7 @@
   gen_sg: [Schweiz]
   ru: Швейцария
   en: Switzerland
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -1091,7 +1090,7 @@
   gen_sg: [Schwester]
   ru: сестра
   en: sister, sis
-  freq: 700
+  freq: 400
   level: A1
   themes: []
   decided: {}
@@ -1139,7 +1138,7 @@
   gen_sg: [Schülers]
   ru: ученик
   en: pupil, student
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1309,7 +1308,7 @@
   gen_sg: [Senfs, Senfes]
   ru: горчица
   en: mustard
-  freq: 4000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -1321,7 +1320,7 @@
   gen_sg: [Serie]
   ru: серия
   en: series
-  freq: 5000
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -1430,7 +1429,7 @@
   gen_sg: [Silvesters]
   ru: новогодний вечер, канун Нового года
   en: New Year's Eve, Hogmanay
-  freq: 3000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -1466,7 +1465,7 @@
   gen_sg: [Smartphones]
   ru: смартфон
   en: smartphone, smart phone
-  freq: 24000
+  freq: 23000
   level: A1
   themes: []
   decided: {}
@@ -1478,7 +1477,7 @@
   gen_sg: [Socke]
   ru: носок
   en: sock
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -1514,7 +1513,7 @@
   gen_sg: [Sohns, Sohnes]
   ru: сын
   en: son
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -1562,7 +1561,7 @@
   gen_sg: [Sonnabends]
   ru: суббота
   en: Saturday
-  freq: 5000
+  freq: 19000
   level: A1
   themes: []
   decided: {}
@@ -1574,7 +1573,7 @@
   gen_sg: [Sonne]
   ru: солнце
   en: sun, Sun
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1598,7 +1597,7 @@
   gen_sg: [Sonnencreme]
   ru: солнцезащитный крем
   en: sunblock, sun creme
-  freq: 37000
+  freq: 36000
   level: A2
   themes: []
   decided: {}
@@ -1778,7 +1777,7 @@
   gen_sg: [Spaßes]
   ru: удовольствие, потеха
   en: fun, humour
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -1790,7 +1789,7 @@
   gen_sg: [Speichers]
   ru: склад, хранилище
   en: storehouse, warehouse
-  freq: 4000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -1802,7 +1801,7 @@
   gen_sg: [Speisekarte]
   ru: меню
   en: menu
-  freq: 11000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -1838,7 +1837,7 @@
   gen_sg: [Spiegels]
   ru: зеркало
   en: mirror, looking glass
-  freq: 3000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -1850,7 +1849,7 @@
   gen_sg: [Spiegelbilds, Spiegelbildes]
   ru: отражение
   en: mirror image, reflection
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}
@@ -1934,7 +1933,7 @@
   gen_sg: [Spielregel]
   ru: правило игры
   en: a rule
-  freq: 14000
+  freq: 13000
   level: A2
   themes: []
   decided: {}
@@ -1946,7 +1945,7 @@
   gen_sg: [Spielstandes, Spielstands]
   ru: спорт. счёт очков
   en: null
-  freq: 37000
+  freq: 36000
   level: B1
   themes: []
   decided: {}
@@ -1970,7 +1969,7 @@
   gen_sg: [Spinne]
   ru: паук
   en: spider
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -2006,7 +2005,7 @@
   gen_sg: [Sporthalle]
   ru: спортзал
   en: sports hall, gymnasium
-  freq: 19000
+  freq: 18000
   level: A1
   themes: []
   decided: {}
@@ -2162,7 +2161,7 @@
   gen_sg: [Staatsangehörigkeit]
   ru: гражданство
   en: citizenship, nationality
-  freq: 46000
+  freq: 45000
   level: B1
   themes: []
   decided: {}
@@ -2198,7 +2197,7 @@
   gen_sg: [Staatsbürgerschaft]
   ru: гражданство, подданство
   en: citizenship
-  freq: 26000
+  freq: 25000
   level: A2
   themes: []
   decided: {}
@@ -2246,7 +2245,7 @@
   gen_sg: [Staatsoberhaupts, Staatsoberhauptes]
   ru: глава государства
   en: head of State, chief of State
-  freq: 24000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -2294,7 +2293,7 @@
   gen_sg: [Stadtplans, Stadtplanes]
   ru: план города
   en: city map
-  freq: 29000
+  freq: 28000
   level: A1
   themes: []
   decided: {}
@@ -2338,12 +2337,11 @@
   skip: {}
 - id: n:Staffel:2
   lemma: Staffel
-  sense: ступень
   gender: [f, m]
   plural: [Staffeln]
   gen_sg: [Staffel]
-  ru: ступень, уступ
-  en: season
+  ru: null
+  en: null
   freq: 7000
   level: null
   themes: []
@@ -2404,7 +2402,7 @@
   gen_sg: [Steckdose]
   ru: электрическая розетка, электророзетка
   en: socket, electrical outlet
-  freq: 8000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -2440,7 +2438,7 @@
   gen_sg: [Steins, Steines]
   ru: камень
   en: stone, rock
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -2496,11 +2494,10 @@
   skip: {}
 - id: n:Stern:2
   lemma: Stern
-  sense: астрон. звезда
   gender: [m]
   plural: [Sterne]
   gen_sg: [Sterns, Sternes]
-  ru: астрон. звезда, разг. звезда
+  ru: null
   en: asterisk
   freq: 2000
   level: null
@@ -2509,12 +2506,12 @@
   skip: {}
 - id: n:Steuer
   lemma: Steuer
-  sense: руль
+  sense: штурвал
   gender: [n]
   plural: [Steuer]
   gen_sg: [Steuers]
-  ru: руль, штурвал
-  en: steering wheel, helm
+  ru: штурвал, руль
+  en: steering wheel, controls
   freq: 4000
   level: null
   themes: []
@@ -2596,11 +2593,10 @@
   skip: {}
 - id: n:Stift:2
   lemma: Stift
-  sense: обрубок
   gender: [m]
   plural: [Stifte]
   gen_sg: [Stifts, Stiftes]
-  ru: обрубок, штифт
+  ru: null
   en: trifle
   freq: 6000
   level: null
@@ -2609,11 +2605,10 @@
   skip: {}
 - id: n:Stift:3
   lemma: Stift
-  sense: заведение
   gender: [n]
   plural: [Stifte, Stifter]
   gen_sg: [Stifts, Stiftes]
-  ru: заведение, приют  для престарелых
+  ru: null
   en: foundation
   freq: 6000
   level: null
@@ -2622,11 +2617,10 @@
   skip: {}
 - id: n:Stift:4
   lemma: Stift
-  sense: карандаш
   gender: [f]
   plural: [Stiften]
   gen_sg: [Stift, Stiften]
-  ru: карандаш, штифт
+  ru: null
   en: null
   freq: 6000
   level: null
@@ -2676,7 +2670,7 @@
   gen_sg: [Stimmzettels]
   ru: избирательный бюллетень
   en: ballot
-  freq: 37000
+  freq: 36000
   level: A1
   themes: []
   decided: {}
@@ -2736,7 +2730,7 @@
   gen_sg: [Stolzes]
   ru: гордость
   en: pride
-  freq: 900
+  freq: 800
   level: B1
   themes: []
   decided: {}
@@ -2760,7 +2754,7 @@
   gen_sg: [Strafrechtes, Strafrechts]
   ru: юр. уголовное право
   en: criminal law
-  freq: 32000
+  freq: 31000
   level: B1
   themes: []
   decided: {}
@@ -2784,7 +2778,7 @@
   gen_sg: [Straße]
   ru: улица
   en: street, road
-  freq: 700
+  freq: 600
   level: A1
   themes: []
   decided: {}
@@ -2820,7 +2814,7 @@
   gen_sg: [Streiks, Streikes]
   ru: забастовка
   en: strike
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -2880,7 +2874,7 @@
   gen_sg: [Stromausfalles, Stromausfalls]
   ru: прекращение подачи электроэнергии
   en: blackout, power failure
-  freq: 10000
+  freq: 9000
   level: B1
   themes: []
   decided: {}
@@ -2928,7 +2922,7 @@
   gen_sg: [Studentin]
   ru: студентка
   en: student
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -3024,7 +3018,7 @@
   gen_sg: [Suchmaschine]
   ru: комп. поисковая система
   en: search engine
-  freq: 41000
+  freq: 31000
   level: A2
   themes: []
   decided: {}
@@ -3060,7 +3054,7 @@
   gen_sg: [Suppe]
   ru: суп
   en: soup
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -3072,7 +3066,7 @@
   gen_sg: [Symbols]
   ru: символ
   en: symbol
-  freq: 5000
+  freq: 4000
   level: B1
   themes: []
   decided: {}
@@ -3108,7 +3102,7 @@
   gen_sg: [Sängers]
   ru: певец
   en: singer, songster
-  freq: 8000
+  freq: 7000
   level: A2
   themes: []
   decided: {}
@@ -3120,7 +3114,7 @@
   gen_sg: [Südens]
   ru: юг
   en: south
-  freq: 800
+  freq: 3000
   level: A1
   themes: []
   decided: {}
@@ -3132,7 +3126,7 @@
   gen_sg: [Südostens]
   ru: юго-восток
   en: southeast, south-east
-  freq: 200
+  freq: 25000
   level: A2
   themes: []
   decided: {}
@@ -3156,7 +3150,7 @@
   gen_sg: [Südwestens]
   ru: юго-запад
   en: southwest, south-west
-  freq: 19000
+  freq: 18000
   level: A2
   themes: []
   decided: {}

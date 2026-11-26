@@ -109,12 +109,11 @@
   skip: {}
 - id: n:Zebra:2
   lemma: Zebra
-  sense: зоол. зебра
   gender: [n]
   plural: [Zebras]
   gen_sg: [Zebras]
-  ru: зоол. зебра
-  en: zebra
+  ru: null
+  en: null
   freq: 10000
   level: null
   themes: []
@@ -139,7 +138,7 @@
   gen_sg: [Zehntels]
   ru: null
   en: tenth
-  freq: 36000
+  freq: 28000
   level: B1
   themes: []
   decided: {}
@@ -150,8 +149,8 @@
   plural: [Zehntel]
   gen_sg: [Zehntel]
   ru: null
-  en: tenth
-  freq: 36000
+  en: null
+  freq: 28000
   level: null
   themes: []
   decided: {}
@@ -235,7 +234,7 @@
   gen_sg: [Zeitzone]
   ru: часовой пояс, временная зона
   en: time zone
-  freq: 23000
+  freq: 26000
   level: A2
   themes: []
   decided: {}
@@ -255,12 +254,11 @@
   skip: {}
 - id: n:Zelt:2
   lemma: Zelt
-  sense: палатка
   gender: [m]
   plural: []
   gen_sg: [Zelts, Zeltes]
-  ru: палатка, шатёр
-  en: tent, marquee
+  ru: null
+  en: null
   freq: 8000
   level: null
   themes: []
@@ -268,12 +266,11 @@
   skip: {}
 - id: n:Zelt:3
   lemma: Zelt
-  sense: палатка
   gender: [m]
   plural: [Zelte]
   gen_sg: [Zeltes]
-  ru: палатка, шатёр
-  en: tent, marquee
+  ru: null
+  en: null
   freq: 8000
   level: null
   themes: []
@@ -370,7 +367,7 @@
   gen_sg: [Zeugin]
   ru: свидетельница
   en: witness
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -406,7 +403,7 @@
   gen_sg: [Ziffer]
   ru: цифра
   en: digit, numeral
-  freq: 20000
+  freq: 23000
   level: A2
   themes: []
   decided: {}
@@ -418,7 +415,7 @@
   gen_sg: [Zimmers]
   ru: комната
   en: room, chamber
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -430,7 +427,7 @@
   gen_sg: [Zinnsoldaten]
   ru: оловянный солдатик
   en: tin soldier
-  freq: 50000
+  freq: 49000
   level: A1
   themes: []
   decided: {}
@@ -454,7 +451,7 @@
   gen_sg: [Zinssatzes]
   ru: процентная ставка
   en: interest rate, coupon
-  freq: 32000
+  freq: 31000
   level: B1
   themes: []
   decided: {}
@@ -479,7 +476,7 @@
   gen_sg: [Zolls, Zolles]
   ru: таможня
   en: customs, toll
-  freq: 12000
+  freq: 10000
   level: B1
   themes: []
   decided: {}
@@ -492,7 +489,7 @@
   gen_sg: [Zolls]
   ru: дюйм
   en: inch
-  freq: 12000
+  freq: 10000
   level: null
   themes: []
   decided: {}
@@ -504,7 +501,7 @@
   gen_sg: [Zollamtes, Zollamts]
   ru: null
   en: customs office, custom office
-  freq: 14000
+  freq: null
   level: B1
   themes: []
   decided: {}
@@ -600,7 +597,7 @@
   gen_sg: [Zugeständnisses]
   ru: уступка
   en: concession
-  freq: 21000
+  freq: 20000
   level: B1
   themes: []
   decided: {}
@@ -672,7 +669,7 @@
   gen_sg: [Zuschlages, Zuschlags]
   ru: прибавка, надбавка
   en: surcharge, supplement
-  freq: 24000
+  freq: 23000
   level: A2
   themes: []
   decided: {}

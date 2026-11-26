@@ -41,7 +41,7 @@
   gen_sg: [Radius]
   ru: радиус
   en: radius
-  freq: 10000
+  freq: 14000
   level: B1
   themes: []
   decided: {}
@@ -65,7 +65,7 @@
   gen_sg: [Raps, Rap]
   ru: null
   en: rap
-  freq: 28000
+  freq: 19000
   level: A1
   themes: []
   decided: {}
@@ -77,7 +77,7 @@
   gen_sg: [Rasierers]
   ru: бритва
   en: shaver, razor
-  freq: 18000
+  freq: 17000
   level: A1
   themes: []
   decided: {}
@@ -113,7 +113,7 @@
   gen_sg: [Rathauses]
   ru: ратуша
   en: town hall, city hall
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -209,7 +209,7 @@
   gen_sg: [Rechtsanwaltes, Rechtsanwalts]
   ru: адвокат, защитник
   en: lawyer, barrister
-  freq: 6000
+  freq: 8000
   level: B1
   themes: []
   decided: {}
@@ -245,7 +245,7 @@
   gen_sg: [Redaktion]
   ru: редакция
   en: editing
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}
@@ -257,7 +257,7 @@
   gen_sg: [Rede]
   ru: речь
   en: speech, address
-  freq: 400
+  freq: 300
   level: B1
   themes: []
   decided: {}
@@ -269,7 +269,7 @@
   gen_sg: [Referates, Referats]
   ru: доклад
   en: oral ) report
-  freq: 18000
+  freq: 17000
   level: A2
   themes: []
   decided: {}
@@ -281,7 +281,7 @@
   gen_sg: [Regals, Regales]
   ru: полка
   en: rack, shelf
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -317,7 +317,7 @@
   gen_sg: [Regenbogens]
   ru: радуга
   en: rainbow
-  freq: 10000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -353,7 +353,7 @@
   gen_sg: [Region]
   ru: район, область
   en: region, area
-  freq: 7000
+  freq: 6000
   level: A2
   themes: []
   decided: {}
@@ -365,7 +365,7 @@
   gen_sg: [Regisseurs]
   ru: режиссёр
   en: director, producer
-  freq: 5000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -421,11 +421,10 @@
   skip: {}
 - id: n:Reis:2
   lemma: Reis
-  sense: ботан. отросток
   gender: [n]
   plural: [Reiser]
   gen_sg: [Reises]
-  ru: ботан. отросток, росток
+  ru: null
   en: shoot, sprout
   freq: 2000
   level: null
@@ -451,7 +450,7 @@
   gen_sg: [Reisebüros]
   ru: бюро путешествий
   en: travel agency
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -499,7 +498,7 @@
   gen_sg: [Reisezieles, Reiseziels]
   ru: пункт назначения
   en: destination
-  freq: 32000
+  freq: 31000
   level: A2
   themes: []
   decided: {}
@@ -547,7 +546,7 @@
   gen_sg: [Rente]
   ru: пенсия
   en: pension, retirement
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -571,7 +570,7 @@
   gen_sg: [Reparatur]
   ru: починка, ремонт
   en: repair
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -679,7 +678,7 @@
   gen_sg: [Rettungswagens]
   ru: аварийная машина
   en: ambulance vehicle
-  freq: 13000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -771,12 +770,11 @@
   skip: {}
 - id: n:Riss:2
   lemma: Riss
-  sense: трещина
   gender: [f]
   plural: []
   gen_sg: []
-  ru: трещина, щель
-  en: fissure, crack
+  ru: null
+  en: null
   freq: 7000
   level: null
   themes: []
@@ -789,7 +787,7 @@
   gen_sg: [Roboters]
   ru: робот
   en: robot
-  freq: 3000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -822,12 +820,11 @@
   skip: {}
 - id: n:Rock:3
   lemma: Rock
-  sense: юбка
   gender: [m]
   plural: []
   gen_sg: [Rocks, Rock]
-  ru: юбка, диал. пиджак
-  en: skirt
+  ru: null
+  en: null
   freq: 4000
   level: null
   themes: []
@@ -872,12 +869,11 @@
   skip: {}
 - id: n:Rolle:2
   lemma: Rolle
-  sense: ролик
   gender: [m]
   plural: [Rolle]
   gen_sg: [Rolle]
-  ru: ролик, колесико
-  en: roll, reel
+  ru: null
+  en: null
   freq: 2000
   level: null
   themes: []
@@ -885,12 +881,11 @@
   skip: {}
 - id: n:Rolle:3
   lemma: Rolle
-  sense: ролик
   gender: [n]
   plural: []
   gen_sg: [Rolle]
-  ru: ролик, колесико
-  en: roll, reel
+  ru: null
+  en: null
   freq: 2000
   level: null
   themes: []
@@ -940,20 +935,19 @@
   gen_sg: [Rostes, Rosts]
   ru: ржавчина
   en: rust
-  freq: 15000
+  freq: 17000
   level: B1
   themes: []
   decided: {}
   skip: {}
 - id: n:Rost:2
   lemma: Rost
-  sense: решётка
   gender: [m]
   plural: [Roste]
   gen_sg: [Rostes, Rosts]
-  ru: решётка, техн. колосниковая решётка
+  ru: null
   en: grill, grid
-  freq: 15000
+  freq: 17000
   level: null
   themes: []
   decided: {}
@@ -977,7 +971,7 @@
   gen_sg: [Ruhe]
   ru: покой, неподвижность
   en: calm, quiet
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -1037,7 +1031,7 @@
   gen_sg: [Rückens]
   ru: спина
   en: back
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -1073,7 +1067,7 @@
   gen_sg: [Rückflugs, Rückfluges]
   ru: обратный полет
   en: inward flight, return flight
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}

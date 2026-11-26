@@ -17,7 +17,7 @@
   gen_sg: [Maklers]
   ru: маклер
   en: broker
-  freq: 11000
+  freq: 10000
   level: B1
   themes: []
   decided: {}
@@ -73,11 +73,10 @@
   skip: {}
 - id: n:Mandel:2
   lemma: Mandel
-  sense: миндаль
   gender: [f]
   plural: [Mandeln, Mandel]
   gen_sg: [Mandel]
-  ru: миндаль, миндалина
+  ru: null
   en: shock
   freq: 5000
   level: null
@@ -92,20 +91,19 @@
   gen_sg: [Mangels]
   ru: недостаток, нехватка, дефицит
   en: lack, shortage
-  freq: 9000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Mangel:2
   lemma: Mangel
-  sense: каток для белья
   gender: [f]
   plural: [Mangeln]
   gen_sg: [Mangel]
-  ru: каток для белья, гладильная машина
+  ru: null
   en: mangle
-  freq: 9000
+  freq: 8000
   level: null
   themes: []
   decided: {}
@@ -141,7 +139,7 @@
   gen_sg: [Mannschaft]
   ru: команда, экипаж
   en: team, crew
-  freq: 5000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -249,7 +247,7 @@
   gen_sg: [Mathematik]
   ru: математика
   en: mathematics
-  freq: 6000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -296,7 +294,7 @@
   plural: []
   gen_sg: [Matte]
   ru: null
-  en: mat
+  en: null
   freq: 21000
   level: null
   themes: []
@@ -341,11 +339,11 @@
   skip: {}
 - id: n:Maus:2
   lemma: Maus
-  sense: мышка
+  sense: мышь
   gender: [f]
   plural: [Mäuse]
   gen_sg: [Maus]
-  ru: мышка, мышь
+  ru: мышь, мышка
   en: mouse
   freq: 3000
   level: null
@@ -354,12 +352,11 @@
   skip: {}
 - id: n:Maus:3
   lemma: Maus
-  sense: зоол. мышь
   gender: [f]
   plural: [Mäuse]
   gen_sg: [Maus]
-  ru: зоол. мышь, комп. мышь
-  en: mouse
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -367,12 +364,11 @@
   skip: {}
 - id: n:Maus:4
   lemma: Maus
-  sense: зоол. мышь
   gender: [f]
   plural: [Mäuse]
   gen_sg: [Maus]
-  ru: зоол. мышь, комп. мышь
-  en: mouse
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -385,7 +381,7 @@
   gen_sg: [Mayonnaise]
   ru: майонез
   en: mayonnaise
-  freq: 16000
+  freq: 21000
   level: A1
   themes: []
   decided: {}
@@ -421,7 +417,7 @@
   gen_sg: [Maßstabes, Maßstabs]
   ru: масштаб
   en: rule
-  freq: 12000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -433,7 +429,7 @@
   gen_sg: [Mechanikers]
   ru: механик
   en: mechanic
-  freq: 8000
+  freq: 7000
   level: A1
   themes: []
   decided: {}
@@ -553,7 +549,7 @@
   gen_sg: [Meinungsfreiheit]
   ru: свобода слова
   en: freedom of opinion
-  freq: 35000
+  freq: 34000
   level: B1
   themes: []
   decided: {}
@@ -613,7 +609,7 @@
   gen_sg: [Menge]
   ru: количество
   en: quantity
-  freq: 2000
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -625,7 +621,7 @@
   gen_sg: [Mensa]
   ru: студенческая столовая
   en: cafeteria, canteen
-  freq: 37000
+  freq: 36000
   level: A1
   themes: []
   decided: {}
@@ -638,20 +634,19 @@
   gen_sg: [Menschen]
   ru: человек
   en: human being
-  freq: 300
+  freq: 200
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Mensch:2
   lemma: Mensch
-  sense: человек
   gender: [n]
   plural: [Menscher]
   gen_sg: [Menschs, Mensches]
-  ru: человек, человеческая личность
+  ru: null
   en: hussy, baggage
-  freq: 300
+  freq: 200
   level: null
   themes: []
   decided: {}
@@ -725,7 +720,7 @@
   gen_sg: [Metzgerei]
   ru: мясная лавка
   en: butcher's
-  freq: 28000
+  freq: 27000
   level: A2
   themes: []
   decided: {}
@@ -757,12 +752,11 @@
   skip: {}
 - id: n:Miete:2
   lemma: Miete
-  sense: наём
   gender: [f]
   plural: [Mieten]
   gen_sg: [Miete]
-  ru: наём, прокат
-  en: rent
+  ru: null
+  en: null
   freq: 4000
   level: null
   themes: []
@@ -770,11 +764,10 @@
   skip: {}
 - id: n:Miete:3
   lemma: Miete
-  sense: наём
   gender: [f]
   plural: [Mieten]
   gen_sg: [Miete]
-  ru: наём, прокат
+  ru: null
   en: clamp
   freq: 4000
   level: null
@@ -800,7 +793,7 @@
   gen_sg: [Migranten]
   ru: мигрант
   en: migrant
-  freq: 44000
+  freq: 43000
   level: A2
   themes: []
   decided: {}
@@ -824,7 +817,7 @@
   gen_sg: [Mikrowelle]
   ru: микроволновка
   en: microwave
-  freq: 15000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -836,7 +829,7 @@
   gen_sg: [Milch]
   ru: молоко
   en: milk
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -860,7 +853,7 @@
   gen_sg: [Millimeters]
   ru: миллиметр
   en: millimetre, millimeter
-  freq: 7000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -1024,12 +1017,11 @@
   skip: {}
 - id: n:Mittag:2
   lemma: Mittag
-  sense: обед
   gender: [n]
   plural: []
   gen_sg: [Mittags, Mittages]
-  ru: обед, обеденный перерыв
-  en: lunch
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -1054,7 +1046,7 @@
   gen_sg: [Mittagsschlafes, Mittagsschlafs]
   ru: послеобеденный сон, тихий час
   en: afternoon nap, siesta
-  freq: 22000
+  freq: 21000
   level: B1
   themes: []
   decided: {}
@@ -1110,11 +1102,10 @@
   skip: {}
 - id: n:Mode:2
   lemma: Mode
-  sense: мода
   gender: [f, m]
   plural: [Moden]
   gen_sg: [Mode, Modes]
-  ru: мода
+  ru: null
   en: mode
   freq: 6000
   level: null
@@ -1225,7 +1216,7 @@
   plural: []
   gen_sg: [Morgen]
   ru: завтра
-  en: tomorrow, morrow
+  en: morrow, tomorrow
   freq: 200
   level: null
   themes: []
@@ -1238,7 +1229,7 @@
   gen_sg: [Motors]
   ru: мотор, двигатель
   en: engine, motor
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -1250,7 +1241,7 @@
   gen_sg: [Motorhaube]
   ru: капот двигателя
   en: bonnet, hood
-  freq: 10000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -1282,11 +1273,10 @@
   skip: {}
 - id: n:Mund:2
   lemma: Mund
-  sense: рот
   gender: [f]
   plural: []
   gen_sg: [Mund]
-  ru: рот, уста
+  ru: null
   en: mund
   freq: 2000
   level: null
@@ -1336,7 +1326,7 @@
   gen_sg: [Musik]
   ru: музыка
   en: music
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -1446,7 +1436,7 @@
   gen_sg: [Muttertags, Muttertages]
   ru: null
   en: Mother's Day
-  freq: 19000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -1458,7 +1448,7 @@
   gen_sg: [Mutti]
   ru: мама
   en: mummy, mommy
-  freq: 6000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -1482,7 +1472,7 @@
   gen_sg: [Märchens]
   ru: сказка
   en: fairy tale
-  freq: 5000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -1530,7 +1520,7 @@
   gen_sg: [Mülles, Mülls]
   ru: мусор
   en: garbage, refuse
-  freq: 5000
+  freq: 4000
   level: A2
   themes: []
   decided: {}
@@ -1554,7 +1544,7 @@
   gen_sg: [Münze]
   ru: монета
   en: coin
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -1574,11 +1564,10 @@
   skip: {}
 - id: n:Müsli:2
   lemma: Müsli
-  sense: мюсли
   gender: [m]
   plural: [Müslis]
   gen_sg: [Müslis]
-  ru: мюсли
+  ru: null
   en: muesli freak, granola type
   freq: 15000
   level: null
@@ -1587,12 +1576,11 @@
   skip: {}
 - id: n:Müsli:3
   lemma: Müsli
-  sense: мюсли
   gender: [f]
   plural: [Müslis]
   gen_sg: [Müsli]
-  ru: мюсли
-  en: muesli, granola
+  ru: null
+  en: null
   freq: 15000
   level: null
   themes: []

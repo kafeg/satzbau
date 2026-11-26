@@ -65,7 +65,7 @@
   gen_sg: [Nachhilfe]
   ru: репетиторство
   en: private coaching, extra tuition
-  freq: 14000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -161,7 +161,7 @@
   gen_sg: [Nachteils, Nachteiles]
   ru: недостаток
   en: disadvantage, drawback
-  freq: 10000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -233,7 +233,7 @@
   gen_sg: [Nagellackes, Nagellacks]
   ru: null
   en: nail polish
-  freq: 19000
+  freq: 18000
   level: A2
   themes: []
   decided: {}
@@ -269,7 +269,7 @@
   gen_sg: [Narkose]
   ru: наркоз
   en: general anaesthesia
-  freq: 16000
+  freq: 15000
   level: B1
   themes: []
   decided: {}
@@ -293,7 +293,7 @@
   gen_sg: [Nationalfeiertags, Nationalfeiertages]
   ru: национальный праздник
   en: National Day
-  freq: 42000
+  freq: 41000
   level: A2
   themes: []
   decided: {}
@@ -305,7 +305,7 @@
   gen_sg: [Nationalität]
   ru: книжн. национальность, книжн. государственная принадлежность
   en: nationality
-  freq: 23000
+  freq: 22000
   level: A1
   themes: []
   decided: {}
@@ -386,12 +386,11 @@
   skip: {}
 - id: n:Neffe:2
   lemma: Neffe
-  sense: племянник
   gender: [m]
   plural: [Neffen]
   gen_sg: [Neffen, Neffe]
-  ru: племянник
-  en: nephew
+  ru: null
+  en: null
   freq: 4000
   level: null
   themes: []
@@ -399,12 +398,11 @@
   skip: {}
 - id: n:Neffe:3
   lemma: Neffe
-  sense: племянник
   gender: [f]
   plural: [Neffen]
   gen_sg: [Neffe]
-  ru: племянник
-  en: nephew
+  ru: null
+  en: null
   freq: 4000
   level: null
   themes: []
@@ -412,12 +410,11 @@
   skip: {}
 - id: n:Neffe:4
   lemma: Neffe
-  sense: племянник
   gender: [f]
   plural: [Neffen]
   gen_sg: [Neffe]
-  ru: племянник
-  en: nephew
+  ru: null
+  en: null
   freq: 4000
   level: null
   themes: []
@@ -430,7 +427,7 @@
   gen_sg: [Neides, Neids]
   ru: зависть
   en: envy
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -454,7 +451,7 @@
   gen_sg: [Nests, Nestes]
   ru: гнездо
   en: nest
-  freq: 6000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -586,7 +583,7 @@
   gen_sg: [Nordens]
   ru: север
   en: north
-  freq: 3000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -598,7 +595,7 @@
   gen_sg: [Nordostens]
   ru: северо-восток
   en: northeast, north-east
-  freq: 2000
+  freq: 19000
   level: A2
   themes: []
   decided: {}
@@ -610,7 +607,7 @@
   gen_sg: [Nordpols, Nordpoles]
   ru: Северный полюс
   en: North Pole
-  freq: 4000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -646,7 +643,7 @@
   gen_sg: [Notarztes]
   ru: врач скорой помощи
   en: emergency physician
-  freq: 9000
+  freq: 8000
   level: A1
   themes: []
   decided: {}
@@ -754,7 +751,7 @@
   gen_sg: [Nudel]
   ru: лапша
   en: pasta, noodle
-  freq: 11000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -766,7 +763,7 @@
   gen_sg: [Nummer]
   ru: номер
   en: number
-  freq: 900
+  freq: 1000
   level: A1
   themes: []
   decided: {}

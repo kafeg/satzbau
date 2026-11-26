@@ -5,7 +5,7 @@
   gen_sg: [Igels]
   ru: ёж
   en: hedgehog
-  freq: 22000
+  freq: 27000
   level: A1
   themes: []
   decided: {}
@@ -29,7 +29,7 @@
   gen_sg: [Impfung]
   ru: прививка, вакцинация
   en: vaccination
-  freq: 17000
+  freq: 16000
   level: A2
   themes: []
   decided: {}
@@ -41,7 +41,7 @@
   gen_sg: [Inflation]
   ru: инфляция
   en: inflation
-  freq: 22000
+  freq: 21000
   level: B1
   themes: []
   decided: {}
@@ -53,7 +53,7 @@
   gen_sg: [Informatik]
   ru: информатика
   en: information technology, computer science
-  freq: 37000
+  freq: 36000
   level: A1
   themes: []
   decided: {}
@@ -137,7 +137,7 @@
   gen_sg: [Inspektion]
   ru: инспекция, проверка
   en: inspection
-  freq: 100
+  freq: 10000
   level: A2
   themes: []
   decided: {}

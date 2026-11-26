@@ -17,7 +17,7 @@
   gen_sg: [Tablets]
   ru: планшет
   en: tablet
-  freq: 33000
+  freq: 21000
   level: A1
   themes: []
   decided: {}
@@ -41,7 +41,7 @@
   gen_sg: [Tafel]
   ru: школьная доска
   en: tablet
-  freq: 7000
+  freq: 9000
   level: A1
   themes: []
   decided: {}
@@ -54,33 +54,31 @@
   gen_sg: [Tages, Tags]
   ru: день
   en: day
-  freq: 300
+  freq: 200
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Tag:2
   lemma: Tag
-  sense: комп. тэг
   gender: [n]
   plural: [Tags]
   gen_sg: [Tags]
-  ru: комп. тэг
+  ru: null
   en: tag
-  freq: 300
+  freq: 200
   level: null
   themes: []
   decided: {}
   skip: {}
 - id: n:Tag:3
   lemma: Tag
-  sense: комп. тэг
   gender: [m]
   plural: [Tags]
   gen_sg: [Tags]
-  ru: комп. тэг
-  en: tag
-  freq: 300
+  ru: null
+  en: null
+  freq: 200
   level: null
   themes: []
   decided: {}
@@ -104,7 +102,7 @@
   gen_sg: [Tanks, Tankes]
   ru: бак
   en: tank
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -152,7 +150,7 @@
   gen_sg: [Tanzkurses]
   ru: null
   en: dancing class
-  freq: 39000
+  freq: 38000
   level: A2
   themes: []
   decided: {}
@@ -200,7 +198,7 @@
   gen_sg: [Taschenrechners]
   ru: карманный калькулятор
   en: pocket calculator, calculator
-  freq: 29000
+  freq: 28000
   level: A2
   themes: []
   decided: {}
@@ -236,7 +234,7 @@
   gen_sg: [Tastatur]
   ru: клавиатура
   en: keyboard
-  freq: 23000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -248,7 +246,7 @@
   gen_sg: [Taste]
   ru: клавиша
   en: key
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -308,7 +306,7 @@
   gen_sg: [Teams]
   ru: команда
   en: team
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -332,7 +330,7 @@
   gen_sg: [Teddybären]
   ru: плюшевый мишка
   en: teddy
-  freq: 8000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -352,11 +350,10 @@
   skip: {}
 - id: n:Tee:2
   lemma: Tee
-  sense: чай
   gender: [n]
   plural: [Tees]
   gen_sg: [Tees]
-  ru: чай, ботан. чай
+  ru: null
   en: tee
   freq: 2000
   level: null
@@ -394,7 +391,7 @@
   gen_sg: [Teilnehmers]
   ru: участник
   en: participant
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -418,7 +415,7 @@
   gen_sg: [Telefons]
   ru: телефон
   en: telephone, phone
-  freq: 700
+  freq: 600
   level: A1
   themes: []
   decided: {}
@@ -442,7 +439,7 @@
   gen_sg: [Temperatur]
   ru: температура
   en: temperature
-  freq: 4000
+  freq: 5000
   level: A1
   themes: []
   decided: {}
@@ -562,7 +559,7 @@
   gen_sg: [Theaterstücks, Theaterstückes]
   ru: пьеса
   en: play, stage play
-  freq: 13000
+  freq: 12000
   level: B1
   themes: []
   decided: {}
@@ -586,7 +583,7 @@
   gen_sg: [Thermometers]
   ru: термометр, градусник
   en: thermometer
-  freq: 19000
+  freq: 18000
   level: A1
   themes: []
   decided: {}
@@ -634,7 +631,7 @@
   gen_sg: [Tiers, Tieres]
   ru: животное
   en: animal, beast
-  freq: 900
+  freq: 800
   level: A1
   themes: []
   decided: {}
@@ -646,7 +643,7 @@
   gen_sg: [Tierheimes, Tierheims]
   ru: приют для животных
   en: animal shelter, home for animals
-  freq: 15000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -730,7 +727,7 @@
   gen_sg: [Tochter]
   ru: дочь
   en: daughter, girl
-  freq: 500
+  freq: 400
   level: A1
   themes: []
   decided: {}
@@ -766,7 +763,7 @@
   gen_sg: [Topfs, Topfes]
   ru: кастрюля
   en: pot
-  freq: 9000
+  freq: 8000
   level: A2
   themes: []
   decided: {}
@@ -912,7 +909,7 @@
   gen_sg: [Trainerin]
   ru: тренер
   en: coach
-  freq: 24000
+  freq: 23000
   level: A1
   themes: []
   decided: {}
@@ -956,11 +953,10 @@
   skip: {}
 - id: n:Tram:2
   lemma: Tram
-  sense: регион. трамвай
   gender: [m]
   plural: [Trame, Träme]
   gen_sg: [Trams, Trames]
-  ru: регион. трамвай
+  ru: null
   en: beam
   freq: 42000
   level: null
@@ -986,7 +982,7 @@
   gen_sg: [Trennung]
   ru: расставание
   en: parting, segregation
-  freq: 8000
+  freq: 5000
   level: B1
   themes: []
   decided: {}
@@ -1022,7 +1018,7 @@
   gen_sg: [Trikots]
   ru: null
   en: jersey
-  freq: 14000
+  freq: 13000
   level: B1
   themes: []
   decided: {}
@@ -1034,7 +1030,7 @@
   gen_sg: [Trikots]
   ru: null
   en: jersey
-  freq: 14000
+  freq: 13000
   level: null
   themes: []
   decided: {}
@@ -1082,7 +1078,7 @@
   gen_sg: [Turnschuhes, Turnschuhs]
   ru: кед
   en: sneaker
-  freq: 13000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -1094,7 +1090,7 @@
   gen_sg: [Tänzers]
   ru: танцор
   en: dancer
-  freq: 6000
+  freq: 7000
   level: A1
   themes: []
   decided: {}

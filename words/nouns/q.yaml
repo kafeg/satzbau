@@ -18,20 +18,19 @@
   gen_sg: [Quadrats, Quadrates]
   ru: квадрат
   en: square
-  freq: 13000
+  freq: 15000
   level: B1
   themes: []
   decided: {}
   skip: {}
 - id: n:Quadrat:2
   lemma: Quadrat
-  sense: квадрат
   gender: [m]
   plural: [Quadraten]
   gen_sg: [Quadrats, Quadrates]
-  ru: квадрат
-  en: quad, quadrat
-  freq: 13000
+  ru: null
+  en: null
+  freq: 15000
   level: null
   themes: []
   decided: {}
@@ -43,7 +42,7 @@
   gen_sg: [Quadratmeters]
   ru: квадратный метр
   en: square metre, square meter
-  freq: 15000
+  freq: 16000
   level: B1
   themes: []
   decided: {}
@@ -81,7 +80,7 @@
   gen_sg: [Quelle]
   ru: источник, родник
   en: spring
-  freq: 4000
+  freq: 5000
   level: B1
   themes: []
   decided: {}

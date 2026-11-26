@@ -49,12 +49,11 @@
   skip: {}
 - id: n:Jeans:2
   lemma: Jeans
-  sense: джинсы
   gender: [n]
   plural: []
   gen_sg: [Jeans]
-  ru: джинсы
-  en: denim trousers
+  ru: null
+  en: null
   freq: 5000
   level: null
   themes: []
@@ -163,7 +162,7 @@
   gen_sg: [Justiz]
   ru: правосудие
   en: justice
-  freq: 9000
+  freq: 8000
   level: B1
   themes: []
   decided: {}

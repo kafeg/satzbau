@@ -114,6 +114,26 @@ def check_noun(w, ev, err, warn):
         err('freq', w, f'{w["freq"]} ≠ {srcs.bucket(ev.get("rank"))} по рангу {ev.get("rank")}')
 
 
+BY = re.compile(r'tatoeba:\d+|llm:[\w.-]+:\d{4}-\d{2}-\d{2}')
+
+
+def check_sentences(ids, errors):
+    """Фраза: есть перевод, у каждого перевода — откуда он; токены ссылаются на существующие записи."""
+    n = 0
+    for p in sorted(glob.glob(os.path.join(ROOT, 'sentences', 'tatoeba', '*.jsonl'))):
+        for line in open(p, encoding='utf-8'):
+            s, n = json.loads(line), n + 1
+            if not s.get('de') or not (s.get('ru') or s.get('en')):
+                errors['sentence'].append(f'{s.get("id")}: нет текста или перевода')
+            for lang in ('ru', 'en'):
+                if lang in s and not BY.fullmatch(s.get(f'{lang}_by', '')):
+                    errors['sentence'].append(f'{s["id"]}: {lang}_by «{s.get(f"{lang}_by")}»')
+            for t in s.get('tok', []):
+                if t[4] not in (None, '?') and t[4] not in ids:
+                    errors['sentence-ref'].append(f'{s["id"]}: {t[0]} → {t[4]}')
+    return n
+
+
 def main():
     verbose = '-v' in sys.argv
     errors, warnings = collections.defaultdict(list), collections.defaultdict(list)
@@ -131,8 +151,9 @@ def main():
         # вне курса (level: null) — справочные значения из dewikt: строгая проверка только у курса
         soft = w.get('level') is None
         check_noun(w, ev.get(w.get('lemma')), warn if soft else err, warn)
+    n = check_sentences(set(ids), errors)
     levels = collections.Counter(w.get('level') for w in nouns)
-    print(f'существительных: {len(nouns)} (A1 {levels["A1"]}, A2 {levels["A2"]}, B1 {levels["B1"]}, вне курса {levels[None]})')
+    print(f'существительных: {len(nouns)} (A1 {levels["A1"]}, A2 {levels["A2"]}, B1 {levels["B1"]}, вне курса {levels[None]}); фраз: {n}')
     total = sum(map(len, errors.values()))
     for kind, xs in sorted(warnings.items()):
         print(f'предупреждение {kind}: {len(xs)}')

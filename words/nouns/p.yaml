@@ -109,12 +109,11 @@
   skip: {}
 - id: n:Panne:2
   lemma: Panne
-  sense: авария  в пути
   gender: [m]
   plural: [Pannes]
   gen_sg: [Panne, Pannes]
-  ru: авария  в пути, срыв
-  en: breakdown
+  ru: null
+  en: null
   freq: 10000
   level: null
   themes: []
@@ -128,20 +127,19 @@
   gen_sg: [Papas]
   ru: папа
   en: daddy, dad
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Papa:2
   lemma: Papa
-  sense: разг. папа
   gender: [m]
   plural: [Papas]
   gen_sg: [Papas]
-  ru: разг. папа
+  ru: null
   en: pope
-  freq: 2000
+  freq: 1000
   level: null
   themes: []
   decided: {}
@@ -249,7 +247,7 @@
   gen_sg: [Partners]
   ru: партнёр
   en: associate
-  freq: 2000
+  freq: 1000
   level: A2
   themes: []
   decided: {}
@@ -273,7 +271,7 @@
   gen_sg: [Party]
   ru: вечеринка
   en: party, do
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -285,7 +283,7 @@
   gen_sg: [Passes]
   ru: паспорт
   en: passport
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -353,12 +351,11 @@
   skip: {}
 - id: n:Pause:2
   lemma: Pause
-  sense: пауза
   gender: [f]
   plural: [Pausen]
   gen_sg: [Pause]
-  ru: пауза, перерыв
-  en: pause
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -395,7 +392,7 @@
   gen_sg: [Person]
   ru: лицо, человек
   en: person
-  freq: 800
+  freq: 700
   level: A1
   themes: []
   decided: {}
@@ -419,7 +416,7 @@
   gen_sg: [Pfanne]
   ru: сковорода
   en: pan
-  freq: 8000
+  freq: 9000
   level: A2
   themes: []
   decided: {}
@@ -431,7 +428,7 @@
   gen_sg: [Pfeffers]
   ru: перец
   en: pepper
-  freq: 16000
+  freq: 15000
   level: A1
   themes: []
   decided: {}
@@ -443,7 +440,7 @@
   gen_sg: [Pfeife]
   ru: свисток
   en: whistle, pipe
-  freq: 6000
+  freq: 5000
   level: B1
   themes: []
   decided: {}
@@ -515,7 +512,7 @@
   gen_sg: [Pflege]
   ru: уход
   en: care, nursing
-  freq: 13000
+  freq: 12000
   level: A1
   themes: []
   decided: {}
@@ -587,7 +584,7 @@
   gen_sg: [Physiotherapie]
   ru: физиотерапия
   en: physiotherapy, physical therapy
-  freq: 24000
+  freq: 23000
   level: B1
   themes: []
   decided: {}
@@ -599,7 +596,7 @@
   gen_sg: [Pianisten]
   ru: пианист
   en: pianist
-  freq: 17000
+  freq: 16000
   level: A1
   themes: []
   decided: {}
@@ -612,33 +609,31 @@
   gen_sg: [Pickels]
   ru: прыщ
   en: pimple, blain
-  freq: 12000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
   skip: {}
 - id: n:Pickel:2
   lemma: Pickel
-  sense: прыщ
   gender: [m]
   plural: [Pickel]
   gen_sg: [Pickels]
-  ru: прыщ
+  ru: null
   en: pickaxe, pick-axe
-  freq: 12000
+  freq: 11000
   level: null
   themes: []
   decided: {}
   skip: {}
 - id: n:Pickel:3
   lemma: Pickel
-  sense: прыщ
   gender: [m]
   plural: [Pickel]
   gen_sg: [Pickels]
-  ru: прыщ
-  en: pickaxe, icepick
-  freq: 12000
+  ru: null
+  en: null
+  freq: 11000
   level: null
   themes: []
   decided: {}
@@ -710,7 +705,7 @@
   gen_sg: [Platte]
   ru: доска, плита
   en: plate
-  freq: 7000
+  freq: 6000
   level: B1
   themes: []
   decided: {}
@@ -722,7 +717,7 @@
   gen_sg: [Platzes]
   ru: площадь
   en: circus, square
-  freq: 1000
+  freq: 900
   level: A1
   themes: []
   decided: {}
@@ -818,7 +813,7 @@
   gen_sg: [Polizei]
   ru: полиция
   en: police
-  freq: 500
+  freq: 400
   level: A1
   themes: []
   decided: {}
@@ -854,7 +849,7 @@
   gen_sg: [Polizisten]
   ru: полицейский
   en: police officer, policeman
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -952,7 +947,7 @@
   gen_sg: [Postamtes, Postamts]
   ru: почтамт
   en: post office
-  freq: 15000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -964,7 +959,7 @@
   gen_sg: [Postboten]
   ru: почтальон
   en: postman, mailman
-  freq: 12000
+  freq: 11000
   level: A1
   themes: []
   decided: {}
@@ -1072,7 +1067,7 @@
   gen_sg: [Poststempels]
   ru: почтовый штамп
   en: postmarking device
-  freq: 43000
+  freq: 42000
   level: A2
   themes: []
   decided: {}
@@ -1156,7 +1151,7 @@
   gen_sg: [Pressefreiheit]
   ru: свобода печати
   en: press freedom
-  freq: 33000
+  freq: 32000
   level: B1
   themes: []
   decided: {}
@@ -1372,7 +1367,7 @@
   gen_sg: [Päckchens]
   ru: небольшая розничная упаковка, почт. малогабаритная посылка
   en: small packet, parcel
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}

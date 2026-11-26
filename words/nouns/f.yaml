@@ -5,7 +5,7 @@
   gen_sg: [Fachs, Faches]
   ru: предмет
   en: compartment
-  freq: 12000
+  freq: 10000
   level: A1
   themes: []
   decided: {}
@@ -17,7 +17,7 @@
   gen_sg: [Facharztes]
   ru: врач-специалист
   en: specialist
-  freq: 31000
+  freq: 30000
   level: A2
   themes: []
   decided: {}
@@ -65,7 +65,7 @@
   gen_sg: [Fahrersitzes]
   ru: сиденье водителя машины, устар. козлы
   en: driver's seat
-  freq: 28000
+  freq: 27000
   level: A1
   themes: []
   decided: {}
@@ -149,7 +149,7 @@
   gen_sg: [Fahrrades, Fahrrads]
   ru: велосипед
   en: bicycle, pedal cycle
-  freq: 3000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -245,7 +245,7 @@
   gen_sg: [Familie]
   ru: семья
   en: family
-  freq: 400
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -317,7 +317,7 @@
   gen_sg: [Fax]
   ru: факс
   en: fax
-  freq: 18000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -329,7 +329,7 @@
   gen_sg: [Fazits]
   ru: итог
   en: conclusion, result
-  freq: 23000
+  freq: 22000
   level: B1
   themes: []
   decided: {}
@@ -353,7 +353,7 @@
   gen_sg: [Fehlers]
   ru: ошибка
   en: error, mistake
-  freq: 700
+  freq: 600
   level: A1
   themes: []
   decided: {}
@@ -401,7 +401,7 @@
   gen_sg: [Feiertages, Feiertags]
   ru: праздник, празднество
   en: holiday
-  freq: 6000
+  freq: 5000
   level: A2
   themes: []
   decided: {}
@@ -421,12 +421,11 @@
   skip: {}
 - id: n:Feld:2
   lemma: Feld
-  sense: поле
   gender: [n]
   plural: [Felder, Felde, Felden]
   gen_sg: [Feldes, Felds]
-  ru: поле, пашня
-  en: field
+  ru: null
+  en: null
   freq: 3000
   level: null
   themes: []
@@ -523,7 +522,7 @@
   gen_sg: [Festes, Fests]
   ru: праздник
   en: feast, festival
-  freq: 1000
+  freq: 900
   level: A1
   themes: []
   decided: {}
@@ -535,7 +534,7 @@
   gen_sg: [Festessens]
   ru: банкет, званый обед
   en: banquet
-  freq: 19000
+  freq: 18000
   level: B1
   themes: []
   decided: {}
@@ -583,7 +582,7 @@
   gen_sg: [Feuers]
   ru: огонь, пламя
   en: fire
-  freq: 2000
+  freq: 1000
   level: A1
   themes: []
   decided: {}
@@ -739,7 +738,7 @@
   gen_sg: [Fischs, Fisches]
   ru: рыба
   en: fish
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -835,7 +834,7 @@
   gen_sg: [Flohmarktes, Flohmarkts]
   ru: блошиный рынок
   en: flea market
-  freq: 15000
+  freq: 14000
   level: B1
   themes: []
   decided: {}
@@ -847,7 +846,7 @@
   gen_sg: [Fluchtweges, Fluchtwegs]
   ru: путь отхода, запасный выход
   en: escape route
-  freq: 13000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -871,7 +870,7 @@
   gen_sg: [Flughafens]
   ru: аэропорт
   en: airport
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
@@ -903,12 +902,11 @@
   skip: {}
 - id: n:Flur:2
   lemma: Flur
-  sense: передняя
   gender: [f]
   plural: [Fluren]
   gen_sg: [Flur]
-  ru: передняя, прихожая
-  en: farmland, field
+  ru: null
+  en: field, farmland
   freq: 4000
   level: null
   themes: []
@@ -933,7 +931,7 @@
   gen_sg: [Fläche]
   ru: площадь
   en: surface, area
-  freq: 6000
+  freq: 14000
   level: A2
   themes: []
   decided: {}
@@ -945,7 +943,7 @@
   gen_sg: [Flöte]
   ru: флейта
   en: flute, whistle
-  freq: 17000
+  freq: 14000
   level: A1
   themes: []
   decided: {}
@@ -1005,7 +1003,7 @@
   gen_sg: [Formulars]
   ru: формуляр, бланк
   en: form
-  freq: 7000
+  freq: 6000
   level: A1
   themes: []
   decided: {}
@@ -1017,7 +1015,7 @@
   gen_sg: [Fortbildung]
   ru: повышение квалификации
   en: further education
-  freq: 42000
+  freq: 41000
   level: B1
   themes: []
   decided: {}
@@ -1042,20 +1040,19 @@
   gen_sg: [Fotos, Foto]
   ru: фото
   en: photo, photography
-  freq: 900
+  freq: 700
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Foto:2
   lemma: Foto
-  sense: фото
   gender: [m]
   plural: [Fotos]
   gen_sg: [Fotos]
-  ru: фото
-  en: camera
-  freq: 900
+  ru: null
+  en: null
+  freq: 700
   level: null
   themes: []
   decided: {}
@@ -1091,7 +1088,7 @@
   gen_sg: [Fouls]
   ru: null
   en: foul
-  freq: 20000
+  freq: 19000
   level: B1
   themes: []
   decided: {}
@@ -1176,20 +1173,19 @@
   gen_sg: [Freitags, Freitages]
   ru: пятница
   en: Friday
-  freq: 3000
+  freq: 2000
   level: A1
   themes: []
   decided: {}
   skip: {}
 - id: n:Freitag:2
   lemma: Freitag
-  sense: пятница
   gender: [m]
   plural: [Freitage]
   gen_sg: [Freitags, Freitages]
-  ru: пятница
+  ru: null
   en: day off, day of leave
-  freq: 3000
+  freq: 2000
   level: null
   themes: []
   decided: {}
@@ -1321,7 +1317,7 @@
   gen_sg: [Frist]
   ru: срок
   en: period, respite
-  freq: 17000
+  freq: 16000
   level: B1
   themes: []
   decided: {}
@@ -1357,7 +1353,7 @@
   gen_sg: [Froschs, Frosches]
   ru: лягушка
   en: frog
-  freq: 6000
+  freq: 4000
   level: A1
   themes: []
   decided: {}
@@ -1429,7 +1425,7 @@
   gen_sg: [Fußes]
   ru: ступня, нога
   en: foot
-  freq: 2000
+  freq: 900
   level: A1
   themes: []
   decided: {}
@@ -1501,7 +1497,7 @@
   gen_sg: [Förderung]
   ru: поддержка, в особенности финансовая
   en: promotion
-  freq: 21000
+  freq: 20000
   level: B1
   themes: []
   decided: {}
