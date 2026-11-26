@@ -10,10 +10,12 @@ import { type Answer, LEVELS, type Level } from '../core/types.ts'
 import { type Data, load } from '../store/db.ts'
 import * as journal from '../store/journal.ts'
 import { download, parse } from '../store/transfer.ts'
-import { type Check, Home } from './Home.tsx'
+import { Home } from './Home.tsx'
 import { Lesson } from './Lesson.tsx'
+import { TabBar } from './Nav.tsx'
+import { Pick } from './Pick.tsx'
+import { type Check, Progress } from './Progress.tsx'
 import { Result } from './Result.tsx'
-import { Themes } from './Themes.tsx'
 
 // выбор пользователя — удобство, а не прогресс: не запомнился — значения по умолчанию
 function saved(key: string): string | null {
@@ -38,7 +40,7 @@ const savedLevel = (): Level => {
 }
 
 // only — урок одного упражнения; без него — все вперемешку
-type Screen = { k: 'home' } | { k: 'themes' } | { k: 'lesson'; lesson: L; only?: string } | { k: 'result'; lesson: L; only?: string }
+type Screen = { k: 'home' } | { k: 'pick' } | { k: 'progress' } | { k: 'lesson'; lesson: L; only?: string } | { k: 'result'; lesson: L; only?: string }
 
 export function App() {
   const [data, setData] = useState<Data | null>(null)
@@ -149,14 +151,15 @@ export function App() {
   if (error) return <main className="home"><h1>der Satzbau</h1><p className="sub">Не удалось открыть базу: {error}</p></main>
   if (!data || !mem) return <main className="home"><h1>der Satzbau</h1><p className="sub">Загружаю базу…</p></main>
 
-  if (screen.k === 'themes')
+  if (screen.k === 'pick')
     return (
-      <Themes
+      <Pick
         nouns={data.nouns}
         themes={data.themes}
         level={level}
         mem={mem}
         theme={theme ? themeId : ''}
+        onLevel={choose}
         onPick={(id) => {
           setThemeId(id)
           save('theme', id)
@@ -194,21 +197,42 @@ export function App() {
       />
     )
 
+  const title = theme?.title ?? 'Все темы'
+  const tabs = <TabBar tab={screen.k === 'progress' ? 'progress' : 'learn'} onTab={(t) => setScreen({ k: t === 'progress' ? 'progress' : 'home' })} />
+
+  if (screen.k === 'progress')
+    return (
+      <>
+        <Progress
+          level={level}
+          theme={title}
+          ov={ov}
+          each={each}
+          attribution={data.meta.attribution ?? ''}
+          stored={stored}
+          notice={notice}
+          update={{ fresh, check, onCheck: () => void recheck(), onApply: () => void updateServiceWorker() }}
+          onExport={() => download(answers)}
+          onImport={restore}
+          onBack={() => setScreen({ k: 'home' })}
+        />
+        {tabs}
+      </>
+    )
+
   return (
-    <Home
-      data={data}
-      level={level}
-      onLevel={choose}
-      ov={ov}
-      each={each}
-      theme={theme?.title ?? 'Все темы'}
-      onThemes={() => setScreen({ k: 'themes' })}
-      onStart={begin}
-      stored={stored}
-      notice={notice}
-      update={{ fresh, check, onCheck: () => void recheck(), onApply: () => void updateServiceWorker() }}
-      onExport={() => download(answers)}
-      onImport={restore}
-    />
+    <>
+      <Home
+        level={level}
+        theme={title}
+        ov={ov}
+        each={each}
+        onPick={() => setScreen({ k: 'pick' })}
+        onProgress={() => setScreen({ k: 'progress' })}
+        onStart={begin}
+        onUpdate={fresh ? () => void updateServiceWorker() : null}
+      />
+      {tabs}
+    </>
   )
 }
