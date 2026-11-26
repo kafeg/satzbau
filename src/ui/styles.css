@@ -516,12 +516,14 @@ button.exr:not(:disabled):active {
 /* сроков бывает больше, чем влезает в строку: переносятся, а не вылезают за экран */
 .plan {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
   gap: var(--s2);
 }
 
 .plan span {
-  white-space: nowrap;
+  display: block;
+  line-height: 1.25;
+  white-space: pre-line;
 }
 
 .list li.mistake {

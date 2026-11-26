@@ -38,7 +38,8 @@ export function Result({ lesson, mem, now, onMore, onHome }: Props) {
           {[...plan].sort((a, b) => a[0] - b[0]).map(([d, n]) => (
             <div key={d}>
               <b>{n}</b>
-              <span>{when(d)}</span>
+              {/* «через 16 дней» — в две строки: плитки узкие, а срок не обрезается */}
+              <span>{when(d).replace('через ', 'через\n')}</span>
             </div>
           ))}
         </div>
