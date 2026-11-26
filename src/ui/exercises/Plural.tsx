@@ -3,7 +3,7 @@
 import { LABEL, type Parse, type Pl, parse, right, typeLabel, typesFor } from '../../core/exercises/plural.ts'
 import type { Noun } from '../../core/types.ts'
 import { Art } from '../answer/Art.tsx'
-import type { View } from './index.ts'
+import type { Note, View } from './index.ts'
 
 
 // тип на кнопке: знак умлаута крупнее и цветом — мелкие две точки над чёрточкой читались как прочерк
@@ -45,10 +45,10 @@ function how(lemma: string, p: Parse): string {
 }
 
 // при ошибке — как образована верная форма (верная кнопка отмечена «верно»); если окончание угадано — чего не хватило
-function note(w: Noun, a: Pl): string {
+function note(w: Noun, a: Pl): Note {
   const [, p] = shown(w, null)
-  if (p.end !== a.end) return how(w.lemma, p)
-  return p.uml ? 'окончание угадал, не хватило умлаута' : 'окончание угадал, умлаут здесь не нужен'
+  if (p.end !== a.end) return { text: how(w.lemma, p), kind: 'form' }
+  return { text: p.uml ? 'окончание угадал, не хватило умлаута' : 'окончание угадал, умлаут здесь не нужен', kind: 'answer' }
 }
 
 export const plural: View<Pl> = {

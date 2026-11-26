@@ -7,9 +7,13 @@ import type { RuleView } from '../answer/Rule.tsx'
 import { gender } from './Gender.tsx'
 import { plural } from './Plural.tsx'
 
-// разбор слова: формы, заметка об ответе, как показать правило (null — не показывать: правило судит о другой
+// заметка в карточке объяснения, простыми словами — первой строкой, над правилом: answer — про ответ
+// человека («окончание угадал…»), form — как образована форма («без окончания, только умлаут a → ä»)
+export type Note = { text: string; kind: 'answer' | 'form' }
+
+// разбор слова: формы, заметка, как показать правило (null — не показывать: правило судит о другой
 // форме, чем показана), число для примера, цвет слова в примере
-export type Facts = { forms: ReactNode; note?: string; rule: RuleView | null; number: 'sg' | 'pl'; mark: string }
+export type Facts = { forms: ReactNode; note?: Note; rule: RuleView | null; number: 'sg' | 'pl'; mark: string }
 
 export type View<A = never> = {
   // варианты ответа по порядку клавиш 1…N; tone — цвет варианта; show — подпись, если не просто текстом

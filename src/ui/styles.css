@@ -1043,11 +1043,6 @@ button.exr:not(:disabled):active {
   text-underline-offset: 3px;
 }
 
-.wf .note {
-  margin: -4px 0 0;
-  font-size: var(--fs-sub);
-  color: var(--text-2);
-}
 
 @keyframes sheet-in {
   from {
@@ -1290,6 +1285,10 @@ main.themes > * + * {
 
 .hint-rule .line.off {
   color: var(--text-2);
+}
+
+.hint-rule .lead {
+  font-size: var(--fs-body);
 }
 
 .hint-rule .kind {

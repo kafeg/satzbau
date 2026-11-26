@@ -30,14 +30,17 @@ function Line({ text }: { text: string }) {
   )
 }
 
-export function Rule({ hint, view }: { hint: Hint; view: RuleView }) {
+// lead — то же простыми словами («без окончания, только умлаут a → ä»), первой строкой той же карточки;
+// с ним «а здесь …» у исключения не повторяем
+export function Rule({ hint, view, lead }: { hint: Hint; view: RuleView; lead?: string | null }) {
   const lvl = level(hint.share)
   const kind = hint.head ? 'сложное слово' : hint.ok ? null : 'исключение из правила'
   return (
     <div className="hint-rule">
+      {lead && <p className="lead">{lead}</p>}
       {kind && <p className="kind">{kind}</p>}
       <p className={`line ${hint.ok || hint.head ? '' : 'off'}`}>{hint.head ? view.part(hint.head) : <Line text={hint.text} />}</p>
-      {hint.head ? <p className="why">{view.why}</p> : !hint.ok && <p className="why">а здесь {view.own}</p>}
+      {hint.head ? <p className="why">{view.why}</p> : !hint.ok && !lead && <p className="why">а здесь {view.own}</p>}
       <details className="src">
         <summary title={`${percent(hint.share)} из ${hint.n} слов словаря · источники`}>
           {level(hint.share)} · {percent(hint.share)}
