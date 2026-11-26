@@ -63,12 +63,12 @@
   gender: [m]
   plural: [Raps]
   gen_sg: [Raps, Rap]
-  ru: null
+  ru: рэп
   en: rap
   freq: 19000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rasierer
   lemma: Rasierer
@@ -472,12 +472,12 @@
   gender: [f]
   plural: [Reisegruppen]
   gen_sg: [Reisegruppe]
-  ru: null
-  en: null
+  ru: туристическая группа
+  en: tour group
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Reisepass
   lemma: Reisepass
@@ -604,12 +604,12 @@
   gender: [f]
   plural: [Ressourcen]
   gen_sg: [Ressource]
-  ru: null
+  ru: ресурс
   en: resource
   freq: 7000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rest
   lemma: Rest
@@ -640,12 +640,12 @@
   gender: [f]
   plural: [Retouren]
   gen_sg: [Retoure]
-  ru: null
+  ru: возврат товара
   en: return
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rettung
   lemma: Rettung
@@ -736,12 +736,12 @@
   gender: [m]
   plural: [Richtwerte]
   gen_sg: [Richtwertes, Richtwerts]
-  ru: null
+  ru: ориентировочное значение
   en: guidance level, guide level
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Ring
   lemma: Ring
@@ -903,6 +903,19 @@
   themes: []
   decided: {}
   skip: {}
+- id: n:Rollstuhlzugang
+  lemma: Rollstuhlzugang
+  compound: Zugang
+  gender: [m]
+  plural: [Rollstuhlzugänge]
+  gen_sg: [Rollstuhlzugangs, Rollstuhlzuganges]
+  ru: доступ для инвалидной коляски
+  en: wheelchair access
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
+  skip: {}
 - id: n:Roman
   lemma: Roman
   gender: [m]
@@ -935,7 +948,7 @@
   gen_sg: [Rostes, Rosts]
   ru: ржавчина
   en: rust
-  freq: 17000
+  freq: 19000
   level: B1
   themes: []
   decided: {}
@@ -947,7 +960,7 @@
   gen_sg: [Rostes, Rosts]
   ru: null
   en: grill, grid
-  freq: 17000
+  freq: 19000
   level: null
   themes: []
   decided: {}
@@ -1126,11 +1139,11 @@
   plural: [Rücksendungen]
   gen_sg: [Rücksendung]
   ru: отсылка  назад, возвращение
-  en: null
+  en: return shipment
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Rücksicht
   lemma: Rücksicht
@@ -1161,10 +1174,10 @@
   gender: [m]
   plural: [Rückspiegel]
   gen_sg: [Rückspiegels]
-  ru: null
+  ru: зеркало заднего вида
   en: rear-view mirror
   freq: 21000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}

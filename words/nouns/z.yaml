@@ -136,12 +136,12 @@
   gender: [n, m]
   plural: [Zehntel]
   gen_sg: [Zehntels]
-  ru: null
+  ru: десятая часть
   en: tenth
   freq: 28000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zehntel:2
   lemma: Zehntel
@@ -499,12 +499,12 @@
   gender: [n]
   plural: [Zollämter]
   gen_sg: [Zollamtes, Zollamts]
-  ru: null
+  ru: таможня
   en: customs office, custom office
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zollstock
   lemma: Zollstock
@@ -691,12 +691,12 @@
   gender: [f]
   plural: [Zustellerinnen]
   gen_sg: [Zustellerin]
-  ru: null
+  ru: почтальонша, курьер
   en: delivery agent, deliveryman
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zustellung
   lemma: Zustellung
@@ -848,11 +848,11 @@
   plural: [Zwischenrufe]
   gen_sg: [Zwischenrufes, Zwischenrufs]
   ru: реплика
-  en: null
+  en: heckle, interjection
   freq: 48000
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Zündkerze
   lemma: Zündkerze

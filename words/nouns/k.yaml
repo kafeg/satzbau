@@ -432,7 +432,7 @@
   freq: 4000
   level: A1
   themes: []
-  decided: {}
+  decided: {gen_sg: 'dewikt: des Kilos; enwikt даёт несклоняемое des Kilo — верим dewikt'}
   skip: {}
 - id: n:Kilogramm
   lemma: Kilogramm
@@ -487,12 +487,12 @@
   gender: [n]
   plural: [Kindergelder]
   gen_sg: [Kindergeldes, Kindergelds]
-  ru: null
+  ru: детское пособие
   en: child benefit
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kinderwagen
   lemma: Kinderwagen
@@ -620,12 +620,12 @@
   gender: [m]
   plural: [Kitaplätze]
   gen_sg: [Kitaplatzes]
-  ru: null
-  en: null
+  ru: место в детском саду
+  en: daycare place
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kiwi
   lemma: Kiwi
@@ -636,7 +636,7 @@
   ru: киви
   en: kiwi
   freq: 28000
-  level: A1
+  level: null
   themes: []
   decided: {}
   skip: {}
@@ -649,7 +649,7 @@
   ru: киви
   en: kiwi
   freq: 28000
-  level: null
+  level: A1
   themes: []
   decided: {}
   skip: {}
@@ -718,12 +718,12 @@
   gender: [m]
   plural: [Klebestreifen]
   gen_sg: [Klebestreifens]
-  ru: null
+  ru: клейкая лента, скотч
   en: adhesive tape
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kleid
   lemma: Kleid
@@ -971,12 +971,12 @@
   gender: [n]
   plural: []
   gen_sg: [Konfettis, Konfetti]
-  ru: null
+  ru: конфетти
   en: confetti
   freq: 25000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Konflikt
   lemma: Konflikt
@@ -1019,12 +1019,12 @@
   gender: [m]
   plural: [Kontoauszüge]
   gen_sg: [Kontoauszugs, Kontoauszuges]
-  ru: null
+  ru: выписка со счёта
   en: bank statement, account statement
   freq: 24000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Konzert
   lemma: Konzert
@@ -1057,7 +1057,7 @@
   gen_sg: [Kopfhörers]
   ru: наушник
   en: headphone
-  freq: 10000
+  freq: 11000
   level: A2
   themes: []
   decided: {}
@@ -1176,11 +1176,11 @@
   plural: [Krankentransporte]
   gen_sg: [Krankentransports, Krankentransportes]
   ru: перевозка больных
-  en: null
+  en: patient transport
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Krankenwagen
   lemma: Krankenwagen
@@ -1199,24 +1199,24 @@
   gender: [f]
   plural: [Krankmeldungen]
   gen_sg: [Krankmeldung]
-  ru: null
+  ru: сообщение о болезни
   en: notification of illness
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Krankschreibung
   lemma: Krankschreibung
   gender: [f]
   plural: [Krankschreibungen]
   gen_sg: [Krankschreibung]
-  ru: null
+  ru: больничный
   en: sick certificate
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Kratzer
   lemma: Kratzer
@@ -1345,12 +1345,12 @@
   gender: [m]
   plural: [Kritikpunkte]
   gen_sg: [Kritikpunktes, Kritikpunkts]
-  ru: null
+  ru: предмет критики
   en: point of criticism
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Krokodil
   lemma: Krokodil
@@ -1685,12 +1685,12 @@
   gender: [f]
   plural: [Kündigungsfristen]
   gen_sg: [Kündigungsfrist]
-  ru: null
+  ru: срок уведомления о расторжении
   en: notice period
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Künstler
   lemma: Künstler

@@ -8,7 +8,7 @@
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {gen_sg: 'dewikt: des Oberleitungsbusses; ruwikt: -buses — верим dewikt'}
   skip: {}
 - id: n:Obst
   lemma: Obst
@@ -28,11 +28,11 @@
   plural: [Obusse]
   gen_sg: [Obusses]
   ru: троллейбус
-  en: null
+  en: trolleybus
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', gen_sg: 'dewikt: des Obusses; ruwikt: Obuses — верим dewikt'}
   skip: {}
 - id: n:Ohr
   lemma: Ohr
@@ -231,12 +231,12 @@
   gender: [m]
   plural: [Ölwechsel]
   gen_sg: [Ölwechsels]
-  ru: null
-  en: null
+  ru: замена масла
+  en: oil change
   freq: 27000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Österreich
   lemma: Österreich

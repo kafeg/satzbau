@@ -87,12 +87,12 @@
   gender: [m]
   plural: [Verbandskästen, Verbandskasten]
   gen_sg: [Verbandskastens]
-  ru: null
+  ru: аптечка
   en: first aid kit
   freq: 37000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Verbindung
   lemma: Verbindung
@@ -219,12 +219,12 @@
   gender: [f]
   plural: [Verkehrskontrollen]
   gen_sg: [Verkehrskontrolle]
-  ru: null
+  ru: проверка на дороге
   en: traffic stop
   freq: 34000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Verkäufer
   lemma: Verkäufer

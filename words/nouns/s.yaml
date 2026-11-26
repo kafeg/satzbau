@@ -27,12 +27,12 @@
   gender: [f]
   plural: [Sachbearbeiterinnen]
   gen_sg: [Sachbearbeiterin]
-  ru: null
-  en: null
+  ru: сотрудница, ведущая дело
+  en: clerk, caseworker
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sachbeschädigung
   lemma: Sachbeschädigung
@@ -64,11 +64,11 @@
   plural: [Sachstände]
   gen_sg: [Sachstands, Sachstandes]
   ru: положение дел
-  en: null
+  en: state of affairs
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Saft
   lemma: Saft
@@ -605,12 +605,12 @@
   gender: [f]
   plural: [Schlichtungen]
   gen_sg: [Schlichtung]
-  ru: null
+  ru: примирительная процедура
   en: mediation, arbitration
   freq: 48000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Schlittschuh
   lemma: Schlittschuh
@@ -707,6 +707,19 @@
   level: A1
   themes: []
   decided: {}
+  skip: {}
+- id: n:Schnellbahnplan
+  lemma: Schnellbahnplan
+  compound: Plan
+  gender: [m]
+  plural: [Schnellbahnpläne]
+  gen_sg: [Schnellbahnplans, Schnellbahnplanes]
+  ru: схема линий городской электрички
+  en: S-Bahn map
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Schnittstelle
   lemma: Schnittstelle
@@ -968,12 +981,12 @@
   gender: [f]
   plural: [Schulden]
   gen_sg: []
-  ru: null
+  ru: долги
   en: debt, debts
   freq: 600
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Schule
   lemma: Schule
@@ -1294,12 +1307,12 @@
   gender: [f]
   plural: [Sendungsverfolgungen]
   gen_sg: [Sendungsverfolgung]
-  ru: null
+  ru: отслеживание отправления
   en: track and trace
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Senf
   lemma: Senf
@@ -1355,12 +1368,12 @@
   plural: [Shorts]
   gen_sg: []
   number: pl
-  ru: null
+  ru: шорты
   en: shorts
   freq: 11000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sicherheitsgurt
   lemma: Sicherheitsgurt
@@ -1727,12 +1740,12 @@
   gender: [f]
   plural: [Spannen]
   gen_sg: [Spanne]
-  ru: null
+  ru: промежуток, диапазон
   en: span
   freq: 26000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Spannung
   lemma: Spannung
@@ -1944,11 +1957,11 @@
   plural: [Spielstände]
   gen_sg: [Spielstandes, Spielstands]
   ru: спорт. счёт очков
-  en: null
+  en: score
   freq: 36000
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Spielzeug
   lemma: Spielzeug
@@ -2046,6 +2059,19 @@
   themes: []
   decided: {}
   skip: {}
+- id: n:Sportsaal
+  lemma: Sportsaal
+  compound: Saal
+  gender: [m]
+  plural: [Sportsäle]
+  gen_sg: [Sportsaals, Sportsaales]
+  ru: спортзал
+  en: gym, sports hall
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
+  skip: {}
 - id: n:Sprache
   lemma: Sprache
   gender: [f]
@@ -2075,12 +2101,12 @@
   gender: [m]
   plural: [Sprachkurse]
   gen_sg: [Sprachkurses]
-  ru: null
+  ru: языковые курсы
   en: language course
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sprachniveau
   lemma: Sprachniveau
@@ -2099,12 +2125,12 @@
   gender: [m]
   plural: [Sprachtests, Sprachteste]
   gen_sg: [Sprachtests, Sprachtestes]
-  ru: null
-  en: null
+  ru: языковой тест
+  en: language test
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Sprechstunde
   lemma: Sprechstunde
@@ -2837,11 +2863,11 @@
   plural: [Streitfälle]
   gen_sg: [Streitfalls, Streitfalles]
   ru: спорный случай
-  en: null
+  en: dispute
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Stress
   lemma: Stress
@@ -2992,12 +3018,12 @@
   gender: [m]
   plural: [Stückpreise]
   gen_sg: [Stückpreises]
-  ru: null
-  en: null
+  ru: цена за штуку
+  en: unit price
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Stückzahl
   lemma: Stückzahl
@@ -3136,12 +3162,12 @@
   gender: [m]
   plural: [Südpole]
   gen_sg: [Südpols, Südpoles]
-  ru: null
+  ru: Южный полюс
   en: South Pole, south pole
   freq: 27000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Südwesten
   lemma: Südwesten

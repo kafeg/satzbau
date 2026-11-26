@@ -32,6 +32,9 @@ def pass_dewikt(lemmas):
     entries, forms = collections.defaultdict(list), collections.defaultdict(set)
     for r in srcs.jsonl(srcs.raw('dewikt.jsonl.gz')):
         w, pos, tags = r['word'], r.get('pos'), r.get('tags') or []
+        # Pkw, U-Bahnhof у dewikt — сокращения, но с родом и формами существительного
+        if pos == 'abbrev' and 'noun' in tags and w in lemmas:
+            pos = 'noun'
         if pos not in WORD_POS:
             if pos == 'name' and w in lemmas:
                 pass
@@ -152,15 +155,46 @@ def pick_en(entry, lemma, enw, own):
     return ', '.join(xs[:2]) or None
 
 
-def match_v1(entries, lemma, v1ru, ruw, fd):
+def match_v1(entries, lemma, v1, ruw, fd):
     """Какую запись имел в виду ручной отбор v1: по совпадению его перевода с переводами самой
-    записи; выровненная запись ruwikt — только при равенстве (она не различает значения)."""
-    mine = {srcs.norm(x) for x in srcs.ru_items(v1ru or '')}
+    записи, потом по его роду (die Kiwi, das Trikot); выровненная запись ruwikt — последней."""
+    mine = {srcs.norm(x) for x in srcs.ru_items(v1.get('ru') or '')}
     def score(e):
         own = {srcs.norm(x) for v in e['ru'].values() for x in v}
         al = align(e, ruw.get(lemma, []))
-        return len(mine & own), len(mine & {srcs.norm(x) for x in (al['ru'] if al else [])})
+        return (len(mine & own), v1.get('g') in e['gender'],
+                len(mine & {srcs.norm(x) for x in (al['ru'] if al else [])}))
     return max(range(len(entries)), key=lambda i: (score(entries[i]), -i))
+
+
+def from_enwikt(lemma, enw):
+    """Леммы нет в dewikt: запись по enwikt — один источник, verify покажет предупреждения."""
+    x = enw[lemma][0]
+    return dict(gender=x['gender'], plural=x['plural'], gen_sg=x['gen_sg'], number='sg',
+                ru={}, en={}, de_gloss=[], pos='noun')
+
+
+def heads(lemmas):
+    """Возможные основные слова сложных слов: все окончания лемм от трёх букв, с большой буквы."""
+    return {t[0].upper() + t[1:] for w in lemmas for i in range(1, len(w) - 2) for t in [w[i:].lstrip('-')] if t}
+
+
+def compound(lemma, g, dew, other):
+    """Сложного слова нет ни в одном словаре: род и формы — от основного слова (последней части),
+    которое в dewikt есть. der Knopf, die Knöpfe → der Halteknopf, die Halteknöpfe."""
+    for i in range(1, len(lemma) - 2):
+        head = lemma[i].upper() + lemma[i + 1:]
+        if head in dew:
+            pre = lemma[:i]
+            def fix(x):
+                return pre + (x if pre.endswith('-') else x[0].lower() + x[1:])
+            def tr(e):
+                return dict(e, plural=[fix(x) for x in e['plural']], gen_sg=[fix(x) for x in e['gen_sg']],
+                            ru={} if isinstance(e.get('ru'), dict) else [], en={} if isinstance(e.get('en'), dict) else [],
+                            de_gloss=[])
+            es = [e for e in dew[head] if g in e['gender']] or dew[head][:1]
+            return head, tr(es[0]), {k: [tr(e) for e in v.get(head, [])] for k, v in other.items()}
+    return None
 
 
 def record(i, e, lemma, n_entries, seed_w, taught, other, ruw, enw, fd, rank):
@@ -206,14 +240,15 @@ def main():
     S = seed()
     lemmas = set(S)
     print(f'лемм в отборе v1: {len(lemmas)}', flush=True)
-    dew, forms = pass_dewikt(lemmas)
+    wanted = lemmas | heads(lemmas)
+    dew, forms = pass_dewikt(wanted)
     print(f'dewikt: записей {sum(map(len, dew.values()))} у {len(dew)} лемм; форм {len(forms)}', flush=True)
     os.makedirs(srcs.WORK, exist_ok=True)
     with gzip.open(os.path.join(srcs.WORK, 'forms.json.gz'), 'wt', encoding='utf-8') as f:
         json.dump({k: sorted(v, key=str) for k, v in forms.items()}, f, ensure_ascii=False)
-    enw = pass_other('kaikki-de.jsonl', lemmas, 'enwikt')
+    enw = pass_other('kaikki-de.jsonl', wanted, 'enwikt')
     print(f'enwikt: {len(enw)} лемм', flush=True)
-    ruw = pass_other('kaikki-ru-de.jsonl', lemmas, 'ruwikt')
+    ruw = pass_other('kaikki-ru-de.jsonl', wanted, 'ruwikt')
     print(f'ruwikt: {len(ruw)} лемм', flush=True)
     fd = srcs.freedict()
     lower = collections.defaultdict(set)
@@ -225,25 +260,41 @@ def main():
         json.dump(ranks, f, ensure_ascii=False)
 
     other = {'enwikt': enw, 'ruwikt': ruw}
-    records, missing = [], []
+    records, missing, compounds = [], [], []
     os.makedirs(os.path.join(ROOT, 'evidence'), exist_ok=True)
     ev = open(os.path.join(ROOT, 'evidence', 'nouns.jsonl'), 'w', encoding='utf-8')
     for lemma in sorted(lemmas, key=str.lower):
-        es = dew.get(lemma, [])
-        if not es:
-            missing.append(lemma)
-            continue
-        taught = match_v1(es, lemma, S[lemma].get('ru'), ruw, fd)
         rank = ranks.get(lemma.lower())
+        es, head = dew.get(lemma, []), None
+        enw_l, ruw_l = enw.get(lemma, []), ruw.get(lemma, [])
+        if not es and enw_l:
+            es = [from_enwikt(lemma, enw)]
+        elif not es:
+            c = compound(lemma, S[lemma].get('g'), dew, other)
+            if not c:
+                missing.append(lemma)
+                continue
+            head, e, oth = c
+            es, enw_l, ruw_l = [e], oth['enwikt'], oth['ruwikt']
+            compounds.append(f'{lemma} ← {head}')
+        taught = match_v1(es, lemma, S[lemma], ruw, fd)
         for i, e in enumerate(es):
-            records.append(record(i, e, lemma, len(es), S[lemma], i == taught, other, ruw, enw, fd, rank))
-        ev.write(json.dumps({'lemma': lemma,
-                             'dewikt': [{k: e[k] for k in ('gender', 'plural', 'gen_sg', 'number', 'ru', 'en', 'de_gloss')} for e in es],
-                             'enwikt': enw.get(lemma, []), 'ruwikt': ruw.get(lemma, []),
-                             'freedict': fd.get(lemma, []), 'rank': rank}, ensure_ascii=False) + '\n')
+            r = record(i, e, lemma, len(es), S[lemma], i == taught, other, ruw, enw, fd, rank)
+            if head:
+                r = {'id': r['id'], 'lemma': lemma, 'compound': head, **{k: v for k, v in r.items() if k not in ('id', 'lemma')}}
+            records.append(r)
+        # у сложного слова «dewikt» — записи основного слова с приставкой; у взятого из enwikt — пусто
+        line = {'lemma': lemma, 'dewikt': [{k: e[k] for k in ('gender', 'plural', 'gen_sg', 'number', 'ru', 'en', 'de_gloss')}
+                                           for e in es] if dew.get(lemma) or head else [],
+                'enwikt': enw_l, 'ruwikt': ruw_l, 'freedict': fd.get(lemma, []), 'rank': rank}
+        if head:
+            line['head'] = head
+        ev.write(json.dumps(line, ensure_ascii=False) + '\n')
     ev.close()
     dump_words(records)
-    print(f'записей: {len(records)}; лемм без записи в dewikt: {len(missing)}')
+    print(f'записей: {len(records)}; сложных слов по основному: {len(compounds)}; лемм без источника: {len(missing)}')
+    if compounds:
+        print('  ' + ', '.join(compounds))
     if missing:
         print('  ' + ', '.join(missing))
 

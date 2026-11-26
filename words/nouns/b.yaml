@@ -370,12 +370,12 @@
   gender: [m]
   plural: [Bauhelme]
   gen_sg: [Bauhelmes, Bauhelms]
-  ru: null
+  ru: строительная каска
   en: hard hat, construction helmet
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Baum
   lemma: Baum
@@ -419,11 +419,11 @@
   plural: [Bauschäume]
   gen_sg: [Bauschaumes, Bauschaums]
   ru: монтажная пена
-  en: null
+  en: expanding foam
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Baustelle
   lemma: Baustelle
@@ -455,23 +455,23 @@
   plural: [Bearbeitungszeiten]
   gen_sg: [Bearbeitungszeit]
   ru: время обработки
-  en: null
+  en: processing time
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bedenken
   lemma: Bedenken
   gender: [n]
   plural: [Bedenken]
   gen_sg: [Bedenkens]
-  ru: null
+  ru: сомнения, опасения
   en: consideration, reflection
   freq: 3000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bedienung
   lemma: Bedienung
@@ -610,24 +610,24 @@
   gender: [m]
   plural: [Behördengänge]
   gen_sg: [Behördengangs, Behördenganges]
-  ru: null
-  en: null
+  ru: поход в ведомство
+  en: visit to a public office
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Behördensprache
   lemma: Behördensprache
   gender: [f]
   plural: [Behördensprachen]
   gen_sg: [Behördensprache]
-  ru: null
-  en: null
+  ru: канцелярский язык
+  en: officialese
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Beilage
   lemma: Beilage
@@ -923,12 +923,12 @@
   plural: [Betriebskosten]
   gen_sg: []
   number: pl
-  ru: null
+  ru: эксплуатационные расходы
   en: overhead, overheads
   freq: 50000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Betriebsrat
   lemma: Betriebsrat
@@ -973,7 +973,7 @@
   gen_sg: [Bewegung]
   ru: движение, шевеление
   en: movement, move
-  freq: 900
+  freq: 1000
   level: A2
   themes: []
   decided: {}
@@ -995,12 +995,12 @@
   gender: [f]
   plural: [Beweislagen]
   gen_sg: [Beweislage]
-  ru: null
-  en: null
+  ru: доказательная база
+  en: body of evidence
   freq: 27000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Beweisstück
   lemma: Beweisstück
@@ -1443,11 +1443,11 @@
   plural: [Brandmelder]
   gen_sg: [Brandmelders]
   ru: пожарный датчик
-  en: null
+  en: smoke detector, fire alarm
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Brauch
   lemma: Brauch
@@ -1588,12 +1588,12 @@
   gender: [m]
   plural: [Briefkastenschlüssel]
   gen_sg: [Briefkastenschlüssels]
-  ru: null
-  en: null
+  ru: ключ от почтового ящика
+  en: mailbox key
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Briefmarke
   lemma: Briefmarke
@@ -1922,6 +1922,19 @@
   themes: []
   decided: {}
   skip: {}
+- id: n:Busführerschein
+  lemma: Busführerschein
+  compound: Führerschein
+  gender: [m]
+  plural: [Busführerscheine]
+  gen_sg: [Busführerscheines, Busführerscheins]
+  ru: права на автобус
+  en: bus driving licence
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
+  skip: {}
 - id: n:Bushaltestelle
   lemma: Bushaltestelle
   gender: [f]
@@ -1952,11 +1965,11 @@
   plural: [Busverbindungen]
   gen_sg: [Busverbindung]
   ru: автобусное сообщение
-  en: null
+  en: bus connection
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Butter
   lemma: Butter
@@ -2091,6 +2104,18 @@
   level: A2
   themes: []
   decided: {}
+  skip: {}
+- id: n:Bürgeramt
+  lemma: Bürgeramt
+  gender: [n]
+  plural: [Bürgerämter]
+  gen_sg: [Bürgeramtes, Bürgeramts]
+  ru: бюро по делам граждан
+  en: citizen's register office
+  freq: null
+  level: A2
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Bürgerinitiative
   lemma: Bürgerinitiative

@@ -75,12 +75,24 @@
   gender: [n]
   plural: [Abholfächer]
   gen_sg: [Abholfaches, Abholfachs]
-  ru: null
-  en: null
+  ru: ячейка выдачи
+  en: pickup locker
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
+  skip: {}
+- id: n:Abholung
+  lemma: Abholung
+  gender: [f]
+  plural: [Abholungen]
+  gen_sg: [Abholung]
+  ru: получение, самовывоз
+  en: collection, pickup
+  freq: 23000
+  level: A2
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Ablehnung
   lemma: Ablehnung
@@ -461,12 +473,12 @@
   gender: [f]
   plural: [Alarmanlagen]
   gen_sg: [Alarmanlage]
-  ru: null
+  ru: сигнализация
   en: alarm system, burglar alarm
   freq: 9000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Algebra
   lemma: Algebra
@@ -585,11 +597,11 @@
   plural: [Altersvorsorgen]
   gen_sg: [Altersvorsorge]
   ru: пенсионное страхование
-  en: null
+  en: retirement provision
   freq: 42000
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Ampel
   lemma: Ampel
@@ -632,12 +644,12 @@
   gender: [f]
   plural: [Amtszeiten]
   gen_sg: [Amtszeit]
-  ru: null
+  ru: срок полномочий
   en: term, incumbency
   freq: 17000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Anerkennung
   lemma: Anerkennung
@@ -873,12 +885,12 @@
   plural: [Anwaltskosten]
   gen_sg: []
   number: pl
-  ru: null
+  ru: расходы на адвоката
   en: attorney's fee, solicitor's fee
   freq: 40000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Anwendung
   lemma: Anwendung
@@ -1221,12 +1233,12 @@
   gender: [f]
   plural: [Aufenthaltsdauern]
   gen_sg: [Aufenthaltsdauer]
-  ru: null
+  ru: срок пребывания
   en: duration of stay, length of stay
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Aufenthaltserlaubnis
   lemma: Aufenthaltserlaubnis
@@ -1672,6 +1684,19 @@
   level: A2
   themes: []
   decided: {}
+  skip: {}
+- id: n:Automatiktür
+  lemma: Automatiktür
+  compound: Tür
+  gender: [f]
+  plural: [Automatiktüren]
+  gen_sg: [Automatiktür]
+  ru: автоматическая дверь
+  en: automatic door
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Automechaniker
   lemma: Automechaniker

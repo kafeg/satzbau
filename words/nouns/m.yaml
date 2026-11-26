@@ -257,12 +257,12 @@
   gender: [f]
   plural: [Matten]
   gen_sg: [Matte]
-  ru: null
+  ru: мат, коврик
   en: mat
   freq: 21000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Matte:2
   lemma: Matte
@@ -731,11 +731,11 @@
   plural: [Mietautos]
   gen_sg: [Mietautos]
   ru: наёмный автомобиль, такси
-  en: null
+  en: rental car
   freq: 43000
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Miete
   lemma: Miete
@@ -887,12 +887,12 @@
   gender: [n]
   plural: []
   gen_sg: [Mindestalters]
-  ru: null
+  ru: минимальный возраст
   en: minimum age
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Minister
   lemma: Minister
@@ -1177,12 +1177,12 @@
   gender: [f]
   plural: [Montagen]
   gen_sg: [Montage]
-  ru: null
+  ru: монтаж, сборка
   en: assemblage, assembly
   freq: 30000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Moped
   lemma: Moped
@@ -1288,12 +1288,12 @@
   gender: [m]
   plural: [Mundgerüche]
   gen_sg: [Mundgeruches, Mundgeruchs]
-  ru: null
+  ru: запах изо рта
   en: halitosis, bad breath
   freq: 17000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Mundwasser
   lemma: Mundwasser
@@ -1434,12 +1434,12 @@
   gender: [m]
   plural: [Muttertage]
   gen_sg: [Muttertags, Muttertages]
-  ru: null
+  ru: День матери
   en: Mother's Day
   freq: 18000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Mutti
   lemma: Mutti

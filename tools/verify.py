@@ -14,7 +14,7 @@ import srcs  # noqa: E402
 ROOT = srcs.ROOT
 LEVELS = {'A1', 'A2', 'B1', None}
 NOUN_KEYS = ['id', 'lemma', 'gender', 'plural', 'gen_sg', 'ru', 'en', 'freq', 'level', 'themes', 'decided', 'skip']
-NOUN_OPT = {'sense', 'number'}
+NOUN_OPT = {'sense', 'number', 'compound'}
 FORM_SOURCES = ('dewikt', 'enwikt', 'ruwikt')
 
 
@@ -50,9 +50,23 @@ def proof(ev, field, value, w, err, warn, first):
             f'{value}: подтверждён {v} из {speaks(ev, field)} источников, которые знают слово')
 
 
+def own_dewikt(w, ev):
+    """Запись dewikt, из которой взята эта запись слова: n:Bank — первая, n:Bank:2 — вторая."""
+    parts = w['id'].split(':')
+    i = int(parts[2]) - 1 if len(parts) > 2 else 0
+    de = ev.get('dewikt', [])
+    return de[i] if i < len(de) else None
+
+
 def check_forms(w, ev, field, err, warn):
     xs = w[field]
     if field in w['decided']:
+        return
+    de = own_dewikt(w, ev)
+    # таблица склонения dewikt без множественного — «только ед. ч.»: dewikt сильнее формальных форм других
+    if not xs and field == 'plural' and de and de['gen_sg'] and not de['plural']:
+        if speaks(ev, field):
+            warn('plural-sg-only', w, 'dewikt: только ед. ч., другие источники дают форму')
         return
     if not xs:
         if speaks(ev, field) > (1 if any(e.get(field) for e in ev.get('dewikt', [])) else 0):
@@ -93,12 +107,15 @@ def check_noun(w, ev, err, warn):
     if ev is None:
         err('evidence', w, 'нет выписки из источников')
         return
+    if w.get('compound') != ev.get('head') or (ev.get('head') and not w['lemma'].lower().endswith(ev['head'].lower())):
+        err('compound', w, f'основное слово {w.get("compound")} ≠ выписке {ev.get("head")}')
     if 'gender' not in w['decided']:
         for i, g in enumerate(w['gender']):
             proof(ev, 'gender', g, w, err, warn, i == 0)
     if w.get('number') != 'pl':
         check_forms(w, ev, 'plural', err, warn)
-    check_forms(w, ev, 'gen_sg', err, warn)
+    if w.get('number') != 'pl':
+        check_forms(w, ev, 'gen_sg', err, warn)
     for lang in ('ru', 'en'):
         if lang in w['decided']:
             continue

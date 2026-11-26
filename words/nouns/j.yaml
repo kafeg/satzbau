@@ -112,12 +112,12 @@
   gender: [n]
   plural: [Jugendämter]
   gen_sg: [Jugendamtes, Jugendamts]
-  ru: null
+  ru: ведомство по делам молодёжи
   en: child protective services
   freq: 11000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Jugendherberge
   lemma: Jugendherberge

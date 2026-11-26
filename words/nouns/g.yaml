@@ -53,12 +53,12 @@
   gender: [n]
   plural: [Garagentore]
   gen_sg: [Garagentores, Garagentors]
-  ru: null
+  ru: гаражные ворота
   en: garage door
   freq: 37000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Garantie
   lemma: Garantie
@@ -78,11 +78,11 @@
   plural: [Garantiefälle]
   gen_sg: [Garantiefalls, Garantiefalles]
   ru: гарантийный случай
-  en: null
+  en: warranty case
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Garten
   lemma: Garten
@@ -198,12 +198,12 @@
   gender: [f]
   plural: [Gastgeberinnen]
   gen_sg: [Gastgeberin]
-  ru: null
+  ru: хозяйка
   en: hostess
   freq: 16000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gastgeschenk
   lemma: Gastgeschenk
@@ -211,11 +211,11 @@
   plural: [Gastgeschenke]
   gen_sg: [Gastgeschenks, Gastgeschenkes]
   ru: подарок гостю
-  en: null
+  en: host gift
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gebirge
   lemma: Gebirge
@@ -259,11 +259,11 @@
   plural: [Geburtsländer]
   gen_sg: [Geburtslandes, Geburtslands]
   ru: родина
-  en: null
+  en: country of birth
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Geburtsort
   lemma: Geburtsort
@@ -560,12 +560,12 @@
   gender: [n]
   plural: [Gemüsegeschäfte]
   gen_sg: [Gemüsegeschäftes, Gemüsegeschäfts]
-  ru: null
+  ru: овощной магазин
   en: greengrocery, greengrocer’s
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gemüseladen
   lemma: Gemüseladen
@@ -608,12 +608,12 @@
   gender: [n]
   plural: [Gepäckfächer]
   gen_sg: [Gepäckfaches, Gepäckfachs]
-  ru: null
+  ru: багажная полка
   en: luggage compartment, overhead compartment
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gericht
   lemma: Gericht
@@ -683,11 +683,11 @@
   plural: [Gesamtgewichte]
   gen_sg: [Gesamtgewichtes, Gesamtgewichts]
   ru: суммарный вес, вес брутто
-  en: null
+  en: total weight
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gesamtzahl
   lemma: Gesamtzahl
@@ -874,12 +874,12 @@
   gender: [f]
   plural: [Gesichtscremes, Gesichtscremen]
   gen_sg: [Gesichtscreme]
-  ru: null
+  ru: крем для лица
   en: face cream
   freq: 48000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gespräch
   lemma: Gespräch
@@ -1300,12 +1300,12 @@
   gender: [f]
   plural: [Grenzkontrollen]
   gen_sg: [Grenzkontrolle]
-  ru: null
+  ru: пограничный контроль
   en: border control
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Grenzübergang
   lemma: Grenzübergang
@@ -1445,12 +1445,12 @@
   gender: [f]
   plural: [Grußkarten]
   gen_sg: [Grußkarte]
-  ru: null
+  ru: открытка
   en: greeting card
   freq: 35000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Größe
   lemma: Größe
@@ -1505,12 +1505,12 @@
   gender: [f]
   plural: [Gutschriften]
   gen_sg: [Gutschrift]
-  ru: null
+  ru: зачисление на счёт
   en: crediting, credit entry
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gymnastik
   lemma: Gymnastik
@@ -1541,12 +1541,12 @@
   gender: [f]
   plural: [Gästelisten]
   gen_sg: [Gästeliste]
-  ru: null
+  ru: список гостей
   en: guest list
   freq: 12000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Gästezimmer
   lemma: Gästezimmer

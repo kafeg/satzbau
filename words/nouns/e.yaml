@@ -148,12 +148,12 @@
   gender: [f]
   plural: [Eingewöhnungen]
   gen_sg: [Eingewöhnung]
-  ru: null
-  en: null
+  ru: привыкание, адаптация
+  en: settling in, adjustment
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Eingliederung
   lemma: Eingliederung
@@ -304,12 +304,12 @@
   gender: [f]
   plural: [Einschulungen]
   gen_sg: [Einschulung]
-  ru: null
+  ru: поступление в школу
   en: enrolment, enrollment
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Einschätzung
   lemma: Einschätzung
@@ -522,48 +522,48 @@
   gender: [m]
   plural: [Elternabende]
   gen_sg: [Elternabends]
-  ru: null
+  ru: родительское собрание
   en: parent-teacher conference
   freq: 22000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Elterngeld
   lemma: Elterngeld
   gender: [n]
   plural: []
   gen_sg: [Elterngelds, Elterngeldes]
-  ru: null
+  ru: пособие по уходу за ребёнком
   en: parental allowance
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Elternzeit
   lemma: Elternzeit
   gender: [f]
   plural: [Elternzeiten]
   gen_sg: [Elternzeit]
-  ru: null
+  ru: отпуск по уходу за ребёнком
   en: parental leave
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Empfangsbestätigung
   lemma: Empfangsbestätigung
   gender: [f]
   plural: [Empfangsbestätigungen]
   gen_sg: [Empfangsbestätigung]
-  ru: null
+  ru: подтверждение получения
   en: receipt, notice of receipt
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Empfänger
   lemma: Empfänger
@@ -583,11 +583,11 @@
   plural: [Empfängerinnen]
   gen_sg: [Empfängerin]
   ru: получательница
-  en: null
+  en: recipient
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Energie
   lemma: Energie
@@ -919,12 +919,12 @@
   gender: [m]
   plural: [Ersthelfer]
   gen_sg: [Ersthelfers]
-  ru: null
+  ru: оказывающий первую помощь
   en: first-aider
   freq: 45000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Erstversorgung
   lemma: Erstversorgung

@@ -10,6 +10,18 @@
   themes: []
   decided: {}
   skip: {}
+- id: n:U-Bahnhof
+  lemma: U-Bahnhof
+  gender: [m]
+  plural: [U-Bahnhöfe]
+  gen_sg: [U-Bahnhofes, U-Bahnhofs]
+  ru: станция метро, станция метрополитена
+  en: subway station, underground station
+  freq: null
+  level: A1
+  themes: []
+  decided: {}
+  skip: {}
 - id: n:Uhr
   lemma: Uhr
   gender: [f]
@@ -255,12 +267,12 @@
   gender: [f]
   plural: [Unterlegscheiben]
   gen_sg: [Unterlegscheibe]
-  ru: null
+  ru: шайба
   en: washer, flat washer
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Unterricht
   lemma: Unterricht
@@ -339,12 +351,12 @@
   gender: [n, m]
   plural: [Updates]
   gen_sg: [Updates]
-  ru: null
+  ru: обновление
   en: update
   freq: 16000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Urenkel
   lemma: Urenkel

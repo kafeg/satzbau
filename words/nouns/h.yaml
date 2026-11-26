@@ -15,12 +15,12 @@
   gender: [f]
   plural: [Haarbürsten]
   gen_sg: [Haarbürste]
-  ru: null
+  ru: щётка для волос
   en: hairbrush
   freq: 33000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Haarfarbe
   lemma: Haarfarbe
@@ -51,24 +51,24 @@
   gender: [m, n]
   plural: [Haarsprays]
   gen_sg: [Haarsprays]
-  ru: null
+  ru: лак для волос
   en: hair spray, hairspray
   freq: 26000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Haartrockner
   lemma: Haartrockner
   gender: [m]
   plural: [Haartrockner]
   gen_sg: [Haartrockners]
-  ru: null
+  ru: фен
   en: hairdryer, hairdrier
   freq: 47000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hafen
   lemma: Hafen
@@ -99,12 +99,12 @@
   gender: [f]
   plural: []
   gen_sg: [Halbpension]
-  ru: null
+  ru: полупансион
   en: half board
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Halbzeit
   lemma: Halbzeit
@@ -147,12 +147,25 @@
   gender: [m]
   plural: [Haltegriffe]
   gen_sg: [Haltegriffes, Haltegriffs]
-  ru: null
-  en: null
+  ru: поручень
+  en: handle, grab handle
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
+  skip: {}
+- id: n:Halteknopf
+  lemma: Halteknopf
+  compound: Knopf
+  gender: [m]
+  plural: [Halteknöpfe]
+  gen_sg: [Halteknopfes, Halteknopfs]
+  ru: кнопка остановки
+  en: stop button
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Haltestelle
   lemma: Haltestelle
@@ -270,12 +283,12 @@
   gender: [f]
   plural: [Handcremes, Handcremen]
   gen_sg: [Handcreme]
-  ru: null
+  ru: крем для рук
   en: hand cream
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Handschuh
   lemma: Handschuh
@@ -306,12 +319,12 @@
   gender: [f]
   plural: [Handvoll]
   gen_sg: [Handvoll]
-  ru: null
+  ru: горсть
   en: handful, fistful
   freq: 16000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Handwerker
   lemma: Handwerker
@@ -330,12 +343,12 @@
   gender: [f]
   plural: [Handwerkerinnen]
   gen_sg: [Handwerkerin]
-  ru: null
+  ru: мастерица
   en: craftswoman
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Handy
   lemma: Handy
@@ -486,12 +499,12 @@
   gender: [n]
   plural: [Haushaltsbücher]
   gen_sg: [Haushaltsbuchs, Haushaltsbuches]
-  ru: null
-  en: null
+  ru: книга учёта расходов
+  en: household account book
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hausmeister
   lemma: Hausmeister
@@ -582,24 +595,24 @@
   gender: [m]
   plural: [Hautärzte]
   gen_sg: [Hautarztes]
-  ru: null
+  ru: дерматолог
   en: dermatologist
   freq: 50000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hauttyp
   lemma: Hauttyp
   gender: [m]
   plural: [Hauttypen]
   gen_sg: [Hauttyps]
-  ru: null
+  ru: тип кожи
   en: skin type
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hebebühne
   lemma: Hebebühne
@@ -1128,12 +1141,12 @@
   gender: [f]
   plural: [Hupen]
   gen_sg: [Hupe]
-  ru: null
+  ru: гудок, клаксон
   en: horn, klaxon
   freq: 7000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Husten
   lemma: Husten
@@ -1262,12 +1275,12 @@
   gender: [m]
   plural: [Hörer]
   gen_sg: [Hörers]
-  ru: null
+  ru: слушатель
   en: listener
   freq: 9000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Hörsaal
   lemma: Hörsaal

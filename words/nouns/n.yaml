@@ -123,12 +123,12 @@
   gender: [n]
   plural: [Nachportos, Nachporti]
   gen_sg: [Nachportos]
-  ru: null
+  ru: доплата за почтовый сбор
   en: excess postage
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nachricht
   lemma: Nachricht
@@ -195,12 +195,12 @@
   gender: [f]
   plural: [Nachzahlungen]
   gen_sg: [Nachzahlung]
-  ru: null
+  ru: доплата
   en: back payment, subsequent payment
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nagel
   lemma: Nagel
@@ -219,36 +219,36 @@
   gender: [f]
   plural: [Nagelfeilen]
   gen_sg: [Nagelfeile]
-  ru: null
+  ru: пилочка для ногтей
   en: nail file
   freq: 41000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nagellack
   lemma: Nagellack
   gender: [m]
   plural: [Nagellacke]
   gen_sg: [Nagellackes, Nagellacks]
-  ru: null
+  ru: лак для ногтей
   en: nail polish
   freq: 18000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nagelschere
   lemma: Nagelschere
   gender: [f]
   plural: [Nagelscheren]
   gen_sg: [Nagelschere]
-  ru: null
+  ru: маникюрные ножницы
   en: nail scissors
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Name
   lemma: Name
@@ -677,24 +677,24 @@
   gender: [f]
   plural: [Notbremsen]
   gen_sg: [Notbremse]
-  ru: null
+  ru: стоп-кран, экстренный тормоз
   en: emergency brake
   freq: 27000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Notdienst
   lemma: Notdienst
   gender: [m]
   plural: [Notdienste]
   gen_sg: [Notdienstes, Notdiensts]
-  ru: null
+  ru: дежурная служба
   en: emergency service
   freq: 29000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Note
   lemma: Note
@@ -737,12 +737,12 @@
   gender: [m]
   plural: [Notrufe]
   gen_sg: [Notrufes, Notrufs]
-  ru: null
+  ru: экстренный вызов
   en: emergency call
   freq: 5000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nudel
   lemma: Nudel
@@ -773,12 +773,12 @@
   gender: [n]
   plural: [Nummernschilder]
   gen_sg: [Nummernschildes, Nummernschilds]
-  ru: null
+  ru: номерной знак
   en: license plate, license tag
   freq: 8000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Nuss
   lemma: Nuss

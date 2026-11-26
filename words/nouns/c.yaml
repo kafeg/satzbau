@@ -112,11 +112,11 @@
   plural: [Computertische]
   gen_sg: [Computertisches, Computertischs]
   ru: компьютерный стол
-  en: null
+  en: computer desk
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Cornflakes
   lemma: Cornflakes
@@ -124,12 +124,12 @@
   plural: [Cornflakes]
   gen_sg: []
   number: pl
-  ru: null
+  ru: кукурузные хлопья
   en: corn flakes
   freq: 16000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Cousin
   lemma: Cousin

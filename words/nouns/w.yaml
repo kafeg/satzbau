@@ -184,11 +184,11 @@
   plural: [Warnblinker]
   gen_sg: [Warnblinkers]
   ru: аварийный световой сигнал, аварийка
-  en: null
+  en: hazard lights
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Warndreieck
   lemma: Warndreieck
@@ -219,12 +219,12 @@
   gender: [n]
   plural: [Wartehäuschen]
   gen_sg: [Wartehäuschens]
-  ru: null
+  ru: павильон на остановке
   en: diminutive of Wartehaus
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Wartezeit
   lemma: Wartezeit
@@ -303,12 +303,12 @@
   gender: [n]
   plural: [Wasserbecken]
   gen_sg: [Wasserbeckens]
-  ru: null
+  ru: бассейн, резервуар
   en: tank, water basin
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Wassermelone
   lemma: Wassermelone
@@ -351,12 +351,12 @@
   gender: [n]
   plural: [Wattestäbchen]
   gen_sg: [Wattestäbchens]
-  ru: null
+  ru: ватная палочка
   en: cotton swab, cotton bud
   freq: 45000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Webseite
   lemma: Webseite
@@ -507,12 +507,12 @@
   gender: [f]
   plural: [Werbepausen]
   gen_sg: [Werbepause]
-  ru: null
+  ru: рекламная пауза
   en: commercial break
   freq: 36000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Werbung
   lemma: Werbung
@@ -555,12 +555,12 @@
   gender: [f]
   plural: [Werkstattrechnungen]
   gen_sg: [Werkstattrechnung]
-  ru: null
-  en: null
+  ru: счёт из мастерской
+  en: repair bill
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Werkstoff
   lemma: Werkstoff
@@ -603,12 +603,12 @@
   gender: [f]
   plural: [Wertsendungen]
   gen_sg: [Wertsendung]
-  ru: null
-  en: null
+  ru: ценное отправление
+  en: insured shipment
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Westen
   lemma: Westen
@@ -737,12 +737,12 @@
   gender: [f]
   plural: [Wimperntuschen]
   gen_sg: [Wimperntusche]
-  ru: null
+  ru: тушь для ресниц
   en: mascara
   freq: 35000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Wind
   lemma: Wind
@@ -809,12 +809,12 @@
   gender: [m]
   plural: [Winterreifen]
   gen_sg: [Winterreifens]
-  ru: null
+  ru: зимняя шина
   en: winter tire
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Woche
   lemma: Woche

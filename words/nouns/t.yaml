@@ -54,7 +54,7 @@
   gen_sg: [Tages, Tags]
   ru: день
   en: day
-  freq: 200
+  freq: 300
   level: A1
   themes: []
   decided: {}
@@ -66,7 +66,7 @@
   gen_sg: [Tags]
   ru: null
   en: tag
-  freq: 200
+  freq: 300
   level: null
   themes: []
   decided: {}
@@ -78,7 +78,7 @@
   gen_sg: [Tags]
   ru: null
   en: null
-  freq: 200
+  freq: 300
   level: null
   themes: []
   decided: {}
@@ -148,12 +148,12 @@
   gender: [m]
   plural: [Tanzkurse]
   gen_sg: [Tanzkurses]
-  ru: null
+  ru: курсы танцев
   en: dancing class
   freq: 38000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Tapete
   lemma: Tapete
@@ -449,12 +449,12 @@
   gender: [n]
   plural: [Tempolimits, Tempolimite]
   gen_sg: [Tempolimits]
-  ru: null
+  ru: ограничение скорости
   en: speed limit
   freq: 36000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Tennis
   lemma: Tennis
@@ -617,12 +617,12 @@
   gender: [m]
   plural: [Tiefstwerte]
   gen_sg: [Tiefstwerts, Tiefstwertes]
-  ru: null
+  ru: минимальное значение
   en: minimum
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Tier
   lemma: Tier
@@ -701,12 +701,12 @@
   gender: [n]
   plural: [Toastbrote]
   gen_sg: [Toastbrotes, Toastbrots]
-  ru: null
+  ru: хлеб для тостов
   en: toast
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Toaster
   lemma: Toaster
@@ -835,12 +835,12 @@
   gender: [m]
   plural: [Touristenbusse]
   gen_sg: [Touristenbusses]
-  ru: null
+  ru: туристический автобус
   en: tourist bus
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Touristin
   lemma: Touristin
@@ -883,12 +883,12 @@
   gender: [m]
   plural: [Trailer]
   gen_sg: [Trailers]
-  ru: null
+  ru: трейлер
   en: trailer
   freq: 15000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Trainer
   lemma: Trainer
@@ -1019,7 +1019,7 @@
   ru: null
   en: jersey
   freq: 13000
-  level: B1
+  level: null
   themes: []
   decided: {}
   skip: {}
@@ -1028,12 +1028,12 @@
   gender: [n]
   plural: [Trikots]
   gen_sg: [Trikots]
-  ru: null
+  ru: спортивная футболка
   en: jersey
   freq: 13000
-  level: null
+  level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Trinkgeld
   lemma: Trinkgeld
@@ -1058,6 +1058,18 @@
   level: A1
   themes: []
   decided: {}
+  skip: {}
+- id: n:Trotzphase
+  lemma: Trotzphase
+  gender: [f]
+  plural: [Trotzphasen]
+  gen_sg: [Trotzphase]
+  ru: кризис трёх лет
+  en: terrible twos
+  freq: null
+  level: B1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Turnier
   lemma: Turnier

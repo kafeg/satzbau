@@ -15,12 +15,12 @@
   gender: [m]
   plural: [Impfpässe]
   gen_sg: [Impfpasses]
-  ru: null
+  ru: прививочный паспорт
   en: vaccination card
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Impfung
   lemma: Impfung
@@ -171,12 +171,12 @@
   gender: [m]
   plural: [Integrationskurse]
   gen_sg: [Integrationskurses]
-  ru: null
-  en: null
+  ru: интеграционный курс
+  en: integration course
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Interesse
   lemma: Interesse

@@ -15,12 +15,12 @@
   gender: [f]
   plural: [Packstationen]
   gen_sg: [Packstation]
-  ru: null
+  ru: постамат
   en: parcel locker
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Packung
   lemma: Packung
@@ -51,12 +51,12 @@
   gender: [m]
   plural: [Paketboten]
   gen_sg: [Paketboten]
-  ru: null
+  ru: курьер
   en: package deliverer
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Paketkarte
   lemma: Paketkarte
@@ -75,12 +75,12 @@
   gender: [m]
   plural: [Paketshops]
   gen_sg: [Paketshops]
-  ru: null
+  ru: пункт выдачи посылок
   en: post office
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Panik
   lemma: Panik
@@ -221,12 +221,12 @@
   gender: [m]
   plural: [Parkscheine]
   gen_sg: [Parkscheines, Parkscheins]
-  ru: null
+  ru: парковочный талон
   en: parking ticket
   freq: 34000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Partei
   lemma: Partei
@@ -258,11 +258,11 @@
   plural: [Partnerinnen]
   gen_sg: [Partnerin]
   ru: партнёрша
-  en: null
+  en: partner
   freq: 6000
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Party
   lemma: Party
@@ -329,12 +329,12 @@
   gender: [f]
   plural: [Pauschalreisen]
   gen_sg: [Pauschalreise]
-  ru: null
+  ru: туристическая путёвка
   en: package tour
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Pause
   lemma: Pause
@@ -378,12 +378,12 @@
   gender: [n]
   plural: [Peelings]
   gen_sg: [Peelings]
-  ru: null
+  ru: пилинг, скраб
   en: exfoliation
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Person
   lemma: Person
@@ -522,12 +522,12 @@
   gender: [n]
   plural: [Pflegemittel]
   gen_sg: [Pflegemittels]
-  ru: null
-  en: null
+  ru: средство по уходу
+  en: care product
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Pflicht
   lemma: Pflicht
@@ -609,7 +609,7 @@
   gen_sg: [Pickels]
   ru: прыщ
   en: pimple, blain
-  freq: 11000
+  freq: 12000
   level: A2
   themes: []
   decided: {}
@@ -621,7 +621,7 @@
   gen_sg: [Pickels]
   ru: null
   en: pickaxe, pick-axe
-  freq: 11000
+  freq: 12000
   level: null
   themes: []
   decided: {}
@@ -633,7 +633,7 @@
   gen_sg: [Pickels]
   ru: null
   en: null
-  freq: 11000
+  freq: 12000
   level: null
   themes: []
   decided: {}
@@ -685,6 +685,18 @@
   level: A2
   themes: []
   decided: {}
+  skip: {}
+- id: n:Pkw
+  lemma: Pkw
+  gender: [m]
+  plural: [Pkw, Pkws]
+  gen_sg: [Pkw, Pkws]
+  ru: легковой автомобиль
+  en: motorcar, automobile
+  freq: 46000
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Plastiktüte
   lemma: Plastiktüte
@@ -799,12 +811,12 @@
   gender: [f]
   plural: [Politikerinnen]
   gen_sg: [Politikerin]
-  ru: null
+  ru: женщина-политик
   en: female politician
   freq: 37000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Polizei
   lemma: Polizei
@@ -993,24 +1005,24 @@
   gender: [f]
   plural: [Postgebühren]
   gen_sg: [Postgebühr]
-  ru: null
-  en: null
+  ru: почтовый сбор
+  en: postage
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postgeheimnis
   lemma: Postgeheimnis
   gender: [n]
   plural: [Postgeheimnisse]
   gen_sg: [Postgeheimnisses]
-  ru: null
-  en: null
+  ru: тайна переписки
+  en: privacy of correspondence
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postkarte
   lemma: Postkarte
@@ -1041,12 +1053,12 @@
   gender: [m]
   plural: [Postsäcke]
   gen_sg: [Postsacks, Postsackes]
-  ru: null
+  ru: почтовый мешок
   en: mail sack, mail bag
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postschalter
   lemma: Postschalter
@@ -1054,11 +1066,11 @@
   plural: [Postschalter]
   gen_sg: [Postschalters]
   ru: почтовое окно
-  en: null
+  en: post office counter
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Poststempel
   lemma: Poststempel
@@ -1078,23 +1090,23 @@
   plural: []
   gen_sg: [Postverkehres, Postverkehrs]
   ru: почтовая связь
-  en: null
+  en: postal service
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Postweg
   lemma: Postweg
   gender: [m]
   plural: [Postwege]
   gen_sg: [Postwegs, Postweges]
-  ru: null
-  en: null
+  ru: почта
+  en: postal route, by post
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Praktikum
   lemma: Praktikum
@@ -1161,12 +1173,12 @@
   gender: [f]
   plural: [Prisen]
   gen_sg: [Prise]
-  ru: null
+  ru: щепотка
   en: dash, pinch
   freq: 16000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Probefahrt
   lemma: Probefahrt

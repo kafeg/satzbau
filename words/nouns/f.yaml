@@ -51,12 +51,12 @@
   gender: [f]
   plural: [Fahrerinnen]
   gen_sg: [Fahrerin]
-  ru: null
+  ru: водительница
   en: driver
   freq: 21000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrersitz
   lemma: Fahrersitz
@@ -99,12 +99,12 @@
   gender: [m]
   plural: [Fahrkartenautomaten]
   gen_sg: [Fahrkartenautomaten]
-  ru: null
+  ru: билетный автомат
   en: ticket machine
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrlehrer
   lemma: Fahrlehrer
@@ -135,12 +135,12 @@
   gender: [m]
   plural: [Fahrpreise]
   gen_sg: [Fahrpreises]
-  ru: null
+  ru: стоимость проезда
   en: fare
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrrad
   lemma: Fahrrad
@@ -153,6 +153,19 @@
   level: A1
   themes: []
   decided: {}
+  skip: {}
+- id: n:Fahrradmitnahme
+  lemma: Fahrradmitnahme
+  compound: Mitnahme
+  gender: [f]
+  plural: []
+  gen_sg: [Fahrradmitnahme]
+  ru: провоз велосипеда
+  en: bicycle carriage
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fahrschein
   lemma: Fahrschein
@@ -760,12 +773,12 @@
   gender: [n]
   plural: [Fitnessstudios]
   gen_sg: [Fitnessstudios]
-  ru: null
+  ru: фитнес-клуб, спортзал
   en: health club, fitness club
   freq: 11000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Flagge
   lemma: Flagge
@@ -862,6 +875,19 @@
   level: A2
   themes: []
   decided: {}
+  skip: {}
+- id: n:Flugdatum
+  lemma: Flugdatum
+  compound: Datum
+  gender: [n]
+  plural: [Flugdaten]
+  gen_sg: [Flugdatums]
+  ru: дата полёта
+  en: flight date
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Flughafen
   lemma: Flughafen
@@ -990,11 +1016,11 @@
   plural: [Formblätter]
   gen_sg: [Formblatts, Formblattes]
   ru: формуляр
-  en: null
+  en: form
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Formular
   lemma: Formular
@@ -1086,12 +1112,12 @@
   gender: [n]
   plural: [Fouls]
   gen_sg: [Fouls]
-  ru: null
+  ru: фол, нарушение правил
   en: foul
   freq: 19000
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Frachtbrief
   lemma: Frachtbrief
@@ -1122,12 +1148,12 @@
   gender: [f]
   plural: [Frankiermaschinen]
   gen_sg: [Frankiermaschine]
-  ru: null
-  en: null
+  ru: франкировальная машина
+  en: franking machine
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Frau
   lemma: Frau
@@ -1459,12 +1485,12 @@
   gender: [f]
   plural: []
   gen_sg: [Fußpflege]
-  ru: null
-  en: null
+  ru: педикюр, уход за ногами
+  en: pedicure, foot care
   freq: null
   level: B1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Fähre
   lemma: Fähre

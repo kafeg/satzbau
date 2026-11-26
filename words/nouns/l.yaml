@@ -428,11 +428,11 @@
   plural: [Leihwagen, Leihwägen]
   gen_sg: [Leihwagens]
   ru: автомобиль, взятый напрокат
-  en: null
+  en: rental car
   freq: 37000
   level: A2
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Leistung
   lemma: Leistung
@@ -448,27 +448,27 @@
   skip: {}
 - id: n:Leiter
   lemma: Leiter
-  sense: руководитель
+  sense: директор
   gender: [m]
   plural: [Leiter]
   gen_sg: [Leiters]
-  ru: руководитель, директор
+  ru: директор, руководитель
   en: head, director
   freq: 3000
-  level: A1
+  level: null
   themes: []
   decided: {}
   skip: {}
 - id: n:Leiter:2
   lemma: Leiter
-  sense: лестница-стремянка
+  sense: лестница
   gender: [f]
   plural: [Leitern]
   gen_sg: [Leiter]
-  ru: лестница-стремянка, лестница
+  ru: лестница, лестница-стремянка
   en: ladder
   freq: 3000
-  level: null
+  level: A1
   themes: []
   decided: {}
   skip: {}
@@ -550,12 +550,12 @@
   gender: [f]
   plural: [Lieblingsbands]
   gen_sg: [Lieblingsband]
-  ru: null
+  ru: любимая группа
   en: favorite band, favourite band
   freq: 38000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieblingslied
   lemma: Lieblingslied
@@ -574,24 +574,24 @@
   gender: [f]
   plural: [Lieblingsmusiken]
   gen_sg: [Lieblingsmusik]
-  ru: null
-  en: null
+  ru: любимая музыка
+  en: favourite music
   freq: 48000
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieblingssänger
   lemma: Lieblingssänger
   gender: [m]
   plural: [Lieblingssänger]
   gen_sg: [Lieblingssängers]
-  ru: null
+  ru: любимый певец
   en: favourite singer, favorite singer
   freq: null
   level: A1
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lied
   lemma: Lied
@@ -610,24 +610,24 @@
   gender: [m]
   plural: [Lieferdienste]
   gen_sg: [Lieferdiensts, Lieferdienstes]
-  ru: null
-  en: null
+  ru: служба доставки
+  en: delivery service
   freq: null
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieferschein
   lemma: Lieferschein
   gender: [m]
   plural: [Lieferscheine]
   gen_sg: [Lieferscheines, Lieferscheins]
-  ru: null
+  ru: накладная
   en: delivery note, bordereau
   freq: 47000
   level: A2
   themes: []
-  decided: {}
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lieferung
   lemma: Lieferung
@@ -664,6 +664,19 @@
   level: A1
   themes: []
   decided: {}
+  skip: {}
+- id: n:Liniennummer
+  lemma: Liniennummer
+  compound: Nummer
+  gender: [f]
+  plural: [Liniennummern]
+  gen_sg: [Liniennummer]
+  ru: номер маршрута
+  en: route number
+  freq: null
+  level: A1
+  themes: []
+  decided: {ru: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет', en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Link
   lemma: Link
@@ -902,11 +915,11 @@
   plural: [Löschfahrzeuge]
   gen_sg: [Löschfahrzeuges, Löschfahrzeugs]
   ru: пожарный автомобиль
-  en: null
+  en: fire engine
   freq: 49000
   level: B1
   themes: []
-  decided: {}
+  decided: {en: 'llm:claude-opus-5-5:2026-11-26 — в словарях перевода нет'}
   skip: {}
 - id: n:Lösung
   lemma: Lösung
