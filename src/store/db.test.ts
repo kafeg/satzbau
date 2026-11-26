@@ -17,8 +17,8 @@ beforeAll(async () => {
   data = open(new SQL.Database(gunzipSync(readFileSync('build/satzbau.sqlite.gz'))))
 })
 
-test('в базе есть версия и источники', () => {
-  expect(data.meta.version).toMatch(/^0\.2\.\d+$/)
+test('в базе есть источники, а версии нет: база меняется только с данными', () => {
+  expect(data.meta.version).toBeUndefined()
   expect(data.meta.attribution).toContain('Tatoeba')
 })
 

@@ -5,7 +5,7 @@
 
 Нужен только PyYAML: источники из data/raw не читаются, поэтому скрипт работает и в CI.
 """
-import glob, gzip, json, os, shutil, sqlite3, subprocess, sys
+import glob, gzip, json, os, shutil, sqlite3, sys
 
 import yaml
 
@@ -42,10 +42,6 @@ CREATE TABLE rules (id TEXT PRIMARY KEY, field TEXT NOT NULL, value TEXT NOT NUL
 CREATE TABLE hints (word_id TEXT NOT NULL, field TEXT NOT NULL, rule_id TEXT NOT NULL, ok INTEGER NOT NULL,
   head TEXT, PRIMARY KEY (word_id, field)) WITHOUT ROWID;
 '''
-
-
-def git(*args):
-    return subprocess.run(['git', '-C', ROOT, *args], capture_output=True, text=True, check=True).stdout.strip()
 
 
 NAMES = {'dewikt': 'немецкий Викисловарь', 'enwikt': 'английский Викисловарь', 'ruwikt': 'русский Викисловарь',
@@ -90,11 +86,8 @@ def main():
         os.remove(tmp)
     db = sqlite3.connect(tmp)
     db.executescript(SCHEMA)
-    # 0.2.N: 0.2 — из package.json, N — число коммитов, как у приложения
-    minor = '.'.join(json.load(open(os.path.join(ROOT, 'package.json'), encoding='utf-8'))['version'].split('.')[:2])
-    version = f'{minor}.{git("rev-list", "--count", "HEAD")}'
+    # без версии и времени: база меняется только с данными, и service worker не качает её заново
     db.executemany('INSERT INTO meta VALUES (?, ?)', [
-        ('version', version), ('built', git('log', '-1', '--format=%cI')),
         ('license', 'CC BY-SA 4.0'), ('attribution', attribution())])
     ids = set()
     rules, stats, heads, sources = hints.load()
@@ -144,7 +137,7 @@ def main():
     with open(OUT, 'rb') as f, open(OUT + '.gz', 'wb') as raw, \
             gzip.GzipFile(fileobj=raw, mode='wb', compresslevel=9, mtime=0) as g:
         shutil.copyfileobj(f, g)
-    print(f'{os.path.relpath(OUT, ROOT)}: {version}, слов {len(ids)}, подсказок {n_hints}, фраз {n}, '
+    print(f'{os.path.relpath(OUT, ROOT)}: слов {len(ids)}, подсказок {n_hints}, фраз {n}, '
           f'{os.path.getsize(OUT) / 1e6:.1f} МБ, сжатая {os.path.getsize(OUT + ".gz") / 1e6:.1f} МБ')
 
 

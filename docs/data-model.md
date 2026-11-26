@@ -241,7 +241,7 @@ SQLite, собирается `tools/build.py` из текста, в git не х�
 
 | таблица | поля |
 |---|---|
-| `meta` | key, value: version, built (время коммита), license, attribution (источники и лицензии из `sources.lock`) |
+| `meta` | key, value: license, attribution (источники и лицензии из `sources.lock`) |
 | `words` | id, pos, lemma, sense, compound, gender, plural, gen_sg (списки — JSON), number, ru, ru_llm, en, en_llm, freq, level, skip (JSON) |
 | `sentences` | n (число), id (`t:…`), de, ru, ru_by, en, en_by, len (токенов) |
 | `morphs` | n, upos, morph — 429 разных сочетаний вместо строки у каждого токена |
@@ -258,8 +258,8 @@ service worker. Журнал ученика — отдельное хранил�
 
 ## Версия
 `0.2.N`: `0.2` — первые два числа `version` в `package.json`, N = `git rev-list --count HEAD` (число
-коммитов). Новая минорная версия — правка `package.json`. Пишется в `meta.version` базы и в
-приложение (внизу главной).
+коммитов). Новая минорная версия — правка `package.json`. Показывается внизу главной. В базе
+версии нет: база меняется только с данными, и обновление не качает её заново.
 ⚠ В CI нужен `fetch-depth: 0`, иначе N = 1.
 
 ## Проверки
