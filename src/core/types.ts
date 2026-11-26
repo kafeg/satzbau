@@ -8,9 +8,12 @@ export type Noun = {
   lemma: string
   gender: Gender[]
   plural: string[]
+  number: 'sg' | 'pl'
   ru: string | null
   ruLlm: boolean
   level: Level
+  freq: number | null
+  skip: Record<string, string>
 }
 
 export type Example = {
@@ -20,4 +23,13 @@ export type Example = {
   // токен со словом: его текст и номер среди одинаковых токенов фразы
   word: string
   nth: number
+}
+
+// Запись журнала: единственное, что приложение хранит (docs/app.md, «Журнал»).
+export type Answer = {
+  t: number
+  ex: string
+  word: string
+  ok: 0 | 1
+  given: string
 }

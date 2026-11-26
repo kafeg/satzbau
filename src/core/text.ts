@@ -9,3 +9,19 @@ export function around(de: string, word: string, nth: number): [string, string, 
   }
   return [de, '', '']
 }
+
+// Русское число с существительным: 1 день, 3 дня, 5 дней, 21 день.
+export function plural(n: number, [one, few, many]: [string, string, string]): string {
+  const a = n % 10
+  const b = n % 100
+  if (a === 1 && b !== 11) return one
+  if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return few
+  return many
+}
+
+// Когда повтор: «сегодня», «завтра», «через 3 дня».
+export function when(days: number): string {
+  if (days <= 0) return 'сегодня'
+  if (days === 1) return 'завтра'
+  return `через ${days} ${plural(days, ['день', 'дня', 'дней'])}`
+}

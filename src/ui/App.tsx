@@ -1,8 +1,17 @@
-import { useEffect, useMemo, useState } from 'react'
-import { type Lesson, SIZE, firstTry, start } from '../core/run.ts'
-import { LEVELS, type Level } from '../core/types.ts'
+// Экраны и переходы. Состояние: база (только чтение), журнал и пересчитанные из него повторы.
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { EXERCISES } from '../core/exercises/index.ts'
+import { build, overview } from '../core/lesson.ts'
+import { pool } from '../core/pool.ts'
+import { type Lesson as L, start } from '../core/run.ts'
+import { type Memory, apply, empty, init, replay } from '../core/srs.ts'
+import { type Answer, LEVELS, type Level } from '../core/types.ts'
 import { type Data, load } from '../store/db.ts'
-import { Full, GenderLesson } from './exercises/Gender.tsx'
+import * as journal from '../store/journal.ts'
+import { download, parse } from '../store/transfer.ts'
+import { Home } from './Home.tsx'
+import { Lesson } from './Lesson.tsx'
+import { Result } from './Result.tsx'
 
 const KEY = 'satzbau.level'
 
@@ -15,22 +24,34 @@ function savedLevel(): Level {
   }
 }
 
-type Screen = { k: 'home' } | { k: 'lesson'; lesson: Lesson } | { k: 'result'; lesson: Lesson }
+type Screen = { k: 'home' } | { k: 'lesson'; lesson: L } | { k: 'result'; lesson: L }
 
 export function App() {
   const [data, setData] = useState<Data | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [level, setLevel] = useState<Level>(savedLevel)
   const [screen, setScreen] = useState<Screen>({ k: 'home' })
+  const [answers, setAnswers] = useState<Answer[]>([])
+  const [mem, setMem] = useState<Memory | null>(null)
+  const [stored, setStored] = useState(true)
+  const [notice, setNotice] = useState<string | null>(null)
+  const asked = useRef(false)
 
   useEffect(() => {
-    load().then(setData, (e: unknown) => setError(String(e)))
+    const saved = journal.all().catch(() => {
+      setStored(false)
+      return [] as Answer[]
+    })
+    Promise.all([load(), init().then(() => saved)]).then(([d, xs]) => {
+      setData(d)
+      setAnswers(xs)
+      setMem(replay(xs))
+    }, (e: unknown) => setError(String(e)))
   }, [])
 
-  const counts = useMemo(
-    () => Object.fromEntries(LEVELS.map((l) => [l, data ? data.genderWords(l).length : 0])) as Record<Level, number>,
-    [data],
-  )
+  const words = useMemo(() => (data ? pool(data.nouns, level) : []), [data, level])
+  // screen в зависимостях: «пора» пересчитывается при каждом возврате на главную
+  const ov = useMemo(() => overview(words, EXERCISES, mem ?? empty(), Date.now()), [words, mem, screen])
 
   const choose = (l: Level) => {
     setLevel(l)
@@ -40,88 +61,79 @@ export function App() {
       // уровень просто не запомнится
     }
   }
-  const lesson = () => data && setScreen({ k: 'lesson', lesson: start(data.genderWords(level)) })
+
+  const begin = (extra: number) => {
+    const cards = build(ov, Math.random, extra)
+    if (cards.length > 0) setScreen({ k: 'lesson', lesson: start(cards) })
+  }
+
+  const record = useCallback(
+    (a: Answer) => {
+      setAnswers((xs) => [...xs, a])
+      setMem((m) => apply(m ?? empty(), a))
+      if (!stored) return
+      journal.add(a).catch(() => setStored(false))
+      if (!asked.current) {
+        asked.current = true
+        void journal.persist()
+      }
+    },
+    [stored],
+  )
+
+  const restore = async (f: File) => {
+    try {
+      const xs = await parse(f)
+      if (!window.confirm(`Заменить прогресс на этом устройстве прогрессом из файла (${xs.length} ответов)?`)) return
+      if (stored) await journal.replace(xs)
+      setAnswers(xs)
+      setMem(replay(xs))
+      setNotice(`Загружено ответов: ${xs.length}`)
+    } catch (e) {
+      setNotice(`Не загрузилось: ${e instanceof Error ? e.message : String(e)}`)
+    }
+  }
 
   if (error) return <main className="home"><h1>satzbau</h1><p className="sub">Не удалось открыть базу: {error}</p></main>
-  if (!data) return <main className="home"><h1>satzbau</h1><p className="sub">Загружаю базу…</p></main>
+  if (!data || !mem) return <main className="home"><h1>satzbau</h1><p className="sub">Загружаю базу…</p></main>
 
   if (screen.k === 'lesson')
     return (
-      <GenderLesson
-        key={screen.lesson.steps.map((s) => s.word.id).join()}
+      <Lesson
+        key={screen.lesson.steps.map((s) => `${s.card.ex.id} ${s.card.word.id}`).join()}
         data={data}
         lesson={screen.lesson}
+        onRecord={record}
         onDone={(l) => setScreen({ k: 'result', lesson: l })}
         onClose={() => setScreen({ k: 'home' })}
       />
     )
 
-  if (screen.k === 'result') {
-    const l = screen.lesson
-    const n = l.steps.filter((s) => !s.retry).length
+  if (screen.k === 'result')
     return (
-      <main className="home result">
-        <h1>Урок готов</h1>
-        <p className="score">
-          <b>{firstTry(l)}</b> из {n} <span className="sub">с первого раза</span>
-        </p>
-        {l.wrong.length > 0 && (
-          <>
-            <div className="section">Ошибки</div>
-            <ul className="list">
-              {l.wrong.map((w) => (
-                <li key={w.id}>
-                  <Full word={w} />
-                  {w.ru && <span className="sub">{w.ru}</span>}
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-        <div className="row">
-          <button className="primary" onClick={lesson} autoFocus>
-            Ещё урок
-          </button>
-          <button className="secondary" onClick={() => setScreen({ k: 'home' })}>
-            Готово
-          </button>
-        </div>
-      </main>
+      <Result
+        lesson={screen.lesson}
+        mem={mem}
+        now={Date.now()}
+        onMore={() => {
+          const cards = build(overview(words, EXERCISES, mem, Date.now()), Math.random)
+          setScreen(cards.length > 0 ? { k: 'lesson', lesson: start(cards) } : { k: 'home' })
+        }}
+        onHome={() => setScreen({ k: 'home' })}
+      />
     )
-  }
 
   return (
-    <main className="home">
-      <header className="head">
-        <h1>satzbau</h1>
-        <span className="caption">{__VERSION__}</span>
-      </header>
-
-      <div>
-        <div className="section">Уровень</div>
-        <div className="chips" role="radiogroup" aria-label="Уровень">
-          {LEVELS.map((l) => (
-            <button key={l} role="radio" aria-checked={l === level} className={`chip ${l === level ? 'on' : ''}`} onClick={() => choose(l)}>
-              {l}
-            </button>
-          ))}
-        </div>
-        <p className="sub">Слова уровня и всех ниже: {counts[level]}</p>
-      </div>
-
-      <button className="cta" onClick={lesson}>
-        <span className="cta-title">
-          Род: <span className="mono">der, die, das</span>
-        </span>
-        <span className="cta-sub">
-          {SIZE} слов · ошибки вернутся в конце урока
-        </span>
-      </button>
-
-      <footer className="about">
-        Данные: {data.meta.attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
-        <a href="https://github.com/kafeg/satzbau">github.com/kafeg/satzbau</a>
-      </footer>
-    </main>
+    <Home
+      data={data}
+      level={level}
+      onLevel={choose}
+      ov={ov}
+      onStart={begin}
+      stored={stored}
+      notice={notice}
+      onExport={() => download(answers)}
+      onImport={restore}
+    />
   )
 }
