@@ -71,7 +71,7 @@ export function App() {
 
   const theme = data?.themes.find((t) => t.id === themeId)
   const words = useMemo(() => (data ? pool(data.nouns, level, theme) : []), [data, level, theme])
-  const hint = useMemo(() => {
+  const where = useMemo(() => {
     const of = new Map(data?.themes.flatMap((t) => t.words.map((id) => [id, t.title] as const)))
     const lv = new Map(data?.nouns.map((w) => [w.id, w.level]))
     return (id: string) => [of.get(id), lv.get(id)].filter(Boolean).join(' · ')
@@ -146,7 +146,7 @@ export function App() {
         key={screen.lesson.steps.map((s) => `${s.card.ex.id} ${s.card.word.id}`).join()}
         data={data}
         lesson={screen.lesson}
-        hint={hint}
+        where={where}
         onRecord={record}
         onDone={(l) => setScreen({ k: 'result', lesson: l, only: screen.only })}
         onClose={() => setScreen({ k: 'home' })}

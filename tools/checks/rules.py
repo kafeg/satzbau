@@ -27,8 +27,12 @@ def check_rules(words, errors, warnings):
             errors['rule-llm'].append(f'{rid}: правило или его источник от LLM')
         if set(r.get('when', {})) - WHEN or len(r.get('when', {})) != 1:
             errors['rule-schema'].append(f'{rid}: условие {r.get("when")} — нужно одно из {sorted(WHEN)}')
-        if 'head' not in r.get('when', {}) and r.get('gender') not in ('m', 'f', 'n'):
-            errors['rule-schema'].append(f'{rid}: род {r.get("gender")}')
+        then = r.get('then', {})
+        f, v = next(iter(then.items()), (None, None))
+        if len(then) != 1 or f not in hints.FIELDS or v not in hints.FIELDS[f]:
+            errors['rule-schema'].append(f'{rid}: then {then} — одно поле из {sorted(hints.FIELDS)} с допустимым значением')
+        elif (v == 'head') != ('head' in r.get('when', {})):
+            errors['rule-schema'].append(f'{rid}: «как у последней части» — только с условием head')
         if 'list' in r.get('when', {}) and not r.get('title'):
             errors['rule-schema'].append(f'{rid}: у списка нужен title')
         srcs_ = r.get('sources', [])
@@ -41,15 +45,16 @@ def check_rules(words, errors, warnings):
             errors['rule-stats'].append(f'{rid}: нет выписки в evidence/rules.jsonl (tools/import_rules.py)')
     if any(errors.get(k) for k in ('rule-schema', 'rule-stats')):
         return 0
-    # слова базы: подсказка согласована с родом слова; исключения — предупреждением, со списком
+    # слова базы: подсказка согласована со значением слова; исключения — предупреждением, со списком
     n = 0
     for w in words:
-        if not w.get('level') or not w.get('gender') or w.get('number') == 'pl':
+        if not w.get('level') or w.get('number') == 'pl':
             continue
-        h = hints.hint(w['lemma'], w['gender'][0], rules, stats, heads, w.get('compound'))
-        if not h:
-            continue
-        n += 1
-        if not h['ok']:
-            warnings['rule-exception'].append(f'{w["id"]}: {hints.ARTICLE[w["gender"][0]]} {w["lemma"]} — исключение из {h["rule"]}')
+        for name in hints.FIELDS:
+            h = hints.hint(w, name, rules, stats, heads)
+            if not h:
+                continue
+            n += 1
+            if not h['ok']:
+                warnings['rule-exception'].append(f'{w["id"]}: {w["lemma"]} — исключение из {h["rule"]}')
     return n

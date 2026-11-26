@@ -80,17 +80,17 @@ test('подсказки рода: у большинства слов, согл�
   const fit = data.nouns.filter(gender.fits)
   let n = 0
   for (const w of fit) {
-    const h = data.hint(w.id)
+    const h = data.hint(w.id, 'gender')
     if (!h) continue
     n++
     expect(h.sources.length).toBeGreaterThanOrEqual(2)
     expect(h.share).toBeGreaterThan(0)
     // верная подсказка предсказывает род слова; исключение — другой род; у сложного слова род берётся от части
     if (h.head) expect(h.ok).toBe(true)
-    else expect(h.gender === w.gender[0]).toBe(h.ok)
+    else expect(h.value === w.gender[0]).toBe(h.ok)
   }
   expect(n).toBeGreaterThan(1300)
-  expect(data.hint('n:Zeitung')).toMatchObject({ text: '-ung → die', ok: true })
-  expect(data.hint('n:Haltestelle')).toMatchObject({ head: 'Stelle', ok: true })
-  expect(data.hint('n:Auge')).toMatchObject({ text: '-e → die', ok: false })
+  expect(data.hint('n:Zeitung', 'gender')).toMatchObject({ text: '-ung → die', ok: true })
+  expect(data.hint('n:Haltestelle', 'gender')).toMatchObject({ head: 'Stelle', ok: true })
+  expect(data.hint('n:Auge', 'gender')).toMatchObject({ text: '-e → die', ok: false })
 })

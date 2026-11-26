@@ -14,6 +14,7 @@ import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import srcs  # noqa: E402
+from hints import applies  # noqa: E402
 
 ROOT = srcs.ROOT
 # «Determinativkompositum aus … und X»: X — последняя часть; служебные слова разбора — не она
@@ -27,15 +28,6 @@ def rules():
         if not p.endswith('sources.yaml'):
             out += yaml.safe_load(open(p, encoding='utf-8'))
     return out
-
-
-def applies(rule, lemma):
-    w = rule['when']
-    if 'suffix' in w:
-        return lemma.lower().endswith(w['suffix']) and len(lemma) > len(w['suffix']) + 1
-    if 'list' in w:
-        return lemma in w['list']
-    return False
 
 
 def de_head(entry):
@@ -82,7 +74,7 @@ def main():
                 n, ok = len(known), sum(g in hg for g, hg in known)
             else:
                 hit = [w for w in single if applies(rule, w)]
-                n, ok = len(hit), sum(single[w] == rule['gender'] for w in hit)
+                n, ok = len(hit), sum(single[w] == rule['then']['gender'] for w in hit)
             f.write(json.dumps({'id': rule['id'], 'n': n, 'ok': ok}) + '\n')
             print(f'{rule["id"]:16} {ok:6} из {n:6}  {100 * ok / n if n else 0:5.1f}%')
     heads = 0

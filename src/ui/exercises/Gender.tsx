@@ -61,7 +61,7 @@ export const gender: View<G> = {
   },
 
   Reveal: ({ word, ok, data }) => {
-    const hint = data.hint(word.id)
+    const hint = data.hint(word.id, 'gender')
     return (
       <>
         <div className={`verdict ${ok ? 'yes' : 'no'}`}>{ok ? 'Верно' : 'Неверно'}</div>

@@ -26,10 +26,11 @@ export type Example = {
   nth: number
 }
 
-// Подсказка рода (docs/rules.md): правило, его доля на всём словаре, верно ли оно для слова.
+// Подсказка правила по полю слова (docs/rules.md): правило, его доля на всём словаре, верно ли оно для слова.
 export type Hint = {
   text: string
-  gender: Gender | null
+  // что правило утверждает: род, а у «как у последней части» — 'head'
+  value: string
   share: number
   n: number
   ok: boolean

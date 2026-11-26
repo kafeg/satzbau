@@ -35,10 +35,12 @@ CREATE TABLE themes (id TEXT PRIMARY KEY, title TEXT NOT NULL, n INTEGER NOT NUL
 CREATE TABLE theme_words (theme TEXT NOT NULL, i INTEGER NOT NULL, word_id TEXT NOT NULL, PRIMARY KEY (theme, i));
 CREATE INDEX theme_words_word ON theme_words (word_id);
 -- правила (rules/, docs/rules.md): n и ok — сколько слов словаря правило касается и у скольких верно
-CREATE TABLE rules (id TEXT PRIMARY KEY, text TEXT NOT NULL, gender TEXT, n INTEGER NOT NULL, ok INTEGER NOT NULL,
-  sources TEXT NOT NULL);
--- подсказка рода слова: правило, верно ли оно для слова (иначе — исключение), последняя часть сложного
-CREATE TABLE hints (word_id TEXT PRIMARY KEY, rule_id TEXT NOT NULL, ok INTEGER NOT NULL, head TEXT);
+-- field и value — что правило утверждает о слове: gender = f; value head — «как у последней части»
+CREATE TABLE rules (id TEXT PRIMARY KEY, field TEXT NOT NULL, value TEXT NOT NULL, text TEXT NOT NULL,
+  n INTEGER NOT NULL, ok INTEGER NOT NULL, sources TEXT NOT NULL);
+-- подсказка по полю слова: правило, верно ли оно для слова (иначе — исключение), последняя часть сложного
+CREATE TABLE hints (word_id TEXT NOT NULL, field TEXT NOT NULL, rule_id TEXT NOT NULL, ok INTEGER NOT NULL,
+  head TEXT, PRIMARY KEY (word_id, field)) WITHOUT ROWID;
 '''
 
 
@@ -98,16 +100,18 @@ def main():
     rules, stats, heads, sources = hints.load()
     for r in rules:
         src = [{'url': sources[x['src']]['url'], 'at': x['at']} for x in r['sources']]
-        db.execute('INSERT INTO rules VALUES (?,?,?,?,?,?)', (r['id'], hints.text(r), r.get('gender'),
+        f, v = hints.field(r)
+        db.execute('INSERT INTO rules VALUES (?,?,?,?,?,?,?)', (r['id'], f, v, hints.text(r),
                    stats[r['id']]['n'], stats[r['id']]['ok'], json.dumps(src, ensure_ascii=False)))
     n_hints = 0
     for pos, w in words():
         ids.add(w['id'])
-        if pos == 'noun' and w.get('level') and w.get('gender') and w.get('number', 'sg') == 'sg':
-            h = hints.hint(w['lemma'], w['gender'][0], rules, stats, heads, w.get('compound'))
-            if h:
-                n_hints += 1
-                db.execute('INSERT INTO hints VALUES (?,?,?,?)', (w['id'], h['rule'], int(h['ok']), h['head']))
+        if pos == 'noun' and w.get('level') and w.get('number', 'sg') == 'sg':
+            for name in hints.FIELDS:
+                h = hints.hint(w, name, rules, stats, heads)
+                if h:
+                    n_hints += 1
+                    db.execute('INSERT INTO hints VALUES (?,?,?,?,?)', (w['id'], name, h['rule'], int(h['ok']), h['head']))
         db.execute('INSERT INTO words VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (
             w['id'], pos, w['lemma'], w.get('sense'), w.get('compound'),
             *(json.dumps(w.get(k, []), ensure_ascii=False) for k in LISTS), w.get('number', 'sg'),

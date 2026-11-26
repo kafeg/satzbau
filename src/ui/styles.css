@@ -702,7 +702,7 @@ main.themes > * + * {
   color: var(--inverse);
 }
 
-.hint {
+.where {
   margin: 0;
   text-align: center;
   font-size: var(--fs-caption);

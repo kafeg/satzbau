@@ -58,9 +58,19 @@ class Guard(unittest.TestCase):
 
     def test_rule_without_dictionary_check(self):
         def m(rules, stats, sources):
-            rules.append({'id': 'suffix-xyz', 'when': {'suffix': 'xyz'}, 'gender': 'n',
+            rules.append({'id': 'suffix-xyz', 'when': {'suffix': 'xyz'}, 'then': {'gender': 'n'},
                           'sources': copy.deepcopy(rule(rules, 'suffix-ung')['sources'])})
         self.assertIn('rule-stats', run(m))
+
+    def test_claim_about_unknown_field(self):
+        def m(rules, stats, sources):
+            rule(rules, 'suffix-ung')['then'] = {'plural': 'en'}
+        self.assertIn('rule-schema', run(m))
+
+    def test_head_value_without_head_condition(self):
+        def m(rules, stats, sources):
+            rule(rules, 'suffix-ung')['then'] = {'gender': 'head'}
+        self.assertIn('rule-schema', run(m))
 
     def test_two_conditions_in_one_rule(self):
         def m(rules, stats, sources):
@@ -71,7 +81,7 @@ class Guard(unittest.TestCase):
 class Choice(unittest.TestCase):
     def hint(self, lemma, gender, compound=None):
         rules, stats, heads, _ = REAL
-        return hints.hint(lemma, gender, rules, stats, heads, compound)
+        return hints.hint({'lemma': lemma, 'gender': [gender], 'compound': compound}, 'gender', rules, stats, heads)
 
     def test_suffix(self):
         self.assertEqual(self.hint('Zeitung', 'f'), {'rule': 'suffix-ung', 'ok': True, 'head': None})
