@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import type { AnyExercise } from '../core/exercises/index.ts'
 import { type Overview, freshToday } from '../core/lesson.ts'
 import { plural } from '../core/text.ts'
 import { LEVELS, type Level } from '../core/types.ts'
@@ -11,16 +12,18 @@ type Props = {
   level: Level
   onLevel: (l: Level) => void
   ov: Overview
+  // по упражнению отдельно: карточки под «Заниматься», если упражнений больше одного
+  each: [AnyExercise, Overview][]
   theme: string
   onThemes: () => void
-  onStart: (extra: number) => void
+  onStart: (extra: number, only?: string) => void
   stored: boolean
   notice: string | null
   onExport: () => void
   onImport: (f: File) => void
 }
 
-export function Home({ data, level, onLevel, ov, theme, onThemes, onStart, stored, notice, onExport, onImport }: Props) {
+export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart, stored, notice, onExport, onImport }: Props) {
   const file = useRef<HTMLInputElement>(null)
   const due = ov.due.length
   const fresh = freshToday(ov)
@@ -86,6 +89,23 @@ export function Home({ data, level, onLevel, ov, theme, onThemes, onStart, store
             </span>
           </div>
         )}
+        {each.length > 1 &&
+          each.map(([ex, o]) => {
+            const d = o.due.length
+            const f = freshToday(o)
+            const empty = d + f === 0
+            return (
+              <button key={ex.id} className="card ex" disabled={empty} onClick={() => onStart(0, ex.id)}>
+                <span>
+                  <span className="cta-title">{ex.title}</span>
+                  <span className="cta-sub">
+                    {!empty ? `${d} к повтору · ${f} новых` : ex.after && o.fresh.length === 0 && o.words.untouched > 0 ? 'новые слова открываются после рода' : 'на сегодня всё'}
+                  </span>
+                </span>
+                {d > 0 && <span className="badge on">{d}</span>}
+              </button>
+            )
+          })}
       </div>
 
       <div>

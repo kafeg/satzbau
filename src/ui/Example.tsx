@@ -3,8 +3,8 @@ import { around } from '../core/text.ts'
 import type { Data } from '../store/db.ts'
 
 // Фраза с выделенным словом и переводом; машинный перевод подписан.
-export function Example({ data, wordId, mark }: { data: Data; wordId: string; mark: string }) {
-  const ex = useMemo(() => data.example(wordId), [data, wordId])
+export function Example({ data, wordId, mark, plural = false }: { data: Data; wordId: string; mark: string; plural?: boolean }) {
+  const ex = useMemo(() => data.example(wordId, plural), [data, wordId, plural])
   if (!ex) return null
   const [a, w, c] = around(ex.de, ex.word, ex.nth)
   return (

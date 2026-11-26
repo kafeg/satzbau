@@ -1,7 +1,7 @@
 // Экраны и переходы. Состояние: база (только чтение), журнал и пересчитанные из него повторы.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { EXERCISES } from '../core/exercises/index.ts'
-import { build, overview } from '../core/lesson.ts'
+import { type AnyExercise, EXERCISES } from '../core/exercises/index.ts'
+import { type Overview, build, overview } from '../core/lesson.ts'
 import { pool } from '../core/pool.ts'
 import { type Lesson as L, start } from '../core/run.ts'
 import { type Memory, apply, empty, init, replay } from '../core/srs.ts'
@@ -36,7 +36,8 @@ const savedLevel = (): Level => {
   return LEVELS.includes(v as Level) ? (v as Level) : 'A1'
 }
 
-type Screen = { k: 'home' } | { k: 'themes' } | { k: 'lesson'; lesson: L } | { k: 'result'; lesson: L }
+// only — урок одного упражнения; без него — все вперемешку
+type Screen = { k: 'home' } | { k: 'themes' } | { k: 'lesson'; lesson: L; only?: string } | { k: 'result'; lesson: L; only?: string }
 
 export function App() {
   const [data, setData] = useState<Data | null>(null)
@@ -71,15 +72,19 @@ export function App() {
   }, [data])
   // screen в зависимостях: «пора» пересчитывается при каждом возврате на главную
   const ov = useMemo(() => overview(words, EXERCISES, mem ?? empty(), Date.now()), [words, mem, screen])
+  const each = useMemo(
+    () => EXERCISES.map((ex) => [ex, overview(words, [ex], mem ?? empty(), Date.now())] as [AnyExercise, Overview]),
+    [words, mem, screen],
+  )
 
   const choose = (l: Level) => {
     setLevel(l)
     save('level', l)
   }
 
-  const begin = (extra: number) => {
-    const cards = build(ov, Math.random, extra)
-    if (cards.length > 0) setScreen({ k: 'lesson', lesson: start(cards) })
+  const begin = (extra: number, only?: string) => {
+    const cards = build(each.find(([ex]) => ex.id === only)?.[1] ?? ov, Math.random, extra)
+    if (cards.length > 0) setScreen({ k: 'lesson', lesson: start(cards), only })
   }
 
   const record = useCallback(
@@ -137,7 +142,7 @@ export function App() {
         lesson={screen.lesson}
         hint={hint}
         onRecord={record}
-        onDone={(l) => setScreen({ k: 'result', lesson: l })}
+        onDone={(l) => setScreen({ k: 'result', lesson: l, only: screen.only })}
         onClose={() => setScreen({ k: 'home' })}
       />
     )
@@ -149,8 +154,9 @@ export function App() {
         mem={mem}
         now={Date.now()}
         onMore={() => {
-          const cards = build(overview(words, EXERCISES, mem, Date.now()), Math.random)
-          setScreen(cards.length > 0 ? { k: 'lesson', lesson: start(cards) } : { k: 'home' })
+          const exs = EXERCISES.filter((ex) => !screen.only || ex.id === screen.only)
+          const cards = build(overview(words, exs, mem, Date.now()), Math.random)
+          setScreen(cards.length > 0 ? { k: 'lesson', lesson: start(cards), only: screen.only } : { k: 'home' })
         }}
         onHome={() => setScreen({ k: 'home' })}
       />
@@ -162,6 +168,7 @@ export function App() {
       level={level}
       onLevel={choose}
       ov={ov}
+      each={each}
       theme={theme?.title ?? 'Все темы'}
       onThemes={() => setScreen({ k: 'themes' })}
       onStart={begin}

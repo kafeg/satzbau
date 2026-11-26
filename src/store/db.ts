@@ -10,7 +10,8 @@ export type Data = {
   nouns: Noun[]
   // темы по порядку, слова темы — в порядке показа
   themes: Theme[]
-  example(wordId: string): Example | null
+  // plural — только фразы, где слово стоит во множественном числе
+  example(wordId: string, plural?: boolean): Example | null
 }
 
 async function bytes(url: string): Promise<Uint8Array> {
@@ -55,9 +56,10 @@ export function open(db: Database): Data {
     meta,
     nouns,
     themes,
-    example(wordId) {
+    example(wordId, plural = false) {
       const [r] = rows(db, `SELECT s.n, s.de, s.ru, s.ru_by, s.en, s.en_by, t.i, t.text FROM tokens t
-        JOIN sentences s ON s.n = t.sentence WHERE t.word_id = ? ORDER BY s.len, s.n LIMIT 1`, [wordId])
+        JOIN sentences s ON s.n = t.sentence JOIN morphs m ON m.n = t.morph
+        WHERE t.word_id = ? AND (? = 0 OR m.morph LIKE '%Number=Plur%') ORDER BY s.len, s.n LIMIT 1`, [wordId, plural ? 1 : 0])
       if (!r) return null
       const [same] = rows(db, 'SELECT count(*) AS c FROM tokens WHERE sentence = ? AND i < ? AND text = ?',
         [r.n as number, r.i as number, r.text as string])

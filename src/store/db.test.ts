@@ -4,6 +4,7 @@ import { gunzipSync } from 'node:zlib'
 import initSqlJs from 'sql.js'
 import { beforeAll, expect, test } from 'vitest'
 import { gender } from '../core/exercises/gender.ts'
+import { plural } from '../core/exercises/plural.ts'
 import { pool } from '../core/pool.ts'
 import { around } from '../core/text.ts'
 import { LEVELS } from '../core/types.ts'
@@ -60,4 +61,17 @@ test('в каждом примере подсвечивается именно �
   }
   expect(n).toBeGreaterThan(1500)
   expect(miss).toEqual([])
+})
+
+test('множественное: почти все формы в пяти типах; пример — со словом во множественном', () => {
+  const fit = data.nouns.filter(plural.fits)
+  expect(fit.length).toBeGreaterThan(1900)
+  let n = 0
+  for (const w of fit) {
+    const ex = data.example(w.id, true)
+    if (!ex) continue
+    n++
+    expect(around(ex.de, ex.word, ex.nth)[1]).toBe(ex.word)
+  }
+  expect(n).toBeGreaterThan(500)
 })

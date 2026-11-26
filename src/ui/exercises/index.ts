@@ -3,6 +3,7 @@ import type { FC } from 'react'
 import type { Noun } from '../../core/types.ts'
 import type { Data } from '../../store/db.ts'
 import { gender } from './Gender.tsx'
+import { plural } from './Plural.tsx'
 
 export type View<A = never> = {
   // содержимое карточки слова до ответа
@@ -16,4 +17,4 @@ export type View<A = never> = {
 }
 
 // тип ответа знает только сам экран
-export const VIEWS: Record<string, View<any>> = { gender }
+export const VIEWS: Record<string, View<any>> = { gender, plural }
