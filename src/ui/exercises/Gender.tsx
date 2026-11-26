@@ -1,4 +1,4 @@
-// Экран упражнения «Род» (docs/ex-gender.md). Цвет значит только род: верность — зачёркиванием.
+// Экран упражнения «Род» (docs/ex-gender.md). Цвет рода — у слова и в панели; кнопки без цвета: «неверно» тоже красное.
 import { useEffect } from 'react'
 import { ARTICLE, ORDER, right } from '../../core/exercises/gender.ts'
 import type { Gender as G, Noun } from '../../core/types.ts'
@@ -27,8 +27,10 @@ export function Full({ word }: { word: Noun }) {
 }
 
 export const gender: View<G> = {
-  Prompt: ({ word }) => (
+  Prompt: ({ word, done }) => (
     <>
+      {/* строка артикля занята и до ответа: слово не сдвигается, когда метка появится */}
+      <div className="art-line">{done && <Art g={word.gender[0]!} />}</div>
       <div className="lemma mono">{word.lemma}</div>
       <div className="ru">{word.ru}</div>
     </>
@@ -48,7 +50,7 @@ export const gender: View<G> = {
     return (
       <div className="choices">
         {ORDER.map((g, i) => {
-          const cls = !given ? '' : right(word, g) ? `g-${g} shown` : g === given ? 'struck' : 'dim'
+          const cls = !given ? '' : right(word, g) ? 'ok' : g === given ? 'struck' : 'dim'
           return (
             <button key={g} className={`choice mono ${cls}`} disabled={!!given} onClick={() => onAnswer(g)}>
               {ARTICLE[g]}

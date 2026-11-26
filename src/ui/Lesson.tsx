@@ -69,7 +69,7 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
 
       <section className="word">
         <span className={`tag ${fresh && !step.retry ? 'new' : ''}`}>{tag}</span>
-        <view.Prompt word={word} />
+        <view.Prompt word={word} done={!!given} />
       </section>
 
       <view.Choices key={`${lesson.i}`} word={word} given={given?.a ?? null} onAnswer={onAnswer} />

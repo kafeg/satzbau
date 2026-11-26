@@ -18,14 +18,11 @@
   --accent: #2448b8;
   --accent-ink: #ffffff;
 
-  /* род: заливка кнопки, фон и текст метки */
-  --der: #2980b9;
+  /* род: фон и текст метки */
   --der-bg: #dcebf7;
   --der-fg: #1b5e8c;
-  --die: #c0392b;
   --die-bg: #f8dfdc;
   --die-fg: #922b20;
-  --das: #27ae60;
   --das-bg: #dbf2e4;
   --das-fg: #1c7a44;
   --pl-bg: #fbf0c4;
@@ -507,6 +504,19 @@ main.home > * + * {
   overflow-wrap: anywhere;
 }
 
+.art-line {
+  height: 30px;
+  margin: calc(-1 * var(--s3)) 0 var(--s1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-card);
+}
+
+.art-line .art {
+  animation: sheet-in 0.15s ease-out;
+}
+
 .ru {
   margin-top: var(--s2);
   font-size: var(--fs-card);
@@ -547,12 +557,14 @@ main.home > * + * {
   cursor: default;
 }
 
-/* верная кнопка — сплошной цвет рода и галочка; неверная — серая, крестик */
-.choice.shown {
-  color: #fff;
+/* после ответа кнопки без цвета (цвет — у слова и в панели, docs/ex-gender.md): верная — рамка и галочка,
+   ошибочная — серая, зачёркнута, крестик; у коротких «-e», «—» зачёркивание сливается с дефисом, крестик обязателен */
+.choice.ok {
+  background: var(--sunk);
+  border: 2px solid var(--text);
 }
 
-.choice.shown::after,
+.choice.ok::after,
 .choice.struck::after {
   position: absolute;
   top: 4px;
@@ -560,27 +572,12 @@ main.home > * + * {
   font: 700 var(--fs-caption) var(--sans);
 }
 
-.choice.shown::after {
+.choice.ok::after {
   content: '✓';
 }
 
 .choice.struck::after {
   content: '✕';
-}
-
-.choice.g-m {
-  background: var(--der);
-  border-color: var(--der);
-}
-
-.choice.g-f {
-  background: var(--die);
-  border-color: var(--die);
-}
-
-.choice.g-n {
-  background: var(--das);
-  border-color: var(--das);
 }
 
 .choice.struck {
@@ -593,7 +590,7 @@ main.home > * + * {
   opacity: var(--off);
 }
 
-.choice.shown kbd,
+.choice.ok kbd,
 .choice.struck kbd,
 .choice.dim kbd {
   visibility: hidden;
@@ -617,7 +614,8 @@ main.home > * + * {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sheet {
+  .sheet,
+  .art-line .art {
     animation: none;
   }
 }
@@ -943,24 +941,6 @@ main.themes > * + * {
     font-size: var(--fs-body);
     letter-spacing: -0.03em;
   }
-}
-
-.choice.ok {
-  background: var(--sunk);
-  border-color: var(--text);
-}
-
-.choice.ok kbd {
-  visibility: hidden;
-}
-
-/* у коротких «-e», «—» зачёркивание сливается с дефисом: крестик обязателен (общее правило выше) */
-.choice.ok::after {
-  content: '✓';
-  position: absolute;
-  top: 4px;
-  right: 7px;
-  font: 700 var(--fs-caption) var(--sans);
 }
 
 .chg {

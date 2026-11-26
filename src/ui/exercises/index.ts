@@ -6,8 +6,8 @@ import { gender } from './Gender.tsx'
 import { plural } from './Plural.tsx'
 
 export type View<A = never> = {
-  // содержимое карточки слова до ответа
-  Prompt: FC<{ word: Noun }>
+  // содержимое карточки слова; done — ответ уже дан
+  Prompt: FC<{ word: Noun; done: boolean }>
   // кнопки ответа и их клавиши; после ответа показывают, что верно
   Choices: FC<{ word: Noun; given: A | null; onAnswer: (a: A) => void }>
   // верный ответ коротко — в заголовок панели: «Неверно: die»
