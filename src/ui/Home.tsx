@@ -157,7 +157,7 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
         </p>
         {notice && <p className="notice">{notice}</p>}
         <p>
-          Переводы слов и фраз, которых нет в словарях и Tatoeba, сделаны LLM. Данные: {data.meta.attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
+          Часть переводов и примеров, которых нет в словарях и Tatoeba, сделана LLM. Данные: {data.meta.attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
           <a href="https://github.com/kafeg/satzbau">github.com/kafeg/satzbau</a>
         </p>
         <p>satzbau {__VERSION__}</p>

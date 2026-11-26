@@ -61,7 +61,10 @@ def words():
 
 
 def sentences():
-    for p in sorted(glob.glob(os.path.join(ROOT, 'sentences', 'tatoeba', '*.jsonl'))):
+    # Tatoeba, примеры Викисловаря, фразы LLM — один формат (docs/data-model.md, «Фраза»)
+    for p in sorted(glob.glob(os.path.join(ROOT, 'sentences', '*', '*.jsonl'))):
+        if os.path.basename(os.path.dirname(p)) not in ('tatoeba', 'wikt', 'gen'):
+            continue
         for line in open(p, encoding='utf-8'):
             yield json.loads(line)
 

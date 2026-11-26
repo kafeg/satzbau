@@ -18,7 +18,7 @@ beforeAll(async () => {
 })
 
 test('в базе есть версия и источники', () => {
-  expect(data.meta.version).toMatch(/^0\.1\.\d+$/)
+  expect(data.meta.version).toMatch(/^0\.2\.\d+$/)
   expect(data.meta.attribution).toContain('Tatoeba')
 })
 
