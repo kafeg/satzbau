@@ -26,11 +26,19 @@ function Form({ form, p }: { form: string; p: Parse }) {
   )
 }
 
-// что угадано, а чего не хватило — только при ошибке, когда окончание верное
-function note(w: Noun, a: Pl): string | undefined {
+// как образована форма: «без окончания, форма не меняется», «окончание -e и умлаут u → ü»
+function how(lemma: string, p: Parse): string {
+  const uml = p.uml ? `умлаут ${lemma[p.at]} → ${'äöüÄÖÜ'['aouAOU'.indexOf(lemma[p.at]!)]}` : ''
+  if (p.end === '') return uml ? `без окончания, только ${uml}` : 'без окончания, форма не меняется'
+  return `окончание ${LABEL[p.end]}${uml ? ` и ${uml}` : ''}`
+}
+
+// при ошибке — какой вариант был верным и почему; если окончание угадано — чего не хватило
+function note(w: Noun, a: Pl): string {
   const [, p] = shown(w, null)
-  if (p.end !== a.end) return undefined
-  return p.uml ? 'окончание угадал, не хватило умлаута' : 'окончание угадал, умлаут здесь не нужен'
+  const right = `верно «${type(p)}»`
+  if (p.end !== a.end) return `${right}: ${how(w.lemma, p)}`
+  return p.uml ? `${right}: окончание угадал, не хватило умлаута` : `${right}: окончание угадал, умлаут здесь не нужен`
 }
 
 export const plural: View<Pl> = {
