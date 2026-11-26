@@ -890,3 +890,29 @@ main.themes > * + * {
   color: var(--accent);
   text-align: left;
 }
+
+/* ---------- подсказка правила ---------- */
+.hint-rule {
+  padding: var(--s2) var(--s3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  background: #fbfaf6;
+  font-size: var(--fs-sub);
+}
+
+.hint-rule p {
+  margin: 0;
+}
+
+.hint-rule .why {
+  color: var(--text-2);
+}
+
+.hint-rule .src {
+  margin-top: 2px;
+  font-size: var(--fs-caption);
+}
+
+.hint-rule .src a {
+  color: var(--text-2);
+}

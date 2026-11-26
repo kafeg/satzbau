@@ -1,0 +1,114 @@
+# Род существительного: признаки, которые его предсказывают (docs/rules.md).
+# Доля и исключения не пишутся руками: их считают tools/import_rules.py и verify.py.
+# Каждое правило — минимум два источника; в каждом источнике — раздел (at) и строка (find).
+
+- id: suffix-ung
+  when: {suffix: ung}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "''-ung,''"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-ung''<sup>''(f)''</sup>"}
+    - {src: en-wb-gender, at: Suffixes, find: "suffix ''-ung'' are feminine"}
+
+- id: suffix-heit
+  when: {suffix: heit}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "-heit,"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-heit''<sup>''(f)''</sup>"}
+    - {src: en-wb-gender, at: Suffixes, find: "''-heit/keit''"}
+
+- id: suffix-keit
+  when: {suffix: keit}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "-keit,"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-keit''<sup>''(f)''</sup>"}
+    - {src: en-wb-gender, at: Suffixes, find: "''-heit/keit''"}
+
+- id: suffix-schaft
+  when: {suffix: schaft}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "-schaft,"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-schaft''<sup>''(f)''</sup>"}
+
+- id: suffix-in
+  when: {suffix: in}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "''-in,''"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-in''<sup>''(f)''</sup>"}
+    - {src: en-wb-gender, at: Suffixes, find: "suffix ''-in''"}
+
+- id: suffix-ei
+  when: {suffix: ei}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "''-a, -ei,"}
+    - {src: de-wp-genus, at: Genus von Objekten ohne natürliches Geschlecht, find: "auf ''-ung'' und auf ''-ei''"}
+
+- id: ending-e
+  when: {suffix: e}
+  gender: f
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "90% of nouns in ''-e''"}
+    - {src: en-wb-gender, at: The -e ending, find: "Most nouns ending in ''-e'' are feminine"}
+
+- id: suffix-tum
+  when: {suffix: tum}
+  gender: n
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "-tum, -um"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-tum''<sup>''(n''"}
+
+- id: suffix-chen
+  when: {suffix: chen}
+  gender: n
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "''-chen,''"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-chen''<sup>''(n)''</sup>"}
+    - {src: en-wb-gender, at: Suffixes, find: "Diminutive suffixes are neuter"}
+
+- id: suffix-lein
+  when: {suffix: lein}
+  gender: n
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "''-lein,''"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-lein''<sup>''(n)''</sup>"}
+    - {src: en-wb-gender, at: Suffixes, find: "''-lein''"}
+
+- id: suffix-ling
+  when: {suffix: ling}
+  gender: m
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "-ling, -or"}
+    - {src: de-wp-genus, at: Deklinationsklasse, find: "''-ling''<sup>''(m)''</sup>"}
+
+- id: ending-er
+  when: {suffix: er}
+  gender: m
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "60% of nouns in -''el'' and ''-er''"}
+    - {src: en-wb-gender, at: Suffixes, find: "The suffix ''-er'', masculine"}
+
+- id: ending-o
+  when: {suffix: o}
+  gender: n
+  sources:
+    - {src: en-wp-gender, at: Noun forms, find: "''-o'' and ''-on''"}
+    - {src: en-wb-gender, at: The -o ending and imported words, find: "tend to be neuter"}
+
+- id: compound
+  when: {head: true}
+  sources:
+    - {src: en-wp-gender, at: Compounds and abbreviations, find: "Compound words usually carry the gender of their last element"}
+    - {src: en-wb-gender, at: Compounds, find: "the gender matches the gender of the second word"}
+
+- id: seasons-months
+  when: {list: [Frühling, Sommer, Herbst, Winter, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]}
+  gender: m
+  title: времена года и месяцы
+  sources:
+    - {src: en-wp-gender, at: Noun meanings, find: "Seasons, months and days of the week"}
+    - {src: de-wp-genus, at: Genus von Objekten ohne natürliches Geschlecht, find: "alle Jahreszeiten und Monatsnamen maskulin"}

@@ -2,7 +2,7 @@
 // База только читается: sql.js держит её в памяти, офлайн её хранит кэш service worker.
 import initSqlJs, { type Database, type SqlValue } from 'sql.js'
 import wasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
-import type { Example, Level, Noun, Theme } from '../core/types.ts'
+import type { Example, Gender, Hint, Level, Noun, Theme } from '../core/types.ts'
 
 export type Data = {
   meta: Record<string, string>
@@ -13,6 +13,8 @@ export type Data = {
   // сначала фразы с переводом человека, среди них — самая короткая;
   // plural — только фразы, где слово стоит во множественном числе
   example(wordId: string, plural?: boolean): Example | null
+  // подсказка рода из правил: самое надёжное подходящее правило или исключение из него
+  hint(wordId: string): Hint | null
 }
 
 async function bytes(url: string): Promise<Uint8Array> {
@@ -56,6 +58,20 @@ export function open(db: Database): Data {
     meta,
     nouns,
     themes,
+    hint(wordId) {
+      const [r] = rows(db, `SELECT r.text, r.gender, r.n, r.ok AS good, r.sources, h.ok, h.head FROM hints h
+        JOIN rules r ON r.id = h.rule_id WHERE h.word_id = ?`, [wordId])
+      if (!r) return null
+      return {
+        text: r.text as string,
+        gender: r.gender as Gender | null,
+        share: (r.good as number) / (r.n as number),
+        n: r.n as number,
+        ok: r.ok === 1,
+        head: r.head as string | null,
+        sources: JSON.parse(r.sources as string),
+      }
+    },
     example(wordId, plural = false) {
       const [r] = rows(db, `SELECT s.n, s.de, s.ru, s.ru_by, s.en, s.en_by, t.i, t.text FROM tokens t
         JOIN sentences s ON s.n = t.sentence JOIN morphs m ON m.n = t.morph

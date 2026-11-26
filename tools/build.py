@@ -9,6 +9,9 @@ import glob, gzip, json, os, shutil, sqlite3, subprocess, sys
 
 import yaml
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hints  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'build', 'satzbau.sqlite')
 POS = {'nouns': 'noun'}
@@ -31,6 +34,11 @@ CREATE INDEX tokens_word ON tokens (word_id) WHERE word_id IS NOT NULL;
 CREATE TABLE themes (id TEXT PRIMARY KEY, title TEXT NOT NULL, n INTEGER NOT NULL);
 CREATE TABLE theme_words (theme TEXT NOT NULL, i INTEGER NOT NULL, word_id TEXT NOT NULL, PRIMARY KEY (theme, i));
 CREATE INDEX theme_words_word ON theme_words (word_id);
+-- правила (rules/, docs/rules.md): n и ok — сколько слов словаря правило касается и у скольких верно
+CREATE TABLE rules (id TEXT PRIMARY KEY, text TEXT NOT NULL, gender TEXT, n INTEGER NOT NULL, ok INTEGER NOT NULL,
+  sources TEXT NOT NULL);
+-- подсказка рода слова: правило, верно ли оно для слова (иначе — исключение), последняя часть сложного
+CREATE TABLE hints (word_id TEXT PRIMARY KEY, rule_id TEXT NOT NULL, ok INTEGER NOT NULL, head TEXT);
 '''
 
 
@@ -87,8 +95,19 @@ def main():
         ('version', version), ('built', git('log', '-1', '--format=%cI')),
         ('license', 'CC BY-SA 4.0'), ('attribution', attribution())])
     ids = set()
+    rules, stats, heads, sources = hints.load()
+    for r in rules:
+        src = [{'url': sources[x['src']]['url'], 'at': x['at']} for x in r['sources']]
+        db.execute('INSERT INTO rules VALUES (?,?,?,?,?,?)', (r['id'], hints.text(r), r.get('gender'),
+                   stats[r['id']]['n'], stats[r['id']]['ok'], json.dumps(src, ensure_ascii=False)))
+    n_hints = 0
     for pos, w in words():
         ids.add(w['id'])
+        if pos == 'noun' and w.get('level') and w.get('gender') and w.get('number', 'sg') == 'sg':
+            h = hints.hint(w['lemma'], w['gender'][0], rules, stats, heads, w.get('compound'))
+            if h:
+                n_hints += 1
+                db.execute('INSERT INTO hints VALUES (?,?,?,?)', (w['id'], h['rule'], int(h['ok']), h['head']))
         db.execute('INSERT INTO words VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (
             w['id'], pos, w['lemma'], w.get('sense'), w.get('compound'),
             *(json.dumps(w.get(k, []), ensure_ascii=False) for k in LISTS), w.get('number', 'sg'),
@@ -121,7 +140,7 @@ def main():
     with open(OUT, 'rb') as f, open(OUT + '.gz', 'wb') as raw, \
             gzip.GzipFile(fileobj=raw, mode='wb', compresslevel=9, mtime=0) as g:
         shutil.copyfileobj(f, g)
-    print(f'{os.path.relpath(OUT, ROOT)}: {version}, слов {len(ids)}, фраз {n}, '
+    print(f'{os.path.relpath(OUT, ROOT)}: {version}, слов {len(ids)}, подсказок {n_hints}, фраз {n}, '
           f'{os.path.getsize(OUT) / 1e6:.1f} МБ, сжатая {os.path.getsize(OUT + ".gz") / 1e6:.1f} МБ')
 
 

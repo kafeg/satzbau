@@ -1,9 +1,10 @@
 // Сборка урока (docs/app.md, «Урок»): сначала пора повторить, потом новые по порядку пула.
 import type { AnyExercise } from './exercises/index.ts'
-import { type Memory, dueIn, learned, seen, startedToday } from './srs.ts'
+import { type Memory, dueIn, learned, seen, startedTodayAll } from './srs.ts'
 import type { Noun } from './types.ts'
 
 export const SIZE = 10
+// новых в день на все упражнения вместе (как «новых карточек в день» у Anki)
 export const NEW_PER_DAY = 20
 
 export type Card = { ex: AnyExercise; word: Noun; fresh: boolean }
@@ -11,8 +12,8 @@ export type Card = { ex: AnyExercise; word: Noun; fresh: boolean }
 export type Overview = {
   due: Card[]
   fresh: Card[]
-  // сколько новых ещё можно сегодня по каждому упражнению
-  left: Map<string, number>
+  // сколько новых ещё можно сегодня — на все упражнения вместе
+  left: number
   words: { learned: number; learning: number; untouched: number }
 }
 
@@ -35,17 +36,13 @@ export function overview(pool: Noun[], exs: AnyExercise[], m: Memory, now: numbe
     }
   }
   due.sort((a, b) => a[0] - b[0])
-  const left = new Map(exs.map((ex) => [ex.id, Math.max(0, NEW_PER_DAY - startedToday(m, ex.id, now))]))
+  const left = Math.max(0, NEW_PER_DAY - startedTodayAll(m, now))
   return { due: due.map(([, c]) => c), fresh, left, words }
 }
 
-// Сколько новых войдёт в уроки сегодня: по лимиту каждого упражнения.
+// Сколько новых войдёт в уроки сегодня: общий лимит на все упражнения.
 export function freshToday(o: Overview): number {
-  const n = new Map<string, number>()
-  for (const c of o.fresh) n.set(c.ex.id, (n.get(c.ex.id) ?? 0) + 1)
-  let total = 0
-  for (const [id, k] of n) total += Math.min(k, o.left.get(id) ?? 0)
-  return total
+  return Math.min(o.fresh.length, o.left)
 }
 
 // extra > 0 — «ещё N новых» сверх дневного лимита, когда повторять нечего.
@@ -59,13 +56,12 @@ export function build(o: Overview, rnd: () => number = Math.random, extra = 0, s
     return true
   }
   for (const c of o.due) take(c)
-  const left = new Map(o.left)
+  let left = o.left
   let more = extra
   for (const c of o.fresh) {
     if (out.length >= size) break
-    const l = left.get(c.ex.id) ?? 0
-    if (l > 0) {
-      if (take(c)) left.set(c.ex.id, l - 1)
+    if (left > 0) {
+      if (take(c)) left--
     } else if (more > 0 && take(c)) more--
   }
   for (let i = out.length - 1; i > 0; i--) {

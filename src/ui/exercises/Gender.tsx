@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { ARTICLE, ORDER, right } from '../../core/exercises/gender.ts'
 import type { Gender as G, Noun } from '../../core/types.ts'
 import { Example } from '../Example.tsx'
+import { HintLine } from '../HintLine.tsx'
 import type { View } from './index.ts'
 
 export function Art({ g }: { g: G | 'pl' }) {
@@ -59,13 +60,17 @@ export const gender: View<G> = {
     )
   },
 
-  Reveal: ({ word, ok, data }) => (
-    <>
-      <div className={`verdict ${ok ? 'yes' : 'no'}`}>{ok ? 'Верно' : 'Неверно'}</div>
-      <Full word={word} />
-      <Example data={data} wordId={word.id} mark={`g-${word.gender[0]}`} />
-    </>
-  ),
+  Reveal: ({ word, ok, data }) => {
+    const hint = data.hint(word.id)
+    return (
+      <>
+        <div className={`verdict ${ok ? 'yes' : 'no'}`}>{ok ? 'Верно' : 'Неверно'}</div>
+        <Full word={word} />
+        {hint && <HintLine hint={hint} gender={word.gender[0]!} />}
+        <Example data={data} wordId={word.id} mark={`g-${word.gender[0]}`} />
+      </>
+    )
+  },
 
   Summary: ({ word }) => (
     <>

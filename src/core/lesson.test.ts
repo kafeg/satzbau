@@ -30,7 +30,7 @@ test('сначала пора повторить, потом новые по п�
 test('лимит новых в день; сверх лимита — только «ещё»', () => {
   const xs = Array.from({ length: NEW_PER_DAY }, (_, i) => a(i, 1))
   const o = overview(words, [gender], replay(xs), T0 + 60_000)
-  expect(o.left.get('gender')).toBe(0)
+  expect(o.left).toBe(0)
   expect(freshToday(o)).toBe(0)
   expect(build(o, keep)).toEqual([])
   expect(build(o, keep, 10).map((c) => c.word.lemma)[0]).toBe(`W${NEW_PER_DAY}`)
@@ -51,4 +51,12 @@ test('одно слово — один раз за урок', () => {
 test('слова, которым упражнение не подходит, не берутся', () => {
   const pl = noun('Eltern', [], { number: 'pl' })
   expect(overview([pl], [gender], replay([]), T0).fresh).toEqual([])
+})
+
+test('лимит новых — общий на все упражнения', () => {
+  const xs = Array.from({ length: NEW_PER_DAY / 2 }, (_, i) => a(i, 1))
+  const ys = Array.from({ length: NEW_PER_DAY / 2 }, (_, i) => a(i, 1, T0, 'plural'))
+  const o = overview(words, [gender, plural], replay([...xs, ...ys]), T0 + 60_000)
+  expect(o.left).toBe(0)
+  expect(build(o, keep).filter((c) => c.fresh)).toEqual([])
 })

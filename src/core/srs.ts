@@ -91,6 +91,14 @@ export function startedToday(m: Memory, ex: string, now: number): number {
   return m.started.get(`${day(now)} ${ex}`) ?? 0
 }
 
+// новых сегодня по всем упражнениям: лимит новых общий, иначе он растёт с каждым упражнением
+export function startedTodayAll(m: Memory, now: number): number {
+  const d = `${day(now)} `
+  let n = 0
+  for (const [k, v] of m.started) if (k.startsWith(d)) n += v
+  return n
+}
+
 export function learned(m: Memory, ex: string, word: string): boolean {
   const c = m.cards.get(cardKey(ex, word))
   if (!c?.lastReviewAt) return false

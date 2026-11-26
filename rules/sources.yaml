@@ -1,0 +1,11 @@
+# Источники правил (docs/rules.md). Только свободные: правило ссылается на раздел и строку,
+# которую tools/check_sources.py находит в этом разделе.
+en-wp-gender:
+  url: https://en.wikipedia.org/wiki/Grammatical_gender_in_German
+  license: CC BY-SA 4.0
+de-wp-genus:
+  url: https://de.wikipedia.org/wiki/Genus
+  license: CC BY-SA 4.0
+en-wb-gender:
+  url: https://en.wikibooks.org/wiki/German/Grammar/Noun_gender
+  license: CC BY-SA 4.0

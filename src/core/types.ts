@@ -26,6 +26,17 @@ export type Example = {
   nth: number
 }
 
+// Подсказка рода (docs/rules.md): правило, его доля на всём словаре, верно ли оно для слова.
+export type Hint = {
+  text: string
+  gender: Gender | null
+  share: number
+  n: number
+  ok: boolean
+  head: string | null
+  sources: { url: string; at: string }[]
+}
+
 // Запись журнала: единственное, что приложение хранит (docs/app.md, «Журнал»).
 export type Answer = {
   t: number
