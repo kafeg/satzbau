@@ -45,12 +45,11 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
 
   return (
     <main className="home">
-      {update.fresh ? (
+      {/* сверху — только то, что ждёт действия; как идёт скачивание, видно внизу у версии */}
+      {update.fresh && (
         <button className="update" onClick={update.onApply}>
           Есть новая версия · <b>Обновить</b>
         </button>
-      ) : (
-        update.check === 'loading' && <p className="update">Скачиваю новую версию…</p>
       )}
       <h1>
         <span className="art g-m">der</span> Satzbau
