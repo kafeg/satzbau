@@ -309,6 +309,10 @@ button.exr:not(:disabled):active {
   color: var(--text-2);
 }
 
+.exr:disabled .chev {
+  visibility: hidden;
+}
+
 .exr .t {
   display: block;
   font-weight: 600;

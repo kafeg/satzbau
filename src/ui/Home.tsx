@@ -86,15 +86,23 @@ export function Home({ level, theme, ov, each, onPick, onProgress, onStart, onUp
           {each.map(([ex, o]) => {
             const d = o.due.length
             const f = freshToday(o)
-            const empty = d + f === 0
+            // на сегодня всё, но новые есть — та же «ещё N новых», что у большой кнопки, только для этого упражнения
+            const extra = d + f === 0 ? Math.min(EXTRA, o.fresh.length) : 0
+            const empty = d + f + extra === 0
+            const sub =
+              d + f > 0
+                ? `${d} к повтору · ${f} новых`
+                : extra > 0
+                  ? `на сегодня всё · взять ещё ${extra} новых`
+                  : ex.after && o.words.untouched > 0
+                    ? 'новые слова открываются после рода'
+                    : 'повторять пока нечего'
             return (
               <li key={ex.id}>
-                <button className="exr" disabled={empty} onClick={() => onStart(0, ex.id)}>
+                <button className="exr" disabled={empty} onClick={() => onStart(extra, ex.id)}>
                   <span>
                     <span className="t">{ex.title}</span>
-                    <span className="s">
-                      {!empty ? `${d} к повтору · ${f} новых` : ex.after && o.fresh.length === 0 && o.words.untouched > 0 ? 'новые слова открываются после рода' : 'на сегодня всё'}
-                    </span>
+                    <span className="s">{sub}</span>
                   </span>
                   {d > 0 ? <span className="badge on">{d}</span> : <span />}
                   <span className="chev" aria-hidden>
