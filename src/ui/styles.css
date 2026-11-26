@@ -826,7 +826,16 @@ main.themes > * + * {
 
 .five .choice {
   min-height: 56px;
+  padding: 0;
   font-size: var(--fs-card);
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .five .choice {
+    font-size: var(--fs-body);
+    letter-spacing: -0.03em;
+  }
 }
 
 .choice.ok {
