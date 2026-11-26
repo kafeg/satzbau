@@ -1,6 +1,6 @@
 /* Поверхности, отступы и кегли — из визуальной системы v1 (docs/design.md в ветке v1).
    Цвет рода — как в курсе и учебниках: der синий, die красный, das зелёный, множественное жёлтое.
-   Верно или неверно — панель ответа снизу (зелёная или красная) с галочкой или крестиком:
+   Верно или неверно — панель ответа под вариантами (зелёная или красная) с галочкой или крестиком:
    цвет никогда не единственный признак, рядом всегда слово или знак. */
 :root {
   --bg: #f5f4ef;
@@ -599,25 +599,37 @@ main.home > * + * {
   visibility: hidden;
 }
 
-/* панель ответа снизу: зелёная — верно, красная — неверно */
+/* панель ответа сразу под вариантами — итог там, куда смотрел: зелёная — верно, красная — неверно */
 .sheet {
-  margin: auto calc(-1 * var(--s4)) calc(-1 * (var(--s4) + env(safe-area-inset-bottom)));
-  padding: var(--s4) var(--s4) calc(var(--s4) + env(safe-area-inset-bottom));
+  padding: var(--s4);
   display: flex;
   flex-direction: column;
   gap: var(--s3);
-  border-radius: var(--r-l) var(--r-l) 0 0;
-  box-shadow: 0 -6px 18px rgb(0 0 0 / 6%);
+  border-radius: var(--r-l);
+  animation: sheet-in 0.15s ease-out;
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet {
+    animation: none;
+  }
 }
 
 .sheet.ok {
   background: var(--ok-bg);
-  border-top: 1px solid var(--ok-line);
+  border: 1px solid var(--ok-line);
 }
 
 .sheet.bad {
   background: var(--bad-bg);
-  border-top: 1px solid var(--bad-line);
+  border: 1px solid var(--bad-line);
 }
 
 .verdict {
