@@ -366,7 +366,7 @@
 {"lemma": "Nagelfeile", "dewikt": "Feile", "enwikt": null, "gender": {"Feile": ["f"]}, "plural": {"Feile": ["-(e)n"]}}
 {"lemma": "Nagellack", "dewikt": "Lack", "enwikt": "Lack", "gender": {"Lack": ["m"]}, "plural": {"Lack": ["-e"]}}
 {"lemma": "Nagelschere", "dewikt": "Schere", "enwikt": "Schere", "gender": {"Schere": ["f"]}, "plural": {"Schere": ["-(e)n"]}}
-{"lemma": "Nationalfeiertag", "dewikt": "Feiertag", "enwikt": "Tag", "gender": {"Tag": ["m", "n"], "Feiertag": ["m"]}, "plural": {"Tag": ["-e", "-s"], "Feiertag": ["-e"]}}
+{"lemma": "Nationalfeiertag", "dewikt": "Feiertag", "enwikt": "Tag", "gender": {"Feiertag": ["m"], "Tag": ["m", "n"]}, "plural": {"Feiertag": ["-e"], "Tag": ["-e", "-s"]}}
 {"lemma": "Nationalpark", "dewikt": "Park", "enwikt": "Park", "gender": {"Park": ["m"]}, "plural": {"Park": ["-s"]}}
 {"lemma": "Nebenwirkung", "dewikt": "Wirkung", "enwikt": null, "gender": {"Wirkung": ["f"]}, "plural": {"Wirkung": ["-(e)n"]}}
 {"lemma": "Netzwerk", "dewikt": "Werk", "enwikt": "Werk", "gender": {"Werk": ["n"]}, "plural": {"Werk": ["-e"]}}

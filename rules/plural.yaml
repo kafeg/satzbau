@@ -121,6 +121,14 @@
     - {src: en-wb-plural, at: Feminine nouns, find: "Feminine nouns almost always use the ''-(e)n''"}
     - {src: de-wp-dekl, at: "W2: ''-(e)n'' (f.)", find: "Die meisten Feminina gehören in diese Klasse."}
 
+# источники говорят -e; с умлаутом (Baum → Bäume) — другой тип, ¨-e: исключение
+- id: pl-m
+  when: {gender: [m]}
+  then: {plural: -e}
+  sources:
+    - {src: de-wp-plural, at: Verhältnis von Genus und Plural, find: "Maskulina die [[Endung]] ''-e''"}
+    - {src: en-wb-plural, at: Masculine nouns, find: "Masculine nouns tend to use the ''-e'' ending to form plurals."}
+
 - id: pl-er-mn
   when: {suffix: er, gender: [m, n]}
   then: {plural: —}

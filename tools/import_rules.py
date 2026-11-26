@@ -99,7 +99,7 @@ def main():
             if not d and not e:
                 continue
             heads += 1
-            parts = {d, e} - {None}
+            parts = sorted({d, e} - {None})
             rec = {'lemma': w, 'dewikt': d, 'enwikt': e}
             for name in FIELDS:
                 rec[name] = {h: sorted(values[name][h]) for h in parts if h in values[name]}

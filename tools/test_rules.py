@@ -157,8 +157,19 @@ class PluralChoice(unittest.TestCase):
         self.assertEqual(self.hint('Käse', 'm', 'Käse'), {'rule': 'pl-e', 'ok': False, 'head': None})
         self.assertEqual(self.hint('Garten', 'm', 'Gärten'), {'rule': 'pl-en', 'ok': False, 'head': None})
 
+    def test_masculine_fallback(self):
+        # «der → -e» — только там, где нет правила точнее; умлаут — другой тип, ¨-e
+        self.assertEqual(self.hint('Tisch', 'm', 'Tische'), {'rule': 'pl-m', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Rucksack', 'm', 'Rucksäcke'), {'rule': 'pl-m', 'ok': False, 'head': None})
+        self.assertEqual(self.hint('Mann', 'm', 'Männer'), {'rule': 'pl-m', 'ok': False, 'head': None})
+        self.assertEqual(self.hint('Lehrer', 'm', 'Lehrer')['rule'], 'pl-er-mn')
+        self.assertEqual(self.hint('Junge', 'm', 'Jungen')['rule'], 'pl-e')
+        # -er (der, das) → — не даёт ответа, der → -e даёт: правило, а не исключение
+        self.assertEqual(self.hint('Charakter', 'm', 'Charaktere'), {'rule': 'pl-m', 'ok': True, 'head': None})
+
     def test_no_rule_no_hint(self):
-        self.assertIsNone(self.hint('Tisch', 'm', 'Tische'))
+        # у среднего рода общего правила нет: источники говорят -er, а не -e
+        self.assertIsNone(self.hint('Regal', 'n', 'Regale'))
 
     def test_form_outside_types_has_no_hint(self):
         self.assertIsNone(self.hint('Museum', 'n', 'Museen'))
