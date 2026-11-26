@@ -7,6 +7,15 @@ import type { Data } from '../store/db.ts'
 
 export const EXTRA = 10
 
+export type Check = 'idle' | 'checking' | 'loading' | 'latest' | 'failed'
+const CHECK: Record<Check, string> = {
+  idle: '',
+  checking: 'проверяю…',
+  loading: 'скачиваю новую версию…',
+  latest: 'это последняя версия',
+  failed: 'не удалось: нет сети?',
+}
+
 type Props = {
   data: Data
   level: Level
@@ -19,12 +28,13 @@ type Props = {
   onStart: (extra: number, only?: string) => void
   stored: boolean
   notice: string | null
-  onUpdate: (() => void) | null
+  // fresh — новая версия скачана и ждёт кнопки
+  update: { fresh: boolean; check: Check; onCheck: () => void; onApply: () => void }
   onExport: () => void
   onImport: (f: File) => void
 }
 
-export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart, stored, notice, onUpdate, onExport, onImport }: Props) {
+export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart, stored, notice, update, onExport, onImport }: Props) {
   const file = useRef<HTMLInputElement>(null)
   const due = ov.due.length
   const fresh = freshToday(ov)
@@ -35,10 +45,12 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
 
   return (
     <main className="home">
-      {onUpdate && (
-        <button className="update" onClick={onUpdate}>
+      {update.fresh ? (
+        <button className="update" onClick={update.onApply}>
           Есть новая версия · <b>Обновить</b>
         </button>
+      ) : (
+        update.check === 'loading' && <p className="update">Скачиваю новую версию…</p>
       )}
       <h1>satzbau</h1>
 
@@ -160,7 +172,23 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
           Часть переводов и примеров, которых нет в словарях и Tatoeba, сделана LLM. Данные: {data.meta.attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
           <a href="https://github.com/kafeg/satzbau">github.com/kafeg/satzbau</a>
         </p>
-        <p>satzbau {__VERSION__}</p>
+        <p>
+          satzbau {__VERSION__} ·{' '}
+          {update.fresh ? (
+            <button className="link" onClick={update.onApply}>
+              обновить
+            </button>
+          ) : update.check === 'idle' || update.check === 'latest' || update.check === 'failed' ? (
+            <>
+              {CHECK[update.check] && `${CHECK[update.check]} · `}
+              <button className="link" onClick={update.onCheck}>
+                проверить обновления
+              </button>
+            </>
+          ) : (
+            CHECK[update.check]
+          )}
+        </p>
       </footer>
     </main>
   )

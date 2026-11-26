@@ -10,7 +10,7 @@ import { type Answer, LEVELS, type Level } from '../core/types.ts'
 import { type Data, load } from '../store/db.ts'
 import * as journal from '../store/journal.ts'
 import { download, parse } from '../store/transfer.ts'
-import { Home } from './Home.tsx'
+import { type Check, Home } from './Home.tsx'
 import { Lesson } from './Lesson.tsx'
 import { Result } from './Result.tsx'
 import { Themes } from './Themes.tsx'
@@ -51,11 +51,37 @@ export function App() {
   const [stored, setStored] = useState(true)
   const [notice, setNotice] = useState<string | null>(null)
   const asked = useRef(false)
-  // новая версия скачана — ждёт кнопки; проверка раз в час, пока приложение открыто
+  // новая версия скачивается сама при открытии и раз в час; ставится по кнопке, чтобы не оборвать урок
+  const reg = useRef<ServiceWorkerRegistration | null>(null)
+  const [check, setCheck] = useState<Check>('idle')
   const {
     needRefresh: [fresh],
     updateServiceWorker,
-  } = useRegisterSW({ onRegisteredSW: (_, r) => r && setInterval(() => void r.update(), 3_600_000) })
+  } = useRegisterSW({
+    onRegisteredSW: (_, r) => {
+      if (!r) return
+      reg.current = r
+      if (r.installing) watch(r.installing)
+      r.addEventListener('updatefound', () => r.installing && watch(r.installing))
+      setInterval(() => void r.update(), 3_600_000)
+    },
+  })
+  function watch(w: ServiceWorker) {
+    setCheck('loading')
+    w.addEventListener('statechange', () => w.state === 'redundant' && setCheck('failed'))
+  }
+  const recheck = useCallback(async () => {
+    const r = reg.current
+    if (!r) return setCheck('latest')
+    setCheck('checking')
+    try {
+      await r.update()
+    } catch {
+      return setCheck('failed')
+    }
+    if (r.installing) watch(r.installing)
+    else if (!r.waiting) setCheck('latest')
+  }, [])
 
   useEffect(() => {
     const saved = journal.all().catch(() => {
@@ -180,7 +206,7 @@ export function App() {
       onStart={begin}
       stored={stored}
       notice={notice}
-      onUpdate={fresh ? () => void updateServiceWorker() : null}
+      update={{ fresh, check, onCheck: () => void recheck(), onApply: () => void updateServiceWorker() }}
       onExport={() => download(answers)}
       onImport={restore}
     />
