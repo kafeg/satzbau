@@ -8,6 +8,9 @@
 Tatoeba с переводами. Модель данных — [docs/data-model.md](docs/data-model.md).
 Прежняя версия — ветка [`v1`](../../tree/v1); сайт пока показывает её.
 
+Сейчас в v2 одно упражнение — род существительных (`der`, `die`, `das`), 2080 слов курса A1–B1.
+Запуск: `npm ci && npm run data && npm run dev` (для `npm run data` нужен Python с PyYAML).
+
 ## Лицензии
 Код — **MIT** (`LICENSE`). Данные — **CC BY-SA 4.0**, с атрибуцией источников:
 

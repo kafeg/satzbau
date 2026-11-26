@@ -203,13 +203,17 @@ SQLite, собирается `tools/build.py` из текста, в git не х�
 
 | таблица | поля |
 |---|---|
-| `meta` | version, built, license, attribution |
-| `words` | id, pos, lemma, sense, gender, plural, … (списки — JSON), ru, en, freq, level |
-| `sentences` | id, de, ru, ru_by, en, en_by |
-| `tokens` | sentence_id, i, text, lemma, upos, morph, word_id — индекс по word_id |
+| `meta` | key, value: version, built (время коммита), license, attribution (источники и лицензии из `sources.lock`) |
+| `words` | id, pos, lemma, sense, compound, gender, plural, gen_sg (списки — JSON), number, ru, ru_llm, en, en_llm, freq, level, skip (JSON) |
+| `sentences` | n (число), id (`t:…`), de, ru, ru_by, en, en_by, len (токенов) |
+| `morphs` | n, upos, morph — 429 разных сочетаний вместо строки у каждого токена |
+| `tokens` | sentence (n фразы), i, text, lemma (NULL = как text), morph (n), word_id — индекс по word_id |
 
-Приложение читает базу через один модуль доступа к данным (wa-sqlite, файл хранится на
-устройстве). Темы, правила, упражнения, исключения появятся таблицами, когда до них дойдёт шаг.
+Рядом пишется сжатая копия `build/satzbau.sqlite.gz` — её и качает приложение (11 МБ → 4,4 МБ)
+и распаковывает `DecompressionStream`. Читает базу один модуль `src/db.ts` через sql.js:
+база только читается, поэтому держится в памяти целиком, а на устройстве её хранит кэш
+service worker. Журнал ученика, когда появится, — отдельное хранилище с записью.
+Темы, правила, упражнения, исключения появятся таблицами, когда до них дойдёт шаг.
 
 ## Версия
 `0.1.N`, N = `git rev-list --count HEAD`. Пишется в `meta.version` базы и в приложение.
@@ -231,7 +235,7 @@ SQLite, собирается `tools/build.py` из текста, в git не х�
    Список лемм — существительные ручного отбора v1.
 3. Фразы для существительных: отбор, разметка, переводы Tatoeba.
 4. Перевод недостающего языка — пачками, отдельной сессией.
-5. База и первое упражнение (род). Его спека — отдельно, когда дойдём.
+5. База и первое упражнение (род) — `docs/ex-gender.md`.
 
 ## Чего в v2 сейчас нет
 FSRS (будет модулем, когда понадобятся повторы сверх «ошибка возвращается»), темы, правила,

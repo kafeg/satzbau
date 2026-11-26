@@ -6,3 +6,5 @@ __pycache__/
 /data/
 # база приложения собирается tools/build.py
 /build/
+node_modules/
+/dist/
