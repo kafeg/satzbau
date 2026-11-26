@@ -19,11 +19,12 @@ type Props = {
   onStart: (extra: number, only?: string) => void
   stored: boolean
   notice: string | null
+  onUpdate: (() => void) | null
   onExport: () => void
   onImport: (f: File) => void
 }
 
-export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart, stored, notice, onExport, onImport }: Props) {
+export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart, stored, notice, onUpdate, onExport, onImport }: Props) {
   const file = useRef<HTMLInputElement>(null)
   const due = ov.due.length
   const fresh = freshToday(ov)
@@ -34,10 +35,12 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
 
   return (
     <main className="home">
-      <header className="head">
-        <h1>satzbau</h1>
-        <span className="caption">{__VERSION__}</span>
-      </header>
+      {onUpdate && (
+        <button className="update" onClick={onUpdate}>
+          Есть новая версия · <b>Обновить</b>
+        </button>
+      )}
+      <h1>satzbau</h1>
 
       <div>
         <div className="section">Уровень</div>
@@ -154,9 +157,10 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
         </p>
         {notice && <p className="notice">{notice}</p>}
         <p>
-          Данные: {data.meta.attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
+          Переводы слов и фраз, которых нет в словарях и Tatoeba, сделаны LLM. Данные: {data.meta.attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
           <a href="https://github.com/kafeg/satzbau">github.com/kafeg/satzbau</a>
         </p>
+        <p>satzbau {__VERSION__}</p>
       </footer>
     </main>
   )

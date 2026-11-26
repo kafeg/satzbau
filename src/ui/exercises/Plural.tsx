@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { ENDINGS, type Ending, LABEL, type Parse, type Pl, canUmlaut, parse, right } from '../../core/exercises/plural.ts'
 import type { Noun } from '../../core/types.ts'
 import { Example } from '../Example.tsx'
-import { Art, Ru } from './Gender.tsx'
+import { Art } from './Gender.tsx'
 import type { View } from './index.ts'
 
 // форма, по которой показываем разбор: та, что совпала с ответом, иначе первая
@@ -42,9 +42,7 @@ export const plural: View<Pl> = {
       <div className="lemma mono">
         <Art g={word.gender[0]!} /> {word.lemma}
       </div>
-      <div className="ru">
-        <Ru word={word} />
-      </div>
+      <div className="ru">{word.ru}</div>
       <div className="ask mono">
         die <span className="q">…?</span>
       </div>

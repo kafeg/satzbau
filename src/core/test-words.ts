@@ -8,7 +8,6 @@ export const noun = (lemma: string, gender: Gender[] = ['m'], extra: Partial<Nou
   plural: [],
   number: 'sg',
   ru: null,
-  ruLlm: false,
   level: 'A1' as Level,
   freq: null,
   skip: {},

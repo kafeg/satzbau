@@ -124,11 +124,6 @@ main.home > * + * {
   margin-top: var(--s5);
 }
 
-.head {
-  display: flex;
-  align-items: baseline;
-  gap: var(--s2);
-}
 
 .chips {
   display: flex;
@@ -491,10 +486,6 @@ main.home > * + * {
   color: var(--text-2);
 }
 
-.llm {
-  font-size: var(--fs-caption);
-  color: var(--text-2);
-}
 
 .choices {
   display: grid;
@@ -887,4 +878,15 @@ main.themes > * + * {
 .badge.on {
   background: var(--accent);
   color: var(--accent-ink);
+}
+
+.update {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--s2) var(--s4);
+  border: 1px solid #c9d3f3;
+  border-radius: var(--r-m);
+  background: #eef2fd;
+  color: var(--accent);
+  text-align: left;
 }

@@ -1,5 +1,6 @@
 // Экраны и переходы. Состояние: база (только чтение), журнал и пересчитанные из него повторы.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useRegisterSW } from 'virtual:pwa-register/react'
 import { type AnyExercise, EXERCISES } from '../core/exercises/index.ts'
 import { type Overview, build, overview } from '../core/lesson.ts'
 import { pool } from '../core/pool.ts'
@@ -50,6 +51,11 @@ export function App() {
   const [stored, setStored] = useState(true)
   const [notice, setNotice] = useState<string | null>(null)
   const asked = useRef(false)
+  // новая версия скачана — ждёт кнопки; проверка раз в час, пока приложение открыто
+  const {
+    needRefresh: [fresh],
+    updateServiceWorker,
+  } = useRegisterSW({ onRegisteredSW: (_, r) => r && setInterval(() => void r.update(), 3_600_000) })
 
   useEffect(() => {
     const saved = journal.all().catch(() => {
@@ -174,6 +180,7 @@ export function App() {
       onStart={begin}
       stored={stored}
       notice={notice}
+      onUpdate={fresh ? () => void updateServiceWorker() : null}
       onExport={() => download(answers)}
       onImport={restore}
     />

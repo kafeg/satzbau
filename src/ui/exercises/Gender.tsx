@@ -25,23 +25,11 @@ export function Full({ word }: { word: Noun }) {
   )
 }
 
-export function Ru({ word }: { word: Noun }) {
-  if (!word.ru) return null
-  return (
-    <>
-      {word.ru}
-      {word.ruLlm && <span className="llm"> · машинный перевод</span>}
-    </>
-  )
-}
-
 export const gender: View<G> = {
   Prompt: ({ word }) => (
     <>
       <div className="lemma mono">{word.lemma}</div>
-      <div className="ru">
-        <Ru word={word} />
-      </div>
+      <div className="ru">{word.ru}</div>
     </>
   ),
 

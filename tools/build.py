@@ -77,7 +77,8 @@ def main():
         os.remove(tmp)
     db = sqlite3.connect(tmp)
     db.executescript(SCHEMA)
-    version = f'0.1.{git("rev-list", "--count", "HEAD")}'
+    tag, n, _ = git('describe', '--tags', '--match', 'v[0-9]*.[0-9]*', '--long').split('-')
+    version = f'{tag[1:]}.{n}'
     db.executemany('INSERT INTO meta VALUES (?, ?)', [
         ('version', version), ('built', git('log', '-1', '--format=%cI')),
         ('license', 'CC BY-SA 4.0'), ('attribution', attribution())])

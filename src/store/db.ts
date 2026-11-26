@@ -10,6 +10,7 @@ export type Data = {
   nouns: Noun[]
   // темы по порядку, слова темы — в порядке показа
   themes: Theme[]
+  // сначала фразы с переводом человека, среди них — самая короткая;
   // plural — только фразы, где слово стоит во множественном числе
   example(wordId: string, plural?: boolean): Example | null
 }
@@ -34,7 +35,7 @@ function rows(db: Database, sql: string, params: SqlValue[] = []): Record<string
 
 export function open(db: Database): Data {
   const meta = Object.fromEntries(rows(db, 'SELECT key, value FROM meta').map((r) => [r.key, r.value])) as Record<string, string>
-  const nouns = rows(db, `SELECT id, lemma, gender, plural, number, ru, ru_llm, level, freq, skip FROM words
+  const nouns = rows(db, `SELECT id, lemma, gender, plural, number, ru, level, freq, skip FROM words
     WHERE pos = 'noun' AND level IS NOT NULL`).map((r) => ({
     id: r.id as string,
     lemma: r.lemma as string,
@@ -42,7 +43,6 @@ export function open(db: Database): Data {
     plural: JSON.parse(r.plural as string),
     number: r.number as Noun['number'],
     ru: r.ru as string | null,
-    ruLlm: r.ru_llm === 1,
     level: r.level as Level,
     freq: r.freq as number | null,
     skip: JSON.parse(r.skip as string),
@@ -59,7 +59,8 @@ export function open(db: Database): Data {
     example(wordId, plural = false) {
       const [r] = rows(db, `SELECT s.n, s.de, s.ru, s.ru_by, s.en, s.en_by, t.i, t.text FROM tokens t
         JOIN sentences s ON s.n = t.sentence JOIN morphs m ON m.n = t.morph
-        WHERE t.word_id = ? AND (? = 0 OR m.morph LIKE '%Number=Plur%') ORDER BY s.len, s.n LIMIT 1`, [wordId, plural ? 1 : 0])
+        WHERE t.word_id = ? AND (? = 0 OR m.morph LIKE '%Number=Plur%')
+        ORDER BY s.ru_by LIKE 'tatoeba:%' DESC, s.len, s.n LIMIT 1`, [wordId, plural ? 1 : 0])
       if (!r) return null
       const [same] = rows(db, 'SELECT count(*) AS c FROM tokens WHERE sentence = ? AND i < ? AND text = ?',
         [r.n as number, r.i as number, r.text as string])
@@ -67,7 +68,6 @@ export function open(db: Database): Data {
       return {
         de: r.de as string,
         tr: ru ?? (r.en as string),
-        llm: String(ru ? r.ru_by : r.en_by).startsWith('llm:'),
         word: r.text as string,
         nth: (same?.c as number) ?? 0,
       }

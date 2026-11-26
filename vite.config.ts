@@ -6,7 +6,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // база собирается tools/build.py; в деве её отдаёт сам Vite из корня, путь в обоих режимах один
 const DB = 'build/satzbau.sqlite.gz'
-const VERSION = `0.1.${execSync('git rev-list --count HEAD').toString().trim()}`
+// 0.2.N: N — коммитов после тега v0.2 (docs/data-model.md, «Версия»)
+const [TAG, N] = execSync('git describe --tags --match "v[0-9]*.[0-9]*" --long').toString().trim().split('-')
+const VERSION = `${TAG!.slice(1)}.${N}`
 
 function db(): Plugin {
   return {
@@ -24,7 +26,8 @@ export default defineConfig({
     react(),
     db(),
     VitePWA({
-      registerType: 'autoUpdate',
+      // обновление — по кнопке на главной: сама перезагрузка оборвала бы урок
+      registerType: 'prompt',
       includeAssets: ['apple-touch-icon-180.png', 'favicon.svg', 'favicon-32.png'],
       manifest: {
         name: 'satzbau — немецкая грамматика',

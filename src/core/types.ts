@@ -10,7 +10,6 @@ export type Noun = {
   plural: string[]
   number: 'sg' | 'pl'
   ru: string | null
-  ruLlm: boolean
   level: Level
   freq: number | null
   skip: Record<string, string>
@@ -22,7 +21,6 @@ export type Theme = { id: string; title: string; words: string[] }
 export type Example = {
   de: string
   tr: string
-  llm: boolean
   // токен со словом: его текст и номер среди одинаковых токенов фразы
   word: string
   nth: number
