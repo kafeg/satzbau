@@ -6,9 +6,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // база собирается tools/build.py; в деве её отдаёт сам Vite из корня, путь в обоих режимах один
 const DB = 'build/satzbau.sqlite.gz'
-// 0.2.N: N — коммитов после тега v0.2 (docs/data-model.md, «Версия»)
-const [TAG, N] = execSync('git describe --tags --match "v[0-9]*.[0-9]*" --long').toString().trim().split('-')
-const VERSION = `${TAG!.slice(1)}.${N}`
+// 0.2.N: 0.2 — из package.json, N — число коммитов (docs/data-model.md, «Версия»)
+const MINOR = JSON.parse(readFileSync('package.json', 'utf8')).version.split('.').slice(0, 2).join('.')
+const VERSION = `${MINOR}.${execSync('git rev-list --count HEAD').toString().trim()}`
 
 function db(): Plugin {
   return {

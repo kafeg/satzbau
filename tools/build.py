@@ -80,8 +80,9 @@ def main():
         os.remove(tmp)
     db = sqlite3.connect(tmp)
     db.executescript(SCHEMA)
-    tag, n, _ = git('describe', '--tags', '--match', 'v[0-9]*.[0-9]*', '--long').split('-')
-    version = f'{tag[1:]}.{n}'
+    # 0.2.N: 0.2 — из package.json, N — число коммитов, как у приложения
+    minor = '.'.join(json.load(open(os.path.join(ROOT, 'package.json'), encoding='utf-8'))['version'].split('.')[:2])
+    version = f'{minor}.{git("rev-list", "--count", "HEAD")}'
     db.executemany('INSERT INTO meta VALUES (?, ?)', [
         ('version', version), ('built', git('log', '-1', '--format=%cI')),
         ('license', 'CC BY-SA 4.0'), ('attribution', attribution())])
