@@ -33,6 +33,11 @@ export const TYPES: Pl[] = [
   { uml: false, end: 'en' }, { uml: false, end: 's' }, { uml: false, end: '' }, { uml: true, end: '' },
 ]
 
+// тип коротко, как на кнопке и в правилах (tools/hints.py): «-e», «¨-e», «-(e)n», «—», «¨»
+export function typeLabel(p: Pl): string {
+  return p.uml && p.end === '' ? '¨' : `${p.uml ? '¨' : ''}${LABEL[p.end]}`
+}
+
 // типы для слова: умлаутные — только если в слове есть a, o, u
 export function typesFor(lemma: string): Pl[] {
   return canUmlaut(lemma) ? TYPES : TYPES.filter((t) => !t.uml)
@@ -78,4 +83,5 @@ export const plural: Exercise<Pl> = {
   check: right,
   key: (a) => `${a.uml ? 'uml+' : ''}${a.end || '0'}`,
   hows: ['word'],
+  field: 'plural',
 }

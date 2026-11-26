@@ -11,7 +11,7 @@ import { PhrasePrompt } from './answer/PhrasePrompt.tsx'
 import { SortBoard } from './answer/SortBoard.tsx'
 import { WordFacts } from './answer/WordFacts.tsx'
 import { WordPrompt } from './answer/WordPrompt.tsx'
-import { VIEWS } from './exercises/index.ts'
+import { viewOf } from './exercises/index.ts'
 
 // «3 / 10» по основным шагам, потом «повтор 1 / 2» по вернувшимся ошибкам
 function count(l: L): string {
@@ -69,18 +69,20 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
   }, [given, go, onClose])
 
   const card = step?.cards[0]
-  const cloze = useMemo(() => (card && step?.how === 'phrase' ? data.cloze(card.word.id, card.ex.id) : null), [data, card, step?.how])
+  const cloze = useMemo(() => (card && step?.how === 'phrase' ? data.cloze(card.word.id, card.ex.field) : null), [data, card, step?.how])
   if (!step || !card) return null
-  const view = VIEWS[card.ex.id]!
+  const view = viewOf(card.ex.id)
   const [label, isNew] = tagOf(step)
   const tag = <span className={`tag ${isNew ? 'new' : ''}`}>{label}</span>
   // в разборе: у одного слова — оно само, у раскладки — только ошибочные
   const shown = given ? step.cards.map((c, k) => [c, given.as[k]] as const).filter((_, k) => step.cards.length === 1 || !given.oks[k]) : []
   const options = view.options(card.word)
   const pick = (i: number) => onAnswer([options[i]!.a])
+  const mine = given ? (given.as[0] as never) : null
+  const at = (a: never) => options.findIndex((o) => card.ex.key(o.a) === card.ex.key(a))
 
   return (
-    <div className="lesson">
+    <div className={`lesson ${step.how === 'sort' ? 'sorting' : ''}`}>
       <header className="bar">
         <button className="close" aria-label="Закрыть урок" onClick={onClose}>
           ×
@@ -98,16 +100,17 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
           <section className="word">
             {tag}
             {cloze ? (
-              <PhrasePrompt cloze={cloze} art={view.art(card.word, !!given)} />
+              <PhrasePrompt cloze={cloze} art={view.art(card.word, mine)} />
             ) : (
-              <WordPrompt word={card.word} art={view.art(card.word, !!given)} ask={view.ask} />
+              <WordPrompt word={card.word} art={view.art(card.word, mine)} ask={view.ask} />
             )}
           </section>
           <Choices
             key={lesson.i}
             options={options}
-            chosen={given ? options.findIndex((o) => card.ex.key(o.a) === card.ex.key(given.as[0] as never)) : null}
-            ok={!!given?.oks[0]}
+            chosen={mine === null ? null : at(mine)}
+            // верный ответ засчитан — это нажатая; иначе первая подходящая (у слова с двумя родами верен любой)
+            right={mine === null ? null : given!.oks[0] ? at(mine) : options.findIndex((o) => card.ex.check(card.word, o.a))}
             onPick={pick}
             wide={options.length > 3}
           />
@@ -116,9 +119,9 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
       )}
 
       {given && (
-        <AnswerPanel ok={given.oks.every(Boolean)} fill={step.how === 'sort'} onNext={go}>
+        <AnswerPanel ok={given.oks.every(Boolean)} fill={step.how === 'sort' && shown.length > 0} onNext={go}>
           {shown.map(([c, a]) => (
-            <WordFacts key={c.word.id} view={VIEWS[c.ex.id]!} word={c.word} given={a} data={data} example={!cloze} />
+            <WordFacts key={c.word.id} view={viewOf(c.ex.id)} field={c.ex.field} word={c.word} given={a} data={data} example={!cloze} />
           ))}
         </AnswerPanel>
       )}

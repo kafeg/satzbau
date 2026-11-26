@@ -2,7 +2,7 @@ import type { Lesson } from '../core/run.ts'
 import { cards as all, firstTry } from '../core/run.ts'
 import { type Memory, dueIn } from '../core/srs.ts'
 import { when } from '../core/text.ts'
-import { VIEWS } from './exercises/index.ts'
+import { viewOf } from './exercises/index.ts'
 
 type Props = { lesson: Lesson; mem: Memory; now: number; onMore: () => void; onHome: () => void }
 
@@ -24,7 +24,7 @@ export function Result({ lesson, mem, now, onMore, onHome }: Props) {
             {lesson.wrong.map((c) => {
               return (
                 <li key={`${c.ex.id} ${c.word.id}`} className="mistake">
-                  <span className="what">{VIEWS[c.ex.id]!.summary(c.word)}</span>
+                  <span className="what">{viewOf(c.ex.id).summary(c.word)}</span>
                   <span className="when">{when(days(c))}</span>
                 </li>
               )

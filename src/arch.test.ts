@@ -23,3 +23,10 @@ test('хранилище не знает экранов', () => {
   const bad = files('src/store').flatMap((f) => imports(f).filter((i) => /\/ui\/|^react/.test(i)).map((i) => `${f}: ${i}`))
   expect(bad).toEqual([])
 })
+
+test('SQL — только в store/db.ts, IndexedDB — только в store/journal.ts', () => {
+  const all = [...files('src/core'), ...files('src/store'), ...files('src/ui')]
+  const sql = all.filter((f) => imports(f).some((i) => /^sql\.js/.test(i)) && !f.endsWith('store/db.ts'))
+  const idb = all.filter((f) => /\bindexedDB\b/.test(readFileSync(f, 'utf8')) && !f.endsWith('store/journal.ts'))
+  expect([...sql, ...idb]).toEqual([])
+})

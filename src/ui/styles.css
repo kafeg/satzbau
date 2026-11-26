@@ -513,13 +513,11 @@ button.exr:not(:disabled):active {
   background: #9fb0e6;
 }
 
+/* сроков бывает больше, чем влезает в строку: переносятся, а не вылезают за экран */
 .plan {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
   gap: var(--s2);
-}
-
-.plan > div {
-  flex: 1;
 }
 
 .plan span {
@@ -701,9 +699,14 @@ button.exr:not(:disabled):active {
   font-size: var(--fs-sub);
 }
 
-/* подача «разложи»: место под весь список слов и под две строки в полосе заложено сразу */
+/* подача «разложи»: место под весь список слов и под две строки в полосе заложено сразу; всё — на экран
+   375×667 без прокрутки: отступы плотнее, чем у карточки одного слова */
 .word.wide-tag {
-  padding-top: 44px;
+  padding: 36px var(--s4) var(--s4);
+}
+
+.lesson.sorting {
+  gap: var(--s3);
 }
 
 .q {
@@ -717,14 +720,14 @@ button.exr:not(:disabled):active {
   gap: var(--s2);
   justify-content: center;
   align-content: flex-start;
-  min-height: 184px;
+  min-height: 124px;
   margin-top: var(--s3);
 }
 
 .chipw {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 36px;
   padding: 0 var(--s3);
   border: 1px solid var(--line-strong);
   border-radius: var(--r-m);
@@ -748,7 +751,7 @@ button.exr:not(:disabled):active {
 .bins {
   display: flex;
   flex-direction: column;
-  gap: var(--s2);
+  gap: 6px;
 }
 
 .bin {
@@ -767,7 +770,7 @@ button.exr:not(:disabled):active {
 }
 
 .bin .bh {
-  padding: 4px var(--s3);
+  padding: 2px var(--s3);
   font: 700 15px var(--mono);
 }
 
@@ -776,7 +779,7 @@ button.exr:not(:disabled):active {
   flex-wrap: wrap;
   align-content: flex-start;
   gap: 6px;
-  min-height: 94px;
+  min-height: 86px;
   padding: var(--s2) 10px;
 }
 
@@ -786,7 +789,7 @@ button.exr:not(:disabled):active {
 }
 
 .bin .chipw {
-  min-height: 36px;
+  min-height: 32px;
   padding: 0 10px;
   font-size: 15px;
 }
@@ -915,8 +918,30 @@ button.exr:not(:disabled):active {
   cursor: default;
 }
 
-/* после ответа цветная только нажатая: зелёная — верно, красная — нет; остальные приглушены. Верный вариант
-   на кнопках не показан — он над словом и в панели (docs/app.md, «Экран ответа») */
+/* после ответа: нажатая — зелёная (верно) или красная с подписью «ты»; при ошибке верная — зелёная пунктирная
+   рамка с подписью «верно»; остальные приглушены. Подпись словами — цвет не единственный признак (docs/app.md) */
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.choice .cap {
+  font: 600 11px var(--sans);
+  letter-spacing: 0.02em;
+}
+
+.choice.right {
+  border: 2px dashed var(--ok);
+  color: var(--ok-fg);
+}
+
+.choice.right kbd {
+  visibility: hidden;
+}
+
 .choice.me.ok {
   border: 2px solid var(--ok);
   background: var(--ok-bg);

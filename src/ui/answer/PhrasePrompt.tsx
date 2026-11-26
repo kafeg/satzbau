@@ -14,7 +14,8 @@ export function PhrasePrompt({ cloze, art }: { cloze: Cloze; art: Tone | null })
       <div className="art-line" />
       <div className="phrase">
         {a}
-        {art ? <Art g={art} text={gap} /> : <span className="gap" aria-label="пропуск">{gap}</span>}
+        {/* до ответа в пропуске нет артикля даже в разметке: его прочли бы экранный диктор и копирование */}
+        {art ? <Art g={art} text={gap} /> : <span className="gap" aria-label="пропуск">{'\u00a0'.repeat(4)}</span>}
         {b}
         <u>{w}</u>
         {c}

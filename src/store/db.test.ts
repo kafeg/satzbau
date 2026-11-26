@@ -4,7 +4,7 @@ import { gunzipSync } from 'node:zlib'
 import initSqlJs from 'sql.js'
 import { beforeAll, expect, test } from 'vitest'
 import { gender } from '../core/exercises/gender.ts'
-import { plural } from '../core/exercises/plural.ts'
+import { parse, plural, typeLabel } from '../core/exercises/plural.ts'
 import { pool } from '../core/pool.ts'
 import { around } from '../core/text.ts'
 import { LEVELS } from '../core/types.ts'
@@ -113,4 +113,18 @@ test('подсказки рода: у большинства слов, согл�
   expect(data.hint('n:Auge', 'gender')).toMatchObject({ text: '-e → die', ok: false })
   expect(data.hint('n:Zeitung', 'plural')).toMatchObject({ text: '-ung → -(e)n', ok: true })
   expect(data.hint('n:Kinderzimmer', 'plural')).toMatchObject({ head: 'Zimmer', ok: true })
+})
+
+test('тип множественного в подсказке совпадает с типом первой формы: разбор в tools/hints.py и в ядре один', () => {
+  const off: string[] = []
+  let n = 0
+  for (const w of data.nouns.filter(plural.fits)) {
+    const h = data.hint(w.id, 'plural')
+    if (!h?.ok || h.head) continue
+    n++
+    const t = typeLabel(parse(w.lemma, w.plural[0]!)!)
+    if (h.value !== t) off.push(`${w.lemma}: ${h.value} ≠ ${t}`)
+  }
+  expect(n).toBeGreaterThan(800)
+  expect(off).toEqual([])
 })

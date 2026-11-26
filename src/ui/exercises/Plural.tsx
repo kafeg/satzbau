@@ -1,12 +1,10 @@
 // Данные упражнения «Множественное число» для общих частей экрана (docs/ex-plural.md). Варианты — типы формы,
 // не слова: неправильные формы на экран не выводятся никогда.
-import { LABEL, type Parse, type Pl, parse, right, typesFor } from '../../core/exercises/plural.ts'
+import { LABEL, type Parse, type Pl, parse, right, typeLabel, typesFor } from '../../core/exercises/plural.ts'
 import type { Noun } from '../../core/types.ts'
 import { Art } from '../answer/Art.tsx'
 import type { View } from './index.ts'
 
-// тип формы коротко: «¨-e», «-(e)n», «¨»
-const type = (p: Pl) => (p.uml && p.end === '' ? '¨' : `${p.uml ? '¨' : ''}${LABEL[p.end]}`)
 
 // форма, по которой показываем разбор: та, что совпала с ответом, иначе первая
 function shown(w: Noun, a: Pl | null): [string, Parse] {
@@ -33,16 +31,15 @@ function how(lemma: string, p: Parse): string {
   return `окончание ${LABEL[p.end]}${uml ? ` и ${uml}` : ''}`
 }
 
-// при ошибке — какой вариант был верным и почему; если окончание угадано — чего не хватило
+// при ошибке — как образована верная форма (верная кнопка отмечена «верно»); если окончание угадано — чего не хватило
 function note(w: Noun, a: Pl): string {
   const [, p] = shown(w, null)
-  const right = `верно «${type(p)}»`
-  if (p.end !== a.end) return `${right}: ${how(w.lemma, p)}`
-  return p.uml ? `${right}: окончание угадал, не хватило умлаута` : `${right}: окончание угадал, умлаут здесь не нужен`
+  if (p.end !== a.end) return how(w.lemma, p)
+  return p.uml ? 'окончание угадал, не хватило умлаута' : 'окончание угадал, умлаут здесь не нужен'
 }
 
 export const plural: View<Pl> = {
-  options: (w) => typesFor(w.lemma).map((t) => ({ a: t, label: type(t) })),
+  options: (w) => typesFor(w.lemma).map((t) => ({ a: t, label: typeLabel(t) })),
   art: (w) => w.gender[0]!,
   ask: 'die …?',
   facts: (w, given) => {
@@ -57,11 +54,11 @@ export const plural: View<Pl> = {
         </>
       ),
       note: given && !ok ? note(w, given) : undefined,
-      field: 'plural',
       number: 'pl',
       mark: 'g-pl',
-      rule: {
-        own: <span className="mono">{type(p)}</span>,
+      // правило судит о первой форме слова: при другой показанной форме («также») оно бы ей противоречило
+      rule: form !== w.plural[0] ? null : {
+        own: <span className="mono">{typeLabel(p)}</span>,
         part: (head) => (
           <>
             Как у последней части: <span className="mono">{head}</span>

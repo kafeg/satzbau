@@ -6,16 +6,17 @@ import type { View } from '../exercises/index.ts'
 import { Example } from './Example.tsx'
 import { Rule } from './Rule.tsx'
 
-type Props = { view: View<any>; word: Noun; given: unknown; data: Data; example: boolean }
+// field — поле упражнения (Exercise.field): по нему подсказка правила
+type Props = { view: View<any>; field: string; word: Noun; given: unknown; data: Data; example: boolean }
 
-export function WordFacts({ view, word, given, data, example }: Props) {
+export function WordFacts({ view, field, word, given, data, example }: Props) {
   const f = view.facts(word, given)
-  const hint = data.hint(word.id, f.field)
+  const hint = f.rule ? data.hint(word.id, field) : null
   return (
     <div className="wf">
       <div className="full forms">{f.forms}</div>
       {f.note && <p className="note">{f.note}</p>}
-      {hint && <Rule hint={hint} view={f.rule} />}
+      {hint && f.rule && <Rule hint={hint} view={f.rule} />}
       {example && <Example data={data} wordId={word.id} number={f.number} mark={f.mark} />}
     </div>
   )

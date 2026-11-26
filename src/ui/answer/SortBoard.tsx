@@ -71,7 +71,7 @@ export function SortBoard({ cards, view, tag, done, onAnswer }: Props) {
           </button>
         ))}
       </div>
-      {!done && <p className="where">нажми слово, потом полосу · 1 · 2 · 3</p>}
+      {!done && <p className="where">нажми слово, потом полосу · {options.map((_, b) => b + 1).join(' · ')}</p>}
     </>
   )
 }

@@ -11,7 +11,7 @@ const DAY = 86_400_000
 const words = Array.from({ length: 40 }, (_, i) => noun(`W${String(i).padStart(2, '0')}`))
 const keep = () => 0.99 // перемешивание без перестановок: порядок виден в тестах
 const a = (i: number, ok: 0 | 1, t = T0, ex = 'gender'): Answer => ({ t, ex, word: words[i]!.id, ok, given: 'm' })
-const plural: AnyExercise = { id: 'plural', title: 'мн. ч.', after: 'gender', fits: () => true, check: () => true, key: String, hows: ['word'] }
+const plural: AnyExercise = { id: 'plural', title: 'мн. ч.', after: 'gender', fits: () => true, check: () => true, key: String, hows: ['word'], field: 'plural' }
 
 beforeAll(init)
 

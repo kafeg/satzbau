@@ -1,13 +1,13 @@
-// Варианты ответа и клавиши 1…N. После ответа цветная только нажатая: зелёная — верно, красная — нет;
-// остальные приглушены. Верный вариант на кнопках не показан: он над словом и в панели (docs/app.md).
+// Варианты ответа и клавиши 1…N. После ответа: нажатая — зелёная (верно) или красная с подписью «ты»;
+// при ошибке верная — зелёная пунктирная рамка с подписью «верно»; остальные приглушены (docs/app.md).
 import { useEffect } from 'react'
 
 // tone — класс цвета варианта (g-m): заголовок полосы в раскладке
 export type Option = { label: string; tone?: string }
 
-type Props = { options: Option[]; chosen: number | null; ok: boolean; onPick: (i: number) => void; wide?: boolean }
+type Props = { options: Option[]; chosen: number | null; right: number | null; onPick: (i: number) => void; wide?: boolean }
 
-export function Choices({ options, chosen, ok, onPick, wide }: Props) {
+export function Choices({ options, chosen, right, onPick, wide }: Props) {
   const done = chosen !== null
   useEffect(() => {
     if (done) return
@@ -22,10 +22,13 @@ export function Choices({ options, chosen, ok, onPick, wide }: Props) {
   return (
     <div className={`choices ${wide ? 'types' : ''}`}>
       {options.map((o, i) => {
-        const cls = !done ? '' : i === chosen ? `me ${ok ? 'ok' : 'bad'}` : 'dim'
+        const ok = done && chosen === right
+        const cls = !done ? '' : i === chosen ? `me ${ok ? 'ok' : 'bad'}` : i === right ? 'right' : 'dim'
+        const cap = !done || ok ? null : i === chosen ? 'ты' : i === right ? 'верно' : null
         return (
           <button key={o.label} className={`choice mono ${cls}`} disabled={done} onClick={() => onPick(i)}>
-            {o.label}
+            <span>{o.label}</span>
+            {cap && <span className="cap">{cap}</span>}
             <kbd>{i + 1}</kbd>
           </button>
         )

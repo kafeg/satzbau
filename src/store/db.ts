@@ -15,7 +15,7 @@ export type Data = {
   example(wordId: string, number: 'sg' | 'pl'): Example | null
   // фраза для подачи «во фразе» по полю слова (tools/clozes.py) или null
   cloze(wordId: string, field: string): Cloze | null
-  // подсказка правила по полю слова (сейчас — 'gender'): самое надёжное подходящее правило или исключение
+  // подсказка правила по полю слова (Exercise.field: 'gender', 'plural'): самое надёжное подходящее правило или исключение
   hint(wordId: string, field: string): Hint | null
 }
 

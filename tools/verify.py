@@ -33,7 +33,7 @@ def main():
     n_hints = rules.check_rules(words, errors, warnings)
     levels = collections.Counter(w.get('level') for w in words)
     print(f'существительных: {len(words)} (A1 {levels["A1"]}, A2 {levels["A2"]}, B1 {levels["B1"]}, '
-          f'вне курса {levels[None]}); тем: {n_themes}; фраз: {n}; подсказок рода: {n_hints}')
+          f'вне курса {levels[None]}); тем: {n_themes}; фраз: {n}; подсказок: {n_hints}')
     total = sum(map(len, errors.values()))
     for kind, xs in sorted(warnings.items()):
         print(f'предупреждение {kind}: {len(xs)}')

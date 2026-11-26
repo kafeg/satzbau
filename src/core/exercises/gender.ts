@@ -18,4 +18,5 @@ export const gender: Exercise<Gender> = {
   check: right,
   key: (g) => g,
   hows: ['word', 'phrase', 'sort'],
+  field: 'gender',
 }

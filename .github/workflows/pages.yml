@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          fetch-depth: 0 # версия 0.1.N — число коммитов
+          fetch-depth: 0 # версия 0.2.N — число коммитов
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

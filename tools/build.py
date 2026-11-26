@@ -110,7 +110,6 @@ def main():
         ids.add(w['id'])
         if pos == 'noun' and w.get('level') and w.get('number', 'sg') == 'sg':
             nouns[w['id']] = w
-        if pos == 'noun' and w.get('level') and w.get('number', 'sg') == 'sg':
             for name in hints.FIELDS:
                 h = hints.hint(w, name, rules, stats, heads)
                 if h:

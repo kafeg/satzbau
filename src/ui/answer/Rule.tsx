@@ -1,10 +1,9 @@
 // Правило из данных (docs/rules.md): правило, сила с долей на словаре, источники. Значение слова рисует упражнение.
 import type { ReactNode } from 'react'
-import { level, percent } from '../../core/rules.ts'
+import { LEVELS, level, percent } from '../../core/rules.ts'
 import type { Hint } from '../../core/types.ts'
 
 const host = (url: string) => new URL(url).hostname.replace(/^www\./, '')
-const LEVELS = ['правило', 'чаще всего', 'часто', 'редко']
 
 // own — значение этого слова («die», «¨-er»); part и why — строка «как у последней части» сложного слова
 export type RuleView = { own: ReactNode; part: (head: string) => ReactNode; why: string }

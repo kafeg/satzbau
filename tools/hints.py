@@ -40,7 +40,8 @@ def plural_type(lemma, form):
     if e:
         return e
     for i, c in enumerate(lemma):
-        if c not in UML or (i > 0 and lemma[i - 1] == 'a' and c == 'u'):
+        # au → äu, а u в eu и äu не умлаутируется — как canUmlaut в src/core/exercises/plural.ts
+        if c not in UML or (c == 'u' and i > 0 and lemma[i - 1].lower() in 'aeä'):
             continue
         e = _ending(lemma[:i] + UML[c] + lemma[i + 1:], form)
         if e in ('-e', '-er', '—'):

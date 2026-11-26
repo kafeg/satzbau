@@ -45,6 +45,21 @@ class Gap(unittest.TestCase):
     def test_word_again_gives_gender_away(self):
         self.assertIsNone(clozes.gender_gap(LAMPE, s(ART, NOUN, ('und', 'und', 'CCONJ', '', None), ART, NOUN, END)))
 
+    def test_pronoun_with_gender_gives_gender_away(self):
+        # «Der Schreibtisch ist meiner.» — meiner мужского рода
+        meiner = ('meiner', 'meiner', 'PRON', 'Case=Nom|Gender=Masc|Number=Sing|Poss=Yes', None)
+        self.assertIsNone(clozes.gender_gap(LAMPE, s(ART, NOUN, ('ist', 'sein', 'AUX', '', None), meiner, END)))
+
+    def test_same_lemma_other_entry_gives_gender_away(self):
+        # «Die Kiwi ist eine Frucht, der Kiwi ist ein Vogel.» — второе Kiwi привязано к другой записи
+        other = ('Lampe', 'Lampe', 'NOUN', '', 'n:Lampe:2')
+        self.assertIsNone(clozes.gender_gap(LAMPE, s(ART, NOUN, (',', '--', 'PUNCT', '', None), other, END)))
+
+    def test_tatoeba_first(self):
+        gen = dict(s(ART, NOUN, END), id='g:1')
+        tat = dict(s(ART, NOUN, ('ging', 'gehen', 'VERB', '', None), ('aus', 'aus', 'ADP', '', None), END), id='t:1')
+        self.assertLess(clozes.rank(tat), clozes.rank(gen))
+
     def test_two_genders_skip(self):
         kilo = {'id': 'n:Kilo', 'lemma': 'Kilo', 'gender': ['n', 'm']}
         self.assertIsNone(clozes.gender_gap(kilo, s(('Das', 'der', 'DET', '', None), ('Kilo', 'Kilo', 'NOUN', '', 'n:Kilo'), END)))

@@ -1,5 +1,6 @@
 // Сила правила по его доле на всём словаре (docs/rules.md): уровень не пишется руками, а считается.
-export type Level = 'правило' | 'чаще всего' | 'часто' | 'редко'
+export const LEVELS = ['правило', 'чаще всего', 'часто', 'редко'] as const
+export type Level = (typeof LEVELS)[number]
 
 export function level(share: number): Level {
   if (share >= 0.95) return 'правило'

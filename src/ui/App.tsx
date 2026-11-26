@@ -117,7 +117,7 @@ export function App() {
   }
 
   // подачи урока: для «во фразе» нужна фраза с пропуском по полю упражнения (docs/app.md, «Подача»)
-  const can = (how: How, c: Card) => how !== 'phrase' || !!data?.cloze(c.word.id, c.ex.id)
+  const can = (how: How, c: Card) => how !== 'phrase' || !!data?.cloze(c.word.id, c.ex.field)
   const lessonOf = (cards: Card[]) => start(steps(cards, mem ?? empty(), can))
 
   const begin = (extra: number, only?: string) => {

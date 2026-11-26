@@ -1,6 +1,6 @@
 // Данные упражнения «Род» для общих частей экрана (docs/ex-gender.md). Цвет рода — у метки над словом и в
 // разборе; кнопки цветом рода не красим: красный die читался бы как «неверно».
-import { ARTICLE, ORDER } from '../../core/exercises/gender.ts'
+import { ARTICLE, ORDER, right } from '../../core/exercises/gender.ts'
 import type { Gender as G, Noun } from '../../core/types.ts'
 import { Art } from '../answer/Art.tsx'
 import type { View } from './index.ts'
@@ -24,13 +24,12 @@ export function Full({ word }: { word: Noun }) {
 
 export const gender: View<G> = {
   options: () => ORDER.map((g) => ({ a: g, label: ARTICLE[g], tone: `g-${g}` })),
-  art: (w, done) => (done ? w.gender[0]! : null),
+  art: (w, given) => (given === null ? null : right(w, given) ? given : w.gender[0]!),
   sort: 'Разложи по артиклям',
   facts: (w) => {
     const g = w.gender[0]!
     return {
       forms: <Full word={w} />,
-      field: 'gender',
       number: 'sg',
       mark: `g-${g}`,
       rule: {
