@@ -82,6 +82,11 @@ export function dueIn(m: Memory, ex: string, word: string, now: number): number 
   return c ? daysBetween(now, new Date(c.dueAt).getTime()) : null
 }
 
+// сколько раз карточку уже спрашивали: по нему подача повтора идёт по кругу
+export function reps(m: Memory, ex: string, word: string): number {
+  return m.cards.get(cardKey(ex, word))?.reps ?? 0
+}
+
 export function isDue(m: Memory, ex: string, word: string, now: number): boolean {
   const d = dueIn(m, ex, word, now)
   return d !== null && d <= 0

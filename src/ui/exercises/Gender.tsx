@@ -1,19 +1,15 @@
-// Экран упражнения «Род» (docs/ex-gender.md). Цвет рода — у слова и в панели; кнопки без цвета: «неверно» тоже красное.
-import { useEffect } from 'react'
-import { ARTICLE, ORDER, right } from '../../core/exercises/gender.ts'
+// Данные упражнения «Род» для общих частей экрана (docs/ex-gender.md). Цвет рода — у метки над словом и в
+// разборе; кнопки цветом рода не красим: красный die читался бы как «неверно».
+import { ARTICLE, ORDER } from '../../core/exercises/gender.ts'
 import type { Gender as G, Noun } from '../../core/types.ts'
-import { Example } from '../Example.tsx'
-import { HintLine } from '../HintLine.tsx'
+import { Art } from '../answer/Art.tsx'
 import type { View } from './index.ts'
 
-export function Art({ g }: { g: G | 'pl' }) {
-  return <span className={`art g-${g}`}>{g === 'pl' ? 'die' : ARTICLE[g]}</span>
-}
-
+// формы слова: артикль и слово · die и множественное · также другой род
 export function Full({ word }: { word: Noun }) {
   const [g, ...also] = word.gender
   return (
-    <span className="full">
+    <>
       <Art g={g!} /> <span className="mono">{word.lemma}</span>
       {word.plural[0] && (
         <span className="pl">
@@ -22,65 +18,38 @@ export function Full({ word }: { word: Noun }) {
         </span>
       )}
       {also.length > 0 && <span className="also"> · также {also.map((x) => ARTICLE[x]).join(', ')}</span>}
-    </span>
+    </>
   )
 }
 
 export const gender: View<G> = {
-  Prompt: ({ word, done }) => (
-    <>
-      {/* строка артикля занята и до ответа: слово не сдвигается, когда метка появится */}
-      <div className="art-line">{done && <Art g={word.gender[0]!} />}</div>
-      <div className="lemma mono">{word.lemma}</div>
-      <div className="ru">{word.ru}</div>
-    </>
-  ),
-
-  Choices: ({ word, given, onAnswer }) => {
-    useEffect(() => {
-      if (given) return
-      const key = (e: KeyboardEvent) => {
-        if (e.metaKey || e.ctrlKey || e.altKey) return
-        const g = ORDER[Number(e.key) - 1]
-        if (g) onAnswer(g)
-      }
-      window.addEventListener('keydown', key)
-      return () => window.removeEventListener('keydown', key)
-    }, [given, onAnswer])
-    return (
-      <div className="choices">
-        {ORDER.map((g, i) => {
-          const cls = !given ? '' : right(word, g) ? 'ok' : g === given ? 'struck' : 'dim'
-          return (
-            <button key={g} className={`choice mono ${cls}`} disabled={!!given} onClick={() => onAnswer(g)}>
-              {ARTICLE[g]}
-              <kbd>{i + 1}</kbd>
-            </button>
-          )
-        })}
-      </div>
-    )
+  options: () => ORDER.map((g) => ({ a: g, label: ARTICLE[g], tone: `g-${g}` })),
+  art: (w, done) => (done ? w.gender[0]! : null),
+  sort: 'Разложи по артиклям',
+  facts: (w) => {
+    const g = w.gender[0]!
+    return {
+      forms: <Full word={w} />,
+      field: 'gender',
+      number: 'sg',
+      mark: `g-${g}`,
+      rule: {
+        own: <Art g={g} />,
+        part: (head) => (
+          <>
+            Как последняя часть: <Art g={g} /> <span className="mono">{head}</span>
+          </>
+        ),
+        why: 'сложное слово берёт род последней части',
+      },
+    }
   },
-
-  Right: ({ word }) => <Art g={word.gender[0]!} />,
-
-  Reveal: ({ word, data }) => {
-    const hint = data.hint(word.id, 'gender')
-    return (
-      <>
-        <Full word={word} />
-        {hint && <HintLine hint={hint} gender={word.gender[0]!} />}
-        <Example data={data} wordId={word.id} mark={`g-${word.gender[0]}`} />
-      </>
-    )
-  },
-
-  Summary: ({ word }) => (
+  summary: (w) => (
     <>
       <span>
-        <Art g={word.gender[0]!} /> <span className="mono">{word.lemma}</span>
+        <Art g={w.gender[0]!} /> <span className="mono">{w.lemma}</span>
       </span>
-      {word.ru && <span className="sub">{word.ru}</span>}
+      {w.ru && <span className="sub">{w.ru}</span>}
     </>
   ),
 }

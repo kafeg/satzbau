@@ -1,5 +1,5 @@
 // Реестр упражнений ядра (docs/app.md, «Упражнение»). Экраны — ui/exercises/index.ts.
-import type { Noun } from '../types.ts'
+import type { How, Noun } from '../types.ts'
 import { gender } from './gender.ts'
 import { plural } from './plural.ts'
 
@@ -10,6 +10,8 @@ export type Exercise<A = never> = {
   fits(w: Noun): boolean
   check(w: Noun, a: A): boolean
   key(a: A): string
+  // подачи (docs/app.md, «Подача»), первая — основная
+  hows: How[]
 }
 
 // реестру тип ответа не важен: его знают модуль и экран упражнения

@@ -2,7 +2,7 @@
 // База только читается: sql.js держит её в памяти, офлайн её хранит кэш service worker.
 import initSqlJs, { type Database, type SqlValue } from 'sql.js'
 import wasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
-import type { Example, Hint, Level, Noun, Theme } from '../core/types.ts'
+import type { Cloze, Example, Hint, Level, Noun, Theme } from '../core/types.ts'
 
 export type Data = {
   meta: Record<string, string>
@@ -10,9 +10,11 @@ export type Data = {
   nouns: Noun[]
   // темы по порядку, слова темы — в порядке показа
   themes: Theme[]
-  // сначала фразы с переводом человека, среди них — самая короткая;
-  // plural — только фразы, где слово стоит во множественном числе
-  example(wordId: string, plural?: boolean): Example | null
+  // сначала фразы с переводом человека, среди них — самая короткая; слово в нужном числе:
+  // для рода — в единственном (во множественном род не виден), для множественного — во множественном
+  example(wordId: string, number: 'sg' | 'pl'): Example | null
+  // фраза для подачи «во фразе» по полю слова (tools/clozes.py) или null
+  cloze(wordId: string, field: string): Cloze | null
   // подсказка правила по полю слова (сейчас — 'gender'): самое надёжное подходящее правило или исключение
   hint(wordId: string, field: string): Hint | null
 }
@@ -36,6 +38,9 @@ function rows(db: Database, sql: string, params: SqlValue[] = []): Record<string
 }
 
 export function open(db: Database): Data {
+  // сколько таких же токенов во фразе раньше этого: по нему слово находится в тексте фразы
+  const nth = (sentence: number, i: number, text: string) =>
+    (rows(db, 'SELECT count(*) AS c FROM tokens WHERE sentence = ? AND i < ? AND text = ?', [sentence, i, text])[0]?.c as number) ?? 0
   const meta = Object.fromEntries(rows(db, 'SELECT key, value FROM meta').map((r) => [r.key, r.value])) as Record<string, string>
   const nouns = rows(db, `SELECT id, lemma, gender, plural, number, ru, level, freq, skip FROM words
     WHERE pos = 'noun' AND level IS NOT NULL`).map((r) => ({
@@ -72,20 +77,26 @@ export function open(db: Database): Data {
         sources: JSON.parse(r.sources as string),
       }
     },
-    example(wordId, plural = false) {
+    example(wordId, number) {
       const [r] = rows(db, `SELECT s.n, s.de, s.ru, s.ru_by, s.en, s.en_by, t.i, t.text FROM tokens t
         JOIN sentences s ON s.n = t.sentence JOIN morphs m ON m.n = t.morph
-        WHERE t.word_id = ? AND (? = 0 OR m.morph LIKE '%Number=Plur%')
-        ORDER BY s.ru_by LIKE 'tatoeba:%' DESC, s.len, s.n LIMIT 1`, [wordId, plural ? 1 : 0])
+        WHERE t.word_id = ? AND m.morph LIKE ?
+        ORDER BY s.ru_by LIKE 'tatoeba:%' DESC, s.len, s.n LIMIT 1`, [wordId, number === 'pl' ? '%Number=Plur%' : '%Number=Sing%'])
       if (!r) return null
-      const [same] = rows(db, 'SELECT count(*) AS c FROM tokens WHERE sentence = ? AND i < ? AND text = ?',
-        [r.n as number, r.i as number, r.text as string])
-      const ru = r.ru as string | null
+      return { de: r.de as string, tr: (r.ru as string | null) ?? (r.en as string), word: r.text as string, nth: nth(r.n as number, r.i as number, r.text as string) }
+    },
+    cloze(wordId, field) {
+      const [r] = rows(db, `SELECT s.n, s.de, s.ru, s.en, c.gap, g.text AS gap_text, t.i, t.text FROM clozes c
+        JOIN sentences s ON s.n = c.sentence JOIN tokens g ON g.sentence = s.n AND g.i = c.gap
+        JOIN tokens t ON t.sentence = s.n AND t.word_id = c.word_id
+        WHERE c.word_id = ? AND c.field = ? ORDER BY t.i LIMIT 1`, [wordId, field])
+      if (!r) return null
+      const n = r.n as number
       return {
         de: r.de as string,
-        tr: ru ?? (r.en as string),
-        word: r.text as string,
-        nth: (same?.c as number) ?? 0,
+        tr: (r.ru as string | null) ?? (r.en as string),
+        gap: { text: r.gap_text as string, nth: nth(n, r.gap as number, r.gap_text as string) },
+        word: { text: r.text as string, nth: nth(n, r.i as number, r.text as string) },
       }
     },
   }

@@ -1,5 +1,5 @@
 import type { Lesson } from '../core/run.ts'
-import { firstTry } from '../core/run.ts'
+import { cards as all, firstTry } from '../core/run.ts'
 import { type Memory, dueIn } from '../core/srs.ts'
 import { when } from '../core/text.ts'
 import { VIEWS } from './exercises/index.ts'
@@ -7,7 +7,7 @@ import { VIEWS } from './exercises/index.ts'
 type Props = { lesson: Lesson; mem: Memory; now: number; onMore: () => void; onHome: () => void }
 
 export function Result({ lesson, mem, now, onMore, onHome }: Props) {
-  const cards = lesson.steps.filter((s) => !s.retry).map((s) => s.card)
+  const cards = all(lesson)
   const days = (c: (typeof cards)[number]) => dueIn(mem, c.ex.id, c.word.id, now) ?? 0
   const plan = new Map<number, number>()
   for (const c of cards) plan.set(days(c), (plan.get(days(c)) ?? 0) + 1)
@@ -22,12 +22,9 @@ export function Result({ lesson, mem, now, onMore, onHome }: Props) {
           <div className="section">Ошибки</div>
           <ul className="list">
             {lesson.wrong.map((c) => {
-              const V = VIEWS[c.ex.id]!
               return (
                 <li key={`${c.ex.id} ${c.word.id}`} className="mistake">
-                  <span className="what">
-                    <V.Summary word={c.word} />
-                  </span>
+                  <span className="what">{VIEWS[c.ex.id]!.summary(c.word)}</span>
                   <span className="when">{when(days(c))}</span>
                 </li>
               )

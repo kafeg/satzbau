@@ -34,6 +34,7 @@ v2 строится с модели данных; v1 заморожена в в�
 | правила | `.venv/bin/python -I tools/import_rules.py` — доля правил на словаре и сложные слова в `evidence/`; `tools/check_sources.py` — источники говорят то, на что ссылаемся (нужна сеть); `tools/test_rules.py` — тесты |
 | проверка | `.venv/bin/python -I tools/verify.py` (`-v` — все ошибки) |
 | база приложения | `npm run data` → `build/satzbau.sqlite` и `.gz` (нужен только PyYAML: системный `python3` без него — `.venv/bin/python -I tools/build.py`) |
+| фразы для «во фразе» | строит `tools/build.py` по `tools/clozes.py`; тесты — `tools/test_clozes.py` |
 | приложение | `npm ci`, `npm run dev` (http://localhost:5173/satzbau/); `npm run check` — типы и тесты, тесты базы требуют `npm run data` |
 | боевая сборка | `npm run build && npm run preview` — с service worker; офлайн проверять тут, не в `dev` |
 

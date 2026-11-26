@@ -10,7 +10,7 @@ import glob, gzip, json, os, re, shutil, sqlite3, sys
 import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import hints  # noqa: E402
+import clozes, hints  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'build', 'satzbau.sqlite')
@@ -41,6 +41,9 @@ CREATE TABLE rules (id TEXT PRIMARY KEY, field TEXT NOT NULL, value TEXT NOT NUL
 -- подсказка по полю слова: правило, верно ли оно для слова (иначе — исключение), последняя часть сложного
 CREATE TABLE hints (word_id TEXT NOT NULL, field TEXT NOT NULL, rule_id TEXT NOT NULL, ok INTEGER NOT NULL,
   head TEXT, PRIMARY KEY (word_id, field)) WITHOUT ROWID;
+-- фраза для подачи «во фразе» (tools/clozes.py): поле слова, фраза, номер токена-пропуска
+CREATE TABLE clozes (word_id TEXT NOT NULL, field TEXT NOT NULL, sentence INTEGER NOT NULL, gap INTEGER NOT NULL,
+  PRIMARY KEY (word_id, field)) WITHOUT ROWID;
 '''
 
 
@@ -102,8 +105,11 @@ def main():
         db.execute('INSERT INTO rules VALUES (?,?,?,?,?,?,?)', (r['id'], f, v, hints.text(r),
                    stats[r['id']]['n'], stats[r['id']]['ok'], json.dumps(src, ensure_ascii=False)))
     n_hints = 0
+    nouns = {}
     for pos, w in words():
         ids.add(w['id'])
+        if pos == 'noun' and w.get('level') and w.get('number', 'sg') == 'sg':
+            nouns[w['id']] = w
         if pos == 'noun' and w.get('level') and w.get('number', 'sg') == 'sg':
             for name in hints.FIELDS:
                 h = hints.hint(w, name, rules, stats, heads)
@@ -122,9 +128,13 @@ def main():
             if ref not in ids:
                 sys.exit(f'тема {t["id"]}: {ref}, такого слова нет (сначала verify.py)')
             db.execute('INSERT INTO theme_words VALUES (?,?,?)', (t['id'], i, ref))
-    n, morphs = 0, {}
+    n, morphs, gaps = 0, {}, {}
     for s in sentences():
         n += 1
+        w = nouns.get(s['tok'][1][4]) if len(s['tok']) > 1 else None
+        g = clozes.gender_gap(w, s) if w else None
+        if g is not None and (w['id'] not in gaps or clozes.rank(s) < gaps[w['id']][0]):
+            gaps[w['id']] = (clozes.rank(s), n, g)
         db.execute('INSERT INTO sentences VALUES (?,?,?,?,?,?,?,?)', (
             n, s['id'], s['de'], s.get('ru'), s.get('ru_by'), s.get('en'), s.get('en_by'), len(s['tok'])))
         for i, (text, lemma, upos, morph, ref) in enumerate(s['tok']):
@@ -134,6 +144,7 @@ def main():
             db.execute('INSERT INTO tokens VALUES (?,?,?,?,?,?)',
                        (n, i, text, None if lemma == text else lemma, m, ref if ref != '?' else None))
     db.executemany('INSERT INTO morphs VALUES (?,?,?)', [(m, u, x) for (u, x), m in morphs.items()])
+    db.executemany('INSERT INTO clozes VALUES (?,?,?,?)', [(i, 'gender', n_, g) for i, (_, n_, g) in sorted(gaps.items())])
     db.commit()
     db.execute('VACUUM')
     db.close()
@@ -142,7 +153,7 @@ def main():
     with open(OUT, 'rb') as f, open(OUT + '.gz', 'wb') as raw, \
             gzip.GzipFile(fileobj=raw, mode='wb', compresslevel=9, mtime=0) as g:
         shutil.copyfileobj(f, g)
-    print(f'{os.path.relpath(OUT, ROOT)}: слов {len(ids)}, подсказок {n_hints}, фраз {n}, '
+    print(f'{os.path.relpath(OUT, ROOT)}: слов {len(ids)}, подсказок {n_hints}, фраз {n}, для пропуска {len(gaps)}, '
           f'{os.path.getsize(OUT) / 1e6:.1f} МБ, сжатая {os.path.getsize(OUT + ".gz") / 1e6:.1f} МБ')
 
 

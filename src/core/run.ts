@@ -1,21 +1,25 @@
-// Ход урока: ошибка с первого раза ставит карточку в конец урока ещё раз, один раз.
-import type { Card } from './lesson.ts'
+// Ход урока: шаг — одна или несколько карточек (docs/app.md, «Подача»). Ошибочная карточка с первого
+// раза возвращается в конец урока одна, основной подачей, один раз.
+import type { Card, Step } from './lesson.ts'
 
-export type Step = { card: Card; retry: boolean }
 export type Lesson = { steps: Step[]; i: number; wrong: Card[] }
 
-export function start(cards: Card[]): Lesson {
-  return { steps: cards.map((card) => ({ card, retry: false })), i: 0, wrong: [] }
+export function start(steps: Step[]): Lesson {
+  return { steps, i: 0, wrong: [] }
 }
 
 export function current(l: Lesson): Step | undefined {
   return l.steps[l.i]
 }
 
-export function answer(l: Lesson, ok: boolean): Lesson {
+// oks — по карточке шага, в том же порядке
+export function answer(l: Lesson, oks: boolean[]): Lesson {
   const step = current(l)
-  if (!step || ok || step.retry) return l
-  return { ...l, steps: [...l.steps, { card: step.card, retry: true }], wrong: [...l.wrong, step.card] }
+  if (!step || step.retry) return l
+  const wrong = step.cards.filter((_, k) => !oks[k])
+  if (wrong.length === 0) return l
+  const back = wrong.map((card): Step => ({ how: card.ex.hows[0]!, cards: [card], retry: true }))
+  return { ...l, steps: [...l.steps, ...back], wrong: [...l.wrong, ...wrong] }
 }
 
 export function next(l: Lesson): Lesson {
@@ -26,6 +30,11 @@ export function done(l: Lesson): boolean {
   return l.i >= l.steps.length
 }
 
+// карточки урока без повторов ошибок
+export function cards(l: Lesson): Card[] {
+  return l.steps.filter((s) => !s.retry).flatMap((s) => s.cards)
+}
+
 export function firstTry(l: Lesson): number {
-  return l.steps.filter((s) => !s.retry).length - l.wrong.length
+  return cards(l).length - l.wrong.length
 }

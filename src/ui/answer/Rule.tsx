@@ -1,13 +1,15 @@
-// Строка подсказки после ответа: правило, его сила с долей на словаре, источники (docs/rules.md).
-import { level, percent } from '../core/rules.ts'
-import type { Gender, Hint } from '../core/types.ts'
-import { Art } from './exercises/Gender.tsx'
+// Правило из данных (docs/rules.md): правило, сила с долей на словаре, источники. Значение слова рисует упражнение.
+import type { ReactNode } from 'react'
+import { level, percent } from '../../core/rules.ts'
+import type { Hint } from '../../core/types.ts'
 
 const host = (url: string) => new URL(url).hostname.replace(/^www\./, '')
-
 const LEVELS = ['правило', 'чаще всего', 'часто', 'редко']
 
-export function HintLine({ hint, gender }: { hint: Hint; gender: Gender }) {
+// own — значение этого слова («die», «¨-er»); part и why — строка «как у последней части» сложного слова
+export type RuleView = { own: ReactNode; part: (head: string) => ReactNode; why: string }
+
+export function Rule({ hint, view }: { hint: Hint; view: RuleView }) {
   const lvl = level(hint.share)
   const badge = (
     <span className={`lvl lvl-${LEVELS.indexOf(lvl)}`} title={`${percent(hint.share)} из ${hint.n} слов словаря`}>
@@ -19,10 +21,10 @@ export function HintLine({ hint, gender }: { hint: Hint; gender: Gender }) {
       {hint.head ? (
         <>
           <p>
-            Как последняя часть: <Art g={gender} /> <span className="mono">{hint.head}</span>
+            {view.part(hint.head)}
             {badge}
           </p>
-          <p className="why">сложное слово берёт род последней части</p>
+          <p className="why">{view.why}</p>
         </>
       ) : hint.ok ? (
         <p>
@@ -32,7 +34,7 @@ export function HintLine({ hint, gender }: { hint: Hint; gender: Gender }) {
       ) : (
         <p>
           Исключение: <span className="mono">{hint.text}</span>
-          {badge}, а здесь <Art g={gender} />
+          {badge}, а здесь {view.own}
         </p>
       )}
       <p className="src">

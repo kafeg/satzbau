@@ -17,4 +17,5 @@ export const gender: Exercise<Gender> = {
   fits: (w) => w.number === 'sg' && w.gender.length > 0 && !('gender' in w.skip),
   check: right,
   key: (g) => g,
+  hows: ['word', 'phrase', 'sort'],
 }

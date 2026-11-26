@@ -1,7 +1,7 @@
 import { beforeAll, expect, test } from 'vitest'
 import type { AnyExercise } from './exercises/index.ts'
 import { gender } from './exercises/gender.ts'
-import { NEW_PER_DAY, build, freshToday, overview } from './lesson.ts'
+import { NEW_PER_DAY, SORT, build, freshToday, overview, steps } from './lesson.ts'
 import { init, replay } from './srs.ts'
 import { noun } from './test-words.ts'
 import type { Answer } from './types.ts'
@@ -11,7 +11,7 @@ const DAY = 86_400_000
 const words = Array.from({ length: 40 }, (_, i) => noun(`W${String(i).padStart(2, '0')}`))
 const keep = () => 0.99 // перемешивание без перестановок: порядок виден в тестах
 const a = (i: number, ok: 0 | 1, t = T0, ex = 'gender'): Answer => ({ t, ex, word: words[i]!.id, ok, given: 'm' })
-const plural: AnyExercise = { id: 'plural', title: 'мн. ч.', after: 'gender', fits: () => true, check: () => true, key: String }
+const plural: AnyExercise = { id: 'plural', title: 'мн. ч.', after: 'gender', fits: () => true, check: () => true, key: String, hows: ['word'] }
 
 beforeAll(init)
 
@@ -59,4 +59,39 @@ test('лимит новых — общий на все упражнения', ()
   const o = overview(words, [gender, plural], replay([...xs, ...ys]), T0 + 60_000)
   expect(o.left).toBe(0)
   expect(build(o, keep).filter((c) => c.fresh)).toEqual([])
+})
+
+const all = () => true
+const none = () => false
+
+test('подачи: новые — основной; повтор — по кругу по числу ответов, phrase — только если есть фраза', () => {
+  // W00 отвечен раз, W01 — дважды: у первого подача по кругу вторая, у второго — снова основная
+  const m = replay([a(0, 0), a(1, 0), a(1, 0, T0 + DAY)])
+  const cards = build(overview(words.slice(0, 3), [gender], m, T0 + 3 * DAY), keep)
+  const how = (ss: ReturnType<typeof steps>, l: string) => ss.find((s) => s.cards[0]!.word.lemma === l)!.how
+  const ss = steps(cards, m, all)
+  expect(how(ss, 'W00')).toBe('phrase')
+  expect(how(ss, 'W01')).toBe('word')
+  expect(how(ss, 'W02')).toBe('word')
+  expect(how(steps(cards, m, none), 'W00')).toBe('word')
+})
+
+test('раскладка: SORT повторов упражнения с sort — один шаг; меньше — по одной', () => {
+  const m = replay(Array.from({ length: SORT }, (_, i) => a(i, 0)))
+  const cards = build(overview(words, [gender], m, T0 + DAY), keep)
+  const ss = steps(cards, m, none)
+  const sort = ss.filter((s) => s.how === 'sort')
+  expect(sort).toHaveLength(1)
+  expect(sort[0]!.cards).toHaveLength(SORT)
+  expect(sort[0]!.cards.every((c) => !c.fresh)).toBe(true)
+  expect(ss.flatMap((s) => s.cards)).toHaveLength(cards.length)
+  const few = replay(Array.from({ length: SORT - 1 }, (_, i) => a(i, 0)))
+  expect(steps(build(overview(words, [gender], few, T0 + DAY), keep), few, none).some((s) => s.how === 'sort')).toBe(false)
+})
+
+test('упражнение без sort раскладкой не спрашивается', () => {
+  const xs = Array.from({ length: SORT }, (_, i) => a(i, 0, T0, 'plural'))
+  const m = replay(xs)
+  const ss = steps(build(overview(words, [plural], m, T0 + DAY), keep), m, all)
+  expect(ss.every((s) => s.how === 'word')).toBe(true)
 })

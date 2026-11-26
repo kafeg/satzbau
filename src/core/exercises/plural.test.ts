@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { noun } from '../test-words.ts'
-import { canUmlaut, parse, plural, right } from './plural.ts'
+import { canUmlaut, parse, plural, right, typesFor } from './plural.ts'
 
 const t = (lemma: string, form: string) => {
   const p = parse(lemma, form)
@@ -45,4 +45,10 @@ test('умлаут возможен только при a, o, u в основе'
   expect(canUmlaut('Tisch')).toBe(false)
   expect(canUmlaut('Haus')).toBe(true)
   expect(canUmlaut('Ärztin')).toBe(false)
+})
+
+test('варианты: восемь типов, умлаутные — только если в слове есть a, o, u', () => {
+  expect(typesFor('Zug')).toHaveLength(8)
+  expect(typesFor('Kind')).toHaveLength(5)
+  expect(typesFor('Kind').some((t) => t.uml)).toBe(false)
 })

@@ -663,11 +663,132 @@ button.exr:not(:disabled):active {
 }
 
 /* ---------- урок ---------- */
+/* высота урока — экран: панель раскладки берёт остаток и прокручивается внутри */
 .lesson {
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: var(--s5);
+  min-height: 0;
+  max-height: calc(100dvh - 2 * var(--s4) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+
+/* подача «во фразе» */
+.phrase {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.phrase .gap {
+  display: inline-block;
+  min-width: 2.4em;
+  border-bottom: 3px solid var(--text-2);
+  color: transparent;
+}
+
+.phrase .art {
+  font-size: 0.85em;
+  vertical-align: 2px;
+}
+
+.phrase u {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.ru.small {
+  font-size: var(--fs-sub);
+}
+
+/* подача «разложи»: место под весь список слов и под две строки в полосе заложено сразу */
+.word.wide-tag {
+  padding-top: 44px;
+}
+
+.q {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  justify-content: center;
+  align-content: flex-start;
+  min-height: 184px;
+  margin-top: var(--s3);
+}
+
+.chipw {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-m);
+  background: var(--surface);
+  font-size: 16px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.chipw.sel {
+  border: 2px solid var(--text);
+  box-shadow: var(--shadow-2);
+}
+
+.chipw.err {
+  border: 2px solid var(--bad);
+  background: var(--bad-bg);
+  color: var(--bad-fg);
+}
+
+.bins {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.bin {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-m);
+  background: var(--surface);
+  text-align: left;
+  overflow: hidden;
+}
+
+.bin:disabled {
+  cursor: default;
+}
+
+.bin .bh {
+  padding: 4px var(--s3);
+  font: 700 15px var(--mono);
+}
+
+.bin .in {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px;
+  min-height: 94px;
+  padding: var(--s2) 10px;
+}
+
+/* после ответа запас не нужен: место отдаём панели разбора */
+.bins.done .in {
+  min-height: 0;
+}
+
+.bin .chipw {
+  min-height: 36px;
+  padding: 0 10px;
+  font-size: 15px;
 }
 
 .bar {
@@ -794,53 +915,97 @@ button.exr:not(:disabled):active {
   cursor: default;
 }
 
-/* после ответа кнопки без цвета (цвет — у слова и в панели, docs/ex-gender.md): верная — рамка и галочка,
-   ошибочная — серая, зачёркнута, крестик; у коротких «-e», «—» зачёркивание сливается с дефисом, крестик обязателен */
-.choice.ok {
-  background: var(--sunk);
-  border: 2px solid var(--text);
+/* после ответа цветная только нажатая: зелёная — верно, красная — нет; остальные приглушены. Верный вариант
+   на кнопках не показан — он над словом и в панели (docs/app.md, «Экран ответа») */
+.choice.me.ok {
+  border: 2px solid var(--ok);
+  background: var(--ok-bg);
+  color: var(--ok-fg);
 }
 
-.choice.ok::after,
-.choice.struck::after {
-  position: absolute;
-  top: 4px;
-  right: 7px;
-  font: 700 var(--fs-caption) var(--sans);
+.choice.me.bad {
+  border: 2px solid var(--bad);
+  background: var(--bad-bg);
+  color: var(--bad-fg);
 }
 
-.choice.ok::after {
-  content: '✓';
+.choice.me kbd,
+.choice.dim kbd {
+  visibility: hidden;
 }
 
-.choice.struck::after {
-  content: '✕';
+/* восемь типов множественного — по четыре в ряд */
+.choices.types {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s2);
 }
 
-.choice.struck {
-  background: #ecebe6;
-  text-decoration: line-through;
-  color: #8b8a86;
+.types .choice {
+  min-height: 56px;
+  padding: 0;
+  font-size: var(--fs-card);
+  white-space: nowrap;
 }
 
 .choice.dim {
   opacity: var(--off);
 }
 
-.choice.ok kbd,
-.choice.struck kbd,
-.choice.dim kbd {
-  visibility: hidden;
-}
-
-/* панель ответа сразу под вариантами — итог там, куда смотрел: зелёная — верно, красная — неверно */
+/* панель ответа сразу под вариантами — итог там, куда смотрел: зелёная — верно, красная — неверно.
+   Внутри — карточки слова; у раскладки панель занимает остаток экрана и прокручивается внутри */
 .sheet {
+  min-height: 0;
   padding: var(--s4);
   display: flex;
   flex-direction: column;
   gap: var(--s3);
   border-radius: var(--r-l);
   animation: sheet-in 0.15s ease-out;
+}
+
+.sheet.fill {
+  flex: 1;
+}
+
+.facts {
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.sheet.fill .facts {
+  flex: 1;
+}
+
+/* карточка слова в разборе: формы → заметка → правило → пример */
+.wf {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.wf + .wf {
+  padding-top: var(--s4);
+  border-top: 1px solid var(--bad-line);
+}
+
+.forms {
+  font-size: 19px;
+}
+
+/* во множественном изменённые буквы формы */
+.forms b {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.wf .note {
+  margin: -4px 0 0;
+  font-size: var(--fs-sub);
+  color: var(--text-2);
 }
 
 @keyframes sheet-in {
@@ -867,42 +1032,6 @@ button.exr:not(:disabled):active {
   border: 1px solid var(--bad-line);
 }
 
-.verdict {
-  display: flex;
-  align-items: center;
-  gap: var(--s3);
-  font-weight: 700;
-  font-size: 19px;
-}
-
-.verdict .ic {
-  flex: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 16px;
-}
-
-.ok .verdict {
-  color: var(--ok-fg);
-}
-
-.ok .verdict .ic {
-  background: var(--ok);
-}
-
-.bad .verdict {
-  color: var(--bad-fg);
-}
-
-.bad .verdict .ic {
-  background: var(--bad);
-}
-
 .sheet .go {
   min-height: 52px;
   border: 0;
@@ -917,12 +1046,6 @@ button.exr:not(:disabled):active {
 
 .bad .go {
   background: var(--bad);
-}
-
-.sheet .detail {
-  margin: 0;
-  font-size: var(--fs-sub);
-  color: var(--text-2);
 }
 
 .example {
@@ -1039,140 +1162,13 @@ main.themes > * + * {
 }
 
 /* ---------- множественное число ---------- */
-.lemma .art {
-  font-size: 0.65em;
-  vertical-align: middle;
-}
-
 .ask {
   margin-top: var(--s3);
   font-size: var(--fs-card);
   color: var(--text-2);
 }
 
-.uml {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 56px;
-  padding: 10px var(--s4);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--r-m);
-  background: var(--surface);
-  text-align: left;
-}
 
-.uml .k,
-.uml .caption {
-  display: block;
-}
-
-.uml .k {
-  font-size: var(--fs-card);
-  font-weight: 600;
-}
-
-.uml.on {
-  border-color: var(--accent);
-  background: #eef2fd;
-}
-
-.uml.miss {
-  border: 1px dashed var(--text);
-}
-
-.uml.struck .k {
-  text-decoration: line-through;
-  color: var(--text-2);
-}
-
-.uml:disabled {
-  cursor: default;
-}
-
-.uml kbd {
-  position: absolute;
-  top: 4px;
-  right: 8px;
-  font: var(--fs-caption) var(--sans);
-  color: var(--text-2);
-}
-
-.uml:disabled kbd {
-  visibility: hidden;
-}
-
-.sw {
-  position: relative;
-  width: 40px;
-  height: 24px;
-  margin-right: var(--s3);
-  border-radius: 12px;
-  background: var(--line-strong);
-}
-
-.sw::after {
-  content: '';
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  transition: left 0.15s;
-}
-
-.uml.on .sw {
-  background: var(--accent);
-}
-
-.uml.on .sw::after {
-  left: 19px;
-}
-
-.need {
-  margin-right: var(--s3);
-  font-size: var(--fs-caption);
-  font-weight: 600;
-}
-
-.choices.five {
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--s2);
-}
-
-.five .choice {
-  min-height: 56px;
-  padding: 0;
-  font-size: var(--fs-card);
-  white-space: nowrap;
-}
-
-@media (max-width: 400px) {
-  .five .choice {
-    font-size: var(--fs-body);
-    letter-spacing: -0.03em;
-  }
-}
-
-.chg {
-  background: #fff1b8;
-  border-radius: 3px;
-}
-
-.rule {
-  font-size: var(--fs-sub);
-  color: var(--text-2);
-}
-
-@media (hover: none) {
-  .uml kbd {
-    display: none;
-  }
-}
 
 .badge.on {
   background: var(--accent);

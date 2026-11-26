@@ -1,32 +1,49 @@
-// Рамка урока (docs/app.md): полоса, счётчик, метка, «Дальше», Enter и Escape.
-// Вопрос, кнопки и разбор рисует экран упражнения из ui/exercises.
-import { useCallback, useEffect, useState } from 'react'
+// Рамка урока (docs/app.md): полоса, счётчик, метка, панель ответа, «Дальше», Enter и Escape.
+// Вопрос рисует подача из общих частей ui/answer; упражнение даёт им только данные (VIEWS).
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import type { Step } from '../core/lesson.ts'
 import { type Lesson as L, answer, current, next } from '../core/run.ts'
 import type { Answer } from '../core/types.ts'
 import type { Data } from '../store/db.ts'
+import { AnswerPanel } from './answer/AnswerPanel.tsx'
+import { Choices } from './answer/Choices.tsx'
+import { PhrasePrompt } from './answer/PhrasePrompt.tsx'
+import { SortBoard } from './answer/SortBoard.tsx'
+import { WordFacts } from './answer/WordFacts.tsx'
+import { WordPrompt } from './answer/WordPrompt.tsx'
 import { VIEWS } from './exercises/index.ts'
 
-// «3 / 10» по основным карточкам, потом «повтор 1 / 2» по вернувшимся ошибкам
+// «3 / 10» по основным шагам, потом «повтор 1 / 2» по вернувшимся ошибкам
 function count(l: L): string {
   const base = l.steps.filter((s) => !s.retry).length
   return l.i < base ? `${l.i + 1} / ${base}` : `повтор ${l.i - base + 1} / ${l.steps.length - base}`
 }
 
+function tagOf(step: Step): [string, boolean] {
+  if (step.retry) return ['ещё раз', false]
+  if (step.how === 'sort') return [`повтор · ${step.cards.length} слов`, false]
+  return step.cards[0]!.fresh ? ['новое', true] : ['повтор', false]
+}
+
+type Given = { as: unknown[]; oks: boolean[] }
 type Props = { data: Data; lesson: L; where: (wordId: string) => string; onRecord: (a: Answer) => void; onDone: (l: L) => void; onClose: () => void }
 
 export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }: Props) {
   const [lesson, setLesson] = useState(first)
-  const [given, setGiven] = useState<{ a: unknown; ok: boolean } | null>(null)
+  const [given, setGiven] = useState<Given | null>(null)
   const step = current(lesson)
 
   const onAnswer = useCallback(
-    (a: unknown) => {
+    (as: unknown[]) => {
       if (given || !step) return
-      const { ex, word } = step.card
-      const ok = ex.check(word, a as never)
-      setGiven({ a, ok })
-      setLesson(answer(lesson, ok))
-      if (!step.retry) onRecord({ t: Date.now(), ex: ex.id, word: word.id, ok: ok ? 1 : 0, given: ex.key(a as never) })
+      const oks = step.cards.map((c, k) => c.ex.check(c.word, as[k] as never))
+      setGiven({ as, oks })
+      setLesson(answer(lesson, oks))
+      if (step.retry) return
+      const t = Date.now()
+      step.cards.forEach((c, k) =>
+        onRecord({ t, ex: c.ex.id, word: c.word.id, ok: oks[k] ? 1 : 0, given: c.ex.key(as[k] as never), how: step.how }),
+      )
     },
     [given, step, lesson, onRecord],
   )
@@ -51,10 +68,17 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
     return () => window.removeEventListener('keydown', key)
   }, [given, go, onClose])
 
-  if (!step) return null
-  const { ex, word, fresh } = step.card
-  const view = VIEWS[ex.id]!
-  const tag = step.retry ? 'ещё раз' : fresh ? 'новое' : 'повтор'
+  const card = step?.cards[0]
+  const cloze = useMemo(() => (card && step?.how === 'phrase' ? data.cloze(card.word.id, card.ex.id) : null), [data, card, step?.how])
+  if (!step || !card) return null
+  const view = VIEWS[card.ex.id]!
+  const [label, isNew] = tagOf(step)
+  const tag = <span className={`tag ${isNew ? 'new' : ''}`}>{label}</span>
+  // в разборе: у одного слова — оно само, у раскладки — только ошибочные
+  const shown = given ? step.cards.map((c, k) => [c, given.as[k]] as const).filter((_, k) => step.cards.length === 1 || !given.oks[k]) : []
+  const options = view.options(card.word)
+  const pick = (i: number) => onAnswer([options[i]!.a])
+
   return (
     <div className="lesson">
       <header className="bar">
@@ -67,34 +91,36 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
         <span className="count">{count(lesson)}</span>
       </header>
 
-      <section className="word">
-        <span className={`tag ${fresh && !step.retry ? 'new' : ''}`}>{tag}</span>
-        <view.Prompt word={word} done={!!given} />
-      </section>
-
-      <view.Choices key={`${lesson.i}`} word={word} given={given?.a ?? null} onAnswer={onAnswer} />
-      {!given && <p className="where">{where(word.id)}</p>}
+      {step.how === 'sort' ? (
+        <SortBoard key={lesson.i} cards={step.cards} view={view} tag={tag} done={!!given} onAnswer={onAnswer} />
+      ) : (
+        <>
+          <section className="word">
+            {tag}
+            {cloze ? (
+              <PhrasePrompt cloze={cloze} art={view.art(card.word, !!given)} />
+            ) : (
+              <WordPrompt word={card.word} art={view.art(card.word, !!given)} ask={view.ask} />
+            )}
+          </section>
+          <Choices
+            key={lesson.i}
+            options={options}
+            chosen={given ? options.findIndex((o) => card.ex.key(o.a) === card.ex.key(given.as[0] as never)) : null}
+            ok={!!given?.oks[0]}
+            onPick={pick}
+            wide={options.length > 3}
+          />
+          {!given && <p className="where">{where(card.word.id)}</p>}
+        </>
+      )}
 
       {given && (
-        <section className={`sheet ${given.ok ? 'ok' : 'bad'}`} aria-live="polite">
-          <div className="verdict">
-            <span className="ic" aria-hidden>
-              {given.ok ? '✓' : '✕'}
-            </span>
-            {given.ok ? (
-              'Верно'
-            ) : (
-              <span>
-                Неверно: <view.Right word={word} />
-              </span>
-            )}
-          </div>
-          {!given.ok && !step.retry && <p className="detail">Слово вернётся в конце урока</p>}
-          <view.Reveal word={word} given={given.a} ok={given.ok} data={data} />
-          <button className="go" onClick={go} autoFocus>
-            Дальше
-          </button>
-        </section>
+        <AnswerPanel ok={given.oks.every(Boolean)} fill={step.how === 'sort'} onNext={go}>
+          {shown.map(([c, a]) => (
+            <WordFacts key={c.word.id} view={VIEWS[c.ex.id]!} word={c.word} given={a} data={data} example={!cloze} />
+          ))}
+        </AnswerPanel>
       )}
     </div>
   )

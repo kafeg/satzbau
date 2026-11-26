@@ -1,13 +1,17 @@
 // Сборка урока (docs/app.md, «Урок»): сначала пора повторить, потом новые по порядку пула.
 import type { AnyExercise } from './exercises/index.ts'
-import { type Memory, dueIn, learned, seen, startedTodayAll } from './srs.ts'
-import type { Noun } from './types.ts'
+import { type Memory, dueIn, learned, reps, seen, startedTodayAll } from './srs.ts'
+import type { How, Noun } from './types.ts'
 
 export const SIZE = 10
 // новых в день на все упражнения вместе (как «новых карточек в день» у Anki)
 export const NEW_PER_DAY = 20
 
 export type Card = { ex: AnyExercise; word: Noun; fresh: boolean }
+// шаг урока: подача и её карточки — у sort их несколько, у остальных одна
+export type Step = { how: How; cards: Card[]; retry: boolean }
+// раскладка собирается, когда в уроке столько повторов упражнения с подачей sort
+export const SORT = 6
 
 export type Overview = {
   due: Card[]
@@ -67,6 +71,29 @@ export function build(o: Overview, rnd: () => number = Math.random, extra = 0, s
   for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(rnd() * (i + 1))
     ;[out[i], out[j]] = [out[j]!, out[i]!]
+  }
+  return out
+}
+
+// Подачи урока (docs/app.md, «Подача»): новые — основной; SORT и больше повторов упражнения с sort —
+// SORT из них одной раскладкой; остальные повторы — по кругу по числу ответов среди подач, доступных
+// карточке. can — есть ли для неё данные (фраза для phrase); основная доступна всегда.
+export function steps(cards: Card[], m: Memory, can: (how: How, c: Card) => boolean): Step[] {
+  const sorts = new Map<AnyExercise, Step>()
+  for (const ex of new Set(cards.map((c) => c.ex))) {
+    const due = cards.filter((c) => c.ex === ex && !c.fresh)
+    if (ex.hows.includes('sort') && due.length >= SORT) sorts.set(ex, { how: 'sort', cards: due.slice(0, SORT), retry: false })
+  }
+  const out: Step[] = []
+  for (const c of cards) {
+    const sort = sorts.get(c.ex)
+    if (sort?.cards.includes(c)) {
+      if (sort.cards[0] === c) out.push(sort)
+      continue
+    }
+    const [main] = c.ex.hows
+    const hows = c.fresh ? [main!] : c.ex.hows.filter((h) => h === main || (h !== 'sort' && can(h, c)))
+    out.push({ how: hows[reps(m, c.ex.id, c.word.id) % hows.length]!, cards: [c], retry: false })
   }
   return out
 }

@@ -2,11 +2,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { type AnyExercise, EXERCISES } from '../core/exercises/index.ts'
-import { type Overview, build, overview } from '../core/lesson.ts'
+import { type Card, type Overview, build, overview, steps } from '../core/lesson.ts'
 import { pool } from '../core/pool.ts'
 import { type Lesson as L, start } from '../core/run.ts'
 import { type Memory, apply, empty, init, replay } from '../core/srs.ts'
-import { type Answer, LEVELS, type Level } from '../core/types.ts'
+import { type Answer, type How, LEVELS, type Level } from '../core/types.ts'
 import { type Data, load } from '../store/db.ts'
 import * as journal from '../store/journal.ts'
 import { download, parse } from '../store/transfer.ts'
@@ -116,9 +116,13 @@ export function App() {
     save('level', l)
   }
 
+  // подачи урока: для «во фразе» нужна фраза с пропуском по полю упражнения (docs/app.md, «Подача»)
+  const can = (how: How, c: Card) => how !== 'phrase' || !!data?.cloze(c.word.id, c.ex.id)
+  const lessonOf = (cards: Card[]) => start(steps(cards, mem ?? empty(), can))
+
   const begin = (extra: number, only?: string) => {
     const cards = build(each.find(([ex]) => ex.id === only)?.[1] ?? ov, Math.random, extra)
-    if (cards.length > 0) setScreen({ k: 'lesson', lesson: start(cards), only })
+    if (cards.length > 0) setScreen({ k: 'lesson', lesson: lessonOf(cards), only })
   }
 
   const record = useCallback(
@@ -172,7 +176,7 @@ export function App() {
   if (screen.k === 'lesson')
     return (
       <Lesson
-        key={screen.lesson.steps.map((s) => `${s.card.ex.id} ${s.card.word.id}`).join()}
+        key={screen.lesson.steps.flatMap((s) => s.cards.map((c) => `${c.ex.id} ${c.word.id}`)).join()}
         data={data}
         lesson={screen.lesson}
         where={where}
@@ -191,7 +195,7 @@ export function App() {
         onMore={() => {
           const exs = EXERCISES.filter((ex) => !screen.only || ex.id === screen.only)
           const cards = build(overview(words, exs, mem, Date.now()), Math.random)
-          setScreen(cards.length > 0 ? { k: 'lesson', lesson: start(cards), only: screen.only } : { k: 'home' })
+          setScreen(cards.length > 0 ? { k: 'lesson', lesson: lessonOf(cards), only: screen.only } : { k: 'home' })
         }}
         onHome={() => setScreen({ k: 'home' })}
       />

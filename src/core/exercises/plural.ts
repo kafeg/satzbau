@@ -27,6 +27,17 @@ export function canUmlaut(lemma: string): boolean {
   return umlauted(lemma).length > 0
 }
 
+// восемь готовых типов — варианты ответа; с умлаутом бывают только -e, -er и без окончания
+export const TYPES: Pl[] = [
+  { uml: false, end: 'e' }, { uml: true, end: 'e' }, { uml: false, end: 'er' }, { uml: true, end: 'er' },
+  { uml: false, end: 'en' }, { uml: false, end: 's' }, { uml: false, end: '' }, { uml: true, end: '' },
+]
+
+// типы для слова: умлаутные — только если в слове есть a, o, u
+export function typesFor(lemma: string): Pl[] {
+  return canUmlaut(lemma) ? TYPES : TYPES.filter((t) => !t.uml)
+}
+
 // окончание формы после основы: -(e)n включает -n и -nen (Lehrerin → Lehrerinnen),
 // -e — и с удвоением s (Bus → Busse, Ergebnis → Ergebnisse)
 function ending(stem: string, form: string): [Ending, number] | null {
@@ -66,4 +77,5 @@ export const plural: Exercise<Pl> = {
   fits: (w) => w.number === 'sg' && w.gender.length > 0 && w.plural.length > 0 && !('plural' in w.skip) && parse(w.lemma, w.plural[0]!) !== null,
   check: right,
   key: (a) => `${a.uml ? 'uml+' : ''}${a.end || '0'}`,
+  hows: ['word'],
 }

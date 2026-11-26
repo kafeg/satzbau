@@ -1,0 +1,22 @@
+// Карточка слова в разборе: формы → заметка об ответе → правило → пример. Всегда в этом порядке и
+// одинаково при верном и неверном ответе; пример не показываем, если фраза уже на экране.
+import type { Noun } from '../../core/types.ts'
+import type { Data } from '../../store/db.ts'
+import type { View } from '../exercises/index.ts'
+import { Example } from './Example.tsx'
+import { Rule } from './Rule.tsx'
+
+type Props = { view: View<any>; word: Noun; given: unknown; data: Data; example: boolean }
+
+export function WordFacts({ view, word, given, data, example }: Props) {
+  const f = view.facts(word, given)
+  const hint = data.hint(word.id, f.field)
+  return (
+    <div className="wf">
+      <div className="full forms">{f.forms}</div>
+      {f.note && <p className="note">{f.note}</p>}
+      {hint && <Rule hint={hint} view={f.rule} />}
+      {example && <Example data={data} wordId={word.id} number={f.number} mark={f.mark} />}
+    </div>
+  )
+}

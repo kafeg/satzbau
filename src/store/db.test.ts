@@ -54,7 +54,7 @@ test('в каждом примере подсвечивается именно �
   const miss: string[] = []
   let n = 0
   for (const w of data.nouns) {
-    const ex = data.example(w.id)
+    const ex = data.example(w.id, 'sg')
     if (!ex) continue
     n++
     if (around(ex.de, ex.word, ex.nth)[1] !== ex.word) miss.push(`${w.id}: ${ex.de}`)
@@ -68,12 +68,30 @@ test('множественное: почти все формы в пяти ти�
   expect(fit.length).toBeGreaterThan(1900)
   let n = 0
   for (const w of fit) {
-    const ex = data.example(w.id, true)
+    const ex = data.example(w.id, 'pl')
     if (!ex) continue
     n++
     expect(around(ex.de, ex.word, ex.nth)[1]).toBe(ex.word)
   }
   expect(n).toBeGreaterThan(500)
+})
+
+test('пример к роду — со словом в единственном числе: Lampe — не «Lampen»', () => {
+  expect(data.example('n:Lampe', 'sg')?.word).toBe('Lampe')
+})
+
+test('фраза для пропуска: в начале артикль рода, дальше слово, пропуск и слово находятся в тексте', () => {
+  let n = 0
+  for (const w of data.nouns.filter(gender.fits)) {
+    const c = data.cloze(w.id, 'gender')
+    if (!c) continue
+    n++
+    expect(c.gap.text.toLowerCase()).toBe({ m: 'der', f: 'die', n: 'das' }[w.gender[0]!])
+    expect(around(c.de, c.gap.text, c.gap.nth)[1]).toBe(c.gap.text)
+    expect(around(c.de, c.word.text, c.word.nth)[1]).toBe(w.lemma)
+  }
+  expect(n).toBeGreaterThan(800)
+  expect(data.cloze('n:Rechnung', 'gender')?.de).toBe('Die Rechnung bitte.')
 })
 
 test('подсказки рода: у большинства слов, согласованы с родом, у каждой — два источника', () => {
@@ -93,4 +111,6 @@ test('подсказки рода: у большинства слов, согл�
   expect(data.hint('n:Zeitung', 'gender')).toMatchObject({ text: '-ung → die', ok: true })
   expect(data.hint('n:Haltestelle', 'gender')).toMatchObject({ head: 'Stelle', ok: true })
   expect(data.hint('n:Auge', 'gender')).toMatchObject({ text: '-e → die', ok: false })
+  expect(data.hint('n:Zeitung', 'plural')).toMatchObject({ text: '-ung → -(e)n', ok: true })
+  expect(data.hint('n:Kinderzimmer', 'plural')).toMatchObject({ head: 'Zimmer', ok: true })
 })

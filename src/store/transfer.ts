@@ -1,5 +1,7 @@
 // Перенос журнала файлом. ⚠ На iOS хранилище PWA вытесняется: файл — единственная страховка.
-import type { Answer } from '../core/types.ts'
+import type { Answer, How } from '../core/types.ts'
+
+const HOWS: How[] = ['word', 'phrase', 'sort']
 
 const FORMAT = 1
 
@@ -35,5 +37,5 @@ export async function parse(file: File): Promise<Answer[]> {
     throw new Error('это не файл прогресса satzbau этой версии')
   }
   if (!dump.answers.every(isAnswer)) throw new Error('файл повреждён')
-  return dump.answers.map(({ t, ex, word, ok, given }) => ({ t, ex, word, ok, given }))
+  return dump.answers.map(({ t, ex, word, ok, given, how }) => (HOWS.includes(how as How) ? { t, ex, word, ok, given, how } : { t, ex, word, ok, given }))
 }
