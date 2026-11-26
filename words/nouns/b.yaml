@@ -1210,13 +1210,13 @@
 - id: n:Blutdruck
   lemma: Blutdruck
   gender: [m]
-  plural: [Blutdrucke, Blutdrücke]
+  plural: [Blutdrücke, Blutdrucke]
   gen_sg: [Blutdruckes, Blutdrucks]
   ru: кровяное давление
   en: blood pressure
   freq: 5000
   level: A2
-  decided: {}
+  decided: {plural: 'основная форма: dewikt ставит Blutdrücke первой, enwikt знает только Blutdrucke; при расхождении верим dewikt. Во фразах Tatoeba есть «Blutdrücke», «Blutdrucke» нет.'}
   skip: {}
 - id: n:Boden
   lemma: Boden

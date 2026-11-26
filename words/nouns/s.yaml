@@ -177,7 +177,7 @@
 - id: n:Sauna
   lemma: Sauna
   gender: [f]
-  plural: [Saunen, Saunas]
+  plural: [Saunas, Saunen]
   gen_sg: [Sauna]
   ru: сауна
   en: sauna

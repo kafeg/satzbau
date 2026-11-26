@@ -618,13 +618,13 @@
 - id: n:Rettungswagen
   lemma: Rettungswagen
   gender: [m]
-  plural: [Rettungswägen, Rettungswagen]
+  plural: [Rettungswagen, Rettungswägen]
   gen_sg: [Rettungswagens]
   ru: аварийная машина
   en: ambulance vehicle
   freq: 14000
   level: A1
-  decided: {}
+  decided: {plural: 'основная форма: dewikt ставит Rettungswagen первой, enwikt знает только Rettungswägen; при расхождении верим dewikt.'}
   skip: {}
 - id: n:Rezept
   lemma: Rezept

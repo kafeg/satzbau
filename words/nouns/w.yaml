@@ -265,7 +265,7 @@
 - id: n:Wasser
   lemma: Wasser
   gender: [n]
-  plural: [Wässer, Wasser]
+  plural: [Wasser, Wässer]
   gen_sg: [Wassers]
   ru: вода
   en: water

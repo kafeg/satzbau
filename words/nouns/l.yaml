@@ -135,7 +135,7 @@
 - id: n:Landsmann
   lemma: Landsmann
   gender: [m]
-  plural: [Landsmänner, Landsleute]
+  plural: [Landsleute, Landsmänner]
   gen_sg: [Landsmannes]
   ru: соотечественник, земляк
   en: compatriot

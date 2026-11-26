@@ -19,6 +19,7 @@ def main():
         warnings[kind].append(f'{w["id"]}: {msg}')
     words = nouns.load_words('nouns')
     ev = nouns.load_evidence('nouns')
+    seen = nouns.phrase_plurals()
     ids = collections.Counter(w.get('id') for w in words)
     for i, n in ids.items():
         if n > 1:
@@ -26,7 +27,7 @@ def main():
     for w in words:
         # вне курса (level: null) — справочные значения из dewikt: строгая проверка только у курса
         soft = w.get('level') is None
-        nouns.check_noun(w, ev.get(w.get('lemma')), warn if soft else err, warn)
+        nouns.check_noun(w, ev.get(w.get('lemma')), warn if soft else err, warn, seen)
     n = sentences.check_sentences(set(ids), errors)
     n_themes = themes.check_themes(words, errors)
     n_hints = rules.check_rules(words, errors, warnings)

@@ -13,6 +13,7 @@ import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import srcs  # noqa: E402
+from checks import nouns  # noqa: E402
 
 ROOT = srcs.ROOT
 
@@ -207,7 +208,8 @@ def record(i, e, lemma, n_entries, seed_w, taught, other, ruw, enw, fd, rank):
     if n_entries > 1 and ru:
         rec['sense'] = srcs.ru_items(ru)[0]
     rec['gender'] = ordered('gender', e, lemma, other)
-    rec['plural'] = ordered('plural', e, lemma, other)
+    # основная форма первой — правило проверки; фраз при импорте ещё нет
+    rec['plural'] = nouns.main_first(e['plural'], e['plural'], [[x['plural'] for x in other[s].get(lemma, [])] for s in other], {})
     rec['gen_sg'] = ordered('gen_sg', e, lemma, other)
     if e['number'] == 'pl':
         rec['number'] = 'pl'

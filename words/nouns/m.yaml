@@ -757,7 +757,7 @@
 - id: n:Milch
   lemma: Milch
   gender: [f]
-  plural: [Milche, Milchen]
+  plural: [Milchen, Milche]
   gen_sg: [Milch]
   ru: молоко
   en: milk
@@ -1191,13 +1191,13 @@
 - id: n:Mundwasser
   lemma: Mundwasser
   gender: [n]
-  plural: [Mundwässer, Mundwasser]
+  plural: [Mundwasser, Mundwässer]
   gen_sg: [Mundwassers]
   ru: полоскание для рта
   en: mouthwash
   freq: 31000
   level: A2
-  decided: {}
+  decided: {plural: 'основная форма: dewikt ставит Mundwasser первой, enwikt знает только Mundwässer; при расхождении верим dewikt.'}
   skip: {}
 - id: n:Museum
   lemma: Museum
@@ -1425,13 +1425,13 @@
   lemma: Müsli
   sense: мюсли
   gender: [n]
-  plural: [Müslis, Müsli]
+  plural: [Müsli, Müslis]
   gen_sg: [Müsli, Müslis]
   ru: мюсли
   en: muesli, cereals granola
   freq: 15000
   level: A1
-  decided: {}
+  decided: {plural: 'основная форма: dewikt ставит Müsli первой, enwikt знает только Müslis; при расхождении верим dewikt.'}
   skip: {}
 - id: n:Müsli:2
   lemma: Müsli

@@ -67,13 +67,13 @@
 - id: n:Nachlass
   lemma: Nachlass
   gender: [m]
-  plural: [Nachlässe, Nachlasse]
+  plural: [Nachlasse, Nachlässe]
   gen_sg: [Nachlasses]
   ru: скидка
   en: estate
   freq: 11000
   level: A2
-  decided: {}
+  decided: {plural: 'основная форма: dewikt ставит Nachlasse первой, enwikt знает только Nachlässe; при расхождении верим dewikt.'}
   skip: {}
 - id: n:Nachmittag
   lemma: Nachmittag

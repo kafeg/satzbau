@@ -740,7 +740,7 @@
 - id: n:Fleck
   lemma: Fleck
   gender: [m]
-  plural: [Flecke, Flecken]
+  plural: [Flecken, Flecke]
   gen_sg: [Flecks, Fleckes]
   ru: пятно
   en: stain, spot

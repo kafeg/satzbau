@@ -1,5 +1,5 @@
 """Существительные: каждый факт подтверждён источниками по выпискам evidence/ или `decided`."""
-import glob, json, os, re
+import collections, glob, json, os, re
 
 import yaml
 
@@ -52,6 +52,35 @@ def own_dewikt(w, ev):
     return de[i] if i < len(de) else None
 
 
+def phrase_plurals():
+    """id записи → {форма: сколько раз} во фразах Tatoeba: токен этой записи с Number=Plur."""
+    out = collections.defaultdict(collections.Counter)
+    for p in glob.glob(os.path.join(ROOT, 'sentences', 'tatoeba', '*.jsonl')):
+        for line in open(p, encoding='utf-8'):
+            for t in json.loads(line)['tok']:
+                if t[4] and t[4].startswith('n:') and 'Number=Plur' in t[3]:
+                    out[t[4]][t[0]] += 1
+    return out
+
+
+def main_first(xs, de, others, seen):
+    """Основная форма — первой: во фразах (от двух раз) чаще других; иначе её ставит первой больше
+    источников (у каждого первой стоит основная); иначе — порядок dewikt.
+    de — формы записи dewikt, others — списки форм по записям enwikt и ruwikt, seen — счёт во фразах."""
+    def firsts(x):
+        return (de[:1] == [x]) + sum(any(e[:1] == [x] for e in es) for es in others)
+    return sorted(xs, key=lambda x: (-seen.get(x, 0) if seen.get(x, 0) >= 2 else 0, -firsts(x),
+                                     de.index(x) if x in de else len(de)))
+
+
+def check_plural_order(w, ev, seen, err):
+    de = own_dewikt(w, ev)
+    others = [[e['plural'] for e in ev.get(src, [])] for src in ('enwikt', 'ruwikt')]
+    want = main_first(w['plural'], de['plural'] if de else [], others, seen.get(w['id'], {}))
+    if want != w['plural']:
+        err('plural-order', w, f'основная форма первой: {want} (docs/data-model.md, «Основная форма»)')
+
+
 def check_forms(w, ev, field, err, warn):
     xs = w[field]
     if field in w['decided']:
@@ -82,7 +111,7 @@ def pool(ev, lang):
     return out
 
 
-def check_noun(w, ev, err, warn):
+def check_noun(w, ev, err, warn, seen=None):
     keys = set(w)
     if missing := [k for k in NOUN_KEYS if k not in keys]:
         err('schema', w, f'нет полей {missing}')
@@ -108,6 +137,8 @@ def check_noun(w, ev, err, warn):
             proof(ev, 'gender', g, w, err, warn, i == 0)
     if w.get('number') != 'pl':
         check_forms(w, ev, 'plural', err, warn)
+        if seen is not None and len(w['plural']) > 1 and 'plural' not in w['decided']:
+            check_plural_order(w, ev, seen, err)
     if w.get('number') != 'pl':
         check_forms(w, ev, 'gen_sg', err, warn)
     for lang in ('ru', 'en'):

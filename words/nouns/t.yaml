@@ -476,7 +476,7 @@
 - id: n:Test
   lemma: Test
   gender: [m]
-  plural: [Teste, Tests]
+  plural: [Tests, Teste]
   gen_sg: [Testes, Tests]
   ru: тест
   en: test, check
