@@ -6,6 +6,19 @@ import { Art } from '../answer/Art.tsx'
 import type { View } from './index.ts'
 
 
+// тип на кнопке: знак умлаута крупнее и цветом — мелкие две точки над чёрточкой читались как прочерк
+function Type({ p }: { p: Pl }) {
+  const t = typeLabel(p)
+  return t.startsWith('¨') ? (
+    <>
+      <span className="uml">¨</span>
+      {t.slice(1)}
+    </>
+  ) : (
+    <>{t}</>
+  )
+}
+
 // форма, по которой показываем разбор: та, что совпала с ответом, иначе первая
 function shown(w: Noun, a: Pl | null): [string, Parse] {
   const forms = w.plural.map((f) => [f, parse(w.lemma, f)] as const).filter((x): x is [string, Parse] => x[1] !== null)
@@ -39,7 +52,7 @@ function note(w: Noun, a: Pl): string {
 }
 
 export const plural: View<Pl> = {
-  options: (w) => typesFor(w.lemma).map((t) => ({ a: t, label: typeLabel(t) })),
+  options: (w) => typesFor(w.lemma).map((t) => ({ a: t, label: typeLabel(t), show: <Type p={t} /> })),
   art: (w) => w.gender[0]!,
   ask: 'die …?',
   facts: (w, given) => {
@@ -58,7 +71,11 @@ export const plural: View<Pl> = {
       mark: 'g-pl',
       // правило судит о первой форме слова: при другой показанной форме («также») оно бы ей противоречило
       rule: form !== w.plural[0] ? null : {
-        own: <span className="mono">{typeLabel(p)}</span>,
+        own: (
+          <span className="mono">
+            <Type p={p} />
+          </span>
+        ),
         part: (head) => (
           <>
             Как у последней части: <span className="mono">{head}</span>

@@ -12,8 +12,8 @@ import { plural } from './Plural.tsx'
 export type Facts = { forms: ReactNode; note?: string; rule: RuleView | null; number: 'sg' | 'pl'; mark: string }
 
 export type View<A = never> = {
-  // варианты ответа по порядку клавиш 1…N; tone — цвет варианта
-  options(w: Noun): { a: A; label: string; tone?: string }[]
+  // варианты ответа по порядку клавиш 1…N; tone — цвет варианта; show — подпись, если не просто текстом
+  options(w: Noun): { a: A; label: string; tone?: string; show?: ReactNode }[]
   // что в строке над словом: у рода — артикль после ответа (тот, что выбран, если он тоже верен), у множественного — сразу
   art(w: Noun, given: A | null): Tone | null
   // вопрос под словом: «die …?»

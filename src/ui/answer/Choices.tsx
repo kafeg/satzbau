@@ -2,8 +2,10 @@
 // при ошибке верная — зелёная пунктирная рамка с подписью «верно»; остальные приглушены (docs/app.md).
 import { useEffect } from 'react'
 
-// tone — класс цвета варианта (g-m): заголовок полосы в раскладке
-export type Option = { label: string; tone?: string }
+import type { ReactNode } from 'react'
+
+// tone — класс цвета варианта (g-m): заголовок полосы в раскладке; show — как нарисовать подпись, если не текстом
+export type Option = { label: string; tone?: string; show?: ReactNode }
 
 type Props = { options: Option[]; chosen: number | null; right: number | null; onPick: (i: number) => void; wide?: boolean }
 
@@ -27,7 +29,7 @@ export function Choices({ options, chosen, right, onPick, wide }: Props) {
         const cap = !done || ok ? null : i === chosen ? 'ты' : i === right ? 'верно' : null
         return (
           <button key={o.label} className={`choice mono ${cls}`} disabled={done} onClick={() => onPick(i)}>
-            <span>{o.label}</span>
+            <span>{o.show ?? o.label}</span>
             {cap && <span className="cap">{cap}</span>}
             <kbd>{i + 1}</kbd>
           </button>

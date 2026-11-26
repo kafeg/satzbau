@@ -961,6 +961,20 @@ button.exr:not(:disabled):active {
   visibility: hidden;
 }
 
+/* знак умлаута на типе: вдвое крупнее и цветом, пока не ответил; после — цветом кнопки */
+.uml {
+  font-size: 1.7em;
+  line-height: 0;
+  vertical-align: -0.12em;
+  margin: 0 -0.22em 0 -0.12em;
+  color: var(--accent);
+}
+
+.choice:disabled .uml,
+.hint-rule .uml {
+  color: inherit;
+}
+
 /* восемь типов множественного — по четыре в ряд */
 .choices.types {
   grid-template-columns: repeat(4, 1fr);
