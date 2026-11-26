@@ -2,29 +2,7 @@
 // База только читается: sql.js держит её в памяти, офлайн её хранит кэш service worker.
 import initSqlJs, { type Database, type SqlValue } from 'sql.js'
 import wasmUrl from 'sql.js/dist/sql-wasm.wasm?url'
-
-export type Gender = 'm' | 'f' | 'n'
-export type Level = 'A1' | 'A2' | 'B1'
-export const LEVELS: Level[] = ['A1', 'A2', 'B1']
-
-export type Noun = {
-  id: string
-  lemma: string
-  gender: Gender[]
-  plural: string[]
-  ru: string | null
-  ruLlm: boolean
-  level: Level
-}
-
-export type Example = {
-  de: string
-  tr: string
-  llm: boolean
-  // токен со словом: его текст и номер среди одинаковых токенов фразы
-  word: string
-  nth: number
-}
+import { type Example, LEVELS, type Level, type Noun } from '../core/types.ts'
 
 export type Data = {
   meta: Record<string, string>

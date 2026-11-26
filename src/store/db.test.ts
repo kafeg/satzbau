@@ -3,8 +3,9 @@ import { readFileSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
 import initSqlJs from 'sql.js'
 import { beforeAll, expect, test } from 'vitest'
-import { type Data, LEVELS, open } from './db.ts'
-import { around } from './gender.ts'
+import { around } from '../core/text.ts'
+import { LEVELS } from '../core/types.ts'
+import { type Data, open } from './db.ts'
 
 let data: Data
 

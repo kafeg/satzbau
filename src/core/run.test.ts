@@ -1,6 +1,8 @@
 import { expect, test } from 'vitest'
-import type { Noun } from './db.ts'
-import { answer, around, current, done, firstTry, next, right, start } from './gender.ts'
+import { right } from './exercises/gender.ts'
+import { answer, current, done, firstTry, next, start } from './run.ts'
+import { around } from './text.ts'
+import type { Noun } from './types.ts'
 
 const noun = (lemma: string, gender: Noun['gender']): Noun =>
   ({ id: `n:${lemma}`, lemma, gender, plural: [], ru: null, ruLlm: false, level: 'A1' })

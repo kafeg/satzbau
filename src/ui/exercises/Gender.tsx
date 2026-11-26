@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { Data, Gender as G, Noun } from './db.ts'
-import { ARTICLE, ORDER, type Lesson, answer, around, current, next, right } from './gender.ts'
+import { ARTICLE, ORDER, right } from '../../core/exercises/gender.ts'
+import { type Lesson, answer, current, next } from '../../core/run.ts'
+import { around } from '../../core/text.ts'
+import type { Gender as G, Noun } from '../../core/types.ts'
+import type { Data } from '../../store/db.ts'
 
 export function Art({ g }: { g: G | 'pl' }) {
   return <span className={`art g-${g}`}>{g === 'pl' ? 'die' : ARTICLE[g]}</span>

@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
-import { type Data, LEVELS, type Level, load } from './db.ts'
-import { Full, GenderLesson } from './Gender.tsx'
-import { type Lesson, SIZE, firstTry, start } from './gender.ts'
+import { type Lesson, SIZE, firstTry, start } from '../core/run.ts'
+import { LEVELS, type Level } from '../core/types.ts'
+import { type Data, load } from '../store/db.ts'
+import { Full, GenderLesson } from './exercises/Gender.tsx'
 
 const KEY = 'satzbau.level'
 
