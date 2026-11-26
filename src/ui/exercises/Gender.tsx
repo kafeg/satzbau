@@ -36,7 +36,10 @@ export const gender: View<G> = {
         own: <Art g={g} />,
         part: (head) => (
           <>
-            Как последняя часть: <Art g={g} /> <span className="mono">{head}</span>
+            <span className="pre">как последняя часть</span>
+            <span>
+              <Art g={g} /> {head}
+            </span>
           </>
         ),
         why: 'сложное слово берёт род последней части',

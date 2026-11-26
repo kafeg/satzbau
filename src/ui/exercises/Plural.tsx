@@ -71,14 +71,12 @@ export const plural: View<Pl> = {
       mark: 'g-pl',
       // правило судит о первой форме слова: при другой показанной форме («также») оно бы ей противоречило
       rule: form !== w.plural[0] ? null : {
-        own: (
-          <span className="mono">
-            <Type p={p} />
-          </span>
-        ),
+        // «а здесь …» у исключения — словами: одинокий знак умлаута читается плохо
+        own: how(w.lemma, p),
         part: (head) => (
           <>
-            Как у последней части: <span className="mono">{head}</span>
+            <span className="pre">как у последней части</span>
+            <span>{head}</span>
           </>
         ),
         why: 'сложное слово берёт множественное последней части',
