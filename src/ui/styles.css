@@ -1056,9 +1056,35 @@ button.exr:not(:disabled):active {
   }
 }
 
+/* ошибка — короткое покачивание нажатой кнопки или неверного слова в раскладке; верно — без движения */
+.choice.me.bad,
+.bin .chipw.err {
+  animation: nudge 0.28s ease-out;
+}
+
+@keyframes nudge {
+  20% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+}
+
+/* ответ в пропуске фразы появляется так же, как артикль над словом */
+.phrase .art {
+  animation: sheet-in 0.15s ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .sheet,
-  .art-line .art {
+  .art-line .art,
+  .phrase .art,
+  .choice.me.bad,
+  .bin .chipw.err {
     animation: none;
   }
 }
@@ -1229,10 +1255,9 @@ main.themes > * + * {
 
 /* ---------- подсказка правила ---------- */
 .hint-rule {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  gap: 6px var(--s3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   padding: var(--s3);
   border: 1px solid var(--line);
   border-radius: var(--r-m);
@@ -1241,17 +1266,6 @@ main.themes > * + * {
 
 .hint-rule p {
   margin: 0;
-}
-
-/* сверху — что это (исключение, сложное слово) и сила справа; ниже правило во всю ширину */
-.hint-rule .kind,
-.hint-rule .lvl {
-  align-self: center;
-}
-
-.hint-rule .line,
-.hint-rule .why {
-  grid-column: 1 / -1;
 }
 
 /* само правило — крупно, части с воздухом: условие → следствие */
@@ -1284,55 +1298,24 @@ main.themes > * + * {
 }
 
 .hint-rule .why {
-  margin-top: 4px;
   font-size: var(--fs-sub);
   color: var(--text-2);
 }
 
-/* сила правила — серыми метками: зелёный и красный здесь заняты родом и ответом */
-.lvl {
-  display: inline-block;
-  padding: 1px 7px;
-  white-space: nowrap;
-  border-radius: var(--r-pill);
-  font-size: 11px;
-  font-weight: 600;
-  vertical-align: 1px;
-}
-
-.lvl-0 {
-  background: #2b2b33;
-  color: #fff;
-}
-
-.lvl-1 {
-  background: #5e5e66;
-  color: #fff;
-}
-
-.lvl-2 {
-  background: #c9c7be;
-  color: #2b2b33;
-}
-
-.lvl-3 {
-  background: #ecebe6;
-  color: #5e5e66;
-}
-
-/* источники — неприметно, раскрываются по нажатию; не тянут внимание с правила */
+/* сила и доля — мелко справа внизу, не тянут внимание с правила; по нажатию — источники */
 .hint-rule .src {
-  grid-column: 1 / -1;
-  font-size: var(--fs-caption);
+  margin-top: -2px;
+  font-size: 11px;
   color: var(--text-2);
 }
 
 .hint-rule .src summary {
   width: max-content;
-  margin-left: auto;
+  margin: -8px 0 -8px auto;
+  padding: 8px 0 8px var(--s3);
   list-style: none;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .hint-rule .src summary::-webkit-details-marker {
@@ -1344,8 +1327,8 @@ main.themes > * + * {
 }
 
 .hint-rule .src a {
-  display: inline-block;
-  margin-right: var(--s3);
+  display: block;
+  padding: 3px 0;
   color: var(--text-2);
 }
 
