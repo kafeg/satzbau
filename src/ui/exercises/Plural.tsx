@@ -29,11 +29,16 @@ function rule(lemma: string, p: Parse): string {
   return p.uml ? `${end} и умлаут: ${lemma[p.at]} → ${'äöüÄÖÜ'['aouAOU'.indexOf(lemma[p.at]!)]}` : end
 }
 
-function verdict(w: Noun, a: Pl, ok: boolean): string {
-  if (ok) return 'Верно'
+// тип формы коротко: «¨-e», «-(e)n»
+function type(p: Parse): string {
+  return `${p.uml ? '¨' : ''}${LABEL[p.end]}`
+}
+
+// что угадано, а чего не хватило — только при ошибке, когда окончание верное
+function detail(w: Noun, a: Pl): string | null {
   const [, p] = shown(w, null)
-  if (p.end === a.end) return p.uml ? 'Неверно: окончание верное, нужен умлаут' : 'Неверно: окончание верное, умлаут не нужен'
-  return `Неверно: ${p.end === '' ? 'без окончания' : `окончание ${LABEL[p.end]}`}${p.uml ? ' и умлаут' : ''}`
+  if (p.end !== a.end) return null
+  return p.uml ? 'Окончание верное, не хватило умлаута' : 'Окончание верное, умлаут здесь не нужен'
 }
 
 export const plural: View<Pl> = {
@@ -96,12 +101,15 @@ export const plural: View<Pl> = {
     )
   },
 
+  Right: ({ word }) => <span className="mono">{type(shown(word, null)[1])}</span>,
+
   Reveal: ({ word, given, ok, data }) => {
     const [form, p] = shown(word, ok ? given : null)
     const also = word.plural.filter((f) => f !== form)
+    const why = ok ? null : detail(word, given)
     return (
       <>
-        <div className={`verdict ${ok ? 'yes' : 'no'}`}>{verdict(word, given, ok)}</div>
+        {why && <p className="detail">{why}</p>}
         <span className="full">
           <Art g={word.gender[0]!} /> <span className="mono">{word.lemma}</span> · <Art g="pl" /> <Form form={form} p={p} />
           {also.length > 0 && <span className="also"> · также {also.join(', ')}</span>}

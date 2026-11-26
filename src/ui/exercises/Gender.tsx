@@ -60,11 +60,12 @@ export const gender: View<G> = {
     )
   },
 
-  Reveal: ({ word, ok, data }) => {
+  Right: ({ word }) => <Art g={word.gender[0]!} />,
+
+  Reveal: ({ word, data }) => {
     const hint = data.hint(word.id, 'gender')
     return (
       <>
-        <div className={`verdict ${ok ? 'yes' : 'no'}`}>{ok ? 'Верно' : 'Неверно'}</div>
         <Full word={word} />
         {hint && <HintLine hint={hint} gender={word.gender[0]!} />}
         <Example data={data} wordId={word.id} mark={`g-${word.gender[0]}`} />

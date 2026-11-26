@@ -5,24 +5,34 @@ import { Art } from './exercises/Gender.tsx'
 
 const host = (url: string) => new URL(url).hostname.replace(/^www\./, '')
 
+const LEVELS = ['правило', 'чаще всего', 'часто', 'редко']
+
 export function HintLine({ hint, gender }: { hint: Hint; gender: Gender }) {
-  const strength = `${level(hint.share)}, ${percent(hint.share)} слов словаря`
+  const lvl = level(hint.share)
+  const badge = (
+    <span className={`lvl lvl-${LEVELS.indexOf(lvl)}`} title={`${percent(hint.share)} из ${hint.n} слов словаря`}>
+      {lvl} · {percent(hint.share)}
+    </span>
+  )
   return (
     <div className="hint-rule">
       {hint.head ? (
-        <p>
-          Как последняя часть: <Art g={gender} /> <span className="mono">{hint.head}</span>
-          <span className="why"> · сложное слово берёт её род · {strength}</span>
-        </p>
+        <>
+          <p>
+            Как последняя часть: <Art g={gender} /> <span className="mono">{hint.head}</span>
+            {badge}
+          </p>
+          <p className="why">сложное слово берёт род последней части</p>
+        </>
       ) : hint.ok ? (
         <p>
           <b className="mono">{hint.text}</b>
-          <span className="why"> · {strength}</span>
+          {badge}
         </p>
       ) : (
         <p>
           Исключение: <span className="mono">{hint.text}</span>
-          <span className="why"> · {strength}</span>, а здесь <Art g={gender} />
+          {badge}, а здесь <Art g={gender} />
         </p>
       )}
       <p className="src">

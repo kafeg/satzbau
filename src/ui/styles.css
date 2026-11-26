@@ -1,6 +1,7 @@
-/* Визуальная система v1 (docs/design.md в ветке v1): поверхности, отступы, кегли, цвет рода.
-   Синий der, оранжевый die, фиолетовый das. В упражнении «Род» цвет значит только род:
-   верность показана зачёркиванием и строкой «Верно / Неверно», а не синим цветом. */
+/* Поверхности, отступы и кегли — из визуальной системы v1 (docs/design.md в ветке v1).
+   Цвет рода — как в курсе и учебниках: der синий, die красный, das зелёный, множественное жёлтое.
+   Верно или неверно — панель ответа снизу (зелёная или красная) с галочкой или крестиком:
+   цвет никогда не единственный признак, рядом всегда слово или знак. */
 :root {
   --bg: #f5f4ef;
   --surface: #ffffff;
@@ -17,12 +18,28 @@
   --accent: #2448b8;
   --accent-ink: #ffffff;
 
-  --blue-bg: #e6ecfb;
-  --blue-fg: #17317f;
-  --orange-bg: #fcebdd;
-  --orange-fg: #8a3608;
-  --violet-bg: #efe7f8;
-  --violet-fg: #55307f;
+  /* род: заливка кнопки, фон и текст метки */
+  --der: #2980b9;
+  --der-bg: #dcebf7;
+  --der-fg: #1b5e8c;
+  --die: #c0392b;
+  --die-bg: #f8dfdc;
+  --die-fg: #922b20;
+  --das: #27ae60;
+  --das-bg: #dbf2e4;
+  --das-fg: #1c7a44;
+  --pl-bg: #fbf0c4;
+  --pl-fg: #6e5500;
+
+  /* панель ответа */
+  --ok: #2e9e57;
+  --ok-bg: #e9f7ee;
+  --ok-line: #b7e2c4;
+  --ok-fg: #1d6e3b;
+  --bad: #d0392b;
+  --bad-bg: #fdeceb;
+  --bad-line: #f3c2bd;
+  --bad-fg: #9b2a1f;
 
   --press: #ebe9e1;
   --press-inverse: #2a2a31;
@@ -82,6 +99,16 @@ button {
   color: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* фокус с клавиатуры виден, после касания или autofocus — нет */
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .mono {
@@ -373,23 +400,23 @@ main.home > * + * {
 }
 
 .g-m {
-  background: var(--blue-bg);
-  color: var(--blue-fg);
+  background: var(--der-bg);
+  color: var(--der-fg);
 }
 
 .g-f {
-  background: var(--orange-bg);
-  color: var(--orange-fg);
+  background: var(--die-bg);
+  color: var(--die-fg);
 }
 
 .g-n {
-  background: var(--violet-bg);
-  color: var(--violet-fg);
+  background: var(--das-bg);
+  color: var(--das-fg);
 }
 
 .g-pl {
-  background: var(--sunk);
-  color: var(--text-2);
+  background: var(--pl-bg);
+  color: var(--pl-fg);
 }
 
 .full {
@@ -520,25 +547,47 @@ main.home > * + * {
   cursor: default;
 }
 
+/* верная кнопка — сплошной цвет рода, белая рамка внутри и галочка; неверная — серая, крестик */
 .choice.shown {
-  border-color: currentColor;
+  color: #fff;
+  box-shadow: inset 0 0 0 3px rgb(255 255 255 / 55%);
+}
+
+.choice.shown::after,
+.choice.struck::after {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  font: 700 var(--fs-caption) var(--sans);
+}
+
+.choice.shown::after {
+  content: '✓';
+}
+
+.choice.struck::after {
+  content: '✕';
 }
 
 .choice.g-m {
-  background: var(--blue-bg);
+  background: var(--der);
+  border-color: var(--der);
 }
 
 .choice.g-f {
-  background: var(--orange-bg);
+  background: var(--die);
+  border-color: var(--die);
 }
 
 .choice.g-n {
-  background: var(--violet-bg);
+  background: var(--das);
+  border-color: var(--das);
 }
 
 .choice.struck {
+  background: #ecebe6;
   text-decoration: line-through;
-  color: var(--text-2);
+  color: #8b8a86;
 }
 
 .choice.dim {
@@ -551,19 +600,83 @@ main.home > * + * {
   visibility: hidden;
 }
 
-.answer {
+/* панель ответа снизу: зелёная — верно, красная — неверно */
+.sheet {
+  margin: auto calc(-1 * var(--s4)) calc(-1 * (var(--s4) + env(safe-area-inset-bottom)));
+  padding: var(--s4) var(--s4) calc(var(--s4) + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   gap: var(--s3);
+  border-radius: var(--r-l) var(--r-l) 0 0;
+  box-shadow: 0 -6px 18px rgb(0 0 0 / 6%);
+}
+
+.sheet.ok {
+  background: var(--ok-bg);
+  border-top: 1px solid var(--ok-line);
+}
+
+.sheet.bad {
+  background: var(--bad-bg);
+  border-top: 1px solid var(--bad-line);
 }
 
 .verdict {
-  font-weight: 600;
-  font-size: var(--fs-card);
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  font-weight: 700;
+  font-size: 19px;
 }
 
-.verdict.no {
-  text-decoration: underline wavy var(--line-strong);
+.verdict .ic {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.ok .verdict {
+  color: var(--ok-fg);
+}
+
+.ok .verdict .ic {
+  background: var(--ok);
+}
+
+.bad .verdict {
+  color: var(--bad-fg);
+}
+
+.bad .verdict .ic {
+  background: var(--bad);
+}
+
+.sheet .go {
+  min-height: 52px;
+  border: 0;
+  border-radius: var(--r-m);
+  color: #fff;
+  font-weight: 600;
+}
+
+.ok .go {
+  background: var(--ok);
+}
+
+.bad .go {
+  background: var(--bad);
+}
+
+.sheet .detail {
+  margin: 0;
+  font-size: var(--fs-sub);
+  color: var(--text-2);
 }
 
 .example {
@@ -591,14 +704,6 @@ main.home > * + * {
   color: var(--text-2);
 }
 
-.next {
-  position: sticky;
-  bottom: 0;
-  margin-top: auto;
-  padding: var(--s3) 0 env(safe-area-inset-bottom);
-  background: linear-gradient(transparent, var(--bg) 30%);
-  display: flex;
-}
 
 /* на компьютере подсказки клавиш видны, на касании — нет */
 @media (hover: none) {
@@ -838,13 +943,13 @@ main.themes > * + * {
   visibility: hidden;
 }
 
-/* у коротких «-e», «—» зачёркивание сливается с дефисом: ещё и крестик */
-.five .choice.struck::after {
-  content: '✕';
+/* у коротких «-e», «—» зачёркивание сливается с дефисом: крестик обязателен (общее правило выше) */
+.choice.ok::after {
+  content: '✓';
   position: absolute;
   top: 4px;
-  right: 6px;
-  font: 600 var(--fs-caption) var(--sans);
+  right: 7px;
+  font: 700 var(--fs-caption) var(--sans);
 }
 
 .chg {
@@ -896,7 +1001,7 @@ main.themes > * + * {
   padding: var(--s2) var(--s3);
   border: 1px solid var(--line);
   border-radius: var(--r-m);
-  background: #fbfaf6;
+  background: var(--surface);
   font-size: var(--fs-sub);
 }
 
@@ -908,6 +1013,37 @@ main.themes > * + * {
   color: var(--text-2);
 }
 
+/* сила правила — серыми метками: зелёный и красный здесь заняты родом и ответом */
+.lvl {
+  display: inline-block;
+  margin-left: var(--s1);
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: 1px;
+}
+
+.lvl-0 {
+  background: #2b2b33;
+  color: #fff;
+}
+
+.lvl-1 {
+  background: #5e5e66;
+  color: #fff;
+}
+
+.lvl-2 {
+  background: #c9c7be;
+  color: #2b2b33;
+}
+
+.lvl-3 {
+  background: #ecebe6;
+  color: #5e5e66;
+}
+
 .hint-rule .src {
   margin-top: 2px;
   font-size: var(--fs-caption);
@@ -915,4 +1051,13 @@ main.themes > * + * {
 
 .hint-rule .src a {
   color: var(--text-2);
+}
+
+.sheet .go:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -5px;
+}
+
+.sheet .go:focus:not(:focus-visible) {
+  outline: none;
 }

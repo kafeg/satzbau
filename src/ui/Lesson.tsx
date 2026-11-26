@@ -76,17 +76,25 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
       {!given && <p className="where">{where(word.id)}</p>}
 
       {given && (
-        <section className="answer" aria-live="polite">
+        <section className={`sheet ${given.ok ? 'ok' : 'bad'}`} aria-live="polite">
+          <div className="verdict">
+            <span className="ic" aria-hidden>
+              {given.ok ? '✓' : '✕'}
+            </span>
+            {given.ok ? (
+              'Верно'
+            ) : (
+              <span>
+                Неверно: <view.Right word={word} />
+              </span>
+            )}
+          </div>
+          {!given.ok && !step.retry && <p className="detail">Слово вернётся в конце урока</p>}
           <view.Reveal word={word} given={given.a} ok={given.ok} data={data} />
-        </section>
-      )}
-
-      {given && (
-        <div className="next">
-          <button className="primary" onClick={go} autoFocus>
+          <button className="go" onClick={go} autoFocus>
             Дальше
           </button>
-        </div>
+        </section>
       )}
     </div>
   )

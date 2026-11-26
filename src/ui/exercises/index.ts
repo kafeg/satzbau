@@ -10,7 +10,9 @@ export type View<A = never> = {
   Prompt: FC<{ word: Noun }>
   // кнопки ответа и их клавиши; после ответа показывают, что верно
   Choices: FC<{ word: Noun; given: A | null; onAnswer: (a: A) => void }>
-  // разбор после ответа
+  // верный ответ коротко — в заголовок панели: «Неверно: die»
+  Right: FC<{ word: Noun }>
+  // разбор после ответа, в панели под заголовком
   Reveal: FC<{ word: Noun; given: A; ok: boolean; data: Data }>
   // строка слова в итоге урока
   Summary: FC<{ word: Noun }>
