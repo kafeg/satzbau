@@ -146,8 +146,8 @@ export function App() {
     }
   }
 
-  if (error) return <main className="home"><h1>satzbau</h1><p className="sub">Не удалось открыть базу: {error}</p></main>
-  if (!data || !mem) return <main className="home"><h1>satzbau</h1><p className="sub">Загружаю базу…</p></main>
+  if (error) return <main className="home"><h1>der Satzbau</h1><p className="sub">Не удалось открыть базу: {error}</p></main>
+  if (!data || !mem) return <main className="home"><h1>der Satzbau</h1><p className="sub">Загружаю базу…</p></main>
 
   if (screen.k === 'themes')
     return (

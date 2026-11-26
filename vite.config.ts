@@ -30,8 +30,8 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['apple-touch-icon-180.png', 'favicon.svg', 'favicon-32.png'],
       manifest: {
-        name: 'satzbau — немецкая грамматика',
-        short_name: 'satzbau',
+        name: 'der Satzbau — немецкая грамматика',
+        short_name: 'der Satzbau',
         description: 'Офлайн-тренажёр немецкой грамматики для A1–B1',
         lang: 'ru',
         start_url: '/satzbau/',

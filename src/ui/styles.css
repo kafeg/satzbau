@@ -118,6 +118,12 @@ h1 {
   margin: 0;
 }
 
+/* имя — «der Satzbau»: артикль меткой рода, как в упражнении */
+h1 .art {
+  font-size: 0.75em;
+  vertical-align: 2px;
+}
+
 .section {
   font-size: var(--fs-sub);
   font-weight: 600;

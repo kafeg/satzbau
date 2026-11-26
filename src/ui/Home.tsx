@@ -52,7 +52,9 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
       ) : (
         update.check === 'loading' && <p className="update">Скачиваю новую версию…</p>
       )}
-      <h1>satzbau</h1>
+      <h1>
+        <span className="art g-m">der</span> Satzbau
+      </h1>
 
       <div>
         <div className="section">Уровень</div>
@@ -173,7 +175,7 @@ export function Home({ data, level, onLevel, ov, each, theme, onThemes, onStart,
           <a href="https://github.com/kafeg/satzbau">github.com/kafeg/satzbau</a>
         </p>
         <p>
-          satzbau {__VERSION__} ·{' '}
+          der Satzbau {__VERSION__} ·{' '}
           {update.fresh ? (
             <button className="link" onClick={update.onApply}>
               обновить
