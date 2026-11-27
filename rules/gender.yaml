@@ -114,3 +114,32 @@
   sources:
     - {src: en-wp-gender, at: Noun meanings, find: "Seasons, months and days of the week"}
     - {src: de-wp-genus, at: Genus von Objekten ohne natürliches Geschlecht, find: "alle Jahreszeiten und Monatsnamen maskulin"}
+
+# списки групп — слова базы, у которых в dewikt родовое понятие (Oberbegriff) — эта группа:
+# Wochentag, Himmelsrichtung, алкогольный напиток (Alkohol — Getränk, и он в примерах en-wb-nouns);
+# без слов, у которых в базе другое значение (Abend, Morgen — сторона света; Wasser, Sturm — напиток)
+- id: weekdays
+  when: {list: [Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonnabend, Sonntag]}
+  then: {gender: m}
+  title: дни недели
+  sources:
+    - {src: en-wp-gender, at: Noun meanings, find: "Seasons, months and days of the week"}
+    - {src: de-wp-genus, at: Genus von Objekten ohne natürliches Geschlecht, find: "Maskulin sind heute alle Wochentage"}
+    - {src: en-wb-nouns, at: Semantic Groups Which Are Masculine, find: "z.B. der Montag"}
+
+- id: compass
+  when: {list: [Norden, Osten, Süden, Westen, Nordosten, Nordwesten, Südosten, Südwesten]}
+  then: {gender: m}
+  title: стороны света
+  sources:
+    - {src: en-wp-gender, at: Noun meanings, find: "Compass points, words about winds and types of weather."}
+    - {src: en-wb-nouns, at: Semantic Groups Which Are Masculine, find: "compass points: Norden, Osten, Süden, Westen, Nordwesten"}
+
+# das Bier — в списке: источники называют его исключением, доля его учитывает
+- id: alcohol
+  when: {list: [Wein, Sekt, Alkohol, Bier]}
+  then: {gender: m}
+  title: алкогольные напитки
+  sources:
+    - {src: en-wp-gender, at: Noun meanings, find: "Alcoholic and plant-based drinks. || but: ''das Bier''"}
+    - {src: en-wb-nouns, at: Semantic Groups Which Are Masculine, find: "z.B. der Wein, der Likör, der Alkohol, der Champagner"}

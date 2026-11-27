@@ -13,6 +13,9 @@
 {"id": "ending-o", "n": 951, "ok": 570}
 {"id": "compound", "n": 64555, "ok": 64326}
 {"id": "seasons-months", "n": 16, "ok": 16}
+{"id": "weekdays", "n": 8, "ok": 8}
+{"id": "compass", "n": 8, "ok": 8}
+{"id": "alcohol", "n": 4, "ok": 3}
 {"id": "pl-ung", "n": 7017, "ok": 6955}
 {"id": "pl-heit", "n": 436, "ok": 428}
 {"id": "pl-keit", "n": 787, "ok": 787}

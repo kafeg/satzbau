@@ -112,6 +112,15 @@ class Choice(unittest.TestCase):
         self.assertEqual(self.hint('Auge', 'n'), {'rule': 'ending-e', 'ok': False, 'head': None})
         self.assertEqual(self.hint('Kuchen', 'm'), {'rule': 'suffix-chen', 'ok': False, 'head': None})
 
+    def test_group(self):
+        self.assertEqual(self.hint('Montag', 'm'), {'rule': 'weekdays', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Norden', 'm'), {'rule': 'compass', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Wein', 'm'), {'rule': 'alcohol', 'ok': True, 'head': None})
+        # das Bier — исключение; называется самое надёжное из подходящих правил: -er → der, не напитки
+        self.assertEqual(self.hint('Bier', 'n'), {'rule': 'ending-er', 'ok': False, 'head': None})
+        rules, stats, _, _ = REAL
+        self.assertEqual(stats['alcohol'], {'id': 'alcohol', 'n': 4, 'ok': 3})
+
     def test_no_rule_no_hint(self):
         self.assertIsNone(self.hint('Tisch', 'm'))
 
