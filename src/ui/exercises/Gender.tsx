@@ -11,11 +11,14 @@ export function Full({ word }: { word: Noun }) {
   return (
     <>
       <Art g={g!} /> <span className="mono">{word.lemma}</span>
-      {word.plural[0] && (
+      {word.plural[0] ? (
         <span className="pl">
           {' · '}
           <Art g="pl" /> <span className="mono">{word.plural[0]}</span>
         </span>
+      ) : (
+        // plural: [] — словарь подтвердил: множественного нет (docs/data-model.md, «Только ед. ч.»)
+        <span className="also"> · только ед. ч.</span>
       )}
       {also.length > 0 && <span className="also"> · также {also.map((x) => ARTICLE[x]).join(', ')}</span>}
     </>
