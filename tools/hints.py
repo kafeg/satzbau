@@ -120,6 +120,11 @@ def text(rule):
     return f'{cond} → {shown}'
 
 
+# подсказкой — только правило, верное у трёх слов из четырёх и чаще: более слабое ничего не объясняет, а с
+# «исключением» почти у каждого слова учит неверному ожиданию. В данных и в доле слабые правила остаются.
+MIN_SHARE = 0.75
+
+
 def hint(word, name, rules, stats, heads):
     """{rule, ok, head} или None. word — запись слова (lemma, поля, compound — у слова без своей статьи
     в словарях: его род и формы и так взяты от последней части)."""
@@ -129,7 +134,7 @@ def hint(word, name, rules, stats, heads):
     cands = []
     for r in rules:
         f, claim = field(r)
-        if f != name:
+        if f != name or share(stats, r['id']) < MIN_SHARE:
             continue
         if 'head' in r['when']:
             part = word.get('compound') or head_of(word['lemma'], name, value, heads)

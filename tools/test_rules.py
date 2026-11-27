@@ -157,15 +157,16 @@ class PluralChoice(unittest.TestCase):
         self.assertEqual(self.hint('Käse', 'm', 'Käse'), {'rule': 'pl-e', 'ok': False, 'head': None})
         self.assertEqual(self.hint('Garten', 'm', 'Gärten'), {'rule': 'pl-en', 'ok': False, 'head': None})
 
-    def test_masculine_fallback(self):
-        # «der → -e» — только там, где нет правила точнее; умлаут — другой тип, ¨-e
-        self.assertEqual(self.hint('Tisch', 'm', 'Tische'), {'rule': 'pl-m', 'ok': True, 'head': None})
-        self.assertEqual(self.hint('Rucksack', 'm', 'Rucksäcke'), {'rule': 'pl-m', 'ok': False, 'head': None})
-        self.assertEqual(self.hint('Mann', 'm', 'Männer'), {'rule': 'pl-m', 'ok': False, 'head': None})
+    def test_weak_rule_gives_no_hint(self):
+        # «der → -e» верно у четверти слов мужского рода: подсказкой не показываем (hints.MIN_SHARE)
+        self.assertIsNone(self.hint('Tisch', 'm', 'Tische'))
+        self.assertIsNone(self.hint('Rucksack', 'm', 'Rucksäcke'))
+        self.assertIsNone(self.hint('Mann', 'm', 'Männer'))
+        self.assertIsNone(self.hint('Muskel', 'm', 'Muskeln'))
+        # правила сильнее порога остаются, и их исключения тоже
         self.assertEqual(self.hint('Lehrer', 'm', 'Lehrer')['rule'], 'pl-er-mn')
         self.assertEqual(self.hint('Junge', 'm', 'Jungen')['rule'], 'pl-e')
-        # -er (der, das) → — не даёт ответа, der → -e даёт: правило, а не исключение
-        self.assertEqual(self.hint('Charakter', 'm', 'Charaktere'), {'rule': 'pl-m', 'ok': True, 'head': None})
+        self.assertEqual(self.hint('Charakter', 'm', 'Charaktere'), {'rule': 'pl-er-mn', 'ok': False, 'head': None})
 
     def test_no_rule_no_hint(self):
         # у среднего рода общего правила нет: источники говорят -er, а не -e
