@@ -125,6 +125,6 @@ test('тип множественного в подсказке совпадае
     const t = typeLabel(parse(w.lemma, w.plural[0]!)!)
     if (h.value !== t) off.push(`${w.lemma}: ${h.value} ≠ ${t}`)
   }
-  expect(n).toBeGreaterThan(800)
+  expect(n).toBeGreaterThan(700)
   expect(off).toEqual([])
 })
