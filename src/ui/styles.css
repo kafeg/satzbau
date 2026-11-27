@@ -1346,3 +1346,27 @@ main.themes > * + * {
 .sheet .go:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* проверка голоса (временно) */
+.probe .mini-line {
+  margin: 0 0 6px;
+  font-size: var(--fs-sub);
+  color: var(--text-2);
+  overflow-wrap: anywhere;
+}
+
+.probe .heard {
+  min-height: 44px;
+  padding: var(--s3);
+  border-radius: var(--r-m);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font: 600 var(--fs-card) var(--mono);
+}
+
+.probe select {
+  width: 100%;
+  min-height: 44px;
+  margin-bottom: var(--s2);
+  font: inherit;
+}

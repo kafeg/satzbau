@@ -14,6 +14,7 @@ import { Home } from './Home.tsx'
 import { Lesson } from './Lesson.tsx'
 import { TabBar } from './Nav.tsx'
 import { Pick } from './Pick.tsx'
+import { Probe } from './Probe.tsx'
 import { type Check, Progress } from './Progress.tsx'
 import { Result } from './Result.tsx'
 
@@ -40,14 +41,15 @@ const savedLevel = (): Level => {
 }
 
 // only — урок одного упражнения; без него — все вперемешку
-type Screen = { k: 'home' } | { k: 'pick' } | { k: 'progress' } | { k: 'lesson'; lesson: L; only?: string } | { k: 'result'; lesson: L; only?: string }
+type Screen = { k: 'home' } | { k: 'pick' } | { k: 'progress' } | { k: 'probe' } | { k: 'lesson'; lesson: L; only?: string } | { k: 'result'; lesson: L; only?: string }
 
 export function App() {
   const [data, setData] = useState<Data | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [level, setLevel] = useState<Level>(savedLevel)
   const [themeId, setThemeId] = useState<string>(() => saved('theme') ?? '')
-  const [screen, setScreen] = useState<Screen>({ k: 'home' })
+  // #probe — проверка голоса (временно): так её можно открыть и ссылкой в Safari
+  const [screen, setScreen] = useState<Screen>(location.hash === '#probe' ? { k: 'probe' } : { k: 'home' })
   const [answers, setAnswers] = useState<Answer[]>([])
   const [mem, setMem] = useState<Memory | null>(null)
   const [stored, setStored] = useState(true)
@@ -204,6 +206,8 @@ export function App() {
   const title = theme?.title ?? 'Все темы'
   const tabs = <TabBar tab={screen.k === 'progress' ? 'progress' : 'learn'} onTab={(t) => setScreen({ k: t === 'progress' ? 'progress' : 'home' })} />
 
+  if (screen.k === 'probe') return <Probe onBack={() => setScreen({ k: 'progress' })} />
+
   if (screen.k === 'progress')
     return (
       <>
@@ -219,6 +223,7 @@ export function App() {
           onExport={() => download(answers)}
           onImport={restore}
           onBack={() => setScreen({ k: 'home' })}
+          onProbe={() => setScreen({ k: 'probe' })}
         />
         {tabs}
       </>

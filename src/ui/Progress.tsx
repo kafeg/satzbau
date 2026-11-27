@@ -27,9 +27,10 @@ type Props = {
   onExport: () => void
   onImport: (f: File) => void
   onBack: () => void
+  onProbe: () => void
 }
 
-export function Progress({ level, theme, ov, each, attribution, stored, notice, update, onExport, onImport, onBack }: Props) {
+export function Progress({ level, theme, ov, each, attribution, stored, notice, update, onExport, onImport, onBack, onProbe }: Props) {
   const file = useRef<HTMLInputElement>(null)
   const { learned, learning, untouched } = ov.words
   const n = learned + learning + untouched
@@ -127,6 +128,11 @@ export function Progress({ level, theme, ov, each, attribution, stored, notice, 
           ) : (
             CHECK[update.check]
           )}
+        </p>
+        <p>
+          <button className="link" onClick={onProbe}>
+            проверить голос на этом устройстве
+          </button>
         </p>
         <p>
           Часть переводов и примеров, которых нет в словарях и Tatoeba, сделана LLM. Данные: {attribution}. Код MIT, данные CC BY-SA 4.0 —{' '}
