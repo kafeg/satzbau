@@ -975,6 +975,13 @@ button.exr:not(:disabled):active {
   color: inherit;
 }
 
+/* вариант во всю ширину под сеткой: «только ед. ч.» */
+.choice.full {
+  grid-column: 1 / -1;
+  min-height: 48px;
+  font: 600 var(--fs-body) var(--sans);
+}
+
 /* восемь типов множественного — по четыре в ряд */
 .choices.types {
   grid-template-columns: repeat(4, 1fr);

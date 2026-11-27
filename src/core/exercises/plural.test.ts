@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { noun } from '../test-words.ts'
-import { canUmlaut, parse, plural, right, typesFor } from './plural.ts'
+import { SINGULAR, canUmlaut, parse, plural, right, typesFor } from './plural.ts'
 
 const t = (lemma: string, form: string) => {
   const p = parse(lemma, form)
@@ -29,7 +29,17 @@ test('формы вне пяти типов не разбираются, и сл
   expect(t('Werkstatt', 'Werkstätten')).toBeNull()
   expect(plural.fits(noun('Museum', ['n'], { plural: ['Museen'] }))).toBe(false)
   expect(plural.fits(noun('Tisch', ['m'], { plural: ['Tische'] }))).toBe(true)
-  expect(plural.fits(noun('Geld', ['n']))).toBe(false)
+})
+
+test('слово без множественного спрашивается, ответ — «только ед. ч.»', () => {
+  const obst = noun('Obst', ['n'], { plural: [] })
+  const tisch = noun('Tisch', ['m'], { plural: ['Tische'] })
+  expect(plural.fits(obst)).toBe(true)
+  expect(right(obst, SINGULAR)).toBe(true)
+  expect(right(obst, { uml: false, end: 'e' })).toBe(false)
+  expect(right(tisch, SINGULAR)).toBe(false)
+  expect(typesFor('Tisch').at(-1)).toEqual(SINGULAR)
+  expect(plural.key(SINGULAR)).toBe('none')
 })
 
 test('засчитывается тип любой формы из списка', () => {
@@ -50,7 +60,7 @@ test('умлаут возможен только при a, o, u в основе'
 })
 
 test('варианты: восемь типов, умлаутные — только если в слове есть a, o, u', () => {
-  expect(typesFor('Zug')).toHaveLength(8)
-  expect(typesFor('Kind')).toHaveLength(5)
+  expect(typesFor('Zug')).toHaveLength(9)
+  expect(typesFor('Kind')).toHaveLength(6)
   expect(typesFor('Kind').some((t) => t.uml)).toBe(false)
 })

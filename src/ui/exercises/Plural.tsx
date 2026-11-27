@@ -47,16 +47,31 @@ function how(lemma: string, p: Parse): string {
 // при ошибке — как образована верная форма (верная кнопка отмечена «верно»); если окончание угадано — чего не хватило
 function note(w: Noun, a: Pl): Note {
   const [, p] = shown(w, null)
+  if (a.end === null) return { text: `множественное есть: ${how(w.lemma, p)}`, kind: 'form' }
   if (p.end !== a.end) return { text: how(w.lemma, p), kind: 'form' }
   return { text: p.uml ? 'окончание угадал, не хватило умлаута' : 'окончание угадал, умлаут здесь не нужен', kind: 'answer' }
 }
 
 export const plural: View<Pl> = {
-  options: (w) => typesFor(w.lemma).map((t) => ({ a: t, label: typeLabel(t), show: <Type p={t} /> })),
+  // «только ед. ч.» — широкой кнопкой под сеткой типов
+  options: (w) => typesFor(w.lemma).map((t) => ({ a: t, label: typeLabel(t), show: <Type p={t} />, full: t.end === null })),
   art: (w) => w.gender[0]!,
   ask: 'die …?',
   facts: (w, given) => {
     const ok = given !== null && right(w, given)
+    if (w.plural.length === 0)
+      return {
+        forms: (
+          <>
+            <Art g={w.gender[0]!} /> <span className="mono">{w.lemma}</span>
+            <span className="also"> · только ед. ч.</span>
+          </>
+        ),
+        note: given && !ok ? { text: 'множественного у этого слова нет', kind: 'form' } : undefined,
+        number: 'sg',
+        mark: `g-${w.gender[0]}`,
+        rule: null,
+      }
     const [form, p] = shown(w, ok ? given : null)
     const also = w.plural.filter((f) => f !== form)
     return {
@@ -86,7 +101,15 @@ export const plural: View<Pl> = {
   summary: (w) => (
     <>
       <span>
-        <Art g={w.gender[0]!} /> <span className="mono">{w.lemma}</span> · <Art g="pl" /> <span className="mono">{w.plural[0]}</span>
+        <Art g={w.gender[0]!} /> <span className="mono">{w.lemma}</span>
+        {w.plural[0] ? (
+          <>
+            {' · '}
+            <Art g="pl" /> <span className="mono">{w.plural[0]}</span>
+          </>
+        ) : (
+          <span className="also"> · только ед. ч.</span>
+        )}
       </span>
       {w.ru && <span className="sub">{w.ru}</span>}
     </>

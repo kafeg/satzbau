@@ -6,9 +6,10 @@ export type Ending = 'e' | 'er' | 'en' | 's' | ''
 export const ENDINGS: Ending[] = ['e', 'er', 'en', 's', '']
 export const LABEL: Record<Ending, string> = { e: '-e', er: '-er', en: '-(e)n', s: '-s', '': '—' }
 
-export type Pl = { uml: boolean; end: Ending }
+// ответ: тип формы; end: null — «только ед. ч.», множественного у слова нет
+export type Pl = { uml: boolean; end: Ending | null }
 // форма разобрана: где умлаут (индекс буквы или -1) и сколько букв окончания в конце
-export type Parse = Pl & { at: number; tail: number }
+export type Parse = { uml: boolean; end: Ending; at: number; tail: number }
 
 const UML: Record<string, string> = { a: 'ä', o: 'ö', u: 'ü', A: 'Ä', O: 'Ö', U: 'Ü' }
 
@@ -33,14 +34,17 @@ export const TYPES: Pl[] = [
   { uml: false, end: 'en' }, { uml: false, end: 's' }, { uml: false, end: '' }, { uml: true, end: '' },
 ]
 
+export const SINGULAR: Pl = { uml: false, end: null }
+
 // тип коротко, как на кнопке и в правилах (tools/hints.py): «-e», «¨-e», «-(e)n», «—», «¨»
 export function typeLabel(p: Pl): string {
+  if (p.end === null) return 'только ед. ч.'
   return p.uml && p.end === '' ? '¨' : `${p.uml ? '¨' : ''}${LABEL[p.end]}`
 }
 
-// типы для слова: умлаутные — только если в слове есть a, o, u
+// варианты для слова: умлаутные — только если в слове есть a, o, u; «только ед. ч.» — всегда, это тоже ответ
 export function typesFor(lemma: string): Pl[] {
-  return canUmlaut(lemma) ? TYPES : TYPES.filter((t) => !t.uml)
+  return [...(canUmlaut(lemma) ? TYPES : TYPES.filter((t) => !t.uml)), SINGULAR]
 }
 
 // окончание формы после основы: -(e)n включает -n и -nen (Lehrerin → Lehrerinnen),
@@ -68,6 +72,7 @@ export function parse(lemma: string, form: string): Parse | null {
 }
 
 export function right(w: Noun, a: Pl): boolean {
+  if (a.end === null || w.plural.length === 0) return a.end === null && w.plural.length === 0
   return w.plural.some((f) => {
     const p = parse(w.lemma, f)
     return p !== null && p.end === a.end && p.uml === a.uml
@@ -78,10 +83,12 @@ export const plural: Exercise<Pl> = {
   id: 'plural',
   title: 'Множественное число',
   after: 'gender',
-  // форма вне пяти типов (Museum → Museen) не спрашивается: кнопки — правила, а не слова
-  fits: (w) => w.number === 'sg' && w.gender.length > 0 && w.plural.length > 0 && !('plural' in w.skip) && parse(w.lemma, w.plural[0]!) !== null,
+  // форма вне восьми типов (Museum → Museen) не спрашивается: кнопки — типы, а не слова; слово без
+  // множественного (plural: [] подтверждён словарём) спрашивается — ответ «только ед. ч.»
+  fits: (w) =>
+    w.number === 'sg' && w.gender.length > 0 && !('plural' in w.skip) && (w.plural.length === 0 || parse(w.lemma, w.plural[0]!) !== null),
   check: right,
-  key: (a) => `${a.uml ? 'uml+' : ''}${a.end || '0'}`,
+  key: (a) => (a.end === null ? 'none' : `${a.uml ? 'uml+' : ''}${a.end || '0'}`),
   hows: ['word'],
   field: 'plural',
 }

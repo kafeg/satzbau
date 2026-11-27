@@ -17,7 +17,7 @@ export type Facts = { forms: ReactNode; note?: Note; rule: RuleView | null; numb
 
 export type View<A = never> = {
   // варианты ответа по порядку клавиш 1…N; tone — цвет варианта; show — подпись, если не просто текстом
-  options(w: Noun): { a: A; label: string; tone?: string; show?: ReactNode }[]
+  options(w: Noun): { a: A; label: string; tone?: string; show?: ReactNode; full?: boolean }[]
   // что в строке над словом: у рода — артикль после ответа (тот, что выбран, если он тоже верен), у множественного — сразу
   art(w: Noun, given: A | null): Tone | null
   // вопрос под словом: «die …?»
