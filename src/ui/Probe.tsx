@@ -10,6 +10,7 @@ type Rec = {
   processLocally?: boolean
   start(): void
   stop(): void
+  abort?(): void
   onresult: ((e: any) => void) | null
   onerror: ((e: any) => void) | null
   onend: (() => void) | null
@@ -23,6 +24,7 @@ export function Probe({ onBack }: { onBack: () => void }) {
   const [log, setLog] = useState<string[]>([])
   const [heard, setHeard] = useState('')
   const [local, setLocal] = useState(false)
+  const [fresh, setFresh] = useState(false)
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
   const [voice, setVoice] = useState('')
   const rec = useRef<Rec | null>(null)
@@ -40,15 +42,19 @@ export function Probe({ onBack }: { onBack: () => void }) {
     return () => speechSynthesis.removeEventListener('voiceschanged', load)
   }, [])
 
+  // WebKit в PWA: второй объект распознавания часто не получает микрофон. Два способа для сравнения:
+  // один объект на все попытки (по умолчанию) или новый каждый раз, но после остановки прежнего.
   const listen = () => {
     if (!SR) return
     try {
-      const r = new SR()
+      const prev = rec.current
+      if (fresh && prev) prev.abort?.()
+      const r = !fresh && prev ? prev : new SR()
       r.lang = 'de-DE'
       r.interimResults = true
       r.maxAlternatives = 3
       if (local) r.processLocally = true
-      r.onstart = () => add('слушаю…')
+      r.onstart = () => add(`слушаю… (${!fresh && prev ? 'тот же объект' : 'новый объект'})`)
       r.onresult = (e) => {
         const res = e.results[e.results.length - 1]
         const alts = Array.from(res as ArrayLike<{ transcript: string; confidence: number }>).map((a) => `${a.transcript} (${Math.round(a.confidence * 100)}%)`)
@@ -98,6 +104,9 @@ export function Probe({ onBack }: { onBack: () => void }) {
           <>
             <label className="mini-line">
               <input type="checkbox" checked={local} onChange={(e) => setLocal(e.target.checked)} /> только на устройстве (processLocally)
+            </label>
+            <label className="mini-line">
+              <input type="checkbox" checked={fresh} onChange={(e) => setFresh(e.target.checked)} /> новый объект каждый раз
             </label>
             <div className="btnrow">
               <button className="btn2" onClick={listen}>
