@@ -4,7 +4,8 @@ import type { Cloze } from '../../core/types.ts'
 import { Art, type Tone } from './Art.tsx'
 import { Say } from './Say.tsx'
 
-export function PhrasePrompt({ cloze, art }: { cloze: Cloze; art: Tone | null }) {
+// done — ответ дан: только тогда фразу с ответом можно озвучить
+export function PhrasePrompt({ cloze, art, done }: { cloze: Cloze; art: Tone | null; done: boolean }) {
   const [a, gap, rest] = around(cloze.de, cloze.gap.text, cloze.gap.nth)
   // слово ищем после пропуска: его номер среди одинаковых токенов считался от начала фразы
   let before = 0
@@ -23,7 +24,7 @@ export function PhrasePrompt({ cloze, art }: { cloze: Cloze; art: Tone | null })
       </div>
       <div className="ru small">{cloze.tr}</div>
       {/* в углу карточки: появившись после ответа, кнопка не сдвигает фразу */}
-      {art && <Say text={cloze.de} />}
+      {done && <Say text={cloze.de} />}
     </>
   )
 }

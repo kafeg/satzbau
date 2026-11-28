@@ -1,6 +1,7 @@
 // Данные упражнения «Множественное число» для общих частей экрана (docs/ex-plural.md). Варианты — типы формы,
 // не слова: неправильные формы на экран не выводятся никогда.
 import { LABEL, type Parse, type Pl, parse, right, typeLabel, typesFor } from '../../core/exercises/plural.ts'
+import { spoken } from '../../core/text.ts'
 import type { Noun } from '../../core/types.ts'
 import { Art } from '../answer/Art.tsx'
 import type { Note, View } from './index.ts'
@@ -67,6 +68,7 @@ export const plural: View<Pl> = {
             <span className="also"> · только ед. ч.</span>
           </>
         ),
+        said: spoken(w),
         note: given && !ok ? { text: 'множественного у этого слова нет', kind: 'form' } : undefined,
         number: 'sg',
         mark: `g-${w.gender[0]}`,
@@ -81,6 +83,7 @@ export const plural: View<Pl> = {
           {also.length > 0 && <span className="also"> · также {also.join(', ')}</span>}
         </>
       ),
+      said: spoken(w, form),
       note: given && !ok ? note(w, given) : undefined,
       number: 'pl',
       mark: 'g-pl',

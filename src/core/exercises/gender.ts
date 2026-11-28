@@ -2,7 +2,6 @@
 import type { Gender, Noun } from '../types.ts'
 import type { Exercise } from './index.ts'
 
-export const ARTICLE: Record<Gender, string> = { m: 'der', f: 'die', n: 'das' }
 export const ORDER: Gender[] = ['m', 'f', 'n']
 
 // любой род из списка засчитывается

@@ -14,8 +14,10 @@ test('когда повтор — по-русски', () => {
   ])
 })
 
-test('формы для озвучки — как строка форм: с множественным и без, первый род и первая форма', () => {
+test('формы для озвучки: с множественным и без, первый род; форма множественного — первая или показанная', () => {
   expect(spoken(noun('Tisch', ['m'], { plural: ['Tische'] }))).toBe('der Tisch, die Tische')
   expect(spoken(noun('Milch', ['f']))).toBe('die Milch')
-  expect(spoken(noun('Joghurt', ['m', 'n'], { plural: ['Joghurts', 'Joghurt'] }))).toBe('der Joghurt, die Joghurts')
+  const joghurt = noun('Joghurt', ['m', 'n'], { plural: ['Joghurts', 'Joghurt'] })
+  expect(spoken(joghurt)).toBe('der Joghurt, die Joghurts')
+  expect(spoken(joghurt, 'Joghurt')).toBe('der Joghurt, die Joghurt')
 })

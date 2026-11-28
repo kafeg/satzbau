@@ -1,5 +1,6 @@
 // Типы ядра. Записи базы — docs/data-model.md, понятия приложения — docs/app.md.
 export type Gender = 'm' | 'f' | 'n'
+export const ARTICLE: Record<Gender, string> = { m: 'der', f: 'die', n: 'das' }
 export type Level = 'A1' | 'A2' | 'B1'
 // подача — как спрашиваем карточку (docs/app.md, «Подача»): основная, во фразе, раскладкой
 export type How = 'word' | 'phrase' | 'sort'

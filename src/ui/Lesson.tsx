@@ -100,7 +100,7 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
           <section className="word">
             {tag}
             {cloze ? (
-              <PhrasePrompt cloze={cloze} art={view.art(card.word, mine)} />
+              <PhrasePrompt cloze={cloze} art={view.art(card.word, mine)} done={!!given} />
             ) : (
               <WordPrompt word={card.word} art={view.art(card.word, mine)} ask={view.ask} />
             )}

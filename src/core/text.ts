@@ -1,5 +1,4 @@
-import { ARTICLE } from './exercises/gender.ts'
-import type { Noun } from './types.ts'
+import { ARTICLE, type Noun } from './types.ts'
 
 // Фраза примера на три части вокруг nth-го вхождения слова целиком (не внутри другого слова).
 export function around(de: string, word: string, nth: number): [string, string, string] {
@@ -29,8 +28,8 @@ export function when(days: number): string {
   return `через ${days} ${plural(days, ['день', 'дня', 'дней'])}`
 }
 
-// Формы слова для озвучки, как строка форм в разборе: «der Tisch, die Tische»; без множественного — «die Milch».
-export function spoken(w: Noun): string {
+// Формы слова для озвучки: «der Tisch, die Tische»; pl — показанная форма множественного, без неё — «die Milch».
+export function spoken(w: Noun, pl: string | undefined = w.plural[0]): string {
   const sg = `${ARTICLE[w.gender[0]!]} ${w.lemma}`
-  return w.plural[0] ? `${sg}, die ${w.plural[0]}` : sg
+  return pl ? `${sg}, die ${pl}` : sg
 }
