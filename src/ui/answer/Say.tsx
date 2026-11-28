@@ -1,8 +1,8 @@
 // Кнопка «послушать» (docs/app.md, «Озвучка»): только по нажатию; нет немецкого голоса — кнопки нет.
 // После первого нажатия за всё время под панелью ответа — подсказка про беззвучный режим iPhone (SayTip).
-import { useEffect, useState, useSyncExternalStore } from 'react'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { save, saved } from '../prefs.ts'
-import { say, useGerman } from '../speech.ts'
+import { say, stop, useGerman } from '../speech.ts'
 
 // видна ли подсказка сейчас (до закрытия панели); что её уже показывали — флаг said
 let tip = false
@@ -19,10 +19,18 @@ const watch = (f: () => void) => {
 export function Say({ text }: { text: string }) {
   const can = useGerman()
   const [on, setOn] = useState(false)
+  const playing = useRef(false)
+  // кнопка ушла с экрана («Дальше») — её слово не договаривается поверх следующего вопроса
+  useEffect(() => () => void (playing.current && stop()), [])
   if (!can) return null
+  const done = () => {
+    playing.current = false
+    setOn(false)
+  }
   const play = () => {
+    playing.current = true
     setOn(true)
-    say(text, { onend: () => setOn(false), onerror: () => setOn(false) })
+    say(text, { onend: done, onerror: done })
     if (saved('said')) return
     save('said', '1')
     setTip(true)

@@ -8,7 +8,7 @@ import type { Data } from '../store/db.ts'
 import { AnswerPanel } from './answer/AnswerPanel.tsx'
 import { Choices } from './answer/Choices.tsx'
 import { PhrasePrompt } from './answer/PhrasePrompt.tsx'
-import { Say } from './answer/Say.tsx'
+import { Say, SayTip } from './answer/Say.tsx'
 import { SortBoard } from './answer/SortBoard.tsx'
 import { WordFacts } from './answer/WordFacts.tsx'
 import { WordPrompt } from './answer/WordPrompt.tsx'
@@ -106,7 +106,7 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
               <WordPrompt word={card.word} art={view.art(card.word, mine)} ask={view.ask} />
             )}
             {/* «послушать» — одна, в углу карточки и только после ответа: фраза с ответом или показанные формы */}
-            {given && <Say text={cloze ? cloze.de : view.facts(card.word, mine).said} />}
+            {given && <Say text={cloze ? cloze.de : view.said(card.word, mine)} />}
           </section>
           <Choices
             key={lesson.i}
@@ -128,6 +128,8 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
           ))}
         </AnswerPanel>
       )}
+      {/* под панелью, один раз за всё время — после первого «послушать» */}
+      {given && <SayTip />}
     </div>
   )
 }

@@ -27,6 +27,11 @@ function shown(w: Noun, a: Pl | null): [string, Parse] {
   return hit ?? forms[0]!
 }
 
+// форма в разборе: при верном ответе — совпавшая с ним, иначе первая; null — множественного нет
+function form(w: Noun, given: Pl | null): [string, Parse] | null {
+  return w.plural.length === 0 ? null : shown(w, given !== null && right(w, given) ? given : null)
+}
+
 // форма с выделенными изменёнными буквами: умлаут и окончание
 function Form({ form, p }: { form: string; p: Parse }) {
   const cut = form.length - p.tail
@@ -60,7 +65,8 @@ export const plural: View<Pl> = {
   ask: 'die …?',
   facts: (w, given) => {
     const ok = given !== null && right(w, given)
-    if (w.plural.length === 0)
+    const pl = form(w, given)
+    if (!pl)
       return {
         forms: (
           <>
@@ -68,27 +74,25 @@ export const plural: View<Pl> = {
             <span className="also"> · только ед. ч.</span>
           </>
         ),
-        said: spoken(w),
         note: given && !ok ? { text: 'множественного у этого слова нет', kind: 'form' } : undefined,
         number: 'sg',
         mark: `g-${w.gender[0]}`,
         rule: null,
       }
-    const [form, p] = shown(w, ok ? given : null)
-    const also = w.plural.filter((f) => f !== form)
+    const [f, p] = pl
+    const also = w.plural.filter((x) => x !== f)
     return {
       forms: (
         <>
-          <Art g={w.gender[0]!} /> <span className="mono">{w.lemma}</span> · <Art g="pl" /> <Form form={form} p={p} />
+          <Art g={w.gender[0]!} /> <span className="mono">{w.lemma}</span> · <Art g="pl" /> <Form form={f} p={p} />
           {also.length > 0 && <span className="also"> · также {also.join(', ')}</span>}
         </>
       ),
-      said: spoken(w, form),
       note: given && !ok ? note(w, given) : undefined,
       number: 'pl',
       mark: 'g-pl',
       // правило судит о первой форме слова: при другой показанной форме («также») оно бы ей противоречило
-      rule: form !== w.plural[0] ? null : {
+      rule: f !== w.plural[0] ? null : {
         // «а здесь …» у исключения — словами: одинокий знак умлаута читается плохо
         own: how(w.lemma, p),
         part: (head) => (
@@ -101,6 +105,7 @@ export const plural: View<Pl> = {
       },
     }
   },
+  said: (w, given) => spoken(w, form(w, given)?.[0]),
   summary: (w) => (
     <>
       <span>

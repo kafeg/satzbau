@@ -34,6 +34,8 @@ export const useGerman = (): boolean => useSyncExternalStore(onVoices, ready)
 
 type On = { voice?: SpeechSynthesisVoice; onstart?: () => void; onend?: () => void; onerror?: (e: SpeechSynthesisErrorEvent) => void }
 
+export const stop = () => synth?.cancel()
+
 export function say(text: string, on: On = {}) {
   if (!synth) return
   // iOS: озвучка иногда «залипает» в состоянии speaking и молчит — cancel() перед speak() её сбрасывает

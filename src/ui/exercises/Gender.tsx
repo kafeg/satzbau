@@ -34,7 +34,6 @@ export const gender: View<G> = {
     const g = w.gender[0]!
     return {
       forms: <Full word={w} />,
-      said: spoken(w),
       number: 'sg',
       mark: `g-${g}`,
       rule: {
@@ -51,6 +50,7 @@ export const gender: View<G> = {
       },
     }
   },
+  said: (w) => spoken(w),
   summary: (w) => (
     <>
       <span>

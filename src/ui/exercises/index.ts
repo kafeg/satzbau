@@ -11,9 +11,9 @@ import { plural } from './Plural.tsx'
 // человека («окончание угадал…»), form — как образована форма («без окончания, только умлаут a → ä»)
 export type Note = { text: string; kind: 'answer' | 'form' }
 
-// разбор слова: формы и они же простым текстом для озвучки, заметка, как показать правило (null — не показывать:
-// правило судит о другой форме, чем показана), число для примера, цвет слова в примере
-export type Facts = { forms: ReactNode; said: string; note?: Note; rule: RuleView | null; number: 'sg' | 'pl'; mark: string }
+// разбор слова: формы, заметка, как показать правило (null — не показывать: правило судит о другой
+// форме, чем показана), число для примера, цвет слова в примере
+export type Facts = { forms: ReactNode; note?: Note; rule: RuleView | null; number: 'sg' | 'pl'; mark: string }
 
 export type View<A = never> = {
   // варианты ответа по порядку клавиш 1…N; tone — цвет варианта; show — подпись, если не просто текстом
@@ -26,6 +26,8 @@ export type View<A = never> = {
   sort?: string
   // given — ответ человека или null
   facts(w: Noun, given: A | null): Facts
+  // те же формы, что в facts, простым текстом для озвучки: «der Tisch, die Tische»
+  said(w: Noun, given: A | null): string
   // строка слова в итоге урока
   summary(w: Noun): ReactNode
 }
