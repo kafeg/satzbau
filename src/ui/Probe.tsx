@@ -26,8 +26,10 @@ export function Probe({ onBack }: { onBack: () => void }) {
   const [heard, setHeard] = useState('')
   const [local, setLocal] = useState(false)
   // как запускать: same — один объект; fresh — новый, прежний остановлен; continuous — одна сессия без перезапуска;
-  // mic — микрофон открыт заранее (getUserMedia) и держится, объект новый
-  const [mode, setMode] = useState<'same' | 'fresh' | 'continuous' | 'mic'>('same')
+  // mic — микрофон открыт заранее (getUserMedia) и держится, объект новый;
+  // cue — сначала короткая озвучка, через 0,4 с после её конца — новый объект; stop/abort не вызываем
+  // (рецепт из WebKit bug 321436, комментарии 8–9: iOS 27, у двух людей работает)
+  const [mode, setMode] = useState<'same' | 'fresh' | 'continuous' | 'mic' | 'cue'>('mic')
   const running = useRef(false)
   const stream = useRef<MediaStream | null>(null)
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
@@ -47,6 +49,22 @@ export function Probe({ onBack }: { onBack: () => void }) {
     return () => speechSynthesis.removeEventListener('voiceschanged', load)
   }, [])
 
+  // короткая озвучка перед распознаванием; true — договорила
+  const cue = () =>
+    new Promise<boolean>((done) => {
+      if (!('speechSynthesis' in window)) return done(false)
+      const u = new SpeechSynthesisUtterance('Bitte sprechen.')
+      u.lang = 'de-DE'
+      const v = voices.find((x) => x.name === voice)
+      if (v) u.voice = v
+      u.onend = () => setTimeout(() => done(true), 400)
+      u.onerror = (e) => {
+        add(`озвучка: ${e.error}`)
+        done(false)
+      }
+      speechSynthesis.speak(u)
+    })
+
   // WebKit в PWA: второй запуск распознавания часто не получает микрофон — четыре способа для сравнения
   const listen = async () => {
     if (!SR) return
@@ -56,9 +74,10 @@ export function Probe({ onBack }: { onBack: () => void }) {
         stream.current = await navigator.mediaDevices.getUserMedia({ audio: true })
         add('микрофон открыт заранее')
       }
+      if (mode === 'cue' && !(await cue())) return
       const prev = rec.current
       const reuse = mode === 'same' && prev
-      if (!reuse && prev) prev.abort?.()
+      if (!reuse && prev && mode !== 'cue') prev.abort?.()
       const r = reuse ? prev : new SR()
       r.lang = 'de-DE'
       r.interimResults = true
@@ -122,11 +141,13 @@ export function Probe({ onBack }: { onBack: () => void }) {
             <label className="mini-line">
               <input type="checkbox" checked={local} onChange={(e) => setLocal(e.target.checked)} /> только на устройстве (processLocally)
             </label>
+            <p className="mini-line">способ выбирай до первого нажатия, после запуска приложения: переключение посреди не работает</p>
             <select value={mode} onChange={(e) => setMode(e.target.value as typeof mode)}>
               <option value="same">один объект на все попытки</option>
               <option value="fresh">новый объект, прежний остановлен</option>
               <option value="continuous">одна сессия без перезапуска</option>
               <option value="mic">микрофон открыт заранее</option>
+              <option value="cue">сначала озвучка «Bitte sprechen», потом слушать</option>
             </select>
             <div className="btnrow">
               <button className="btn2" onClick={() => void listen()}>
