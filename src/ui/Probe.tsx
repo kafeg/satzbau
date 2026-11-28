@@ -2,6 +2,7 @@
 // и немецкая озвучка в этом браузере и в PWA с иконки. Ничего не пишет в журнал и никуда не отправляет сам —
 // распознавание браузера может уходить на серверы Apple или Google.
 import { useEffect, useRef, useState } from 'react'
+import { onVoices, say as speak, speaks, voices as german } from './speech.ts'
 
 type Rec = {
   lang: string
@@ -41,31 +42,28 @@ export function Probe({ onBack }: { onBack: () => void }) {
   const add = (s: string) => setLog((xs) => [`${new Date().toLocaleTimeString()} ${s}`, ...xs].slice(0, 30))
 
   useEffect(() => {
-    if (!('speechSynthesis' in window)) return
     const load = () => {
-      const de = speechSynthesis.getVoices().filter((v) => v.lang.startsWith('de'))
+      const de = german()
       setVoices(de)
       setVoice((x) => x || de[0]?.name || '')
     }
     load()
-    speechSynthesis.addEventListener('voiceschanged', load)
-    return () => speechSynthesis.removeEventListener('voiceschanged', load)
+    return onVoices(load)
   }, [])
+  const chosen = () => voices.find((x) => x.name === voice)
 
   // короткая озвучка перед распознаванием; true — договорила
   const cue = () =>
     new Promise<boolean>((done) => {
-      if (!('speechSynthesis' in window)) return done(false)
-      const u = new SpeechSynthesisUtterance('Bitte sprechen.')
-      u.lang = 'de-DE'
-      const v = voices.find((x) => x.name === voice)
-      if (v) u.voice = v
-      u.onend = () => setTimeout(() => done(true), 400)
-      u.onerror = (e) => {
-        add(`озвучка: ${e.error}`)
-        done(false)
-      }
-      speechSynthesis.speak(u)
+      if (!speaks) return done(false)
+      speak('Bitte sprechen.', {
+        voice: chosen(),
+        onend: () => setTimeout(() => done(true), 400),
+        onerror: (e) => {
+          add(`озвучка: ${e.error}`)
+          done(false)
+        },
+      })
     })
 
   // WebKit в PWA: второй запуск распознавания часто не получает микрофон — четыре способа для сравнения
@@ -121,18 +119,14 @@ export function Probe({ onBack }: { onBack: () => void }) {
   }
 
   const say = (text: string) => {
-    // iOS: озвучка иногда «залипает» в состоянии speaking и молчит — cancel() перед speak() её сбрасывает
-    speechSynthesis.cancel()
-    const u = new SpeechSynthesisUtterance(text)
-    u.lang = 'de-DE'
-    const v = voices.find((x) => x.name === voice)
-    if (v) u.voice = v
-    add(`озвучка: голос ${v ? `${v.name} (${v.localService ? 'на устройстве' : 'через сеть'})` : 'по умолчанию для de-DE'}, всего голосов ${speechSynthesis.getVoices().length}`)
-    u.onstart = () => add('озвучка: началась')
-    u.onend = () => add(`сказано: ${text}`)
-    u.onerror = (e) => add(`озвучка: ошибка ${e.error}`)
-    speechSynthesis.speak(u)
-    setTimeout(() => add(`озвучка через 1 с: speaking=${speechSynthesis.speaking} pending=${speechSynthesis.pending} paused=${speechSynthesis.paused}`), 1000)
+    const v = chosen()
+    add(`озвучка: голос ${v ? `${v.name} (${v.localService ? 'на устройстве' : 'через сеть'})` : 'по умолчанию для de-DE'}`)
+    speak(text, {
+      voice: v,
+      onstart: () => add('озвучка: началась'),
+      onend: () => add(`сказано: ${text}`),
+      onerror: (e) => add(`озвучка: ошибка ${e.error}`),
+    })
   }
 
   return (
@@ -183,7 +177,7 @@ export function Probe({ onBack }: { onBack: () => void }) {
 
       <div>
         <div className="section">Озвучка</div>
-        {'speechSynthesis' in window ? (
+        {speaks ? (
           <>
             <p className="mini-line">немецких голосов: {voices.length}</p>
             <label className="mini-line">

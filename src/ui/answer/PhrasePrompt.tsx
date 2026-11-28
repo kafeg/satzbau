@@ -1,7 +1,8 @@
-// Фраза с пропуском (подача «во фразе»): слово подчёркнуто; после ответа в пропуске ответ цветом.
+// Фраза с пропуском (подача «во фразе»): слово подчёркнуто; после ответа в пропуске ответ цветом, в углу — «послушать» всю фразу.
 import { around } from '../../core/text.ts'
 import type { Cloze } from '../../core/types.ts'
 import { Art, type Tone } from './Art.tsx'
+import { Say } from './Say.tsx'
 
 export function PhrasePrompt({ cloze, art }: { cloze: Cloze; art: Tone | null }) {
   const [a, gap, rest] = around(cloze.de, cloze.gap.text, cloze.gap.nth)
@@ -21,6 +22,8 @@ export function PhrasePrompt({ cloze, art }: { cloze: Cloze; art: Tone | null })
         {c}
       </div>
       <div className="ru small">{cloze.tr}</div>
+      {/* в углу карточки: появившись после ответа, кнопка не сдвигает фразу */}
+      {art && <Say text={cloze.de} />}
     </>
   )
 }

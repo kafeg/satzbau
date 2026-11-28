@@ -1,3 +1,6 @@
+import { ARTICLE } from './exercises/gender.ts'
+import type { Noun } from './types.ts'
+
 // Фраза примера на три части вокруг nth-го вхождения слова целиком (не внутри другого слова).
 export function around(de: string, word: string, nth: number): [string, string, string] {
   const esc = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -24,4 +27,10 @@ export function when(days: number): string {
   if (days <= 0) return 'сегодня'
   if (days === 1) return 'завтра'
   return `через ${days} ${plural(days, ['день', 'дня', 'дней'])}`
+}
+
+// Формы слова для озвучки, как строка форм в разборе: «der Tisch, die Tische»; без множественного — «die Milch».
+export function spoken(w: Noun): string {
+  const sg = `${ARTICLE[w.gender[0]!]} ${w.lemma}`
+  return w.plural[0] ? `${sg}, die ${w.plural[0]}` : sg
 }

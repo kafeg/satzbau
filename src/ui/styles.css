@@ -1118,10 +1118,18 @@ button.exr:not(:disabled):active {
 }
 
 .example {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
   padding: var(--s3) var(--s4);
   border: 1px solid var(--line);
   border-radius: var(--r-m);
   background: var(--surface);
+}
+
+.example > div {
+  flex: 1;
+  min-width: 0;
 }
 
 .example p {
@@ -1140,6 +1148,65 @@ button.exr:not(:disabled):active {
 .example .tr {
   margin-top: var(--s1);
   color: var(--text-2);
+}
+
+/* «послушать» (Say): у строки форм, в углу примера и карточки фразы; синяя, пока говорит */
+.forms {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.forms > span {
+  min-width: 0;
+  text-wrap: balance;
+}
+
+.say {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-2);
+}
+
+.say svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.say.on {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.word > .say {
+  position: absolute;
+  top: var(--s2);
+  right: var(--s2);
+}
+
+/* подсказка под панелью после первого «послушать»: ближе к панели, чем обычный отступ урока */
+.tip {
+  margin: 0;
+  font-size: var(--fs-caption);
+  color: var(--text-2);
+  text-align: center;
+}
+
+.lesson:not(.sorting) > .tip {
+  margin-top: calc(-1 * var(--s3));
 }
 
 

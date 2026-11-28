@@ -1,10 +1,12 @@
 // Карточка слова в разборе: формы → карточка объяснения (простыми словами, потом правило) → пример. Всегда в
 // этом порядке и одинаково при верном и неверном ответе; пример не показываем, если фраза уже на экране.
+import { spoken } from '../../core/text.ts'
 import type { Noun } from '../../core/types.ts'
 import type { Data } from '../../store/db.ts'
 import type { View } from '../exercises/index.ts'
 import { Example } from './Example.tsx'
 import { Rule } from './Rule.tsx'
+import { Say } from './Say.tsx'
 
 // field — поле упражнения (Exercise.field): по нему подсказка правила
 type Props = { view: View<any>; field: string; word: Noun; given: unknown; data: Data; example: boolean }
@@ -16,7 +18,10 @@ export function WordFacts({ view, field, word, given, data, example }: Props) {
   const lead = f.note?.text ?? null
   return (
     <div className="wf">
-      <div className="full forms">{f.forms}</div>
+      <div className="full forms">
+        <span>{f.forms}</span>
+        <Say text={spoken(word)} />
+      </div>
       {hint && f.rule ? (
         <Rule hint={hint} view={f.rule} lead={lead} />
       ) : (

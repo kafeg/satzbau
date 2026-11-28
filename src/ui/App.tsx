@@ -15,25 +15,9 @@ import { Lesson } from './Lesson.tsx'
 import { TabBar } from './Nav.tsx'
 import { Pick } from './Pick.tsx'
 import { Probe } from './Probe.tsx'
+import { save, saved } from './prefs.ts'
 import { type Check, Progress } from './Progress.tsx'
 import { Result } from './Result.tsx'
-
-// выбор пользователя — удобство, а не прогресс: не запомнился — значения по умолчанию
-function saved(key: string): string | null {
-  try {
-    return localStorage.getItem(`satzbau.${key}`)
-  } catch {
-    return null
-  }
-}
-
-function save(key: string, v: string) {
-  try {
-    localStorage.setItem(`satzbau.${key}`, v)
-  } catch {
-    // просто не запомнится
-  }
-}
 
 const savedLevel = (): Level => {
   const v = saved('level')
