@@ -1142,18 +1142,7 @@ button.exr:not(:disabled):active {
   color: var(--text-2);
 }
 
-/* «послушать» (Say): у строки форм или в углу карточки фразы — одна на слово; синяя, пока говорит */
-.forms {
-  display: flex;
-  align-items: center;
-  gap: var(--s2);
-}
-
-.forms > span {
-  min-width: 0;
-  text-wrap: balance;
-}
-
+/* «послушать» (Say): одна, в углу карточки задания после ответа; синяя, пока говорит */
 .say {
   flex: none;
   display: inline-flex;
