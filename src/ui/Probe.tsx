@@ -107,13 +107,18 @@ export function Probe({ onBack }: { onBack: () => void }) {
   }
 
   const say = (text: string) => {
+    // iOS: озвучка иногда «залипает» в состоянии speaking и молчит — cancel() перед speak() её сбрасывает
+    speechSynthesis.cancel()
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'de-DE'
     const v = voices.find((x) => x.name === voice)
     if (v) u.voice = v
+    add(`озвучка: голос ${v ? `${v.name} (${v.localService ? 'на устройстве' : 'через сеть'})` : 'по умолчанию для de-DE'}, всего голосов ${speechSynthesis.getVoices().length}`)
+    u.onstart = () => add('озвучка: началась')
     u.onend = () => add(`сказано: ${text}`)
-    u.onerror = (e) => add(`озвучка: ${e.error}`)
+    u.onerror = (e) => add(`озвучка: ошибка ${e.error}`)
     speechSynthesis.speak(u)
+    setTimeout(() => add(`озвучка через 1 с: speaking=${speechSynthesis.speaking} pending=${speechSynthesis.pending} paused=${speechSynthesis.paused}`), 1000)
   }
 
   return (
