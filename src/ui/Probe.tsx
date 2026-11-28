@@ -7,6 +7,7 @@ type Rec = {
   lang: string
   interimResults: boolean
   maxAlternatives: number
+  continuous: boolean
   processLocally?: boolean
   start(): void
   stop(): void
@@ -24,7 +25,11 @@ export function Probe({ onBack }: { onBack: () => void }) {
   const [log, setLog] = useState<string[]>([])
   const [heard, setHeard] = useState('')
   const [local, setLocal] = useState(false)
-  const [fresh, setFresh] = useState(false)
+  // как запускать: same — один объект; fresh — новый, прежний остановлен; continuous — одна сессия без перезапуска;
+  // mic — микрофон открыт заранее (getUserMedia) и держится, объект новый
+  const [mode, setMode] = useState<'same' | 'fresh' | 'continuous' | 'mic'>('same')
+  const running = useRef(false)
+  const stream = useRef<MediaStream | null>(null)
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
   const [voice, setVoice] = useState('')
   const rec = useRef<Rec | null>(null)
@@ -42,19 +47,28 @@ export function Probe({ onBack }: { onBack: () => void }) {
     return () => speechSynthesis.removeEventListener('voiceschanged', load)
   }, [])
 
-  // WebKit в PWA: второй объект распознавания часто не получает микрофон. Два способа для сравнения:
-  // один объект на все попытки (по умолчанию) или новый каждый раз, но после остановки прежнего.
-  const listen = () => {
+  // WebKit в PWA: второй запуск распознавания часто не получает микрофон — четыре способа для сравнения
+  const listen = async () => {
     if (!SR) return
     try {
+      if (mode === 'continuous' && running.current) return add('уже слушаю — говори, «Стоп» — закончить')
+      if (mode === 'mic' && !stream.current) {
+        stream.current = await navigator.mediaDevices.getUserMedia({ audio: true })
+        add('микрофон открыт заранее')
+      }
       const prev = rec.current
-      if (fresh && prev) prev.abort?.()
-      const r = !fresh && prev ? prev : new SR()
+      const reuse = mode === 'same' && prev
+      if (!reuse && prev) prev.abort?.()
+      const r = reuse ? prev : new SR()
       r.lang = 'de-DE'
       r.interimResults = true
       r.maxAlternatives = 3
+      r.continuous = mode === 'continuous'
       if (local) r.processLocally = true
-      r.onstart = () => add(`слушаю… (${!fresh && prev ? 'тот же объект' : 'новый объект'})`)
+      r.onstart = () => {
+        running.current = true
+        add(`слушаю… (${mode}, ${reuse ? 'тот же объект' : 'новый объект'})`)
+      }
       r.onresult = (e) => {
         const res = e.results[e.results.length - 1]
         const alts = Array.from(res as ArrayLike<{ transcript: string; confidence: number }>).map((a) => `${a.transcript} (${Math.round(a.confidence * 100)}%)`)
@@ -62,11 +76,14 @@ export function Probe({ onBack }: { onBack: () => void }) {
         if (res.isFinal) add(`распознано: ${alts.join(' · ')}`)
       }
       r.onerror = (e) => add(`ошибка: ${e.error}${e.message ? ` — ${e.message}` : ''}`)
-      r.onend = () => add('конец')
+      r.onend = () => {
+        running.current = false
+        add('конец')
+      }
       r.start()
       rec.current = r
     } catch (e) {
-      add(`не запустилось: ${e instanceof Error ? e.message : String(e)}`)
+      add(`не запустилось: ${e instanceof Error ? `${e.name}: ${e.message}` : String(e)}`)
     }
   }
 
@@ -105,11 +122,14 @@ export function Probe({ onBack }: { onBack: () => void }) {
             <label className="mini-line">
               <input type="checkbox" checked={local} onChange={(e) => setLocal(e.target.checked)} /> только на устройстве (processLocally)
             </label>
-            <label className="mini-line">
-              <input type="checkbox" checked={fresh} onChange={(e) => setFresh(e.target.checked)} /> новый объект каждый раз
-            </label>
+            <select value={mode} onChange={(e) => setMode(e.target.value as typeof mode)}>
+              <option value="same">один объект на все попытки</option>
+              <option value="fresh">новый объект, прежний остановлен</option>
+              <option value="continuous">одна сессия без перезапуска</option>
+              <option value="mic">микрофон открыт заранее</option>
+            </select>
             <div className="btnrow">
-              <button className="btn2" onClick={listen}>
+              <button className="btn2" onClick={() => void listen()}>
                 Говорить по-немецки
               </button>
               <button className="btn2" onClick={() => rec.current?.stop()}>
