@@ -34,6 +34,9 @@ export function Probe({ onBack }: { onBack: () => void }) {
   const stream = useRef<MediaStream | null>(null)
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
   const [voice, setVoice] = useState('')
+  // Safari 16.4+: navigator.audioSession — с type 'playback' звук может играть и в беззвучном режиме
+  const session = (navigator as any).audioSession as { type: string } | undefined
+  const [playback, setPlayback] = useState(session?.type === 'playback')
   const rec = useRef<Rec | null>(null)
   const add = (s: string) => setLog((xs) => [`${new Date().toLocaleTimeString()} ${s}`, ...xs].slice(0, 30))
 
@@ -106,6 +109,17 @@ export function Probe({ onBack }: { onBack: () => void }) {
     }
   }
 
+  const togglePlayback = (on: boolean) => {
+    if (!session) return
+    try {
+      session.type = on ? 'playback' : 'auto'
+      setPlayback(on)
+      add(`аудиосессия: ${session.type}`)
+    } catch (e) {
+      add(`аудиосессия: ${e instanceof Error ? e.message : String(e)}`)
+    }
+  }
+
   const say = (text: string) => {
     // iOS: озвучка иногда «залипает» в состоянии speaking и молчит — cancel() перед speak() её сбрасывает
     speechSynthesis.cancel()
@@ -172,6 +186,10 @@ export function Probe({ onBack }: { onBack: () => void }) {
         {'speechSynthesis' in window ? (
           <>
             <p className="mini-line">немецких голосов: {voices.length}</p>
+            <label className="mini-line">
+              <input type="checkbox" disabled={!session} checked={playback} onChange={(e) => togglePlayback(e.target.checked)} /> звук и в беззвучном
+              режиме (audioSession: {session ? session.type : 'нет в браузере'})
+            </label>
             {voices.length > 0 && (
               <select value={voice} onChange={(e) => setVoice(e.target.value)}>
                 {voices.map((v) => (
