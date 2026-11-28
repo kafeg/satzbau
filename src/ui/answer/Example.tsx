@@ -2,7 +2,6 @@
 import { useMemo } from 'react'
 import { around } from '../../core/text.ts'
 import type { Data } from '../../store/db.ts'
-import { Say } from './Say.tsx'
 
 export function Example({ data, wordId, number, mark }: { data: Data; wordId: string; number: 'sg' | 'pl'; mark: string }) {
   const ex = useMemo(() => data.example(wordId, number), [data, wordId, number])
@@ -10,15 +9,12 @@ export function Example({ data, wordId, number, mark }: { data: Data; wordId: st
   const [a, w, c] = around(ex.de, ex.word, ex.nth)
   return (
     <div className="example">
-      <div>
-        <p className="de">
-          {a}
-          <mark className={mark}>{w}</mark>
-          {c}
-        </p>
-        <p className="tr">{ex.tr}</p>
-      </div>
-      <Say text={ex.de} />
+      <p className="de">
+        {a}
+        <mark className={mark}>{w}</mark>
+        {c}
+      </p>
+      <p className="tr">{ex.tr}</p>
     </div>
   )
 }

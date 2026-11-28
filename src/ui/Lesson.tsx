@@ -121,7 +121,7 @@ export function Lesson({ data, lesson: first, where, onRecord, onDone, onClose }
       {given && (
         <AnswerPanel ok={given.oks.every(Boolean)} fill={step.how === 'sort' && shown.length > 0} onNext={go}>
           {shown.map(([c, a]) => (
-            <WordFacts key={c.word.id} view={viewOf(c.ex.id)} field={c.ex.field} word={c.word} given={a} data={data} example={!cloze} />
+            <WordFacts key={c.word.id} view={viewOf(c.ex.id)} field={c.ex.field} word={c.word} given={a} data={data} phrase={!!cloze} />
           ))}
         </AnswerPanel>
       )}

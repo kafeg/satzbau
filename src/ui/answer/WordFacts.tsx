@@ -1,5 +1,5 @@
 // Карточка слова в разборе: формы → карточка объяснения (простыми словами, потом правило) → пример. Всегда в
-// этом порядке и одинаково при верном и неверном ответе; пример не показываем, если фраза уже на экране.
+// этом порядке и одинаково при верном и неверном ответе. Фраза уже на экране — у неё и пример, и «послушать».
 import type { Noun } from '../../core/types.ts'
 import type { Data } from '../../store/db.ts'
 import type { View } from '../exercises/index.ts'
@@ -7,10 +7,10 @@ import { Example } from './Example.tsx'
 import { Rule } from './Rule.tsx'
 import { Say } from './Say.tsx'
 
-// field — поле упражнения (Exercise.field): по нему подсказка правила
-type Props = { view: View<any>; field: string; word: Noun; given: unknown; data: Data; example: boolean }
+// field — поле упражнения (Exercise.field): по нему подсказка правила; phrase — фраза задания на экране
+type Props = { view: View<any>; field: string; word: Noun; given: unknown; data: Data; phrase: boolean }
 
-export function WordFacts({ view, field, word, given, data, example }: Props) {
+export function WordFacts({ view, field, word, given, data, phrase }: Props) {
   const f = view.facts(word, given)
   const hint = f.rule ? data.hint(word.id, field) : null
   // одно объяснение — одна карточка: сначала простыми словами, под ним правило
@@ -19,7 +19,7 @@ export function WordFacts({ view, field, word, given, data, example }: Props) {
     <div className="wf">
       <div className="full forms">
         <span>{f.forms}</span>
-        <Say text={f.said} />
+        {!phrase && <Say text={f.said} />}
       </div>
       {hint && f.rule ? (
         <Rule hint={hint} view={f.rule} lead={lead} />
@@ -30,7 +30,7 @@ export function WordFacts({ view, field, word, given, data, example }: Props) {
           </div>
         )
       )}
-      {example && <Example data={data} wordId={word.id} number={f.number} mark={f.mark} />}
+      {!phrase && <Example data={data} wordId={word.id} number={f.number} mark={f.mark} />}
     </div>
   )
 }
